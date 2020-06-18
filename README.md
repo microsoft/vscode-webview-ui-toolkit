@@ -65,7 +65,7 @@ Ensure that when you paste components that they are instances:
 
 Most components will have various states that you can swap to, which should retain their overrides:
 
-![GitHub%20README%20d8f907750091465eafa7456c5be7b778/swap-instances.gif](GitHub%20README%20d8f907750091465eafa7456c5be7b778/swap-instances.gif)
+![ezgif com-optimize](https://user-images.githubusercontent.com/47866467/85040705-1329d080-b157-11ea-9545-4c1774b649e8.gif)
 
 ### 7. Using icons
 
