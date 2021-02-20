@@ -13,7 +13,7 @@
   "keywords": [
     "Visual Studio Code"
   ],
-  "author": "Hawk Ticehurst",
+  "author": "Hawk Ticehurst <v-hticehurst@microsoft.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/microsoft/vscode-webview-toolkit/issues"
