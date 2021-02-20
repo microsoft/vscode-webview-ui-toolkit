@@ -1,24 +1,24 @@
 {
-  "name": "vscode-webview-toolkit",
-  "version": "0.0.1",
-  "description": "A component library for usage in Visual Studio Code webview-based extensions.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/microsoft/vscode-webview-toolkit.git"
-  },
-  "author": {
-    "name": "Microsoft Corporation"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/microsoft/vscode-webview-toolkit/issues"
-  },
-  "homepage": "https://github.com/microsoft/vscode-webview-toolkit#readme",
-  "devDependencies": {
-    "prettier": "^2.2.1"
-  }
+	"name": "vscode-webview-toolkit",
+	"version": "0.0.1",
+	"description": "A component library for usage in Visual Studio Code webview-based extensions.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/microsoft/vscode-webview-toolkit.git"
+	},
+	"author": {
+		"name": "Microsoft Corporation"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/microsoft/vscode-webview-toolkit/issues"
+	},
+	"homepage": "https://github.com/microsoft/vscode-webview-toolkit#readme",
+	"devDependencies": {
+		"prettier": "^2.2.1"
+	}
 }
