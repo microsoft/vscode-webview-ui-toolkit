@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/microsoft/vscode-webview-toolkit/issues"
   },
-  "homepage": "https://github.com/microsoft/vscode-webview-toolkit#readme"
+  "homepage": "https://github.com/microsoft/vscode-webview-toolkit#readme",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
 }
