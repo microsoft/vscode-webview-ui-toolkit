@@ -10,10 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/microsoft/vscode-webview-toolkit.git"
   },
-  "keywords": [
-    "Visual Studio Code"
-  ],
-  "author": "Hawk Ticehurst <v-hticehurst@microsoft.com>",
+  "author": {
+    "name": "Microsoft Corporation"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/microsoft/vscode-webview-toolkit/issues"
