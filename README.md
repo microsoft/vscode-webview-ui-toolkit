@@ -1,8 +1,8 @@
 # Visual Studio Code Webview Toolkit
 
-## About this toolkit
+## About This Toolkit
 
-This toolkit is an implementation of the [VS Code Webview Figma Toolkit](https://www.figma.com/file/KO1yufOeApPEMymIxJ3dTf/VS-Code-Webview-Toolkit?node-id=0%3A1) and made specifically for building webview-based extensions for VS Code.
+This toolkit is an implementation of the [VS Code Webview Figma Toolkit](https://www.figma.com/file/KO1yufOeApPEMymIxJ3dTf/VS-Code-Webview-Toolkit?node-id=0%3A1) and made specifically for building webview-based extensions in VS Code.
 
 The VS Code Webview Toolkit has all of the core components needed for creating webview-based extensions that take place in the explorer, command palette, terminal, editor, and debugger. The experiences in webviews often have design requirements that go beyond the base experiences in VS Code.
 
