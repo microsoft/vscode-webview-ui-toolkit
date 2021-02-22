@@ -7,7 +7,7 @@ VSCodeButton;
 VSCodeDesignSystemProvider;
 
 export default {
-	title: 'Button',
+	title: 'Library/Button',
 };
 
 export const Button = (): string => ButtonTemplate;
