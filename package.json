@@ -1,7 +1,7 @@
 {
 	"name": "vscode-webview-toolkit",
 	"version": "0.0.1",
-	"description": "A component library for usage in Visual Studio Code webview-based extensions.",
+	"description": "A component library for creating webview-based extensions in Visual Studio Code.",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
