@@ -1,6 +1,6 @@
 # Visual Studio Code Webview Figma Toolkit
 
-👉  Figma Link: [VS Code Webview Toolkit](https://www.figma.com/file/KO1yufOeApPEMymIxJ3dTf/VS-Code-Webview-Toolkit?node-id=0%3A1)
+👉 Figma Link: [VS Code Webview Toolkit](https://www.figma.com/file/KO1yufOeApPEMymIxJ3dTf/VS-Code-Webview-Toolkit?node-id=0%3A1)
 
 ## About this toolkit
 
@@ -89,39 +89,37 @@ Seti icons have color styles that you can also use.
 
 The last page in the Figma file has the Color Palette, which contains all the colors used in the default dark and light themes. The color tokens are broken up into sections based on their use in VS Code. Here's an example of the button category, which includes the background, foreground, and hoverBackground. Each card also includes the HEX value.
 
-<img width="577" alt="Screen_Shot_2020-06-16_at_1 51 59_PM" src="https://user-images.githubusercontent.com/47866467/84821516-3d5d8000-afe9-11ea-8ab5-077bb3dc27be.png">
+![Untitled 10](https://user-images.githubusercontent.com/47866467/84821516-3d5d8000-afe9-11ea-8ab5-077bb3dc27be.png)
 
-When looking at the color library in the toolkit, each color is marked with the theme it belongs to, the category, and it's use. 
+When looking at the color library in the toolkit, each color is marked with the theme it belongs to, the category, and it's use.
 
 ![Screen Shot 2020-06-16 at 3 54 45 PM](https://user-images.githubusercontent.com/47866467/84821822-bbba2200-afe9-11ea-9dcb-e666ac47e12d.png)
 
 When viewing toolkit components in the "Code" view, you will see the color tokens used.
 
-<img width="1157" alt="Screen_Shot_2020-06-16_at_1 56 19_PM" src="https://user-images.githubusercontent.com/47866467/84821519-3e8ead00-afe9-11ea-9ff8-92589f2ea27d.png">
+![Untitled 11](https://user-images.githubusercontent.com/47866467/84821519-3e8ead00-afe9-11ea-9ff8-92589f2ea27d.png)
 
-# Contributing
+## Contributing
 
 If you'd like to contribute components, please create a PR with a link to your Figma file that has the proposed the components. Please re-use the same naming convention found in the rest of the file.
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit [cla.opensource.microsoft.com](https://cla.opensource.microsoft.com).
 
 When you submit a pull request, a CLA bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repos using our CLA.
 
 This project has adopted the Microsoft Open Source Code of Conduct. For more information see the Code of Conduct FAQ or contact opencode@microsoft.com with any additional questions or comments.
 
-# Legal Notices
+## Legal Notices
 
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
+in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE](LICENSE-CODE) file.
 
 Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
 may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
 The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+Microsoft's general trademark guidelines can be found at [here](http://go.microsoft.com/fwlink/?LinkID=254653).
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+Privacy information can be found at [here](https://privacy.microsoft.com/en-us/).
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
