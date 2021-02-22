@@ -10,11 +10,11 @@
 	"bugs": {
 		"url": "https://github.com/microsoft/vscode-webview-toolkit/issues"
 	},
-	"main": "index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/microsoft/vscode-webview-toolkit.git"
 	},
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
