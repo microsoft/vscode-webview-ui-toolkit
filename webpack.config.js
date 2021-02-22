@@ -27,11 +27,7 @@ module.exports = function (env, {mode}) {
 			rules: [
 				{
 					test: /\.ts$/i,
-					use: [
-						{
-							loader: 'ts-loader',
-						},
-					],
+					loader: 'ts-loader',
 					exclude: /node_modules/,
 				},
 			],
