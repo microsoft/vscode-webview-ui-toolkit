@@ -16,7 +16,9 @@
 	},
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "^0.22.2",
@@ -24,6 +26,12 @@
 		"lodash-es": "^4.17.21"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.12.17",
+		"@storybook/addon-actions": "^6.1.18",
+		"@storybook/addon-essentials": "^6.1.18",
+		"@storybook/addon-links": "^6.1.18",
+		"@storybook/html": "^6.1.18",
+		"babel-loader": "^8.2.2",
 		"clean-webpack-plugin": "^3.0.0",
 		"prettier": "^2.2.1",
 		"ts-loader": "^8.0.17",
