@@ -8,7 +8,7 @@ import Plugin from './assets/plugin.svg';
 import Repo from './assets/repo.svg';
 import StackAlt from './assets/stackalt.svg';
 
-<Meta title="Docs/Introduction" />
+<Meta title="Docs/Introduction" parameters={{options: {isToolshown: false}}} />
 
 <style>{`
   .subheading {
@@ -39,7 +39,7 @@ import StackAlt from './assets/stackalt.svg';
   }
 
   @media all and (-ms-high-contrast:none) {
-  .link-list {
+  	.link-list {
       display: -ms-grid;
       -ms-grid-columns: 1fr 1fr;
       -ms-grid-rows: 1fr 1fr;
@@ -49,22 +49,23 @@ import StackAlt from './assets/stackalt.svg';
   .link-item {
     display: block;
     padding: 20px 30px 20px 15px;
-    border: 1px solid #00000010;
+    border: 1px solid #00000040;
     border-radius: 5px;
     transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
-    color: #333333;
+    color: #000;
     display: flex;
     align-items: flex-start;
   }
 
   .link-item:hover {
-    border-color: #1EA7FD50;
+    border-color: hsla(212, 98%, 55%, 0.314);
+    color: hsla(212, 98%, 55%, 0.95);
     transform: translate3d(0, -3px, 0);
     box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
   }
 
   .link-item:active {
-    border-color: #1EA7FD;
+    border-color: hsla(208, 98%, 55%);
     transform: translate3d(0, 0, 0);
   }
 
@@ -85,135 +86,113 @@ import StackAlt from './assets/stackalt.svg';
     font-size: 14px;
     line-height: 20px;
   }
-
-  .tip {
-    display: inline-block;
-    border-radius: 1em;
-    font-size: 11px;
-    line-height: 12px;
-    font-weight: 700;
-    background: #E7FDD8;
-    color: #66BF3C;
-    padding: 4px 12px;
-    margin-right: 10px;
-    vertical-align: top;
-  }
-
-  .tip-wrapper {
-    font-size: 13px;
-    line-height: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .tip-wrapper code {
-    font-size: 12px;
-    display: inline-block;
-  }
-
-  
 `}</style>
 
-# Welcome to Storybook
+# Visual Studio Code Webview Toolkit
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+Welcome to the [VS Code Webview Toolkit](https://github.com/microsoft/vscode-webview-toolkit).
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `src/stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+This toolkit is an implementation of the [VS Code Webview Figma Toolkit](https://www.figma.com/file/KO1yufOeApPEMymIxJ3dTf/VS-Code-Webview-Toolkit?node-id=0%3A1)
+and made specifically for building webview-based extensions in VS Code.
 
-<div className="subheading">Configure</div>
+The VS Code Webview Toolkit has all of the core components needed for creating webview-based
+extensions that take place in the explorer, command palette, terminal, editor, and debugger.
+The experiences in webviews often have design requirements that go beyond the base experiences
+in VS Code.
 
-<div className="link-list">
-	<a
-		className="link-item"
-		href="https://storybook.js.org/docs/react/addons/addon-types"
-		target="_blank">
-		<img src={Plugin} alt="plugin" />
-		<span>
-			<strong>Presets for popular tools</strong>
-			Easy setup for TypeScript, SCSS and more.
-		</span>
-	</a>
-	<a
-		className="link-item"
-		href="https://storybook.js.org/docs/react/configure/webpack"
-		target="_blank">
-		<img src={StackAlt} alt="Build" />
-		<span>
-			<strong>Build configuration</strong>
-			How to customize webpack and Babel
-		</span>
-	</a>
-	<a
-		className="link-item"
-		href="https://storybook.js.org/docs/react/configure/styling-and-css"
-		target="_blank">
-		<img src={Colors} alt="colors" />
-		<span>
-			<strong>Styling</strong>
-			How to load and configure CSS libraries
-		</span>
-	</a>
-	<a
-		className="link-item"
-		href="https://storybook.js.org/docs/react/get-started/setup#configure-storybook-for-your-stack"
-		target="_blank">
-		<img src={Flow} alt="flow" />
-		<span>
-			<strong>Data</strong>
-			Providers and mocking for data libraries
-		</span>
-	</a>
-</div>
+This toolkit was created to give people the tools to build webview experiences that are consistent
+with the rest of VS Code. All of the components were designed with theming in mind and use colors
+that map directly to the VS Code dark theme color tokens. The components in the toolkit are based
+on the Fluent Web components but have been redesigned to match VS Code's visual language.
 
-<div className="subheading">Learn</div>
+---
 
-<div className="link-list">
-	<a
-		className="link-item"
-		href="https://storybook.js.org/docs"
-		target="_blank">
+# Storybook
+
+This toolkit is also developed using Storybook. Below you can find documentation and
+guides for getting up and running with Storybook.
+
+Storybook helps you build UI components in isolation from an app's business logic, data, and context.
+That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during
+development, testing, or QA.
+
+<div class="subheading">Learn</div>
+
+<div class="link-list">
+	<a class="link-item" href="https://storybook.js.org/docs" target="_blank">
 		<img src={Repo} alt="repo" />
-		<span>
+		<span class="link-list-text">
 			<strong>Storybook documentation</strong>
 			Configure, customize, and extend
 		</span>
 	</a>
-	<a
-		className="link-item"
-		href="https://www.learnstorybook.com"
-		target="_blank">
+	<a class="link-item" href="https://www.learnstorybook.com" target="_blank">
 		<img src={Direction} alt="direction" />
-		<span>
+		<span class="link-list-text">
 			<strong>In-depth guides</strong>
 			Best practices from leading teams
 		</span>
 	</a>
 	<a
-		className="link-item"
+		class="link-item"
 		href="https://github.com/storybookjs/storybook"
 		target="_blank">
 		<img src={Code} alt="code" />
-		<span>
+		<span class="link-list-text">
 			<strong>GitHub project</strong>
 			View the source and add issues
 		</span>
 	</a>
-	<a
-		className="link-item"
-		href="https://discord.gg/storybook"
-		target="_blank">
+	<a class="link-item" href="https://discord.gg/UUt2PJb" target="_blank">
 		<img src={Comments} alt="comments" />
-		<span>
+		<span class="link-list-text">
 			<strong>Discord chat</strong>
 			Chat with maintainers and the community
 		</span>
 	</a>
 </div>
 
-<div className="tip-wrapper">
-	<span className="tip">Tip</span>Edit the Markdown in{' '}
-	<code>src/stories/Introduction.stories.mdx</code>
+<div class="subheading">Configure</div>
+
+<div class="link-list">
+	<a
+		class="link-item"
+		href="https://storybook.js.org/docs/react/api/presets"
+		target="_blank">
+		<img src={Plugin} alt="plugin" />
+		<span class="link-list-text">
+			<strong>Presets for popular tools</strong>
+			Easy setup for TypeScript, SCSS and more.
+		</span>
+	</a>
+	<a
+		class="link-item"
+		href="https://storybook.js.org/docs/react/configure/webpack"
+		target="_blank">
+		<img src={StackAlt} alt="Build" />
+		<span class="link-list-text">
+			<strong>Build configuration</strong>
+			How to customize webpack and Babel
+		</span>
+	</a>
+	<a
+		class="link-item"
+		href="https://storybook.js.org/docs/react/configure/styling-and-css"
+		target="_blank">
+		<img src={Colors} alt="colors" />
+		<span class="link-list-text">
+			<strong>Styling</strong>
+			How to load and configure CSS libraries
+		</span>
+	</a>
+	<a
+		class="link-item"
+		href="https://storybook.js.org/docs/react/get-started/setup#configure-storybook-for-your-stack"
+		target="_blank">
+		<img src={Flow} alt="flow" />
+		<span class="link-list-text">
+			<strong>Data</strong>
+			Providers and mocking for data libraries
+		</span>
+	</a>
 </div>
