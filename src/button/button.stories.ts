@@ -1,7 +1,7 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
-import {createButton, ButtonArgs} from './fixtures/createButton';
-import {VSCodeButton} from './index';
 import {action} from '@storybook/addon-actions';
+import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
+import {ButtonArgs, createButton} from './fixtures/createButton';
+import {VSCodeButton} from './index';
 
 // Prevent tree-shaking
 VSCodeButton;

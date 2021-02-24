@@ -1,4 +1,4 @@
-import {customElement, css} from '@microsoft/fast-element';
+import {css, customElement} from '@microsoft/fast-element';
 import {Button, ButtonTemplate as template} from '@microsoft/fast-foundation';
 
 const styles = css`

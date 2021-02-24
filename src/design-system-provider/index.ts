@@ -1,8 +1,8 @@
 import {
-	DesignSystemProvider,
 	defineDesignSystemProvider,
-	DesignSystemProviderTemplate as template,
 	designSystemProperty,
+	DesignSystemProvider,
+	DesignSystemProviderTemplate as template,
 } from '@microsoft/fast-foundation';
 import {css, nullableNumberConverter} from '@microsoft/fast-element';
 import {DesignSystem, DesignSystemDefaults} from '../vscode-design-system';
