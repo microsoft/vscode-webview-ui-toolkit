@@ -18,7 +18,10 @@
 	"scripts": {
 		"start": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
-		"prettier": "prettier --config ./.prettierrc --write \"**/*.{ts,js}\""
+		"lint": "eslint . --ext .ts",
+		"lint:fix": "eslint . --ext .ts --fix",
+		"prettier": "prettier --config ./.prettierrc --write \"**/*.{ts,js}\"",
+		"code-style": "npm run prettier && npm run lint:fix"
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "^0.22.2",
@@ -27,6 +30,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.17",
+		"@microsoft/eslint-config-fast-dna": "^1.2.0",
 		"@storybook/addon-a11y": "^6.1.19",
 		"@storybook/addon-actions": "^6.1.18",
 		"@storybook/addon-essentials": "^6.1.18",
@@ -35,6 +39,7 @@
 		"@storybook/theming": "^6.1.18",
 		"babel-loader": "^8.2.2",
 		"clean-webpack-plugin": "^3.0.0",
+		"eslint-config-prettier": "^8.1.0",
 		"prettier": "^2.2.1",
 		"ts-loader": "^8.0.17",
 		"typescript": "^4.1.5",
