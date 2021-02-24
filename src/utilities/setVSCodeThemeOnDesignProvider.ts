@@ -28,7 +28,7 @@ function init() {
 		});
 	} else {
 		// TODO: Some kind of error reported to extension builders that they need to be using
-        //       <vscode-design-system-provider> element?
+		//       <vscode-design-system-provider> element?
 	}
 }
 
