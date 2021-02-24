@@ -1,3 +1,5 @@
+import {VSCodeButton} from '../index';
+
 export type ButtonArgs = {
 	label: string;
 	onClick: any;
@@ -5,7 +7,7 @@ export type ButtonArgs = {
 };
 
 export function createButton({label, onClick, disabled}: ButtonArgs) {
-	const button = document.createElement('vscode-button');
+	const button = new VSCodeButton();
 
 	button.textContent = label;
 	button.addEventListener('click', onClick);
