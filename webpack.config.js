@@ -4,12 +4,12 @@ module.exports = function (env, {mode}) {
 	const production = mode === 'production';
 	return {
 		mode: production ? 'production' : 'development',
-		devtool: production ? 'source-maps' : 'inline-source-map',
+		devtool: production ? false : 'inline-source-map',
 		entry: {
 			app: ['./src/index.ts'],
 		},
 		output: {
-			filename: 'bundle.js',
+			filename: 'index.js',
 		},
 		resolve: {
 			extensions: ['.ts', '.js'],
