@@ -1,0 +1,25 @@
+# Source files
+src/
+
+# Docs
+docs/
+
+# Tests
+*.spec.*
+coverage/
+
+# Builds
+storybook-static/
+
+# Config files
+.vscode
+.github
+.eslintrc.js
+.eslintignore
+.prettierrc
+.prettierignore
+.storybook
+babel.config.js
+tsconfig.json
+tsconfig.build.json
+webpack.config.js
