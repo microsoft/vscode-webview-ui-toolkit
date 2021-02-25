@@ -3,3 +3,5 @@ dist
 coverage
 .storybook
 *.spec.*
+babel.config.js
+webpack.config.js
