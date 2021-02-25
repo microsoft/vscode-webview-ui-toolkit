@@ -16,5 +16,11 @@
 		"rootDir": "src",
 		"lib": ["dom", "esnext"]
 	},
-	"include": ["src"]
+	"include": ["src"],
+	"exclude": [
+		"src/**/*.spec.ts",
+		"src/**/*.stories.ts",
+		"src/**/fixtures/",
+		"node_modules"
+	]
 }
