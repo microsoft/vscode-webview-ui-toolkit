@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PoliCheckExclusions>
+    <Exclusion Type="FolderPathFull">NODE_MODULES|.GIT|.CACHE|DIST|_SITE</Exclusion>
+</PoliCheckExclusions>
