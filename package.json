@@ -22,7 +22,8 @@
 		"lint:fix": "eslint . --ext .ts --fix",
 		"prettier": "prettier --config ./.prettierrc --write \"**/*.{ts,js}\"",
 		"code-style": "npm run prettier && npm run lint:fix",
-		"test": "jest --coverage --verbose"
+		"test": "jest --verbose",
+		"test:coverage": "jest --verbose --coverage"
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "^0.22.2",
