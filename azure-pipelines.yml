@@ -1,0 +1,79 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+  - main
+
+# Run two jobs: First, our code analysis under Test, and the usual
+# npm install and build as a second task running in parallel.
+
+jobs:
+  - job: Compliance
+    pool:
+      vmImage: "windows-latest"
+    steps:
+      - task: PoliCheck@1
+        displayName: "🌎 PoliCheck"
+        inputs:
+          inputType: "Basic"
+          targetType: "F"
+          targetArgument: "$(Build.SourcesDirectory)"
+          result: "PoliCheck.xml"
+          optionsXS: 1 # Scan subfolders
+          optionsPE: 1 # Enable exclusions
+          # Exclude folders like node_modules, dist, .git etc.
+          optionsUEPATH: "$(Build.SourcesDirectory)/policheck/UserExclusion.xml"
+
+    # Guardian and ESLint are built on dotnet and need a Windows VM to run
+  - job: Security
+    pool:
+      vmImage: "windows-latest"
+
+    # 1) Run the 1ES ESLint task using Guardian
+    steps:
+      - task: ESLint@1
+        displayName: "🛡 Guardian: ESLint"
+        inputs:
+          Configuration: "recommended"
+          TargetType: "eslint"
+          TargetsESLint: |
+            $(Build.SourcesDirectory)/**/*.js
+          ErrorLevel: "warn"
+
+  - job: Build
+    # For running regular npm tasks, Ubuntu is easiest
+    pool:
+      vmImage: "ubuntu-latest"
+
+    steps:
+      # 1) Install Node
+      - task: NodeTool@0
+        inputs:
+          versionSpec: "10.x"
+        displayName: "🖥️ Install Node.js"
+
+      # 2) Install, and preinstall dependencies
+      - script: npm install
+        displayName: "⚙️ Install dependencies"
+
+      # 3) Build and generate output
+      #    Deploying storybook
+      - script: npm run build-storybook
+        displayName: "🏗️ Build and package storybook"
+
+      # 4) Copy build files from $(System.DefaultWorkingDirectory) into staging
+      - task: CopyFiles@2
+        displayName: "➡️ Copy build into staging"
+        inputs:
+          Contents: "storybook-static/**"
+          TargetFolder: $(Build.ArtifactStagingDirectory)
+
+      # 5) Zip up the build, explicitly specifying the "_site" subfolder.
+      #    This avoids broken deployments to http://<host>/_site/index.html
+      - task: PublishBuildArtifacts@1
+        displayName: "📦 Create build artifact"
+        inputs:
+          pathToPublish: "$(Build.ArtifactStagingDirectory)/storybook-static/"
+          artifactName: "build"
