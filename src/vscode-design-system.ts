@@ -3,10 +3,32 @@
  * @public
  */
 export interface DesignSystem {
+	/**
+	 * The accent colors.
+	 */
 	accentBaseColor: string;
+	accentForegroundColor: string;
 	accentHoverColor: string;
+
+	/**
+	 * The corner radius applied to controls.
+	 */
 	cornerRadius: number;
-	/* Insert other design tokens */
+
+	/**
+	 * The width of the standard outline applied to outline components in pixels.
+	 */
+	outlineWidth: number;
+
+	/**
+	 * The width of the standard focus outline in pixels.
+	 */
+	focusOutlineWidth: number;
+
+	/**
+	 * The opacity of a disabled control.
+	 */
+	disabledOpacity: number;
 }
 
 /**
@@ -15,7 +37,10 @@ export interface DesignSystem {
  */
 export const DesignSystemDefaults: DesignSystem = {
 	accentBaseColor: '#0e639c',
-	accentHoverColor: '#007acc',
+	accentForegroundColor: '#ffffff',
+	accentHoverColor: '#1177bb',
 	cornerRadius: 0,
-	/* Insert the default values for other design tokens */
+	disabledOpacity: 0.4,
+	outlineWidth: 1,
+	focusOutlineWidth: 1,
 };
