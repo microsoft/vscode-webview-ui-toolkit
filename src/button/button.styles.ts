@@ -39,11 +39,10 @@ export const ButtonStyles = css`
 	:host(:active) {
 		background-color: var(--accent-base-color);
 	}
-	.control: ${focusVisible} {
-		border: calc(var(--outline-width) * 1px) solid var(--accent-base-color);
-		box-shadow: 0 0 0
-			calc((var(--focus-outline-width) - var(--outline-width)) * 1px)
-			var(--accent-base-color);
+	.control:focus {
+		outline: calc(var(--outline-width) * 1px) solid
+			var(--accent-hover-color);
+		outline-offset: calc(var(--outline-width) * 1px);
 	}
 	.control::-moz-focus-inner {
 		border: 0;
