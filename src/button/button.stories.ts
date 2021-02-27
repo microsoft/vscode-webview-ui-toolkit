@@ -12,7 +12,8 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		onClick: {action: 'onClick'},
-		disabled: {control: 'boolean'},
+		isDisabled: {control: 'boolean'},
+		isFocused: {control: 'boolean'},
 	},
 };
 
@@ -20,15 +21,22 @@ const Template = ({...args}: ButtonArgs) => {
 	return createButton({...args});
 };
 
-export const Default: any = Template.bind({});
-Default.args = {
+export const Primary: any = Template.bind({});
+Primary.args = {
 	label: 'Button',
 	onClick: action('button-clicked'),
-	disabled: false,
+	isDisabled: false,
+	isFocused: false,
 };
 
 export const Disabled: any = Template.bind({});
 Disabled.args = {
-	...Default.args,
-	disabled: true,
+	...Primary.args,
+	isDisabled: true,
+};
+
+export const Focused: any = Template.bind({});
+Focused.args = {
+	...Primary.args,
+	isFocused: true,
 };
