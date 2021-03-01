@@ -29,7 +29,7 @@ export const parameters = {
 		theme: themes.light,
 	},
 	backgrounds: {
-		default: 'light',
+		default: 'dark',
 		values: [
 			{
 				name: 'light',
@@ -41,7 +41,7 @@ export const parameters = {
 			},
 			{
 				name: 'dark',
-				value: '#333',
+				value: '#252526',
 			},
 		],
 	},
