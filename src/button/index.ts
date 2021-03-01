@@ -1,26 +1,29 @@
-import {css, customElement} from '@microsoft/fast-element';
+import {attr, customElement} from '@microsoft/fast-element';
 import {Button, ButtonTemplate as template} from '@microsoft/fast-foundation';
+import {ButtonStyles as styles} from './button.styles';
 
-const styles = css`
-	.control {
-		border-radius: calc(var(--corner-radius) * 1px);
-		color: white;
-		background-color: var(--accent-base-color);
-		border: none;
-		padding: 10px 10px;
-		box-sizing: border-box;
-		display: flex;
-		text-align: center;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-	}
+/**
+ * Types of button appearance.
+ * @public
+ */
+export type ButtonAppearance =
+	| 'install'
+	| 'link'
+	| 'primary'
+	| 'secondary'
+	| 'text';
 
-	.control:hover {
-		background-color: var(--accent-hover-color);
-	}
-`;
-
+/**
+ * The VSCode Button Element. Extends {@link @microsoft/fast-foundation#Button},
+ * {@link @microsoft/fast-foundation#ButtonTemplate}
+ *
+ *
+ * @public
+ * @remarks
+ * HTML Element: \<vscode-button\>
+ *
+ * {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
+ */
 @customElement({
 	name: 'vscode-button',
 	template,
@@ -31,9 +34,18 @@ const styles = css`
 })
 export class VSCodeButton extends Button {
 	/**
-	 * This new VSCode button should work right out of the box because it inherits all the
-	 * behaviors/functionality from the FAST Foundation Button class.
+	 * The appearance the button should have.
 	 *
-	 * With that said, we can still add new behaviors/functionality to this VSCode button if we want.
+	 * @public
+	 * @remarks
+	 * HTML Attribute: appearance
 	 */
+	@attr public appearance: ButtonAppearance;
+
+	public connectedCallback() {
+		super.connectedCallback();
+		if (!this.appearance) {
+			this.appearance = 'primary';
+		}
+	}
 }
