@@ -18,8 +18,5 @@ import {CheckboxStyles as styles} from './checkbox.styles';
 	name: 'vscode-checkbox',
 	template,
 	styles,
-	shadowOptions: {
-		delegatesFocus: true,
-	},
 })
 export class VSCodeCheckbox extends Checkbox {}
