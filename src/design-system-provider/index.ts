@@ -123,4 +123,15 @@ export class VSCodeDesignSystemProvider
 		default: DesignSystemDefaults.focusOutlineWidth,
 	})
 	public focusOutlineWidth: number;
+
+	/**
+	 * The grid-unit that UI dimensions are derived from in pixels.
+	 */
+	@designSystemProperty({
+		attribute: 'design-unit',
+		cssCustomProperty: 'design-unit',
+		converter: nullableNumberConverter,
+		default: DesignSystemDefaults.designUnit,
+	})
+	public designUnit: number;
 }
