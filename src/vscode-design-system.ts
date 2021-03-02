@@ -41,6 +41,11 @@ export interface DesignSystem {
 	 * The width of the standard focus outline in pixels.
 	 */
 	focusOutlineWidth: number;
+
+	/**
+	 * The grid-unit that UI dimensions are derived from in pixels.
+	 */
+	designUnit: number;
 }
 
 /**
@@ -65,7 +70,7 @@ export const DesignSystemDefaults: DesignSystem = {
 	/**
 	 * Text link defaults.
 	 */
-	textLinkForegroundColor: "#3794ff",
+	textLinkForegroundColor: '#3794ff',
 
 	/**
 	 * The corner radius default.
@@ -82,4 +87,6 @@ export const DesignSystemDefaults: DesignSystem = {
 	 */
 	outlineWidth: 1,
 	focusOutlineWidth: 1,
+
+	designUnit: 4,
 };
