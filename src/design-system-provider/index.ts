@@ -124,6 +124,13 @@ export class VSCodeDesignSystemProvider
 	})
 	public focusOutlineWidth: number;
 
+	@designSystemProperty({
+		attribute: 'focus-border',
+		cssCustomProperty: 'focus-border',
+		default: DesignSystemDefaults.focusBorder,
+	})
+	public focusBorder: string;
+
 	/**
 	 * The grid-unit that UI dimensions are derived from in pixels.
 	 */

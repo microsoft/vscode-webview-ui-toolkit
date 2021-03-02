@@ -42,6 +42,8 @@ export interface DesignSystem {
 	 */
 	focusOutlineWidth: number;
 
+	focusBorder: string;
+
 	/**
 	 * The grid-unit that UI dimensions are derived from in pixels.
 	 */
@@ -87,6 +89,7 @@ export const DesignSystemDefaults: DesignSystem = {
 	 */
 	outlineWidth: 1,
 	focusOutlineWidth: 1,
+	focusBorder: "#007fd4",
 
 	designUnit: 4,
 };
