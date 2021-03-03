@@ -1,5 +1,9 @@
 import {css} from '@microsoft/fast-element';
-import {disabledCursor, display} from '@microsoft/fast-foundation';
+import {
+	disabledCursor,
+	display,
+	focusVisible,
+} from '@microsoft/fast-foundation';
 
 /**
  * @internal
@@ -38,7 +42,7 @@ const BaseButtonStyles = css`
 	:host(:active) {
 		background: var(--primary-background-color);
 	}
-	.control:focus {
+	.control: ${focusVisible} {
 		outline: calc(var(--outline-width) * 1px) solid
 			var(--primary-hover-background-color);
 		outline-offset: calc(var(--outline-width) * 1px);
@@ -60,10 +64,7 @@ const BaseButtonStyles = css`
 		line-height: 0;
 	}
 	::slotted(svg) {
-		${
-			/* Glyph size and margin-left is temporary -
-            replace when adaptive typography is figured out */ ''
-		} width: 16px;
+		width: 16px;
 		height: 16px;
 	}
 	.start {
@@ -91,9 +92,10 @@ const PrimaryButtonStyles = css`
 	:host([appearance='primary']:active) .control:active {
 		background: var(--primary-background-color);
 	}
-	:host([appearance='primary']) .control:focus {
+	:host([appearance='primary']) .control:${focusVisible} {
 		outline: calc(var(--outline-width) * 1px) solid
 			var(--primary-hover-background-color);
+		outline-offset: calc(var(--outline-width) * 1px);
 	}
 	:host([appearance='primary'][disabled]) {
 		background: var(--primary-background-color);
@@ -117,9 +119,10 @@ const SecondaryButtonStyles = css`
 	:host([appearance='secondary']:active) .control:active {
 		background: var(--secondary-background-color);
 	}
-	:host([appearance='secondary']) .control:focus {
+	:host([appearance='secondary']) .control:${focusVisible} {
 		outline: calc(var(--outline-width) * 1px) solid
 			var(--primary-hover-background-color);
+		outline-offset: calc(var(--outline-width) * 1px);
 	}
 	:host([appearance='secondary'][disabled]) {
 		background: var(--secondary-background-color);
@@ -143,9 +146,10 @@ const InstallButtonStyles = css`
 	:host([appearance='install']:active) .control:active {
 		background: var(--primary-background-color);
 	}
-	:host([appearance='install']) .control:focus {
+	:host([appearance='install']) .control:${focusVisible} {
 		outline: calc(var(--outline-width) * 1px) solid
 			var(--primary-hover-background-color);
+		outline-offset: calc(var(--outline-width) * 1px);
 	}
 	:host([appearance='install'][disabled]) {
 		background: var(--primary-background-color);
@@ -169,9 +173,10 @@ const TextButtonStyles = css`
 	:host([appearance='text']:active) .control:active {
 		background: var(--secondary-background-color);
 	}
-	:host([appearance='text']) .control:focus {
+	:host([appearance='text']) .control:${focusVisible} {
 		outline: calc(var(--outline-width) * 1px) solid
 			var(--primary-hover-background-color);
+		outline-offset: calc(var(--outline-width) * 1px);
 	}
 	:host([appearance='text'][disabled]) {
 		background: var(--secondary-background-color);
@@ -195,9 +200,10 @@ const LinkButtonStyles = css`
 	:host([appearance='link']:active) .control:active {
 		background: transparent;
 	}
-	:host([appearance='link']) .control:focus {
+	:host([appearance='link']) .control:${focusVisible} {
 		outline: calc(var(--outline-width) * 1px) solid
 			var(--text-link-foreground-color);
+		outline-offset: calc(var(--outline-width) * 1px);
 	}
 	:host([appearance='link'][disabled]) {
 		text-decoration: none;
