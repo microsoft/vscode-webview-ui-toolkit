@@ -7,7 +7,7 @@ const colorTokensMappedToAttributeNames: any = {
 	/* Insert more color token attribute name mappings */
 };
 
-function init() {
+export function init() {
 	// Get all the styles applied to the VSCode extensions <body>
 	// Importantly this includes all the CSS variables associated with the current VSCode theme
 	const styles = getComputedStyle(document.body);
@@ -43,5 +43,3 @@ function setVSCodeThemeOnDesignProvider(
 		designProvider.setAttribute(attributeName, tokenValue);
 	}
 }
-
-init();
