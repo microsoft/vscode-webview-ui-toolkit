@@ -1,5 +1,5 @@
 import {VSCodeCheckbox} from '../index';
-import {focusObserver} from '../../utilities/focusObserver';
+import {focusObserver} from '../../utilities/storybook/focusObserver';
 
 export type CheckboxArgs = {
 	label?: string;
