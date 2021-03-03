@@ -1,6 +1,5 @@
-import {VSCodeButton} from '../index';
-import {focusObserver} from '../../utilities/focusObserver';
-import {ButtonAppearance} from '../index';
+import {ButtonAppearance, VSCodeButton} from '../index';
+import {focusObserver} from '../../utilities/storybook/index';
 
 export type ButtonArgs = {
 	label: string;

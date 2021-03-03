@@ -20,3 +20,9 @@ import {CheckboxStyles as styles} from './checkbox.styles';
 	styles,
 })
 export class VSCodeCheckbox extends Checkbox {}
+
+/**
+ * Styles for the VSCode Checkbox
+ * @public
+ */
+export const CheckboxStyles = styles;

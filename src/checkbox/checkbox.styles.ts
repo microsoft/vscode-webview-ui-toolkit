@@ -59,7 +59,7 @@ export const CheckboxStyles = css`
 		border-color: #1177bb;
 	}
 	.control:focus {
-		outline: calc(var(--outline-width) * 1px) solid #1177bb;
+		outline: calc(var(--outline-width) * 1px) solid var(--focus-border);
 	}
 	:host(.disabled) .label,
 	:host(.readonly) .label,
