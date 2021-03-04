@@ -14,15 +14,15 @@ export type ButtonAppearance =
 	| 'text';
 
 /**
- * The VSCode Button Element. Extends {@link @microsoft/fast-foundation#Button},
- * {@link @microsoft/fast-foundation#ButtonTemplate}
- *
+ * The VSCode Button Element. Extends
+ * {@link https://www.fast.design/docs/api/fast-foundation.button/ Button} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.buttontemplate/ ButtonTemplate}.
  *
  * @public
  * @remarks
- * HTML Element: \<vscode-button\>
+ * HTML Element: `<vscode-button>`
  *
- * {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
+ * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus delegatesFocus}
  */
 @customElement({
 	name: 'vscode-button',
