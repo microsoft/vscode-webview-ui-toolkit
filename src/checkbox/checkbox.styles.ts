@@ -1,5 +1,10 @@
 import {css} from '@microsoft/fast-element';
-import {disabledCursor, display} from '@microsoft/fast-foundation';
+import {
+	disabledCursor,
+	display,
+	focusVisible,
+} from '@microsoft/fast-foundation';
+import {heightNumber} from '../utilities/styles/index';
 
 export const CheckboxStyles = css`
 	${display('inline-flex')} :host {
@@ -10,38 +15,40 @@ export const CheckboxStyles = css`
 	}
 	.control {
 		position: relative;
-		width: 18px;
-		height: 18px;
+		width: calc((${heightNumber} / 2 + var(--design-unit)) * 1px);
+		height: calc((${heightNumber} / 2 + var(--design-unit)) * 1px);
 		box-sizing: border-box;
-		border-radius: 3px;
-		border: calc(var(--outline-width) * 1px) solid 1px;
-		background: #3c3c3c;
+		border-radius: calc(var(--checkbox-corner-radius) * 1px);
+		border: calc(var(--border-width) * 1px) solid
+			var(--checkbox-border-color);
+		background: var(--checkbox-background-color);
 		outline: none;
 		cursor: pointer;
 	}
-	.label__hidden {
-		display: none;
-		visibility: hidden;
-	}
 	.label {
-		color: #f0f0f0;
+		font-family: var(--body-font);
+		color: var(--checkbox-foreground-color);
 		padding-inline-start: calc(var(--design-unit) * 2px + 2px);
 		margin-inline-end: calc(var(--design-unit) * 2px + 2px);
 		cursor: pointer;
 		font-size: var(--type-ramp-base-font-size);
 		line-height: var(--type-ramp-base-line-height);
 	}
+	.label__hidden {
+		display: none;
+		visibility: hidden;
+	}
 	.checked-indicator {
 		width: 100%;
 		height: 100%;
 		display: block;
-		fill: #f0f0f0;
+		fill: var(--checkbox-foreground-color);
 		opacity: 0;
 		pointer-events: none;
 	}
 	.indeterminate-indicator {
-		border-radius: calc(var(--corner-radius) * 1px);
-		background: #f0f0f0;
+		border-radius: calc(var(--checkbox-corner-radius) * 1px);
+		background: var(--checkbox-foreground-color);
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -51,15 +58,16 @@ export const CheckboxStyles = css`
 		opacity: 0;
 	}
 	:host(:enabled) .control:hover {
-		background: #3c3c3c;
-		border-color: #3c3c3c;
+		background: var(--checkbox-background-color);
+		border-color: var(--checkbox-background-color);
 	}
 	:host(:enabled) .control:active {
-		background: #3c3c3c;
-		border-color: #1177bb;
+		background: var(--checkbox-background-color);
+		border-color: var(--focus-border-color);
 	}
-	.control:focus {
-		outline: calc(var(--outline-width) * 1px) solid var(--focus-border);
+	:host(:${focusVisible}) .control {
+		border: calc(var(--focus-border-width) * 1px) solid
+			var(--focus-border-color);
 	}
 	:host(.disabled) .label,
 	:host(.readonly) .label,
