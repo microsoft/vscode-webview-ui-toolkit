@@ -125,7 +125,7 @@ export const DesignSystemDefaults: DesignSystem = {
 	/**
 	 * Checkbox design token defaults.
 	 */
-	checkboxBackgroundColor: "#3c3c3c",
-	checkboxForegroundColor: "#f0f0f0",
-	checkboxBorderColor: "#3c3c3c",
+	checkboxBackgroundColor: '#3c3c3c',
+	checkboxForegroundColor: '#f0f0f0',
+	checkboxBorderColor: '#3c3c3c',
 };
