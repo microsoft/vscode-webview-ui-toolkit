@@ -22,6 +22,8 @@ export type ButtonAppearance =
  * @remarks
  * HTML Element: `<vscode-button>`
  *
+ * HTML Attribute: `appearance = primary | secondary | install | text | link`
+ *
  * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus delegatesFocus}
  */
 @customElement({
