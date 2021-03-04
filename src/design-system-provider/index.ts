@@ -612,8 +612,8 @@ export class VSCodeDesignSystemProvider
 	 * CSS Custom Property: `--checkbox-foreground-color`
 	 */
 	@designSystemProperty({
-		attribute: 'checkbox-secondary-foreground-color',
-		cssCustomProperty: 'checkbox-secondary-foreground-color',
+		attribute: 'checkbox-foreground-color',
+		cssCustomProperty: 'checkbox-foreground-color',
 		default: DesignSystemDefaults.checkboxForegroundColor,
 	})
 	public checkboxForegroundColor: string;
