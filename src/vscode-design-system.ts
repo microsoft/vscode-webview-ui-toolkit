@@ -63,6 +63,13 @@ export interface DesignSystem {
 	checkboxBackgroundColor: string;
 	checkboxForegroundColor: string;
 	checkboxBorderColor: string;
+
+	/**
+	 * Breadcrumb Item design token.
+	 */
+	breadcrumbItemBackgroundColor: string;
+	breadcrumbItemForegroundColor: string;
+	breadcrumbItemForegroundHoverColor: string;
 }
 
 /**
@@ -128,4 +135,11 @@ export const DesignSystemDefaults: DesignSystem = {
 	checkboxBackgroundColor: '#3c3c3c',
 	checkboxForegroundColor: '#f0f0f0',
 	checkboxBorderColor: '#3c3c3c',
+
+	/**
+	 * Breadcrumb Item design token defaults.
+	 */
+	breadcrumbItemBackgroundColor: '#1e1e1e',
+	breadcrumbItemForegroundColor: '#cccccccc',
+	breadcrumbItemForegroundHoverColor: '#e0e0e0',
 };
