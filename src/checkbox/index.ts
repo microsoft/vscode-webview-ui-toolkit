@@ -6,13 +6,13 @@ import {
 import {CheckboxStyles as styles} from './checkbox.styles';
 
 /**
- * The VSCode Checkbox Element. Extends {@link @microsoft/fast-foundation#Checkbox},
- * {@link @microsoft/fast-foundation#CheckboxTemplate}
- *
+ * The VSCode Checkbox element. Extends
+ * {@link https://www.fast.design/docs/api/fast-foundation.checkbox/ Checkbox} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.checkboxtemplate/ CheckboxTemplate}.
  *
  * @public
  * @remarks
- * HTML Element: \<vscode-checkbox\>
+ * HTML Element: `<vscode-checkbox>`
  */
 @customElement({
 	name: 'vscode-checkbox',
