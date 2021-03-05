@@ -632,4 +632,51 @@ export class VSCodeDesignSystemProvider
 		default: DesignSystemDefaults.checkboxBorderColor,
 	})
 	public checkboxBorderColor: string;
+
+	// ------------------------ Breadcrumb Item Design Tokens ------------------------ //
+
+	/**
+	 * The background color of a VSCode breadcrumb item component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `breadcrumb-item-background-color`
+	 *
+	 * CSS Custom Property: `--breadcrumb-item-background-color`
+	 */
+	@designSystemProperty({
+		attribute: 'breadcrumb-item-background-color',
+		cssCustomProperty: 'breadcrumb-item-background-color',
+		default: DesignSystemDefaults.breadcrumbItemBackgroundColor,
+	})
+	public breadcrumbItemBackgroundColor: string;
+
+	/**
+	 * The foreground color of a VSCode breadcrumb item component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `breadcrumb-item-foreground-color`
+	 *
+	 * CSS Custom Property: `--breadcrumb-item-foreground-color`
+	 */
+	@designSystemProperty({
+		attribute: 'breadcrumb-item-foreground-color',
+		cssCustomProperty: 'breadcrumb-item-foreground-color',
+		default: DesignSystemDefaults.breadcrumbItemForegroundColor,
+	})
+	public breadcrumbItemForegroundColor: string;
+
+	/**
+	 * The foreground hover color of a VSCode breadcrumb item component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `breadcrumb-item-foreground-hover-color`
+	 *
+	 * CSS Custom Property: `--breadcrumb-item-foreground-hover-color`
+	 */
+	@designSystemProperty({
+		attribute: 'breadcrumb-item-foreground-hover-color',
+		cssCustomProperty: 'breadcrumb-item-foreground-hover-color',
+		default: DesignSystemDefaults.breadcrumbItemForegroundHoverColor,
+	})
+	public breadcrumbItemForegroundHoverColor: string;
 }
