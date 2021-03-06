@@ -11,7 +11,6 @@ export interface DesignSystem {
 	baseHeightMultiplier: number;
 	baseHorizontalSpacingMultiplier: number;
 	borderWidth: number;
-	checkboxCornerRadius: number;
 	cornerRadius: number;
 	density: number;
 	designUnit: number;
@@ -63,6 +62,7 @@ export interface DesignSystem {
 	checkboxBackgroundColor: string;
 	checkboxForegroundColor: string;
 	checkboxBorderColor: string;
+	checkboxCornerRadius: number;
 
 	/**
 	 * Breadcrumb Item design token.
@@ -70,6 +70,14 @@ export interface DesignSystem {
 	breadcrumbItemBackgroundColor: string;
 	breadcrumbItemForegroundColor: string;
 	breadcrumbItemForegroundHoverColor: string;
+
+	/**
+	 * Select design tokens.
+	 */
+	selectBackgroundColor: string;
+	selectForegroundColor: string;
+	selectBorderColor: string;
+	selectCornerRadius: number;
 }
 
 /**
@@ -80,10 +88,9 @@ export const DesignSystemDefaults: DesignSystem = {
 	/**
 	 * Global design token defaults.
 	 */
-	baseHeightMultiplier: 10,
+	baseHeightMultiplier: 7,
 	baseHorizontalSpacingMultiplier: 3,
 	borderWidth: 1,
-	checkboxCornerRadius: 3,
 	cornerRadius: 0,
 	density: 0,
 	designUnit: 4,
@@ -135,6 +142,7 @@ export const DesignSystemDefaults: DesignSystem = {
 	checkboxBackgroundColor: '#3c3c3c',
 	checkboxForegroundColor: '#f0f0f0',
 	checkboxBorderColor: '#3c3c3c',
+	checkboxCornerRadius: 3,
 
 	/**
 	 * Breadcrumb Item design token defaults.
@@ -142,4 +150,12 @@ export const DesignSystemDefaults: DesignSystem = {
 	breadcrumbItemBackgroundColor: '#1e1e1e',
 	breadcrumbItemForegroundColor: '#cccccccc',
 	breadcrumbItemForegroundHoverColor: '#e0e0e0',
+
+	/**
+	 * Select design token defaults.
+	 */
+	selectBackgroundColor: '#3c3c3c',
+	selectForegroundColor: '#f0f0f0',
+	selectBorderColor: '#3c3c3c',
+	selectCornerRadius: 5,
 };
