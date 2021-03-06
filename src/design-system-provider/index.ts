@@ -77,22 +77,6 @@ export class VSCodeDesignSystemProvider
 	public borderWidth: number;
 
 	/**
-	 * The corner radius applied to checkbox controls.
-	 *
-	 * @remarks
-	 * HTML Attribute: `checkbox-corner-radius`
-	 *
-	 * CSS Custom Property: `--checkbox-corner-radius`
-	 */
-	@designSystemProperty({
-		attribute: 'checkbox-corner-radius',
-		cssCustomProperty: 'checkbox-corner-radius',
-		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.checkboxCornerRadius,
-	})
-	public checkboxCornerRadius: number;
-
-	/**
 	 * The corner radius applied to controls.
 	 *
 	 * _Exception: Checkbox corner radii are defined with the `checkboxCornerRadius` property_.
@@ -633,6 +617,22 @@ export class VSCodeDesignSystemProvider
 	})
 	public checkboxBorderColor: string;
 
+	/**
+	 * The corner radius applied to checkbox controls.
+	 *
+	 * @remarks
+	 * HTML Attribute: `checkbox-corner-radius`
+	 *
+	 * CSS Custom Property: `--checkbox-corner-radius`
+	 */
+	@designSystemProperty({
+		attribute: 'checkbox-corner-radius',
+		cssCustomProperty: 'checkbox-corner-radius',
+		converter: nullableNumberConverter,
+		default: DesignSystemDefaults.checkboxCornerRadius,
+	})
+	public checkboxCornerRadius: number;
+
 	// ------------------------ Breadcrumb Item Design Tokens ------------------------ //
 
 	/**
@@ -679,4 +679,67 @@ export class VSCodeDesignSystemProvider
 		default: DesignSystemDefaults.breadcrumbItemForegroundHoverColor,
 	})
 	public breadcrumbItemForegroundHoverColor: string;
+
+	// ------------------------ Select Design Tokens ------------------------ //
+
+	/**
+	 * The background color of a VSCode select component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `select-background-color`
+	 *
+	 * CSS Custom Property: `--select-background-color`
+	 */
+	@designSystemProperty({
+		attribute: 'select-background-color',
+		cssCustomProperty: 'select-background-color',
+		default: DesignSystemDefaults.selectBackgroundColor,
+	})
+	public selectBackgroundColor: string;
+
+	/**
+	 * The foreground color of a VSCode select component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `select-foreground-color`
+	 *
+	 * CSS Custom Property: `--select-foreground-color`
+	 */
+	@designSystemProperty({
+		attribute: 'select-foreground-color',
+		cssCustomProperty: 'select-foreground-color',
+		default: DesignSystemDefaults.selectForegroundColor,
+	})
+	public selectForegroundColor: string;
+
+	/**
+	 * The border color of a VSCode select component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `select-border-color`
+	 *
+	 * CSS Custom Property: `--select-border-color`
+	 */
+	@designSystemProperty({
+		attribute: 'select-border-color',
+		cssCustomProperty: 'select-border-color',
+		default: DesignSystemDefaults.selectBorderColor,
+	})
+	public selectBorderColor: string;
+
+	/**
+	 * The corner radius applied to select controls.
+	 *
+	 * @remarks
+	 * HTML Attribute: `select-corner-radius-color`
+	 *
+	 * CSS Custom Property: `--select-corner-radius-color`
+	 */
+	@designSystemProperty({
+		attribute: 'select-corner-radius-color',
+		cssCustomProperty: 'select-corner-radius-color',
+		converter: nullableNumberConverter,
+		default: DesignSystemDefaults.selectCornerRadius,
+	})
+	public selectCornerRadius: number;
 }
