@@ -13,6 +13,7 @@ export default {
 		label: {control: 'text'},
 		isDisabled: {control: 'boolean'},
 		isFocused: {control: 'boolean'},
+		numberOfChildren: {control: 'number'},
 		onChange: {action: 'changed'},
 	},
 };
@@ -25,5 +26,6 @@ export const Default: any = Template.bind({});
 Default.args = {
 	isDisabled: false,
 	isFocused: false,
+	numberOfChildren: 3,
 	onChange: action('select-onchange'),
 };
