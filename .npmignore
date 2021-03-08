@@ -2,7 +2,7 @@
 src/
 
 # Docs
-docs/
+docs/*.stories.*
 CODE_OF_CONDUCT.md
 
 # Tests
