@@ -1,4 +1,4 @@
-import {customElement} from '@microsoft/fast-element';
+import {customElement, ElementStyles} from '@microsoft/fast-element';
 import {
 	Checkbox,
 	CheckboxTemplate as template,
@@ -25,4 +25,4 @@ export class VSCodeCheckbox extends Checkbox {}
  * Styles for the VSCode Checkbox
  * @public
  */
-export const CheckboxStyles = styles;
+export const CheckboxStyles: ElementStyles = styles;

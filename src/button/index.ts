@@ -1,4 +1,4 @@
-import {attr, customElement} from '@microsoft/fast-element';
+import {attr, customElement, ElementStyles} from '@microsoft/fast-element';
 import {Button, ButtonTemplate as template} from '@microsoft/fast-foundation';
 import {ButtonStyles as styles} from './button.styles';
 
@@ -56,4 +56,4 @@ export class VSCodeButton extends Button {
  * Styles for the VSCode Button
  * @public
  */
-export const ButtonStyles = styles;
+export const ButtonStyles: ElementStyles = styles;
