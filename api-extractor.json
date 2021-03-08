@@ -8,7 +8,7 @@
 	},
 	"docModel": {
 		"enabled": true,
-		"apiJsonFilePath": "dist/vscode-components.api.json"
+		"apiJsonFilePath": "dist/vscode-webview-toolkit.api.json"
 	},
 	"dtsRollup": {
 		"enabled": true
