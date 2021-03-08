@@ -20,11 +20,11 @@ export default [
 		input: 'src/index.ts',
 		output: [
 			{
-				file: 'dist/vscode-components.js',
+				file: 'dist/vscode-webview-toolkit.js',
 				format: 'esm',
 			},
 			{
-				file: 'dist/vscode-components.min.js',
+				file: 'dist/vscode-webview-toolkit.min.js',
 				format: 'esm',
 				plugins: [terser()],
 			},
