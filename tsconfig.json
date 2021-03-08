@@ -2,25 +2,29 @@
 	"compilerOptions": {
 		"pretty": true,
 		"target": "ES2015",
-		"module": "ES2015",
+		"module": "ESNext",
 		"moduleResolution": "node",
+		"esModuleInterop": true,
 		"importHelpers": true,
 		"experimentalDecorators": true,
 		"strictPropertyInitialization": false,
 		"declaration": true,
-		"declarationMap": true,
+		"declarationDir": "dist/dts",
 		"sourceMap": true,
 		"noEmitOnError": true,
 		"strict": true,
-		"outDir": "dist/build",
+		"strictNullChecks": true,
+		"allowJs": true,
+		"outDir": "dist/esm",
 		"rootDir": "src",
-		"lib": ["dom", "esnext"]
+		"lib": ["DOM", "ES2015"]
 	},
 	"include": ["src"],
 	"exclude": [
 		"src/**/*.spec.ts",
 		"src/**/*.stories.ts",
 		"src/**/fixtures/",
+		"src/utilities/storybook/",
 		"node_modules"
 	]
 }
