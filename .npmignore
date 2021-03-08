@@ -3,6 +3,7 @@ src/
 
 # Docs
 docs/
+CODE_OF_CONDUCT.md
 
 # Tests
 *.spec.*
@@ -23,3 +24,5 @@ babel.config.js
 tsconfig.json
 tsconfig.build.json
 webpack.config.js
+policheck
+azure-pipelines.yml
