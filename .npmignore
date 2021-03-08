@@ -26,3 +26,6 @@ tsconfig.build.json
 webpack.config.js
 policheck
 azure-pipelines.yml
+
+# Cache
+temp
