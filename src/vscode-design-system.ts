@@ -1,5 +1,3 @@
-import {Direction} from '@microsoft/fast-web-utilities';
-
 /**
  * Defines the properties in the VSCode Design System
  * @public
@@ -14,7 +12,6 @@ export interface VSCodeDesignSystem {
 	cornerRadius: number;
 	density: number;
 	designUnit: number;
-	direction: Direction;
 	disabledOpacity: number;
 	focusBorderColor: string;
 	focusBorderWidth: number;
@@ -94,7 +91,6 @@ export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
 	cornerRadius: 0,
 	density: 0,
 	designUnit: 4,
-	direction: Direction.ltr,
 	disabledOpacity: 0.4,
 	focusBorderColor: '#007fd4',
 	focusBorderWidth: 1,

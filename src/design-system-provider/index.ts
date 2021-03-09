@@ -4,9 +4,11 @@ import {
 	DesignSystemProvider,
 	DesignSystemProviderTemplate as template,
 } from '@microsoft/fast-foundation';
-import {Direction} from '@microsoft/fast-web-utilities';
 import {nullableNumberConverter} from '@microsoft/fast-element';
-import {VSCodeDesignSystem, VSCodeDesignSystemDefaults} from '../vscode-design-system';
+import {
+	VSCodeDesignSystem,
+	VSCodeDesignSystemDefaults,
+} from '../vscode-design-system';
 import {DesignSystemProviderStyles as styles} from './design-system-provider.styles';
 
 /**
@@ -125,22 +127,6 @@ export class VSCodeDesignSystemProvider
 		default: VSCodeDesignSystemDefaults.designUnit,
 	})
 	public designUnit: number;
-
-	/**
-	 * The primary document direction. Can either be LTR (left-to-right) or
-	 * RTL (right-to-left).
-	 *
-	 * @remarks
-	 * HTML Attribute: `direction`
-	 *
-	 * CSS Custom Property: N/A
-	 */
-	@designSystemProperty({
-		attribute: 'direction',
-		cssCustomProperty: false,
-		default: VSCodeDesignSystemDefaults.direction,
-	})
-	public direction: Direction;
 
 	/**
 	 * The opacity of a disabled control.
