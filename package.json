@@ -1,6 +1,6 @@
 {
 	"name": "vscode-webview-toolkit",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "A component library for creating webview-based extensions in Visual Studio Code.",
 	"homepage": "https://github.com/microsoft/vscode-webview-toolkit#readme",
 	"license": "MIT",
