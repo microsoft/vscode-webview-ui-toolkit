@@ -10,6 +10,7 @@ CODE_OF_CONDUCT.md
 coverage/
 
 # Builds
+build/
 storybook-static/
 
 # Config files
@@ -24,8 +25,10 @@ babel.config.js
 tsconfig.json
 tsconfig.build.json
 webpack.config.js
+rollup.config.js
 policheck
 azure-pipelines.yml
+api-extractor.json
 
 # Cache
 temp
