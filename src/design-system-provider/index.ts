@@ -6,7 +6,7 @@ import {
 } from '@microsoft/fast-foundation';
 import {Direction} from '@microsoft/fast-web-utilities';
 import {nullableNumberConverter} from '@microsoft/fast-element';
-import {DesignSystem, DesignSystemDefaults} from '../vscode-design-system';
+import {VSCodeDesignSystem, VSCodeDesignSystemDefaults} from '../vscode-design-system';
 import {DesignSystemProviderStyles as styles} from './design-system-provider.styles';
 
 /**
@@ -25,7 +25,7 @@ import {DesignSystemProviderStyles as styles} from './design-system-provider.sty
 })
 export class VSCodeDesignSystemProvider
 	extends DesignSystemProvider
-	implements DesignSystem {
+	implements VSCodeDesignSystem {
 	// ------------------------ Global Design Tokens ------------------------ //
 
 	/**
@@ -40,7 +40,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'base-height-multiplier',
 		cssCustomProperty: 'base-height-multiplier',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.baseHeightMultiplier,
+		default: VSCodeDesignSystemDefaults.baseHeightMultiplier,
 	})
 	public baseHeightMultiplier: number;
 
@@ -56,7 +56,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'base-horizontal-spacing-multiplier',
 		cssCustomProperty: 'base-horizontal-spacing-multiplier',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.baseHorizontalSpacingMultiplier,
+		default: VSCodeDesignSystemDefaults.baseHorizontalSpacingMultiplier,
 	})
 	public baseHorizontalSpacingMultiplier: number;
 
@@ -72,7 +72,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'border-width',
 		cssCustomProperty: 'border-width',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.borderWidth,
+		default: VSCodeDesignSystemDefaults.borderWidth,
 	})
 	public borderWidth: number;
 
@@ -90,7 +90,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'corner-radius',
 		cssCustomProperty: 'corner-radius',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.cornerRadius,
+		default: VSCodeDesignSystemDefaults.cornerRadius,
 	})
 	public cornerRadius: number;
 
@@ -106,7 +106,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'density',
 		cssCustomProperty: 'density',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.density,
+		default: VSCodeDesignSystemDefaults.density,
 	})
 	public density: number;
 
@@ -122,7 +122,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'design-unit',
 		cssCustomProperty: 'design-unit',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.designUnit,
+		default: VSCodeDesignSystemDefaults.designUnit,
 	})
 	public designUnit: number;
 
@@ -138,7 +138,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'direction',
 		cssCustomProperty: false,
-		default: DesignSystemDefaults.direction,
+		default: VSCodeDesignSystemDefaults.direction,
 	})
 	public direction: Direction;
 
@@ -154,7 +154,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'disabled-opacity',
 		cssCustomProperty: 'disabled-opacity',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.disabledOpacity,
+		default: VSCodeDesignSystemDefaults.disabledOpacity,
 	})
 	public disabledOpacity: number;
 
@@ -169,7 +169,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'focus-border-color',
 		cssCustomProperty: 'focus-border-color',
-		default: DesignSystemDefaults.focusBorderColor,
+		default: VSCodeDesignSystemDefaults.focusBorderColor,
 	})
 	public focusBorderColor: string;
 
@@ -185,7 +185,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'focus-border-width',
 		cssCustomProperty: 'focus-border-width',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.focusBorderWidth,
+		default: VSCodeDesignSystemDefaults.focusBorderWidth,
 	})
 	public focusBorderWidth: number;
 
@@ -202,7 +202,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-minus-2-font-size',
 		cssCustomProperty: 'type-ramp-minus-2-font-size',
-		default: DesignSystemDefaults.typeRampMinus2FontSize,
+		default: VSCodeDesignSystemDefaults.typeRampMinus2FontSize,
 	})
 	public typeRampMinus2FontSize: string;
 
@@ -217,7 +217,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-minus-2-line-height',
 		cssCustomProperty: 'type-ramp-minus-2-line-height',
-		default: DesignSystemDefaults.typeRampMinus2LineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampMinus2LineHeight,
 	})
 	public typeRampMinus2LineHeight: string;
 
@@ -232,7 +232,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-minus-1-font-size',
 		cssCustomProperty: 'type-ramp-minus-1-font-size',
-		default: DesignSystemDefaults.typeRampMinus1FontSize,
+		default: VSCodeDesignSystemDefaults.typeRampMinus1FontSize,
 	})
 	public typeRampMinus1FontSize: string;
 
@@ -247,7 +247,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-minus-1-line-height',
 		cssCustomProperty: 'type-ramp-minus-1-line-height',
-		default: DesignSystemDefaults.typeRampMinus1LineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampMinus1LineHeight,
 	})
 	public typeRampMinus1LineHeight: string;
 
@@ -262,7 +262,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-base-font-size',
 		cssCustomProperty: 'type-ramp-base-font-size',
-		default: DesignSystemDefaults.typeRampBaseFontSize,
+		default: VSCodeDesignSystemDefaults.typeRampBaseFontSize,
 	})
 	public typeRampBaseFontSize: string;
 
@@ -277,7 +277,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-base-line-height',
 		cssCustomProperty: 'type-ramp-base-line-height',
-		default: DesignSystemDefaults.typeRampBaseLineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampBaseLineHeight,
 	})
 	public typeRampBaseLineHeight: string;
 
@@ -292,7 +292,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-1-font-size',
 		cssCustomProperty: 'type-ramp-plus-1-font-size',
-		default: DesignSystemDefaults.typeRampPlus1FontSize,
+		default: VSCodeDesignSystemDefaults.typeRampPlus1FontSize,
 	})
 	public typeRampPlus1FontSize: string;
 
@@ -307,7 +307,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-1-line-height',
 		cssCustomProperty: 'type-ramp-plus-1-line-height',
-		default: DesignSystemDefaults.typeRampPlus1LineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampPlus1LineHeight,
 	})
 	public typeRampPlus1LineHeight: string;
 
@@ -322,7 +322,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-2-font-size',
 		cssCustomProperty: 'type-ramp-plus-2-font-size',
-		default: DesignSystemDefaults.typeRampPlus2FontSize,
+		default: VSCodeDesignSystemDefaults.typeRampPlus2FontSize,
 	})
 	public typeRampPlus2FontSize: string;
 
@@ -337,7 +337,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-2-line-height',
 		cssCustomProperty: 'type-ramp-plus-2-line-height',
-		default: DesignSystemDefaults.typeRampPlus2LineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampPlus2LineHeight,
 	})
 	public typeRampPlus2LineHeight: string;
 
@@ -352,7 +352,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-3-font-size',
 		cssCustomProperty: 'type-ramp-plus-3-font-size',
-		default: DesignSystemDefaults.typeRampPlus3FontSize,
+		default: VSCodeDesignSystemDefaults.typeRampPlus3FontSize,
 	})
 	public typeRampPlus3FontSize: string;
 
@@ -367,7 +367,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-3-line-height',
 		cssCustomProperty: 'type-ramp-plus-3-line-height',
-		default: DesignSystemDefaults.typeRampPlus3LineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampPlus3LineHeight,
 	})
 	public typeRampPlus3LineHeight: string;
 
@@ -382,7 +382,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-4-font-size',
 		cssCustomProperty: 'type-ramp-plus-4-font-size',
-		default: DesignSystemDefaults.typeRampPlus4FontSize,
+		default: VSCodeDesignSystemDefaults.typeRampPlus4FontSize,
 	})
 	public typeRampPlus4FontSize: string;
 
@@ -397,7 +397,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-4-line-height',
 		cssCustomProperty: 'type-ramp-plus-4-line-height',
-		default: DesignSystemDefaults.typeRampPlus4LineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampPlus4LineHeight,
 	})
 	public typeRampPlus4LineHeight: string;
 
@@ -412,7 +412,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-5-font-size',
 		cssCustomProperty: 'type-ramp-plus-5-font-size',
-		default: DesignSystemDefaults.typeRampPlus5FontSize,
+		default: VSCodeDesignSystemDefaults.typeRampPlus5FontSize,
 	})
 	public typeRampPlus5FontSize: string;
 
@@ -427,7 +427,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-5-line-height',
 		cssCustomProperty: 'type-ramp-plus-5-line-height',
-		default: DesignSystemDefaults.typeRampPlus5LineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampPlus5LineHeight,
 	})
 	public typeRampPlus5LineHeight: string;
 
@@ -442,7 +442,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-6-font-size',
 		cssCustomProperty: 'type-ramp-plus-6-font-size',
-		default: DesignSystemDefaults.typeRampPlus6FontSize,
+		default: VSCodeDesignSystemDefaults.typeRampPlus6FontSize,
 	})
 	public typeRampPlus6FontSize: string;
 
@@ -457,7 +457,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'type-ramp-plus-6-line-height',
 		cssCustomProperty: 'type-ramp-plus-6-line-height',
-		default: DesignSystemDefaults.typeRampPlus6LineHeight,
+		default: VSCodeDesignSystemDefaults.typeRampPlus6LineHeight,
 	})
 	public typeRampPlus6LineHeight: string;
 
@@ -474,7 +474,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'button-primary-background-color',
 		cssCustomProperty: 'button-primary-background-color',
-		default: DesignSystemDefaults.buttonPrimaryBackgroundColor,
+		default: VSCodeDesignSystemDefaults.buttonPrimaryBackgroundColor,
 	})
 	public buttonPrimaryBackgroundColor: string;
 
@@ -489,7 +489,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'button-primary-foreground-color',
 		cssCustomProperty: 'button-primary-foreground-color',
-		default: DesignSystemDefaults.buttonPrimaryForegroundColor,
+		default: VSCodeDesignSystemDefaults.buttonPrimaryForegroundColor,
 	})
 	public buttonPrimaryForegroundColor: string;
 
@@ -504,7 +504,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'button-primary-hover-background-color',
 		cssCustomProperty: 'button-primary-hover-background-color',
-		default: DesignSystemDefaults.buttonPrimaryHoverBackgroundColor,
+		default: VSCodeDesignSystemDefaults.buttonPrimaryHoverBackgroundColor,
 	})
 	public buttonPrimaryHoverBackgroundColor: string;
 
@@ -519,7 +519,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'button-secondary-background-color',
 		cssCustomProperty: 'button-secondary-background-color',
-		default: DesignSystemDefaults.buttonSecondaryBackgroundColor,
+		default: VSCodeDesignSystemDefaults.buttonSecondaryBackgroundColor,
 	})
 	public buttonSecondaryBackgroundColor: string;
 
@@ -534,7 +534,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'button-secondary-foreground-color',
 		cssCustomProperty: 'button-secondary-foreground-color',
-		default: DesignSystemDefaults.buttonSecondaryForegroundColor,
+		default: VSCodeDesignSystemDefaults.buttonSecondaryForegroundColor,
 	})
 	public buttonSecondaryForegroundColor: string;
 
@@ -549,7 +549,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'button-secondary-hover-background-color',
 		cssCustomProperty: 'button-secondary-hover-background-color',
-		default: DesignSystemDefaults.buttonSecondaryHoverBackgroundColor,
+		default: VSCodeDesignSystemDefaults.buttonSecondaryHoverBackgroundColor,
 	})
 	public buttonSecondaryHoverBackgroundColor: string;
 
@@ -566,7 +566,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'text-link-foreground-color',
 		cssCustomProperty: 'text-link-foreground-color',
-		default: DesignSystemDefaults.textLinkForegroundColor,
+		default: VSCodeDesignSystemDefaults.textLinkForegroundColor,
 	})
 	public textLinkForegroundColor: string;
 
@@ -583,7 +583,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'checkbox-background-color',
 		cssCustomProperty: 'checkbox-background-color',
-		default: DesignSystemDefaults.checkboxBackgroundColor,
+		default: VSCodeDesignSystemDefaults.checkboxBackgroundColor,
 	})
 	public checkboxBackgroundColor: string;
 
@@ -598,7 +598,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'checkbox-foreground-color',
 		cssCustomProperty: 'checkbox-foreground-color',
-		default: DesignSystemDefaults.checkboxForegroundColor,
+		default: VSCodeDesignSystemDefaults.checkboxForegroundColor,
 	})
 	public checkboxForegroundColor: string;
 
@@ -613,7 +613,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'checkbox-border-color',
 		cssCustomProperty: 'checkbox-border-color',
-		default: DesignSystemDefaults.checkboxBorderColor,
+		default: VSCodeDesignSystemDefaults.checkboxBorderColor,
 	})
 	public checkboxBorderColor: string;
 
@@ -629,7 +629,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'checkbox-corner-radius',
 		cssCustomProperty: 'checkbox-corner-radius',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.checkboxCornerRadius,
+		default: VSCodeDesignSystemDefaults.checkboxCornerRadius,
 	})
 	public checkboxCornerRadius: number;
 
@@ -646,7 +646,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'breadcrumb-item-background-color',
 		cssCustomProperty: 'breadcrumb-item-background-color',
-		default: DesignSystemDefaults.breadcrumbItemBackgroundColor,
+		default: VSCodeDesignSystemDefaults.breadcrumbItemBackgroundColor,
 	})
 	public breadcrumbItemBackgroundColor: string;
 
@@ -661,7 +661,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'breadcrumb-item-foreground-color',
 		cssCustomProperty: 'breadcrumb-item-foreground-color',
-		default: DesignSystemDefaults.breadcrumbItemForegroundColor,
+		default: VSCodeDesignSystemDefaults.breadcrumbItemForegroundColor,
 	})
 	public breadcrumbItemForegroundColor: string;
 
@@ -676,7 +676,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'breadcrumb-item-foreground-hover-color',
 		cssCustomProperty: 'breadcrumb-item-foreground-hover-color',
-		default: DesignSystemDefaults.breadcrumbItemForegroundHoverColor,
+		default: VSCodeDesignSystemDefaults.breadcrumbItemForegroundHoverColor,
 	})
 	public breadcrumbItemForegroundHoverColor: string;
 
@@ -693,7 +693,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'select-background-color',
 		cssCustomProperty: 'select-background-color',
-		default: DesignSystemDefaults.selectBackgroundColor,
+		default: VSCodeDesignSystemDefaults.selectBackgroundColor,
 	})
 	public selectBackgroundColor: string;
 
@@ -708,7 +708,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'select-foreground-color',
 		cssCustomProperty: 'select-foreground-color',
-		default: DesignSystemDefaults.selectForegroundColor,
+		default: VSCodeDesignSystemDefaults.selectForegroundColor,
 	})
 	public selectForegroundColor: string;
 
@@ -723,7 +723,7 @@ export class VSCodeDesignSystemProvider
 	@designSystemProperty({
 		attribute: 'select-border-color',
 		cssCustomProperty: 'select-border-color',
-		default: DesignSystemDefaults.selectBorderColor,
+		default: VSCodeDesignSystemDefaults.selectBorderColor,
 	})
 	public selectBorderColor: string;
 
@@ -739,7 +739,7 @@ export class VSCodeDesignSystemProvider
 		attribute: 'select-corner-radius-color',
 		cssCustomProperty: 'select-corner-radius-color',
 		converter: nullableNumberConverter,
-		default: DesignSystemDefaults.selectCornerRadius,
+		default: VSCodeDesignSystemDefaults.selectCornerRadius,
 	})
 	public selectCornerRadius: number;
 }

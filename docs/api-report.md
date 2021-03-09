@@ -26,7 +26,38 @@ export const ButtonStyles: ElementStyles;
 export const CheckboxStyles: ElementStyles;
 
 // @public
-export interface DesignSystem {
+export const OptionStyles: ElementStyles;
+
+// @public
+export const RadioGroupStyles: ElementStyles;
+
+// @public
+export const RadioStyles: ElementStyles;
+
+// @public
+export const SelectStyles: ElementStyles;
+
+// @public
+export class VSCodeBreadcrumb extends Breadcrumb {
+}
+
+// @public
+export class VSCodeBreadcrumbItem extends BreadcrumbItem {
+}
+
+// @public
+export class VSCodeButton extends Button {
+    appearance: ButtonAppearance;
+    // (undocumented)
+    connectedCallback(): void;
+}
+
+// @public
+export class VSCodeCheckbox extends Checkbox {
+}
+
+// @public
+export interface VSCodeDesignSystem {
     baseHeightMultiplier: number;
     // (undocumented)
     baseHorizontalSpacingMultiplier: number;
@@ -115,41 +146,10 @@ export interface DesignSystem {
 }
 
 // @public
-export const DesignSystemDefaults: DesignSystem;
+export const VSCodeDesignSystemDefaults: VSCodeDesignSystem;
 
 // @public
-export const OptionStyles: ElementStyles;
-
-// @public
-export const RadioGroupStyles: ElementStyles;
-
-// @public
-export const RadioStyles: ElementStyles;
-
-// @public
-export const SelectStyles: ElementStyles;
-
-// @public
-export class VSCodeBreadcrumb extends Breadcrumb {
-}
-
-// @public
-export class VSCodeBreadcrumbItem extends BreadcrumbItem {
-}
-
-// @public
-export class VSCodeButton extends Button {
-    appearance: ButtonAppearance;
-    // (undocumented)
-    connectedCallback(): void;
-}
-
-// @public
-export class VSCodeCheckbox extends Checkbox {
-}
-
-// @public
-export class VSCodeDesignSystemProvider extends DesignSystemProvider implements DesignSystem {
+export class VSCodeDesignSystemProvider extends DesignSystemProvider implements VSCodeDesignSystem {
     baseHeightMultiplier: number;
     baseHorizontalSpacingMultiplier: number;
     borderWidth: number;
