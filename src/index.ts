@@ -10,4 +10,4 @@ export * from './radio/index';
 export * from './select/index';
 
 // Export styles and utils
-export {DesignSystem, DesignSystemDefaults} from './vscode-design-system';
+export {VSCodeDesignSystem, VSCodeDesignSystemDefaults} from './vscode-design-system';

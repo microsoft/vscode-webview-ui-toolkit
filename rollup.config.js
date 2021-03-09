@@ -17,7 +17,7 @@ const parserOptions = {
 export default [
 	{
 		context: 'this',
-		input: 'src/index.ts',
+		input: 'src/index-rollup.ts',
 		output: [
 			{
 				file: 'dist/vscode-webview-toolkit.js',
