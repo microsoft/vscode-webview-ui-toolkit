@@ -1,4 +1,4 @@
-import {customElement} from '@microsoft/fast-element';
+import {customElement, ElementStyles} from '@microsoft/fast-element';
 import {
 	RadioGroup,
 	RadioGroupTemplate as template,
@@ -25,4 +25,4 @@ export class VSCodeRadioGroup extends RadioGroup {}
  * Styles for RadioGroup
  * @public
  */
-export const RadioGroupStyles = styles;
+export const RadioGroupStyles: ElementStyles = styles;

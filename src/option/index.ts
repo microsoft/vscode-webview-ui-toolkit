@@ -1,4 +1,4 @@
-import {customElement} from '@microsoft/fast-element';
+import {customElement, ElementStyles} from '@microsoft/fast-element';
 import {
 	ListboxOption,
 	ListboxOptionTemplate as template,
@@ -25,4 +25,4 @@ export class VSCodeOption extends ListboxOption {}
  * Styles for Option
  * @public
  */
-export const OptionStyles = styles;
+export const OptionStyles: ElementStyles = styles;

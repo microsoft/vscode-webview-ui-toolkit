@@ -1,4 +1,4 @@
-import {customElement} from '@microsoft/fast-element';
+import {customElement, ElementStyles} from '@microsoft/fast-element';
 import {Select, SelectTemplate as template} from '@microsoft/fast-foundation';
 import {SelectStyles as styles} from './select.styles';
 
@@ -22,4 +22,4 @@ export class VSCodeSelect extends Select {}
  * Styles for Select
  * @public
  */
-export const SelectStyles = styles;
+export const SelectStyles: ElementStyles = styles;
