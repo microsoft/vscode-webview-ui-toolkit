@@ -81,7 +81,7 @@ export interface VSCodeDesignSystem {
 }
 
 /**
- * The default values for {@link DesignSystem}
+ * The default values for {@link VSCodeDesignSystem}
  * @public
  */
 export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
