@@ -4,7 +4,7 @@ import {Direction} from '@microsoft/fast-web-utilities';
  * Defines the properties in the VSCode Design System
  * @public
  */
-export interface DesignSystem {
+export interface VSCodeDesignSystem {
 	/**
 	 * Global design token defaults.
 	 */
@@ -84,7 +84,7 @@ export interface DesignSystem {
  * The default values for {@link DesignSystem}
  * @public
  */
-export const DesignSystemDefaults: DesignSystem = {
+export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
 	/**
 	 * Global design token defaults.
 	 */
