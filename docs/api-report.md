@@ -9,7 +9,6 @@ import { BreadcrumbItem } from '@microsoft/fast-foundation';
 import { Button } from '@microsoft/fast-foundation';
 import { Checkbox } from '@microsoft/fast-foundation';
 import { DesignSystemProvider } from '@microsoft/fast-foundation';
-import { Direction } from '@microsoft/fast-web-utilities';
 import { ElementStyles } from '@microsoft/fast-element';
 import { ListboxOption } from '@microsoft/fast-foundation';
 import { Radio } from '@microsoft/fast-foundation';
@@ -93,8 +92,6 @@ export interface VSCodeDesignSystem {
     // (undocumented)
     designUnit: number;
     // (undocumented)
-    direction: Direction;
-    // (undocumented)
     disabledOpacity: number;
     // (undocumented)
     focusBorderColor: string;
@@ -169,7 +166,6 @@ export class VSCodeDesignSystemProvider extends DesignSystemProvider implements 
     cornerRadius: number;
     density: number;
     designUnit: number;
-    direction: Direction;
     disabledOpacity: number;
     focusBorderColor: string;
     focusBorderWidth: number;
