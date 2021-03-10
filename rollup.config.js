@@ -1,5 +1,5 @@
 /* eslint-env node */
-import commonJS from 'rollup-plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
@@ -64,7 +64,7 @@ export default [
 		],
 		plugins: [
 			nodeResolve(),
-			commonJS(),
+			commonjs(),
 			typescript({
 				tsconfigOverride: {
 					compilerOptions: {
