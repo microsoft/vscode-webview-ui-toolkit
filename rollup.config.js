@@ -4,7 +4,7 @@ import filesize from 'rollup-plugin-filesize';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
 import transformTaggedTemplate from 'rollup-plugin-transform-tagged-template';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 
 // ----- Helper Functions -----
 
@@ -65,13 +65,7 @@ export default [
 		plugins: [
 			nodeResolve(),
 			commonjs(),
-			typescript({
-				tsconfigOverride: {
-					compilerOptions: {
-						declaration: false,
-					},
-				},
-			}),
+			typescript(),
 			transformTaggedTemplate({
 				tagsToProcess: ['css'],
 				transformer: transformCSSFragment,
