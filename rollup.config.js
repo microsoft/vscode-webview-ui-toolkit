@@ -1,18 +1,51 @@
 /* eslint-env node */
-import commonJS from 'rollup-plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
-import resolve from 'rollup-plugin-node-resolve';
+import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
 import transformTaggedTemplate from 'rollup-plugin-transform-tagged-template';
-import typescript from 'rollup-plugin-typescript2';
-import {
-	transformCSSFragment,
-	transformHTMLFragment,
-} from './build/transform-fragments';
+import typescript from '@rollup/plugin-typescript';
+
+// ----- Helper Functions -----
 
 const parserOptions = {
 	sourceType: 'module',
 };
+
+function transformHTMLFragment(data) {
+	const onlySpace = /^\s+$/g;
+	const spaceBetforeTagClose = /\s+(>)/g;
+	const spaceBetweenTags = /(>)\s+(<)/g;
+	const spaceBetweenAttrs = /(["'\w])(?!\s*>)\s+/g;
+	const openEnded = /(?:[^="'\w])?(["'\w])\s*$/g;
+
+	if (data.match(onlySpace)) {
+		return data.replace(onlySpace, ' ');
+	}
+	data = data.replace(spaceBetforeTagClose, '$1');
+	data = data.replace(spaceBetweenTags, '$1$2');
+	data = data.replace(spaceBetweenAttrs, '$1 ');
+	if (data.match(openEnded)) {
+		return data.trimStart();
+	}
+	return data.trim();
+}
+
+function transformCSSFragment(data) {
+	const newlines = /\n/g;
+	const separators = /\s*([{};])\s*/g;
+	const lastProp = /;\s*(\})/g;
+	const extraSpaces = /\s\s+/g;
+	const endingSpaces = / ?\s+$/g;
+
+	data = data.replace(newlines, '');
+	data = data.replace(separators, '$1');
+	data = data.replace(lastProp, '$1');
+	data = data.replace(endingSpaces, ' ');
+	return data.replace(extraSpaces, ' ');
+}
+
+// ----- Rollup Config -----
 
 export default [
 	{
@@ -30,15 +63,9 @@ export default [
 			},
 		],
 		plugins: [
-			resolve(),
-			commonJS(),
-			typescript({
-				tsconfigOverride: {
-					compilerOptions: {
-						declaration: false,
-					},
-				},
-			}),
+			nodeResolve(),
+			commonjs(),
+			typescript(),
 			transformTaggedTemplate({
 				tagsToProcess: ['css'],
 				transformer: transformCSSFragment,
