@@ -62,7 +62,7 @@ export const SelectStyles = css`
 		box-shadow: 0 0 0 calc(var(--focus-border-width) * 1px) inset
 			var(--focus-border-color);
 		border-color: var(--focus-border-color);
-		background: var(--select-background-color);
+		background: #094771;
 		color: var(--select-foreground-color);
 	}
 	:host([disabled]) {
@@ -78,15 +78,16 @@ export const SelectStyles = css`
 		fill: currentcolor;
 	}
 	:host(:not([disabled])) .control:active {
-		background: var(--select-background-color);
+		background: #094771;
 		border-color: var(--select-border-color);
+		border-radius: calc(var(--select-corner-radius-color) * 1px);
 	}
 	:host([open][position='above']) .listbox,
-	:host([open][position='below']) .control {
+	:host([open][position='below']) {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 	}
-	:host([open][position='above']) .control,
+	:host([open][position='above']),
 	:host([open][position='below']) .listbox {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
