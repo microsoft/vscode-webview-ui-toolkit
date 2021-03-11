@@ -27,7 +27,7 @@ export const OptionStyles = css`
 		white-space: nowrap;
 	}
 	:host(:${focusVisible}) {
-		border-color: var(--select-border-color);
+		border-color: var(--focus-border-color);
 		background: #094771;
 		color: var(--select-foreground-color);
 	}
