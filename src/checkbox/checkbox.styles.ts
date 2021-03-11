@@ -12,6 +12,8 @@ export const CheckboxStyles = css`
 		outline: none;
 		margin: calc(var(--design-unit) * 1px) 0;
 		user-select: none;
+		font-size: var(--type-ramp-base-font-size);
+		line-height: var(--type-ramp-base-line-height);
 	}
 	.control {
 		position: relative;
@@ -31,8 +33,6 @@ export const CheckboxStyles = css`
 		padding-inline-start: calc(var(--design-unit) * 2px + 2px);
 		margin-inline-end: calc(var(--design-unit) * 2px + 2px);
 		cursor: pointer;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
 	}
 	.label__hidden {
 		display: none;

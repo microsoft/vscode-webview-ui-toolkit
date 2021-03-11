@@ -16,6 +16,8 @@ export const RadioStyles = css`
 		position: relative;
 		flex-direction: row;
 		transition: all 0.2s ease-in-out;
+		font-size: var(--type-ramp-base-font-size);
+		line-height: var(--type-ramp-base-line-height);
 	}
 	.control {
 		position: relative;
@@ -35,8 +37,6 @@ export const RadioStyles = css`
 		padding-inline-start: calc(var(--design-unit) * 2px + 2px);
 		margin-inline-end: calc(var(--design-unit) * 2px + 2px);
 		cursor: pointer;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
 	}
 	.label__hidden {
 		display: none;

@@ -11,6 +11,8 @@ import {
 const BaseButtonStyles = css`
 	${display('inline-flex')} :host {
 		outline: none;
+		font-size: var(--type-ramp-base-font-size);
+		line-height: var(--type-ramp-base-line-height);
 		background: var(--button-primary-background-color);
 		color: var(--button-primary-foreground-color);
 		border-radius: calc(var(--corner-radius) * 1px);

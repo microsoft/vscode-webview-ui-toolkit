@@ -19,6 +19,7 @@ export const RadioGroupStyles = css`
 	}
 	::slotted([slot='label']) {
 		color: var(--checkbox-foreground-color);
+		font-size: var(--type-ramp-base-font-size);
 		margin: calc(var(--design-unit) * 1px) 0;
 	}
 `;
