@@ -4,6 +4,7 @@ import {focusObserver} from '../../utilities/storybook/index';
 
 export type SelectArgs = {
 	label?: string;
+	isOpen: boolean;
 	isDisabled: boolean;
 	isFocused: boolean;
 	numberOfChildren: number;
@@ -12,6 +13,7 @@ export type SelectArgs = {
 
 export function createSelect({
 	label,
+	isOpen,
 	isDisabled,
 	isFocused,
 	numberOfChildren,
@@ -21,6 +23,9 @@ export function createSelect({
 
 	if (label) {
 		select.textContent = label;
+	}
+	if (isOpen) {
+		select.setAttribute('open', '');
 	}
 	if (isDisabled) {
 		select.setAttribute('disabled', '');
