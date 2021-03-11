@@ -38,7 +38,7 @@ function createSelectWithNChildren(numberOfChildren: number) {
 
 	for (let i = 0; i < numberOfChildren; i++) {
 		const option = new VSCodeOption();
-		option.textContent = 'Option Label';
+		option.textContent = `Option Label #${i + 1}`;
 		select.appendChild(option);
 	}
 
