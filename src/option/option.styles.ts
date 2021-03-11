@@ -9,7 +9,7 @@ import {heightNumber} from '../utilities/styles/index';
 export const OptionStyles = css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);
-		border-radius: calc(var(--select-corner-radius) * 1px);
+		border-radius: calc(var(--select-corner-radius-color) * 1px);
 		border: calc(var(--focus-border-width) * 1px) solid transparent;
 		box-sizing: border-box;
 		color: var(--select-foreground-color);
@@ -17,34 +17,34 @@ export const OptionStyles = css`
 		fill: currentcolor;
 		font-size: var(--type-ramp-base-font-size);
 		line-height: var(--type-ramp-base-line-height);
-		height: calc(${heightNumber} * 1.5px);
+		height: calc(${heightNumber} * 1px);
 		line-height: var(--type-ramp-base-line-height);
 		margin: 0 calc(var(--design-unit) * 1px);
 		outline: none;
 		overflow: hidden;
-		padding: calc(var(--design-unit) * 2.25px);
+		padding: calc(var(--design-unit) * 1px);
 		user-select: none;
 		white-space: nowrap;
 	}
 	:host(:${focusVisible}) {
 		border-color: var(--select-border-color);
-		background: var(--select-background-color);
+		background: #094771;
 		color: var(--select-foreground-color);
 	}
 	:host([aria-selected='true']) {
-		background: var(--select-background-color);
+		background: #094771;
 		color: var(--select-foreground-color);
 	}
 	:host(:active) {
-		background: var(--select-background-color);
+		background: #094771;
 		color: var(--select-foreground-color);
 	}
 	:host(:not([aria-selected='true']):hover) {
-		background: var(--select-background-color);
+		background: #094771;
 		color: var(--select-foreground-color);
 	}
 	:host(:not([aria-selected='true']):active) {
-		background: var(--select-background-color);
+		background: #094771;
 		color: var(--select-foreground-color);
 	}
 	:host([disabled]) {
