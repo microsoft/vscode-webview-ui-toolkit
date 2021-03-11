@@ -23,6 +23,7 @@
 		"doc": "api-extractor run --local",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
+		"prepublishOnly": "npm run build",
 		"prettier": "prettier --config ./.prettierrc --write \"**/*.{ts,js}\"",
 		"code-style": "npm run prettier && npm run lint:fix",
 		"test": "jest --verbose",
