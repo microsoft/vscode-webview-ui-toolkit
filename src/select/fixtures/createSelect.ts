@@ -4,6 +4,7 @@ import {focusObserver} from '../../utilities/storybook/index';
 
 export type SelectArgs = {
 	label?: string;
+	isOpen: boolean;
 	isDisabled: boolean;
 	isFocused: boolean;
 	numberOfChildren: number;
@@ -12,6 +13,7 @@ export type SelectArgs = {
 
 export function createSelect({
 	label,
+	isOpen,
 	isDisabled,
 	isFocused,
 	numberOfChildren,
@@ -21,6 +23,9 @@ export function createSelect({
 
 	if (label) {
 		select.textContent = label;
+	}
+	if (isOpen) {
+		select.setAttribute('open', '');
 	}
 	if (isDisabled) {
 		select.setAttribute('disabled', '');
@@ -38,7 +43,7 @@ function createSelectWithNChildren(numberOfChildren: number) {
 
 	for (let i = 0; i < numberOfChildren; i++) {
 		const option = new VSCodeOption();
-		option.textContent = 'Option Label';
+		option.textContent = `Option Label #${i + 1}`;
 		select.appendChild(option);
 	}
 

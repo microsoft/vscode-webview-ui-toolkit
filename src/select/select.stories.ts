@@ -11,6 +11,7 @@ export default {
 	title: 'Library/Select',
 	argTypes: {
 		label: {control: 'text'},
+		isOpen: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isFocused: {control: 'boolean'},
 		numberOfChildren: {control: 'number'},
@@ -24,8 +25,15 @@ const Template = ({...args}: SelectArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
+	isOpen: false,
 	isDisabled: false,
 	isFocused: false,
 	numberOfChildren: 3,
 	onChange: action('select-onchange'),
+};
+
+export const SelectOpen: any = Template.bind({});
+SelectOpen.args = {
+	...Default.args,
+	isOpen: true,
 };
