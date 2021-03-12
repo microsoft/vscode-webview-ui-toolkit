@@ -13,7 +13,6 @@ const createDesignProviderWrapper = story => {
 		'vscode-design-system-provider'
 	);
 	designProvider.setAttribute('use-defaults', '');
-	designProvider.setAttribute('type-ramp-base-font-size', '14');
 	designProvider.appendChild(story);
 	return designProvider;
 };
