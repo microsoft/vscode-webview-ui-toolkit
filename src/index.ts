@@ -9,6 +9,7 @@ export * from './option/index';
 export * from './radio-group/index';
 export * from './radio/index';
 export * from './select/index';
+export * from './switch/index';
 export * from './text-field/index';
 
 // Export styles and utils
