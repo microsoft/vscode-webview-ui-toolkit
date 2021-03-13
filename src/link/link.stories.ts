@@ -26,8 +26,8 @@ const Template = ({...args}: LinkArgs) => {
 	return createLink({...args});
 };
 
-export const DefaultLink: any = Template.bind({});
-DefaultLink.args = {
+export const Default: any = Template.bind({});
+Default.args = {
 	label: 'Link',
 	href: '#',
 	appearance: 'Link',
@@ -37,24 +37,24 @@ DefaultLink.args = {
 
 export const Primary: any = Template.bind({});
 Primary.args = {
-	...DefaultLink.args,
+	...Default.args,
 	appearance: 'Primary',
 };
 
 export const Secondary: any = Template.bind({});
 Secondary.args = {
-	...DefaultLink.args,
+	...Default.args,
 	appearance: 'Secondary',
 };
 
 export const Install: any = Template.bind({});
 Install.args = {
-	...DefaultLink.args,
+	...Default.args,
 	appearance: 'Install',
 };
 
 export const Text: any = Template.bind({});
 Text.args = {
-	...DefaultLink.args,
+	...Default.args,
 	appearance: 'Text',
 };
