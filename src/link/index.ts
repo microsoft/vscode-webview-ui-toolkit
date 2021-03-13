@@ -52,7 +52,7 @@ export class VSCodeLink extends Anchor {
 		super.connectedCallback();
 
 		if (!this.appearance) {
-			this.appearance = 'primary';
+			this.appearance = 'link';
 		}
 	}
 
