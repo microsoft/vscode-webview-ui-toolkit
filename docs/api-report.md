@@ -4,6 +4,7 @@
 
 ```ts
 
+import { Anchor } from '@microsoft/fast-foundation';
 import { Breadcrumb } from '@microsoft/fast-foundation';
 import { BreadcrumbItem } from '@microsoft/fast-foundation';
 import { Button } from '@microsoft/fast-foundation';
@@ -14,6 +15,8 @@ import { ListboxOption } from '@microsoft/fast-foundation';
 import { Radio } from '@microsoft/fast-foundation';
 import { RadioGroup } from '@microsoft/fast-foundation';
 import { Select } from '@microsoft/fast-foundation';
+import { Switch } from '@microsoft/fast-foundation';
+import { TextField } from '@microsoft/fast-foundation';
 
 // @public
 export type ButtonAppearance = 'install' | 'link' | 'primary' | 'secondary' | 'text';
@@ -23,6 +26,12 @@ export const ButtonStyles: ElementStyles;
 
 // @public
 export const CheckboxStyles: ElementStyles;
+
+// @public
+export type LinkAppearance = ButtonAppearance | 'hypertext';
+
+// @public
+export const LinkStyles: ElementStyles;
 
 // @public
 export const OptionStyles: ElementStyles;
@@ -35,6 +44,15 @@ export const RadioStyles: ElementStyles;
 
 // @public
 export const SelectStyles: ElementStyles;
+
+// @public
+export const SwitchStyles: ElementStyles;
+
+// @public
+export type TextFieldAppearance = 'filled' | 'outline';
+
+// @public
+export const TextFieldStyles: ElementStyles;
 
 // @public
 export class VSCodeBreadcrumb extends Breadcrumb {
@@ -195,6 +213,17 @@ export class VSCodeDesignSystemProvider extends DesignSystemProvider implements 
 }
 
 // @public
+export class VSCodeLink extends Anchor {
+    appearance: LinkAppearance;
+    // (undocumented)
+    appearanceChanged(oldValue: LinkAppearance, newValue: LinkAppearance): void;
+    // (undocumented)
+    connectedCallback(): void;
+    // @internal
+    defaultSlottedContentChanged(oldValue: any, newValue: any): void;
+}
+
+// @public
 export class VSCodeOption extends ListboxOption {
 }
 
@@ -208,6 +237,17 @@ export class VSCodeRadioGroup extends RadioGroup {
 
 // @public
 export class VSCodeSelect extends Select {
+}
+
+// @public
+export class VSCodeSwitch extends Switch {
+}
+
+// @public
+export class VSCodeTextField extends TextField {
+    appearance: TextFieldAppearance;
+    // @internal (undocumented)
+    connectedCallback(): void;
 }
 
 
