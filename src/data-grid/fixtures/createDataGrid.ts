@@ -2,20 +2,15 @@ import {VSCodeDataGrid} from '../index';
 import {focusObserver} from '../../utilities/storybook/index';
 
 export type DataGridArgs = {
-	isDisabled: boolean;
+	gridData: any;
 	isFocused: boolean;
 };
 
-export function createDataGrid({isDisabled, isFocused}: DataGridArgs) {
+export function createDataGrid({gridData, isFocused}: DataGridArgs) {
 	const dataGrid = new VSCodeDataGrid();
 
-	dataGrid.rowsData = [
-		{name: 'Rob', age: '19'},
-		{name: 'Bob', age: '20'},
-	];
-
-	if (isDisabled) {
-		dataGrid.setAttribute('disabled', '');
+	if (gridData) {
+		dataGrid.rowsData = gridData;
 	}
 	if (isFocused) {
 		focusObserver(dataGrid);
