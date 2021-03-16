@@ -98,9 +98,9 @@ export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
 	/**
 	 * Type-ramp font-size and line-height defaults.
 	 */
-	typeRampMinus2FontSize: '10px',
+	typeRampMinus2FontSize: '9px',
 	typeRampMinus2LineHeight: '16px',
-	typeRampMinus1FontSize: '12px',
+	typeRampMinus1FontSize: '11px',
 	typeRampMinus1LineHeight: '16px',
 	typeRampBaseFontSize: '13px',
 	typeRampBaseLineHeight: '20px',
