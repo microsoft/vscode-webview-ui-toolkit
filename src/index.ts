@@ -1,4 +1,5 @@
 // Export components
+export * from './badge/index';
 export * from './breadcrumb/index';
 export * from './breadcrumb-item/index';
 export * from './button/index';

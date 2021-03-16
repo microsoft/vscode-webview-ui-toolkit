@@ -5,6 +5,7 @@
 ```ts
 
 import { Anchor } from '@microsoft/fast-foundation';
+import { Badge } from '@microsoft/fast-foundation';
 import { Breadcrumb } from '@microsoft/fast-foundation';
 import { BreadcrumbItem } from '@microsoft/fast-foundation';
 import { Button } from '@microsoft/fast-foundation';
@@ -20,6 +21,9 @@ import { RadioGroup } from '@microsoft/fast-foundation';
 import { Select } from '@microsoft/fast-foundation';
 import { Switch } from '@microsoft/fast-foundation';
 import { TextField } from '@microsoft/fast-foundation';
+
+// @public
+export const BadgeStyles: ElementStyles;
 
 // @public
 export type ButtonAppearance = 'install' | 'link' | 'primary' | 'secondary' | 'text';
@@ -65,6 +69,10 @@ export type TextFieldAppearance = 'filled' | 'outline';
 
 // @public
 export const TextFieldStyles: ElementStyles;
+
+// @public
+export class VSCodeBadge extends Badge {
+}
 
 // @public
 export class VSCodeBreadcrumb extends Breadcrumb {
