@@ -9,6 +9,9 @@ import { Breadcrumb } from '@microsoft/fast-foundation';
 import { BreadcrumbItem } from '@microsoft/fast-foundation';
 import { Button } from '@microsoft/fast-foundation';
 import { Checkbox } from '@microsoft/fast-foundation';
+import { DataGrid } from '@microsoft/fast-foundation';
+import { DataGridCell } from '@microsoft/fast-foundation';
+import { DataGridRow } from '@microsoft/fast-foundation';
 import { DesignSystemProvider } from '@microsoft/fast-foundation';
 import { ElementStyles } from '@microsoft/fast-element';
 import { ListboxOption } from '@microsoft/fast-foundation';
@@ -26,6 +29,15 @@ export const ButtonStyles: ElementStyles;
 
 // @public
 export const CheckboxStyles: ElementStyles;
+
+// @public
+export const DataGridCellStyles: ElementStyles;
+
+// @public
+export const DataGridRowStyles: ElementStyles;
+
+// @public
+export const DataGridStyles: ElementStyles;
 
 // @public
 export type LinkAppearance = ButtonAppearance | 'hypertext';
@@ -71,6 +83,18 @@ export class VSCodeButton extends Button {
 
 // @public
 export class VSCodeCheckbox extends Checkbox {
+}
+
+// @public
+export class VSCodeDataGrid extends DataGrid {
+}
+
+// @public
+export class VSCodeDataGridCell extends DataGridCell {
+}
+
+// @public
+export class VSCodeDataGridRow extends DataGridRow {
 }
 
 // @public
