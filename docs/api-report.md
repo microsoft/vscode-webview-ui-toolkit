@@ -20,6 +20,7 @@ import { Radio } from '@microsoft/fast-foundation';
 import { RadioGroup } from '@microsoft/fast-foundation';
 import { Select } from '@microsoft/fast-foundation';
 import { Switch } from '@microsoft/fast-foundation';
+import { TextArea } from '@microsoft/fast-foundation';
 import { TextField } from '@microsoft/fast-foundation';
 
 // @public
@@ -63,6 +64,9 @@ export const SelectStyles: ElementStyles;
 
 // @public
 export const SwitchStyles: ElementStyles;
+
+// @public
+export const TextAreaStyles: ElementStyles;
 
 // @public
 export type TextFieldAppearance = 'filled' | 'outline';
@@ -273,6 +277,10 @@ export class VSCodeSelect extends Select {
 
 // @public
 export class VSCodeSwitch extends Switch {
+}
+
+// @public
+export class VSCodeTextArea extends TextArea {
 }
 
 // @public
