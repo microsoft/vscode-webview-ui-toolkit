@@ -3,6 +3,7 @@ import {VSCodeTextField} from '../index';
 export type TextFieldArgs = {
 	label?: string;
 	placeholder?: string;
+	value?: string;
 	minLength?: number;
 	maxLength?: number;
 	isRequired?: boolean;
@@ -14,6 +15,7 @@ export type TextFieldArgs = {
 export function createTextField({
 	label,
 	placeholder,
+	value,
 	minLength,
 	maxLength,
 	isRequired,
@@ -28,6 +30,9 @@ export function createTextField({
 	}
 	if (placeholder) {
 		textField.setAttribute('placeholder', placeholder);
+	}
+	if (value) {
+		textField.value = value;
 	}
 	if (minLength) {
 		textField.setAttribute('minlength', minLength.toString());

@@ -11,6 +11,7 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		placeholder: {control: 'text'},
+		value: {control: 'text'},
 		minLength: {control: 'number'},
 		maxLength: {control: 'number'},
 		isRequired: {control: 'boolean'},
