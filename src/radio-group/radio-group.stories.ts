@@ -32,9 +32,23 @@ Group.args = {
 	orientation: 'Vertical',
 	numberOfChildren: 3,
 };
+Group.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-radio-group>\n\t<label slot="label">Radio Group Label</label>\n\t<vscode-radio>Radio Label</vscode-radio>\n\t<vscode-radio>Radio Label</vscode-radio>\n\t<vscode-radio>Radio Label</vscode-radio>\n</vscode-radio-group>`,
+		},
+	},
+};
 
 export const GroupNoLabel: any = Template.bind({});
 GroupNoLabel.args = {
 	orientation: 'Vertical',
 	numberOfChildren: 3,
+};
+GroupNoLabel.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-radio-group>\n\t<vscode-radio>Radio Label</vscode-radio>\n\t<vscode-radio>Radio Label</vscode-radio>\n\t<vscode-radio>Radio Label</vscode-radio>\n</vscode-radio-group>`,
+		},
+	},
 };
