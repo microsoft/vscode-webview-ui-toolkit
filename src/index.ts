@@ -12,7 +12,6 @@ export * from './progress-bar/index';
 export * from './radio-group/index';
 export * from './radio/index';
 export * from './select/index';
-export * from './switch/index';
 export * from './text-area/index';
 export * from './text-field/index';
 
