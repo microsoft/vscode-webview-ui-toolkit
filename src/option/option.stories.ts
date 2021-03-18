@@ -25,3 +25,10 @@ Default.args = {
 	isDisabled: false,
 	isFocused: false,
 };
+Default.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-option>Option Label</vscode-option>`,
+		},
+	},
+};

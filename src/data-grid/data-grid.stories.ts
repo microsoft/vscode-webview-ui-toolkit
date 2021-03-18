@@ -55,3 +55,10 @@ Default.args = {
 	],
 	isFocused: false,
 };
+Default.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-data-grid></vscode-data-grid>`,
+		},
+	},
+};

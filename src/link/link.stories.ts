@@ -34,11 +34,25 @@ Default.args = {
 	isDisabled: false,
 	isFocused: false,
 };
+Default.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-link href="#">Link</vscode-link>`,
+		},
+	},
+};
 
 export const Primary: any = Template.bind({});
 Primary.args = {
 	...Default.args,
 	appearance: 'Primary',
+};
+Primary.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-link appearance="primary" href="#">Link</vscode-link>`,
+		},
+	},
 };
 
 export const Secondary: any = Template.bind({});
@@ -46,15 +60,36 @@ Secondary.args = {
 	...Default.args,
 	appearance: 'Secondary',
 };
+Secondary.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-link appearance="secondary" href="#">Link</vscode-link>`,
+		},
+	},
+};
 
 export const Install: any = Template.bind({});
 Install.args = {
 	...Default.args,
 	appearance: 'Install',
 };
+Install.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-link appearance="install" href="#">Link</vscode-link>`,
+		},
+	},
+};
 
 export const Text: any = Template.bind({});
 Text.args = {
 	...Default.args,
 	appearance: 'Text',
+};
+Text.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-link appearance="text" href="#">Link</vscode-link>`,
+		},
+	},
 };
