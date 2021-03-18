@@ -31,9 +31,23 @@ Default.args = {
 	numberOfChildren: 3,
 	onChange: action('select-onchange'),
 };
+Default.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-select>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+		},
+	},
+};
 
 export const SelectOpen: any = Template.bind({});
 SelectOpen.args = {
 	...Default.args,
 	isOpen: true,
+};
+SelectOpen.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-select open>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+		},
+	},
 };
