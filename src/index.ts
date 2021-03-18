@@ -8,6 +8,7 @@ export * from './data-grid/index';
 export * from './design-system-provider/index';
 export * from './link/index';
 export * from './option/index';
+export * from './progress-bar/index';
 export * from './radio-group/index';
 export * from './radio/index';
 export * from './select/index';
