@@ -35,11 +35,25 @@ Primary.args = {
 	isFocused: false,
 	onClick: action('button-clicked'),
 };
+Primary.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-button>Button</vscode-button>`,
+		},
+	},
+};
 
 export const Secondary: any = Template.bind({});
 Secondary.args = {
 	...Primary.args,
 	appearance: 'Secondary',
+};
+Secondary.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-button appearance="secondary">Button</vscode-button>`,
+		},
+	},
 };
 
 export const Install: any = Template.bind({});
@@ -47,15 +61,36 @@ Install.args = {
 	...Primary.args,
 	appearance: 'Install',
 };
+Install.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-button appearance="install">Button</vscode-button>`,
+		},
+	},
+};
 
 export const Text: any = Template.bind({});
 Text.args = {
 	...Primary.args,
 	appearance: 'Text',
 };
+Text.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-button appearance="text">Button</vscode-button>`,
+		},
+	},
+};
 
 export const Link: any = Template.bind({});
 Link.args = {
 	...Primary.args,
 	appearance: 'Link',
+};
+Link.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-button appearance="link">Button</vscode-button>`,
+		},
+	},
 };
