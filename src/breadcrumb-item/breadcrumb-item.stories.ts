@@ -28,3 +28,10 @@ Default.args = {
 	href: '#',
 	isFocused: false,
 };
+Default.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-breadcrumb-item href="#">src</vscode-breadcrumb-item>`,
+		},
+	},
+};
