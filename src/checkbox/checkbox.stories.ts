@@ -30,11 +30,25 @@ Checked.args = {
 	isFocused: false,
 	onChange: action('checkbox-onchange'),
 };
+Checked.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-checkbox checked="true">Label</vscode-checkbox>`,
+		},
+	},
+};
 
 export const Unchecked: any = Template.bind({});
 Unchecked.args = {
 	...Checked.args,
 	isChecked: false,
+};
+Unchecked.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-checkbox checked="false">Label</vscode-checkbox>`,
+		},
+	},
 };
 
 export const CheckedNoLabel: any = Template.bind({});
@@ -44,9 +58,23 @@ CheckedNoLabel.args = {
 	isFocused: false,
 	onChange: action('checkbox-onchange'),
 };
+CheckedNoLabel.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-checkbox checked="true"></vscode-checkbox>`,
+		},
+	},
+};
 
 export const UncheckedNoLabel: any = Template.bind({});
 UncheckedNoLabel.args = {
 	...CheckedNoLabel.args,
 	isChecked: false,
+};
+UncheckedNoLabel.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-checkbox checked="false"></vscode-checkbox>`,
+		},
+	},
 };
