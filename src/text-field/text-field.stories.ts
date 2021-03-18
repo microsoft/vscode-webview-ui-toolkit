@@ -34,9 +34,23 @@ Default.args = {
 	isDisabled: false,
 	isAutoFocused: false,
 };
+Default.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-text-field placeholder="Placeholder Text">Text Field Label</vscode-text-field>`,
+		},
+	},
+};
 
 export const NoLabel: any = Template.bind({});
 NoLabel.args = {
 	...Default.args,
 	label: '',
+};
+NoLabel.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-text-field placeholder="Placeholder Text"></vscode-text-field>`,
+		},
+	},
 };
