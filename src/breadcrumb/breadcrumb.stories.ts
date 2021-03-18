@@ -21,3 +21,10 @@ export const Default: any = Template.bind({});
 Default.args = {
 	numberOfChildren: 3,
 };
+Default.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-breadcrumb>\n\t<vscode-breadcrumb-item href="#">directory</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">directory</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">file</vscode-breadcrumb-item>\n</vscode-breadcrumb>`,
+		},
+	},
+};
