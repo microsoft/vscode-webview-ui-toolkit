@@ -7,6 +7,8 @@ export * from './checkbox/index';
 export * from './data-grid/index';
 export * from './design-system-provider/index';
 export * from './link/index';
+export * from './menu/index';
+export * from './menu-item/index';
 export * from './option/index';
 export * from './progress-bar/index';
 export * from './progress-ring/index';
