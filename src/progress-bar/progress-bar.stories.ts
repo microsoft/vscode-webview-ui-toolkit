@@ -22,14 +22,12 @@ const Template = ({...args}: ProgressBarArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
-	min: 0,
-	max: 100,
 	isPaused: false,
 };
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-progress-bar min="0" max="100"></vscode-progress-bar>`,
+			code: `<vscode-progress-bar></vscode-progress-bar>`,
 		},
 	},
 };
