@@ -1,13 +1,16 @@
 import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
-import {createProgressBar, ProgressBarArgs} from './fixtures/createProgressBar';
-import {VSCodeProgressBar} from './index';
+import {
+	createProgressRing,
+	ProgressRingArgs,
+} from './fixtures/createProgressRing';
+import {VSCodeProgressRing} from './index';
 
 // Prevent tree-shaking
-VSCodeProgressBar;
+VSCodeProgressRing;
 VSCodeDesignSystemProvider;
 
 export default {
-	title: 'Library/Progress Bar',
+	title: 'Library/Progress Ring',
 	argTypes: {
 		value: {control: 'number'},
 		min: {control: 'number'},
@@ -16,8 +19,8 @@ export default {
 	},
 };
 
-const Template = ({...args}: ProgressBarArgs) => {
-	return createProgressBar({...args});
+const Template = ({...args}: ProgressRingArgs) => {
+	return createProgressRing({...args});
 };
 
 export const Default: any = Template.bind({});
@@ -27,14 +30,14 @@ Default.args = {
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-progress-bar></vscode-progress-bar>`,
+			code: `<vscode-progress-ring></vscode-progress-ring>`,
 		},
 	},
 };
 
 export const SetValue: any = Template.bind({});
 SetValue.args = {
-	value: 75,
+	value: 65,
 	min: 0,
 	max: 100,
 	isPaused: false,
@@ -42,14 +45,14 @@ SetValue.args = {
 SetValue.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-progress-bar min="0" max="100" value="75"></vscode-progress-bar>`,
+			code: `<vscode-progress-ring min="0" max="100" value="65"></vscode-progress-ring>`,
 		},
 	},
 };
 
 export const Paused: any = Template.bind({});
 Paused.args = {
-	value: 75,
+	value: 65,
 	min: 0,
 	max: 100,
 	isPaused: true,
@@ -57,7 +60,7 @@ Paused.args = {
 Paused.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-progress-bar min="0" max="100" value="75" paused="true"></vscode-progress-bar>`,
+			code: `<vscode-progress-ring min="0" max="100" value="65" paused="true"></vscode-progress-ring>`,
 		},
 	},
 };
