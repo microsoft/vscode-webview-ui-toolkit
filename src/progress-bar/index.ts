@@ -1,4 +1,4 @@
-import {customElement} from '@microsoft/fast-element';
+import {customElement, ElementStyles} from '@microsoft/fast-element';
 import {
 	BaseProgress,
 	ProgressTemplate as template,
@@ -25,4 +25,4 @@ export class VSCodeProgressBar extends BaseProgress {}
  * Styles for Progress
  * @public
  */
-export const ProgressStyles = styles;
+export const ProgressBarStyles: ElementStyles = styles;
