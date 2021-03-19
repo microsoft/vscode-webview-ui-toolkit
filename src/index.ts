@@ -6,6 +6,7 @@ export * from './button/index';
 export * from './checkbox/index';
 export * from './data-grid/index';
 export * from './design-system-provider/index';
+export * from './divider/index';
 export * from './link/index';
 export * from './menu/index';
 export * from './menu-item/index';
