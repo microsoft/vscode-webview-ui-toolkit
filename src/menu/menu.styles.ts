@@ -25,4 +25,8 @@ export const MenuStyles = css`
 		border-top: solid calc(var(--border-width) * 1px)
 			var(--neutral-divider-rest);
 	}
+	::slotted(vscode-divider) {
+		width: 95%;
+		margin: auto;
+	}
 `;
