@@ -6,6 +6,7 @@
 
 import { Anchor } from '@microsoft/fast-foundation';
 import { Badge } from '@microsoft/fast-foundation';
+import { BaseProgress } from '@microsoft/fast-foundation';
 import { Breadcrumb } from '@microsoft/fast-foundation';
 import { BreadcrumbItem } from '@microsoft/fast-foundation';
 import { Button } from '@microsoft/fast-foundation';
@@ -14,12 +15,17 @@ import { DataGrid } from '@microsoft/fast-foundation';
 import { DataGridCell } from '@microsoft/fast-foundation';
 import { DataGridRow } from '@microsoft/fast-foundation';
 import { DesignSystemProvider } from '@microsoft/fast-foundation';
+import { Divider } from '@microsoft/fast-foundation';
 import { ElementStyles } from '@microsoft/fast-element';
 import { ListboxOption } from '@microsoft/fast-foundation';
+import { Menu } from '@microsoft/fast-foundation';
+import { MenuItem } from '@microsoft/fast-foundation';
 import { Radio } from '@microsoft/fast-foundation';
 import { RadioGroup } from '@microsoft/fast-foundation';
 import { Select } from '@microsoft/fast-foundation';
-import { Switch } from '@microsoft/fast-foundation';
+import { Tab } from '@microsoft/fast-foundation';
+import { TabPanel } from '@microsoft/fast-foundation';
+import { Tabs } from '@microsoft/fast-foundation';
 import { TextArea } from '@microsoft/fast-foundation';
 import { TextField } from '@microsoft/fast-foundation';
 
@@ -45,13 +51,28 @@ export const DataGridRowStyles: ElementStyles;
 export const DataGridStyles: ElementStyles;
 
 // @public
+export const DividerStyles: ElementStyles;
+
+// @public
 export type LinkAppearance = ButtonAppearance | 'hypertext';
 
 // @public
 export const LinkStyles: ElementStyles;
 
 // @public
+export const MenuItemStyles: ElementStyles;
+
+// @public
+export const MenuStyles: ElementStyles;
+
+// @public
 export const OptionStyles: ElementStyles;
+
+// @public
+export const ProgressBarStyles: ElementStyles;
+
+// @public
+export const ProgressRingStyles: ElementStyles;
 
 // @public
 export const RadioGroupStyles: ElementStyles;
@@ -63,7 +84,13 @@ export const RadioStyles: ElementStyles;
 export const SelectStyles: ElementStyles;
 
 // @public
-export const SwitchStyles: ElementStyles;
+export const TabPanelStyles: ElementStyles;
+
+// @public
+export const TabsStyles: ElementStyles;
+
+// @public
+export const TabStyles: ElementStyles;
 
 // @public
 export const TextAreaStyles: ElementStyles;
@@ -249,6 +276,10 @@ export class VSCodeDesignSystemProvider extends DesignSystemProvider implements 
 }
 
 // @public
+export class VSCodeDivider extends Divider {
+}
+
+// @public
 export class VSCodeLink extends Anchor {
     appearance: LinkAppearance;
     // (undocumented)
@@ -260,7 +291,23 @@ export class VSCodeLink extends Anchor {
 }
 
 // @public
+export class VSCodeMenu extends Menu {
+}
+
+// @public
+export class VSCodeMenuItem extends MenuItem {
+}
+
+// @public
 export class VSCodeOption extends ListboxOption {
+}
+
+// @public
+export class VSCodeProgressBar extends BaseProgress {
+}
+
+// @public
+export class VSCodeProgressRing extends BaseProgress {
 }
 
 // @public
@@ -276,7 +323,15 @@ export class VSCodeSelect extends Select {
 }
 
 // @public
-export class VSCodeSwitch extends Switch {
+export class VSCodeTab extends Tab {
+}
+
+// @public
+export class VSCodeTabPanel extends TabPanel {
+}
+
+// @public
+export class VSCodeTabs extends Tabs {
 }
 
 // @public
