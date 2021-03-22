@@ -38,7 +38,7 @@ Default.args = {
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area placeholder="Placeholder Text">Text Area Label</vscode-text-area>`,
+			code: `<vscode-tabs activeid="tab-4">\n\t<vscode-tab id="tab-1">PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3">DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
 		},
 	},
 };
@@ -51,7 +51,7 @@ Vertical.args = {
 Vertical.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area placeholder="Placeholder Text">Text Area Label</vscode-text-area>`,
+			code: `<vscode-tabs activeid="tab-4" orientation="vertical">\n\t<vscode-tab id="tab-1">PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3">DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
 		},
 	},
 };
