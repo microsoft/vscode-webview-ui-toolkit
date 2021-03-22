@@ -21,7 +21,7 @@ const template = createMenuItemTemplate('vscode');
 export class VSCodeMenuItem extends MenuItem {}
 
 /**
- * Styles for MenuItem
+ * Styles for the VSCode Menu Item component
  * @public
  */
 export const MenuItemStyles: ElementStyles = styles;

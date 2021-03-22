@@ -19,7 +19,7 @@ import {MenuStyles as styles} from './menu.styles';
 export class VSCodeMenu extends Menu {}
 
 /**
- * Styles for Menu
+ * Styles for the VSCode Menu component
  * @public
  */
 export const MenuStyles: ElementStyles = styles;

@@ -22,7 +22,7 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
 export class VSCodeProgressRing extends BaseProgress {}
 
 /**
- * Styles for ProgressRing
+ * Styles for the VSCode Progress Ring component
  * @public
  */
 export const ProgressRingStyles: ElementStyles = styles;

@@ -19,7 +19,7 @@ import {SelectStyles as styles} from './select.styles';
 export class VSCodeSelect extends Select {}
 
 /**
- * Styles for Select
+ * Styles for the VSCode Select component
  * @public
  */
 export const SelectStyles: ElementStyles = styles;

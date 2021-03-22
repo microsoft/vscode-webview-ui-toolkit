@@ -22,7 +22,7 @@ import {TabPanelStyles as styles} from './tab-panel.styles';
 export class VSCodeTabPanel extends TabPanel {}
 
 /**
- * Styles for TabPanel
+ * Styles for the VSCode Tab Panel component
  * @public
  */
 export const TabPanelStyles: ElementStyles = styles;

@@ -1,4 +1,4 @@
-import {customElement} from '@microsoft/fast-element';
+import {customElement, ElementStyles} from '@microsoft/fast-element';
 import {
 	Breadcrumb,
 	BreadcrumbTemplate as template,
@@ -20,3 +20,9 @@ import {BreadcrumbStyles as styles} from './breadcrumb.styles';
 	styles,
 })
 export class VSCodeBreadcrumb extends Breadcrumb {}
+
+/**
+ * Styles for the VSCode Breadcrumb component
+ * @public
+ */
+export const BreadcrumbStyles: ElementStyles = styles;

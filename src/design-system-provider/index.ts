@@ -13,8 +13,8 @@ import {DesignSystemProviderStyles as styles} from './design-system-provider.sty
 
 /**
  * The VSCode DesignSystemProvider element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.designsystemprovider/ DesignSystemProvider},
- * {@link https://www.fast.design/docs/api/fast-foundation.designsystemprovidertemplate/ DesignSystemProviderTemplate}
+ * {@link https://www.fast.design/docs/api/fast-foundation.designsystemprovider/ DesignSystemProvider} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.designsystemprovidertemplate/ DesignSystemProviderTemplate}.
  *
  * @public
  * @remarks

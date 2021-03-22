@@ -19,7 +19,7 @@ import {DividerStyles as styles} from './divider.styles';
 export class VSCodeDivider extends Divider {}
 
 /**
- * Styles for Divider
+ * Styles for the VSCode Divider component
  * @public
  */
 export const DividerStyles: ElementStyles = styles;

@@ -19,7 +19,7 @@ import {BadgeStyles as styles} from './badge.styles';
 export class VSCodeBadge extends Badge {}
 
 /**
- * Styles for Badge
+ * Styles for the VSCode Badge component
  * @public
  */
 export const BadgeStyles: ElementStyles = styles;

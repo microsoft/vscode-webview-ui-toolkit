@@ -77,7 +77,7 @@ export class VSCodeLink extends Anchor {
 }
 
 /**
- * Styles for Link
+ * Styles for the VSCode Link component
  * @public
  */
 export const LinkStyles: ElementStyles = styles;

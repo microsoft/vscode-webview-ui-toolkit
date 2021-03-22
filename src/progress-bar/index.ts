@@ -22,7 +22,7 @@ import {ProgressBarStyles as styles} from './progress-bar.styles';
 export class VSCodeProgressBar extends BaseProgress {}
 
 /**
- * Styles for Progress
+ * Styles for the VSCode Progress Bar
  * @public
  */
 export const ProgressBarStyles: ElementStyles = styles;

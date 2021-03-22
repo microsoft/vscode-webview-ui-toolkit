@@ -22,7 +22,7 @@ export * from '../tab/index';
 export * from '../tab-panel/index';
 
 /**
- * Styles for Tabs
+ * Styles for the VSCode Tabs component
  * @public
  */
 export const TabsStyles: ElementStyles = styles;

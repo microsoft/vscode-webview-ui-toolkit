@@ -22,7 +22,7 @@ import {CheckboxStyles as styles} from './checkbox.styles';
 export class VSCodeCheckbox extends Checkbox {}
 
 /**
- * Styles for the VSCode Checkbox
+ * Styles for the VSCode Checkbox component
  * @public
  */
 export const CheckboxStyles: ElementStyles = styles;

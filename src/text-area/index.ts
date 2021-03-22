@@ -28,7 +28,7 @@ import {TextAreaStyles as styles} from './text-area.styles';
 export class VSCodeTextArea extends TextArea {}
 
 /**
- * Styles for TextArea
+ * Styles for the VSCode Text Area component
  * @public
  */
 export const TextAreaStyles: ElementStyles = styles;

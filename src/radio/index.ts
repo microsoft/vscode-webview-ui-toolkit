@@ -19,7 +19,7 @@ import {RadioStyles as styles} from './radio.styles';
 export class VSCodeRadio extends Radio {}
 
 /**
- * Styles for Radio
+ * Styles for the VSCode Radio component
  * @public
  */
 export const RadioStyles: ElementStyles = styles;

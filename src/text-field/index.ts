@@ -54,7 +54,7 @@ export class VSCodeTextField extends TextField {
 }
 
 /**
- * Styles for TextField
+ * Styles for the VSCode Text Field component
  * @public
  */
 export const TextFieldStyles: ElementStyles = styles;
