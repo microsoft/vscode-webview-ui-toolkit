@@ -11,6 +11,11 @@ export default {
 	argTypes: {
 		numberOfChildren: {control: 'number'},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: BreadcrumbArgs) => {

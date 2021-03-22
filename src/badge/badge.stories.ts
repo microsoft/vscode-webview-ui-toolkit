@@ -14,6 +14,11 @@ export default {
 		textColor: {control: 'color'},
 		isCircular: {control: 'boolean'},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: BadgeArgs) => {

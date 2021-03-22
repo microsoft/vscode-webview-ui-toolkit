@@ -16,6 +16,11 @@ export default {
 		href: {control: 'text'},
 		isFocused: {control: 'boolean'},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: BreadcrumbItemArgs) => {

@@ -20,6 +20,11 @@ export default {
 		isDisabled: {control: 'boolean'},
 		isFocused: {control: 'boolean'},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: LinkArgs) => {

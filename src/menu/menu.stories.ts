@@ -12,6 +12,11 @@ export default {
 		numberOfChildren: {control: 'number'},
 		withDividers: {control: 'boolean'},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: MenuArgs) => {

@@ -24,6 +24,11 @@ export default {
 			},
 		},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: TabsArgs) => {
