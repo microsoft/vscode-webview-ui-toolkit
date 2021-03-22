@@ -17,6 +17,11 @@ export default {
 		max: {control: 'number'},
 		isPaused: {control: 'boolean'},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: ProgressRingArgs) => {

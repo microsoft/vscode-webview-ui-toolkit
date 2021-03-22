@@ -19,6 +19,11 @@ export default {
 		isDisabled: {control: 'boolean'},
 		isAutoFocused: {control: 'boolean'},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: TextFieldArgs) => {

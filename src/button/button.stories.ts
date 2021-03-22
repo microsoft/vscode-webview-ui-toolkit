@@ -19,7 +19,12 @@ export default {
 		},
 		isDisabled: {control: 'boolean'},
 		isFocused: {control: 'boolean'},
-		onClick: {action: 'clicked'},
+		onClick: {
+			action: 'clicked',
+			table: {
+				disable: true,
+			},
+		},
 	},
 };
 

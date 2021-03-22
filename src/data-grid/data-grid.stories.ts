@@ -12,6 +12,11 @@ export default {
 		gridData: {control: 'object'},
 		isFocused: {control: 'boolean'},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = ({...args}: DataGridArgs) => {

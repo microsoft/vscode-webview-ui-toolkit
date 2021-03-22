@@ -14,7 +14,12 @@ export default {
 		isChecked: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isFocused: {control: 'boolean'},
-		onChange: {action: 'changed'},
+		onChange: {
+			action: 'changed',
+			table: {
+				disable: true,
+			},
+		},
 	},
 };
 
