@@ -5,21 +5,6 @@ export type TabsArgs = {
 	orientation?: string;
 };
 
-// <fast-tabs id="myTab" activeId="tab-1">
-//     <fast-tab id="tab-1">Tab one</fast-tab>
-//     <fast-tab id="tab-2">Tab two</fast-tab>
-//     <fast-tab id="tab-3">Tab three</fast-tab>
-//     <fast-tab-panel id="tab-panel-1">
-//         Tab #1 content.
-//     </fast-tab-panel>
-//     <fast-tab-panel id="tab-panel-2">
-//         Tab #2 content.
-//     </fast-tab-panel>
-//     <fast-tab-panel id="tab-panel-3">
-//         Tab #3 content.
-//     </fast-tab-panel>
-// </fast-tabs>
-
 export function createTabs({activeTab, orientation}: TabsArgs) {
 	const tabNames = ['Problems', 'Output', 'Debug Console', 'Terminal'];
 	const tabs = createTabsWithChildren(tabNames);
