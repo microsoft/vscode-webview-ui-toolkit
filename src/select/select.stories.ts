@@ -15,7 +15,12 @@ export default {
 		isDisabled: {control: 'boolean'},
 		isFocused: {control: 'boolean'},
 		numberOfChildren: {control: 'number'},
-		onChange: {action: 'changed'},
+		onChange: {
+			action: 'changed',
+			table: {
+				disable: true,
+			},
+		},
 	},
 };
 
