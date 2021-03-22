@@ -5,6 +5,7 @@ import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
 import transformTaggedTemplate from 'rollup-plugin-transform-tagged-template';
 import typescript from '@rollup/plugin-typescript';
+import del from 'rollup-plugin-delete';
 
 // ----- Helper Functions -----
 
@@ -63,6 +64,7 @@ export default [
 			},
 		],
 		plugins: [
+			del({targets: 'dist/*'}),
 			nodeResolve(),
 			commonjs(),
 			typescript(),
