@@ -19,7 +19,7 @@ import {TabStyles as styles} from './tab.styles';
 export class VSCodeTab extends Tab {}
 
 /**
- * Styles for Tab
+ * Styles for the VSCode Tab component
  * @public
  */
 export const TabStyles: ElementStyles = styles;

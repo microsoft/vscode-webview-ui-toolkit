@@ -53,7 +53,7 @@ export class VSCodeButton extends Button {
 }
 
 /**
- * Styles for the VSCode Button
+ * Styles for the VSCode Button component
  * @public
  */
 export const ButtonStyles: ElementStyles = styles;

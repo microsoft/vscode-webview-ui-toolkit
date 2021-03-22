@@ -22,7 +22,7 @@ import {RadioGroupStyles as styles} from './radio-group.styles';
 export class VSCodeRadioGroup extends RadioGroup {}
 
 /**
- * Styles for RadioGroup
+ * Styles for the VSCode Radio Group component
  * @public
  */
 export const RadioGroupStyles: ElementStyles = styles;

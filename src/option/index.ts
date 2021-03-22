@@ -22,7 +22,7 @@ import {OptionStyles as styles} from './option.styles';
 export class VSCodeOption extends ListboxOption {}
 
 /**
- * Styles for Option
+ * Styles for the VSCode Option component
  * @public
  */
 export const OptionStyles: ElementStyles = styles;
