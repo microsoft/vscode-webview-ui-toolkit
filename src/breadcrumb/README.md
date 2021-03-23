@@ -10,7 +10,7 @@ None
 
 The `vscode-breadcrumb` component must be used in tandem with the `vscode-breadcrumb-item` component.
 
-[Interactive Storybook Example](http://localhost:6006/?path=/story/library-breadcrumb--default)
+[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb--default)
 
 ```html
 <vscode-breadcrumb>
