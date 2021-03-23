@@ -33,6 +33,12 @@ import { TextField } from '@microsoft/fast-foundation';
 export const BadgeStyles: ElementStyles;
 
 // @public
+export const BreadcrumbItemStyles: ElementStyles;
+
+// @public
+export const BreadcrumbStyles: ElementStyles;
+
+// @public
 export type ButtonAppearance = 'install' | 'link' | 'primary' | 'secondary' | 'text';
 
 // @public
