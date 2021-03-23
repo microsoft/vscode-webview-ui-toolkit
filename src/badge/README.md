@@ -17,9 +17,7 @@ The `vscode-badge` component is used to highlight an item and attract attention 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-badge--circular)
 
 ```html
-<vscode-design-system-provider use-defaults>
-	<vscode-badge circular="true">1</vscode-badge>
-</vscode-design-system-provider>
+<vscode-badge circular="true">1</vscode-badge>
 ```
 
 ### Fill & Color Attributes
@@ -38,7 +36,5 @@ vscode-badge {
 ```
 
 ```html
-<vscode-design-system-provider use-defaults>
-	<vscode-badge fill="primary" color="light">Badge Text</vscode-badge>
-</vscode-design-system-provider>
+<vscode-badge fill="primary" color="light">Badge Text</vscode-badge>
 ```
