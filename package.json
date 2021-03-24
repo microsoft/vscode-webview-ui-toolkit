@@ -32,7 +32,8 @@
 	"dependencies": {
 		"@microsoft/fast-element": "^1.0.1",
 		"@microsoft/fast-foundation": "^1.16.1",
-		"lodash-es": "^4.17.21"
+		"lodash-es": "^4.17.21",
+		"vscode-codicons": "0.0.15"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.13.1",
