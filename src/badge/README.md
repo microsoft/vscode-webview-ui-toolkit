@@ -34,13 +34,13 @@ The `fill` and `color` attributes expose the ability to set a custom background 
 
 When defining CSS variables the following formats must be used:
 
--   `--badge-fill-{color-name-of-your-choice}`
--   `--badge-color-{fill-name-of-your-choice}`
+-   `--badge-fill-{fill-name-of-your-choice}`
+-   `--badge-color-{color-name-of-your-choice}`
 
 From there, the `fill` and `color` attributes are set using the `{name-of-your-choice}`, like so:
 
--   `fill="{color-name-of-your-choice}"`
--   `color="{fill-name-of-your-choice}"`
+-   `fill="{fill-name-of-your-choice}"`
+-   `color="{color-name-of-your-choice}"`
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-badge--with-fill)
 
