@@ -3,12 +3,12 @@ import {focusObserver} from '../../utilities/storybook/index';
 import '../../../node_modules/vscode-codicons/dist/codicon.css';
 
 export type BreadcrumbItemArgs = {
-	label?: string;
-	href?: string;
-	customElement?: boolean;
-	startIcon?: boolean;
-	separatorIcon?: boolean;
-	endIcon?: boolean;
+	label: string;
+	href: string;
+	customElement: boolean;
+	startIcon: boolean;
+	separatorIcon: boolean;
+	endIcon: boolean;
 	isFocused: boolean;
 };
 
@@ -55,7 +55,10 @@ export function createBreadcrumbItem({
 	return breadcrumbItem;
 }
 
-function createCustomIcon(iconType: string, iconName: string): HTMLElement {
+export function createCustomIcon(
+	iconType: string,
+	iconName: string
+): HTMLElement {
 	const icon = document.createElement('svg');
 	icon.setAttribute('slot', iconType);
 	icon.classList.add('codicon');
