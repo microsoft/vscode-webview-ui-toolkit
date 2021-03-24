@@ -1,0 +1,1 @@
+# VSCode Progress Bar
