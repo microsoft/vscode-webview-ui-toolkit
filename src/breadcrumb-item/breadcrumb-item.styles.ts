@@ -19,6 +19,8 @@ export const BreadcrumbItemStyles = css`
         align-items: center;
     }
     .separator {
+        display: flex;
+        align-items: center;
         margin: 0 6px;
     }
     .control {
