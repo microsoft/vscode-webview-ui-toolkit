@@ -55,10 +55,7 @@ export function createBreadcrumbItem({
 	return breadcrumbItem;
 }
 
-export function createCustomIcon(
-	iconType: string,
-	iconName: string
-): HTMLElement {
+function createCustomIcon(iconType: string, iconName: string): HTMLElement {
 	const icon = document.createElement('svg');
 	icon.setAttribute('slot', iconType);
 	icon.classList.add('codicon');
