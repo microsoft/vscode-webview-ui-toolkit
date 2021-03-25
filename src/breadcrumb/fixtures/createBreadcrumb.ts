@@ -1,24 +1,34 @@
 import {VSCodeBreadcrumb} from '../index';
-import {VSCodeBreadcrumbItem} from '../../breadcrumb-item/index';
+import {createBreadcrumbItem} from '../../breadcrumb-item/fixtures/createBreadcrumbItem';
+import '../../../node_modules/vscode-codicons/dist/codicon.css';
 
 export type BreadcrumbArgs = {
-	numberOfChildren: number;
+	breadcrumbItemList: string[];
+	customElement: boolean;
+	startIcon: boolean;
+	separatorIcon: boolean;
+	endIcon: boolean;
 };
 
-export function createBreadcrumb({numberOfChildren}: BreadcrumbArgs) {
-	const breadcrumb = createBreadcrumbWithNChildren(numberOfChildren);
-
-	return breadcrumb;
-}
-
-function createBreadcrumbWithNChildren(numberOfChildren: number) {
+export function createBreadcrumb({
+	breadcrumbItemList,
+	customElement,
+	startIcon,
+	separatorIcon,
+	endIcon,
+}: BreadcrumbArgs) {
 	const breadcrumb = new VSCodeBreadcrumb();
 
-	for (let i = 0; i < numberOfChildren; i++) {
-		const breadcrumbItem = new VSCodeBreadcrumbItem();
-		breadcrumbItem.textContent =
-			i !== numberOfChildren - 1 ? 'directory' : 'file';
-		breadcrumbItem.setAttribute('href', '#');
+	for (let i = 0; i < breadcrumbItemList.length; i++) {
+		const breadcrumbItem = createBreadcrumbItem({
+			label: breadcrumbItemList[i],
+			href: '#',
+			customElement,
+			startIcon,
+			separatorIcon,
+			endIcon,
+			isFocused: false,
+		});
 		breadcrumb.appendChild(breadcrumbItem);
 	}
 

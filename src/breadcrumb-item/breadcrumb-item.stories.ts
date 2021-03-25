@@ -33,7 +33,7 @@ const Template = ({...args}: BreadcrumbItemArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
-	label: 'src',
+	label: 'Breadcrumb Item Label',
 	href: '',
 	customElement: false,
 	startIcon: false,
@@ -44,7 +44,7 @@ Default.args = {
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-breadcrumb-item>src</vscode-breadcrumb-item>`,
+			code: `<vscode-breadcrumb-item>Breadcrumb Item Label</vscode-breadcrumb-item>`,
 		},
 	},
 };
@@ -57,7 +57,7 @@ WithLink.args = {
 WithLink.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-breadcrumb-item href="#">src</vscode-breadcrumb-item>`,
+			code: `<vscode-breadcrumb-item href="#">Breadcrumb Item Label</vscode-breadcrumb-item>`,
 		},
 	},
 };
@@ -85,7 +85,7 @@ WithCustomSeparator.args = {
 WithCustomSeparator.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Context: Import VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tsrc\n\t<svg slot="separator" class="codicon codicon-chevron-right"></svg>\n</vscode-breadcrumb-item>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<svg slot="separator" class="codicon codicon-chevron-right"></svg>\n</vscode-breadcrumb-item>`,
 		},
 	},
 };
@@ -100,7 +100,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Context: Import VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tsrc\n\t<svg slot="start" class="codicon codicon-symbol-method"></svg>\n\t<svg slot="separator" class="codicon codicon-chevron-right"></svg>\n</vscode-breadcrumb-item>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<svg slot="start" class="codicon codicon-symbol-method"></svg>\n\t<svg slot="separator" class="codicon codicon-chevron-right"></svg>\n</vscode-breadcrumb-item>`,
 		},
 	},
 };
@@ -115,7 +115,7 @@ WithEndIcon.args = {
 WithEndIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Context: Import VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tsrc\n\t<svg slot="end" class="codicon codicon-symbol-method"></svg>\n\t<svg slot="separator" class="codicon codicon-chevron-right"></svg>\n</vscode-breadcrumb-item>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<svg slot="end" class="codicon codicon-symbol-method"></svg>\n\t<svg slot="separator" class="codicon codicon-chevron-right"></svg>\n</vscode-breadcrumb-item>`,
 		},
 	},
 };
