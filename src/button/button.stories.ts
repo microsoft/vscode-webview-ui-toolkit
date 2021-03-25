@@ -67,19 +67,6 @@ Secondary.parameters = {
 	},
 };
 
-export const Install: any = Template.bind({});
-Install.args = {
-	...Default.args,
-	appearance: 'Install',
-};
-Install.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-button appearance="install">Button Text</vscode-button>`,
-		},
-	},
-};
-
 export const Text: any = Template.bind({});
 Text.args = {
 	...Default.args,
@@ -89,6 +76,19 @@ Text.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-button appearance="text">Button Text</vscode-button>`,
+		},
+	},
+};
+
+export const Install: any = Template.bind({});
+Install.args = {
+	...Default.args,
+	appearance: 'Install',
+};
+Install.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-button appearance="install">Button Text</vscode-button>`,
 		},
 	},
 };
