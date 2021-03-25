@@ -57,6 +57,9 @@ const BaseButtonStyles = css`
 		background: var(--button-primary-background-color);
 		cursor: ${disabledCursor};
 	}
+	.content {
+		display: flex;
+	}
 	.start,
 	.end {
 		display: flex;
@@ -70,10 +73,10 @@ const BaseButtonStyles = css`
 		height: 16px;
 	}
 	.start {
-		margin-inline-end: 11px;
+		margin-inline-end: 8px;
 	}
 	.end {
-		margin-inline-start: 11px;
+		margin-inline-start: 8px;
 	}
 `;
 
