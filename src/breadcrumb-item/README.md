@@ -55,7 +55,7 @@ The default separator is a `/` but it can customized by adding an element with t
 
 ### Start Icon
 
-An icon can be added to the start of Breadcrumb Item by adding an element with the attribute `slot="start"`, such as an SVG icon.
+An icon can be added to the left of Breadcrumb Item text by adding an element with the attribute `slot="start"`, such as an SVG icon.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-start-icon)
 
@@ -70,7 +70,7 @@ An icon can be added to the start of Breadcrumb Item by adding an element with t
 
 ### End Icon
 
-An icon can be added to the end of Breadcrumb Item by adding an element with the attribute `slot="end"`, such as an SVG icon.
+An icon can be added to the right of Breadcrumb Item text by adding an element with the attribute `slot="end"`, such as an SVG icon.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-end-icon)
 
