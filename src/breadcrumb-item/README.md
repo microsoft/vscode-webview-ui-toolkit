@@ -15,7 +15,7 @@ The `vscode-breadcrumb-item` is a component meant to be used with `vscode-breadc
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--default)
 
 ```html
-<vscode-breadcrumb-item>src</vscode-breadcrumb-item>
+<vscode-breadcrumb-item>Breadcrumb Item Label</vscode-breadcrumb-item>
 ```
 
 ### Href Attribute
@@ -23,7 +23,7 @@ The `vscode-breadcrumb-item` is a component meant to be used with `vscode-breadc
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-link)
 
 ```html
-<vscode-breadcrumb-item href="#">src</vscode-breadcrumb-item>
+<vscode-breadcrumb-item href="#">Breadcrumb Item Label</vscode-breadcrumb-item>
 ```
 
 ### Custom Element
@@ -34,7 +34,6 @@ The Breadcrumb Item usually contains text, but can also contain any valid HTML, 
 
 ```html
 <vscode-breadcrumb-item href="#">
-	<!-- This button could be replaced with any valid HTML -->
 	<vscode-button>Button Element</vscode-button>
 </vscode-breadcrumb-item>
 ```
@@ -46,10 +45,10 @@ The default separator is a `/` but it can customized by adding an element with t
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-custom-separator)
 
 ```html
-<!-- Context: Import VSCode Codicon Library -->
+<!-- Note: Using VSCode Codicon Library -->
 
 <vscode-breadcrumb-item href="#">
-	src
+	Breadcrumb Item Label
 	<svg slot="separator" class="codicon codicon-chevron-right"></svg>
 </vscode-breadcrumb-item>
 ```
@@ -61,10 +60,10 @@ An icon can be added to the start of Breadcrumb Item by adding an element with t
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-start-icon)
 
 ```html
-<!-- Context: Import VSCode Codicon Library -->
+<!-- Note: Using VSCode Codicon Library -->
 
 <vscode-breadcrumb-item href="#">
-	src
+	Breadcrumb Item Label
 	<svg slot="start" class="codicon codicon-symbol-method"></svg>
 </vscode-breadcrumb-item>
 ```
@@ -76,10 +75,10 @@ An icon can be added to the end of Breadcrumb Item by adding an element with the
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-end-icon)
 
 ```html
-<!-- Context: Import VSCode Codicon Library -->
+<!-- Note: Using VSCode Codicon Library -->
 
 <vscode-breadcrumb-item href="#">
-	src
+	Breadcrumb Item Label
 	<svg slot="end" class="codicon codicon-symbol-method"></svg>
 </vscode-breadcrumb-item>
 ```
