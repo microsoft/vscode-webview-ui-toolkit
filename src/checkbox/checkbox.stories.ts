@@ -13,7 +13,12 @@ export default {
 		label: {control: 'text'},
 		isChecked: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
-		isFocused: {control: 'boolean'},
+		isAutoFocused: {control: 'boolean'},
+		isReadOnly: {control: 'boolean'},
+		isRequired: {control: 'boolean'},
+		hasValue: {control: 'boolean'},
+		isPartOfForm: {control: 'boolean'},
+		indicatorIcon: {control: 'boolean'},
 		onChange: {
 			action: 'changed',
 			table: {
@@ -27,59 +32,100 @@ const Template = ({...args}: CheckboxArgs) => {
 	return createCheckbox({...args});
 };
 
-export const Checked: any = Template.bind({});
-Checked.args = {
+export const Default: any = Template.bind({});
+Default.args = {
 	label: 'Label',
-	isChecked: true,
+	isChecked: false,
 	isDisabled: false,
-	isFocused: false,
+	isAutoFocused: false,
+	isReadOnly: false,
+	hasValue: false,
+	isPartOfForm: false,
+	indicatorIcon: false,
 	onChange: action('checkbox-onchange'),
 };
-Checked.parameters = {
+Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-checkbox checked="true">Label</vscode-checkbox>`,
+			code: `<vscode-checkbox>Label</vscode-checkbox>`,
 		},
 	},
 };
 
-export const Unchecked: any = Template.bind({});
-Unchecked.args = {
-	...Checked.args,
-	isChecked: false,
-};
-Unchecked.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-checkbox checked="false">Label</vscode-checkbox>`,
-		},
-	},
-};
-
-export const CheckedNoLabel: any = Template.bind({});
-CheckedNoLabel.args = {
+export const WithChecked: any = Template.bind({});
+WithChecked.args = {
+	...Default.args,
 	isChecked: true,
-	isDisabled: false,
-	isFocused: false,
-	onChange: action('checkbox-onchange'),
 };
-CheckedNoLabel.parameters = {
+WithChecked.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-checkbox checked="true"></vscode-checkbox>`,
+			code: `<vscode-checkbox checked>Label</vscode-checkbox>`,
 		},
 	},
 };
 
-export const UncheckedNoLabel: any = Template.bind({});
-UncheckedNoLabel.args = {
-	...CheckedNoLabel.args,
-	isChecked: false,
+export const WithAutoFocus: any = Template.bind({});
+WithAutoFocus.args = {
+	...Default.args,
+	isAutoFocused: true,
 };
-UncheckedNoLabel.parameters = {
+WithAutoFocus.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-checkbox checked="false"></vscode-checkbox>`,
+			code: `<vscode-checkbox autofocus>Label</vscode-checkbox>`,
+		},
+	},
+};
+
+export const WithDisabled: any = Template.bind({});
+WithDisabled.args = {
+	...Default.args,
+	isDisabled: true,
+};
+WithDisabled.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-checkbox disabled>Label</vscode-checkbox>`,
+		},
+	},
+};
+
+export const WithReadOnly: any = Template.bind({});
+WithReadOnly.args = {
+	...Default.args,
+	isReadOnly: true,
+};
+WithReadOnly.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-checkbox readonly>Label</vscode-checkbox>`,
+		},
+	},
+};
+
+export const WithRequired: any = Template.bind({});
+WithRequired.args = {
+	...Default.args,
+	isRequired: true,
+};
+WithRequired.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-checkbox required>Label</vscode-checkbox>`,
+		},
+	},
+};
+
+export const WithValue: any = Template.bind({});
+WithValue.args = {
+	...Default.args,
+	hasValue: true,
+};
+WithValue.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-checkbox value="foo">Label</vscode-checkbox>`,
 		},
 	},
 };
