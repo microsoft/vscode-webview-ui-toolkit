@@ -53,14 +53,14 @@ WithFill.parameters = {
 	},
 };
 
-export const Circular: any = Template.bind({});
-Circular.args = {
+export const WithCircular: any = Template.bind({});
+WithCircular.args = {
 	label: '1',
 	fill: '#007aac',
 	textColor: '#ffffff',
 	isCircular: true,
 };
-Circular.parameters = {
+WithCircular.parameters = {
 	docs: {
 		source: {
 			code: `vscode-badge {\n\t--badge-fill-foo: #007aac;\n\t--badge-color-bar: #ffffff;\n}\n<vscode-badge fill="foo" color="bar" circular="true">1</vscode-badge>`,
