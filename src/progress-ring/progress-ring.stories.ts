@@ -40,14 +40,14 @@ Default.parameters = {
 	},
 };
 
-export const SetValue: any = Template.bind({});
-SetValue.args = {
+export const WithValue: any = Template.bind({});
+WithValue.args = {
 	value: 65,
 	min: 0,
 	max: 100,
 	isPaused: false,
 };
-SetValue.parameters = {
+WithValue.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-progress-ring min="0" max="100" value="65"></vscode-progress-ring>`,
@@ -55,14 +55,14 @@ SetValue.parameters = {
 	},
 };
 
-export const Paused: any = Template.bind({});
-Paused.args = {
+export const WithPaused: any = Template.bind({});
+WithPaused.args = {
 	value: 65,
 	min: 0,
 	max: 100,
 	isPaused: true,
 };
-Paused.parameters = {
+WithPaused.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-progress-ring min="0" max="100" value="65" paused="true"></vscode-progress-ring>`,
