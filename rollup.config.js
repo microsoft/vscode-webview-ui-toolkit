@@ -54,11 +54,11 @@ export default [
 		input: 'src/index-rollup.ts',
 		output: [
 			{
-				file: 'dist/vscode-webview-toolkit.js',
+				file: 'dist/toolkit.js',
 				format: 'esm',
 			},
 			{
-				file: 'dist/vscode-webview-toolkit.min.js',
+				file: 'dist/toolkit.min.js',
 				format: 'esm',
 				plugins: [terser()],
 			},
