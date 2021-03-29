@@ -62,7 +62,7 @@ WithPaused.args = {
 WithPaused.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-progress-bar min="0" max="100" value="75" paused="true"></vscode-progress-bar>`,
+			code: `<vscode-progress-bar min="0" max="100" value="75" paused></vscode-progress-bar>`,
 		},
 	},
 };

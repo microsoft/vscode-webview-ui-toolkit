@@ -65,7 +65,7 @@ WithPaused.args = {
 WithPaused.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-progress-ring min="0" max="100" value="65" paused="true"></vscode-progress-ring>`,
+			code: `<vscode-progress-ring min="0" max="100" value="65" paused></vscode-progress-ring>`,
 		},
 	},
 };
