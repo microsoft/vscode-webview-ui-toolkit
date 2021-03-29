@@ -25,7 +25,7 @@ export function createProgressRing({
 		progressRing.setAttribute('max', max.toString());
 	}
 	if (isPaused) {
-		progressRing.setAttribute('paused', isPaused.toString());
+		progressRing.setAttribute('paused', '');
 	}
 
 	return progressRing;

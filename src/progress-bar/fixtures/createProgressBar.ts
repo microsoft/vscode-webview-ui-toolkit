@@ -25,7 +25,7 @@ export function createProgressBar({
 		progressBar.setAttribute('max', max.toString());
 	}
 	if (isPaused) {
-		progressBar.setAttribute('paused', isPaused.toString());
+		progressBar.setAttribute('paused', '');
 	}
 
 	return progressBar;
