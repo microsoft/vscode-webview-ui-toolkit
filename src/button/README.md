@@ -4,20 +4,20 @@ The `vscode-button` is a web component implementation of an [HTML Button Element
 
 ## Attributes
 
-| Attribute        | Type    | Description                                                                                     |
-| ---------------- | ------- | ----------------------------------------------------------------------------------------------- |
-| `appearance`     | string  | Determines the visual appearance _(primary, secondary, text, install, link)_ of the button.     |
-| `autofocus`      | boolean | Determines if the element should receive document focus on page load.                           |
-| `disabled`       | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.            |
-| `form`           | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
-| `formaction`     | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
-| `formenctype`    | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
-| `formmethod`     | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
-| `formnovalidate` | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
-| `formtarget`     | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
-| `name`           | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
-| `type`           | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
-| `value`          | string  | Read more on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes) |
+| Attribute        | Type    | Description                                                                                 |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------- |
+| `appearance`     | string  | Determines the visual appearance _(primary, secondary, text, install, link)_ of the button. |
+| `autofocus`      | boolean | Determines if the element should receive document focus on page load.                       |
+| `disabled`       | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.        |
+| `form`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| `formaction`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| `formenctype`    | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| `formmethod`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| `formnovalidate` | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| `formtarget`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| `name`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| `type`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| `value`          | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
 
 ## Usage
 

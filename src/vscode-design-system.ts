@@ -103,7 +103,7 @@ export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
 	typeRampMinus1FontSize: '11px',
 	typeRampMinus1LineHeight: '16px',
 	typeRampBaseFontSize: '13px',
-	typeRampBaseLineHeight: '20px',
+	typeRampBaseLineHeight: 'normal',
 	typeRampPlus1FontSize: '16px',
 	typeRampPlus1LineHeight: '24px',
 	typeRampPlus2FontSize: '20px',
