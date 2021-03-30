@@ -9,5 +9,13 @@
 	"trailingComma": "es5",
 	"bracketSpacing": false,
 	"jsxBracketSameLine": true,
-	"arrowParens": "avoid"
+	"arrowParens": "avoid",
+	"overrides": [
+		{
+			"files": "tokensToAttributes.ts",
+			"options": {
+				"printWidth": 100
+			}
+		}
+	]
 }
