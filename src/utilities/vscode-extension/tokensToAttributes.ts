@@ -42,9 +42,9 @@ export const colorTokensToAttributeNames: any = {
 	'--vscode-progressBar-background': 'progress-background-color',
 	// ---- Tabs ----
 	'--vscode-panel-background': 'tab-panel-background-color',
-	'--vscode-panel-border': 'tab-panel-background-color',
+	'--vscode-panel-border': 'tab-panel-border-color',
+	'--vscode-panelTitle-inactiveForeground': 'tab-foreground-color',
 	'--vscode-panelTitle-activeForeground': 'tab-active-foreground-color',
-	'--vscode-panelTitle-inactiveForeground': 'tab-inactive-foreground-color',
 	'--vscode-panelTitle-activeBorder': 'tab-active-border-color',
 	// "--vscode-panelSectionHeader-background": "?"
 	// "--vscode-panelSectionHeader-foreground": "?"
