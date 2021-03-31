@@ -1,4 +1,4 @@
-import {ColorTheme, WebviewPanel, window} from 'vscode';
+import {WebviewPanel, window} from 'vscode';
 
 /**
  * Sets up an event listener to listen for VSCode theme changes and notifies
@@ -11,7 +11,7 @@ import {ColorTheme, WebviewPanel, window} from 'vscode';
  * @param panel The current VSCode webview panel
  */
 export function setThemeEventListener(panel: WebviewPanel) {
-	window.onDidChangeActiveColorTheme((e: ColorTheme) => {
+	window.onDidChangeActiveColorTheme(e => {
 		if (panel) {
 			panel.webview.postMessage({didThemeChange: true});
 		}
