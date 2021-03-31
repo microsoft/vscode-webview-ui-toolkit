@@ -14,7 +14,7 @@ export const TabStyles = css`
 		line-height: var(--type-ramp-base-line-height);
 		height: calc(${heightNumber} * 1px);
 		padding: calc(var(--design-unit) * 1px) 0;
-		color: #a0a0a0;
+		color: var(--tab-foreground-color);
 		fill: currentcolor;
 		border-radius: calc(var(--corner-radius) * 1px);
 		border: solid calc(var(--border-width) * 1px) transparent;
@@ -24,11 +24,11 @@ export const TabStyles = css`
 		cursor: pointer;
 	}
 	:host(:hover) {
-		color: #ffffff;
+		color: var(--tab-active-foreground-color);
 		fill: currentcolor;
 	}
 	:host(:active) {
-		color: #ffffff;
+		color: var(--tab-active-foreground-color);
 		fill: currentcolor;
 	}
 	:host([disabled]) {
@@ -36,27 +36,28 @@ export const TabStyles = css`
 		opacity: var(--disabled-opacity);
 	}
 	:host([disabled]:hover) {
-		color: #ffffff;
+		color: var(--tab-active-foreground-color);
 		background: transparent;
 	}
 	:host([aria-selected='true']) {
 		background: transparent;
-		color: #ffffff;
+		color: var(--tab-active-foreground-color);
 		fill: currentcolor;
 	}
 	:host([aria-selected='true']:hover) {
 		background: transparent;
-		color: #ffffff;
+		color: var(--tab-active-foreground-color);
 		fill: currentcolor;
 	}
 	:host([aria-selected='true']:active) {
 		background: transparent;
-		color: #ffffff;
+		color: var(--tab-active-foreground-color);
 		fill: currentcolor;
 	}
 	:host(:${focusVisible}) {
 		outline: none;
-		border: solid calc(var(--border-width) * 1px) transparent;
+		border: solid calc(var(--border-width) * 1px)
+			var(--tab-active-border-color);
 		box-shadow: 0 0 0
 			calc((var(--focus-border-width) - var(--border-width)) * 1px)
 			transparent;
@@ -72,10 +73,10 @@ export const TabStyles = css`
 		z-index: 2;
 	}
 	:host(.vertical:hover) {
-		color: #ffffff;
+		color: var(--tab-active-foreground-color);
 	}
 	:host(.vertical:active) {
-		color: #ffffff;
+		color: var(--tab-active-foreground-color);
 	}
 	:host(.vertical:hover[aria-selected='true']) {
 	}

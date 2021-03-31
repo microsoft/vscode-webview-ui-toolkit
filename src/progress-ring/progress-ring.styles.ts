@@ -20,7 +20,7 @@ export const ProgressRingStyles = css`
 		stroke-width: 2px;
 	}
 	.determinate {
-		stroke: #0e639c;
+		stroke: var(--progress-background-color);
 		fill: none;
 		stroke-width: 2px;
 		stroke-linecap: square;
@@ -29,7 +29,7 @@ export const ProgressRingStyles = css`
 		transition: all 0.2s ease-in-out;
 	}
 	.indeterminate-indicator-1 {
-		stroke: #0e639c;
+		stroke: var(--progress-background-color);
 		fill: none;
 		stroke-width: 2px;
 		stroke-linecap: square;

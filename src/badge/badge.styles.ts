@@ -12,10 +12,8 @@ export const BadgeStyles = css`
 	.control {
 		border-radius: 2px;
 		padding: calc(var(--design-unit) * 0.5px) calc(var(--design-unit) * 1px);
-		color: #cccccc;
-		font-weight: 600;
-	}
-	.control[style] {
+		color: var(--badge-foreground-color);
+		background-color: var(--badge-background-color);
 		font-weight: 400;
 	}
 	:host([circular]) .control {

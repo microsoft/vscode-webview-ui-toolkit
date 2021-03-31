@@ -17,10 +17,10 @@ export const TextFieldStyles = css`
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		color: #cccccc;
-		background: #3c3c3c;
+		color: var(--input-foreground-color);
+		background: var(--input-background-color);
 		border-radius: calc(var(--corner-radius) * 1px);
-		border: calc(var(--border-width) * 1px) solid #3c3c3c;
+		border: calc(var(--border-width) * 1px) solid var(--input-border-color);
 		height: calc(${heightNumber} * 1px);
 	}
 	.control {
@@ -46,7 +46,7 @@ export const TextFieldStyles = css`
 	}
 	.label {
 		display: block;
-		color: #cccccc;
+		color: var(--input-placeholder-foreground-color);
 		cursor: pointer;
 		font-size: var(--type-ramp-base-font-size);
 		line-height: var(--type-ramp-base-line-height);
@@ -72,11 +72,11 @@ export const TextFieldStyles = css`
 		margin-inline-end: 11px;
 	}
 	:host(:hover:not([disabled])) .root {
-		background: #3c3c3c;
-		border-color: #3c3c3c;
+		background: var(--input-background-color);
+		border-color: var(--input-border-color);
 	}
 	:host(:active:not([disabled])) .root {
-		background: #3c3c3c;
+		background: var(--input-background-color);
 		border-color: var(--focus-border-color);
 	}
 	:host(:focus-within:not([disabled])) .root {
@@ -93,6 +93,6 @@ export const TextFieldStyles = css`
 		opacity: var(--disabled-opacity);
 	}
 	:host([disabled]) .control {
-		border-color: #3c3c3c;
+		border-color: var(--input-border-color);
 	}
 `;

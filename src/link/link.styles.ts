@@ -136,25 +136,25 @@ const SecondaryButtonStyles = css`
  */
 const InstallButtonStyles = css`
 	:host([appearance='install']) {
-		background: var(--button-primary-background-color);
-		color: var(--button-primary-foreground-color);
+		background: var(--button-install-background-color);
+		color: var(--button-install-foreground-color);
 	}
 	:host([appearance='install']:hover) {
-		background: var(--button-primary-hover-background-color);
+		background: var(--button-install-hover-background-color);
 	}
 	:host([appearance='install']) .control {
 		padding: 2px 6px;
 	}
 	:host([appearance='install']:active) .control:active {
-		background: var(--button-primary-background-color);
+		background: var(--button-install-background-color);
 	}
 	:host([appearance='install']) .control:${focusVisible} {
 		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--button-primary-hover-background-color);
+			var(--button-install-hover-background-color);
 		outline-offset: calc(var(--focus-border-width) * 1px);
 	}
 	:host([appearance='install'][disabled]) {
-		background: var(--button-primary-background-color);
+		background: var(--button-install-background-color);
 	}
 `;
 
