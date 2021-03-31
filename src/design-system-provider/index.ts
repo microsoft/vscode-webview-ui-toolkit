@@ -774,6 +774,23 @@ export class VSCodeDesignSystemProvider
 	})
 	public selectCornerRadius: number;
 
+	// ------------------------ Option Design Tokens ------------------------ //
+
+	/**
+	 * The background focus color of a VSCode option component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `option-background-focus-color`
+	 *
+	 * CSS Custom Property: `--option-background-focus-color`
+	 */
+	@designSystemProperty({
+		attribute: 'option-background-focus-color',
+		cssCustomProperty: 'option-background-focus-color',
+		default: VSCodeDesignSystemDefaults.optionBackgroundFocusColor,
+	})
+	public optionBackgroundFocusColor: string;
+
 	// ------------------------ Badge Design Tokens ------------------------ //
 
 	/**

@@ -80,6 +80,11 @@ export interface VSCodeDesignSystem {
 	selectCornerRadius: number;
 
 	/**
+	 * Option design tokens.
+	 */
+	optionBackgroundFocusColor: string;
+
+	/**
 	 * Badge design tokens.
 	 */
 	badgeBackgroundColor: string;
@@ -188,6 +193,11 @@ export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
 	selectForegroundColor: '#f0f0f0',
 	selectBorderColor: '#3c3c3c',
 	selectCornerRadius: 5,
+
+	/**
+	 * Option design token defaults.
+	 */
+	optionBackgroundFocusColor: '#062f4a',
 
 	/**
 	 * Badge design token defaults.
