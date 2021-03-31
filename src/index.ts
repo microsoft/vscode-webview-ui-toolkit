@@ -25,4 +25,3 @@ export {
 	VSCodeDesignSystem,
 	VSCodeDesignSystemDefaults,
 } from './vscode-design-system';
-export * from './utilities/vscode-extension';
