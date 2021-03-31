@@ -40,15 +40,14 @@ Default.parameters = {
 
 export const WithFill: any = Template.bind({});
 WithFill.args = {
-	label: '1 UNSAVED',
-	fill: '#4d4d4d',
+	...Default.args,
+	fill: '#007aac',
 	textColor: '#ffffff',
-	isCircular: false,
 };
 WithFill.parameters = {
 	docs: {
 		source: {
-			code: `vscode-badge {\n\t--badge-fill-foo: #4d4d4d;\n\t--badge-color-bar: #ffffff;\n}\n<vscode-badge fill="foo" color="bar">1 UNSAVED</vscode-badge>`,
+			code: `vscode-badge {\n\t--badge-fill-foo: #007aac;\n\t--badge-color-bar: #ffffff;\n}\n<vscode-badge fill="foo" color="bar">Badge Text</vscode-badge>`,
 		},
 	},
 };
@@ -63,7 +62,7 @@ WithCircular.args = {
 WithCircular.parameters = {
 	docs: {
 		source: {
-			code: `vscode-badge {\n\t--badge-fill-foo: #007aac;\n\t--badge-color-bar: #ffffff;\n}\n<vscode-badge fill="foo" color="bar" circular="true">1</vscode-badge>`,
+			code: `vscode-badge {\n\t--badge-fill-foo: #007aac;\n\t--badge-color-bar: #ffffff;\n}\n<vscode-badge fill="foo" color="bar" circular>1</vscode-badge>`,
 		},
 	},
 };
