@@ -151,6 +151,9 @@ export class VSCodeDataGridRow extends DataGridRow {
 
 // @public
 export interface VSCodeDesignSystem {
+    badgeBackgroundColor: string;
+    // (undocumented)
+    badgeForegroundColor: string;
     baseHeightMultiplier: number;
     // (undocumented)
     baseHorizontalSpacingMultiplier: number;
@@ -161,6 +164,12 @@ export interface VSCodeDesignSystem {
     breadcrumbItemForegroundColor: string;
     // (undocumented)
     breadcrumbItemForegroundHoverColor: string;
+    // (undocumented)
+    buttonInstallBackgroundColor: string;
+    // (undocumented)
+    buttonInstallForegroundColor: string;
+    // (undocumented)
+    buttonInstallHoverBackgroundColor: string;
     buttonPrimaryBackgroundColor: string;
     // (undocumented)
     buttonPrimaryForegroundColor: string;
@@ -191,6 +200,14 @@ export interface VSCodeDesignSystem {
     focusBorderColor: string;
     // (undocumented)
     focusBorderWidth: number;
+    inputBackgroundColor: string;
+    // (undocumented)
+    inputBorderColor: string;
+    // (undocumented)
+    inputForegroundColor: string;
+    // (undocumented)
+    inputPlaceholderForegroundColor: string;
+    progressBackgroundColor: string;
     selectBackgroundColor: string;
     // (undocumented)
     selectBorderColor: string;
@@ -198,6 +215,15 @@ export interface VSCodeDesignSystem {
     selectCornerRadius: number;
     // (undocumented)
     selectForegroundColor: string;
+    // (undocumented)
+    tabActiveBorderColor: string;
+    // (undocumented)
+    tabActiveForegroundColor: string;
+    // (undocumented)
+    tabForegroundColor: string;
+    tabPanelBackgroundColor: string;
+    // (undocumented)
+    tabPanelBorderColor: string;
     textLinkForegroundColor: string;
     // (undocumented)
     typeRampBaseFontSize: string;
@@ -241,12 +267,17 @@ export const VSCodeDesignSystemDefaults: VSCodeDesignSystem;
 
 // @public
 export class VSCodeDesignSystemProvider extends DesignSystemProvider implements VSCodeDesignSystem {
+    badgeBackgroundColor: string;
+    badgeForegroundColor: string;
     baseHeightMultiplier: number;
     baseHorizontalSpacingMultiplier: number;
     borderWidth: number;
     breadcrumbItemBackgroundColor: string;
     breadcrumbItemForegroundColor: string;
     breadcrumbItemForegroundHoverColor: string;
+    buttonInstallBackgroundColor: string;
+    buttonInstallForegroundColor: string;
+    buttonInstallHoverBackgroundColor: string;
     buttonPrimaryBackgroundColor: string;
     buttonPrimaryForegroundColor: string;
     buttonPrimaryHoverBackgroundColor: string;
@@ -263,10 +294,20 @@ export class VSCodeDesignSystemProvider extends DesignSystemProvider implements 
     disabledOpacity: number;
     focusBorderColor: string;
     focusBorderWidth: number;
+    inputBackgroundColor: string;
+    inputBorderColor: string;
+    inputForegroundColor: string;
+    inputPlaceholderForegroundColor: string;
+    progressBackgroundColor: string;
     selectBackgroundColor: string;
     selectBorderColor: string;
     selectCornerRadius: number;
     selectForegroundColor: string;
+    tabActiveBorderColor: string;
+    tabActiveForegroundColor: string;
+    tabForegroundColor: string;
+    tabPanelBackgroundColor: string;
+    tabPanelBorderColor: string;
     textLinkForegroundColor: string;
     typeRampBaseFontSize: string;
     typeRampBaseLineHeight: string;
