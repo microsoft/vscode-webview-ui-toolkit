@@ -1,9 +1,8 @@
 import {ColorTheme, WebviewPanel, window} from 'vscode';
 
 /**
- * Sets up an event listener to listen for VSCode theme changes. When a
- * theme change occurs a message is sent to the current webview panel
- * indicating that change.
+ * Sets up an event listener to listen for VSCode theme changes and notifies
+ * the given webview panel when a change has occurred.
  *
  * Note: This utility function should be used in tandem with the
  * `applyCurrentTheme` utility function to correctly set up VSCode theme
