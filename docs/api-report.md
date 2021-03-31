@@ -28,10 +28,6 @@ import { TabPanel } from '@microsoft/fast-foundation';
 import { Tabs } from '@microsoft/fast-foundation';
 import { TextArea } from '@microsoft/fast-foundation';
 import { TextField } from '@microsoft/fast-foundation';
-import { WebviewPanel } from 'vscode';
-
-// @public
-export function applyCurrentTheme(designProvider: HTMLElement): void;
 
 // @public
 export const BadgeStyles: ElementStyles;
@@ -92,9 +88,6 @@ export const RadioStyles: ElementStyles;
 
 // @public
 export const SelectStyles: ElementStyles;
-
-// @public
-export function setThemeEventListener(panel: WebviewPanel): void;
 
 // @public
 export const TabPanelStyles: ElementStyles;
