@@ -30,6 +30,8 @@ export const colorTokensToAttributeNames: any = {
 	'--vscode-dropdown-background': 'select-background-color',
 	'--vscode-dropdown-foreground': 'select-foreground-color',
 	'--vscode-dropdown-border': 'select-border-color',
+	// ---- Dropdown Options ----
+	'--vscode-list-focusBackground': 'option-background-focus-color',
 	// ---- Badges ----
 	'--vscode-badge-background': 'badge-background-color',
 	'--vscode-badge-foreground': 'badge-foreground-color',
