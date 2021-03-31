@@ -200,6 +200,7 @@ export interface VSCodeDesignSystem {
     inputForegroundColor: string;
     // (undocumented)
     inputPlaceholderForegroundColor: string;
+    optionBackgroundFocusColor: string;
     progressBackgroundColor: string;
     selectBackgroundColor: string;
     // (undocumented)
@@ -291,6 +292,7 @@ export class VSCodeDesignSystemProvider extends DesignSystemProvider implements 
     inputBorderColor: string;
     inputForegroundColor: string;
     inputPlaceholderForegroundColor: string;
+    optionBackgroundFocusColor: string;
     progressBackgroundColor: string;
     selectBackgroundColor: string;
     selectBorderColor: string;
