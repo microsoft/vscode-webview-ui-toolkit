@@ -1,19 +1,26 @@
 import {VSCodeDataGrid} from '../index';
-import {focusObserver} from '../../utilities/storybook/index';
 
 export type DataGridArgs = {
 	gridData: any;
-	isFocused: boolean;
+	generateHeader: string;
+	gridTemplateComlumns: string;
 };
 
-export function createDataGrid({gridData, isFocused}: DataGridArgs) {
+export function createDataGrid({
+	gridData,
+	generateHeader,
+	gridTemplateComlumns,
+}: DataGridArgs) {
 	const dataGrid = new VSCodeDataGrid();
 
 	if (gridData) {
 		dataGrid.rowsData = gridData;
 	}
-	if (isFocused) {
-		focusObserver(dataGrid);
+	if (generateHeader) {
+		dataGrid.setAttribute('generate-header', generateHeader.toLowerCase());
+	}
+	if (gridTemplateComlumns) {
+		dataGrid.setAttribute('grid-template-columns', gridTemplateComlumns);
 	}
 
 	return dataGrid;
