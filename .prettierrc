@@ -16,6 +16,12 @@
 			"options": {
 				"printWidth": 100
 			}
+		},
+		{
+			"files": "src/data-grid/README.md",
+			"options": {
+				"printWidth": 110
+			}
 		}
 	]
 }
