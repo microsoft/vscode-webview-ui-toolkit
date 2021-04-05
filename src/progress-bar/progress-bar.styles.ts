@@ -18,7 +18,7 @@ export const ProgressBarStyles = css`
 		position: relative;
 	}
 	.determinate {
-		background-color: #0e639c;
+		background-color: var(--progress-background-color);
 		border-radius: calc(var(--corner-radius) * 1px);
 		height: 100%;
 		transition: all 0.2s ease-in-out;
@@ -36,7 +36,7 @@ export const ProgressBarStyles = css`
 		position: absolute;
 		opacity: 0;
 		height: 100%;
-		background-color: #0e639c;
+		background-color: var(--progress-background-color);
 		border-radius: calc(var(--corner-radius) * 1px);
 		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 		width: 40%;
@@ -46,7 +46,7 @@ export const ProgressBarStyles = css`
 		position: absolute;
 		opacity: 0;
 		height: 100%;
-		background-color: #0e639c;
+		background-color: var(--progress-background-color);
 		border-radius: calc(var(--corner-radius) * 1px);
 		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 		width: 60%;

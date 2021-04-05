@@ -27,7 +27,7 @@ export function createBadge({label, fill, textColor, isCircular}: BadgeArgs) {
 		badge.setAttribute('color', 'bar');
 	}
 	if (isCircular) {
-		badge.setAttribute('circular', isCircular.toString());
+		badge.setAttribute('circular', '');
 	}
 
 	return badge;

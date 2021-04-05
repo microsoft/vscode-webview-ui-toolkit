@@ -28,23 +28,23 @@ export const OptionStyles = css`
 	}
 	:host(:${focusVisible}) {
 		border-color: var(--focus-border-color);
-		background: #094771;
+		background: var(--option-background-focus-color);
 		color: var(--select-foreground-color);
 	}
 	:host([aria-selected='true']) {
-		background: #094771;
+		background: var(--option-background-focus-color);
 		color: var(--select-foreground-color);
 	}
 	:host(:active) {
-		background: #094771;
+		background: var(--option-background-focus-color);
 		color: var(--select-foreground-color);
 	}
 	:host(:not([aria-selected='true']):hover) {
-		background: #094771;
+		background: var(--option-background-focus-color);
 		color: var(--select-foreground-color);
 	}
 	:host(:not([aria-selected='true']):active) {
-		background: #094771;
+		background: var(--option-background-focus-color);
 		color: var(--select-foreground-color);
 	}
 	:host([disabled]) {

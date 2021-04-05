@@ -4,6 +4,8 @@ import {display} from '@microsoft/fast-foundation';
 export const TabPanelStyles = css`
 	${display('flex')} :host {
 		color: #ffffff;
+		background-color: var(--tab-panel-background-color);
+		border: solid 1px var(--tab-panel-border-color);
 		box-sizing: border-box;
 		font-size: var(--type-ramp-base-font-size);
 		line-height: var(--type-ramp-base-line-height);

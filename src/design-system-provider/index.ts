@@ -539,6 +539,51 @@ export class VSCodeDesignSystemProvider
 	})
 	public buttonSecondaryHoverBackgroundColor: string;
 
+	/**
+	 * The install background color of a VSCode button component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `button-install-background-color`
+	 *
+	 * CSS Custom Property: `--button-install-background-color`
+	 */
+	@designSystemProperty({
+		attribute: 'button-install-background-color',
+		cssCustomProperty: 'button-install-background-color',
+		default: VSCodeDesignSystemDefaults.buttonInstallBackgroundColor,
+	})
+	public buttonInstallBackgroundColor: string;
+
+	/**
+	 * The install foreground color of a VSCode button component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `button-install-foreground-color`
+	 *
+	 * CSS Custom Property: `--button-install-foreground-color`
+	 */
+	@designSystemProperty({
+		attribute: 'button-install-foreground-color',
+		cssCustomProperty: 'button-install-foreground-color',
+		default: VSCodeDesignSystemDefaults.buttonInstallForegroundColor,
+	})
+	public buttonInstallForegroundColor: string;
+
+	/**
+	 * The install hover background color of a VSCode button component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `button-install-hover-background-color`
+	 *
+	 * CSS Custom Property: `--button-install-hover-background-color`
+	 */
+	@designSystemProperty({
+		attribute: 'button-install-hover-background-color',
+		cssCustomProperty: 'button-install-hover-background-color',
+		default: VSCodeDesignSystemDefaults.buttonInstallHoverBackgroundColor,
+	})
+	public buttonInstallHoverBackgroundColor: string;
+
 	// ------------------------ Text Link Design Tokens ------------------------ //
 
 	/**
@@ -728,4 +773,209 @@ export class VSCodeDesignSystemProvider
 		default: VSCodeDesignSystemDefaults.selectCornerRadius,
 	})
 	public selectCornerRadius: number;
+
+	// ------------------------ Option Design Tokens ------------------------ //
+
+	/**
+	 * The background focus color of a VSCode option component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `option-background-focus-color`
+	 *
+	 * CSS Custom Property: `--option-background-focus-color`
+	 */
+	@designSystemProperty({
+		attribute: 'option-background-focus-color',
+		cssCustomProperty: 'option-background-focus-color',
+		default: VSCodeDesignSystemDefaults.optionBackgroundFocusColor,
+	})
+	public optionBackgroundFocusColor: string;
+
+	// ------------------------ Badge Design Tokens ------------------------ //
+
+	/**
+	 * The background color of a VSCode badge component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `badge-background-color`
+	 *
+	 * CSS Custom Property: `--badge-background-radius-color`
+	 */
+	@designSystemProperty({
+		attribute: 'badge-background-color',
+		cssCustomProperty: 'badge-background-color',
+		default: VSCodeDesignSystemDefaults.badgeBackgroundColor,
+	})
+	public badgeBackgroundColor: string;
+
+	/**
+	 * The foreground color of a VSCode badge component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `badge-foreground-color`
+	 *
+	 * CSS Custom Property: `--badge-foreground-radius-color`
+	 */
+	@designSystemProperty({
+		attribute: 'badge-foreground-color',
+		cssCustomProperty: 'badge-foreground-color',
+		default: VSCodeDesignSystemDefaults.badgeForegroundColor,
+	})
+	public badgeForegroundColor: string;
+
+	// ------------------------ Text Field & Area Design Tokens ------------------------ //
+
+	/**
+	 * The background color of a VSCode text field and area components.
+	 *
+	 * @remarks
+	 * HTML Attribute: `input-background-color`
+	 *
+	 * CSS Custom Property: `--input-background-color`
+	 */
+	@designSystemProperty({
+		attribute: 'input-background-color',
+		cssCustomProperty: 'input-background-color',
+		default: VSCodeDesignSystemDefaults.inputBackgroundColor,
+	})
+	public inputBackgroundColor: string;
+
+	/**
+	 * The foreground color of a VSCode text field and area components.
+	 *
+	 * @remarks
+	 * HTML Attribute: `input-foreground-color`
+	 *
+	 * CSS Custom Property: `--input-foreground-color`
+	 */
+	@designSystemProperty({
+		attribute: 'input-foreground-color',
+		cssCustomProperty: 'input-foreground-color',
+		default: VSCodeDesignSystemDefaults.inputForegroundColor,
+	})
+	public inputForegroundColor: string;
+
+	/**
+	 * The placeholder foreground color of a VSCode text field and area components.
+	 *
+	 * @remarks
+	 * HTML Attribute: `input-placeholder-foreground-color`
+	 *
+	 * CSS Custom Property: `--input-placeholder-foreground-color`
+	 */
+	@designSystemProperty({
+		attribute: 'input-placeholder-foreground-color',
+		cssCustomProperty: 'input-placeholder-foreground-color',
+		default: VSCodeDesignSystemDefaults.inputPlaceholderForegroundColor,
+	})
+	public inputPlaceholderForegroundColor: string;
+
+	/**
+	 * The border color of a VSCode text field and area components.
+	 *
+	 * @remarks
+	 * HTML Attribute: `input-border-color`
+	 *
+	 * CSS Custom Property: `--input-border-color`
+	 */
+	@designSystemProperty({
+		attribute: 'input-border-color',
+		cssCustomProperty: 'input-border-color',
+		default: VSCodeDesignSystemDefaults.inputBorderColor,
+	})
+	public inputBorderColor: string;
+
+	// ------------------------ Progress Bar & Ring Design Tokens ------------------------ //
+
+	/**
+	 * The background color of a VSCode progress bar and ring components.
+	 *
+	 * @remarks
+	 * HTML Attribute: `progress-background-color`
+	 *
+	 * CSS Custom Property: `--progress-background-color`
+	 */
+	@designSystemProperty({
+		attribute: 'progress-background-color',
+		cssCustomProperty: 'progress-background-color',
+		default: VSCodeDesignSystemDefaults.progressBackgroundColor,
+	})
+	public progressBackgroundColor: string;
+
+	// ------------------------ Tabs Design Tokens ------------------------ //
+
+	/**
+	 * The background color of a VSCode tab panel component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `tab-panel-background-color`
+	 *
+	 * CSS Custom Property: `--tab-panel-background-color`
+	 */
+	@designSystemProperty({
+		attribute: 'tab-panel-background-color',
+		cssCustomProperty: 'tab-panel-background-color',
+		default: VSCodeDesignSystemDefaults.tabPanelBackgroundColor,
+	})
+	public tabPanelBackgroundColor: string;
+
+	/**
+	 * The border color of a VSCode tab panel component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `tab-panel-border-color`
+	 *
+	 * CSS Custom Property: `--tab-panel-border-color`
+	 */
+	@designSystemProperty({
+		attribute: 'tab-panel-border-color',
+		cssCustomProperty: 'tab-panel-border-color',
+		default: VSCodeDesignSystemDefaults.tabPanelBorderColor,
+	})
+	public tabPanelBorderColor: string;
+
+	/**
+	 * The foreground color of a VSCode tab component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `tab-foreground-color`
+	 *
+	 * CSS Custom Property: `--tab-foreground-color`
+	 */
+	@designSystemProperty({
+		attribute: 'tab-foreground-color',
+		cssCustomProperty: 'tab-foreground-color',
+		default: VSCodeDesignSystemDefaults.tabForegroundColor,
+	})
+	public tabForegroundColor: string;
+
+	/**
+	 * The active foreground color of a VSCode tab component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `tab-active-foreground-color`
+	 *
+	 * CSS Custom Property: `--tab-active-foreground-color`
+	 */
+	@designSystemProperty({
+		attribute: 'tab-active-foreground-color',
+		cssCustomProperty: 'tab-active-foreground-color',
+		default: VSCodeDesignSystemDefaults.tabActiveForegroundColor,
+	})
+	public tabActiveForegroundColor: string;
+
+	/**
+	 * The active border color of a VSCode tab component.
+	 *
+	 * @remarks
+	 * HTML Attribute: `tab-active-border-color`
+	 *
+	 * CSS Custom Property: `--tab-active-border-color`
+	 */
+	@designSystemProperty({
+		attribute: 'tab-active-border-color',
+		cssCustomProperty: 'tab-active-border-color',
+		default: VSCodeDesignSystemDefaults.tabActiveBorderColor,
+	})
+	public tabActiveBorderColor: string;
 }

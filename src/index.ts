@@ -20,7 +20,7 @@ export * from './tabs/index';
 export * from './text-area/index';
 export * from './text-field/index';
 
-// Export styles and utils
+// Export styles and utility functions
 export {
 	VSCodeDesignSystem,
 	VSCodeDesignSystemDefaults,

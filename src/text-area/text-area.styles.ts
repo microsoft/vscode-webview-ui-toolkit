@@ -15,10 +15,10 @@ export const TextAreaStyles = css`
 	.control {
 		box-sizing: border-box;
 		position: relative;
-		color: #cccccc;
-		background: #3c3c3c;
+		color: var(--input-foreground-color);
+		background: var(--input-background-color);
 		border-radius: calc(var(--corner-radius) * 1px);
-		border: calc(var(--border-width) * 1px) solid #3c3c3c;
+		border: calc(var(--border-width) * 1px) solid var(--input-border-color);;
 		height: calc(${heightNumber} * 2px);
 		font: inherit;
 		font-size: var(--type-ramp-base-font-size);
@@ -28,11 +28,11 @@ export const TextAreaStyles = css`
 		resize: none;
 	}
 	.control:hover:enabled {
-		background: #3c3c3c;
-		border-color: #3c3c3c;
+		background: var(--input-background-color);
+		border-color: var(--input-border-color);
 	}
 	.control:active:enabled {
-		background: #3c3c3c;
+		background: var(--input-background-color);
 		border-color: var(--focus-border-color);
 	}
 	.control:hover,
@@ -56,7 +56,7 @@ export const TextAreaStyles = css`
 	}
 	.label {
 		display: block;
-		color: #cccccc;
+		color: var(--input-placeholder-foreground-color);
 		cursor: pointer;
 		font-size: var(--type-ramp-base-font-size);
 		line-height: var(--type-ramp-base-line-height);
@@ -76,6 +76,6 @@ export const TextAreaStyles = css`
 		opacity: var(--disabled-opacity);
 	}
 	:host([disabled]) .control {
-		border-color: #3c3c3c;
+		border-color: var(--input-border-color);
 	}
 `;

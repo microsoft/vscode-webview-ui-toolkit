@@ -47,6 +47,9 @@ export interface VSCodeDesignSystem {
 	buttonSecondaryBackgroundColor: string;
 	buttonSecondaryForegroundColor: string;
 	buttonSecondaryHoverBackgroundColor: string;
+	buttonInstallBackgroundColor: string;
+	buttonInstallForegroundColor: string;
+	buttonInstallHoverBackgroundColor: string;
 
 	/**
 	 * Text link colors.
@@ -75,6 +78,39 @@ export interface VSCodeDesignSystem {
 	selectForegroundColor: string;
 	selectBorderColor: string;
 	selectCornerRadius: number;
+
+	/**
+	 * Option design tokens.
+	 */
+	optionBackgroundFocusColor: string;
+
+	/**
+	 * Badge design tokens.
+	 */
+	badgeBackgroundColor: string;
+	badgeForegroundColor: string;
+
+	/**
+	 * Text Field & Area design tokens.
+	 */
+	inputBackgroundColor: string;
+	inputForegroundColor: string;
+	inputPlaceholderForegroundColor: string;
+	inputBorderColor: string;
+
+	/**
+	 * Progress Bar & Ring design tokens.
+	 */
+	progressBackgroundColor: string;
+
+	/**
+	 * Tabs design tokens.
+	 */
+	tabPanelBackgroundColor: string;
+	tabPanelBorderColor: string;
+	tabForegroundColor: string;
+	tabActiveForegroundColor: string;
+	tabActiveBorderColor: string;
 }
 
 /**
@@ -126,6 +162,9 @@ export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
 	buttonSecondaryBackgroundColor: '#3a3d41',
 	buttonSecondaryForegroundColor: '#ffffff',
 	buttonSecondaryHoverBackgroundColor: '#45494e',
+	buttonInstallBackgroundColor: '#0e639c',
+	buttonInstallForegroundColor: '#ffffff',
+	buttonInstallHoverBackgroundColor: '#1177bb',
 
 	/**
 	 * Text link defaults.
@@ -154,4 +193,37 @@ export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
 	selectForegroundColor: '#f0f0f0',
 	selectBorderColor: '#3c3c3c',
 	selectCornerRadius: 5,
+
+	/**
+	 * Option design token defaults.
+	 */
+	optionBackgroundFocusColor: '#062f4a',
+
+	/**
+	 * Badge design token defaults.
+	 */
+	badgeBackgroundColor: '#4d4d4d',
+	badgeForegroundColor: '#ffffff',
+
+	/**
+	 * Text Field & Area design token defaults.
+	 */
+	inputBackgroundColor: '#3c3c3c',
+	inputForegroundColor: '#cccccc',
+	inputPlaceholderForegroundColor: '#cccccc',
+	inputBorderColor: '#3c3c3c',
+
+	/**
+	 * Progress Bar & Ring design token defaults.
+	 */
+	progressBackgroundColor: '#0e70c0',
+
+	/**
+	 * Tabs design tokens.
+	 */
+	tabPanelBackgroundColor: '#1e1e1e',
+	tabPanelBorderColor: '#80808059',
+	tabForegroundColor: '#e7e7e799',
+	tabActiveForegroundColor: '#e7e7e7',
+	tabActiveBorderColor: '#e7e7e7',
 };

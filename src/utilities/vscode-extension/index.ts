@@ -1,1 +1,2 @@
-export * from './setVSCodeThemeOnDesignProvider';
+export * from './applyCurrentTheme';
+export * from './setThemeEventListener';
