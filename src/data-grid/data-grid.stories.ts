@@ -79,6 +79,158 @@ export const WithStickyHeader: any = Template.bind({});
 WithStickyHeader.args = {
 	...Default.args,
 	generateHeader: 'Sticky',
+	gridData: [
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+		{
+			'Header 1': 'Cell Data',
+			'Header 2': 'Cell Data',
+			'Header 3': 'Cell Data',
+			'Header 4': 'Cell Data',
+		},
+	],
 };
 WithStickyHeader.parameters = {
 	docs: {
