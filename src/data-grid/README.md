@@ -201,7 +201,7 @@ Use this attribute when defining a data grid using only HTML. This attribute is 
 
 ### Custom Column Titles
 
-By default, when defining a data grid programmatically using the `rowsData` property in JavaScript, the key of each object in the given array are used as the header text for each column.
+By default, when defining a data grid programmatically using the `rowsData` property in JavaScript, the key of each object in the given array is used as the header text for each column.
 
 This behavior can be overridden, however, by defining a new array of objects that is passed to the `columnDefinitions` property.
 
@@ -213,7 +213,7 @@ This should contain the key from the `rowsData` object (representing a specific 
 
 **`title` Property**
 
-This is where you define the custom title for each column.
+This is where you define the custom title for a given column.
 
 ```html
 <vscode-data-grid id="basic-grid"></vscode-data-grid>
@@ -250,7 +250,7 @@ The custom cell element can be defined using only HTML by simply inserting the e
 
 A more powerful and programmatic way of defining a custom cell element is to create a cell template using Microsoft's FAST Framework (the technology that this component library is built from).
 
-An simple example is shown below, but further documentation for defining a template can be found [here](https://www.fast.design/docs/fast-element/declaring-templates).
+A simple example is shown below, but further documentation for defining a template can be found [here](https://www.fast.design/docs/fast-element/declaring-templates).
 
 ```html
 <vscode-data-grid id="basic-grid"></vscode-data-grid>
@@ -341,11 +341,11 @@ Just like the custom cell element, a custom header cell can be defined using onl
 
 A more powerful and programmatic way of defining a custom header cell element is to create a header cell template using Microsoft's FAST Framework (the technology that this component library is built from).
 
-An simple example is shown below, but further documentation for defining a template can be found [here](https://www.fast.design/docs/fast-element/declaring-templates).
+A simple example is shown below, but further documentation for defining a template can be found [here](https://www.fast.design/docs/fast-element/declaring-templates).
 
 **Note**
 
-The major notable difference between this example and the custom cell example is that the array of objects that is passed to the `columnDefintions` property uses the `headerCellTemplate` and `headerCellFocusTargetCallback` keys (instead of `cellTemplate` and `cellFocusTargetCallback`).
+The major difference between this example and the custom cell example is that the array of objects that is passed to the `columnDefintions` property uses the `headerCellTemplate` and `headerCellFocusTargetCallback` keys (instead of `cellTemplate` and `cellFocusTargetCallback`).
 
 Additionally, all of these keys can be added to each object in the array to create a data grid that has _both_ custom cells and header cells.
 
