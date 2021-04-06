@@ -158,7 +158,7 @@ The `row-type` attribute is used to define what type of row should be rendered. 
 
 **Usage Note**
 
-Typically, this attribute is automatically applied when rendering a data grid using JavaScript and the `rowsData` property. Use this attribute when defining a data grid using only HTML.
+Use this attribute when defining a data grid using only HTML. This attribute is automatically applied when rendering a data grid using JavaScript and the `rowsData` property.
 
 ```html
 <vscode-data-grid-row row-type="default"></vscode-data-grid-row>
@@ -170,12 +170,12 @@ Typically, this attribute is automatically applied when rendering a data grid us
 
 The `cell-type` attribute is used to define what type of cell should be rendered. There are two values that can be passed to the attribute:
 
--   `default`: A default cell will be rendered. This is the default value if the `row-type` is not defined on the component.
+-   `default`: A default cell will be rendered. This is the default value if the `cell-type` is not defined on the component.
 -   `columnheader`: A column header cell will be rendered.
 
 **Usage Note**
 
-Typically, this attribute is automatically applied when rendering a data grid using JavaScript and the `rowsData` property. Use this attribute when defining a data grid using only HTML.
+Use this attribute when defining a data grid using only HTML. This attribute is automatically applied when rendering a data grid using JavaScript and the `rowsData` property.
 
 ```html
 <vscode-data-grid-cell cell-type="default"></vscode-data-grid-cell>
@@ -188,7 +188,7 @@ The `grid-column` attribute is used to define the column index (i.e. the order) 
 
 **Usage Note**
 
-Typically, this attribute is automatically applied when rendering a data grid using JavaScript and the `rowsData` property. Use this attribute when defining a data grid using only HTML.
+Use this attribute when defining a data grid using only HTML. This attribute is automatically applied when rendering a data grid using JavaScript and the `rowsData` property.
 
 ```html
 <vscode-data-grid-row>
