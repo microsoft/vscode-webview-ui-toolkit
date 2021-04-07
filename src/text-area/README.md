@@ -8,6 +8,7 @@ The `vscode-text-area` is a web component implementation of an [HTML Text Area E
 | ------------- | ------- | ------------------------------------------------------------------------------------------ |
 | `autofocus`   | boolean | Indicates that this component should get focus after the page finishes loading.            |
 | `cols`        | number  | Sizes the component horizontally by a number of character columns. Defaults to 20.         |
+| `disabled`    | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.       |
 | `form`        | string  | The `id` of the `form` that the component is associated with.                              |
 | `maxlength`   | number  | The maximum number of characters a user can enter.                                         |
 | `minlength`   | number  | The minimum number of characters a user can enter.                                         |
@@ -42,6 +43,14 @@ The `vscode-text-area` is a web component implementation of an [HTML Text Area E
 
 ```html
 <vscode-text-area cols="50"></vscode-text-area>
+```
+
+### Disabled Attribute
+
+[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-disabled)
+
+```html
+<vscode-text-area disabled></vscode-text-area>
 ```
 
 ### Form Attribute
