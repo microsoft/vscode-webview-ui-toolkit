@@ -167,6 +167,20 @@ WithReadonly.parameters = {
 	},
 };
 
+export const WithDisabled: any = Template.bind({});
+WithDisabled.args = {
+	...Default.args,
+	placeholder: 'This text area cannot be interacted with',
+	isDisabled: true,
+};
+WithDisabled.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-text-area disabled></vscode-text-area>`,
+		},
+	},
+};
+
 export const WithResizeNone: any = Template.bind({});
 WithResizeNone.args = {
 	...Default.args,
