@@ -58,6 +58,7 @@ export const TextFieldStyles = css`
 	}
 	.start,
 	.end {
+		display: flex;
 		margin: auto;
 		fill: currentcolor;
 	}

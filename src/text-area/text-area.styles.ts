@@ -4,7 +4,6 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/index';
 
 export const TextAreaStyles = css`
 	${display('inline-block')} :host {
@@ -18,8 +17,7 @@ export const TextAreaStyles = css`
 		color: var(--input-foreground-color);
 		background: var(--input-background-color);
 		border-radius: calc(var(--corner-radius) * 1px);
-		border: calc(var(--border-width) * 1px) solid var(--input-border-color);;
-		height: calc(${heightNumber} * 2px);
+		border: calc(var(--border-width) * 1px) solid var(--input-border-color);
 		font: inherit;
 		font-size: var(--type-ramp-base-font-size);
 		line-height: var(--type-ramp-base-line-height);
