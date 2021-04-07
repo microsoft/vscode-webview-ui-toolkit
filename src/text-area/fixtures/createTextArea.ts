@@ -5,6 +5,8 @@ export type TextAreaArgs = {
 	placeholder?: string;
 	value?: string;
 	resize?: string;
+	cols: number;
+	rows: number;
 	minLength?: number;
 	maxLength?: number;
 	isRequired?: boolean;
@@ -18,6 +20,8 @@ export function createTextArea({
 	placeholder,
 	value,
 	resize,
+	cols,
+	rows,
 	minLength,
 	maxLength,
 	isRequired,
@@ -39,6 +43,12 @@ export function createTextArea({
 	if (resize) {
 		textArea.setAttribute('resize', resize.toLowerCase());
 	}
+	if (cols) {
+		textArea.setAttribute('cols', cols.toString());
+	}
+	if (rows) {
+		textArea.setAttribute('rows', rows.toString());
+	}
 	if (minLength) {
 		textArea.setAttribute('minlength', minLength.toString());
 	}
@@ -50,7 +60,6 @@ export function createTextArea({
 	}
 	if (isReadOnly) {
 		textArea.setAttribute('readonly', '');
-		textArea.setAttribute('value', 'Read Only Text');
 	}
 	if (isDisabled) {
 		textArea.setAttribute('disabled', '');
