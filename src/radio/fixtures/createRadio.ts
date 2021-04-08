@@ -4,6 +4,7 @@ import {focusObserver} from '../../utilities/storybook/index';
 export type RadioArgs = {
 	label?: string;
 	isChecked: boolean;
+	isReadonly: boolean;
 	isDisabled: boolean;
 	isFocused: boolean;
 	onChange: any;
@@ -12,6 +13,7 @@ export type RadioArgs = {
 export function createRadio({
 	label,
 	isChecked,
+	isReadonly,
 	isDisabled,
 	isFocused,
 	onChange,
@@ -21,7 +23,12 @@ export function createRadio({
 	if (label) {
 		radio.textContent = label;
 	}
-	radio.setAttribute('checked', isChecked.toString());
+	if (isChecked) {
+		radio.setAttribute('checked', '');
+	}
+	if (isReadonly) {
+		radio.setAttribute('readonly', '');
+	}
 	if (isDisabled) {
 		radio.setAttribute('disabled', '');
 	}
