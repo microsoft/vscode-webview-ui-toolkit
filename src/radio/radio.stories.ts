@@ -79,7 +79,7 @@ WithReadOnly.args = {
 WithReadOnly.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-radio checked="false"></vscode-radio>`,
+			code: `<vscode-radio readonly>Radio Label</vscode-radio>`,
 		},
 	},
 };
@@ -92,7 +92,7 @@ WithDisabled.args = {
 WithDisabled.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-radio disabled></vscode-radio>`,
+			code: `<vscode-radio disabled>Radio Label</vscode-radio>`,
 		},
 	},
 };
@@ -105,7 +105,7 @@ WithFocus.args = {
 WithFocus.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-radio></vscode-radio>`,
+			code: `<vscode-radio>Radio Label</vscode-radio>`,
 		},
 	},
 };
