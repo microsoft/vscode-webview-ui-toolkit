@@ -5,12 +5,16 @@ export type RadioGroupArgs = {
 	label?: string;
 	orientation: string;
 	numberOfChildren: number;
+	isDisabled: boolean;
+	isReadonly: boolean;
 };
 
 export function createRadioGroup({
 	label,
 	orientation,
 	numberOfChildren,
+	isDisabled,
+	isReadonly,
 }: RadioGroupArgs) {
 	const radioGroup = createRadioGroupWithNChildren(numberOfChildren);
 
@@ -20,7 +24,15 @@ export function createRadioGroup({
 		labelElement.textContent = label;
 		radioGroup.prepend(labelElement);
 	}
-	radioGroup.setAttribute('orientation', orientation.toLowerCase());
+	if (orientation) {
+		radioGroup.setAttribute('orientation', orientation.toLowerCase());
+	}
+	if (isDisabled) {
+		radioGroup.setAttribute('disabled', '');
+	}
+	if (isReadonly) {
+		radioGroup.setAttribute('readonly', '');
+	}
 
 	return radioGroup;
 }
