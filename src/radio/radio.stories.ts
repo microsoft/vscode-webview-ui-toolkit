@@ -12,6 +12,7 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		isChecked: {control: 'boolean'},
+		isReadonly: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isFocused: {control: 'boolean'},
 		onChange: {
@@ -27,59 +28,84 @@ const Template = ({...args}: RadioArgs) => {
 	return createRadio({...args});
 };
 
-export const Checked: any = Template.bind({});
-Checked.args = {
+export const Default: any = Template.bind({});
+Default.args = {
 	label: 'Radio Label',
-	isChecked: true,
+	isChecked: false,
+	isReadonly: false,
 	isDisabled: false,
 	isFocused: false,
 	onChange: action('radio-onchange'),
 };
-Checked.parameters = {
+Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-radio checked="true">Radio Label</vscode-radio>`,
+			code: `<vscode-radio>Radio Label</vscode-radio>`,
 		},
 	},
 };
 
-export const Unchecked: any = Template.bind({});
-Unchecked.args = {
-	...Checked.args,
-	isChecked: false,
-};
-Unchecked.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-radio checked="false">Radio Label</vscode-radio>`,
-		},
-	},
-};
-
-export const CheckedNoLabel: any = Template.bind({});
-CheckedNoLabel.args = {
+export const WithChecked: any = Template.bind({});
+WithChecked.args = {
+	...Default.args,
 	isChecked: true,
-	isDisabled: false,
-	isFocused: false,
-	onChange: action('radio-onchange'),
 };
-CheckedNoLabel.parameters = {
+WithChecked.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-radio checked="true"></vscode-radio>`,
+			code: `<vscode-radio checked>Radio Label</vscode-radio>`,
 		},
 	},
 };
 
-export const UncheckedNoLabel: any = Template.bind({});
-UncheckedNoLabel.args = {
-	...CheckedNoLabel.args,
-	isChecked: false,
+export const WithNoLabel: any = Template.bind({});
+WithNoLabel.args = {
+	...Default.args,
+	label: '',
 };
-UncheckedNoLabel.parameters = {
+WithNoLabel.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-radio></vscode-radio>`,
+		},
+	},
+};
+
+export const WithReadOnly: any = Template.bind({});
+WithReadOnly.args = {
+	...Default.args,
+	isReadonly: true,
+};
+WithReadOnly.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-radio checked="false"></vscode-radio>`,
+		},
+	},
+};
+
+export const WithDisabled: any = Template.bind({});
+WithDisabled.args = {
+	...Default.args,
+	isDisabled: true,
+};
+WithDisabled.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-radio disabled></vscode-radio>`,
+		},
+	},
+};
+
+export const WithFocus: any = Template.bind({});
+WithFocus.args = {
+	...Default.args,
+	isFocused: true,
+};
+WithFocus.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-radio></vscode-radio>`,
 		},
 	},
 };
