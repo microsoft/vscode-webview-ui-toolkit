@@ -117,6 +117,19 @@ WithCustomIndicator.parameters = {
 	},
 };
 
+export const WithNoOptions: any = Template.bind({});
+WithNoOptions.args = {
+	...Default.args,
+	numberOfChildren: 0,
+};
+WithNoOptions.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-select></vscode-select>`,
+		},
+	},
+};
+
 export const WithLongList: any = Template.bind({});
 WithLongList.args = {
 	...Default.args,
