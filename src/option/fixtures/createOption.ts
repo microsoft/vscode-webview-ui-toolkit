@@ -1,13 +1,12 @@
 import {VSCodeOption} from '../index';
-import {focusObserver} from '../../utilities/storybook/index';
 
 export type OptionArgs = {
 	label?: string;
 	isDisabled: boolean;
-	isFocused: boolean;
+	isSelected: boolean;
 };
 
-export function createOption({label, isDisabled, isFocused}: OptionArgs) {
+export function createOption({label, isDisabled, isSelected}: OptionArgs) {
 	const option = new VSCodeOption();
 
 	if (label) {
@@ -16,8 +15,8 @@ export function createOption({label, isDisabled, isFocused}: OptionArgs) {
 	if (isDisabled) {
 		option.setAttribute('disabled', '');
 	}
-	if (isFocused) {
-		focusObserver(option);
+	if (isSelected) {
+		option.setAttribute('selected', '');
 	}
 
 	return option;

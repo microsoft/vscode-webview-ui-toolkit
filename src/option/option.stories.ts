@@ -11,7 +11,7 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		isDisabled: {control: 'boolean'},
-		isFocused: {control: 'boolean'},
+		isSelected: {control: 'boolean'},
 	},
 	parameters: {
 		actions: {
@@ -28,12 +28,38 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: 'Option Label',
 	isDisabled: false,
-	isFocused: false,
+	isSelected: false,
 };
 Default.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-option>Option Label</vscode-option>`,
+		},
+	},
+};
+
+export const WithDisabled: any = Template.bind({});
+WithDisabled.args = {
+	...Default.args,
+	isDisabled: true,
+};
+WithDisabled.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-option disabled>Option Label</vscode-option>`,
+		},
+	},
+};
+
+export const WithSelected: any = Template.bind({});
+WithSelected.args = {
+	...Default.args,
+	isSelected: true,
+};
+WithSelected.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-option selected>Option Label</vscode-option>`,
 		},
 	},
 };
