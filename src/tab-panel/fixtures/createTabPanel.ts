@@ -16,7 +16,7 @@ export function createTabPanel({label, hasComplexContent}: TabPanelArgs) {
 		const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 		tabPanel.innerHTML = `
         <section style="display: flex; flex-direction: column; width: 100%;">
-            <h1>Smoothie Maker ${randomEmoji}</h1>
+            <h1 style="margin-top: 0;">Smoothie Maker ${randomEmoji}</h1>
             <vscode-checkbox>Apples</vscode-checkbox>
             <vscode-checkbox>Oranges</vscode-checkbox>
             <vscode-checkbox>Grapes</vscode-checkbox>

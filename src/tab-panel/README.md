@@ -27,7 +27,7 @@ A `vscode-tab-panel` can also contain any valid HTML.
 ```html
 <vscode-tab-panel>
 	<section style="display: flex; flex-direction: column; width: 100%;">
-		<h1>Smoothie Maker 🍓</h1>
+		<h1 style="margin-top: 0;">Smoothie Maker 🍓</h1>
 		<vscode-checkbox>Apples</vscode-checkbox>
 		<vscode-checkbox>Oranges</vscode-checkbox>
 		<vscode-checkbox>Grapes</vscode-checkbox>
