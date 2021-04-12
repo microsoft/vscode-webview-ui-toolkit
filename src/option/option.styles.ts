@@ -4,7 +4,6 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/index';
 
 export const OptionStyles = css`
 	${display('inline-flex')} :host {
