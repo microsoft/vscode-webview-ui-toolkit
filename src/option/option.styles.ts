@@ -4,7 +4,6 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/index';
 
 export const OptionStyles = css`
 	${display('inline-flex')} :host {
@@ -17,7 +16,6 @@ export const OptionStyles = css`
 		fill: currentcolor;
 		font-size: var(--type-ramp-base-font-size);
 		line-height: var(--type-ramp-base-line-height);
-		height: calc(${heightNumber} * 1px);
 		line-height: var(--type-ramp-base-line-height);
 		margin: 0 calc(var(--design-unit) * 1px);
 		outline: none;
@@ -70,9 +68,9 @@ export const OptionStyles = css`
 		width: calc(var(--design-unit) * 4px);
 	}
 	::slotted([slot='end']) {
-		margin-inline-start: 1ch;
+		margin-inline-start: 6px;
 	}
 	::slotted([slot='start']) {
-		margin-inline-end: 1ch;
+		margin-inline-end: 6px;
 	}
 `;
