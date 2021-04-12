@@ -1,37 +1,46 @@
 import {VSCodeSelect} from '../index';
 import {VSCodeOption} from '../../option/index';
-import {focusObserver} from '../../utilities/storybook/index';
+import {
+	createCodiconIcon,
+	focusObserver,
+} from '../../utilities/storybook/index';
 
 export type SelectArgs = {
-	label?: string;
 	isOpen: boolean;
+	position: string;
 	isDisabled: boolean;
 	isFocused: boolean;
+	customIndicator: boolean;
 	numberOfChildren: number;
 	onChange: any;
 };
 
 export function createSelect({
-	label,
 	isOpen,
+	position,
 	isDisabled,
 	isFocused,
+	customIndicator,
 	numberOfChildren,
 	onChange,
 }: SelectArgs) {
 	const select = createSelectWithNChildren(numberOfChildren);
 
-	if (label) {
-		select.textContent = label;
-	}
 	if (isOpen) {
 		select.setAttribute('open', '');
+	}
+	if (position) {
+		select.setAttribute('position', position.toLowerCase());
 	}
 	if (isDisabled) {
 		select.setAttribute('disabled', '');
 	}
 	if (isFocused) {
 		focusObserver(select);
+	}
+	if (customIndicator) {
+		const indicator = createCodiconIcon('settings', 'indicator');
+		select.prepend(indicator);
 	}
 	select.addEventListener('change', onChange);
 
