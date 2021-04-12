@@ -17,7 +17,6 @@ export const OptionStyles = css`
 		fill: currentcolor;
 		font-size: var(--type-ramp-base-font-size);
 		line-height: var(--type-ramp-base-line-height);
-		height: calc(${heightNumber} * 1px);
 		line-height: var(--type-ramp-base-line-height);
 		margin: 0 calc(var(--design-unit) * 1px);
 		outline: none;
