@@ -29,7 +29,7 @@ export function createTabs({
 			convertActiveTabNameToTabId(activeTab.toLowerCase(), tabTitles)
 		);
 	}
-	if (activeIndicator) {
+	if (!activeIndicator) {
 		tabs.setAttribute('activeindicator', activeIndicator.toString());
 	}
 
