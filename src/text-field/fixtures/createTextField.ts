@@ -1,6 +1,5 @@
 import {VSCodeTextField} from '../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
-import '../../../node_modules/vscode-codicons/dist/codicon.css';
 
 export type TextFieldArgs = {
 	label?: string;
@@ -69,11 +68,14 @@ export function createTextField({
 		textField.setAttribute('autofocus', '');
 	}
 	if (startIcon) {
-		const start = createCodiconIcon('search', 'start');
+		const start = createCodiconIcon({
+			iconName: 'search',
+			slotName: 'start',
+		});
 		textField.appendChild(start);
 	}
 	if (endIcon) {
-		const end = createCodiconIcon('text-size', 'end');
+		const end = createCodiconIcon({iconName: 'text-size', slotName: 'end'});
 		textField.appendChild(end);
 	}
 

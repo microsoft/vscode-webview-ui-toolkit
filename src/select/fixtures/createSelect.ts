@@ -39,7 +39,10 @@ export function createSelect({
 		focusObserver(select);
 	}
 	if (customIndicator) {
-		const indicator = createCodiconIcon('settings', 'indicator');
+		const indicator = createCodiconIcon({
+			iconName: 'settings',
+			slotName: 'indicator',
+		});
 		select.prepend(indicator);
 	}
 	select.addEventListener('change', onChange);

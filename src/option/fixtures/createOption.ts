@@ -28,11 +28,11 @@ export function createOption({
 		option.setAttribute('selected', '');
 	}
 	if (startIcon) {
-		const start = createCodiconIcon('check', 'start');
+		const start = createCodiconIcon({iconName: 'check', slotName: 'start'});
 		option.appendChild(start);
 	}
 	if (endIcon) {
-		const end = createCodiconIcon('bug', 'end');
+		const end = createCodiconIcon({iconName: 'bug', slotName: 'end'});
 		option.appendChild(end);
 	}
 
