@@ -1,18 +1,25 @@
-import {VSCodeTab, VSCodeTabPanel, VSCodeTabs} from '../index';
+import {createTab, TabArgs} from '../../tab/fixtures/createTab';
+import {VSCodeTabPanel, VSCodeTabs} from '../index';
 
 export type TabsArgs = {
 	activeTab?: string;
 	orientation?: string;
+	tabMetaData: any;
 };
 
-export function createTabs({activeTab, orientation}: TabsArgs) {
-	const tabNames = ['Problems', 'Output', 'Debug Console', 'Terminal'];
-	const tabs = createTabsWithChildren(tabNames);
+export function createTabs({activeTab, orientation, tabMetaData}: TabsArgs) {
+	let tabs: VSCodeTabs;
+	if (tabMetaData) {
+		tabs = createTabsWithChildren(tabMetaData);
+	}
 
 	if (activeTab) {
+		const tabTitles = tabMetaData.map(tabObject => {
+			return tabObject.title;
+		});
 		tabs.setAttribute(
 			'activeid',
-			convertActiveTabNameToTabId(activeTab, tabNames)
+			convertActiveTabNameToTabId(activeTab, tabTitles)
 		);
 	}
 	if (orientation) {
@@ -22,21 +29,24 @@ export function createTabs({activeTab, orientation}: TabsArgs) {
 	return tabs;
 }
 
-function createTabsWithChildren(tabNames: string[]) {
+function createTabsWithChildren(tabMetaData: TabArgs[]) {
 	const tabs = new VSCodeTabs();
 
 	// Create and append tab components
-	for (let i = 0; i < tabNames.length; i++) {
-		const tab = new VSCodeTab();
-		tab.textContent = tabNames[i].toUpperCase();
+	for (let i = 0; i < tabMetaData.length; i++) {
+		const tab = createTab({
+			title: tabMetaData[i].title,
+			isDisabled: tabMetaData[i].isDisabled,
+			customIcon: tabMetaData[i].customIcon,
+		});
 		tab.setAttribute('id', `tab-${i + 1}`);
 		tabs.appendChild(tab);
 	}
 
 	// Create and append tab-panel components
-	for (let i = 0; i < tabNames.length; i++) {
+	for (let i = 0; i < tabMetaData.length; i++) {
 		const tabPanel = new VSCodeTabPanel();
-		tabPanel.textContent = `${tabNames[i]} content.`;
+		tabPanel.textContent = 'Tab Panel Content';
 		tabPanel.setAttribute('id', `tab-panel-${i + 1}`);
 		tabs.appendChild(tabPanel);
 	}
