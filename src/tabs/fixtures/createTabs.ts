@@ -1,16 +1,23 @@
 import {createTab, TabArgs} from '../../tab/fixtures/createTab';
-import {VSCodeTabPanel, VSCodeTabs} from '../index';
+import {createTabPanel} from '../../tab-panel/fixtures/createTabPanel';
+import {VSCodeTabs} from '../index';
 
 export type TabsArgs = {
 	activeTab?: string;
 	orientation?: string;
+	hasComplexContent?: boolean;
 	tabMetaData: any;
 };
 
-export function createTabs({activeTab, orientation, tabMetaData}: TabsArgs) {
+export function createTabs({
+	activeTab,
+	orientation,
+	hasComplexContent,
+	tabMetaData,
+}: TabsArgs) {
 	let tabs: VSCodeTabs;
 	if (tabMetaData) {
-		tabs = createTabsWithChildren(tabMetaData);
+		tabs = createTabsWithChildren(tabMetaData, hasComplexContent);
 	}
 
 	if (activeTab) {
@@ -29,7 +36,10 @@ export function createTabs({activeTab, orientation, tabMetaData}: TabsArgs) {
 	return tabs;
 }
 
-function createTabsWithChildren(tabMetaData: TabArgs[]) {
+function createTabsWithChildren(
+	tabMetaData: TabArgs[],
+	hasComplexContent: boolean
+) {
 	const tabs = new VSCodeTabs();
 
 	// Create and append tab components
@@ -45,8 +55,11 @@ function createTabsWithChildren(tabMetaData: TabArgs[]) {
 
 	// Create and append tab-panel components
 	for (let i = 0; i < tabMetaData.length; i++) {
-		const tabPanel = new VSCodeTabPanel();
-		tabPanel.textContent = 'Tab Panel Content';
+		const tabPanel = hasComplexContent
+			? createTabPanel({hasComplexContent})
+			: createTabPanel({
+					label: `${capitalize(tabMetaData[i].title)} Content`,
+			  });
 		tabPanel.setAttribute('id', `tab-panel-${i + 1}`);
 		tabs.appendChild(tabPanel);
 	}
@@ -57,4 +70,13 @@ function createTabsWithChildren(tabMetaData: TabArgs[]) {
 function convertActiveTabNameToTabId(activeTab: string, tabNames: string[]) {
 	const activeTabIndex = tabNames.indexOf(activeTab);
 	return `tab-${activeTabIndex + 1}`;
+}
+
+function capitalize(str: string) {
+	let result = '';
+	const wordList = str.toLowerCase().split(' ');
+	for (const word of wordList) {
+		result = `${result} ${word.charAt(0).toUpperCase() + word.slice(1)}`;
+	}
+	return result;
 }
