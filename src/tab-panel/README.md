@@ -20,7 +20,7 @@ The `vscode-tab-panel` component must be used in tandem with the `vscode-tab` an
 
 ### Complex Content
 
-A `vscode-tab-panel` can contain not only text, but any valid HTML content.
+A `vscode-tab-panel` can also contain any valid HTML.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-tabs--with-complex-panel-content)
 
