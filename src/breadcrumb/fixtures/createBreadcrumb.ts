@@ -1,6 +1,5 @@
 import {VSCodeBreadcrumb} from '../index';
 import {createBreadcrumbItem} from '../../breadcrumb-item/fixtures/createBreadcrumbItem';
-import '../../../node_modules/vscode-codicons/dist/codicon.css';
 
 export type BreadcrumbArgs = {
 	breadcrumbItemList: string[];

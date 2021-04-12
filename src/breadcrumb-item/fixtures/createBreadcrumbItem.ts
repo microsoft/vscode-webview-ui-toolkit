@@ -3,7 +3,6 @@ import {
 	createCodiconIcon,
 	focusObserver,
 } from '../../utilities/storybook/index';
-import '../../../node_modules/vscode-codicons/dist/codicon.css';
 
 export type BreadcrumbItemArgs = {
 	label: string;
@@ -37,15 +36,24 @@ export function createBreadcrumbItem({
 		breadcrumbItem.appendChild(button);
 	}
 	if (startIcon) {
-		const start = createCodiconIcon('symbol-method', 'start');
+		const start = createCodiconIcon({
+			iconName: 'symbol-method',
+			slotName: 'start',
+		});
 		breadcrumbItem.appendChild(start);
 	}
 	if (separatorIcon) {
-		const separator = createCodiconIcon('chevron-right', 'separator');
+		const separator = createCodiconIcon({
+			iconName: 'chevron-right',
+			slotName: 'separator',
+		});
 		breadcrumbItem.appendChild(separator);
 	}
 	if (endIcon) {
-		const end = createCodiconIcon('symbol-method', 'end');
+		const end = createCodiconIcon({
+			iconName: 'symbol-method',
+			slotName: 'end',
+		});
 		breadcrumbItem.appendChild(end);
 	}
 	if (isFocused) {

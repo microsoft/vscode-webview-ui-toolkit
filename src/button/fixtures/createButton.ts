@@ -3,7 +3,6 @@ import {
 	createCodiconIcon,
 	focusObserver,
 } from '../../utilities/storybook/index';
-import '../../../node_modules/vscode-codicons/dist/codicon.css';
 
 export type ButtonArgs = {
 	label: string;
@@ -43,15 +42,21 @@ export function createButton({
 		focusObserver(button);
 	}
 	if (startIcon) {
-		const start = createCodiconIcon('git-merge', 'start');
+		const start = createCodiconIcon({
+			iconName: 'git-merge',
+			slotName: 'start',
+		});
 		button.appendChild(start);
 	}
 	if (endIcon) {
-		const end = createCodiconIcon('chevron-right', 'end');
+		const end = createCodiconIcon({
+			iconName: 'chevron-right',
+			slotName: 'end',
+		});
 		button.appendChild(end);
 	}
 	if (iconOnly) {
-		const icon = createCodiconIcon('check');
+		const icon = createCodiconIcon({iconName: 'check'});
 		button.appendChild(icon);
 	}
 	button.addEventListener('click', onClick);
