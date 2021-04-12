@@ -68,9 +68,9 @@ export const OptionStyles = css`
 		width: calc(var(--design-unit) * 4px);
 	}
 	::slotted([slot='end']) {
-		margin-inline-start: 1ch;
+		margin-inline-start: 6px;
 	}
 	::slotted([slot='start']) {
-		margin-inline-end: 1ch;
+		margin-inline-end: 6px;
 	}
 `;
