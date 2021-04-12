@@ -4,14 +4,14 @@ import {VSCodeTabs} from '../index';
 
 export type TabsArgs = {
 	activeTab?: string;
-	orientation?: string;
+	activeIndicator?: boolean;
 	hasComplexContent?: boolean;
 	tabMetaData: any;
 };
 
 export function createTabs({
 	activeTab,
-	orientation,
+	activeIndicator,
 	hasComplexContent,
 	tabMetaData,
 }: TabsArgs) {
@@ -22,15 +22,15 @@ export function createTabs({
 
 	if (activeTab) {
 		const tabTitles = tabMetaData.map(tabObject => {
-			return tabObject.title;
+			return tabObject.title.toLowerCase();
 		});
 		tabs.setAttribute(
 			'activeid',
-			convertActiveTabNameToTabId(activeTab, tabTitles)
+			convertActiveTabNameToTabId(activeTab.toLowerCase(), tabTitles)
 		);
 	}
-	if (orientation) {
-		tabs.setAttribute('orientation', orientation.toLowerCase());
+	if (activeIndicator) {
+		tabs.setAttribute('activeindicator', activeIndicator.toString());
 	}
 
 	return tabs;

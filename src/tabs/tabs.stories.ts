@@ -17,6 +17,7 @@ export default {
 				options: ['Problems', 'Output', 'Debug Console', 'Terminal'],
 			},
 		},
+		activeIndicator: {control: 'boolean'},
 		hasComplexContent: {control: 'boolean'},
 		tabMetaData: {control: 'array'},
 	},
@@ -33,7 +34,8 @@ const Template = ({...args}: TabsArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
-	activeTab: 'Terminal',
+	activeTab: '',
+	activeIndicator: true,
 	hasComplexContent: false,
 	tabMetaData: [
 		{title: 'PROBLEMS', isDisabled: false, customIcon: false},
@@ -45,7 +47,7 @@ Default.args = {
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-tabs activeid="tab-4">\n\t<vscode-tab id="tab-1">PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3">DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
+			code: `<vscode-tabs>\n\t<vscode-tab id="tab-1">PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3">DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
 		},
 	},
 };
@@ -54,16 +56,42 @@ export const WithDisabled: any = Template.bind({});
 WithDisabled.args = {
 	...Default.args,
 	tabMetaData: [
-		{title: 'PROBLEMS', isDisabled: false, customIcon: false},
+		{title: 'PROBLEMS', isDisabled: true, customIcon: false},
 		{title: 'OUTPUT', isDisabled: true, customIcon: false},
 		{title: 'DEBUG CONSOLE', isDisabled: true, customIcon: false},
-		{title: 'TERMINAL', isDisabled: false, customIcon: false},
+		{title: 'TERMINAL', isDisabled: true, customIcon: false},
 	],
 };
 WithDisabled.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-tabs activeid="tab-4" orientation="vertical">\n\t<vscode-tab id="tab-1" disabled>PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3" disabled>DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
+			code: `<vscode-tabs>\n\t<vscode-tab id="tab-1" disabled>PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3" disabled>DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
+		},
+	},
+};
+
+export const WithActiveTab: any = Template.bind({});
+WithActiveTab.args = {
+	...Default.args,
+	activeTab: 'Terminal',
+};
+WithActiveTab.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-tabs activeid="tab-4">\n\t<vscode-tab id="tab-1" disabled>PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3" disabled>DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
+		},
+	},
+};
+
+export const WithNoActiveIndicator: any = Template.bind({});
+WithNoActiveIndicator.args = {
+	...Default.args,
+	activeIndicator: false,
+};
+WithNoActiveIndicator.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-tabs activeindicator="false">\n\t<vscode-tab id="tab-1" disabled>PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3" disabled>DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
 		},
 	},
 };
@@ -81,7 +109,7 @@ WithCustomTabIcons.args = {
 WithCustomTabIcons.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-tabs activeid="tab-4" orientation="vertical">\n\t<vscode-tab id="tab-1">PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3">DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
+			code: `<vscode-tabs>\n\t<vscode-tab id="tab-1">PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3">DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
 		},
 	},
 };
@@ -100,7 +128,7 @@ WithComplexPanelContent.args = {
 WithComplexPanelContent.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-tabs activeid="tab-4" orientation="vertical">\n\t<vscode-tab id="tab-1">PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3">DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
+			code: `<vscode-tabs>\n\t<vscode-tab id="tab-1">PROBLEMS</vscode-tab>\n\t<vscode-tab id="tab-2">OUTPUT</vscode-tab>\n\t<vscode-tab id="tab-3">DEBUG CONSOLE</vscode-tab>\n\t<vscode-tab id="tab-4">TERMINAL</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tProblems content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tOutput content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tDebug content.\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTerminal content.\n\t</vscode-tab-panel>\n</vscode-tabs>`,
 		},
 	},
 };
