@@ -43,3 +43,33 @@ The `vscode-option` component will only provide internals related to form associ
 ```html
 <vscode-option value="example-option-value">Option Label</vscode-option>
 ```
+
+### Start Icon
+
+An icon can be added to the left of the Option text by adding an element with the attribute `slot="start"`, such as an SVG icon.
+
+[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-start-icon)
+
+```html
+<!-- Note: Using VSCode Codicon Library -->
+
+<vscode-option>
+	Option Label
+	<svg slot="start" class="codicon codicon-symbol-method"></svg>
+</vscode-option>
+```
+
+### End Icon
+
+An icon can be added to the right of the Option text by adding an element with the attribute `slot="end"`, such as an SVG icon.
+
+[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-end-icon)
+
+```html
+<!-- Note: Using VSCode Codicon Library -->
+
+<vscode-option>
+	Option Label
+	<svg slot="end" class="codicon codicon-symbol-method"></svg>
+</vscode-option>
+```
