@@ -87,6 +87,9 @@ export const SelectStyles = css`
 	:host([open]) .listbox {
 		border: none;
 	}
+	:host([open]) .control {
+		padding: 0 calc((var(--design-unit) * 2.25px) + 1px);
+	}
 	:host([open][position='above']) .listbox,
 	:host([open][position='below']) {
 		border-bottom-left-radius: 0;
