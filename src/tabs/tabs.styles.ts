@@ -37,7 +37,7 @@ export const TabsStyles = css`
 		border-radius: calc(var(--corner-radius) * 1px);
 	}
 	.activeIndicatorTransition {
-		transition: transform 0.2s ease-in-out;
+		transition: transform 0.01s linear;
 	}
 	.tabpanel {
 		grid-row: 2;
@@ -85,6 +85,6 @@ export const TabsStyles = css`
 		border-radius: calc(var(--corner-radius) * 1px);
 	}
 	:host([orientation='vertical']) .activeIndicatorTransition {
-		transition: transform 0.2s linear;
+		transition: transform 0.01s linear;
 	}
 `;
