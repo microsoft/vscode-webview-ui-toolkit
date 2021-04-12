@@ -116,3 +116,16 @@ WithCustomIndicator.parameters = {
 		},
 	},
 };
+
+export const WithLongList: any = Template.bind({});
+WithLongList.args = {
+	...Default.args,
+	numberOfChildren: 50,
+};
+WithLongList.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-select>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n\t<!-- Insert more options... -->\n</vscode-select>`,
+		},
+	},
+};
