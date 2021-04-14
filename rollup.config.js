@@ -89,11 +89,11 @@ export default [
 		input: 'src/utilities/vscode-extension/applyCurrentTheme.ts',
 		output: [
 			{
-				file: 'dist/applyCurrentTheme.js',
+				file: 'dist/applyTheme.js',
 				format: 'esm',
 			},
 			{
-				file: 'dist/applyCurrentTheme.min.js',
+				file: 'dist/applyTheme.min.js',
 				format: 'esm',
 				plugins: [terser()],
 			},
