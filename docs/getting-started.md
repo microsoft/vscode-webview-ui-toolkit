@@ -89,9 +89,9 @@ Congratulations! You have officially created a basic webview extension.
 
 To test that everything is working, inside the editor, press `F5`. This will compile and run the extension in a new Extension Development Host window.
 
-When the host window opens, open the Command Palette (`Shift + Cmd + P`), type "Hello World", and click `enter` to run the command which should display the webview panel.
+When the host window opens, open the Command Palette (`Cmd + Shift + P`), type "Hello World", and click `enter` to run the command which should display the webview panel.
 
-![Testing That The Webview Extension Works](./assets/testing-webview-extension.gif)
+![Testing That The Webview Extension Works](./assets/webview-test.gif)
 
 ## Install The Toolkit
 
@@ -163,9 +163,9 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 ### Testing It All Works
 
-Let's check that everything works by adding some toolkit components to the webview and then opening the extension in the Extension Development Host window by pressing `F5`!
+Let's check that everything works by adding some toolkit components to the webview and then opening the extension in the Extension Development Host window by pressing `F5`.
 
-_Note that all toolkit components must currently be be a child of the `<vscode-design-system-provider>` element with the `use-defaults` attribute set._
+_Note that all toolkit components must be a child of the `<vscode-design-system-provider>` element with the `use-defaults` attribute set._
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
@@ -190,6 +190,8 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 	`;
 }
 ```
+
+![Testing That The Toolkit Works](./assets/toolkit-button-test.gif)
 
 ## Set Up The Toolkit Theming Utilities
 
@@ -280,6 +282,8 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 Once again, let's test that everything works by opening the Extension Development Host window (press `F5`).
 
 Once the webview panel is open, open the Command Pallette (`Cmd + Shift + P`), search for "Preferences: Color Theme", and cycle through all the themes to see the components change!
+
+![Testing That The Toolkit Theme Utilities Work](./assets/toolkit-theme-test.gif)
 
 ## Next Steps
 
