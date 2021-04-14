@@ -1,4 +1,4 @@
-![VSCode Webview Toolkit Banner Illustration](./docs/assets/vscode-webview-toolkit-illustration.png)
+![VSCode Webview Toolkit Banner Illustration](./docs/assets/vscode-webview-toolkit-illustration.jpg)
 
 # Visual Studio Code Webview Toolkit
 
