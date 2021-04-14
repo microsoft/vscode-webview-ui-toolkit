@@ -18,6 +18,10 @@ This toolkit was created to give people the tools to build webview experiences t
 -   **Accessible Out Of The Box:** All components ship with web standard compliant ARIA attributes and keyboard functionality meaning you don't have to worry about accessibility.
 -   **Configurable Global Styles:** Certain component styles such as corner radii, font sizing, colors, and more are configured using a set of global design tokens which can be overridden to achieve a customized component look if desired.
 
+## Getting Started
+
+Follow the [Getting Started Guide](./docs/getting-started.md).
+
 ## Contributing
 
 This project welcomes contributions and suggestions. If you'd like to contribute, please submit a PR of your changes with a link to the issue or feature request that your code addresses. Additionally, please follow the [VS Code Coding Guidelines](https://github.com/microsoft/vscode/wiki/Coding-Guidelines).
