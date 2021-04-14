@@ -9,9 +9,9 @@ This guide will cover the following steps to get you up and running with the VS 
 
 ## Create A Webview-Based Extension
 
-Before installing the toolkit we need to create an webview-based extension to use the toolkit in. The following steps are taken directly from the VS Code Extension [Your First Extension Guide](https://code.visualstudio.com/api/get-started/your-first-extension).
+Before installing the toolkit we need to create an webview-based extension to use the toolkit in. The following steps are taken directly from the VS Code [Your First Extension Guide](https://code.visualstudio.com/api/get-started/your-first-extension).
 
-To generate a basic extension we can use [Yeoman](https://yeoman.io/) and the [VS Code Extension Generator](https://www.npmjs.com/package/generator-code). Make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed first, then you can install Yeoman and the generator using the following command:
+To generate a basic extension we can use [Yeoman](https://yeoman.io/) and the [VS Code Extension Generator](https://www.npmjs.com/package/generator-code). Make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed first, then install Yeoman and the generator using the following command:
 
 ```bash
 npm install -g yo generator-code
@@ -86,7 +86,7 @@ Congratulations! You have officially created a basic webview extension. 🎊
 
 To test that everything is working, inside the editor, press `F5`. This will compile and run the extension in a new Extension Development Host window.
 
-When the host window opens open the Command Palette (`Shift + Cmd + P`), type in "Hello World", and click `enter` to run the command which should display the webview panel.
+When the host window opens, open the Command Palette (`Shift + Cmd + P`), type "Hello World", and click `enter` to run the command which should display the webview panel.
 
 ![Testing That The Webview Extension Works](./assets/testing-webview-extension.gif)
 
