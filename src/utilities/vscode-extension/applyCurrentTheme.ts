@@ -1,5 +1,15 @@
 import {colorTokensToAttributeNames} from './tokensToAttributes';
 
+// This code should run automatically when the file is executed
+window.addEventListener('load', () => {
+	const designProvider = document.querySelector(
+		'vscode-design-system-provider'
+	);
+	if (designProvider) {
+		applyCurrentTheme(designProvider);
+	}
+});
+
 /**
  * Applies the current VSCode theme to the VSCode Webview Toolkit
  * components.
@@ -10,7 +20,7 @@ import {colorTokensToAttributeNames} from './tokensToAttributes';
  *
  * @param designProvider A reference to the `<vscode-design-system-provider>` element
  */
-export function applyCurrentTheme(designProvider: HTMLElement) {
+function applyCurrentTheme(designProvider: Element) {
 	// Get all the styles applied to the <body> tag in the webview HTML
 	// Importantly this includes all the CSS variables associated with the
 	// current VSCode theme
@@ -30,7 +40,7 @@ export function applyCurrentTheme(designProvider: HTMLElement) {
 
 function setVSCodeThemeOnDesignProvider(
 	styles: CSSStyleDeclaration,
-	designProvider: HTMLElement
+	designProvider: Element
 ) {
 	for (const colorToken in colorTokensToAttributeNames) {
 		const attributeName = colorTokensToAttributeNames[colorToken];

@@ -84,4 +84,28 @@ export default [
 			}),
 		],
 	},
+	{
+		context: 'this',
+		input: 'src/utilities/vscode-extension/applyCurrentTheme.ts',
+		output: [
+			{
+				file: 'dist/applyTheme.js',
+				format: 'esm',
+			},
+			{
+				file: 'dist/applyTheme.min.js',
+				format: 'esm',
+				plugins: [terser()],
+			},
+		],
+		plugins: [
+			nodeResolve(),
+			commonjs(),
+			typescript(),
+			filesize({
+				showMinifiedSize: false,
+				showBrotliSize: true,
+			}),
+		],
+	},
 ];
