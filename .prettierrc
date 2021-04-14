@@ -18,6 +18,15 @@
 			}
 		},
 		{
+			"files": "docs/*.md",
+			"options": {
+				"printWidth": 120,
+				"singleQuote": false,
+				"tabWidth": 2,
+				"bracketSpacing": true
+			}
+		},
+		{
 			"files": "src/data-grid/README.md",
 			"options": {
 				"printWidth": 110

@@ -1,12 +1,37 @@
+![VSCode Webview Toolkit Banner Illustration](./docs/assets/vscode-webview-toolkit-illustration.jpg)
+
 # Visual Studio Code Webview Toolkit
 
-## About This Toolkit
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+[![NPM Version](https://img.shields.io/badge/npm-v0.1.0-blue)](https://github.com/microsoft/vscode-webview-toolkit)
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
 
-This toolkit is an implementation of the [VS Code Webview Figma Toolkit](https://www.figma.com/file/KO1yufOeApPEMymIxJ3dTf/VS-Code-Webview-Toolkit?node-id=0%3A1) and made specifically for building webview-based extensions in VS Code.
+## Introduction
 
-The VS Code Webview Toolkit has all of the core components needed for creating webview-based extensions that take place in the explorer, command palette, terminal, editor, and debugger. The experiences in webviews often have design requirements that go beyond the base experiences in VS Code.
+The VS Code Webview Toolkit is a component library made specifically for building webview-based extensions in VS Code.
 
-This toolkit was created to give people the tools to build webview experiences that are consistent with the rest of VS Code. All of the components were designed with theming in mind and use colors that map directly to the VS Code dark theme color tokens. The components in the toolkit are based on the Fluent Web components but have been redesigned to match VS Code's visual language.
+This toolkit was created to give people the tools to build webview experiences that are consistent with the rest of VS Code. Features of the library include:
+
+-   **Implements The VSCode Design Language:** All components implement the VSCode design language enabling developers to create extensions that have a consistent look and feel with the rest of VS Code right out of the box.
+-   **Plays Nice With Your Tech Stack:** The library is built using web component APIs meaning no matter what tech stack your using (React, Angular, Vanilla JS, etc.) the component library will play nice.
+-   **Theming As A First Class Citizen:** All of the components were designed with theming in mind and the toolkit ships with utilities that allow extension developers to easily tap into and automatically consume VS Code color theme changes.
+-   **Accessible Out Of The Box:** All components ship with web standard compliant ARIA labels and keyboard navigation meaning you don't have to worry about accessibility.
+-   **Configurable Global Styles:** Certain component styles such as corner radii, font sizing, colors, and more are configured using a set of global design tokens which can be overridden to achieve a customized component look if desired.
+
+## Getting Started
+
+Follow the [Getting Started Guide](./docs/getting-started.md).
+
+## Documentation
+
+Beyond the Getting Started Guide, further documentation can be found in the following places:
+
+-   [Component Docs](./docs/components.md)
+-   [Storybook – Interactive Component Sandbox](https://mttallac.azurewebsites.net/)
+-   [Toolkit Extension Samples](./samples)
+-   [VS Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
+-   [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
+-   [VS Code Extension API Docs](https://code.visualstudio.com/api)
 
 ## Contributing
 
