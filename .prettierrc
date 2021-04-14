@@ -20,9 +20,10 @@
 		{
 			"files": "docs/*.md",
 			"options": {
-				"printWidth": 100,
+				"printWidth": 120,
 				"singleQuote": false,
-				"tabWidth": 2
+				"tabWidth": 2,
+				"bracketSpacing": true
 			}
 		},
 		{
