@@ -197,9 +197,9 @@ By default the toolkit component library implements the default VS Code dark col
 
 _Note that this a very important step to aligning with the [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews) which states that "all elements in the view [should be] themeable."_
 
-### Set Theme Listener Utility
+### Configure The Theme Listener Utility
 
-The first step to this process is to import and declare the `setThemeEventListener` utility inside our extension start command. This utility will listen for VS Code theme changes and notify the webview panel context when a change has occurred.
+The first step to this process is to import and declare the `setThemeEventListener` utility inside our extension's start command. This utility will listen for VS Code theme changes and notify the webview panel when a change has occurred.
 
 ```typescript
 import { setThemeEventListener } from "@microsoft/vscode-webview-toolkit";
@@ -230,7 +230,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 ```
 
-### Set Apply Current Theme Utility
+### Configure The Apply Theme Utility
 
 With the theme listener set we need to configure the utility that will listen for those theme changes inside the webview and then apply them to the toolkit components.
 
@@ -281,15 +281,15 @@ Once again, let's test that everything works by opening the Extension Developmen
 
 Once the webview panel is open, open the Command Pallette (`Cmd + Shift + P`), search for "Preferences: Color Theme", and cycle through all the themes to see the components change!
 
-## You Did It! Yay!
+## Next Steps
 
-If you've everything is working, congratulations on getting started with the VS Code Webview Toolkit! 🎊
+Congratulations on getting started with the VS Code Webview Toolkit! 🎊
 
 Now that you're set up, checkout the component docs for further documentation on what components are available and how to use them. Further component documentation and some guides on how to work with webviews is also provided too. Happy hacking!
 
-- [Component Docs](./docs/components.md)
+- [Component Docs](./components.md)
 - [Storybook – Interactive Component Sandbox](https://mttallac.azurewebsites.net/)
-- [Toolkit Extension Samples](./samples)
+- [Toolkit Extension Samples](../samples)
 - [VS Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
 - [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
 - [VS Code Extension API Docs](https://code.visualstudio.com/api)
