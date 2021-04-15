@@ -236,25 +236,12 @@ export function activate(context: vscode.ExtensionContext) {
 
 With the theme listener set we need to configure the utility that will listen for those theme changes inside the webview and then apply them to the toolkit components.
 
-Start by creating a directory called `media` in the root of the project and then adding a new `applyTheme.js` file inside that directory. Inside `applyTheme.js` add the following:
-
-```javascript
-import { applyCurrentTheme } from "@microsoft/vscode-webview-toolkit";
-
-window.addEventListener("load", main);
-
-function main() {
-	const designProvider = document.querySelector("vscode-design-system-provider");
-	applyCurrentTheme(designProvider);
-}
-```
-
-Finally, the webview context needs access to this file so just like we did with the toolkit package we'll update the `getWebviewContent` function to create a URI for the applyTheme.js file and pass it into our webview context with a `<script>` tag.
+Just like we did with the toolkit package we can achieve this by updating the `getWebviewContent` function to create a URI for the `applyTheme.js` utility file and pass it into our webview context with a `<script>` tag.
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 	const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
-	const applyThemeUri = getUri(webview, extensionUri, ["media", "applyTheme.js"]);
+	const applyThemeUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "applyTheme.js"]);
 
 	return `
 		<!DOCTYPE html>
