@@ -7,8 +7,8 @@ import {CheckboxStyles as styles} from './checkbox.styles';
 
 /**
  * The VSCode Checkbox element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.checkbox/ Checkbox} and
- * {@link https://www.fast.design/docs/api/fast-foundation.checkboxtemplate/ CheckboxTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.checkbox/ | Checkbox} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.checkboxtemplate/ | CheckboxTemplate}.
  *
  * @public
  * @remarks

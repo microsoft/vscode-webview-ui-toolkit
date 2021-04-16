@@ -7,8 +7,8 @@ import {ProgressBarStyles as styles} from './progress-bar.styles';
 
 /**
  * The VSCode Progress Bar element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ BaseProgress} and
- * {@link https://www.fast.design/docs/api/fast-foundation.progresstemplate/ ProgressTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ | BaseProgress} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.progresstemplate/ | ProgressTemplate}.
  *
  * @public
  * @remarks

@@ -4,8 +4,8 @@ import {TabsStyles as styles} from './tabs.styles';
 
 /**
  * The VSCode Tabs element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.tabs/ Tabs} and
- * {@link https://www.fast.design/docs/api/fast-foundation.tabstemplate/ TabsTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.tabs/ | Tabs} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.tabstemplate/ | TabsTemplate}.
  *
  * @public
  * @remarks

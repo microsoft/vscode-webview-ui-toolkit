@@ -7,8 +7,8 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
 
 /**
  * The VSCode Progress Ring element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ BaseProgress} and
- * {@link https://www.fast.design/docs/api/fast-foundation.progressringtemplate/ ProgressRingTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ | BaseProgress} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.progressringtemplate/ | ProgressRingTemplate}.
  *
  * @public
  * @remarks

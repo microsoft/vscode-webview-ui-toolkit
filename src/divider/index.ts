@@ -4,8 +4,8 @@ import {DividerStyles as styles} from './divider.styles';
 
 /**
  * The VSCode Divider element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.divider/ Divider} and
- * {@link https://www.fast.design/docs/api/fast-foundation.dividertemplate/ DividerTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.divider/ | Divider} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.dividertemplate/ | DividerTemplate}.
  *
  * @public
  * @remarks

@@ -7,8 +7,8 @@ import {OptionStyles as styles} from './option.styles';
 
 /**
  * The VSCode Option element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.listboxoption/ ListboxOption} and
- * {@link https://www.fast.design/docs/api/fast-foundation.listboxoptiontemplate/ ListboxOptionTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.listboxoption/ | ListboxOption} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.listboxoptiontemplate/ | ListboxOptionTemplate}.
  *
  * @public
  * @remarks

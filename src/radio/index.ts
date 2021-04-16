@@ -4,8 +4,8 @@ import {RadioStyles as styles} from './radio.styles';
 
 /**
  * The VSCode Radio element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.radio/ Radio} and
- * {@link https://www.fast.design/docs/api/fast-foundation.radiotemplate/ RadioTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.radio/ | Radio} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.radiotemplate/ | RadioTemplate}.
  *
  * @public
  * @remarks

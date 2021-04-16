@@ -6,8 +6,8 @@ const template = createMenuItemTemplate('vscode');
 
 /**
  * The VSCode Menu Item element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.menuitem/ MenuItem} and
- * {@link https://www.fast.design/docs/api/fast-foundation.menuitemtemplate/ MenuItemTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.menuitem/ | MenuItem} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.menuitemtemplate/ | MenuItemTemplate}.
  *
  * @public
  * @remarks
