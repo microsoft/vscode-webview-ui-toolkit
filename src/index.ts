@@ -25,3 +25,4 @@ export {
 	VSCodeDesignSystem,
 	VSCodeDesignSystemDefaults,
 } from './vscode-design-system';
+export {setThemeEventListener} from './utilities/vscode-extension/setThemeEventListener';
