@@ -8,6 +8,10 @@ import del from 'rollup-plugin-delete';
 
 // ----- Rollup Config -----
 
+const parserOptions = {
+	sourceType: 'module',
+};
+
 export default [
 	{
 		context: 'this',
@@ -62,13 +66,9 @@ export default [
 
 // ----- Helper Functions -----
 
-const parserOptions = {
-	sourceType: 'module',
-};
-
 function transformHTMLFragment(data) {
 	const onlySpace = /^\s+$/g;
-	const spaceBetforeTagClose = /\s+(>)/g;
+	const spaceBeforeTagClose = /\s+(>)/g;
 	const spaceBetweenTags = /(>)\s+(<)/g;
 	const spaceBetweenAttrs = /(["'\w])(?!\s*>)\s+/g;
 	const openEnded = /(?:[^="'\w])?(["'\w])\s*$/g;
@@ -76,7 +76,7 @@ function transformHTMLFragment(data) {
 	if (data.match(onlySpace)) {
 		return data.replace(onlySpace, ' ');
 	}
-	data = data.replace(spaceBetforeTagClose, '$1');
+	data = data.replace(spaceBeforeTagClose, '$1');
 	data = data.replace(spaceBetweenTags, '$1$2');
 	data = data.replace(spaceBetweenAttrs, '$1 ');
 	if (data.match(openEnded)) {
