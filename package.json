@@ -40,7 +40,7 @@
 		"@babel/plugin-proposal-decorators": "^7.13.5",
 		"@babel/preset-env": "^7.13.5",
 		"@babel/preset-typescript": "^7.13.0",
-		"@microsoft/api-extractor": "^7.13.2",
+		"@microsoft/api-extractor": "^7.13.5",
 		"@microsoft/eslint-config-fast-dna": "^1.2.0",
 		"@rollup/plugin-commonjs": "^17.1.0",
 		"@rollup/plugin-node-resolve": "^11.2.0",
