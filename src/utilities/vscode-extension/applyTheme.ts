@@ -1,6 +1,12 @@
+// This script applies the current VSCode theme to the VSCode Webview Toolkit
+// components.
+//
+// Note: This utility function should be used in tandem with the
+// setThemeEventListener utility function to correctly set up
+// VSCode theme change handling in the VSCode Webview Toolkit.
+
 import {colorTokensToAttributeNames} from './tokensToAttributes';
 
-// This code should run automatically when the file is executed
 window.addEventListener('load', () => {
 	const designProvider = document.querySelector(
 		'vscode-design-system-provider'
@@ -13,10 +19,6 @@ window.addEventListener('load', () => {
 /**
  * Applies the current VSCode theme to the VSCode Webview Toolkit
  * components.
- *
- * Note: This utility function should be used in tandem with the
- * `setThemeEventListener` utility function to correctly set up
- * VSCode theme change handling in the VSCode Webview Toolkit.
  *
  * @param designProvider A reference to the `<vscode-design-system-provider>` element
  */
