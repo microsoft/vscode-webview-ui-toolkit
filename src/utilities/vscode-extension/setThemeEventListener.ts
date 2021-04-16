@@ -8,7 +8,8 @@ import {WebviewPanel, window} from 'vscode';
  * `applyCurrentTheme` utility function to correctly set up VSCode theme
  * change handling in the VSCode Webview Toolkit.
  *
- * @param panel The current VSCode webview panel
+ * @public
+ * @param panel - The current VSCode webview panel
  */
 export function setThemeEventListener(panel: WebviewPanel) {
 	window.onDidChangeActiveColorTheme(e => {
