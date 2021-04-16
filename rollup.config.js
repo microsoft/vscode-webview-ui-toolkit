@@ -16,6 +16,7 @@ export default [
 	{
 		context: 'this',
 		input: 'src/index-rollup.ts',
+		external: ['vscode'],
 		output: [
 			{
 				file: 'dist/toolkit.js',
