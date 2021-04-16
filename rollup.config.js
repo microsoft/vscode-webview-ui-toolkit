@@ -86,7 +86,7 @@ export default [
 	},
 	{
 		context: 'this',
-		input: 'src/utilities/vscode-extension/applyCurrentTheme.ts',
+		input: 'src/utilities/vscode-extension/applyTheme.ts',
 		output: [
 			{
 				file: 'dist/applyTheme.js',
