@@ -1,9 +1,11 @@
-// This script applies the current VSCode theme to the VSCode Webview Toolkit
-// components.
-//
-// Note: This utility function should be used in tandem with the
-// setThemeEventListener utility function to correctly set up
-// VSCode theme change handling in the VSCode Webview Toolkit.
+/**
+ * This script applies the current VSCode theme to the VSCode Webview Toolkit
+ * components.
+ *
+ * Note: This utility function should be used in tandem with the
+ * setThemeEventListener utility function to correctly set up
+ * VSCode theme change handling in the VSCode Webview Toolkit.
+ */
 
 import {colorTokensToAttributeNames} from './tokensToAttributes';
 
