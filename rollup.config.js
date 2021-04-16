@@ -16,11 +16,11 @@ export default [
 	{
 		context: 'this',
 		input: 'src/index-rollup.ts',
-		external: ['vscode'],
 		output: [
 			{
 				file: 'dist/toolkit.js',
 				format: 'esm',
+				sourcemap: true,
 			},
 		],
 		plugins: [
@@ -51,6 +51,7 @@ export default [
 			{
 				file: 'dist/applyTheme.js',
 				format: 'esm',
+				sourcemap: true,
 			},
 		],
 		plugins: [
