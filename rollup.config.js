@@ -2,10 +2,63 @@
 import commonjs from '@rollup/plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
-import {terser} from 'rollup-plugin-terser';
 import transformTaggedTemplate from 'rollup-plugin-transform-tagged-template';
 import typescript from '@rollup/plugin-typescript';
 import del from 'rollup-plugin-delete';
+
+// ----- Rollup Config -----
+
+export default [
+	{
+		context: 'this',
+		input: 'src/index-rollup.ts',
+		output: [
+			{
+				file: 'dist/toolkit.js',
+				format: 'esm',
+			},
+		],
+		plugins: [
+			del({targets: 'dist/*'}),
+			nodeResolve(),
+			commonjs(),
+			typescript(),
+			transformTaggedTemplate({
+				tagsToProcess: ['css'],
+				transformer: transformCSSFragment,
+				parserOptions,
+			}),
+			transformTaggedTemplate({
+				tagsToProcess: ['html'],
+				transformer: transformHTMLFragment,
+				parserOptions,
+			}),
+			filesize({
+				showMinifiedSize: false,
+				showBrotliSize: true,
+			}),
+		],
+	},
+	{
+		context: 'this',
+		input: 'src/utilities/vscode-extension/applyTheme.ts',
+		output: [
+			{
+				file: 'dist/applyTheme.js',
+				format: 'esm',
+			},
+		],
+		plugins: [
+			nodeResolve(),
+			commonjs(),
+			typescript(),
+			filesize({
+				showMinifiedSize: false,
+				showBrotliSize: true,
+			}),
+		],
+	},
+];
 
 // ----- Helper Functions -----
 
@@ -45,67 +98,3 @@ function transformCSSFragment(data) {
 	data = data.replace(endingSpaces, ' ');
 	return data.replace(extraSpaces, ' ');
 }
-
-// ----- Rollup Config -----
-
-export default [
-	{
-		context: 'this',
-		input: 'src/index-rollup.ts',
-		output: [
-			{
-				file: 'dist/toolkit.js',
-				format: 'esm',
-			},
-			{
-				file: 'dist/toolkit.min.js',
-				format: 'esm',
-				plugins: [terser()],
-			},
-		],
-		plugins: [
-			del({targets: 'dist/*'}),
-			nodeResolve(),
-			commonjs(),
-			typescript(),
-			transformTaggedTemplate({
-				tagsToProcess: ['css'],
-				transformer: transformCSSFragment,
-				parserOptions,
-			}),
-			transformTaggedTemplate({
-				tagsToProcess: ['html'],
-				transformer: transformHTMLFragment,
-				parserOptions,
-			}),
-			filesize({
-				showMinifiedSize: false,
-				showBrotliSize: true,
-			}),
-		],
-	},
-	{
-		context: 'this',
-		input: 'src/utilities/vscode-extension/applyTheme.ts',
-		output: [
-			{
-				file: 'dist/applyTheme.js',
-				format: 'esm',
-			},
-			{
-				file: 'dist/applyTheme.min.js',
-				format: 'esm',
-				plugins: [terser()],
-			},
-		],
-		plugins: [
-			nodeResolve(),
-			commonjs(),
-			typescript(),
-			filesize({
-				showMinifiedSize: false,
-				showBrotliSize: true,
-			}),
-		],
-	},
-];
