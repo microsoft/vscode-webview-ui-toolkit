@@ -4,6 +4,7 @@ src/
 # Docs
 docs/*.stories.*
 CODE_OF_CONDUCT.md
+samples/
 
 # Tests
 *.spec.*

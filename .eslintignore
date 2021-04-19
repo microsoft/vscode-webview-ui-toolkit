@@ -6,3 +6,4 @@ coverage
 *.spec.*
 babel.config.js
 webpack.config.js
+samples/
