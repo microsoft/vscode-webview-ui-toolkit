@@ -25,7 +25,6 @@
 		"src/**/*.stories.ts",
 		"src/**/fixtures/",
 		"src/utilities/storybook/",
-		"node_modules",
-		"samples/"
+		"node_modules"
 	]
 }
