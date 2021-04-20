@@ -15,8 +15,8 @@ export type ButtonAppearance =
 
 /**
  * The VSCode Button Element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.button/ Button} and
- * {@link https://www.fast.design/docs/api/fast-foundation.buttontemplate/ ButtonTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.button/ | Button} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.buttontemplate/ | ButtonTemplate}.
  *
  * @public
  * @remarks
@@ -24,7 +24,7 @@ export type ButtonAppearance =
  *
  * HTML Attribute: `appearance = primary | secondary | install | text | link`
  *
- * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus delegatesFocus}
+ * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  */
 @customElement({
 	name: 'vscode-button',

@@ -4,8 +4,8 @@ import {MenuStyles as styles} from './menu.styles';
 
 /**
  * The VSCode Menu element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.menu/ Menu} and
- * {@link https://www.fast.design/docs/api/fast-foundation.menutemplate/ MenuTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.menu/ | Menu} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.menutemplate/ | MenuTemplate}.
  *
  * @public
  * @remarks

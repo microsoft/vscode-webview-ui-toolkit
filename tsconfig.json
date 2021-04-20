@@ -1,23 +1,23 @@
 {
 	"compilerOptions": {
-		"pretty": true,
-		"target": "ES2015",
-		"module": "ESNext",
+		"target": "es6",
+		"module": "esnext",
 		"moduleResolution": "node",
+		"outDir": "dist/esm",
+		"rootDir": "src",
+		"lib": ["dom", "es6"],
+		"declarationDir": "dist/dts",
+		"pretty": true,
 		"esModuleInterop": true,
 		"importHelpers": true,
 		"experimentalDecorators": true,
 		"strictPropertyInitialization": false,
 		"declaration": true,
-		"declarationDir": "dist/dts",
 		"sourceMap": true,
 		"noEmitOnError": true,
 		"strict": true,
 		"strictNullChecks": true,
-		"allowJs": true,
-		"outDir": "dist/esm",
-		"rootDir": "src",
-		"lib": ["DOM", "ES2015"]
+		"allowJs": true
 	},
 	"include": ["src"],
 	"exclude": [

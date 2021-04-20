@@ -4,8 +4,8 @@ import {BadgeStyles as styles} from './badge.styles';
 
 /**
  * The VSCode Badge element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.badge/ Badge} and
- * {@link https://www.fast.design/docs/api/fast-foundation.badgetemplate/ BadgeTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.badge/ | Badge} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.badgetemplate/ | BadgeTemplate}.
  *
  * @public
  * @remarks

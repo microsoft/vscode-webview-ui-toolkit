@@ -7,8 +7,8 @@ import {BreadcrumbStyles as styles} from './breadcrumb.styles';
 
 /**
  * The VSCode Breadcrumb element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.breadcrumb/ Breadcrumb} and
- * {@link https://www.fast.design/docs/api/fast-foundation.breadcrumbtemplate/ BreadcrumbTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.breadcrumb/ | Breadcrumb} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.breadcrumbtemplate/ | BreadcrumbTemplate}.
  *
  * @public
  * @remarks

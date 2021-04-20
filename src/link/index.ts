@@ -11,14 +11,14 @@ export type LinkAppearance = ButtonAppearance | 'hypertext';
 
 /**
  * The VSCode Link element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.anchor/ Anchor} and
- * {@link https://www.fast.design/docs/api/fast-foundation.anchortemplate/ AnchorTemplate}.
+ * {@link https://www.fast.design/docs/api/fast-foundation.anchor/ | Anchor} and
+ * {@link https://www.fast.design/docs/api/fast-foundation.anchortemplate/ | AnchorTemplate}.
  *
  * @public
  * @remarks
  * HTML Element: `<vscode-link>`
  *
- * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus delegatesFocus}
+ * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  */
 @customElement({
 	name: 'vscode-link',
