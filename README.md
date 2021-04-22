@@ -3,7 +3,7 @@
 # Visual Studio Code Webview Toolkit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
-[![NPM Version](https://img.shields.io/badge/npm-v0.2.1-blue)](https://github.com/microsoft/vscode-webview-toolkit)
+[![NPM Version](https://img.shields.io/badge/npm-v0.3.0-blue)](https://github.com/microsoft/vscode-webview-toolkit)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
 
 ## Introduction

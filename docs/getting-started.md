@@ -3,8 +3,7 @@
 This guide will cover the following steps to get you up and running with the VS Code Webview Toolkit.
 
 1. Create a webview-based extension.
-2. Install the toolkit.
-3. Set up the toolkit theming utilities.
+2. Install and set up the toolkit.
 
 ## Create A Webview-Based Extension
 
@@ -34,7 +33,7 @@ yo code
 code ./helloworld
 ```
 
-### Setting Up A Webview
+### Create A Webview
 
 With this basic extension created, we now need to create a webview. The following steps are an adapted version of the steps provided in the [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)––for more information about Webviews visit the guide.
 
@@ -83,17 +82,17 @@ function getWebviewContent() {
 }
 ```
 
-### Test It All Works
+### Test That It All Works
 
 Congratulations! You have officially created a basic webview extension.
 
 To test that everything is working, inside the editor, press `F5`. This will compile and run the extension in a new Extension Development Host window.
 
-When the host window opens, open the Command Palette (`Cmd + Shift + P`), type "Hello World", and click `enter` to run the command which should display the webview panel.
+When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), type "Hello World", and click `enter` to run the command which should display the webview panel.
 
 ![Testing That The Webview Extension Works](./assets/webview-test.gif)
 
-## Install The Toolkit
+## Install & Set Up The Toolkit
 
 With an extension created, we can now install the toolkit with the following command.
 
@@ -103,7 +102,7 @@ npm install --save @microsoft/vscode-webview-toolkit
 
 ### Using The Toolkit Inside A Webview
 
-With the package installed, we need to adjust the project so the toolkit is usable within our webview context. We'll start by updating the `getWebviewContent` content function we defined earlier to accept two new parameters.
+With the package installed, we need to adjust the project so the toolkit is usable within our webview. We'll start by updating the `getWebviewContent` content function we defined earlier to accept two new parameters.
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
@@ -138,7 +137,7 @@ function getUri(webview: vscode.Webview, extensionUri: vscode.Uri, pathList: str
 
 ### Pass The URI Into The Webview
 
-With access to the toolkit package URI we can pass it into our webview context via a regular `<script>` tag like so:
+With access to the toolkit URI we can pass it into our webview context via a regular `<script>` tag like so:
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
@@ -161,7 +160,7 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 }
 ```
 
-### Testing It All Works
+### Test That It All Works
 
 Let's check that everything works by adding some toolkit components to the webview and then opening the extension in the Extension Development Host window by pressing `F5`.
 
@@ -193,82 +192,9 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 ![Testing That The Toolkit Works](./assets/toolkit-button-test.gif)
 
-## Set Up The Toolkit Theming Utilities
+Finally, component theming is built right into the components so feel free to test that out too!
 
-By default the toolkit component library implements the default VS Code dark color theme. As a result, the final big step to getting started is configuring the toolkit theming utilities that will enable components to automatically consume and apply VS Code color theme changes.
-
-_Note that this a very important step to aligning with the [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews) which states that "all elements in the view [should be] themeable."_
-
-### Configure The Theme Listener Utility
-
-The first step to this process is to import and declare the `setThemeEventListener` utility inside our extension's start command. This utility will listen for VS Code theme changes and notify the webview panel when a change has occurred.
-
-```typescript
-import { setThemeEventListener } from "@microsoft/vscode-webview-toolkit";
-
-export function activate(context: vscode.ExtensionContext) {
-	let panel: vscode.WebviewPanel | undefined;
-
-	const startCommand = vscode.commands.registerCommand("helloworld.helloWorld", () => {
-		if (panel) {
-			// If the webview panel already exists reveal it
-			panel.reveal(vscode.ViewColumn.One);
-		} else {
-			// If a webview panel does not already exist create and show a new one
-			panel = vscode.window.createWebviewPanel("helloworld", "Hello World", vscode.ViewColumn.One, {
-				enableScripts: true,
-			});
-
-			// Set the HTML content for the new webview panel
-			panel.webview.html = getWebviewContent(panel.webview, context.extensionUri);
-
-			// Sets up an event listener to listen for VSCode theme changes and notifies
-			// the webview panel when a change has occurred
-			setThemeEventListener(panel);
-		}
-	});
-
-	context.subscriptions.push(startCommand);
-}
-```
-
-### Configure The Apply Theme Utility
-
-With the theme listener set we need to configure the utility that will listen for those theme changes inside the webview and then apply them to the toolkit components.
-
-Just like we did with the toolkit package we can achieve this by updating the `getWebviewContent` function to create a URI for the `applyTheme.js` utility file and pass it into our webview context with a `<script>` tag.
-
-```typescript
-function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-	const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
-	const applyThemeUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "applyTheme.js"]);
-
-	return `
-		<!DOCTYPE html>
-		<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<script type="module" src="${toolkitUri}"></script>
-				<script type="module" src="${applyThemeUri}"></script>
-				<title>Hello World!</title>
-			</head>
-			<body>
-				<h1>Hello World!</h1>
-				<vscode-design-system-provider use-defaults>
-					<vscode-button>Howdy!</vscode-button>
-				</vscode-design-system-provider>
-			</body>
-		</html>
-	`;
-}
-```
-
-### Let's Test Once More
-
-Once again, let's test that everything works by opening the Extension Development Host window (press `F5`).
-
-Once the webview panel is open, open the Command Pallette (`Cmd + Shift + P`), search for "Preferences: Color Theme", and cycle through all the themes to see the components change!
+Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme", and cycle through all the themes to see the components change!
 
 ![Testing That The Toolkit Theme Utilities Work](./assets/toolkit-theme-test.gif)
 

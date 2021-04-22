@@ -44,26 +44,6 @@ export default [
 			}),
 		],
 	},
-	{
-		context: 'this',
-		input: 'src/utilities/vscode-extension/applyTheme.ts',
-		output: [
-			{
-				file: 'dist/applyTheme.js',
-				format: 'esm',
-				sourcemap: true,
-			},
-		],
-		plugins: [
-			nodeResolve(),
-			commonjs(),
-			typescript(),
-			filesize({
-				showMinifiedSize: false,
-				showBrotliSize: true,
-			}),
-		],
-	},
 ];
 
 // ----- Helper Functions -----
