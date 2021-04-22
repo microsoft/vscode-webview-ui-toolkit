@@ -14,6 +14,14 @@ window.addEventListener('load', () => {
 		'vscode-design-system-provider'
 	);
 	if (designProvider) {
+		const observer = new MutationObserver(() => {
+			applyCurrentTheme(designProvider);
+		});
+		observer.observe(document.body, {
+			attributes: true,
+			attributeFilter: ['class'],
+		});
+
 		applyCurrentTheme(designProvider);
 	}
 });
@@ -30,22 +38,6 @@ function applyCurrentTheme(designProvider: Element) {
 	// current VSCode theme
 	const styles = getComputedStyle(document.body);
 
-	if (designProvider) {
-		setVSCodeThemeOnDesignProvider(styles, designProvider);
-
-		// Listen for messages from the setThemeEventListener utility function
-		window.addEventListener('message', event => {
-			if (event.data.didThemeChange) {
-				setVSCodeThemeOnDesignProvider(styles, designProvider);
-			}
-		});
-	}
-}
-
-function setVSCodeThemeOnDesignProvider(
-	styles: CSSStyleDeclaration,
-	designProvider: Element
-) {
 	for (const colorToken in colorTokensToAttributeNames) {
 		const attributeName = colorTokensToAttributeNames[colorToken];
 		const tokenValue = styles.getPropertyValue(colorToken).toString();
