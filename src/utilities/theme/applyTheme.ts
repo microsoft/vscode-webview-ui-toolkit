@@ -1,47 +1,41 @@
 /**
- * This script applies the current VSCode theme to the VSCode Webview Toolkit
- * components.
- *
- * Note: This utility function should be used in tandem with the
- * setThemeEventListener utility function to correctly set up
- * VSCode theme change handling in the VSCode Webview Toolkit.
+ * This script configures a MutationObserver to watch for VS Code theme changes and
+ * applies the current VS Code theme to the VS Code Webview Toolkit components.
  */
 
 import {colorTokensToAttributeNames} from './tokensToAttributes';
 
 window.addEventListener('load', () => {
-	const designProvider = document.querySelector(
-		'vscode-design-system-provider'
-	);
-	if (designProvider) {
-		const observer = new MutationObserver(() => {
-			applyCurrentTheme(designProvider);
-		});
-		observer.observe(document.body, {
-			attributes: true,
-			attributeFilter: ['class'],
-		});
+	const observer = new MutationObserver(applyCurrentTheme);
+	observer.observe(document.body, {
+		attributes: true,
+		attributeFilter: ['class'],
+	});
 
-		applyCurrentTheme(designProvider);
-	}
+	applyCurrentTheme();
 });
 
 /**
- * Applies the current VSCode theme to the VSCode Webview Toolkit
+ * Applies the current VS Code theme to the VS Code Webview Toolkit
  * components.
- *
- * @param designProvider A reference to the `<vscode-design-system-provider>` element
  */
-function applyCurrentTheme(designProvider: Element) {
-	// Get all the styles applied to the <body> tag in the webview HTML
-	// Importantly this includes all the CSS variables associated with the
-	// current VSCode theme
-	const styles = getComputedStyle(document.body);
+function applyCurrentTheme() {
+	const designProvider = document.querySelector(
+		'vscode-design-system-provider'
+	);
 
-	for (const colorToken in colorTokensToAttributeNames) {
-		const attributeName = colorTokensToAttributeNames[colorToken];
-		const tokenValue = styles.getPropertyValue(colorToken).toString();
-		// Set a given VSCode theme color to its respective <vscode-design-system-provider> attribute
-		designProvider.setAttribute(attributeName, tokenValue);
+	if (designProvider) {
+		// Get all the styles applied to the <body> tag in the webview HTML
+		// Importantly this includes all the CSS variables associated with the
+		// current VS Code theme
+		const styles = getComputedStyle(document.body);
+
+		for (const colorToken in colorTokensToAttributeNames) {
+			const attributeName = colorTokensToAttributeNames[colorToken];
+			const tokenValue = styles.getPropertyValue(colorToken).toString();
+			// Set a given VS Code theme color to its respective
+			// <vscode-design-system-provider> attribute
+			designProvider.setAttribute(attributeName, tokenValue);
+		}
 	}
 }
