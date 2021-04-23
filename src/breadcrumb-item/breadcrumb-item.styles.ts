@@ -74,7 +74,7 @@ export const BreadcrumbItemStyles = css`
     .end {
         display: flex;
     }
-    ::slotted(svg) {
+    ::slotted(svg), ::slotted(span) {
         width: 16px;
         height: 16px;
     }
