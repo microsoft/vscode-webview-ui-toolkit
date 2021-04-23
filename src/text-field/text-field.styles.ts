@@ -62,7 +62,8 @@ export const TextFieldStyles = css`
 		margin: auto;
 		fill: currentcolor;
 	}
-	::slotted(svg) {
+	::slotted(svg),
+	::slotted(span) {
 		width: 16px;
 		height: 16px;
 	}

@@ -74,7 +74,7 @@ The `vscode-select` component must be used with the `vscode-option` component.
 
 ### Custom Indicator
 
-The default indicator is a downward facing chevron, but it can customized by adding an element with the attribute `slot="indicator"`, such as an SVG icon.
+The default indicator is a downward facing chevron, but it can customized by adding an element with the attribute `slot="indicator"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-select--with-custom-indicator)
 
@@ -82,7 +82,7 @@ The default indicator is a downward facing chevron, but it can customized by add
 <!-- Note: Using VSCode Codicon Library -->
 
 <vscode-select>
-	<svg slot="indicator" class="codicon codicon-settings"></svg>
+	<span slot="indicator" class="codicon codicon-settings"></span>
 	<vscode-option>Option Label #1</vscode-option>
 	<vscode-option>Option Label #2</vscode-option>
 	<vscode-option>Option Label #3</vscode-option>

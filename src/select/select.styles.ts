@@ -133,7 +133,8 @@ export const SelectStyles = css`
 	.end,
 	.indicator,
 	.select-indicator,
-	::slotted(svg) {
+	::slotted(svg),
+	::slotted(span) {
 		fill: currentcolor;
 		height: 1em;
 		min-height: calc(var(--design-unit) * 4px);

@@ -60,7 +60,7 @@ There are a number of visual appearances that the `vscode-link` can have. The de
 
 ### Start Icon
 
-An icon can be added to the left of Link text by adding an element with the attribute `slot="start"`, such as an SVG icon.
+An icon can be added to the left of Link text by adding an element with the attribute `slot="start"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-start-icon)
 
@@ -69,13 +69,13 @@ An icon can be added to the left of Link text by adding an element with the attr
 
 <vscode-link href="#">
 	Link Text
-	<svg slot="start" class="codicon codicon-git-merge"></svg>
+	<span slot="start" class="codicon codicon-git-merge"></span>
 </vscode-link>
 ```
 
 ### End Icon
 
-An icon can be added to the right of the Link text by adding an element with the attribute `slot="end"`, such as an SVG icon.
+An icon can be added to the right of the Link text by adding an element with the attribute `slot="end"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-end-icon)
 
@@ -84,7 +84,7 @@ An icon can be added to the right of the Link text by adding an element with the
 
 <vscode-link href="#">
 	Link Text
-	<svg slot="end" class="codicon codicon-chevron-right"></svg>
+	<span slot="end" class="codicon codicon-chevron-right"></span>
 </vscode-link>
 ```
 
@@ -98,6 +98,6 @@ An icon can also fill the default slot of the Button component (instead of text)
 <!-- Note: Using VSCode Codicon Library -->
 
 <vscode-link href="#">
-	<svg class="codicon codicon-check"></svg>
+	<span class="codicon codicon-check"></span>
 </vscode-link>
 ```

@@ -65,7 +65,8 @@ const BaseButtonStyles = css`
 		padding: 0;
 		line-height: 0;
 	}
-	::slotted(svg) {
+	::slotted(svg),
+	::slotted(span) {
 		width: 16px;
 		height: 16px;
 	}

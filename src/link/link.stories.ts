@@ -139,7 +139,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-link href="#">\n\tLink Text\n\t<svg slot="start" class="codicon codicon-git-merge"></svg>\n</vscode-link>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-link href="#">\n\tLink Text\n\t<span slot="start" class="codicon codicon-git-merge"></span>\n</vscode-link>`,
 		},
 	},
 };
@@ -152,7 +152,7 @@ WithEndIcon.args = {
 WithEndIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-link href="#">\n\tLink Text\n\t<svg slot="end" class="codicon codicon-chevron-right"></svg>\n</vscode-link>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-link href="#">\n\tLink Text\n\t<span slot="end" class="codicon codicon-chevron-right"></span>\n</vscode-link>`,
 		},
 	},
 };
@@ -165,7 +165,7 @@ WithIconOnly.args = {
 WithIconOnly.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-link href="#">\n\t<svg class="codicon codicon-check"></svg>\n</vscode-link>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-link href="#">\n\t<span class="codicon codicon-check"></span>\n</vscode-link>`,
 		},
 	},
 };

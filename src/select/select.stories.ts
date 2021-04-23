@@ -112,7 +112,7 @@ WithCustomIndicator.args = {
 WithCustomIndicator.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-select>\n\t<svg slot="indicator" class="codicon codicon-settings"></svg>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-select>\n\t<span slot="indicator" class="codicon codicon-settings"></span>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
 		},
 	},
 };

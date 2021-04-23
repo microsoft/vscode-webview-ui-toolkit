@@ -18,7 +18,7 @@ export function createCodiconIcon({
 	slotName,
 	random,
 }: createCodiconParams): HTMLElement {
-	const icon = document.createElement('svg');
+	const icon = document.createElement('span');
 	if (slotName) {
 		icon.setAttribute('slot', slotName);
 	}

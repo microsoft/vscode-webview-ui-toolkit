@@ -60,10 +60,12 @@ export const OptionStyles = css`
 	}
 	.start,
 	.end,
-	::slotted(svg) {
+	::slotted(svg),
+	::slotted(span) {
 		display: flex;
 	}
-	::slotted(svg) {
+	::slotted(svg),
+	::slotted(span) {
 		height: calc(var(--design-unit) * 4px);
 		width: calc(var(--design-unit) * 4px);
 	}
