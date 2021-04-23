@@ -111,7 +111,7 @@ Specifies whether the `vscode-text-field` is subject to spell checking by the un
 
 ### Start Icon
 
-An icon can be added to the left of the text field by adding an element with the attribute `slot="start"`, such as an SVG icon.
+An icon can be added to the left of the text field by adding an element with the attribute `slot="start"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-field--with-start-icon)
 
@@ -119,13 +119,13 @@ An icon can be added to the left of the text field by adding an element with the
 <!-- Note: Using VSCode Codicon Library -->
 
 <vscode-text-field>
-	<svg slot="start" class="codicon codicon-git-merge"></svg>
+	<span slot="start" class="codicon codicon-git-merge"></span>
 </vscode-text-field>
 ```
 
 ### End Icon
 
-An icon can be added to the right of the text field by adding an element with the attribute `slot="end"`, such as an SVG icon.
+An icon can be added to the right of the text field by adding an element with the attribute `slot="end"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-field--with-end-icon)
 
@@ -133,6 +133,6 @@ An icon can be added to the right of the text field by adding an element with th
 <!-- Note: Using VSCode Codicon Library -->
 
 <vscode-text-field>
-	<svg slot="end" class="codicon codicon-chevron-right"></svg>
+	<span slot="end" class="codicon codicon-chevron-right"></span>
 </vscode-text-field>
 ```
