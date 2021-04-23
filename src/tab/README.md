@@ -38,6 +38,6 @@ Instead of text, an icon can be used as the tab title.
 <!-- Note: Using VSCode Codicon Library -->
 
 <vscode-tab>
-	<svg class="codicon codicon-heart"></svg>
+	<span class="codicon codicon-heart"></span>
 </vscode-tab>
 ```
