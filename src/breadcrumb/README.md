@@ -44,7 +44,7 @@ The Breadcrumb Item usually contains text, but can also contain any valid HTML, 
 
 ### Custom Separators
 
-The default separator is a `/` but it can customized by adding an element with the attribute `slot="separator"`, such as an SVG icon.
+The default separator is a `/` but it can customized by adding an element with the attribute `slot="separator"`, such as an span icon.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb--with-custom-separators)
 
@@ -54,22 +54,22 @@ The default separator is a `/` but it can customized by adding an element with t
 <vscode-breadcrumb>
 	<vscode-breadcrumb-item href="#">
 		src
-		<svg slot="separator" class="codicon codicon-chevron-right"></svg>
+		<span slot="separator" class="codicon codicon-chevron-right"></span>
 	</vscode-breadcrumb-item>
 	<vscode-breadcrumb-item href="#">
 		components
-		<svg slot="separator" class="codicon codicon-chevron-right"></svg>
+		<span slot="separator" class="codicon codicon-chevron-right"></span>
 	</vscode-breadcrumb-item>
 	<vscode-breadcrumb-item href="#">
 		index.ts
-		<svg slot="separator" class="codicon codicon-chevron-right"></svg>
+		<span slot="separator" class="codicon codicon-chevron-right"></span>
 	</vscode-breadcrumb-item>
 </vscode-breadcrumb>
 ```
 
 ### Start Icons
 
-An icon can be added to the left of Breadcrumb Item text by adding an element with the attribute `slot="start"`, such as an SVG icon.
+An icon can be added to the left of Breadcrumb Item text by adding an element with the attribute `slot="start"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb--with-start-icons)
 
@@ -79,22 +79,22 @@ An icon can be added to the left of Breadcrumb Item text by adding an element wi
 <vscode-breadcrumb>
 	<vscode-breadcrumb-item href="#">
 		src
-		<svg slot="start" class="codicon codicon-symbol-method"></svg>
+		<span slot="start" class="codicon codicon-symbol-method"></span>
 	</vscode-breadcrumb-item>
 	<vscode-breadcrumb-item href="#">
 		components
-		<svg slot="start" class="codicon codicon-symbol-method"></svg>
+		<span slot="start" class="codicon codicon-symbol-method"></span>
 	</vscode-breadcrumb-item>
 	<vscode-breadcrumb-item href="#">
 		index.ts
-		<svg slot="start" class="codicon codicon-symbol-method"></svg>
+		<span slot="start" class="codicon codicon-symbol-method"></span>
 	</vscode-breadcrumb-item>
 </vscode-breadcrumb>
 ```
 
 ### End Icons
 
-An icon can be added to the right of Breadcrumb Item text by adding an element with the attribute `slot="end"`, such as an SVG icon.
+An icon can be added to the right of Breadcrumb Item text by adding an element with the attribute `slot="end"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb--with-end-icons)
 
@@ -104,15 +104,15 @@ An icon can be added to the right of Breadcrumb Item text by adding an element w
 <vscode-breadcrumb>
 	<vscode-breadcrumb-item href="#">
 		src
-		<svg slot="end" class="codicon codicon-symbol-method"></svg>
+		<span slot="end" class="codicon codicon-symbol-method"></span>
 	</vscode-breadcrumb-item>
 	<vscode-breadcrumb-item href="#">
 		components
-		<svg slot="end" class="codicon codicon-symbol-method"></svg>
+		<span slot="end" class="codicon codicon-symbol-method"></span>
 	</vscode-breadcrumb-item>
 	<vscode-breadcrumb-item href="#">
 		index.ts
-		<svg slot="end" class="codicon codicon-symbol-method"></svg>
+		<span slot="end" class="codicon codicon-symbol-method"></span>
 	</vscode-breadcrumb-item>
 </vscode-breadcrumb>
 ```
