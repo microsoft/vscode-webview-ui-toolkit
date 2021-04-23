@@ -61,7 +61,7 @@ There are a number of visual appearances that the `vscode-button` can have. The 
 
 ### Start Icon
 
-An icon can be added to the left of Button text by adding an element with the attribute `slot="start"`, such as an SVG icon.
+An icon can be added to the left of Button text by adding an element with the attribute `slot="start"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--with-start-icon)
 
@@ -70,13 +70,13 @@ An icon can be added to the left of Button text by adding an element with the at
 
 <vscode-button>
 	Button Text
-	<svg slot="start" class="codicon codicon-git-merge"></svg>
+	<span slot="start" class="codicon codicon-git-merge"></span>
 </vscode-button>
 ```
 
 ### End Icon
 
-An icon can be added to the right of the Button text by adding an element with the attribute `slot="end"`, such as an SVG icon.
+An icon can be added to the right of the Button text by adding an element with the attribute `slot="end"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--with-end-icon)
 
@@ -85,7 +85,7 @@ An icon can be added to the right of the Button text by adding an element with t
 
 <vscode-button>
 	Button Text
-	<svg slot="end" class="codicon codicon-chevron-right"></svg>
+	<span slot="end" class="codicon codicon-chevron-right"></span>
 </vscode-button>
 ```
 
@@ -99,6 +99,6 @@ An icon can also fill the default slot of the Button component (instead of text)
 <!-- Note: Using VSCode Codicon Library -->
 
 <vscode-button>
-	<svg class="codicon codicon-check"></svg>
+	<span class="codicon codicon-check"></span>
 </vscode-button>
 ```

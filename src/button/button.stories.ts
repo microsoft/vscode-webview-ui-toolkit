@@ -140,7 +140,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<svg slot="start" class="codicon codicon-git-merge"></svg>\n</vscode-button>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<span slot="start" class="codicon codicon-git-merge"></span>\n</vscode-button>`,
 		},
 	},
 };
@@ -153,7 +153,7 @@ WithEndIcon.args = {
 WithEndIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<svg slot="end" class="codicon codicon-chevron-right"></svg>\n</vscode-button>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<span slot="end" class="codicon codicon-chevron-right"></span>\n</vscode-button>`,
 		},
 	},
 };
@@ -166,7 +166,7 @@ WithIconOnly.args = {
 WithIconOnly.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-button>\n\t<svg class="codicon codicon-check"></svg>\n</vscode-button>`,
+			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-button>\n\t<span class="codicon codicon-check"></span>\n</vscode-button>`,
 		},
 	},
 };
