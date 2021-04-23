@@ -46,7 +46,7 @@ The `vscode-option` component will only provide internals related to form associ
 
 ### Start Icon
 
-An icon can be added to the left of the Option text by adding an element with the attribute `slot="start"`, such as an SVG icon.
+An icon can be added to the left of the Option text by adding an element with the attribute `slot="start"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-start-icon)
 
@@ -55,13 +55,13 @@ An icon can be added to the left of the Option text by adding an element with th
 
 <vscode-option>
 	Option Label
-	<svg slot="start" class="codicon codicon-symbol-method"></svg>
+	<span slot="start" class="codicon codicon-symbol-method"></span>
 </vscode-option>
 ```
 
 ### End Icon
 
-An icon can be added to the right of the Option text by adding an element with the attribute `slot="end"`, such as an SVG icon.
+An icon can be added to the right of the Option text by adding an element with the attribute `slot="end"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-end-icon)
 
@@ -70,6 +70,6 @@ An icon can be added to the right of the Option text by adding an element with t
 
 <vscode-option>
 	Option Label
-	<svg slot="end" class="codicon codicon-symbol-method"></svg>
+	<span slot="end" class="codicon codicon-symbol-method"></span>
 </vscode-option>
 ```
