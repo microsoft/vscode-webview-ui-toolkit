@@ -40,7 +40,7 @@ The Breadcrumb Item usually contains text, but can also contain any valid HTML, 
 
 ### Custom Separator
 
-The default separator is a `/` but it can customized by adding an element with the attribute `slot="separator"`, such as an SVG icon.
+The default separator is a `/` but it can customized by adding an element with the attribute `slot="separator"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-custom-separator)
 
@@ -49,13 +49,13 @@ The default separator is a `/` but it can customized by adding an element with t
 
 <vscode-breadcrumb-item href="#">
 	Breadcrumb Item Label
-	<svg slot="separator" class="codicon codicon-chevron-right"></svg>
+	<span slot="separator" class="codicon codicon-chevron-right"></span>
 </vscode-breadcrumb-item>
 ```
 
 ### Start Icon
 
-An icon can be added to the left of Breadcrumb Item text by adding an element with the attribute `slot="start"`, such as an SVG icon.
+An icon can be added to the left of Breadcrumb Item text by adding an element with the attribute `slot="start"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-start-icon)
 
@@ -64,13 +64,13 @@ An icon can be added to the left of Breadcrumb Item text by adding an element wi
 
 <vscode-breadcrumb-item href="#">
 	Breadcrumb Item Label
-	<svg slot="start" class="codicon codicon-symbol-method"></svg>
+	<span slot="start" class="codicon codicon-symbol-method"></span>
 </vscode-breadcrumb-item>
 ```
 
 ### End Icon
 
-An icon can be added to the right of Breadcrumb Item text by adding an element with the attribute `slot="end"`, such as an SVG icon.
+An icon can be added to the right of Breadcrumb Item text by adding an element with the attribute `slot="end"`.
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-end-icon)
 
@@ -79,6 +79,6 @@ An icon can be added to the right of Breadcrumb Item text by adding an element w
 
 <vscode-breadcrumb-item href="#">
 	Breadcrumb Item Label
-	<svg slot="end" class="codicon codicon-symbol-method"></svg>
+	<span slot="end" class="codicon codicon-symbol-method"></span>
 </vscode-breadcrumb-item>
 ```
