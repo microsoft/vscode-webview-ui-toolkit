@@ -1,4 +1,4 @@
-# VSCode Select
+# VS Code Select
 
 The `vscode-select` is a web component implementation of an [HTML Select Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
 
@@ -79,7 +79,7 @@ The default indicator is a downward facing chevron, but it can customized by add
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-select--with-custom-indicator)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-select>
 	<span slot="indicator" class="codicon codicon-settings"></span>

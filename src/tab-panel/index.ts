@@ -6,7 +6,7 @@ import {
 import {TabPanelStyles as styles} from './tab-panel.styles';
 
 /**
- * The VSCode Tab Panel element. Extends
+ * The VS Code Tab Panel element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.tabpanel/ | TabPanel} and
  * {@link https://www.fast.design/docs/api/fast-foundation.tabpaneltemplate/ | TabPanelTemplate}.
  *
@@ -22,7 +22,7 @@ import {TabPanelStyles as styles} from './tab-panel.styles';
 export class VSCodeTabPanel extends TabPanel {}
 
 /**
- * Styles for the VSCode Tab Panel component
+ * Styles for the VS Code Tab Panel component
  * @public
  */
 export const TabPanelStyles: ElementStyles = styles;

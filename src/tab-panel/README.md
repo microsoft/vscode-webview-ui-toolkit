@@ -1,4 +1,4 @@
-# VSCode Tab Panel
+# VS Code Tab Panel
 
 The `vscode-tab-panel` is one part of three components that make up a `tabs` component that can interchangably display different content.
 

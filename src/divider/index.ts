@@ -3,7 +3,7 @@ import {Divider, DividerTemplate as template} from '@microsoft/fast-foundation';
 import {DividerStyles as styles} from './divider.styles';
 
 /**
- * The VSCode Divider element. Extends
+ * The VS Code Divider element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.divider/ | Divider} and
  * {@link https://www.fast.design/docs/api/fast-foundation.dividertemplate/ | DividerTemplate}.
  *
@@ -19,7 +19,7 @@ import {DividerStyles as styles} from './divider.styles';
 export class VSCodeDivider extends Divider {}
 
 /**
- * Styles for the VSCode Divider component
+ * Styles for the VS Code Divider component
  * @public
  */
 export const DividerStyles: ElementStyles = styles;

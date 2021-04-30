@@ -6,7 +6,7 @@ import {
 import {OptionStyles as styles} from './option.styles';
 
 /**
- * The VSCode Option element. Extends
+ * The VS Code Option element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.listboxoption/ | ListboxOption} and
  * {@link https://www.fast.design/docs/api/fast-foundation.listboxoptiontemplate/ | ListboxOptionTemplate}.
  *
@@ -22,7 +22,7 @@ import {OptionStyles as styles} from './option.styles';
 export class VSCodeOption extends ListboxOption {}
 
 /**
- * Styles for the VSCode Option component
+ * Styles for the VS Code Option component
  * @public
  */
 export const OptionStyles: ElementStyles = styles;

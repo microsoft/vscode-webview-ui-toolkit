@@ -1,4 +1,4 @@
-# VSCode Breadcrumb Item
+# VS Code Breadcrumb Item
 
 The `vscode-breadcrumb-item` is a component meant to be used with `vscode-breadcrumb`.
 
@@ -45,7 +45,7 @@ The default separator is a `/` but it can customized by adding an element with t
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-custom-separator)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-breadcrumb-item href="#">
 	Breadcrumb Item Label
@@ -60,7 +60,7 @@ An icon can be added to the left of Breadcrumb Item text by adding an element wi
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-start-icon)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-breadcrumb-item href="#">
 	Breadcrumb Item Label
@@ -75,7 +75,7 @@ An icon can be added to the right of Breadcrumb Item text by adding an element w
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-end-icon)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-breadcrumb-item href="#">
 	Breadcrumb Item Label

@@ -1,5 +1,5 @@
 /**
- * A mapping of all the VSCode theme CSS variables mapped to the
+ * A mapping of all the VS Code theme CSS variables mapped to the
  * associated attributes that the `vscode-design-system-provider` defines
  */
 export const colorTokensToAttributeNames: any = {

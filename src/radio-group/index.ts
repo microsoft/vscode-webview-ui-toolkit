@@ -6,7 +6,7 @@ import {
 import {RadioGroupStyles as styles} from './radio-group.styles';
 
 /**
- * The VSCode Radio Group element. Extends
+ * The VS Code Radio Group element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.radiogroup/ | RadioGroup} and
  * {@link https://www.fast.design/docs/api/fast-foundation.radiogrouptemplate/ | RadioGroupTemplate}.
  *
@@ -22,7 +22,7 @@ import {RadioGroupStyles as styles} from './radio-group.styles';
 export class VSCodeRadioGroup extends RadioGroup {}
 
 /**
- * Styles for the VSCode Radio Group component
+ * Styles for the VS Code Radio Group component
  * @public
  */
 export const RadioGroupStyles: ElementStyles = styles;

@@ -1,4 +1,4 @@
-# VSCode Tab
+# VS Code Tab
 
 The `vscode-tab` is one part of three components that make up a `tabs` component that can interchangably display different content.
 
@@ -10,7 +10,7 @@ The `vscode-tab` is one part of three components that make up a `tabs` component
 
 ## Usage
 
-The `vscode-tab` component must be used in tandem with the `vscode-pabel` and `vscode-tabs` components. See the documentation for `vscode-tabs` to see how all the components go together.
+The `vscode-tab` component must be used in tandem with the `vscode-panel` and `vscode-tabs` components. See the documentation for `vscode-tabs` to see how all the components go together.
 
 ### Basic Usage
 
@@ -35,7 +35,7 @@ Instead of text, an icon can be used as the tab title.
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-tabs--with-custom-tab-icons)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-tab>
 	<span class="codicon codicon-heart"></span>

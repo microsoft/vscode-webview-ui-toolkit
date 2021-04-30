@@ -6,7 +6,7 @@ import {
 import {TextAreaStyles as styles} from './text-area.styles';
 
 /**
- * The VSCode Text Area element. Extends
+ * The VS Code Text Area element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.textarea/ | TextArea} and
  * {@link https://www.fast.design/docs/api/fast-foundation.textareatemplate/ | TextAreaTemplate}.
  *
@@ -28,7 +28,7 @@ import {TextAreaStyles as styles} from './text-area.styles';
 export class VSCodeTextArea extends TextArea {}
 
 /**
- * Styles for the VSCode Text Area component
+ * Styles for the VS Code Text Area component
  * @public
  */
 export const TextAreaStyles: ElementStyles = styles;

@@ -1,1 +1,0 @@
-# VSCode Design System Provider

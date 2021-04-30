@@ -6,7 +6,7 @@ import {
 import {ProgressBarStyles as styles} from './progress-bar.styles';
 
 /**
- * The VSCode Progress Bar element. Extends
+ * The VS Code Progress Bar element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ | BaseProgress} and
  * {@link https://www.fast.design/docs/api/fast-foundation.progresstemplate/ | ProgressTemplate}.
  *
@@ -22,7 +22,7 @@ import {ProgressBarStyles as styles} from './progress-bar.styles';
 export class VSCodeProgressBar extends BaseProgress {}
 
 /**
- * Styles for the VSCode Progress Bar
+ * Styles for the VS Code Progress Bar
  * @public
  */
 export const ProgressBarStyles: ElementStyles = styles;

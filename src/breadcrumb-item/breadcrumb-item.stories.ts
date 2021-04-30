@@ -85,7 +85,7 @@ WithCustomSeparator.args = {
 WithCustomSeparator.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n</vscode-breadcrumb-item>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n</vscode-breadcrumb-item>`,
 		},
 	},
 };
@@ -100,7 +100,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<span slot="start" class="codicon codicon-symbol-method"></span>\n\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n</vscode-breadcrumb-item>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<span slot="start" class="codicon codicon-symbol-method"></span>\n\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n</vscode-breadcrumb-item>`,
 		},
 	},
 };
@@ -115,7 +115,7 @@ WithEndIcon.args = {
 WithEndIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<span slot="end" class="codicon codicon-symbol-method"></span>\n\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n</vscode-breadcrumb-item>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-breadcrumb-item href="#">\n\tBreadcrumb Item Label\n\t<span slot="end" class="codicon codicon-symbol-method"></span>\n\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n</vscode-breadcrumb-item>`,
 		},
 	},
 };

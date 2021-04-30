@@ -12,7 +12,7 @@ import {TextFieldStyles as styles} from './text-field.styles';
 export type TextFieldAppearance = 'filled' | 'outline';
 
 /**
- * The VSCode Text Field element. Extends
+ * The VS Code Text Field element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.textfield/ | TextField} and
  * {@link https://www.fast.design/docs/api/fast-foundation.textfieldtemplate/ | TextFieldTemplate}.
  *
@@ -54,7 +54,7 @@ export class VSCodeTextField extends TextField {
 }
 
 /**
- * Styles for the VSCode Text Field component
+ * Styles for the VS Code Text Field component
  * @public
  */
 export const TextFieldStyles: ElementStyles = styles;

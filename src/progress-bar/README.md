@@ -1,4 +1,4 @@
-# VSCode Progress Bar
+# VS Code Progress Bar
 
 The `vscode-progress-bar` component is used to indicate the length of time a process will take.
 

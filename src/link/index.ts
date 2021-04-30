@@ -10,7 +10,7 @@ import {LinkStyles as styles} from './link.styles';
 export type LinkAppearance = ButtonAppearance | 'hypertext';
 
 /**
- * The VSCode Link element. Extends
+ * The VS Code Link element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.anchor/ | Anchor} and
  * {@link https://www.fast.design/docs/api/fast-foundation.anchortemplate/ | AnchorTemplate}.
  *
@@ -77,7 +77,7 @@ export class VSCodeLink extends Anchor {
 }
 
 /**
- * Styles for the VSCode Link component
+ * Styles for the VS Code Link component
  * @public
  */
 export const LinkStyles: ElementStyles = styles;

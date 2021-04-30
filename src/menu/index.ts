@@ -3,7 +3,7 @@ import {Menu, MenuTemplate as template} from '@microsoft/fast-foundation';
 import {MenuStyles as styles} from './menu.styles';
 
 /**
- * The VSCode Menu element. Extends
+ * The VS Code Menu element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.menu/ | Menu} and
  * {@link https://www.fast.design/docs/api/fast-foundation.menutemplate/ | MenuTemplate}.
  *
@@ -19,7 +19,7 @@ import {MenuStyles as styles} from './menu.styles';
 export class VSCodeMenu extends Menu {}
 
 /**
- * Styles for the VSCode Menu component
+ * Styles for the VS Code Menu component
  * @public
  */
 export const MenuStyles: ElementStyles = styles;

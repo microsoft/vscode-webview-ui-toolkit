@@ -14,7 +14,7 @@ export type ButtonAppearance =
 	| 'text';
 
 /**
- * The VSCode Button Element. Extends
+ * The VS Code Button Element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.button/ | Button} and
  * {@link https://www.fast.design/docs/api/fast-foundation.buttontemplate/ | ButtonTemplate}.
  *
@@ -53,7 +53,7 @@ export class VSCodeButton extends Button {
 }
 
 /**
- * Styles for the VSCode Button component
+ * Styles for the VS Code Button component
  * @public
  */
 export const ButtonStyles: ElementStyles = styles;

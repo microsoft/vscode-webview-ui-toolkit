@@ -6,7 +6,7 @@ import {
 import {ProgressRingStyles as styles} from './progress-ring.styles';
 
 /**
- * The VSCode Progress Ring element. Extends
+ * The VS Code Progress Ring element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ | BaseProgress} and
  * {@link https://www.fast.design/docs/api/fast-foundation.progressringtemplate/ | ProgressRingTemplate}.
  *
@@ -22,7 +22,7 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
 export class VSCodeProgressRing extends BaseProgress {}
 
 /**
- * Styles for the VSCode Progress Ring component
+ * Styles for the VS Code Progress Ring component
  * @public
  */
 export const ProgressRingStyles: ElementStyles = styles;

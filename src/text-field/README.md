@@ -1,4 +1,4 @@
-# VSCode Text Field
+# VS Code Text Field
 
 The `vscode-text-field` is a web component implementation of an [HTML Text Field Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/text).
 
@@ -116,7 +116,7 @@ An icon can be added to the left of the text field by adding an element with the
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-field--with-start-icon)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-text-field>
 	<span slot="start" class="codicon codicon-git-merge"></span>
@@ -130,7 +130,7 @@ An icon can be added to the right of the text field by adding an element with th
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-field--with-end-icon)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-text-field>
 	<span slot="end" class="codicon codicon-chevron-right"></span>
