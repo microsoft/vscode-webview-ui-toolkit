@@ -7,9 +7,10 @@ import {SelectStyles as styles} from './select.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.select/ | Select} and
  * {@link https://www.fast.design/docs/api/fast-foundation.selecttemplate/ | SelectTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-select>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-select',

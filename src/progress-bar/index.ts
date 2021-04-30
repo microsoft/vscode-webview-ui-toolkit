@@ -10,9 +10,10 @@ import {ProgressBarStyles as styles} from './progress-bar.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ | BaseProgress} and
  * {@link https://www.fast.design/docs/api/fast-foundation.progresstemplate/ | ProgressTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-progress-bar>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-progress-bar',

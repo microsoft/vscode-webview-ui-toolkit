@@ -9,9 +9,10 @@ const template = createMenuItemTemplate('vscode');
  * {@link https://www.fast.design/docs/api/fast-foundation.menuitem/ | MenuItem} and
  * {@link https://www.fast.design/docs/api/fast-foundation.menuitemtemplate/ | MenuItemTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-menu-item>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-menu-item',

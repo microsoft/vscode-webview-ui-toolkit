@@ -10,9 +10,10 @@ import {TabPanelStyles as styles} from './tab-panel.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.tabpanel/ | TabPanel} and
  * {@link https://www.fast.design/docs/api/fast-foundation.tabpaneltemplate/ | TabPanelTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-tab-panel>`
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-tab-panel',

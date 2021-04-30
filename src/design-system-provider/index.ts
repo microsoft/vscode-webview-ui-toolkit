@@ -16,9 +16,10 @@ import {DesignSystemProviderStyles as styles} from './design-system-provider.sty
  * {@link https://www.fast.design/docs/api/fast-foundation.designsystemprovider/ | DesignSystemProvider} and
  * {@link https://www.fast.design/docs/api/fast-foundation.designsystemprovidertemplate/ | DesignSystemProviderTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-design-system-provider>`
+ *
+ * @public
  */
 @defineDesignSystemProvider({
 	name: 'vscode-design-system-provider',

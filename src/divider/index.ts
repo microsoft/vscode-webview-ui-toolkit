@@ -7,9 +7,10 @@ import {DividerStyles as styles} from './divider.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.divider/ | Divider} and
  * {@link https://www.fast.design/docs/api/fast-foundation.dividertemplate/ | DividerTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-divider>`
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-divider',

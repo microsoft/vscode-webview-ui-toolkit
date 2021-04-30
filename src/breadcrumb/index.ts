@@ -10,9 +10,10 @@ import {BreadcrumbStyles as styles} from './breadcrumb.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.breadcrumb/ | Breadcrumb} and
  * {@link https://www.fast.design/docs/api/fast-foundation.breadcrumbtemplate/ | BreadcrumbTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-breadcrumb>`
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-breadcrumb',

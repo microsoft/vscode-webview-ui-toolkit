@@ -7,9 +7,10 @@ import {MenuStyles as styles} from './menu.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.menu/ | Menu} and
  * {@link https://www.fast.design/docs/api/fast-foundation.menutemplate/ | MenuTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-menu>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-menu',

@@ -16,11 +16,12 @@ export type TextFieldAppearance = 'filled' | 'outline';
  * {@link https://www.fast.design/docs/api/fast-foundation.textfield/ | TextField} and
  * {@link https://www.fast.design/docs/api/fast-foundation.textfieldtemplate/ | TextFieldTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-text-field>`
  *
  * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-text-field',
@@ -34,9 +35,10 @@ export class VSCodeTextField extends TextField {
 	/**
 	 * The appearance of the element.
 	 *
-	 * @public
 	 * @remarks
 	 * HTML Attribute: appearance
+	 *
+	 * @public
 	 */
 	@attr
 	public appearance: TextFieldAppearance;

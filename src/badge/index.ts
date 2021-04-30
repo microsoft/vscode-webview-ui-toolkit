@@ -7,9 +7,10 @@ import {BadgeStyles as styles} from './badge.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.badge/ | Badge} and
  * {@link https://www.fast.design/docs/api/fast-foundation.badgetemplate/ | BadgeTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-badge>`
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-badge',

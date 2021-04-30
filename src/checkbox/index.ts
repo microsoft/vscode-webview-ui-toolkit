@@ -10,9 +10,10 @@ import {CheckboxStyles as styles} from './checkbox.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.checkbox/ | Checkbox} and
  * {@link https://www.fast.design/docs/api/fast-foundation.checkboxtemplate/ | CheckboxTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-checkbox>`
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-checkbox',

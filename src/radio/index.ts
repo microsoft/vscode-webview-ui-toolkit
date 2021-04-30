@@ -7,9 +7,10 @@ import {RadioStyles as styles} from './radio.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.radio/ | Radio} and
  * {@link https://www.fast.design/docs/api/fast-foundation.radiotemplate/ | RadioTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-radio>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-radio',

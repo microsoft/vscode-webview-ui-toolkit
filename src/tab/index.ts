@@ -7,9 +7,10 @@ import {TabStyles as styles} from './tab.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.tab/ | Tab} and
  * {@link https://www.fast.design/docs/api/fast-foundation.tabtemplate/ | TabTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-tab>`
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-tab',

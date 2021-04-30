@@ -10,9 +10,10 @@ import {RadioGroupStyles as styles} from './radio-group.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.radiogroup/ | RadioGroup} and
  * {@link https://www.fast.design/docs/api/fast-foundation.radiogrouptemplate/ | RadioGroupTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-radio-group>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-radio-group',

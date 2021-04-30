@@ -10,9 +10,10 @@ import {OptionStyles as styles} from './option.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.listboxoption/ | ListboxOption} and
  * {@link https://www.fast.design/docs/api/fast-foundation.listboxoptiontemplate/ | ListboxOptionTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-option>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-option',

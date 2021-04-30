@@ -10,9 +10,10 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
  * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ | BaseProgress} and
  * {@link https://www.fast.design/docs/api/fast-foundation.progressringtemplate/ | ProgressRingTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-progress-ring>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-progress-ring',

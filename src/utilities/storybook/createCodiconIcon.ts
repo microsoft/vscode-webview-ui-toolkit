@@ -12,6 +12,8 @@ type createCodiconParams = {
  * @param iconName (optional) The name of the Codicon icon that should be created
  * @param slotName (optional) The name of the slot that the icon will be inserted into
  * @param random (optional) If true, a random Codicon icon will be returned
+ *
+ * @internal
  */
 export function createCodiconIcon({
 	iconName,
