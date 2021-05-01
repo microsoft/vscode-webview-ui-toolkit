@@ -15,7 +15,7 @@
 		"url": "git+https://github.com/microsoft/vscode-webview-toolkit.git"
 	},
 	"main": "dist/esm/index.js",
-	"types": "dist/toolkit.d.ts",
+	"types": "dist/dts/index.d.ts",
 	"scripts": {
 		"start": "start-storybook -p 6006",
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
