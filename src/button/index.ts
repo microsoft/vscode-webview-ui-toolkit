@@ -1,4 +1,4 @@
-import {attr, customElement, ElementStyles} from '@microsoft/fast-element';
+import {attr, customElement} from '@microsoft/fast-element';
 import {Button, ButtonTemplate as template} from '@microsoft/fast-foundation';
 import {ButtonStyles as styles} from './button.styles';
 
@@ -24,7 +24,7 @@ export type ButtonAppearance =
  * HTML Attribute: `appearance = primary | secondary | install | text | link`
  *
  * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
- * 
+ *
  * @public
  */
 @customElement({
@@ -41,7 +41,7 @@ export class VSCodeButton extends Button {
 	 *
 	 * @remarks
 	 * HTML Attribute: appearance
-	 * 
+	 *
 	 * @public
 	 */
 	@attr public appearance: ButtonAppearance;
@@ -53,9 +53,3 @@ export class VSCodeButton extends Button {
 		}
 	}
 }
-
-/**
- * Styles for the VS Code Button component
- * @public
- */
-export const ButtonStyles: ElementStyles = styles;

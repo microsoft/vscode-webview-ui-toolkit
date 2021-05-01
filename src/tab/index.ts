@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {Tab, TabTemplate as template} from '@microsoft/fast-foundation';
 import {TabStyles as styles} from './tab.styles';
 
@@ -9,7 +9,7 @@ import {TabStyles as styles} from './tab.styles';
  *
  * @remarks
  * HTML Element: `<vscode-tab>`
- * 
+ *
  * @public
  */
 @customElement({
@@ -18,9 +18,3 @@ import {TabStyles as styles} from './tab.styles';
 	styles,
 })
 export class VSCodeTab extends Tab {}
-
-/**
- * Styles for the VS Code Tab component
- * @public
- */
-export const TabStyles: ElementStyles = styles;

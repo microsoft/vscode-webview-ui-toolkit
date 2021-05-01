@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {Radio, RadioTemplate as template} from '@microsoft/fast-foundation';
 import {RadioStyles as styles} from './radio.styles';
 
@@ -18,9 +18,3 @@ import {RadioStyles as styles} from './radio.styles';
 	styles,
 })
 export class VSCodeRadio extends Radio {}
-
-/**
- * Styles for the VS Code Radio component
- * @public
- */
-export const RadioStyles: ElementStyles = styles;

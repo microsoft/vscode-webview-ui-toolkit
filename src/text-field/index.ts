@@ -1,4 +1,4 @@
-import {attr, customElement, ElementStyles} from '@microsoft/fast-element';
+import {attr, customElement} from '@microsoft/fast-element';
 import {
 	TextFieldTemplate as template,
 	TextField,
@@ -54,9 +54,3 @@ export class VSCodeTextField extends TextField {
 		}
 	}
 }
-
-/**
- * Styles for the VS Code Text Field component
- * @public
- */
-export const TextFieldStyles: ElementStyles = styles;

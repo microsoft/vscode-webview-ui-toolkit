@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {Divider, DividerTemplate as template} from '@microsoft/fast-foundation';
 import {DividerStyles as styles} from './divider.styles';
 
@@ -9,7 +9,7 @@ import {DividerStyles as styles} from './divider.styles';
  *
  * @remarks
  * HTML Element: `<vscode-divider>`
- * 
+ *
  * @public
  */
 @customElement({
@@ -18,9 +18,3 @@ import {DividerStyles as styles} from './divider.styles';
 	styles,
 })
 export class VSCodeDivider extends Divider {}
-
-/**
- * Styles for the VS Code Divider component
- * @public
- */
-export const DividerStyles: ElementStyles = styles;

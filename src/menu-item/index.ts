@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {createMenuItemTemplate, MenuItem} from '@microsoft/fast-foundation';
 import {MenuItemStyles as styles} from './menu-item.styles';
 
@@ -20,9 +20,3 @@ const template = createMenuItemTemplate('vscode');
 	styles,
 })
 export class VSCodeMenuItem extends MenuItem {}
-
-/**
- * Styles for the VS Code Menu Item component
- * @public
- */
-export const MenuItemStyles: ElementStyles = styles;

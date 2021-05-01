@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {
 	BaseProgress,
 	ProgressRingTemplate as template,
@@ -21,9 +21,3 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
 	styles,
 })
 export class VSCodeProgressRing extends BaseProgress {}
-
-/**
- * Styles for the VS Code Progress Ring component
- * @public
- */
-export const ProgressRingStyles: ElementStyles = styles;

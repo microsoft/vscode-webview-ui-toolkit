@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
 import {BadgeStyles as styles} from './badge.styles';
 
@@ -9,7 +9,7 @@ import {BadgeStyles as styles} from './badge.styles';
  *
  * @remarks
  * HTML Element: `<vscode-badge>`
- * 
+ *
  * @public
  */
 @customElement({
@@ -18,9 +18,3 @@ import {BadgeStyles as styles} from './badge.styles';
 	styles,
 })
 export class VSCodeBadge extends Badge {}
-
-/**
- * Styles for the VS Code Badge component
- * @public
- */
-export const BadgeStyles: ElementStyles = styles;
