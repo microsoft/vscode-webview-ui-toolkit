@@ -18,7 +18,7 @@
 	"types": "dist/dts/index.d.ts",
 	"scripts": {
 		"start": "start-storybook -p 6006",
-		"build": "rollup -c && tsc -p ./tsconfig.json",
+		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
 		"build-storybook": "build-storybook",
 		"doc": "api-extractor run --local",
 		"lint": "eslint . --ext .ts",
