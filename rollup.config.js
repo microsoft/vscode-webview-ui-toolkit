@@ -4,6 +4,7 @@ import filesize from 'rollup-plugin-filesize';
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import transformTaggedTemplate from 'rollup-plugin-transform-tagged-template';
 import typescript from '@rollup/plugin-typescript';
+import {terser} from 'rollup-plugin-terser';
 import del from 'rollup-plugin-delete';
 
 // ----- Rollup Config -----
@@ -20,7 +21,11 @@ export default [
 			{
 				file: 'dist/toolkit.js',
 				format: 'esm',
-				sourcemap: true,
+			},
+			{
+				file: 'dist/toolkit.min.js',
+				format: 'esm',
+				plugins: [terser()],
 			},
 		],
 		plugins: [
