@@ -12,7 +12,7 @@ import {BreadcrumbStyles as styles} from './breadcrumb.styles';
  *
  * @remarks
  * HTML Element: `<vscode-breadcrumb>`
- * 
+ *
  * @public
  */
 @customElement({
