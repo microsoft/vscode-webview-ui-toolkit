@@ -1,4 +1,4 @@
-# VSCode Text Area
+# VS Code Text Area
 
 The `vscode-text-area` is a web component implementation of an [HTML Text Area Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
 

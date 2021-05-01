@@ -5,13 +5,14 @@ import {MenuItemStyles as styles} from './menu-item.styles';
 const template = createMenuItemTemplate('vscode');
 
 /**
- * The VSCode Menu Item element. Extends
+ * The VS Code Menu Item element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.menuitem/ | MenuItem} and
  * {@link https://www.fast.design/docs/api/fast-foundation.menuitemtemplate/ | MenuItemTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-menu-item>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-menu-item',
@@ -21,7 +22,7 @@ const template = createMenuItemTemplate('vscode');
 export class VSCodeMenuItem extends MenuItem {}
 
 /**
- * Styles for the VSCode Menu Item component
+ * Styles for the VS Code Menu Item component
  * @public
  */
 export const MenuItemStyles: ElementStyles = styles;

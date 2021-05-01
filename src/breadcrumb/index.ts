@@ -6,13 +6,14 @@ import {
 import {BreadcrumbStyles as styles} from './breadcrumb.styles';
 
 /**
- * The VSCode Breadcrumb element. Extends
+ * The VS Code Breadcrumb element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.breadcrumb/ | Breadcrumb} and
  * {@link https://www.fast.design/docs/api/fast-foundation.breadcrumbtemplate/ | BreadcrumbTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-breadcrumb>`
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-breadcrumb',
@@ -22,7 +23,7 @@ import {BreadcrumbStyles as styles} from './breadcrumb.styles';
 export class VSCodeBreadcrumb extends Breadcrumb {}
 
 /**
- * Styles for the VSCode Breadcrumb component
+ * Styles for the VS Code Breadcrumb component
  * @public
  */
 export const BreadcrumbStyles: ElementStyles = styles;

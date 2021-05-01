@@ -3,13 +3,14 @@ import {Tabs, TabsTemplate as template} from '@microsoft/fast-foundation';
 import {TabsStyles as styles} from './tabs.styles';
 
 /**
- * The VSCode Tabs element. Extends
+ * The VS Code Tabs element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.tabs/ | Tabs} and
  * {@link https://www.fast.design/docs/api/fast-foundation.tabstemplate/ | TabsTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-tabs>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-tabs',
@@ -22,7 +23,7 @@ export * from '../tab/index';
 export * from '../tab-panel/index';
 
 /**
- * Styles for the VSCode Tabs component
+ * Styles for the VS Code Tabs component
  * @public
  */
 export const TabsStyles: ElementStyles = styles;

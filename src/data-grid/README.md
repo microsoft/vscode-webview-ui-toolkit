@@ -1,4 +1,4 @@
-# VSCode Data Grid
+# VS Code Data Grid
 
 The `vscode-data-grid` enables developers to display an array of data in a tabular layout. The component is created using three components that work together:
 

@@ -1,4 +1,4 @@
-# VSCode Badge
+# VS Code Badge
 
 The `vscode-badge` component is used to highlight an item, attract attention, and/or flag status.
 

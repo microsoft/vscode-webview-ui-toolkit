@@ -1,5 +1,5 @@
 /**
- * Defines the properties in the VSCode Design System
+ * Defines the properties in the VS Code Design System
  * @public
  */
 export interface VSCodeDesignSystem {

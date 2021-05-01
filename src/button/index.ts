@@ -14,17 +14,18 @@ export type ButtonAppearance =
 	| 'text';
 
 /**
- * The VSCode Button Element. Extends
+ * The VS Code Button Element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.button/ | Button} and
  * {@link https://www.fast.design/docs/api/fast-foundation.buttontemplate/ | ButtonTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-button>`
  *
  * HTML Attribute: `appearance = primary | secondary | install | text | link`
  *
  * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-button',
@@ -38,9 +39,10 @@ export class VSCodeButton extends Button {
 	/**
 	 * The appearance the button should have.
 	 *
-	 * @public
 	 * @remarks
 	 * HTML Attribute: appearance
+	 * 
+	 * @public
 	 */
 	@attr public appearance: ButtonAppearance;
 
@@ -53,7 +55,7 @@ export class VSCodeButton extends Button {
 }
 
 /**
- * Styles for the VSCode Button component
+ * Styles for the VS Code Button component
  * @public
  */
 export const ButtonStyles: ElementStyles = styles;

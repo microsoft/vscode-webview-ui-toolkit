@@ -3,13 +3,14 @@ import {Select, SelectTemplate as template} from '@microsoft/fast-foundation';
 import {SelectStyles as styles} from './select.styles';
 
 /**
- * The VSCode Select element. Extends
+ * The VS Code Select element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.select/ | Select} and
  * {@link https://www.fast.design/docs/api/fast-foundation.selecttemplate/ | SelectTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-select>`
+ *
+ * @public
  */
 @customElement({
 	name: 'vscode-select',
@@ -19,7 +20,7 @@ import {SelectStyles as styles} from './select.styles';
 export class VSCodeSelect extends Select {}
 
 /**
- * Styles for the VSCode Select component
+ * Styles for the VS Code Select component
  * @public
  */
 export const SelectStyles: ElementStyles = styles;

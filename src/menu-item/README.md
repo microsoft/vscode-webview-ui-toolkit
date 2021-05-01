@@ -1,1 +1,1 @@
-# VSCode Menu Item
+# VS Code Menu Item

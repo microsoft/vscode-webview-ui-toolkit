@@ -8,10 +8,12 @@ type createCodiconParams = {
 };
 
 /**
- * Creates and returns a span element that renders a VSCode Codicon icon.
+ * Creates and returns a span element that renders a VS Code Codicon icon.
  * @param iconName (optional) The name of the Codicon icon that should be created
  * @param slotName (optional) The name of the slot that the icon will be inserted into
  * @param random (optional) If true, a random Codicon icon will be returned
+ *
+ * @internal
  */
 export function createCodiconIcon({
 	iconName,

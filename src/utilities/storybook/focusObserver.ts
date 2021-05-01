@@ -3,6 +3,8 @@
  * a component based on changes to controls) and appropriately applies focus to the
  * given component.
  * @param component
+ * 
+ * @internal
  */
 export function focusObserver(component: any) {
 	const targetNode = document.getElementById('root');

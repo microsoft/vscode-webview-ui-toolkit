@@ -1,4 +1,4 @@
-# VSCode Link
+# VS Code Link
 
 The `vscode-link` is a web component implementation of an [HTML Anchor Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). The component supports the same visual appearances as the button component (primary, secondary, text, install, link). The only difference is that the link appearance is default in the `vscode-link` component.
 
@@ -65,7 +65,7 @@ An icon can be added to the left of Link text by adding an element with the attr
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-start-icon)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-link href="#">
 	Link Text
@@ -80,7 +80,7 @@ An icon can be added to the right of the Link text by adding an element with the
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-end-icon)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-link href="#">
 	Link Text
@@ -95,7 +95,7 @@ An icon can also fill the default slot of the Button component (instead of text)
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-icon-only)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-link href="#">
 	<span class="codicon codicon-check"></span>

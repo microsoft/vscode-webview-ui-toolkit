@@ -10,15 +10,16 @@ import {LinkStyles as styles} from './link.styles';
 export type LinkAppearance = ButtonAppearance | 'hypertext';
 
 /**
- * The VSCode Link element. Extends
+ * The VS Code Link element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.anchor/ | Anchor} and
  * {@link https://www.fast.design/docs/api/fast-foundation.anchortemplate/ | AnchorTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-link>`
  *
  * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
+ * 
+ * @public
  */
 @customElement({
 	name: 'vscode-link',
@@ -32,9 +33,10 @@ export class VSCodeLink extends Anchor {
 	/**
 	 * The appearance the link should have.
 	 *
-	 * @public
 	 * @remarks
 	 * HTML Attribute: appearance
+	 * 
+	 * @public
 	 */
 	@attr
 	public appearance: LinkAppearance;
@@ -77,7 +79,7 @@ export class VSCodeLink extends Anchor {
 }
 
 /**
- * Styles for the VSCode Link component
+ * Styles for the VS Code Link component
  * @public
  */
 export const LinkStyles: ElementStyles = styles;

@@ -1,4 +1,4 @@
-# VSCode Breadcrumb
+# VS Code Breadcrumb
 
 The `vscode-breadcrumb` is used as a navigational aid, allowing users to maintain awareness of their navigated path within an extension.
 
@@ -49,7 +49,7 @@ The default separator is a `/` but it can customized by adding an element with t
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb--with-custom-separators)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-breadcrumb>
 	<vscode-breadcrumb-item href="#">
@@ -74,7 +74,7 @@ An icon can be added to the left of Breadcrumb Item text by adding an element wi
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb--with-start-icons)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-breadcrumb>
 	<vscode-breadcrumb-item href="#">
@@ -99,7 +99,7 @@ An icon can be added to the right of Breadcrumb Item text by adding an element w
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb--with-end-icons)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-breadcrumb>
 	<vscode-breadcrumb-item href="#">

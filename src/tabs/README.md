@@ -1,4 +1,4 @@
-# VSCode Tabs
+# VS Code Tabs
 
 The `vscode-tabs` component is a web component implementation of a [tab](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role). It is one part of three components that make up a `tabs` component that can interchangably display different content.
 

@@ -1,4 +1,4 @@
-# VSCode Divider
+# VS Code Divider
 
 The `vscode-divider` is a web component implementation of an [HTML Horiztonal Rule Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
 
@@ -20,7 +20,7 @@ The `vscode-divider` is a web component implementation of an [HTML Horiztonal Ru
 
 ### Role Attribute
 
-The role attribute determines the semantic meaning (or lack there of) of a VSCode Divider. The two options are `separator` and `presentation`.
+The role attribute determines the semantic meaning (or lack there of) of a VS Code Divider. The two options are `separator` and `presentation`.
 
 The `separator` option is the default value and indicates that the divider semantically separates content.
 

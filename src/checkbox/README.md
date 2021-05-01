@@ -1,4 +1,4 @@
-# VSCode Checkbox
+# VS Code Checkbox
 
 The `vscode-checkbox` is a web component implementation of an [HTML Input Checkbox Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox).
 
@@ -73,7 +73,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Form Usage
 
-Here is an example of the VSCode Checkbox and its various attributes being used in a form.
+Here is an example of the VS Code Checkbox and its various attributes being used in a form.
 
 ```html
 <form>

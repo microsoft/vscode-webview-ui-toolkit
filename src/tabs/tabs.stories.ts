@@ -109,7 +109,7 @@ WithCustomTabIcons.args = {
 WithCustomTabIcons.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-tabs>\n\t<vscode-tab id="tab-1">\n\t\t<span class="codicon codicon-heart"></span>\n\t</vscode-tab>\n\t<vscode-tab id="tab-2">\n\t\t<span class="codicon codicon-database"></span>\n\t</vscode-tab>\n\t<vscode-tab id="tab-3">\n\t\t<span class="codicon codicon-check"></span>\n\t</vscode-tab>\n\t<vscode-tab id="tab-4">\n\t\t<span class="codicon codicon-add"></span>\n\t</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tTab Panel Content\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tTab Panel Content\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tTab Panel Content\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTab Panel Content\n\t</vscode-tab-panel>\n</vscode-tabs>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-tabs>\n\t<vscode-tab id="tab-1">\n\t\t<span class="codicon codicon-heart"></span>\n\t</vscode-tab>\n\t<vscode-tab id="tab-2">\n\t\t<span class="codicon codicon-database"></span>\n\t</vscode-tab>\n\t<vscode-tab id="tab-3">\n\t\t<span class="codicon codicon-check"></span>\n\t</vscode-tab>\n\t<vscode-tab id="tab-4">\n\t\t<span class="codicon codicon-add"></span>\n\t</vscode-tab>\n\t<vscode-tab-panel id="tab-panel-1">\n\t\tTab Panel Content\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-2">\n\t\tTab Panel Content\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-3">\n\t\tTab Panel Content\n\t</vscode-tab-panel>\n\t<vscode-tab-panel id="tab-panel-4">\n\t\tTab Panel Content\n\t</vscode-tab-panel>\n</vscode-tabs>`,
 		},
 	},
 };

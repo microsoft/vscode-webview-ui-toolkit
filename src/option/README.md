@@ -1,4 +1,4 @@
-# VSCode Option
+# VS Code Option
 
 The `vscode-option` is a web component implementation of an [Option](https://w3c.github.io/aria/#option).
 
@@ -51,7 +51,7 @@ An icon can be added to the left of the Option text by adding an element with th
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-start-icon)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-option>
 	Option Label
@@ -66,7 +66,7 @@ An icon can be added to the right of the Option text by adding an element with t
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-end-icon)
 
 ```html
-<!-- Note: Using VSCode Codicon Library -->
+<!-- Note: Using VS Code Codicon Library -->
 
 <vscode-option>
 	Option Label

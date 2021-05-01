@@ -63,7 +63,7 @@ WithCustomSeparators.args = {
 WithCustomSeparators.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb>\n\t<vscode-breadcrumb-item href="#">\n\t\tsrc\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tcomponents\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tindex.ts\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n</vscode-breadcrumb>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-breadcrumb>\n\t<vscode-breadcrumb-item href="#">\n\t\tsrc\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tcomponents\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tindex.ts\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n</vscode-breadcrumb>`,
 		},
 	},
 };
@@ -77,7 +77,7 @@ WithStartIcons.args = {
 WithStartIcons.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb>\n\t<vscode-breadcrumb-item href="#">\n\t\tsrc\n\t\t<span slot="start" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tcomponents\n\t\t<span slot="start" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tindex.ts\n\t\t<span slot="start" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n</vscode-breadcrumb>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-breadcrumb>\n\t<vscode-breadcrumb-item href="#">\n\t\tsrc\n\t\t<span slot="start" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tcomponents\n\t\t<span slot="start" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tindex.ts\n\t\t<span slot="start" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n</vscode-breadcrumb>`,
 		},
 	},
 };
@@ -91,7 +91,7 @@ WithEndIcons.args = {
 WithEndIcons.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VSCode Codicon Library -->\n\n<vscode-breadcrumb>\n\t<vscode-breadcrumb-item href="#">\n\t\tsrc\n\t\t<span slot="end" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tcomponents\n\t\t<span slot="end" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tindex.ts\n\t\t<span slot="end" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n</vscode-breadcrumb>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-breadcrumb>\n\t<vscode-breadcrumb-item href="#">\n\t\tsrc\n\t\t<span slot="end" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tcomponents\n\t\t<span slot="end" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\tindex.ts\n\t\t<span slot="end" class="codicon codicon-symbol-method"></span>\n\t\t<span slot="separator" class="codicon codicon-chevron-right"></span>\n\t</vscode-breadcrumb-item>\n</vscode-breadcrumb>`,
 		},
 	},
 };

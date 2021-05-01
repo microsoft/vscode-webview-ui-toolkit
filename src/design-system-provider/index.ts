@@ -12,13 +12,14 @@ import {
 import {DesignSystemProviderStyles as styles} from './design-system-provider.styles';
 
 /**
- * The VSCode DesignSystemProvider element. Extends
+ * The VS Code DesignSystemProvider element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.designsystemprovider/ | DesignSystemProvider} and
  * {@link https://www.fast.design/docs/api/fast-foundation.designsystemprovidertemplate/ | DesignSystemProviderTemplate}.
  *
- * @public
  * @remarks
  * HTML Element: `<vscode-design-system-provider>`
+ *
+ * @public
  */
 @defineDesignSystemProvider({
 	name: 'vscode-design-system-provider',
@@ -450,7 +451,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Button Design Tokens ------------------------ //
 
 	/**
-	 * The primary background color of a VSCode button component.
+	 * The primary background color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-primary-background-color`
@@ -465,7 +466,7 @@ export class VSCodeDesignSystemProvider
 	public buttonPrimaryBackgroundColor: string;
 
 	/**
-	 * The primary foreground color of a VSCode button component.
+	 * The primary foreground color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-primary-foreground-color`
@@ -480,7 +481,7 @@ export class VSCodeDesignSystemProvider
 	public buttonPrimaryForegroundColor: string;
 
 	/**
-	 * The primary hover background color of a VSCode button component.
+	 * The primary hover background color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-primary-hover-background-color`
@@ -495,7 +496,7 @@ export class VSCodeDesignSystemProvider
 	public buttonPrimaryHoverBackgroundColor: string;
 
 	/**
-	 * The secondary background color of a VSCode button component.
+	 * The secondary background color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-secondary-background-color`
@@ -510,7 +511,7 @@ export class VSCodeDesignSystemProvider
 	public buttonSecondaryBackgroundColor: string;
 
 	/**
-	 * The secondary foreground color of a VSCode button component.
+	 * The secondary foreground color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-secondary-foreground-color`
@@ -525,7 +526,7 @@ export class VSCodeDesignSystemProvider
 	public buttonSecondaryForegroundColor: string;
 
 	/**
-	 * The secondary hover background color of a VSCode button component.
+	 * The secondary hover background color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-secondary-hover-background-color`
@@ -540,7 +541,7 @@ export class VSCodeDesignSystemProvider
 	public buttonSecondaryHoverBackgroundColor: string;
 
 	/**
-	 * The install background color of a VSCode button component.
+	 * The install background color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-install-background-color`
@@ -555,7 +556,7 @@ export class VSCodeDesignSystemProvider
 	public buttonInstallBackgroundColor: string;
 
 	/**
-	 * The install foreground color of a VSCode button component.
+	 * The install foreground color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-install-foreground-color`
@@ -570,7 +571,7 @@ export class VSCodeDesignSystemProvider
 	public buttonInstallForegroundColor: string;
 
 	/**
-	 * The install hover background color of a VSCode button component.
+	 * The install hover background color of a VS Code button component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `button-install-hover-background-color`
@@ -604,7 +605,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Checkbox Design Tokens ------------------------ //
 
 	/**
-	 * The background color of a VSCode checkbox component.
+	 * The background color of a VS Code checkbox component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `checkbox-background-color`
@@ -619,7 +620,7 @@ export class VSCodeDesignSystemProvider
 	public checkboxBackgroundColor: string;
 
 	/**
-	 * The foreground color of a VSCode checkbox component.
+	 * The foreground color of a VS Code checkbox component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `checkbox-foreground-color`
@@ -634,7 +635,7 @@ export class VSCodeDesignSystemProvider
 	public checkboxForegroundColor: string;
 
 	/**
-	 * The border color of a VSCode checkbox component.
+	 * The border color of a VS Code checkbox component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `checkbox-border-color`
@@ -667,7 +668,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Breadcrumb Item Design Tokens ------------------------ //
 
 	/**
-	 * The background color of a VSCode breadcrumb item component.
+	 * The background color of a VS Code breadcrumb item component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `breadcrumb-item-background-color`
@@ -682,7 +683,7 @@ export class VSCodeDesignSystemProvider
 	public breadcrumbItemBackgroundColor: string;
 
 	/**
-	 * The foreground color of a VSCode breadcrumb item component.
+	 * The foreground color of a VS Code breadcrumb item component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `breadcrumb-item-foreground-color`
@@ -697,7 +698,7 @@ export class VSCodeDesignSystemProvider
 	public breadcrumbItemForegroundColor: string;
 
 	/**
-	 * The foreground hover color of a VSCode breadcrumb item component.
+	 * The foreground hover color of a VS Code breadcrumb item component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `breadcrumb-item-foreground-hover-color`
@@ -714,7 +715,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Select Design Tokens ------------------------ //
 
 	/**
-	 * The background color of a VSCode select component.
+	 * The background color of a VS Code select component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `select-background-color`
@@ -729,7 +730,7 @@ export class VSCodeDesignSystemProvider
 	public selectBackgroundColor: string;
 
 	/**
-	 * The foreground color of a VSCode select component.
+	 * The foreground color of a VS Code select component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `select-foreground-color`
@@ -744,7 +745,7 @@ export class VSCodeDesignSystemProvider
 	public selectForegroundColor: string;
 
 	/**
-	 * The border color of a VSCode select component.
+	 * The border color of a VS Code select component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `select-border-color`
@@ -777,7 +778,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Option Design Tokens ------------------------ //
 
 	/**
-	 * The background focus color of a VSCode option component.
+	 * The background focus color of a VS Code option component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `option-background-focus-color`
@@ -794,7 +795,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Badge Design Tokens ------------------------ //
 
 	/**
-	 * The background color of a VSCode badge component.
+	 * The background color of a VS Code badge component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `badge-background-color`
@@ -809,7 +810,7 @@ export class VSCodeDesignSystemProvider
 	public badgeBackgroundColor: string;
 
 	/**
-	 * The foreground color of a VSCode badge component.
+	 * The foreground color of a VS Code badge component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `badge-foreground-color`
@@ -826,7 +827,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Text Field & Area Design Tokens ------------------------ //
 
 	/**
-	 * The background color of a VSCode text field and area components.
+	 * The background color of a VS Code text field and area components.
 	 *
 	 * @remarks
 	 * HTML Attribute: `input-background-color`
@@ -841,7 +842,7 @@ export class VSCodeDesignSystemProvider
 	public inputBackgroundColor: string;
 
 	/**
-	 * The foreground color of a VSCode text field and area components.
+	 * The foreground color of a VS Code text field and area components.
 	 *
 	 * @remarks
 	 * HTML Attribute: `input-foreground-color`
@@ -856,7 +857,7 @@ export class VSCodeDesignSystemProvider
 	public inputForegroundColor: string;
 
 	/**
-	 * The placeholder foreground color of a VSCode text field and area components.
+	 * The placeholder foreground color of a VS Code text field and area components.
 	 *
 	 * @remarks
 	 * HTML Attribute: `input-placeholder-foreground-color`
@@ -871,7 +872,7 @@ export class VSCodeDesignSystemProvider
 	public inputPlaceholderForegroundColor: string;
 
 	/**
-	 * The border color of a VSCode text field and area components.
+	 * The border color of a VS Code text field and area components.
 	 *
 	 * @remarks
 	 * HTML Attribute: `input-border-color`
@@ -888,7 +889,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Progress Bar & Ring Design Tokens ------------------------ //
 
 	/**
-	 * The background color of a VSCode progress bar and ring components.
+	 * The background color of a VS Code progress bar and ring components.
 	 *
 	 * @remarks
 	 * HTML Attribute: `progress-background-color`
@@ -905,7 +906,7 @@ export class VSCodeDesignSystemProvider
 	// ------------------------ Tabs Design Tokens ------------------------ //
 
 	/**
-	 * The background color of a VSCode tab panel component.
+	 * The background color of a VS Code tab panel component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `tab-panel-background-color`
@@ -920,7 +921,7 @@ export class VSCodeDesignSystemProvider
 	public tabPanelBackgroundColor: string;
 
 	/**
-	 * The border color of a VSCode tab panel component.
+	 * The border color of a VS Code tab panel component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `tab-panel-border-color`
@@ -935,7 +936,7 @@ export class VSCodeDesignSystemProvider
 	public tabPanelBorderColor: string;
 
 	/**
-	 * The foreground color of a VSCode tab component.
+	 * The foreground color of a VS Code tab component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `tab-foreground-color`
@@ -950,7 +951,7 @@ export class VSCodeDesignSystemProvider
 	public tabForegroundColor: string;
 
 	/**
-	 * The active foreground color of a VSCode tab component.
+	 * The active foreground color of a VS Code tab component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `tab-active-foreground-color`
@@ -965,7 +966,7 @@ export class VSCodeDesignSystemProvider
 	public tabActiveForegroundColor: string;
 
 	/**
-	 * The active border color of a VSCode tab component.
+	 * The active border color of a VS Code tab component.
 	 *
 	 * @remarks
 	 * HTML Attribute: `tab-active-border-color`
