@@ -7,7 +7,6 @@ module.exports = {
 		'coverage',
 		'.storybook',
 		'*.spec.*',
-		'babel.config.js',
 	],
 	rules: {
 		'no-extra-boolean-cast': 'off',
