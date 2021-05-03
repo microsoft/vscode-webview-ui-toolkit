@@ -1,6 +1,6 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/index';
+import {heightNumber} from '../utilities/styles/size';
 
 export const BadgeStyles = css`
 	${display('inline-block')} :host {
