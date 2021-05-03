@@ -6,13 +6,14 @@ import {
 } from '@microsoft/fast-foundation';
 import {heightNumber} from '../utilities/styles/size';
 
-export const SelectStyles = css`
+export const DropdownStyles = css`
 	${display('inline-flex')} :host {
-		background: var(--select-background-color);
-		border-radius: calc(var(--select-corner-radius-color) * 1px);
-		border: calc(var(--border-width) * 1px) solid var(--select-border-color);
+		background: var(--dropdown-background-color);
+		border-radius: calc(var(--dropdown-corner-radius-color) * 1px);
+		border: calc(var(--border-width) * 1px) solid
+			var(--dropdown-border-color);
 		box-sizing: border-box;
-		color: var(--select-foreground-color);
+		color: var(--dropdown-foreground-color);
 		contain: contents;
 		height: calc(${heightNumber} * 1px);
 		position: relative;
@@ -21,9 +22,10 @@ export const SelectStyles = css`
 		outline: none;
 	}
 	.listbox {
-		background: var(--select-background-color);
-		border: calc(var(--border-width) * 1px) solid var(--select-border-color);
-		border-radius: calc(var(--select-corner-radius-color) * 1px);
+		background: var(--dropdown-background-color);
+		border: calc(var(--border-width) * 1px) solid
+			var(--dropdown-border-color);
+		border-radius: calc(var(--dropdown-corner-radius-color) * 1px);
 		box-sizing: border-box;
 		display: inline-flex;
 		flex-direction: column;
@@ -50,8 +52,8 @@ export const SelectStyles = css`
 		width: 100%;
 	}
 	:host(:not([disabled]):hover) {
-		background: var(--select-background-color);
-		border-color: var(--select-border-color);
+		background: var(--dropdown-background-color);
+		border-color: var(--dropdown-border-color);
 	}
 	:host(:focus) {
 		border-color: var(--focus-border-color);
@@ -64,7 +66,7 @@ export const SelectStyles = css`
 			var(--focus-border-color);
 		border-color: var(--focus-border-color);
 		background: #094771;
-		color: var(--select-foreground-color);
+		color: var(--dropdown-foreground-color);
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};
@@ -74,14 +76,14 @@ export const SelectStyles = css`
 		cursor: ${disabledCursor};
 	}
 	:host([disabled]:hover) {
-		background: var(--select-background-color);
-		color: var(--select-foreground-color);
+		background: var(--dropdown-background-color);
+		color: var(--dropdown-foreground-color);
 		fill: currentcolor;
 	}
 	:host(:not([disabled])) .control:active {
 		background: #094771;
-		border-color: var(--select-border-color);
-		border-radius: calc(var(--select-corner-radius-color) * 1px);
+		border-color: var(--dropdown-border-color);
+		border-radius: calc(var(--dropdown-corner-radius-color) * 1px);
 	}
 	:host([open]),
 	:host([open]) .listbox {

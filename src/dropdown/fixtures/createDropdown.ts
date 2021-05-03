@@ -1,11 +1,11 @@
-import {VSCodeSelect} from '../index';
+import {VSCodeDropdown} from '../index';
 import {VSCodeOption} from '../../option/index';
 import {
 	createCodiconIcon,
 	focusObserver,
 } from '../../utilities/storybook/index';
 
-export type SelectArgs = {
+export type DropdownArgs = {
 	isOpen: boolean;
 	position: string;
 	isDisabled: boolean;
@@ -15,7 +15,7 @@ export type SelectArgs = {
 	onChange: any;
 };
 
-export function createSelect({
+export function createDropdown({
 	isOpen,
 	position,
 	isDisabled,
@@ -23,41 +23,41 @@ export function createSelect({
 	customIndicator,
 	numberOfChildren,
 	onChange,
-}: SelectArgs) {
-	const select = createSelectWithNChildren(numberOfChildren);
+}: DropdownArgs) {
+	const dropdown = createDropdownWithNChildren(numberOfChildren);
 
 	if (isOpen) {
-		select.setAttribute('open', '');
+		dropdown.setAttribute('open', '');
 	}
 	if (position) {
-		select.setAttribute('position', position.toLowerCase());
+		dropdown.setAttribute('position', position.toLowerCase());
 	}
 	if (isDisabled) {
-		select.setAttribute('disabled', '');
+		dropdown.setAttribute('disabled', '');
 	}
 	if (isFocused) {
-		focusObserver(select);
+		focusObserver(dropdown);
 	}
 	if (customIndicator) {
 		const indicator = createCodiconIcon({
 			iconName: 'settings',
 			slotName: 'indicator',
 		});
-		select.prepend(indicator);
+		dropdown.prepend(indicator);
 	}
-	select.addEventListener('change', onChange);
+	dropdown.addEventListener('change', onChange);
 
-	return select;
+	return dropdown;
 }
 
-function createSelectWithNChildren(numberOfChildren: number) {
-	const select = new VSCodeSelect();
+function createDropdownWithNChildren(numberOfChildren: number) {
+	const dropdown = new VSCodeDropdown();
 
 	for (let i = 0; i < numberOfChildren; i++) {
 		const option = new VSCodeOption();
 		option.textContent = `Option Label #${i + 1}`;
-		select.appendChild(option);
+		dropdown.appendChild(option);
 	}
 
-	return select;
+	return dropdown;
 }

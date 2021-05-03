@@ -1,20 +1,20 @@
 import {customElement} from '@microsoft/fast-element';
 import {Select, SelectTemplate as template} from '@microsoft/fast-foundation';
-import {SelectStyles as styles} from './select.styles';
+import {DropdownStyles as styles} from './dropdown.styles';
 
 /**
- * The VS Code Select element. Extends
+ * The VS Code Dropdown element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.select/ | Select} and
  * {@link https://www.fast.design/docs/api/fast-foundation.selecttemplate/ | SelectTemplate}.
  *
  * @remarks
- * HTML Element: `<vscode-select>`
+ * HTML Element: `<vscode-dropdown>`
  *
  * @public
  */
 @customElement({
-	name: 'vscode-select',
+	name: 'vscode-dropdown',
 	template,
 	styles,
 })
-export class VSCodeSelect extends Select {}
+export class VSCodeDropdown extends Select {}
