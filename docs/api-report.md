@@ -29,10 +29,7 @@ import { TextArea } from '@microsoft/fast-foundation';
 import { TextField } from '@microsoft/fast-foundation';
 
 // @public
-export type ButtonAppearance = 'install' | 'link' | 'primary' | 'secondary' | 'text';
-
-// @public
-export type LinkAppearance = ButtonAppearance | 'hypertext';
+export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
 
 // @public
 export type TextFieldAppearance = 'filled' | 'outline';
@@ -119,6 +116,13 @@ export interface VSCodeDesignSystem {
     designUnit: number;
     // (undocumented)
     disabledOpacity: number;
+    dropdownBackgroundColor: string;
+    // (undocumented)
+    dropdownBorderColor: string;
+    // (undocumented)
+    dropdownCornerRadius: number;
+    // (undocumented)
+    dropdownForegroundColor: string;
     // (undocumented)
     focusBorderColor: string;
     // (undocumented)
@@ -132,13 +136,6 @@ export interface VSCodeDesignSystem {
     inputPlaceholderForegroundColor: string;
     optionBackgroundFocusColor: string;
     progressBackgroundColor: string;
-    selectBackgroundColor: string;
-    // (undocumented)
-    selectBorderColor: string;
-    // (undocumented)
-    selectCornerRadius: number;
-    // (undocumented)
-    selectForegroundColor: string;
     // (undocumented)
     tabActiveBorderColor: string;
     // (undocumented)
@@ -216,6 +213,10 @@ export class VSCodeDesignSystemProvider extends DesignSystemProvider implements 
     density: number;
     designUnit: number;
     disabledOpacity: number;
+    dropdownBackgroundColor: string;
+    dropdownBorderColor: string;
+    dropdownCornerRadius: number;
+    dropdownForegroundColor: string;
     focusBorderColor: string;
     focusBorderWidth: number;
     inputBackgroundColor: string;
@@ -224,10 +225,6 @@ export class VSCodeDesignSystemProvider extends DesignSystemProvider implements 
     inputPlaceholderForegroundColor: string;
     optionBackgroundFocusColor: string;
     progressBackgroundColor: string;
-    selectBackgroundColor: string;
-    selectBorderColor: string;
-    selectCornerRadius: number;
-    selectForegroundColor: string;
     tabActiveBorderColor: string;
     tabActiveForegroundColor: string;
     tabForegroundColor: string;
@@ -259,12 +256,11 @@ export class VSCodeDivider extends Divider {
 }
 
 // @public
+export class VSCodeDropdown extends Select {
+}
+
+// @public
 export class VSCodeLink extends Anchor {
-    appearance: LinkAppearance;
-    // (undocumented)
-    appearanceChanged(oldValue: LinkAppearance, newValue: LinkAppearance): void;
-    // (undocumented)
-    connectedCallback(): void;
     // @internal
     defaultSlottedContentChanged(oldValue: any, newValue: any): void;
 }
@@ -295,10 +291,6 @@ export class VSCodeRadio extends Radio {
 
 // @public
 export class VSCodeRadioGroup extends RadioGroup {
-}
-
-// @public
-export class VSCodeSelect extends Select {
 }
 
 // @public
