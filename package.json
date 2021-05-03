@@ -36,7 +36,7 @@
 		"vscode-codicons": "0.0.15"
 	},
 	"devDependencies": {
-		"@microsoft/api-extractor": "^7.13.5",
+		"@microsoft/api-extractor": "^7.15.1",
 		"@microsoft/eslint-config-fast-dna": "^1.2.0",
 		"@rollup/plugin-commonjs": "^17.1.0",
 		"@rollup/plugin-node-resolve": "^11.2.0",
