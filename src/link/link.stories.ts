@@ -11,14 +11,7 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		href: {control: 'text'},
-		appearance: {
-			control: {
-				type: 'select',
-				options: ['Link', 'Primary', 'Secondary', 'Install', 'Text'],
-			},
-		},
 		isDisabled: {control: 'boolean'},
-		isAutoFocused: {control: 'boolean'},
 		startIcon: {control: 'boolean'},
 		endIcon: {control: 'boolean'},
 		iconOnly: {control: 'boolean'},
@@ -38,7 +31,6 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: 'Link Text',
 	href: '#',
-	appearance: 'Link',
 	isDisabled: false,
 	isAutoFocused: false,
 	startIcon: false,
@@ -49,71 +41,6 @@ Default.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-link href="#">Link Text</vscode-link>`,
-		},
-	},
-};
-
-export const Primary: any = Template.bind({});
-Primary.args = {
-	...Default.args,
-	appearance: 'Primary',
-};
-Primary.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-link href="#" appearance="primary">Link Text</vscode-link>`,
-		},
-	},
-};
-
-export const Secondary: any = Template.bind({});
-Secondary.args = {
-	...Default.args,
-	appearance: 'Secondary',
-};
-Secondary.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-link href="#" appearance="secondary">Link Text</vscode-link>`,
-		},
-	},
-};
-
-export const Text: any = Template.bind({});
-Text.args = {
-	...Default.args,
-	appearance: 'Text',
-};
-Text.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-link href="#" appearance="text">Link Text</vscode-link>`,
-		},
-	},
-};
-
-export const Install: any = Template.bind({});
-Install.args = {
-	...Default.args,
-	appearance: 'Install',
-};
-Install.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-link href="#" appearance="install">Link Text</vscode-link>`,
-		},
-	},
-};
-
-export const WithAutofocus: any = Template.bind({});
-WithAutofocus.args = {
-	...Default.args,
-	isAutoFocused: true,
-};
-WithAutofocus.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-link href="#" autofocus>Link Text</vscode-link>`,
 		},
 	},
 };
