@@ -14,7 +14,7 @@ export default {
 		appearance: {
 			control: {
 				type: 'select',
-				options: ['Primary', 'Secondary', 'Install', 'Text', 'Link'],
+				options: ['Primary', 'Secondary', 'Icon'],
 			},
 		},
 		isDisabled: {control: 'boolean'},
@@ -63,45 +63,6 @@ Secondary.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-button appearance="secondary">Button Text</vscode-button>`,
-		},
-	},
-};
-
-export const Text: any = Template.bind({});
-Text.args = {
-	...Default.args,
-	appearance: 'Text',
-};
-Text.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-button appearance="text">Button Text</vscode-button>`,
-		},
-	},
-};
-
-export const Install: any = Template.bind({});
-Install.args = {
-	...Default.args,
-	appearance: 'Install',
-};
-Install.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-button appearance="install">Button Text</vscode-button>`,
-		},
-	},
-};
-
-export const Link: any = Template.bind({});
-Link.args = {
-	...Default.args,
-	appearance: 'Link',
-};
-Link.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-button appearance="link">Button Text</vscode-button>`,
 		},
 	},
 };
@@ -161,12 +122,13 @@ WithEndIcon.parameters = {
 export const WithIconOnly: any = Template.bind({});
 WithIconOnly.args = {
 	...Default.args,
+	appearance: 'Icon',
 	iconOnly: true,
 };
 WithIconOnly.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-button>\n\t<span class="codicon codicon-check"></span>\n</vscode-button>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-button appearance="icon">\n\t<span class="codicon codicon-check"></span>\n</vscode-button>`,
 		},
 	},
 };

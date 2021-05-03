@@ -138,81 +138,27 @@ const SecondaryButtonStyles = css`
 /**
  * @internal
  */
-const InstallButtonStyles = css`
-	:host([appearance='install']) {
-		background: var(--button-install-background-color);
-		color: var(--button-install-foreground-color);
-	}
-	:host([appearance='install']:hover) {
-		background: var(--button-install-hover-background-color);
-	}
-	:host([appearance='install']) .control {
-		padding: 2px 6px;
-	}
-	:host([appearance='install']:active) .control:active {
-		background: var(--button-install-background-color);
-	}
-	:host([appearance='install']) .control:${focusVisible} {
-		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--button-install-hover-background-color);
-		outline-offset: calc(var(--focus-border-width) * 1px);
-	}
-	:host([appearance='install'][disabled]) {
-		background: var(--button-install-background-color);
-	}
-`;
-
-/**
- * @internal
- */
-const TextButtonStyles = css`
-	:host([appearance='text']) {
+const IconButtonStyles = css`
+	:host([appearance='icon']) {
 		background: transparent;
+		border-radius: 5px;
 		color: var(--button-secondary-foreground-color);
 	}
-	:host([appearance='text']:hover) {
-		background: var(--button-secondary-hover-background-color);
+	:host([appearance='icon']:hover) {
+		background: rgba(90, 93, 94, 0.31);
 	}
-	:host([appearance='text']) .control {
-		padding: 6px 11px;
+	:host([appearance='icon']) .control {
+		padding: 3px;
 	}
-	:host([appearance='text']:active) .control:active {
-		background: var(--button-secondary-background-color);
+	:host([appearance='icon']:active) .control:active {
+		background: rgba(90, 93, 94, 0.31);
 	}
-	:host([appearance='text']) .control:${focusVisible} {
+	:host([appearance='icon']) .control:${focusVisible} {
 		outline: calc(var(--focus-border-width) * 1px) solid
 			var(--button-primary-hover-background-color);
 		outline-offset: calc(var(--focus-border-width) * 1px);
 	}
-	:host([appearance='text'][disabled]) {
-		background: var(--button-secondary-background-color);
-	}
-`;
-
-/**
- * @internal
- */
-const LinkButtonStyles = css`
-	:host([appearance='link']) {
-		background: transparent;
-		color: var(--text-link-foreground-color);
-	}
-	:host([appearance='link']:hover) {
-		text-decoration: underline;
-	}
-	:host([appearance='link']) .control {
-		padding: 0;
-	}
-	:host([appearance='link']:active) .control:active {
-		background: transparent;
-	}
-	:host([appearance='link']) .control:${focusVisible} {
-		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--text-link-foreground-color);
-		outline-offset: calc(var(--focus-border-width) * 1px);
-	}
-	:host([appearance='link'][disabled]) {
-		text-decoration: none;
+	:host([appearance='icon'][disabled]) {
 		background: transparent;
 	}
 `;
@@ -221,7 +167,5 @@ export const ButtonStyles = css`
 	${BaseButtonStyles}
 	${PrimaryButtonStyles}
     ${SecondaryButtonStyles}
-    ${InstallButtonStyles}
-    ${TextButtonStyles}
-    ${LinkButtonStyles}
+    ${IconButtonStyles}
 `;

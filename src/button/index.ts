@@ -6,12 +6,7 @@ import {ButtonStyles as styles} from './button.styles';
  * Types of button appearance.
  * @public
  */
-export type ButtonAppearance =
-	| 'install'
-	| 'link'
-	| 'primary'
-	| 'secondary'
-	| 'text';
+export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
 
 /**
  * The VS Code Button Element. Extends
@@ -20,8 +15,6 @@ export type ButtonAppearance =
  *
  * @remarks
  * HTML Element: `<vscode-button>`
- *
- * HTML Attribute: `appearance = primary | secondary | install | text | link`
  *
  * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  *
