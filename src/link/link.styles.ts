@@ -31,11 +31,6 @@ export const LinkStyles = css`
 		cursor: inherit;
 		font-family: inherit;
 	}
-	.control:focus {
-		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--text-link-foreground-color);
-		outline-offset: calc(var(--focus-border-width) * 1px);
-	}
 	:host(:hover) {
 		text-decoration: underline;
 	}
@@ -44,6 +39,11 @@ export const LinkStyles = css`
 	}
 	.control::-moz-focus-inner {
 		border: 0;
+	}
+	:host(:not([disabled])) .control:focus {
+		outline: calc(var(--focus-border-width) * 1px) solid
+			var(--text-link-foreground-color);
+		outline-offset: calc(var(--focus-border-width) * 1px);
 	}
 	:host([disabled]) {
 		opacity: var(--disabled-opacity);
