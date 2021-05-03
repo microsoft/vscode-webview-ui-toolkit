@@ -1,14 +1,14 @@
 import {action} from '@storybook/addon-actions';
 import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
-import {createSelect, SelectArgs} from './fixtures/createSelect';
-import {VSCodeSelect} from './index';
+import {createDropdown, DropdownArgs} from './fixtures/createDropdown';
+import {VSCodeDropdown} from './index';
 
 // Prevent tree-shaking
-VSCodeSelect;
+VSCodeDropdown;
 VSCodeDesignSystemProvider;
 
 export default {
-	title: 'Library/Select',
+	title: 'Library/Dropdown',
 	argTypes: {
 		isOpen: {control: 'boolean'},
 		position: {
@@ -30,8 +30,8 @@ export default {
 	},
 };
 
-const Template = ({...args}: SelectArgs) => {
-	return createSelect({...args});
+const Template = ({...args}: DropdownArgs) => {
+	return createDropdown({...args});
 };
 
 export const Default: any = Template.bind({});
@@ -42,12 +42,12 @@ Default.args = {
 	isFocused: false,
 	numberOfChildren: 3,
 	customIndicator: false,
-	onChange: action('select-onchange'),
+	onChange: action('dropdown-onchange'),
 };
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-select>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+			code: `<vscode-dropdown>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
 		},
 	},
 };
@@ -60,7 +60,7 @@ WithDisabled.args = {
 WithDisabled.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-select disabled>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+			code: `<vscode-dropdown disabled>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
 		},
 	},
 };
@@ -73,7 +73,7 @@ WithOpen.args = {
 WithOpen.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-select open>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+			code: `<vscode-dropdown open>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
 		},
 	},
 };
@@ -86,7 +86,7 @@ WithPositionAbove.args = {
 WithPositionAbove.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-select position="above">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+			code: `<vscode-dropdown position="above">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
 		},
 	},
 };
@@ -99,7 +99,7 @@ WithPositionBelow.args = {
 WithPositionBelow.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-select position="below">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+			code: `<vscode-dropdown position="below">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
 		},
 	},
 };
@@ -112,7 +112,7 @@ WithCustomIndicator.args = {
 WithCustomIndicator.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-select>\n\t<span slot="indicator" class="codicon codicon-settings"></span>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-select>`,
+			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-dropdown>\n\t<span slot="indicator" class="codicon codicon-settings"></span>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
 		},
 	},
 };
@@ -125,7 +125,7 @@ WithNoOptions.args = {
 WithNoOptions.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-select></vscode-select>`,
+			code: `<vscode-dropdown></vscode-dropdown>`,
 		},
 	},
 };
@@ -138,7 +138,7 @@ WithLongList.args = {
 WithLongList.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-select>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n\t<!-- Insert more options... -->\n</vscode-select>`,
+			code: `<vscode-dropdown>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n\t<!-- Insert more options... -->\n</vscode-dropdown>`,
 		},
 	},
 };
