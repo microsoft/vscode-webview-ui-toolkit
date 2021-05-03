@@ -72,12 +72,12 @@ export interface VSCodeDesignSystem {
 	breadcrumbItemForegroundHoverColor: string;
 
 	/**
-	 * Select design tokens.
+	 * Dropdown design tokens.
 	 */
-	selectBackgroundColor: string;
-	selectForegroundColor: string;
-	selectBorderColor: string;
-	selectCornerRadius: number;
+	dropdownBackgroundColor: string;
+	dropdownForegroundColor: string;
+	dropdownBorderColor: string;
+	dropdownCornerRadius: number;
 
 	/**
 	 * Option design tokens.
@@ -187,12 +187,12 @@ export const VSCodeDesignSystemDefaults: VSCodeDesignSystem = {
 	breadcrumbItemForegroundHoverColor: '#e0e0e0',
 
 	/**
-	 * Select design token defaults.
+	 * Dropdown design token defaults.
 	 */
-	selectBackgroundColor: '#3c3c3c',
-	selectForegroundColor: '#f0f0f0',
-	selectBorderColor: '#3c3c3c',
-	selectCornerRadius: 5,
+	dropdownBackgroundColor: '#3c3c3c',
+	dropdownForegroundColor: '#f0f0f0',
+	dropdownBorderColor: '#3c3c3c',
+	dropdownCornerRadius: 5,
 
 	/**
 	 * Option design token defaults.

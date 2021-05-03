@@ -712,68 +712,68 @@ export class VSCodeDesignSystemProvider
 	})
 	public breadcrumbItemForegroundHoverColor: string;
 
-	// ------------------------ Select Design Tokens ------------------------ //
+	// ------------------------ Dropdown Design Tokens ------------------------ //
 
 	/**
-	 * The background color of a VS Code select component.
+	 * The background color of a VS Code dropdown component.
 	 *
 	 * @remarks
-	 * HTML Attribute: `select-background-color`
+	 * HTML Attribute: `dropdown-background-color`
 	 *
-	 * CSS Custom Property: `--select-background-color`
+	 * CSS Custom Property: `--dropdown-background-color`
 	 */
 	@designSystemProperty({
-		attribute: 'select-background-color',
-		cssCustomProperty: 'select-background-color',
-		default: VSCodeDesignSystemDefaults.selectBackgroundColor,
+		attribute: 'dropdown-background-color',
+		cssCustomProperty: 'dropdown-background-color',
+		default: VSCodeDesignSystemDefaults.dropdownBackgroundColor,
 	})
-	public selectBackgroundColor: string;
+	public dropdownBackgroundColor: string;
 
 	/**
-	 * The foreground color of a VS Code select component.
+	 * The foreground color of a VS Code dropdown component.
 	 *
 	 * @remarks
-	 * HTML Attribute: `select-foreground-color`
+	 * HTML Attribute: `dropdown-foreground-color`
 	 *
-	 * CSS Custom Property: `--select-foreground-color`
+	 * CSS Custom Property: `--dropdown-foreground-color`
 	 */
 	@designSystemProperty({
-		attribute: 'select-foreground-color',
-		cssCustomProperty: 'select-foreground-color',
-		default: VSCodeDesignSystemDefaults.selectForegroundColor,
+		attribute: 'dropdown-foreground-color',
+		cssCustomProperty: 'dropdown-foreground-color',
+		default: VSCodeDesignSystemDefaults.dropdownForegroundColor,
 	})
-	public selectForegroundColor: string;
+	public dropdownForegroundColor: string;
 
 	/**
-	 * The border color of a VS Code select component.
+	 * The border color of a VS Code dropdown component.
 	 *
 	 * @remarks
-	 * HTML Attribute: `select-border-color`
+	 * HTML Attribute: `dropdown-border-color`
 	 *
-	 * CSS Custom Property: `--select-border-color`
+	 * CSS Custom Property: `--dropdown-border-color`
 	 */
 	@designSystemProperty({
-		attribute: 'select-border-color',
-		cssCustomProperty: 'select-border-color',
-		default: VSCodeDesignSystemDefaults.selectBorderColor,
+		attribute: 'dropdown-border-color',
+		cssCustomProperty: 'dropdown-border-color',
+		default: VSCodeDesignSystemDefaults.dropdownBorderColor,
 	})
-	public selectBorderColor: string;
+	public dropdownBorderColor: string;
 
 	/**
-	 * The corner radius applied to select controls.
+	 * The corner radius applied to dropdown controls.
 	 *
 	 * @remarks
-	 * HTML Attribute: `select-corner-radius-color`
+	 * HTML Attribute: `dropdown-corner-radius-color`
 	 *
-	 * CSS Custom Property: `--select-corner-radius-color`
+	 * CSS Custom Property: `--dropdown-corner-radius-color`
 	 */
 	@designSystemProperty({
-		attribute: 'select-corner-radius-color',
-		cssCustomProperty: 'select-corner-radius-color',
+		attribute: 'dropdown-corner-radius-color',
+		cssCustomProperty: 'dropdown-corner-radius-color',
 		converter: nullableNumberConverter,
-		default: VSCodeDesignSystemDefaults.selectCornerRadius,
+		default: VSCodeDesignSystemDefaults.dropdownCornerRadius,
 	})
-	public selectCornerRadius: number;
+	public dropdownCornerRadius: number;
 
 	// ------------------------ Option Design Tokens ------------------------ //
 
