@@ -2,8 +2,10 @@
 src/
 
 # Docs
-docs/*.stories.*
+docs/
+samples/
 CODE_OF_CONDUCT.md
+SECURITY.md
 
 # Tests
 *.spec.*

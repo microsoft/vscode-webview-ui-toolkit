@@ -1,8 +1,4 @@
-import {
-	customElement,
-	ElementStyles,
-	ViewTemplate,
-} from '@microsoft/fast-element';
+import {customElement, ViewTemplate} from '@microsoft/fast-element';
 import {
 	createDataGridCellTemplate,
 	createDataGridRowTemplate,
@@ -25,7 +21,7 @@ const cellTemplate: ViewTemplate = createDataGridCellTemplate('vscode');
  *
  * @remarks
  * HTML Element: `<vscode-data-grid>`
- * 
+ *
  * @public
  */
 @customElement({
@@ -36,18 +32,12 @@ const cellTemplate: ViewTemplate = createDataGridCellTemplate('vscode');
 export class VSCodeDataGrid extends DataGrid {}
 
 /**
- * Styles for the VS Code Data Grid component
- * @public
- */
-export const DataGridStyles: ElementStyles = gridStyles;
-
-/**
  * The VS Code Data Grid Row element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.datagridrow/ | DataGridRow}.
  *
  * @remarks
  * HTML Element: `<vscode-data-grid-row>`
- * 
+ *
  * @public
  */
 @customElement({
@@ -58,18 +48,12 @@ export const DataGridStyles: ElementStyles = gridStyles;
 export class VSCodeDataGridRow extends DataGridRow {}
 
 /**
- * Styles for the VS Code Data Grid Row component
- * @public
- */
-export const DataGridRowStyles: ElementStyles = rowStyles;
-
-/**
  * The VS Code Data Grid Cell element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.datagridcell/ | DataGridCell}.
  *
  * @remarks
  * HTML Element: `<vscode-data-grid-cell>`
- * 
+ *
  * @public
  */
 @customElement({
@@ -78,9 +62,3 @@ export const DataGridRowStyles: ElementStyles = rowStyles;
 	styles: cellStyles,
 })
 export class VSCodeDataGridCell extends DataGridCell {}
-
-/**
- * Styles for the VS Code Data Grid Cell component
- * @public
- */
-export const DataGridCellStyles: ElementStyles = cellStyles;

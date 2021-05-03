@@ -1,6 +1,6 @@
 import {css} from '@microsoft/fast-element';
 import {display, focusVisible} from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles';
+import {heightNumber} from '../utilities/styles/size';
 
 export const BreadcrumbItemStyles = css`
     ${display('inline-flex')} :host {

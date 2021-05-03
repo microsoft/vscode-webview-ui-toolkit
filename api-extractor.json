@@ -7,8 +7,7 @@
 		"reportFileName": "api-report.md"
 	},
 	"docModel": {
-		"enabled": true,
-		"apiJsonFilePath": "dist/toolkit.api.json"
+		"enabled": false
 	},
 	"dtsRollup": {
 		"enabled": true,

@@ -4,7 +4,7 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/index';
+import {heightNumber} from '../utilities/styles/size';
 
 export const CheckboxStyles = css`
 	${display('inline-flex')} :host {

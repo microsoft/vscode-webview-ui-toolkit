@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {
 	TabPanel,
 	TabPanelTemplate as template,
@@ -12,7 +12,7 @@ import {TabPanelStyles as styles} from './tab-panel.styles';
  *
  * @remarks
  * HTML Element: `<vscode-tab-panel>`
- * 
+ *
  * @public
  */
 @customElement({
@@ -21,9 +21,3 @@ import {TabPanelStyles as styles} from './tab-panel.styles';
 	styles,
 })
 export class VSCodeTabPanel extends TabPanel {}
-
-/**
- * Styles for the VS Code Tab Panel component
- * @public
- */
-export const TabPanelStyles: ElementStyles = styles;

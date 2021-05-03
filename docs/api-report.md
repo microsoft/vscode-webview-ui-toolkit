@@ -16,7 +16,6 @@ import { DataGridCell } from '@microsoft/fast-foundation';
 import { DataGridRow } from '@microsoft/fast-foundation';
 import { DesignSystemProvider } from '@microsoft/fast-foundation';
 import { Divider } from '@microsoft/fast-foundation';
-import { ElementStyles } from '@microsoft/fast-element';
 import { ListboxOption } from '@microsoft/fast-foundation';
 import { Menu } from '@microsoft/fast-foundation';
 import { MenuItem } from '@microsoft/fast-foundation';
@@ -30,82 +29,13 @@ import { TextArea } from '@microsoft/fast-foundation';
 import { TextField } from '@microsoft/fast-foundation';
 
 // @public
-export const BadgeStyles: ElementStyles;
-
-// @public
-export const BreadcrumbItemStyles: ElementStyles;
-
-// @public
-export const BreadcrumbStyles: ElementStyles;
-
-// @public
 export type ButtonAppearance = 'install' | 'link' | 'primary' | 'secondary' | 'text';
-
-// @public
-export const ButtonStyles: ElementStyles;
-
-// @public
-export const CheckboxStyles: ElementStyles;
-
-// @public
-export const DataGridCellStyles: ElementStyles;
-
-// @public
-export const DataGridRowStyles: ElementStyles;
-
-// @public
-export const DataGridStyles: ElementStyles;
-
-// @public
-export const DividerStyles: ElementStyles;
 
 // @public
 export type LinkAppearance = ButtonAppearance | 'hypertext';
 
 // @public
-export const LinkStyles: ElementStyles;
-
-// @public
-export const MenuItemStyles: ElementStyles;
-
-// @public
-export const MenuStyles: ElementStyles;
-
-// @public
-export const OptionStyles: ElementStyles;
-
-// @public
-export const ProgressBarStyles: ElementStyles;
-
-// @public
-export const ProgressRingStyles: ElementStyles;
-
-// @public
-export const RadioGroupStyles: ElementStyles;
-
-// @public
-export const RadioStyles: ElementStyles;
-
-// @public
-export const SelectStyles: ElementStyles;
-
-// @public
-export const TabPanelStyles: ElementStyles;
-
-// @public
-export const TabsStyles: ElementStyles;
-
-// @public
-export const TabStyles: ElementStyles;
-
-// @public
-export const TextAreaStyles: ElementStyles;
-
-// @public
 export type TextFieldAppearance = 'filled' | 'outline';
-
-// @public
-export const TextFieldStyles: ElementStyles;
 
 // @public
 export class VSCodeBadge extends Badge {

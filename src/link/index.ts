@@ -1,4 +1,4 @@
-import {attr, customElement, ElementStyles} from '@microsoft/fast-element';
+import {attr, customElement} from '@microsoft/fast-element';
 import {Anchor, AnchorTemplate as template} from '@microsoft/fast-foundation';
 import {ButtonAppearance} from '../button';
 import {LinkStyles as styles} from './link.styles';
@@ -18,7 +18,7 @@ export type LinkAppearance = ButtonAppearance | 'hypertext';
  * HTML Element: `<vscode-link>`
  *
  * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
- * 
+ *
  * @public
  */
 @customElement({
@@ -35,7 +35,7 @@ export class VSCodeLink extends Anchor {
 	 *
 	 * @remarks
 	 * HTML Attribute: appearance
-	 * 
+	 *
 	 * @public
 	 */
 	@attr
@@ -77,9 +77,3 @@ export class VSCodeLink extends Anchor {
 		}
 	}
 }
-
-/**
- * Styles for the VS Code Link component
- * @public
- */
-export const LinkStyles: ElementStyles = styles;

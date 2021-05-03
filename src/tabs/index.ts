@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {Tabs, TabsTemplate as template} from '@microsoft/fast-foundation';
 import {TabsStyles as styles} from './tabs.styles';
 
@@ -21,9 +21,3 @@ export class VSCodeTabs extends Tabs {}
 
 export * from '../tab/index';
 export * from '../tab-panel/index';
-
-/**
- * Styles for the VS Code Tabs component
- * @public
- */
-export const TabsStyles: ElementStyles = styles;

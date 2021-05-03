@@ -3,17 +3,17 @@
 		"target": "es6",
 		"module": "esnext",
 		"moduleResolution": "node",
-		"outDir": "dist/esm",
 		"rootDir": "src",
-		"lib": ["dom", "es6"],
+		"outDir": "dist/esm",
 		"declarationDir": "dist/dts",
+		"lib": ["dom", "es6"],
 		"pretty": true,
 		"esModuleInterop": true,
 		"importHelpers": true,
 		"experimentalDecorators": true,
 		"strictPropertyInitialization": false,
 		"declaration": true,
-		"sourceMap": true,
+		"sourceMap": false,
 		"noEmitOnError": true,
 		"strict": true,
 		"strictNullChecks": true,
@@ -21,10 +21,10 @@
 	},
 	"include": ["src"],
 	"exclude": [
+		"node_modules",
 		"src/**/*.spec.ts",
 		"src/**/*.stories.ts",
 		"src/**/fixtures/",
-		"src/utilities/storybook/",
-		"node_modules"
+		"src/utilities/storybook/"
 	]
 }

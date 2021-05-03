@@ -1,8 +1,0 @@
-node_modules
-dist
-build
-coverage
-.storybook
-*.spec.*
-babel.config.js
-webpack.config.js

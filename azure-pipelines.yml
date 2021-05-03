@@ -60,7 +60,7 @@ jobs:
 
       # 3) Build and generate output
       #    Deploying storybook
-      - script: npm run build-storybook
+      - script: npm run build:storybook
         displayName: "🏗️ Build and package storybook"
 
       # 4) Copy build files from $(System.DefaultWorkingDirectory) into staging

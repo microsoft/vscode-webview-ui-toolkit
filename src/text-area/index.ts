@@ -1,4 +1,4 @@
-import {customElement, ElementStyles} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {
 	TextAreaTemplate as template,
 	TextArea,
@@ -14,7 +14,7 @@ import {TextAreaStyles as styles} from './text-area.styles';
  * HTML Element: `<vscode-text-area>`
  *
  * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
- * 
+ *
  * @public
  */
 @customElement({
@@ -26,9 +26,3 @@ import {TextAreaStyles as styles} from './text-area.styles';
 	},
 })
 export class VSCodeTextArea extends TextArea {}
-
-/**
- * Styles for the VS Code Text Area component
- * @public
- */
-export const TextAreaStyles: ElementStyles = styles;
