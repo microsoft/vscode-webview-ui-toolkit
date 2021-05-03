@@ -4,20 +4,20 @@ The `vscode-button` is a web component implementation of an [HTML Button Element
 
 ## Attributes
 
-| Attribute        | Type    | Description                                                                                 |
-| ---------------- | ------- | ------------------------------------------------------------------------------------------- |
-| `appearance`     | string  | Determines the visual appearance _(primary, secondary, text, install, link)_ of the button. |
-| `autofocus`      | boolean | Determines if the element should receive document focus on page load.                       |
-| `disabled`       | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.        |
-| `form`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
-| `formaction`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
-| `formenctype`    | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
-| `formmethod`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
-| `formnovalidate` | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
-| `formtarget`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
-| `name`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
-| `type`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
-| `value`          | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes).     |
+| Attribute        | Type    | Description                                                                             |
+| ---------------- | ------- | --------------------------------------------------------------------------------------- |
+| `appearance`     | string  | Determines the visual appearance _(primary, secondary, icon)_ of the button.            |
+| `autofocus`      | boolean | Determines if the element should receive document focus on page load.                   |
+| `disabled`       | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.    |
+| `form`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
+| `formaction`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
+| `formenctype`    | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
+| `formmethod`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
+| `formnovalidate` | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
+| `formtarget`     | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
+| `name`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
+| `type`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
+| `value`          | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
 
 ## Usage
 
@@ -38,9 +38,9 @@ There are a number of visual appearances that the `vscode-button` can have. The 
 ```html
 <vscode-button appearance="primary">Button Text</vscode-button>
 <vscode-button appearance="secondary">Button Text</vscode-button>
-<vscode-button appearance="text">Button Text</vscode-button>
-<vscode-button appearance="install">Button Text</vscode-button>
-<vscode-button appearance="link">Button Text</vscode-button>
+<vscode-button appearance="icon">
+	<span class="codicon codicon-check"></span>
+</vscode-button>
 ```
 
 ### Autofocus Attribute
@@ -98,7 +98,7 @@ An icon can also fill the default slot of the Button component (instead of text)
 ```html
 <!-- Note: Using VS Code Codicon Library -->
 
-<vscode-button>
+<vscode-button appearance="icon">
 	<span class="codicon codicon-check"></span>
 </vscode-button>
 ```
