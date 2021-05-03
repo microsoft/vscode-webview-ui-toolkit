@@ -1,13 +1,6 @@
-import {attr, customElement} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {Anchor, AnchorTemplate as template} from '@microsoft/fast-foundation';
-import {ButtonAppearance} from '../button';
 import {LinkStyles as styles} from './link.styles';
-
-/**
- * Types of link appearance.
- * @public
- */
-export type LinkAppearance = ButtonAppearance | 'hypertext';
 
 /**
  * The VS Code Link element. Extends
@@ -30,34 +23,6 @@ export type LinkAppearance = ButtonAppearance | 'hypertext';
 	},
 })
 export class VSCodeLink extends Anchor {
-	/**
-	 * The appearance the link should have.
-	 *
-	 * @remarks
-	 * HTML Attribute: appearance
-	 *
-	 * @public
-	 */
-	@attr
-	public appearance: LinkAppearance;
-	public appearanceChanged(
-		oldValue: LinkAppearance,
-		newValue: LinkAppearance
-	): void {
-		if (oldValue !== newValue) {
-			this.classList.add(newValue);
-			this.classList.remove(oldValue);
-		}
-	}
-
-	public connectedCallback() {
-		super.connectedCallback();
-
-		if (!this.appearance) {
-			this.appearance = 'link';
-		}
-	}
-
 	/**
 	 * Applies 'icon-only' class when there is only an SVG in the default slot
 	 *
