@@ -1,15 +1,10 @@
-import {LinkAppearance, VSCodeLink} from '../index';
-import {
-	createCodiconIcon,
-	focusObserver,
-} from '../../utilities/storybook/index';
+import {VSCodeLink} from '../index';
+import {createCodiconIcon} from '../../utilities/storybook/index';
 
 export type LinkArgs = {
 	label: string;
 	href: string;
-	appearance?: LinkAppearance;
 	isDisabled: boolean;
-	isAutoFocused: boolean;
 	startIcon: boolean;
 	endIcon: boolean;
 	iconOnly: boolean;
@@ -18,9 +13,7 @@ export type LinkArgs = {
 export function createLink({
 	label,
 	href,
-	appearance,
 	isDisabled,
-	isAutoFocused,
 	startIcon,
 	endIcon,
 	iconOnly,
@@ -33,16 +26,8 @@ export function createLink({
 	if (href) {
 		link.setAttribute('href', href);
 	}
-	if (appearance) {
-		link.setAttribute('appearance', appearance.toLowerCase());
-	}
 	if (isDisabled) {
 		link.setAttribute('disabled', '');
-	}
-	if (isAutoFocused) {
-		link.setAttribute('autofocus', '');
-		// Focus observer will force focus if button focus is lost after page load
-		focusObserver(link);
 	}
 	if (startIcon) {
 		const start = createCodiconIcon({
