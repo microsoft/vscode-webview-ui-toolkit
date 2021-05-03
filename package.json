@@ -19,7 +19,7 @@
 	"scripts": {
 		"start": "start-storybook -p 6006",
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
-		"build-storybook": "build-storybook",
+		"build:storybook": "build-storybook",
 		"doc": "api-extractor run --local",
 		"fmt": "prettier --config ./.prettierrc --write \"**/*.{ts,js}\"",
 		"lint": "eslint . --ext .ts",
