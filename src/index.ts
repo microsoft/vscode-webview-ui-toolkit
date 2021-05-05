@@ -11,7 +11,7 @@ export * from './link/index';
 export * from './menu/index';
 export * from './menu-item/index';
 export * from './option/index';
-export * from './panel/index';
+export * from './panels/index';
 export * from './progress-bar/index';
 export * from './progress-ring/index';
 export * from './radio-group/index';

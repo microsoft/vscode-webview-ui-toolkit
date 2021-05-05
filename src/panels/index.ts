@@ -1,6 +1,6 @@
 import {customElement} from '@microsoft/fast-element';
 import {Tabs, TabsTemplate as template} from '@microsoft/fast-foundation';
-import {TabsStyles as styles} from './tabs.styles';
+import {TabsStyles as styles} from './panel.styles';
 
 /**
  * The VS Code Tabs element. Extends

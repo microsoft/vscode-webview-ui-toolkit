@@ -1,6 +1,6 @@
-# VS Code Tabs
+# VS Code Panel
 
-The `vscode-tabs` component is a web component implementation of a [tab](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role). It is one part of three components that make up a `tabs` component that can interchangably display different content.
+The `vscode-panel` component is a web component implementation of a [tab](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role). It is one part of three components that make up a `panel` component that can interchangably display different content.
 
 ## Attributes
 
@@ -11,7 +11,7 @@ The `vscode-tabs` component is a web component implementation of a [tab](https:/
 
 ## Usage
 
-The `vscode-tabs` component must be used in tandem with the `vscode-tab` and `vscode-panel` components.
+The `vscode-panels` component must be used in tandem with the `vscode-tab` and `vscode-panel` components.
 
 ### Basic Usage
 
