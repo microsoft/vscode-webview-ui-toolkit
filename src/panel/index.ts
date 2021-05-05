@@ -19,5 +19,5 @@ import {TabsStyles as styles} from './tabs.styles';
 })
 export class VSCodeTabs extends Tabs {}
 
-export * from '../tab/index';
-export * from '../tab-panel/index';
+export * from '../panel-tab/index';
+export * from '../panel-view/index';
