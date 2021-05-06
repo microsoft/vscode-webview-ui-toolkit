@@ -6,7 +6,7 @@ import {
 } from '@microsoft/fast-foundation';
 import {heightNumber} from '../utilities/styles/size';
 
-export const TabStyles = css`
+export const PanelTabStyles = css`
 	${display('inline-flex')} :host {
 		box-sizing: border-box;
 		font-family: var(--body-font);
@@ -64,20 +64,5 @@ export const TabStyles = css`
 	}
 	:host(:focus) {
 		outline: none;
-	}
-	:host(.vertical) {
-		justify-content: end;
-		grid-column: 2;
-	}
-	:host(.vertical[aria-selected='true']) {
-		z-index: 2;
-	}
-	:host(.vertical:hover) {
-		color: var(--tab-active-foreground-color);
-	}
-	:host(.vertical:active) {
-		color: var(--tab-active-foreground-color);
-	}
-	:host(.vertical:hover[aria-selected='true']) {
 	}
 `;
