@@ -1,7 +1,7 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 
-export const TabPanelStyles = css`
+export const PanelViewStyles = css`
 	${display('flex')} :host {
 		color: #ffffff;
 		background-color: transparent;
