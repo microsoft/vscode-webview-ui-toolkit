@@ -278,6 +278,20 @@ export class VSCodeOption extends ListboxOption {
 }
 
 // @public
+export class VSCodePanels extends Tabs {
+    // (undocumented)
+    connectedCallback(): void;
+}
+
+// @public
+export class VSCodePanelTab extends Tab {
+}
+
+// @public
+export class VSCodePanelView extends TabPanel {
+}
+
+// @public
 export class VSCodeProgressBar extends BaseProgress {
 }
 
@@ -291,18 +305,6 @@ export class VSCodeRadio extends Radio {
 
 // @public
 export class VSCodeRadioGroup extends RadioGroup {
-}
-
-// @public
-export class VSCodeTab extends Tab {
-}
-
-// @public
-export class VSCodeTabPanel extends TabPanel {
-}
-
-// @public
-export class VSCodeTabs extends Tabs {
 }
 
 // @public
