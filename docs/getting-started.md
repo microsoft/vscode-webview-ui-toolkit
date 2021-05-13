@@ -206,7 +206,7 @@ Now that you're set up, checkout the component docs for further documentation on
 
 - [Component Docs](./components.md)
 - [Storybook – Interactive Component Sandbox](https://mttallac.azurewebsites.net/)
-- [Toolkit Extension Samples](../samples)
+- [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-toolkit-samples)
 - [VS Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
 - [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
 - [VS Code Extension API Docs](https://code.visualstudio.com/api)
