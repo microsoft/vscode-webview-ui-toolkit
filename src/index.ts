@@ -10,6 +10,7 @@ export * from './divider/index';
 export * from './link/index';
 export * from './menu/index';
 export * from './menu-item/index';
+export * from './number-field/index';
 export * from './option/index';
 export * from './progress-bar/index';
 export * from './progress-ring/index';
