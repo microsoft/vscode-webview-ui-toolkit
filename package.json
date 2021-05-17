@@ -35,6 +35,10 @@
 		"vscode-codicons": "0.0.15"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.14.3",
+		"@babel/plugin-proposal-decorators": "^7.14.2",
+		"@babel/preset-env": "^7.14.2",
+		"@babel/preset-typescript": "^7.13.0",
 		"@microsoft/api-extractor": "^7.15.1",
 		"@microsoft/eslint-config-fast-dna": "^1.2.0",
 		"@rollup/plugin-commonjs": "^17.1.0",
@@ -47,6 +51,9 @@
 		"@storybook/html": "^6.2.9",
 		"@storybook/theming": "^6.2.9",
 		"@types/jest": "^26.0.20",
+		"babel-jest": "^26.6.3",
+		"babel-loader": "^8.2.2",
+		"babel-plugin-transform-class-properties": "^6.24.1",
 		"eslint-config-prettier": "^8.1.0",
 		"jest": "^26.6.3",
 		"prettier": "^2.2.1",
