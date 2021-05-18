@@ -73,6 +73,28 @@ export const NumberFieldStyles = css`
 	.end {
 		margin-inline-end: 11px;
 	}
+	.step-up,
+	.step-down {
+		padding: 0 10px;
+		height: 50%;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+	.step-up:before,
+	.step-down:before {
+		content: '';
+		display: block;
+		border: 5px solid transparent;
+	}
+	.step-up:before {
+		border-bottom-color: var(--input-foreground-color);
+		margin-bottom: 2px;
+	}
+	.step-down:before {
+		border-top-color: var(--input-foreground-color);
+		margin-top: 2px;
+	}
 	:host(:hover:not([disabled])) .root {
 		background: var(--input-background-color);
 		border-color: var(--input-border-color);
