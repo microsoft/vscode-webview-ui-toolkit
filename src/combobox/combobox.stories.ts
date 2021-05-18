@@ -24,10 +24,8 @@ export default {
 				options: ['above', 'below'],
 			},
 		},
-		isReadOnly: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isRequired: {control: 'boolean'},
-		isAutoFocused: {control: 'boolean'},
 		numberOfChildren: {control: 'number'},
 		onChange: {
 			action: 'changed',
@@ -46,9 +44,7 @@ export const Default: any = Template.bind({});
 Default.args = {
 	placeholder: '',
 	position: 'below',
-	isReadOnly: false,
 	isDisabled: false,
-	isRequired: false,
 	numberOfChildren: 3,
 	onChange: action('input-onchange'),
 };
@@ -73,23 +69,10 @@ WithPlaceholder.parameters = {
 	},
 };
 
-export const WithReadonly: any = Template.bind({});
-WithReadonly.args = {
-	...Default.args,
-	placeholder: 'This text is read only',
-	isReadOnly: true,
-};
-WithReadonly.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-combobox readonly></vscode-combobox>`,
-		},
-	},
-};
-
 export const WithDisabled: any = Template.bind({});
 WithDisabled.args = {
 	...Default.args,
+	value: 'This is disabled',
 	isDisabled: true,
 };
 WithDisabled.parameters = {
@@ -100,15 +83,15 @@ WithDisabled.parameters = {
 	},
 };
 
-export const WithRequired: any = Template.bind({});
-WithRequired.args = {
+export const WithOpen: any = Template.bind({});
+WithOpen.args = {
 	...Default.args,
-	isRequired: true,
+	isOpen: true,
 };
-WithRequired.parameters = {
+WithOpen.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox required></vscode-combobox>`,
+			code: `<vscode-combobox open></vscode-combobox>`,
 		},
 	},
 };
@@ -148,19 +131,6 @@ WithPositionBelow.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-combobox position="below"></vscode-combobox>`,
-		},
-	},
-};
-
-export const WithAutofocus: any = Template.bind({});
-WithAutofocus.args = {
-	...Default.args,
-	isAutoFocused: 'true',
-};
-WithAutofocus.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-combobox autofocus></vscode-combobox>`,
 		},
 	},
 };

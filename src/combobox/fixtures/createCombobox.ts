@@ -5,10 +5,8 @@ export type ComboboxArgs = {
 	placeholder?: string;
 	value?: string;
 	autocomplete?: string;
-	isReadOnly?: boolean;
 	isDisabled?: boolean;
-	isRequired?: boolean;
-	isAutoFocused?: boolean;
+	isOpen?: boolean;
 	position?: string;
 	numberOfChildren: number;
 	onChange: any;
@@ -18,10 +16,8 @@ export function createCombobox({
 	placeholder,
 	value,
 	autocomplete,
-	isReadOnly,
 	isDisabled,
-	isRequired,
-	isAutoFocused,
+	isOpen,
 	position,
 	numberOfChildren,
 	onChange,
@@ -37,20 +33,14 @@ export function createCombobox({
 	if (autocomplete) {
 		combobox.setAttribute('autocomplete', autocomplete);
 	}
-	if (isReadOnly) {
-		combobox.setAttribute('readonly', '');
-	}
 	if (isDisabled) {
 		combobox.setAttribute('disabled', '');
 	}
-	if (isRequired) {
-		combobox.setAttribute('required', '');
+	if (isOpen) {
+		combobox.setAttribute('open', '');
 	}
 	if (position) {
 		combobox.setAttribute('position', position);
-	}
-	if (isAutoFocused) {
-		combobox.setAttribute('autofocus', '');
 	}
 	combobox.addEventListener('change', onChange);
 
