@@ -75,7 +75,7 @@ export const NumberFieldStyles = css`
 	}
 	.step-up,
 	.step-down {
-		padding: 0 10px;
+		padding: 0 calc(var(--design-unit) * 2px);
 		height: 50%;
 		display: flex;
 		align-items: center;
