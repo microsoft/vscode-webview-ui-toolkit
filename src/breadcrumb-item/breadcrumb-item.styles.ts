@@ -1,16 +1,22 @@
 import {css} from '@microsoft/fast-element';
 import {display, focusVisible} from '@microsoft/fast-foundation';
 import {heightNumber} from '../utilities/styles/size';
+import {
+	breadcrumbItemForegroundColor,
+	breadcrumbItemForegroundHoverColor,
+	focusBorderWidth,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const BreadcrumbItemStyles = css`
     ${display('inline-flex')} :host {
         background: transparent;
-        color: var(--breadcrumb-item-foreground-color);
+        color: ${breadcrumbItemForegroundColor};
         box-sizing: border-box;
-        font-family: var(--body-font);
-        font-size: var(--type-ramp-base-font-size);
+        font-size: ${typeRampBaseFontSize};
         fill: currentColor;
-        line-height: var(--type-ramp-base-line-height);
+        line-height: ${typeRampBaseLineHeight};
         min-width: calc(${heightNumber} * 1px);
         outline: none;
     }
@@ -26,7 +32,7 @@ export const BreadcrumbItemStyles = css`
     .control {
         align-items: center;
         box-sizing: border-box;
-        color: var(--breadcrumb-item-foreground-color);
+        color: ${breadcrumbItemForegroundColor};
         cursor: pointer;
         display: flex;
         fill: inherit;
@@ -35,10 +41,10 @@ export const BreadcrumbItemStyles = css`
         white-space: nowrap;
     }
     .control:hover {
-        color: var(--breadcrumb-item-foreground-hover-color);
+        color: ${breadcrumbItemForegroundHoverColor};
     }
     .control:active {
-        color: var(--breadcrumb-item-foreground-hover-color);
+        color: ${breadcrumbItemForegroundHoverColor};
     }
     .control .content {
         position: relative;
@@ -54,17 +60,17 @@ export const BreadcrumbItemStyles = css`
         width: 100%;
     }
     .control:hover .content::before {
-        background: var(--breadcrumb-item-foreground-hover-color);
+        background: ${breadcrumbItemForegroundHoverColor};
     }
     .control:active .content::before {
-        background: var(--breadcrumb-item-foreground-hover-color);
+        background: ${breadcrumbItemForegroundHoverColor};
     }
     .control:${focusVisible} .content::before {
-        background: var(--breadcrumb-item-foreground-color);
-        height: calc(var(--focus-border-width) * 1px);
+        background: ${breadcrumbItemForegroundColor};
+        height: calc(${focusBorderWidth} * 1px);
     }
     .control:not([href]) {
-        color: var(--breadcrumb-item-foreground-color);
+        color: ${breadcrumbItemForegroundColor};
         cursor: default;
     }
     .control:not([href]) .content::before {
