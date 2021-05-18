@@ -45,14 +45,6 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 <vscode-number-field name="example-vscode-number-field"></vscode-number-field>
 ```
 
-### Pattern Attribute
-
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--with-pattern)
-
-```html
-<vscode-number-field pattern="[a-z]{4,8}"></vscode-number-field>
-```
-
 ### Placeholder Attribute
 
 [Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--with-placeholder)
