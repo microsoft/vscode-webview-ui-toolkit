@@ -4,6 +4,19 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
+import {
+	borderWidth,
+	cornerRadius,
+	designUnit,
+	disabledOpacity,
+	focusBorderColor,
+	inputBackgroundColor,
+	inputBorderColor,
+	inputForegroundColor,
+	inputPlaceholderForegroundColor,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 import {heightNumber} from '../utilities/styles/size';
 
 export const NumberFieldStyles = css`
@@ -17,10 +30,10 @@ export const NumberFieldStyles = css`
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		color: var(--input-foreground-color);
-		background: var(--input-background-color);
-		border-radius: calc(var(--corner-radius) * 1px);
-		border: calc(var(--border-width) * 1px) solid var(--input-border-color);
+		color: ${inputForegroundColor};
+		background: ${inputBackgroundColor};
+		border-radius: calc(${cornerRadius} * 1px);
+		border: calc(${borderWidth} * 1px) solid ${inputBorderColor};
 		height: calc(${heightNumber} * 1px);
 	}
 	.control {
@@ -34,9 +47,9 @@ export const NumberFieldStyles = css`
 		margin-top: auto;
 		margin-bottom: auto;
 		border: none;
-		padding: 0 calc(var(--design-unit) * 2px + 1px);
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		padding: 0 calc(${designUnit} * 2px + 1px);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 	}
 	.control:hover,
     .control:${focusVisible},
@@ -46,10 +59,10 @@ export const NumberFieldStyles = css`
 	}
 	.label {
 		display: block;
-		color: var(--input-placeholder-foreground-color);
+		color: ${inputPlaceholderForegroundColor};
 		cursor: pointer;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 		margin-bottom: 4px;
 	}
 	.label__hidden {
@@ -75,7 +88,7 @@ export const NumberFieldStyles = css`
 	}
 	.step-up,
 	.step-down {
-		padding: 0 calc(var(--design-unit) * 2px);
+		padding: 0 calc(${designUnit} * 2px);
 		height: 50%;
 		display: flex;
 		align-items: center;
@@ -88,24 +101,24 @@ export const NumberFieldStyles = css`
 		border: 5px solid transparent;
 	}
 	.step-up:before {
-		border-bottom-color: var(--input-foreground-color);
+		border-bottom-color: ${inputForegroundColor};
 		margin-bottom: 2px;
 	}
 	.step-down:before {
-		border-top-color: var(--input-foreground-color);
+		border-top-color: ${inputForegroundColor};
 		margin-top: 2px;
 	}
 	:host(:hover:not([disabled])) .root {
-		background: var(--input-background-color);
-		border-color: var(--input-border-color);
+		background: ${inputBackgroundColor};
+		border-color: ${inputBorderColor};
 	}
 	:host(:active:not([disabled])) .root {
-		background: var(--input-background-color);
-		border-color: var(--focus-border-color);
+		background: ${inputBackgroundColor};
+		border-color: ${focusBorderColor};
 	}
 	:host(:focus-within:not([disabled])) .root {
-		border-color: var(--focus-border-color);
-		box-shadow: 0 0 0 1px var(--focus-border-color) inset;
+		border-color: ${focusBorderColor};
+		box-shadow: 0 0 0 1px ${focusBorderColor} inset;
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,
@@ -114,9 +127,9 @@ export const NumberFieldStyles = css`
 		cursor: ${disabledCursor};
 	}
 	:host([disabled]) {
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
-		border-color: var(--input-border-color);
+		border-color: ${inputBorderColor};
 	}
 `;
