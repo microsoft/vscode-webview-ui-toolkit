@@ -14,6 +14,7 @@ export const DataGridCellStyles = css`
 		padding: calc(${designUnit} * 1px) calc(${designUnit} * 3px);
 		color: #cccccc;
 		box-sizing: border-box;
+		font-family: var(--body-font);
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
 		font-weight: 400;

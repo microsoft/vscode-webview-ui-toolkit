@@ -41,6 +41,7 @@ export const CheckboxStyles = css`
 		cursor: pointer;
 	}
 	.label {
+		font-family: var(--body-font);
 		color: ${checkboxForegroundColor};
 		padding-inline-start: calc(${designUnit} * 2px + 2px);
 		margin-inline-end: calc(${designUnit} * 2px + 2px);

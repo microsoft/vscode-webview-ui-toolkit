@@ -122,6 +122,7 @@ export const DropdownStyles = css`
 		top: calc(${heightNumber} * 1px);
 	}
 	.selected-value {
+		font-family: var(--body-font);
 		font-size: ${typeRampBaseFontSize};
 		flex: 1 1 auto;
 		text-align: start;

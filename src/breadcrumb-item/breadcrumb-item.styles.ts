@@ -14,6 +14,7 @@ export const BreadcrumbItemStyles = css`
         background: transparent;
         color: ${breadcrumbItemForegroundColor};
         box-sizing: border-box;
+        font-family: var(--body-font);
         font-size: ${typeRampBaseFontSize};
         fill: currentColor;
         line-height: ${typeRampBaseLineHeight};

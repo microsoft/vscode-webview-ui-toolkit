@@ -11,6 +11,7 @@ import {
 
 export const BadgeStyles = css`
 	${display('inline-block')} :host {
+		font-family: var(--body-font);
 		box-sizing: border-box;
 		font-size: ${typeRampMinus1FontSize};
 		line-height: ${typeRampMinus1LineHeight};

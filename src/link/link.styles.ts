@@ -13,6 +13,7 @@ import {
 export const LinkStyles = css`
 	${display('inline-flex')} :host {
 		outline: none;
+		font-family: var(--body-font);
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
 		background: transparent;
