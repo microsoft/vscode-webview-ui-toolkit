@@ -5,7 +5,6 @@ export * from './breadcrumb-item/index';
 export * from './button/index';
 export * from './checkbox/index';
 export * from './data-grid/index';
-export * from './design-system-provider/index';
 export * from './divider/index';
 export * from './link/index';
 export * from './menu/index';
@@ -20,9 +19,5 @@ export * from './dropdown/index';
 export * from './text-area/index';
 export * from './text-field/index';
 
-// Export styles and utility functions
-export {
-	VSCodeDesignSystem,
-	VSCodeDesignSystemDefaults,
-} from './vscode-design-system';
+// Export utility functions
 export * from './utilities/theme/applyTheme';
