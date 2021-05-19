@@ -1,25 +1,32 @@
 import {css} from '@microsoft/fast-element';
 import {focusVisible} from '@microsoft/fast-foundation';
+import {
+	borderWidth,
+	cornerRadius,
+	designUnit,
+	focusBorderWidth,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const DataGridCellStyles = css`
 	:host {
-		padding: calc(var(--design-unit) * 1px) calc(var(--design-unit) * 3px);
+		padding: calc(${designUnit} * 1px) calc(${designUnit} * 3px);
 		color: #cccccc;
 		box-sizing: border-box;
-		font-family: var(--body-font);
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 		font-weight: 400;
-		border: solid calc(var(--border-width) * 1px) transparent;
+		border: solid calc(${borderWidth} * 1px) transparent;
 		overflow: hidden;
 		white-space: nowrap;
-		border-radius: calc(var(--corner-radius) * 1px);
+		border-radius: calc(${cornerRadius} * 1px);
 	}
 	:host(.column-header) {
 		font-weight: 600;
 	}
 	:host(:${focusVisible}) {
-		border: solid calc(var(--border-width) * 1px) var(--focus-border-width);
+		border: solid calc(${borderWidth} * 1px) ${focusBorderWidth};
 		color: #cccccc;
 	}
 `;
