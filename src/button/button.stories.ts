@@ -1,11 +1,5 @@
 import {action} from '@storybook/addon-actions';
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {ButtonArgs, createButton} from './fixtures/createButton';
-import {VSCodeButton} from './index';
-
-// Prevent tree-shaking
-VSCodeButton;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Button',
