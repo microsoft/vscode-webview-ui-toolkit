@@ -12,16 +12,11 @@
 	"arrowParens": "avoid",
 	"overrides": [
 		{
-			"files": "tokensToAttributes.ts",
-			"options": {
-				"printWidth": 100
-			}
-		},
-		{
 			"files": "docs/*.md",
 			"options": {
 				"printWidth": 130,
 				"singleQuote": false,
+				"useTabs": false,
 				"tabWidth": 2,
 				"bracketSpacing": true
 			}

@@ -21,7 +21,7 @@
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
 		"build:storybook": "build-storybook",
 		"doc": "api-extractor run --local",
-		"fmt": "prettier --config ./.prettierrc --write \"**/*.{ts,js}\"",
+		"fmt": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
 		"prepublishOnly": "npm run build",
