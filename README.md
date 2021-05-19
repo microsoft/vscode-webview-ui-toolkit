@@ -3,7 +3,7 @@
 # Visual Studio Code Webview Toolkit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
-[![NPM Version](https://img.shields.io/badge/npm-v0.3.0-blue)](https://github.com/microsoft/vscode-webview-toolkit)
+[![NPM Version](https://img.shields.io/badge/npm-v0.5.0-blue)](https://github.com/microsoft/vscode-webview-toolkit)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
 
 ## Introduction
@@ -12,9 +12,9 @@ The VS Code Webview Toolkit is a component library made specifically for buildin
 
 This toolkit was created to give people the tools to build webview experiences that are consistent with the rest of VS Code. Features of the library include:
 
--   **Implements The VS Code Design Language:** All components implement the VS Code design language enabling developers to create extensions that have a consistent look and feel with the rest of VS Code right out of the box.
--   **Plays Nice With Your Tech Stack:** The library is built using web component APIs meaning no matter what tech stack your using (React, Angular, Vanilla JS, etc.) the component library will play nice.
--   **Theming As A First Class Citizen:** All of the components were designed with theming in mind and the toolkit ships with utilities that allow extension developers to easily tap into and automatically consume VS Code color theme changes.
+-   **Implements The VS Code Design Language:** All components implement the VS Code design language, enabling developers to create extensions that have a consistent look and feel with the rest of VS Code.
+-   **Theming As A First Class Citizen:** All of the components were designed with theming in mind and the toolkit ships with utilities that automatically consume and apply VS Code color theme changes.
+-   **Plays Nice With Your Tech Stack:** The library is built with web components meaning no matter what tech stack your using (React, Svelte, Vanilla JS, etc.) the component library will play nice.
 -   **Accessible Out Of The Box:** All components ship with web standard compliant ARIA labels and keyboard navigation meaning you don't have to worry about accessibility.
 
 ## Getting Started

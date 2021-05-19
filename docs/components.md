@@ -11,17 +11,15 @@ Here you can find a list of all the components currently available in this toolk
 | `checkbox`        | [Checkbox Documentation](../src/checkbox/README.md)               |
 | `data-grid`       | [Data Grid Documentation](../src/data-grid/README.md)             |
 | `divider`         | [Divider Documentation](../src/divider/README.md)                 |
-| `dropown`         | [Dropdown Documentation](../src/dropdown/README.md)               |
+| `dropdown`        | [Dropdown Documentation](../src/dropdown/README.md)               |
 | `link`            | [Link Documentation](../src/link/README.md)                       |
 | `menu`            | [Menu Documentation](../src/menu/README.md)                       |
 | `menu-item`       | [Menu Item Documentation](../src/menu-item/README.md)             |
 | `option`          | [Option Documentation](../src/option/README.md)                   |
+| `panels`          | [Panels Documentation](../src/panels/README.md)                   |
 | `progress-bar`    | [Progress Bar Documentation](../src/progress-bar/README.md)       |
 | `progress-ring`   | [Progress Ring Documentation](../src/progress-ring/README.md)     |
 | `radio`           | [Radio Documentation](../src/radio/README.md)                     |
 | `radio-group`     | [Radio Group Documentation](../src/radio-group/README.md)         |
-| `tabs`            | [Tabs Documentation](../src/tabs/README.md)                       |
-| `tab`             | [Tab Documentation](../src/tab/README.md)                         |
-| `tab-panel`       | [Tab Panel Documentation](../src/tab-panel/README.md)             |
 | `text-area`       | [Text Area Documentation](../src/text-area/README.md)             |
 | `text-field`      | [Text Field Documentation](../src/text-field/README.md)           |

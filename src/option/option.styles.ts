@@ -4,50 +4,60 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
+import {
+	designUnit,
+	disabledOpacity,
+	dropdownCornerRadius,
+	dropdownForegroundColor,
+	focusBorderColor,
+	focusBorderWidth,
+	optionBackgroundFocusColor,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const OptionStyles = css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);
-		border-radius: calc(var(--select-corner-radius-color) * 1px);
-		border: calc(var(--focus-border-width) * 1px) solid transparent;
+		border-radius: calc(${dropdownCornerRadius} * 1px);
+		border: calc(${focusBorderWidth} * 1px) solid transparent;
 		box-sizing: border-box;
-		color: var(--select-foreground-color);
+		color: ${dropdownForegroundColor};
 		cursor: pointer;
 		fill: currentcolor;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
-		line-height: var(--type-ramp-base-line-height);
-		margin: 0 calc(var(--design-unit) * 1px);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
+		margin: 0 calc(${designUnit} * 1px);
 		outline: none;
 		overflow: hidden;
-		padding: calc(var(--design-unit) * 1px);
+		padding: calc(${designUnit} * 1px);
 		user-select: none;
 		white-space: nowrap;
 	}
 	:host(:${focusVisible}) {
-		border-color: var(--focus-border-color);
-		background: var(--option-background-focus-color);
-		color: var(--select-foreground-color);
+		border-color: ${focusBorderColor};
+		background: ${optionBackgroundFocusColor};
+		color: ${dropdownForegroundColor};
 	}
 	:host([aria-selected='true']) {
-		background: var(--option-background-focus-color);
-		color: var(--select-foreground-color);
+		background: ${optionBackgroundFocusColor};
+		color: ${dropdownForegroundColor};
 	}
 	:host(:active) {
-		background: var(--option-background-focus-color);
-		color: var(--select-foreground-color);
+		background: ${optionBackgroundFocusColor};
+		color: ${dropdownForegroundColor};
 	}
 	:host(:not([aria-selected='true']):hover) {
-		background: var(--option-background-focus-color);
-		color: var(--select-foreground-color);
+		background: ${optionBackgroundFocusColor};
+		color: ${dropdownForegroundColor};
 	}
 	:host(:not([aria-selected='true']):active) {
-		background: var(--option-background-focus-color);
-		color: var(--select-foreground-color);
+		background: ${optionBackgroundFocusColor};
+		color: ${dropdownForegroundColor};
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 	}
 	:host([disabled]:hover) {
 		background-color: inherit;
@@ -66,8 +76,8 @@ export const OptionStyles = css`
 	}
 	::slotted(svg),
 	::slotted(span) {
-		height: calc(var(--design-unit) * 4px);
-		width: calc(var(--design-unit) * 4px);
+		height: calc(${designUnit} * 4px);
+		width: calc(${designUnit} * 4px);
 	}
 	::slotted([slot='end']) {
 		margin-inline-start: 6px;

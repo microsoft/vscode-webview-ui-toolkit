@@ -1,14 +1,24 @@
 import {css} from '@microsoft/fast-element';
 import {disabledCursor, display} from '@microsoft/fast-foundation';
+import {
+	borderWidth,
+	cornerRadius,
+	disabledOpacity,
+	focusBorderWidth,
+	textLinkForegroundColor,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const LinkStyles = css`
 	${display('inline-flex')} :host {
 		outline: none;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		font-family: var(--body-font);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 		background: transparent;
-		color: var(--text-link-foreground-color);
-		border-radius: calc(var(--corner-radius) * 1px);
+		color: ${textLinkForegroundColor};
+		border-radius: calc(${cornerRadius} * 1px);
 		fill: currentcolor;
 		cursor: pointer;
 	}
@@ -24,7 +34,7 @@ export const LinkStyles = css`
 		white-space: nowrap;
 		outline: none;
 		text-decoration: none;
-		border: calc(var(--border-width) * 1px) solid transparent;
+		border: calc(${borderWidth} * 1px) solid transparent;
 		color: inherit;
 		border-radius: inherit;
 		fill: inherit;
@@ -41,12 +51,12 @@ export const LinkStyles = css`
 		border: 0;
 	}
 	:host(:not([disabled])) .control:focus {
-		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--text-link-foreground-color);
-		outline-offset: calc(var(--focus-border-width) * 1px);
+		outline: calc(${focusBorderWidth} * 1px) solid
+			${textLinkForegroundColor};
+		outline-offset: calc(${focusBorderWidth} * 1px);
 	}
 	:host([disabled]) {
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 		text-decoration: none;
 		background: transparent;
 		cursor: ${disabledCursor};

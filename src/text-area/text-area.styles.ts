@@ -4,6 +4,19 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
+import {
+	borderWidth,
+	cornerRadius,
+	designUnit,
+	disabledOpacity,
+	focusBorderWidth,
+	inputBackgroundColor,
+	inputBorderColor,
+	inputForegroundColor,
+	inputPlaceholderForegroundColor,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const TextAreaStyles = css`
 	${display('inline-block')} :host {
@@ -14,24 +27,24 @@ export const TextAreaStyles = css`
 	.control {
 		box-sizing: border-box;
 		position: relative;
-		color: var(--input-foreground-color);
-		background: var(--input-background-color);
-		border-radius: calc(var(--corner-radius) * 1px);
-		border: calc(var(--border-width) * 1px) solid var(--input-border-color);
+		color: ${inputForegroundColor};
+		background: ${inputBackgroundColor};
+		border-radius: calc(${cornerRadius} * 1px);
+		border: calc(${borderWidth} * 1px) solid ${inputBorderColor};
 		font: inherit;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
-		padding: calc(var(--design-unit) * 2px + 1px);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
+		padding: calc(${designUnit} * 2px + 1px);
 		width: 100%;
 		resize: none;
 	}
 	.control:hover:enabled {
-		background: var(--input-background-color);
-		border-color: var(--input-border-color);
+		background: ${inputBackgroundColor};
+		border-color: ${inputBorderColor};
 	}
 	.control:active:enabled {
-		background: var(--input-background-color);
-		border-color: var(--focus-border-color);
+		background: ${inputBackgroundColor};
+		border-color: ${focusBorderWidth};
 	}
 	.control:hover,
     .control:${focusVisible},
@@ -40,8 +53,8 @@ export const TextAreaStyles = css`
 		outline: none;
 	}
 	:host(:focus-within:not([disabled])) .control {
-		border-color: var(--focus-border-color);
-		box-shadow: 0 0 0 1px var(--focus-border-color) inset;
+		border-color: ${focusBorderWidth};
+		box-shadow: 0 0 0 1px ${focusBorderWidth} inset;
 	}
 	:host([resize='both']) .control {
 		resize: both;
@@ -54,10 +67,10 @@ export const TextAreaStyles = css`
 	}
 	.label {
 		display: block;
-		color: var(--input-placeholder-foreground-color);
+		color: ${inputPlaceholderForegroundColor};
 		cursor: pointer;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 		margin-bottom: 4px;
 	}
 	.label__hidden {
@@ -71,9 +84,9 @@ export const TextAreaStyles = css`
 		cursor: ${disabledCursor};
 	}
 	:host([disabled]) {
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
-		border-color: var(--input-border-color);
+		border-color: ${inputBorderColor};
 	}
 `;

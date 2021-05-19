@@ -1,16 +1,21 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
+import {
+	cornerRadius,
+	designUnit,
+	progressBackgroundColor,
+} from '../design-tokens';
 
 export const ProgressBarStyles = css`
 	${display('flex')} :host {
 		align-items: center;
 		outline: none;
-		height: calc(var(--design-unit) * 1px);
-		margin: calc(var(--design-unit) * 1px) 0;
+		height: calc(${designUnit} * 1px);
+		margin: calc(${designUnit} * 1px) 0;
 	}
 	.progress {
 		background-color: transparent;
-		border-radius: calc(var(--corner-radius) * 1px);
+		border-radius: calc(${cornerRadius} * 1px);
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -18,15 +23,15 @@ export const ProgressBarStyles = css`
 		position: relative;
 	}
 	.determinate {
-		background-color: var(--progress-background-color);
-		border-radius: calc(var(--corner-radius) * 1px);
+		background-color: ${progressBackgroundColor};
+		border-radius: calc(${cornerRadius} * 1px);
 		height: 100%;
 		transition: all 0.2s ease-in-out;
 		display: flex;
 	}
 	.indeterminate {
 		height: 100%;
-		border-radius: calc(var(--corner-radius) * 1px);
+		border-radius: calc(${cornerRadius} * 1px);
 		display: flex;
 		width: 100%;
 		position: relative;
@@ -36,8 +41,8 @@ export const ProgressBarStyles = css`
 		position: absolute;
 		opacity: 0;
 		height: 100%;
-		background-color: var(--progress-background-color);
-		border-radius: calc(var(--corner-radius) * 1px);
+		background-color: ${progressBackgroundColor};
+		border-radius: calc(${cornerRadius} * 1px);
 		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 		width: 40%;
 		animation: indeterminate-1 2s infinite;
@@ -46,8 +51,8 @@ export const ProgressBarStyles = css`
 		position: absolute;
 		opacity: 0;
 		height: 100%;
-		background-color: var(--progress-background-color);
-		border-radius: calc(var(--corner-radius) * 1px);
+		background-color: ${progressBackgroundColor};
+		border-radius: calc(${cornerRadius} * 1px);
 		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 		width: 60%;
 		animation: indeterminate-2 2s infinite;
