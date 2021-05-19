@@ -67,17 +67,17 @@ At this point you'll probably have noticed that there is an error because `getWe
 ```typescript
 function getWebviewContent() {
   return `
-		<!DOCTYPE html>
-		<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>Hello World!</title>
-			</head>
-			<body>
-				<h1>Hello World!</h1>
-			</body>
-		</html>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Hello World!</title>
+		</head>
+		<body>
+			<h1>Hello World!</h1>
+		</body>
+	</html>
 	`;
 }
 ```
@@ -144,18 +144,18 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
   const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
 
   return `
-		<!DOCTYPE html>
-		<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<script type="module" src="${toolkitUri}"></script>
-				<title>Hello World!</title>
-			</head>
-			<body>
-				<h1>Hello World!</h1>
-			</body>
-		</html>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<script type="module" src="${toolkitUri}"></script>
+			<title>Hello World!</title>
+		</head>
+		<body>
+			<h1>Hello World!</h1>
+		</body>
+	</html>
 	`;
 }
 ```
@@ -169,19 +169,19 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
   const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
 
   return `
-		<!DOCTYPE html>
-		<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<script type="module" src="${toolkitUri}"></script>
-				<title>Hello World!</title>
-			</head>
-			<body>
-				<h1>Hello World!</h1>
-				<vscode-button>Howdy!</vscode-button>
-			</body>
-		</html>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<script type="module" src="${toolkitUri}"></script>
+			<title>Hello World!</title>
+		</head>
+		<body>
+			<h1>Hello World!</h1>
+			<vscode-button>Howdy!</vscode-button>
+		</body>
+	</html>
 	`;
 }
 ```
