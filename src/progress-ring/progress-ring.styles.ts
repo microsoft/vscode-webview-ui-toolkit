@@ -1,6 +1,7 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 import {heightNumber} from '../utilities/styles/size';
+import {progressBackgroundColor} from '../design-tokens';
 
 export const ProgressRingStyles = css`
 	${display('flex')} :host {
@@ -20,7 +21,7 @@ export const ProgressRingStyles = css`
 		stroke-width: 2px;
 	}
 	.determinate {
-		stroke: var(--progress-background-color);
+		stroke: ${progressBackgroundColor};
 		fill: none;
 		stroke-width: 2px;
 		stroke-linecap: square;
@@ -29,7 +30,7 @@ export const ProgressRingStyles = css`
 		transition: all 0.2s ease-in-out;
 	}
 	.indeterminate-indicator-1 {
-		stroke: var(--progress-background-color);
+		stroke: ${progressBackgroundColor};
 		fill: none;
 		stroke-width: 2px;
 		stroke-linecap: square;
