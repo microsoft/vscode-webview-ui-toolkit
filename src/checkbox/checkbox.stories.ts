@@ -1,11 +1,5 @@
 import {action} from '@storybook/addon-actions';
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {CheckboxArgs, createCheckbox} from './fixtures/createCheckbox';
-import {VSCodeCheckbox} from './index';
-
-// Prevent tree-shaking
-VSCodeCheckbox;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Checkbox',

@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createDivider, DividerArgs} from './fixtures/createDivider';
-import {VSCodeDivider} from './index';
-
-// Prevent tree-shaking
-VSCodeDivider;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Divider',

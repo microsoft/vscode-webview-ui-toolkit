@@ -1,6 +1,6 @@
 {
 	"name": "vscode-webview-toolkit",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
 	"homepage": "https://github.com/microsoft/vscode-webview-toolkit#readme",
 	"license": "MIT",
@@ -21,7 +21,7 @@
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
 		"build:storybook": "build-storybook",
 		"doc": "api-extractor run --local",
-		"fmt": "prettier --config ./.prettierrc --write \"**/*.{ts,js}\"",
+		"fmt": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
 		"prepublishOnly": "npm run build",
@@ -29,12 +29,16 @@
 		"test:coverage": "jest --verbose --coverage"
 	},
 	"dependencies": {
-		"@microsoft/fast-element": "^1.0.1",
-		"@microsoft/fast-foundation": "^1.16.1",
+		"@microsoft/fast-element": "^1.2.0",
+		"@microsoft/fast-foundation": "^1.22.0",
 		"lodash-es": "^4.17.21",
 		"vscode-codicons": "0.0.15"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.14.3",
+		"@babel/plugin-proposal-decorators": "^7.14.2",
+		"@babel/preset-env": "^7.14.2",
+		"@babel/preset-typescript": "^7.13.0",
 		"@microsoft/api-extractor": "^7.15.1",
 		"@microsoft/eslint-config-fast-dna": "^1.2.0",
 		"@rollup/plugin-commonjs": "^17.1.0",
@@ -47,6 +51,9 @@
 		"@storybook/html": "^6.2.9",
 		"@storybook/theming": "^6.2.9",
 		"@types/jest": "^26.0.20",
+		"babel-jest": "^26.6.3",
+		"babel-loader": "^8.2.2",
+		"babel-plugin-transform-class-properties": "^6.24.1",
 		"eslint-config-prettier": "^8.1.0",
 		"jest": "^26.6.3",
 		"prettier": "^2.2.1",

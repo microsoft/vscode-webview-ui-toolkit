@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createLink, LinkArgs} from './fixtures/createLink';
-import {VSCodeLink} from './index';
-
-// Prevent tree-shaking
-VSCodeLink;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Link',

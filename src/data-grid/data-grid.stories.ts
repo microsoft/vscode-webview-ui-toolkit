@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createDataGrid, DataGridArgs} from './fixtures/createDataGrid';
-import {VSCodeDataGrid} from './index';
-
-// Prevent tree-shaking
-VSCodeDataGrid;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Data Grid',

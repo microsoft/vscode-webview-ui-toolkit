@@ -1,70 +1,70 @@
-import {createTab, TabArgs} from '../../tab/fixtures/createTab';
-import {createTabPanel} from '../../tab-panel/fixtures/createTabPanel';
-import {VSCodeTabs} from '../index';
+import {VSCodePanels} from '../index';
+import {createPanelTab, PanelTabArgs} from './createPanelTab';
+import {createPanelView} from './createPanelView';
 
-export type TabsArgs = {
+export type PanelsArgs = {
 	activeTab?: string;
 	activeIndicator?: boolean;
 	hasComplexContent?: boolean;
 	tabMetaData: any;
 };
 
-export function createTabs({
+export function createPanels({
 	activeTab,
 	activeIndicator,
 	hasComplexContent,
 	tabMetaData,
-}: TabsArgs) {
-	let tabs: VSCodeTabs;
+}: PanelsArgs) {
+	let panels: VSCodePanels;
 	if (tabMetaData) {
-		tabs = createTabsWithChildren(tabMetaData, hasComplexContent);
+		panels = createTabsWithChildren(tabMetaData, hasComplexContent);
 	}
 
 	if (activeTab) {
 		const tabTitles = tabMetaData.map(tabObject => {
 			return tabObject.title.toLowerCase();
 		});
-		tabs.setAttribute(
+		panels.setAttribute(
 			'activeid',
 			convertActiveTabNameToTabId(activeTab.toLowerCase(), tabTitles)
 		);
 	}
 	if (!activeIndicator) {
-		tabs.setAttribute('activeindicator', activeIndicator.toString());
+		panels.setAttribute('activeindicator', activeIndicator.toString());
 	}
 
-	return tabs;
+	return panels;
 }
 
 function createTabsWithChildren(
-	tabMetaData: TabArgs[],
+	tabMetaData: PanelTabArgs[],
 	hasComplexContent: boolean
 ) {
-	const tabs = new VSCodeTabs();
+	const panels = new VSCodePanels();
 
 	// Create and append tab components
 	for (let i = 0; i < tabMetaData.length; i++) {
-		const tab = createTab({
+		const panelTab = createPanelTab({
 			title: tabMetaData[i].title,
 			isDisabled: tabMetaData[i].isDisabled,
 			customIcon: tabMetaData[i].customIcon,
 		});
-		tab.setAttribute('id', `tab-${i + 1}`);
-		tabs.appendChild(tab);
+		panelTab.setAttribute('id', `tab-${i + 1}`);
+		panels.appendChild(panelTab);
 	}
 
 	// Create and append tab-panel components
 	for (let i = 0; i < tabMetaData.length; i++) {
-		const tabPanel = hasComplexContent
-			? createTabPanel({hasComplexContent})
-			: createTabPanel({
+		const panelView = hasComplexContent
+			? createPanelView({hasComplexContent})
+			: createPanelView({
 					label: `${capitalize(tabMetaData[i].title)} Content`,
 			  });
-		tabPanel.setAttribute('id', `tab-panel-${i + 1}`);
-		tabs.appendChild(tabPanel);
+		panelView.setAttribute('id', `view-${i + 1}`);
+		panels.appendChild(panelView);
 	}
 
-	return tabs;
+	return panels;
 }
 
 function convertActiveTabNameToTabId(activeTab: string, tabNames: string[]) {

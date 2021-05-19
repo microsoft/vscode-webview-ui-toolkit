@@ -1,12 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
-import {VSCodeRadio} from '../radio/index';
 import {createRadioGroup, RadioGroupArgs} from './fixtures/createRadioGroup';
-import {VSCodeRadioGroup} from './index';
-
-// Prevent tree-shaking
-VSCodeRadio;
-VSCodeRadioGroup;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Radio Group',
