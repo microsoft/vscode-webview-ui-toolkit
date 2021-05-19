@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createProgressBar, ProgressBarArgs} from './fixtures/createProgressBar';
-import {VSCodeProgressBar} from './index';
-
-// Prevent tree-shaking
-VSCodeProgressBar;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Progress Bar',

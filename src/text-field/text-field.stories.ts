@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createTextField, TextFieldArgs} from './fixtures/createTextField';
-import {VSCodeTextField} from './index';
-
-// Prevent tree-shaking
-VSCodeTextField;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Text Field',

@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createMenu, MenuArgs} from './fixtures/createMenu';
-import {VSCodeMenu} from './index';
-
-// Prevent tree-shaking
-VSCodeMenu;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Menu',

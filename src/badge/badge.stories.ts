@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {BadgeArgs, createBadge} from './fixtures/createBadge';
-import {VSCodeBadge} from './index';
-
-// Prevent tree-shaking
-VSCodeBadge;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Badge',

@@ -4,6 +4,20 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
+import {
+	borderWidth,
+	buttonPrimaryBackgroundColor,
+	buttonPrimaryForegroundColor,
+	buttonPrimaryHoverBackgroundColor,
+	buttonSecondaryBackgroundColor,
+	buttonSecondaryForegroundColor,
+	buttonSecondaryHoverBackgroundColor,
+	cornerRadius,
+	disabledOpacity,
+	focusBorderWidth,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 /**
  * @internal
@@ -11,11 +25,12 @@ import {
 const BaseButtonStyles = css`
 	${display('inline-flex')} :host {
 		outline: none;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
-		background: var(--button-primary-background-color);
-		color: var(--button-primary-foreground-color);
-		border-radius: calc(var(--corner-radius) * 1px);
+		font-family: var(--body-font);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
+		background: ${buttonPrimaryBackgroundColor};
+		color: ${buttonPrimaryForegroundColor};
+		border-radius: calc(${cornerRadius} * 1px);
 		fill: currentcolor;
 		cursor: pointer;
 	}
@@ -31,7 +46,7 @@ const BaseButtonStyles = css`
 		white-space: nowrap;
 		outline: none;
 		text-decoration: none;
-		border: calc(var(--border-width) * 1px) solid transparent;
+		border: calc(${borderWidth} * 1px) solid transparent;
 		color: inherit;
 		border-radius: inherit;
 		fill: inherit;
@@ -39,22 +54,22 @@ const BaseButtonStyles = css`
 		font-family: inherit;
 	}
 	:host(:hover) {
-		background: var(--button-primary-hover-background-color);
+		background: ${buttonPrimaryHoverBackgroundColor};
 	}
 	:host(:active) {
-		background: var(--button-primary-background-color);
+		background: ${buttonPrimaryBackgroundColor};
 	}
 	.control: ${focusVisible} {
-		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--button-primary-hover-background-color);
-		outline-offset: calc(var(--focus-border-width) * 1px);
+		outline: calc(${focusBorderWidth} * 1px) solid
+			${buttonPrimaryHoverBackgroundColor};
+		outline-offset: calc(${focusBorderWidth} * 1px);
 	}
 	.control::-moz-focus-inner {
 		border: 0;
 	}
 	:host([disabled]) {
-		opacity: var(--disabled-opacity);
-		background: var(--button-primary-background-color);
+		opacity: ${disabledOpacity};
+		background: ${buttonPrimaryBackgroundColor};
 		cursor: ${disabledCursor};
 	}
 	.content {
@@ -86,25 +101,25 @@ const BaseButtonStyles = css`
  */
 const PrimaryButtonStyles = css`
 	:host([appearance='primary']) {
-		background: var(--button-primary-background-color);
-		color: var(--button-primary-foreground-color);
+		background: ${buttonPrimaryBackgroundColor};
+		color: ${buttonPrimaryForegroundColor};
 	}
 	:host([appearance='primary']:hover) {
-		background: var(--button-primary-hover-background-color);
+		background: ${buttonPrimaryHoverBackgroundColor};
 	}
 	:host([appearance='primary']) .control {
 		padding: 6px 11px;
 	}
 	:host([appearance='primary']:active) .control:active {
-		background: var(--button-primary-background-color);
+		background: ${buttonPrimaryBackgroundColor};
 	}
 	:host([appearance='primary']) .control:${focusVisible} {
-		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--button-primary-hover-background-color);
-		outline-offset: calc(var(--focus-border-width) * 1px);
+		outline: calc(${focusBorderWidth} * 1px) solid
+			${buttonPrimaryHoverBackgroundColor};
+		outline-offset: calc(${focusBorderWidth} * 1px);
 	}
 	:host([appearance='primary'][disabled]) {
-		background: var(--button-primary-background-color);
+		background: ${buttonPrimaryBackgroundColor};
 	}
 `;
 
@@ -113,25 +128,25 @@ const PrimaryButtonStyles = css`
  */
 const SecondaryButtonStyles = css`
 	:host([appearance='secondary']) {
-		background: var(--button-secondary-background-color);
-		color: var(--button-secondary-foreground-color);
+		background: ${buttonSecondaryBackgroundColor};
+		color: ${buttonSecondaryForegroundColor};
 	}
 	:host([appearance='secondary']:hover) {
-		background: var(--button-secondary-hover-background-color);
+		background: ${buttonSecondaryHoverBackgroundColor};
 	}
 	:host([appearance='secondary']) .control {
 		padding: 6px 11px;
 	}
 	:host([appearance='secondary']:active) .control:active {
-		background: var(--button-secondary-background-color);
+		background: ${buttonSecondaryBackgroundColor};
 	}
 	:host([appearance='secondary']) .control:${focusVisible} {
-		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--button-primary-hover-background-color);
-		outline-offset: calc(var(--focus-border-width) * 1px);
+		outline: calc(${focusBorderWidth} * 1px) solid
+			${buttonPrimaryHoverBackgroundColor};
+		outline-offset: calc(${focusBorderWidth} * 1px);
 	}
 	:host([appearance='secondary'][disabled]) {
-		background: var(--button-secondary-background-color);
+		background: ${buttonSecondaryBackgroundColor};
 	}
 `;
 
@@ -142,7 +157,7 @@ const IconButtonStyles = css`
 	:host([appearance='icon']) {
 		background: transparent;
 		border-radius: 5px;
-		color: var(--button-secondary-foreground-color);
+		color: ${buttonSecondaryForegroundColor};
 	}
 	:host([appearance='icon']:hover) {
 		background: rgba(90, 93, 94, 0.31);
@@ -154,9 +169,9 @@ const IconButtonStyles = css`
 		background: rgba(90, 93, 94, 0.31);
 	}
 	:host([appearance='icon']) .control:${focusVisible} {
-		outline: calc(var(--focus-border-width) * 1px) solid
-			var(--button-primary-hover-background-color);
-		outline-offset: calc(var(--focus-border-width) * 1px);
+		outline: calc(${focusBorderWidth} * 1px) solid
+			${buttonPrimaryHoverBackgroundColor};
+		outline-offset: calc(${focusBorderWidth} * 1px);
 	}
 	:host([appearance='icon'][disabled]) {
 		background: transparent;
@@ -166,6 +181,6 @@ const IconButtonStyles = css`
 export const ButtonStyles = css`
 	${BaseButtonStyles}
 	${PrimaryButtonStyles}
-    ${SecondaryButtonStyles}
-    ${IconButtonStyles}
+	${SecondaryButtonStyles}
+	${IconButtonStyles}
 `;
