@@ -162,9 +162,7 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 ### Test That It All Works
 
-Let's check that everything works by adding some toolkit components to the webview and then opening the extension in the Extension Development Host window by pressing `F5`.
-
-_Note that all toolkit components must be a child of the `<vscode-design-system-provider>` element with the `use-defaults` attribute set._
+Let's check that everything works by adding a `<vscode-button>` to the webview and then opening the extension in the Extension Development Host window by pressing `F5`.
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
@@ -181,9 +179,7 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 			</head>
 			<body>
 				<h1>Hello World!</h1>
-				<vscode-design-system-provider use-defaults>
-					<vscode-button>Howdy!</vscode-button>
-				</vscode-design-system-provider>
+				<vscode-button>Howdy!</vscode-button>
 			</body>
 		</html>
 	`;
