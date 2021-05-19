@@ -1,11 +1,5 @@
 import {action} from '@storybook/addon-actions';
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createDropdown, DropdownArgs} from './fixtures/createDropdown';
-import {VSCodeDropdown} from './index';
-
-// Prevent tree-shaking
-VSCodeDropdown;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Dropdown',
