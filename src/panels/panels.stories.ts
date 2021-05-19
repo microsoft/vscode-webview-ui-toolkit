@@ -1,12 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createPanels, PanelsArgs} from './fixtures/createPanels';
-import {VSCodePanels, VSCodePanelTab, VSCodePanelView} from './index';
-
-// Prevent tree-shaking
-VSCodePanels;
-VSCodePanelTab;
-VSCodePanelView;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Panels',
