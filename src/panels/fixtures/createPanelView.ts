@@ -14,7 +14,7 @@ export function createPanelView({label, hasComplexContent}: PanelViewArgs) {
 	if (hasComplexContent) {
 		const emojis = ['🍓', '🍎', '🍊', '🍍', '🥭', '🍋', '🍇'];
 		const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
-		panelView.innerHTML = /*html*/`
+		panelView.innerHTML = /*html*/ `
             <section style="display: flex; flex-direction: column; width: 100%;">
                 <h1 style="margin-top: 0;">Smoothie Maker ${randomEmoji}</h1>
                 <vscode-checkbox>Apples</vscode-checkbox>

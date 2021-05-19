@@ -41,24 +41,24 @@ Start by navigating to the `extensions.ts` file inside the `src` directory and r
 
 ```typescript
 export function activate(context: vscode.ExtensionContext) {
-	let panel: vscode.WebviewPanel | undefined;
+  let panel: vscode.WebviewPanel | undefined;
 
-	const startCommand = vscode.commands.registerCommand("helloworld.helloWorld", () => {
-		if (panel) {
-			// If the webview panel already exists reveal it
-			panel.reveal(vscode.ViewColumn.One);
-		} else {
-			// If a webview panel does not already exist create and show a new one
-			panel = vscode.window.createWebviewPanel("helloworld", "Hello World", vscode.ViewColumn.One, {
-				enableScripts: true,
-			});
+  const startCommand = vscode.commands.registerCommand("helloworld.helloWorld", () => {
+    if (panel) {
+      // If the webview panel already exists reveal it
+      panel.reveal(vscode.ViewColumn.One);
+    } else {
+      // If a webview panel does not already exist create and show a new one
+      panel = vscode.window.createWebviewPanel("helloworld", "Hello World", vscode.ViewColumn.One, {
+        enableScripts: true,
+      });
 
-			// Set the HTML content for the new webview panel
-			panel.webview.html = getWebviewContent();
-		}
-	});
+      // Set the HTML content for the new webview panel
+      panel.webview.html = getWebviewContent();
+    }
+  });
 
-	context.subscriptions.push(startCommand);
+  context.subscriptions.push(startCommand);
 }
 ```
 
@@ -66,18 +66,18 @@ At this point you'll probably have noticed that there is an error because `getWe
 
 ```typescript
 function getWebviewContent() {
-	return `
-		<!DOCTYPE html>
-		<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>Hello World!</title>
-			</head>
-			<body>
-				<h1>Hello World!</h1>
-			</body>
-		</html>
+  return `
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Hello World!</title>
+		</head>
+		<body>
+			<h1>Hello World!</h1>
+		</body>
+	</html>
 	`;
 }
 ```
@@ -106,16 +106,16 @@ With the package installed, we need to adjust the project so the toolkit is usab
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-	// ... Implementation details should be left unchanged for now ...
+  // ... Implementation details should be left unchanged for now ...
 }
 
 // ❗️ Also update the getWebviewContent function call inside of the activate function. ❗️
 export function activate(context: vscode.ExtensionContext) {
-	// ... Other code ...
+  // ... Other code ...
 
-	panel.webview.html = getWebviewContent(panel.webview, context.extensionUri);
+  panel.webview.html = getWebviewContent(panel.webview, context.extensionUri);
 
-	// ... Other code ...
+  // ... Other code ...
 }
 ```
 
@@ -125,13 +125,13 @@ With those changes we can now use some VS Code APIs to create a URI pointing to 
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-	const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
+  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
 
-	// ... Other implementation details should be left unchanged for now ...
+  // ... Other implementation details should be left unchanged for now ...
 }
 
 function getUri(webview: vscode.Webview, extensionUri: vscode.Uri, pathList: string[]) {
-	return webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, ...pathList));
+  return webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, ...pathList));
 }
 ```
 
@@ -141,21 +141,21 @@ With access to the toolkit URI we can pass it into our webview context via a reg
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-	const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
+  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
 
-	return `
-		<!DOCTYPE html>
-		<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<script type="module" src="${toolkitUri}"></script>
-				<title>Hello World!</title>
-			</head>
-			<body>
-				<h1>Hello World!</h1>
-			</body>
-		</html>
+  return `
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<script type="module" src="${toolkitUri}"></script>
+			<title>Hello World!</title>
+		</head>
+		<body>
+			<h1>Hello World!</h1>
+		</body>
+	</html>
 	`;
 }
 ```
@@ -166,22 +166,22 @@ Let's check that everything works by adding a `<vscode-button>` to the webview a
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-	const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
+  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
 
-	return `
-		<!DOCTYPE html>
-		<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<script type="module" src="${toolkitUri}"></script>
-				<title>Hello World!</title>
-			</head>
-			<body>
-				<h1>Hello World!</h1>
-				<vscode-button>Howdy!</vscode-button>
-			</body>
-		</html>
+  return `
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<script type="module" src="${toolkitUri}"></script>
+			<title>Hello World!</title>
+		</head>
+		<body>
+			<h1>Hello World!</h1>
+			<vscode-button>Howdy!</vscode-button>
+		</body>
+	</html>
 	`;
 }
 ```
