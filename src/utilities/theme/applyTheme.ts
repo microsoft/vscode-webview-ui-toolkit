@@ -3,7 +3,7 @@
  * applies the current VS Code theme to the VS Code Webview Toolkit components.
  */
 
-import {colorTokensToAttributeNames} from './tokensToAttributes';
+import {tokenMappings} from './tokenMappings';
 
 window.addEventListener('load', () => {
 	const observer = new MutationObserver(applyCurrentTheme);
@@ -20,22 +20,18 @@ window.addEventListener('load', () => {
  * components.
  */
 function applyCurrentTheme() {
-	const designProvider = document.querySelector(
-		'vscode-design-system-provider'
-	);
+	// Get all the styles applied to the <body> tag in the webview HTML
+	// Importantly this includes all the CSS variables associated with the
+	// current VS Code theme
+	const styles = getComputedStyle(document.body);
 
-	if (designProvider) {
-		// Get all the styles applied to the <body> tag in the webview HTML
-		// Importantly this includes all the CSS variables associated with the
-		// current VS Code theme
-		const styles = getComputedStyle(document.body);
+	for (const vscodeColorToken in tokenMappings) {
+		const toolkitToken = tokenMappings[vscodeColorToken];
+		const color = styles.getPropertyValue(vscodeColorToken).toString();
+		const body = document.querySelector('body');
 
-		for (const colorToken in colorTokensToAttributeNames) {
-			const attributeName = colorTokensToAttributeNames[colorToken];
-			const tokenValue = styles.getPropertyValue(colorToken).toString();
-			// Set a given VS Code theme color to its respective
-			// <vscode-design-system-provider> attribute
-			designProvider.setAttribute(attributeName, tokenValue);
+		if (body) {
+			toolkitToken.setValueFor(body, color);
 		}
 	}
 }

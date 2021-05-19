@@ -1,13 +1,7 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {
 	createProgressRing,
 	ProgressRingArgs,
 } from './fixtures/createProgressRing';
-import {VSCodeProgressRing} from './index';
-
-// Prevent tree-shaking
-VSCodeProgressRing;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Progress Ring',

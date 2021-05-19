@@ -29,8 +29,8 @@
 		"test:coverage": "jest --verbose --coverage"
 	},
 	"dependencies": {
-		"@microsoft/fast-element": "^1.0.1",
-		"@microsoft/fast-foundation": "^1.16.1",
+		"@microsoft/fast-element": "^1.2.0",
+		"@microsoft/fast-foundation": "^1.22.0",
 		"lodash-es": "^4.17.21",
 		"vscode-codicons": "0.0.15"
 	},

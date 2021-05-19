@@ -5,33 +5,46 @@ import {
 	focusVisible,
 } from '@microsoft/fast-foundation';
 import {heightNumber} from '../utilities/styles/size';
+import {
+	borderWidth,
+	checkboxBackgroundColor,
+	checkboxBorderColor,
+	checkboxCornerRadius,
+	checkboxForegroundColor,
+	designUnit,
+	disabledOpacity,
+	focusBorderColor,
+	focusBorderWidth,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const CheckboxStyles = css`
 	${display('inline-flex')} :host {
 		align-items: center;
 		outline: none;
-		margin: calc(var(--design-unit) * 1px) 0;
+		margin: calc(${designUnit} * 1px) 0;
 		user-select: none;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 	}
 	.control {
 		position: relative;
-		width: calc((${heightNumber} / 2 + var(--design-unit)) * 1px);
-		height: calc((${heightNumber} / 2 + var(--design-unit)) * 1px);
+		width: calc((${heightNumber} / 2 + ${designUnit}) * 1px);
+		height: calc((${heightNumber} / 2 + ${designUnit}) * 1px);
 		box-sizing: border-box;
-		border-radius: calc(var(--checkbox-corner-radius) * 1px);
-		border: calc(var(--border-width) * 1px) solid
-			var(--checkbox-border-color);
-		background: var(--checkbox-background-color);
+		border-radius: calc(${checkboxCornerRadius} * 1px);
+		border: calc(${borderWidth} * 1px) solid
+			${checkboxBorderColor};
+		background: ${checkboxBackgroundColor};
 		outline: none;
 		cursor: pointer;
 	}
 	.label {
 		font-family: var(--body-font);
-		color: var(--checkbox-foreground-color);
-		padding-inline-start: calc(var(--design-unit) * 2px + 2px);
-		margin-inline-end: calc(var(--design-unit) * 2px + 2px);
+		color: ${checkboxForegroundColor};
+		padding-inline-start: calc(${designUnit} * 2px + 2px);
+		margin-inline-end: calc(${designUnit} * 2px + 2px);
 		cursor: pointer;
 	}
 	.label__hidden {
@@ -42,13 +55,13 @@ export const CheckboxStyles = css`
 		width: 100%;
 		height: 100%;
 		display: block;
-		fill: var(--checkbox-foreground-color);
+		fill: ${checkboxForegroundColor};
 		opacity: 0;
 		pointer-events: none;
 	}
 	.indeterminate-indicator {
-		border-radius: calc(var(--checkbox-corner-radius) * 1px);
-		background: var(--checkbox-foreground-color);
+		border-radius: calc(${checkboxCornerRadius} * 1px);
+		background: ${checkboxForegroundColor};
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -58,16 +71,16 @@ export const CheckboxStyles = css`
 		opacity: 0;
 	}
 	:host(:enabled) .control:hover {
-		background: var(--checkbox-background-color);
-		border-color: var(--checkbox-background-color);
+		background: ${checkboxBackgroundColor};
+		border-color: ${checkboxBackgroundColor};
 	}
 	:host(:enabled) .control:active {
-		background: var(--checkbox-background-color);
-		border-color: var(--focus-border-color);
+		background: ${checkboxBackgroundColor};
+		border-color: ${focusBorderColor});
 	}
 	:host(:${focusVisible}) .control {
-		border: calc(var(--focus-border-width) * 1px) solid
-			var(--focus-border-color);
+		border: calc(${focusBorderWidth} * 1px) solid
+			${focusBorderColor});
 	}
 	:host(.disabled) .label,
 	:host(.readonly) .label,
@@ -80,6 +93,6 @@ export const CheckboxStyles = css`
 		opacity: 1;
 	}
 	:host(.disabled) {
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 	}
 `;

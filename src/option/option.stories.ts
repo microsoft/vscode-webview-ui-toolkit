@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createOption, OptionArgs} from './fixtures/createOption';
-import {VSCodeOption} from './index';
-
-// Prevent tree-shaking
-VSCodeOption;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Option',

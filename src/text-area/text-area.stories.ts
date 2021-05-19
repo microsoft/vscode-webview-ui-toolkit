@@ -1,10 +1,4 @@
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createTextArea, TextAreaArgs} from './fixtures/createTextArea';
-import {VSCodeTextArea} from './index';
-
-// Prevent tree-shaking
-VSCodeTextArea;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Text Area',

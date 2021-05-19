@@ -5,15 +5,27 @@ import {
 	focusVisible,
 } from '@microsoft/fast-foundation';
 import {heightNumber} from '../utilities/styles/size';
+import {
+	borderWidth,
+	designUnit,
+	disabledOpacity,
+	dropdownBackgroundColor,
+	dropdownBorderColor,
+	dropdownCornerRadius,
+	dropdownForegroundColor,
+	focusBorderColor,
+	focusBorderWidth,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const DropdownStyles = css`
 	${display('inline-flex')} :host {
-		background: var(--dropdown-background-color);
-		border-radius: calc(var(--dropdown-corner-radius-color) * 1px);
-		border: calc(var(--border-width) * 1px) solid
-			var(--dropdown-border-color);
+		background: ${dropdownBackgroundColor};
+		border-radius: calc(${dropdownCornerRadius} * 1px);
+		border: calc(${borderWidth} * 1px) solid ${dropdownBorderColor};
 		box-sizing: border-box;
-		color: var(--dropdown-foreground-color);
+		color: ${dropdownForegroundColor};
 		contain: contents;
 		height: calc(${heightNumber} * 1px);
 		position: relative;
@@ -22,16 +34,15 @@ export const DropdownStyles = css`
 		outline: none;
 	}
 	.listbox {
-		background: var(--dropdown-background-color);
-		border: calc(var(--border-width) * 1px) solid
-			var(--dropdown-border-color);
-		border-radius: calc(var(--dropdown-corner-radius-color) * 1px);
+		background: ${dropdownBackgroundColor};
+		border: calc(${borderWidth} * 1px) solid ${dropdownBorderColor};
+		border-radius: calc(${dropdownCornerRadius} * 1px);
 		box-sizing: border-box;
 		display: inline-flex;
 		flex-direction: column;
 		left: 0;
 		max-height: calc(var(--max-height) - (${heightNumber} * 1px));
-		padding: calc(var(--design-unit) * 1px) 0;
+		padding: calc(${designUnit} * 1px) 0;
 		overflow-y: auto;
 		position: absolute;
 		width: 100%;
@@ -45,52 +56,52 @@ export const DropdownStyles = css`
 		box-sizing: border-box;
 		cursor: pointer;
 		display: flex;
-		font-size: var(--type-ramp-base-font-size);
+		font-size: ${typeRampBaseFontSize};
 		font: inherit;
-		line-height: var(--type-ramp-base-line-height);
-		padding: 0 calc(var(--design-unit) * 2.25px);
+		line-height: ${typeRampBaseLineHeight};
+		padding: 0 calc(${designUnit} * 2.25px);
 		width: 100%;
 	}
 	:host(:not([disabled]):hover) {
-		background: var(--dropdown-background-color);
-		border-color: var(--dropdown-border-color);
+		background: ${dropdownBackgroundColor};
+		border-color: ${dropdownBorderColor};
 	}
 	:host(:focus) {
-		border-color: var(--focus-border-color);
+		border-color: ${focusBorderColor};
 	}
 	:host(:${focusVisible}) {
-		border-color: var(--focus-border-color);
+		border-color: ${focusBorderColor};
 	}
 	:host(:${focusVisible}) ::slotted([aria-selected="true"][role="option"]:not([disabled])) {
-		box-shadow: 0 0 0 calc(var(--focus-border-width) * 1px) inset
-			var(--focus-border-color);
-		border-color: var(--focus-border-color);
+		box-shadow: 0 0 0 calc(${focusBorderWidth} * 1px) inset
+			${focusBorderColor};
+		border-color: ${focusBorderColor};
 		background: #094771;
-		color: var(--dropdown-foreground-color);
+		color: ${dropdownForegroundColor};
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
 		cursor: ${disabledCursor};
 	}
 	:host([disabled]:hover) {
-		background: var(--dropdown-background-color);
-		color: var(--dropdown-foreground-color);
+		background: ${dropdownBackgroundColor};
+		color: ${dropdownForegroundColor};
 		fill: currentcolor;
 	}
 	:host(:not([disabled])) .control:active {
 		background: #094771;
-		border-color: var(--dropdown-border-color);
-		border-radius: calc(var(--dropdown-corner-radius-color) * 1px);
+		border-color: ${dropdownBorderColor};
+		border-radius: calc(${dropdownCornerRadius} * 1px);
 	}
 	:host([open]),
 	:host([open]) .listbox {
 		border: none;
 	}
 	:host([open]) .control {
-		padding: 0 calc((var(--design-unit) * 2.25px) + 1px);
+		padding: 0 calc((${designUnit} * 2.25px) + 1px);
 	}
 	:host([open][position='above']) .listbox,
 	:host([open][position='below']) {
@@ -112,7 +123,7 @@ export const DropdownStyles = css`
 	}
 	.selected-value {
 		font-family: var(--body-font);
-		font-size: var(--type-ramp-base-font-size);
+		font-size: ${typeRampBaseFontSize};
 		flex: 1 1 auto;
 		text-align: start;
 	}
@@ -139,8 +150,8 @@ export const DropdownStyles = css`
 	::slotted(span) {
 		fill: currentcolor;
 		height: 1em;
-		min-height: calc(var(--design-unit) * 4px);
-		min-width: calc(var(--design-unit) * 4px);
+		min-height: calc(${designUnit} * 4px);
+		min-width: calc(${designUnit} * 4px);
 		width: 1em;
 	}
 	::slotted([role='option']),

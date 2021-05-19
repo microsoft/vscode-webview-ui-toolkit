@@ -1,12 +1,18 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
+import {
+	cornerRadius,
+	designUnit,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const PanelsStyles = css`
 	${display('grid')} :host {
 		box-sizing: border-box;
 		font-family: var(--body-font);
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 		color: #a0a0a0;
 		grid-template-columns: auto 1fr auto;
 		grid-template-rows: auto 1fr;
@@ -15,11 +21,11 @@ export const PanelsStyles = css`
 		display: grid;
 		grid-template-rows: auto auto;
 		grid-template-columns: auto;
-		column-gap: calc(var(--design-unit) * 8px);
+		column-gap: calc(${designUnit} * 8px);
 		position: relative;
 		width: max-content;
 		align-self: end;
-		padding: calc(var(--design-unit) * 1px) calc(var(--design-unit) * 1px) 0;
+		padding: calc(${designUnit} * 1px) calc(${designUnit} * 1px) 0;
 		box-sizing: border-box;
 	}
 	.start,
@@ -34,7 +40,7 @@ export const PanelsStyles = css`
 		justify-self: center;
 		background: #ffffff;
 		margin: 0;
-		border-radius: calc(var(--corner-radius) * 1px);
+		border-radius: calc(${cornerRadius} * 1px);
 	}
 	.activeIndicatorTransition {
 		transition: transform 0.01s linear;
