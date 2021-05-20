@@ -1,11 +1,9 @@
 import {action} from '@storybook/addon-actions';
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {ComboboxArgs, createCombobox} from './fixtures/createCombobox';
 import {VSCodeCombobox} from './index';
 
 // Prevent tree-shaking
 VSCodeCombobox;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Combobox',
