@@ -6,12 +6,6 @@ import {
 import {NumberFieldStyles as styles} from './number-field.styles';
 
 /**
- * Number field appearances
- * @public
- */
-export type NumberFieldAppearance = 'filled' | 'outline';
-
-/**
  * The VS Code Number Field element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.NumberField/ | NumberField} and
  * {@link https://www.fast.design/docs/api/fast-foundation.NumberFieldtemplate/ | NumberFieldTemplate}.
@@ -31,26 +25,4 @@ export type NumberFieldAppearance = 'filled' | 'outline';
 		delegatesFocus: true,
 	},
 })
-export class VSCodeNumberField extends NumberField {
-	/**
-	 * The appearance of the element.
-	 *
-	 * @remarks
-	 * HTML Attribute: appearance
-	 *
-	 * @public
-	 */
-	@attr
-	public appearance: NumberFieldAppearance;
-
-	/**
-	 * @internal
-	 */
-	public connectedCallback() {
-		super.connectedCallback();
-
-		if (!this.appearance) {
-			this.appearance = 'outline';
-		}
-	}
-}
+export class VSCodeNumberField extends NumberField {}

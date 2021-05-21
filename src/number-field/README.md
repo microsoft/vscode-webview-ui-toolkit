@@ -7,7 +7,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 | Attribute     | Type    | Description                                                                                |
 | ------------- | ------- | ------------------------------------------------------------------------------------------ |
 | `autofocus`   | boolean | Indicates that this component should get focus after the page finishes loading.            |
-| `disabled`    | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.       |
+| `disabled`    | boolean | Prevents the user from interacting with the number field––it cannot be pressed or focused. |
 | `name`        | string  | The name of the component.                                                                 |
 | `placeholder` | string  | Sets the placeholder value of the component, generally used to provide a hint to the user. |
 | `readonly`    | boolean | When true, the control will be immutable by any user interaction.                          |

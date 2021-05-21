@@ -10,7 +10,7 @@ export type NumberFieldArgs = {
 	isReadOnly?: boolean;
 	isDisabled?: boolean;
 	isAutoFocused?: boolean;
-	startIcon: boolean;
+	startIcon?: boolean;
 };
 
 export function createNumberField({
@@ -24,39 +24,39 @@ export function createNumberField({
 	isAutoFocused,
 	startIcon,
 }: NumberFieldArgs) {
-	const NumberField = new VSCodeNumberField();
+	const numberField = new VSCodeNumberField();
 
 	if (label) {
-		NumberField.textContent = label;
+		numberField.textContent = label;
 	}
 	if (placeholder) {
-		NumberField.setAttribute('placeholder', placeholder);
+		numberField.setAttribute('placeholder', placeholder);
 	}
 	if (value) {
-		NumberField.value = value;
+		numberField.value = value;
 	}
 	if (size) {
-		NumberField.setAttribute('size', size.toString());
+		numberField.setAttribute('size', size.toString());
 	}
 	if (isRequired) {
-		NumberField.setAttribute('required', '');
+		numberField.setAttribute('required', '');
 	}
 	if (isReadOnly) {
-		NumberField.setAttribute('readonly', '');
+		numberField.setAttribute('readonly', '');
 	}
 	if (isDisabled) {
-		NumberField.setAttribute('disabled', '');
+		numberField.setAttribute('disabled', '');
 	}
 	if (isAutoFocused) {
-		NumberField.setAttribute('autofocus', '');
+		numberField.setAttribute('autofocus', '');
 	}
 	if (startIcon) {
 		const start = createCodiconIcon({
 			iconName: 'search',
 			slotName: 'start',
 		});
-		NumberField.appendChild(start);
+		numberField.appendChild(start);
 	}
 
-	return NumberField;
+	return numberField;
 }

@@ -1,8 +1,4 @@
 import {createNumberField, NumberFieldArgs} from './fixtures/createNumberField';
-import {VSCodeNumberField} from './index';
-
-// Prevent tree-shaking
-VSCodeNumberField;
 
 export default {
 	title: 'Library/Number Field',
