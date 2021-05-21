@@ -65,6 +65,9 @@ export const ComboboxStyles = css`
 	.selected-value {
 		-webkit-appearance: none;
 		font: inherit;
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
+		text-align: start;
 		background: transparent;
 		border: 0;
 		color: inherit;
@@ -74,8 +77,7 @@ export const ComboboxStyles = css`
 		margin-bottom: auto;
 		border: none;
 		padding: 0;
-		font-size: v${typeRampBaseFontSize};
-		line-height: ${typeRampBaseLineHeight};
+		flex: 1 1 auto;
 	}
 	.selected-value:hover,
 	.selected-value:focus {
@@ -139,12 +141,6 @@ export const ComboboxStyles = css`
 	:host([open][position='below']) .listbox {
 		border-top: 0;
 		top: calc(${heightNumber} * 1px);
-	}
-	.selected-value {
-		font-family: var(--body-font);
-		font-size: var(--type-ramp-base-font-size);
-		flex: 1 1 auto;
-		text-align: start;
 	}
 	.indicator {
 		flex: 0 0 auto;
