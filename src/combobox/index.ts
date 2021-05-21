@@ -1,15 +1,9 @@
-import {attr, customElement} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {
 	Combobox,
 	ComboboxTemplate as template,
 } from '@microsoft/fast-foundation';
 import {ComboboxStyles as styles} from './combobox.styles';
-
-/**
- * Combobox appearances
- * @public
- */
-export type ComboboxAppearance = 'filled' | 'outline';
 
 /**
  * The VS Code Combobox element. Extends
@@ -31,26 +25,4 @@ export type ComboboxAppearance = 'filled' | 'outline';
 		delegatesFocus: true,
 	},
 })
-export class VSCodeCombobox extends Combobox {
-	/**
-	 * The appearance of the element.
-	 *
-	 * @remarks
-	 * HTML Attribute: appearance
-	 *
-	 * @public
-	 */
-	@attr
-	public appearance: ComboboxAppearance;
-
-	/**
-	 * @internal
-	 */
-	public connectedCallback() {
-		super.connectedCallback();
-
-		if (!this.appearance) {
-			this.appearance = 'outline';
-		}
-	}
-}
+export class VSCodeCombobox extends Combobox {}

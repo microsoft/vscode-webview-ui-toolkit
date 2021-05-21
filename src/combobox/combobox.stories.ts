@@ -1,9 +1,5 @@
 import {action} from '@storybook/addon-actions';
 import {ComboboxArgs, createCombobox} from './fixtures/createCombobox';
-import {VSCodeCombobox} from './index';
-
-// Prevent tree-shaking
-VSCodeCombobox;
 
 export default {
 	title: 'Library/Combobox',
