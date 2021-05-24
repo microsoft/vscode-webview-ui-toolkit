@@ -14,10 +14,10 @@ import {
 	dropdownForegroundColor,
 	focusBorderColor,
 	focusBorderWidth,
+	heightNumber,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
-import {heightNumber} from '../utilities/styles/size';
 
 export const ComboboxStyles = css`
 	${display('inline-flex')} :host {
