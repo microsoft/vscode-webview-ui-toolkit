@@ -4,13 +4,13 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/size';
 import {
 	borderWidth,
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	focusBorderColor,
+	heightNumber,
 	panelTabActiveBorderColor,
 	panelTabActiveForegroundColor,
 	panelTabForegroundColor,
