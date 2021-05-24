@@ -4,7 +4,6 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/size';
 import {
 	borderWidth,
 	checkboxBackgroundColor,
@@ -14,6 +13,7 @@ import {
 	disabledOpacity,
 	focusBorderColor,
 	focusBorderWidth,
+	heightNumber,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
