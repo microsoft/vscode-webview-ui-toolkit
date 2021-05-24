@@ -19,7 +19,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const DropdownStyles = css`
+export const ComboboxStyles = css`
 	${display('inline-flex')} :host {
 		background: ${dropdownBackgroundColor};
 		border-radius: calc(${dropdownCornerRadius} * 1px);
@@ -35,7 +35,7 @@ export const DropdownStyles = css`
 	}
 	.listbox {
 		background: ${dropdownBackgroundColor};
-		border: calc(${borderWidth} * 1px) solid ${dropdownBorderColor};
+		border: calc(${borderWidth} * 1px) ${dropdownBorderColor};
 		border-radius: calc(${dropdownCornerRadius} * 1px);
 		box-sizing: border-box;
 		display: inline-flex;
@@ -62,9 +62,30 @@ export const DropdownStyles = css`
 		padding: 0 calc(${designUnit} * 2.25px);
 		width: 100%;
 	}
+	.selected-value {
+		-webkit-appearance: none;
+		font: inherit;
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
+		text-align: start;
+		background: transparent;
+		border: 0;
+		color: inherit;
+		height: calc(100% - 4px);
+		width: 100%;
+		margin-top: auto;
+		margin-bottom: auto;
+		border: none;
+		padding: 0;
+		flex: 1 1 auto;
+	}
+	.selected-value:hover,
+	.selected-value:focus {
+		outline: none;
+	}
 	:host(:not([disabled]):hover) {
-		background: ${dropdownBackgroundColor};
-		border-color: ${dropdownBorderColor};
+		background: ${dropdownBackgroundColor});
+		border-color: ${dropdownBorderColor});
 	}
 	:host(:focus) {
 		border-color: ${focusBorderColor};
@@ -87,13 +108,13 @@ export const DropdownStyles = css`
 		cursor: ${disabledCursor};
 	}
 	:host([disabled]:hover) {
-		background: ${dropdownBackgroundColor};
+		background: ${dropdownBackgroundColor});
 		color: ${dropdownForegroundColor};
 		fill: currentcolor;
 	}
 	:host(:not([disabled])) .control:active {
 		background: #094771;
-		border-color: ${dropdownBorderColor};
+		border-color: ${dropdownBorderColor});
 		border-radius: calc(${dropdownCornerRadius} * 1px);
 	}
 	:host([open]),
@@ -120,12 +141,6 @@ export const DropdownStyles = css`
 	:host([open][position='below']) .listbox {
 		border-top: 0;
 		top: calc(${heightNumber} * 1px);
-	}
-	.selected-value {
-		font-family: var(--body-font);
-		font-size: ${typeRampBaseFontSize};
-		flex: 1 1 auto;
-		text-align: start;
 	}
 	.indicator {
 		flex: 0 0 auto;

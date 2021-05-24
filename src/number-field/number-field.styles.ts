@@ -9,7 +9,7 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorderWidth,
+	focusBorderColor,
 	heightNumber,
 	inputBackgroundColor,
 	inputBorderColor,
@@ -19,7 +19,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const TextFieldStyles = css`
+export const NumberFieldStyles = css`
 	${display('inline-block')} :host {
 		font-family: var(--body-font);
 		outline: none;
@@ -86,17 +86,39 @@ export const TextFieldStyles = css`
 	.end {
 		margin-inline-end: 11px;
 	}
+	.step-up,
+	.step-down {
+		padding: 0 calc(${designUnit} * 2px);
+		height: 50%;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+	.step-up:before,
+	.step-down:before {
+		content: '';
+		display: block;
+		border: 5px solid transparent;
+	}
+	.step-up:before {
+		border-bottom-color: ${inputForegroundColor};
+		margin-bottom: 2px;
+	}
+	.step-down:before {
+		border-top-color: ${inputForegroundColor};
+		margin-top: 2px;
+	}
 	:host(:hover:not([disabled])) .root {
 		background: ${inputBackgroundColor};
 		border-color: ${inputBorderColor};
 	}
 	:host(:active:not([disabled])) .root {
 		background: ${inputBackgroundColor};
-		border-color: ${focusBorderWidth};
+		border-color: ${focusBorderColor};
 	}
 	:host(:focus-within:not([disabled])) .root {
-		border-color: ${focusBorderWidth};
-		box-shadow: 0 0 0 1px ${focusBorderWidth} inset;
+		border-color: ${focusBorderColor};
+		box-shadow: 0 0 0 1px ${focusBorderColor} inset;
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,
