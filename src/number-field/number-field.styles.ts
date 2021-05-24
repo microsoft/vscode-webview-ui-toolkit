@@ -10,6 +10,7 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorderColor,
+	heightNumber,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
@@ -17,7 +18,6 @@ import {
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
-import {heightNumber} from '../utilities/styles/size';
 
 export const NumberFieldStyles = css`
 	${display('inline-block')} :host {
