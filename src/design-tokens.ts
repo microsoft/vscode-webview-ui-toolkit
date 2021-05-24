@@ -26,6 +26,23 @@ export const focusBorderWidth = create<number>(
 ).withDefault(1);
 
 /**
+ * A formula to retrieve the control height. Use this as the value of
+ * any CSS property that accepts a pixel size.
+ *
+ * @internal
+ */
+export const heightNumber = create<number>('height-number');
+const body = document.querySelector('body');
+if (body) {
+	heightNumber.setValueFor(body, element => {
+		const multipler = baseHeightMultiplier.getValueFor(element);
+		const dens = density.getValueFor(element);
+		const unit = designUnit.getValueFor(element);
+		return (multipler + dens) * unit;
+	});
+}
+
+/**
  * Type-ramp font-size and line-height design tokens.
  */
 export const typeRampBaseFontSize = create<string>(
