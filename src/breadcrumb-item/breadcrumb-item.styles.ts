@@ -1,10 +1,10 @@
 import {css} from '@microsoft/fast-element';
 import {display, focusVisible} from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/size';
 import {
 	breadcrumbItemForegroundColor,
 	breadcrumbItemForegroundHoverColor,
 	focusBorderWidth,
+	heightNumber,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';

@@ -1,10 +1,10 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/size';
 import {
 	badgeBackgroundColor,
 	badgeForegroundColor,
 	designUnit,
+	heightNumber,
 	typeRampMinus1FontSize,
 	typeRampMinus1LineHeight,
 } from '../design-tokens';
