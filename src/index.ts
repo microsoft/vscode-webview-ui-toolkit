@@ -4,6 +4,7 @@ export * from './breadcrumb/index';
 export * from './breadcrumb-item/index';
 export * from './button/index';
 export * from './checkbox/index';
+export * from './combobox/index';
 export * from './data-grid/index';
 export * from './divider/index';
 export * from './link/index';
