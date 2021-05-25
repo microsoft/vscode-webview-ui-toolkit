@@ -21,6 +21,12 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
 	styles,
 })
 export class VSCodeProgressRing extends BaseProgress {
+	/**
+	 * Component lifecycle method that runs when the element is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
 	public connectedCallback() {
 		super.connectedCallback();
 

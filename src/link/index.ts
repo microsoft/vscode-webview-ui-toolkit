@@ -24,11 +24,12 @@ import {LinkStyles as styles} from './link.styles';
 })
 export class VSCodeLink extends Anchor {
 	/**
-	 * Applies 'icon-only' class when there is only an SVG in the default slot
+	 * Applies 'icon-only' class when there is only an SVG or span
+	 * in the default slot
 	 *
 	 * @internal
 	 */
-	public defaultSlottedContentChanged(oldValue: any, newValue: any): void {
+	public defaultSlottedContentChanged(): void {
 		const slottedElements = this.defaultSlottedContent.filter(
 			x => x.nodeType === Node.ELEMENT_NODE
 		);
