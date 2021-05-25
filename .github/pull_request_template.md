@@ -8,10 +8,10 @@
   - Provide relevant tests and/or Storybook stories for your feature or bug fix.
 -->
 
-### Link To Relevant Issue
+### Link to relevant issue
 
 This pull request resolves #
 
-### Description Of Changes
+### Description of changes
 
 _Include a description of the proposed changes._

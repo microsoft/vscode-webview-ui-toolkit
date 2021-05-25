@@ -11,11 +11,11 @@ labels: bug
   🔎 Please search existing issues to avoid creating duplicates.
 -->
 
-### Describe The Bug
+### Describe the bug
 
 _A clear and concise description of what the bug is._
 
-### To Reproduce
+### To reproduce
 
 _Steps to reproduce the behavior:_
 
@@ -24,7 +24,7 @@ _Steps to reproduce the behavior:_
 3. Scroll down to '....'
 4. See error
 
-### Expected Behavior
+### Expected behavior
 
 _A clear and concise description of what you expected to happen._
 
@@ -37,6 +37,6 @@ _If applicable, add screenshots to help explain your problem._
 -   OS Version: _[e.g. macOS 11.3.1]_
 -   Toolkit Version _[e.g. 0.5.0]_
 
-### Additional Context
+### Additional context
 
 _Add any other context about the problem here._
