@@ -9,7 +9,7 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorderWidth,
+	focusBorderColor,
 	heightNumber,
 	inputBackgroundColor,
 	inputBorderColor,
@@ -92,11 +92,11 @@ export const TextFieldStyles = css`
 	}
 	:host(:active:not([disabled])) .root {
 		background: ${inputBackgroundColor};
-		border-color: ${focusBorderWidth};
+		border-color: ${focusBorderColor};
 	}
 	:host(:focus-within:not([disabled])) .root {
-		border-color: ${focusBorderWidth};
-		box-shadow: 0 0 0 1px ${focusBorderWidth} inset;
+		border-color: ${focusBorderColor};
+		box-shadow: 0 0 0 1px ${focusBorderColor} inset;
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,

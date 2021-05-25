@@ -9,7 +9,7 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorderWidth,
+	focusBorderColor,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
@@ -44,7 +44,7 @@ export const TextAreaStyles = css`
 	}
 	.control:active:enabled {
 		background: ${inputBackgroundColor};
-		border-color: ${focusBorderWidth};
+		border-color: ${focusBorderColor};
 	}
 	.control:hover,
     .control:${focusVisible},
@@ -53,8 +53,8 @@ export const TextAreaStyles = css`
 		outline: none;
 	}
 	:host(:focus-within:not([disabled])) .control {
-		border-color: ${focusBorderWidth};
-		box-shadow: 0 0 0 1px ${focusBorderWidth} inset;
+		border-color: ${focusBorderColor};
+		box-shadow: 0 0 0 1px ${focusBorderColor} inset;
 	}
 	:host([resize='both']) .control {
 		resize: both;
