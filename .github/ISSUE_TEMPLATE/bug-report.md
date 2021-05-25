@@ -35,7 +35,7 @@ _If applicable, add screenshots to help explain your problem._
 ### Desktop (please complete the following information):
 
 -   OS Version: _[e.g. macOS 11.3.1]_
--   Toolkit Version _[e.g. 0.5.0]_
+-   Toolkit Version: _[e.g. 0.5.0]_
 
 ### Additional context
 
