@@ -6,6 +6,7 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		isChecked: {control: 'boolean'},
+		isIndeterminate: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isAutoFocused: {control: 'boolean'},
 		isReadOnly: {control: 'boolean'},
@@ -30,6 +31,7 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: 'Label',
 	isChecked: false,
+	isIndeterminate: false,
 	isDisabled: false,
 	isAutoFocused: false,
 	isReadOnly: false,
@@ -55,6 +57,19 @@ WithChecked.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-checkbox checked>Label</vscode-checkbox>`,
+		},
+	},
+};
+
+export const WithIndeterminate: any = Template.bind({});
+WithIndeterminate.args = {
+	...Default.args,
+	isIndeterminate: true,
+};
+WithIndeterminate.parameters = {
+	docs: {
+		source: {
+			code: `// JavaScript\n\nconst checkbox = document.getElementById("foo");\ncheckbox.indeterminate = true;\n\n<!-- HTML -->\n\n<vscode-checkbox id="foo">Label</vscode-checkbox>`,
 		},
 	},
 };
