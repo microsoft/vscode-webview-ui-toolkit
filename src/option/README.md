@@ -16,7 +16,7 @@ The `vscode-option` component will only provide internals related to form associ
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-option--default)
 
 ```html
 <vscode-option>Option Label</vscode-option>
@@ -24,7 +24,7 @@ The `vscode-option` component will only provide internals related to form associ
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-option--with-disabled)
 
 ```html
 <vscode-option disabled>Option Label</vscode-option>
@@ -32,7 +32,7 @@ The `vscode-option` component will only provide internals related to form associ
 
 ### Selected Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-selected)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-option--with-selected)
 
 ```html
 <vscode-option selected>Option Label</vscode-option>
@@ -48,7 +48,7 @@ The `vscode-option` component will only provide internals related to form associ
 
 An icon can be added to the left of the Option text by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-start-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-option--with-start-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -63,7 +63,7 @@ An icon can be added to the left of the Option text by adding an element with th
 
 An icon can be added to the right of the Option text by adding an element with the attribute `slot="end"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-option--with-end-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-option--with-end-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->

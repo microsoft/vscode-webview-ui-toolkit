@@ -35,7 +35,7 @@ The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or T
 
 With that said, a data grid can still be created with HTML only (also shown below).
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-data-grid--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--default)
 
 _Using HTML & JavaScript_
 
@@ -102,7 +102,7 @@ There are three values that can be passed to the attribute:
 
 As shown above in the Basic Usage example, if the `vscode-data-grid` is defined using only HTML this attribute should be set to `none` otherwise an attempt at generating a default header row will occur and result in an undefined header row being added to the DOM.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-data-grid--with-no-header)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--with-no-header)
 
 ```html
 <vscode-data-grid id="basic-grid" generate-header="none"></vscode-data-grid>
@@ -134,7 +134,7 @@ When defined on a `<vscode-data-grid>` component, the value of the attribute is 
 
 When defined on a `<vscode-data-grid-row>` component, the value of the attribute is applied to only that row.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-data-grid--with-custom-column-widths)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--with-custom-column-widths)
 
 ```html
 <vscode-data-grid id="basic-grid" grid-template-columns="100px 10vw 3fr 30%"></vscode-data-grid>
@@ -238,7 +238,7 @@ document.getElementById('basic-grid').columnDefinitions = [
 
 While a `vscode-data-grid-cell` usually contains text, it can also contain any valid HTML, such as a `<vscode-button>`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-custom-element)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-custom-element)
 
 The custom cell element can be defined using only HTML by simply inserting the element(s) as a child of the `vscode-data-grid-cell`. The major pitfall of this approach is that this will have to be manually done for every cell in the data grid.
 
@@ -329,7 +329,7 @@ function getFocusTarget(cell: DataGridCell): HTMLElement {
 
 A header cell can also contain and render abitrary HTML.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-custom-element)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-custom-element)
 
 Just like the custom cell element, a custom header cell can be defined using only HTML by simply inserting the element(s) as a child of the `vscode-data-grid-cell` that defines the `cell-type="columnheader"` attribute. Again, the major pitfall of this approach is that this will have to be manually done for every header cell in the data grid.
 

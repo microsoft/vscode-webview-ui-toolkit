@@ -205,7 +205,7 @@ Congratulations on getting started with the VS Code Webview Toolkit! 🎊
 Now that you're set up, checkout the component docs for further documentation on what components are available and how to use them. Further component documentation and some guides on how to work with webviews is also provided too. Happy hacking!
 
 - [Component Docs](./components.md)
-- [Storybook – Interactive Component Sandbox](https://mttallac.azurewebsites.net/)
+- [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-toolkit/)
 - [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-toolkit-samples)
 - [VS Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
 - [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)

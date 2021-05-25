@@ -14,7 +14,7 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-badge--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-badge--default)
 
 ```html
 <vscode-badge>Badge Text</vscode-badge>
@@ -22,7 +22,7 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 ### Circular Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-badge--circular)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-badge--circular)
 
 ```html
 <vscode-badge circular="true">1</vscode-badge>
@@ -42,7 +42,7 @@ From there, the `fill` and `color` attributes are set using the `{name-of-your-c
 -   `fill="{fill-name-of-your-choice}"`
 -   `color="{color-name-of-your-choice}"`
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-badge--with-fill)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-badge--with-fill)
 
 ```css live
 vscode-badge {
