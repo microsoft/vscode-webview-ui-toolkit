@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve the Webview Toolkit
 title: ''
 labels: bug
-assignees: hawkticehurst
+assignees: hawkticehurst, daviddossett
 ---
 
 **Describe the bug**
