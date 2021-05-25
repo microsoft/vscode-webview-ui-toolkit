@@ -10,6 +10,7 @@ import { Breadcrumb } from "@microsoft/fast-foundation";
 import { BreadcrumbItem } from "@microsoft/fast-foundation";
 import { Button } from "@microsoft/fast-foundation";
 import { Checkbox } from "@microsoft/fast-foundation";
+import { Combobox } from "@microsoft/fast-foundation";
 import { DataGrid } from "@microsoft/fast-foundation";
 import { DataGridCell } from "@microsoft/fast-foundation";
 import { DataGridRow } from "@microsoft/fast-foundation";
@@ -17,6 +18,7 @@ import { Divider } from "@microsoft/fast-foundation";
 import { ListboxOption } from "@microsoft/fast-foundation";
 import { Menu } from "@microsoft/fast-foundation";
 import { MenuItem } from "@microsoft/fast-foundation";
+import { NumberField } from "@microsoft/fast-foundation";
 import { Radio } from "@microsoft/fast-foundation";
 import { RadioGroup } from "@microsoft/fast-foundation";
 import { Select } from "@microsoft/fast-foundation";
@@ -30,9 +32,6 @@ import { TextField } from "@microsoft/fast-foundation";
 export type ButtonAppearance = "primary" | "secondary" | "icon";
 
 // @public
-export type TextFieldAppearance = "filled" | "outline";
-
-// @public
 export class VSCodeBadge extends Badge {}
 
 // @public
@@ -44,12 +43,15 @@ export class VSCodeBreadcrumbItem extends BreadcrumbItem {}
 // @public
 export class VSCodeButton extends Button {
   appearance: ButtonAppearance;
-  // (undocumented)
+  // @internal
   connectedCallback(): void;
 }
 
 // @public
 export class VSCodeCheckbox extends Checkbox {}
+
+// @public
+export class VSCodeCombobox extends Combobox {}
 
 // @public
 export class VSCodeDataGrid extends DataGrid {}
@@ -69,7 +71,7 @@ export class VSCodeDropdown extends Select {}
 // @public
 export class VSCodeLink extends Anchor {
   // @internal
-  defaultSlottedContentChanged(oldValue: any, newValue: any): void;
+  defaultSlottedContentChanged(): void;
 }
 
 // @public
@@ -79,11 +81,14 @@ export class VSCodeMenu extends Menu {}
 export class VSCodeMenuItem extends MenuItem {}
 
 // @public
+export class VSCodeNumberField extends NumberField {}
+
+// @public
 export class VSCodeOption extends ListboxOption {}
 
 // @public
 export class VSCodePanels extends Tabs {
-  // (undocumented)
+  // @internal
   connectedCallback(): void;
 }
 
@@ -94,10 +99,16 @@ export class VSCodePanelTab extends Tab {}
 export class VSCodePanelView extends TabPanel {}
 
 // @public
-export class VSCodeProgressBar extends BaseProgress {}
+export class VSCodeProgressBar extends BaseProgress {
+  // @internal
+  connectedCallback(): void;
+}
 
 // @public
-export class VSCodeProgressRing extends BaseProgress {}
+export class VSCodeProgressRing extends BaseProgress {
+  // @internal
+  connectedCallback(): void;
+}
 
 // @public
 export class VSCodeRadio extends Radio {}
@@ -109,11 +120,7 @@ export class VSCodeRadioGroup extends RadioGroup {}
 export class VSCodeTextArea extends TextArea {}
 
 // @public
-export class VSCodeTextField extends TextField {
-  appearance: TextFieldAppearance;
-  // @internal (undocumented)
-  connectedCallback(): void;
-}
+export class VSCodeTextField extends TextField {}
 
 // (No @packageDocumentation comment for this package)
 ```
