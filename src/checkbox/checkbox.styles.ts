@@ -60,7 +60,7 @@ export const CheckboxStyles = css`
 		pointer-events: none;
 	}
 	.indeterminate-indicator {
-		border-radius: calc(${checkboxCornerRadius} * 1px);
+		border-radius: 2px;
 		background: ${checkboxForegroundColor};
 		position: absolute;
 		top: 50%;
