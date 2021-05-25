@@ -13,7 +13,6 @@ The `vscode-progress-ring` renders a circular visual appearance for progress sta
 | `value`   | string  | The current value of the progress ring. |
 | `min`     | boolean | The minimum progress ring value.        |
 | `max`     | boolean | The maximum progress ring value.        |
-| `paused`  | boolean | Indicates the progress ring is paused.  |
 
 ## Usage
 
@@ -49,12 +48,4 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ```html
 <vscode-progress-ring max="100"></vscode-progress-ring>
-```
-
-### Paused Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-ring--with-paused)
-
-```html
-<vscode-progress-ring paused></vscode-progress-ring>
 ```

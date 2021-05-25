@@ -13,7 +13,6 @@ The `vscode-progress-bar` renders a linear visual appearance for progress state.
 | `value`   | string  | The current value of the progress bar. |
 | `min`     | boolean | The minimum progress bar value.        |
 | `max`     | boolean | The maximum progress bar value.        |
-| `paused`  | boolean | Indicates the progress bar is paused.  |
 
 ## Usage
 
@@ -49,12 +48,4 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ```html
 <vscode-progress-bar max="100"></vscode-progress-bar>
-```
-
-### Paused Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-bar--with-paused)
-
-```html
-<vscode-progress-bar paused></vscode-progress-bar>
 ```

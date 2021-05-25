@@ -20,4 +20,15 @@ import {ProgressBarStyles as styles} from './progress-bar.styles';
 	template,
 	styles,
 })
-export class VSCodeProgressBar extends BaseProgress {}
+export class VSCodeProgressBar extends BaseProgress {
+	public connectedCallback() {
+		super.connectedCallback();
+
+		// This will override any usage of the paused attribute
+		// provided by the FAST Foundation BaseProgress component
+		// so that VSCodeProgressRings can never be paused
+		if (this.paused) {
+			this.paused = false;
+		}
+	}
+}
