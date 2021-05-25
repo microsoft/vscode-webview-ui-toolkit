@@ -20,4 +20,15 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
 	template,
 	styles,
 })
-export class VSCodeProgressRing extends BaseProgress {}
+export class VSCodeProgressRing extends BaseProgress {
+	public connectedCallback() {
+		super.connectedCallback();
+
+		// This will override any usage of the paused attribute
+		// provided by the FAST Foundation BaseProgress component
+		// so that VSCodeProgressRings can never be paused
+		if (this.paused) {
+			this.paused = false;
+		}
+	}
+}

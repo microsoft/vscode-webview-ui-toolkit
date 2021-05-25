@@ -38,13 +38,6 @@ export const ProgressRingStyles = css`
 		transition: all 0.2s ease-in-out;
 		animation: spin-infinite 2s linear infinite;
 	}
-	:host([paused]) .indeterminate-indicator-1 {
-		animation-play-state: paused;
-		stroke: transparent;
-	}
-	:host([paused]) .determinate {
-		stroke: #dddddd;
-	}
 	@keyframes spin-infinite {
 		0% {
 			stroke-dasharray: 0.01px 43.97px;
