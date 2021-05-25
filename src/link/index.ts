@@ -34,7 +34,8 @@ export class VSCodeLink extends Anchor {
 		);
 		if (
 			slottedElements.length === 1 &&
-			slottedElements[0] instanceof SVGElement
+			(slottedElements[0] instanceof SVGElement ||
+				slottedElements[0] instanceof HTMLSpanElement)
 		) {
 			this.control.classList.add('icon-only');
 		} else {
