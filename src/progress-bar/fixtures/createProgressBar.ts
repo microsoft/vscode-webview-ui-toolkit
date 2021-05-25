@@ -4,15 +4,9 @@ export type ProgressBarArgs = {
 	value: number;
 	min: number;
 	max: number;
-	isPaused: boolean;
 };
 
-export function createProgressBar({
-	value,
-	min,
-	max,
-	isPaused,
-}: ProgressBarArgs) {
+export function createProgressBar({value, min, max}: ProgressBarArgs) {
 	const progressBar = new VSCodeProgressBar();
 
 	if (value) {
@@ -23,9 +17,6 @@ export function createProgressBar({
 	}
 	if (max) {
 		progressBar.setAttribute('max', max.toString());
-	}
-	if (isPaused) {
-		progressBar.setAttribute('paused', '');
 	}
 
 	return progressBar;
