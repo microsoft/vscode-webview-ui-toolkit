@@ -26,7 +26,7 @@ Follow the [Getting Started Guide](./docs/getting-started.md).
 Beyond the Getting Started Guide, further documentation can be found in the following places:
 
 -   [Component Docs](./docs/components.md)
--   [Storybook – Interactive Component Sandbox](https://mttallac.azurewebsites.net/)
+-   [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-toolkit/)
 -   [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-toolkit-samples)
 -   [VS Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
 -   [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)

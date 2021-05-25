@@ -27,7 +27,7 @@ None
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-panels--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--default)
 
 ```html
 <vscode-panels>
@@ -44,7 +44,7 @@ None
 
 ### Active ID Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-panels--with-active-tab)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-active-tab)
 
 ```html
 <vscode-panels activeid="tab-4">
@@ -61,7 +61,7 @@ None
 
 ### Active Indicator Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-panels--with-no-active-indicator)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-no-active-indicator)
 
 ```html
 <vscode-panels activeindicator="false">
@@ -78,7 +78,7 @@ None
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-panels--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-disabled)
 
 ```html
 <vscode-panels>
@@ -97,7 +97,7 @@ None
 
 Instead of text, an icon can be used as the tab title.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-panels--with-custom-tab-icons)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-custom-tab-icons)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -126,7 +126,7 @@ Instead of text, an icon can be used as the tab title.
 
 A `vscode-tab-panel` can also contain any valid HTML.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-panels--with-complex-panel-view-content)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-complex-panel-view-content)
 
 ```html
 <vscode-panels>

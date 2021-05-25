@@ -23,7 +23,7 @@ The `vscode-button` is a web component implementation of an [HTML Button Element
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-button--default)
 
 ```html
 <vscode-button>Button Text</vscode-button>
@@ -33,7 +33,7 @@ The `vscode-button` is a web component implementation of an [HTML Button Element
 
 There are a number of visual appearances that the `vscode-button` can have. The default appearance is `primary`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-button--default)
 
 ```html
 <vscode-button appearance="primary">Button Text</vscode-button>
@@ -45,7 +45,7 @@ There are a number of visual appearances that the `vscode-button` can have. The 
 
 ### Autofocus Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--with-autofocus)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-button--with-autofocus)
 
 ```html
 <vscode-button autofocus>Button Text</vscode-button>
@@ -53,7 +53,7 @@ There are a number of visual appearances that the `vscode-button` can have. The 
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-button--with-disabled)
 
 ```html
 <vscode-button disabled>Button Text</vscode-button>
@@ -63,7 +63,7 @@ There are a number of visual appearances that the `vscode-button` can have. The 
 
 An icon can be added to the left of Button text by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--with-start-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-button--with-start-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -78,7 +78,7 @@ An icon can be added to the left of Button text by adding an element with the at
 
 An icon can be added to the right of the Button text by adding an element with the attribute `slot="end"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--with-end-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-button--with-end-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -93,7 +93,7 @@ An icon can be added to the right of the Button text by adding an element with t
 
 An icon can also fill the default slot of the Button component (instead of text) to create an Icon Button.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-button--with-icon-only)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-button--with-icon-only)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->

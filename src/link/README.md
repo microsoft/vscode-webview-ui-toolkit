@@ -20,7 +20,7 @@ The `vscode-link` is a web component implementation of an [HTML Anchor Element](
 
 ### Basic Usage (With Href Attribute)
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-link--default)
 
 ```html
 <vscode-link href="#">Link Text</vscode-link>
@@ -28,7 +28,7 @@ The `vscode-link` is a web component implementation of an [HTML Anchor Element](
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-link--with-disabled)
 
 ```html
 <vscode-link href="#" disabled>Link Text</vscode-link>
@@ -38,7 +38,7 @@ The `vscode-link` is a web component implementation of an [HTML Anchor Element](
 
 An icon can be added to the left of Link text by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-start-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-link--with-start-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -53,7 +53,7 @@ An icon can be added to the left of Link text by adding an element with the attr
 
 An icon can be added to the right of the Link text by adding an element with the attribute `slot="end"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-end-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-link--with-end-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -68,7 +68,7 @@ An icon can be added to the right of the Link text by adding an element with the
 
 An icon can also fill the default slot of the Button component (instead of text) to create an Icon Button.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-link--with-icon-only)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-link--with-icon-only)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
