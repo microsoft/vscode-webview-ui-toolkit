@@ -57,14 +57,6 @@ export const ProgressBarStyles = css`
 		width: 60%;
 		animation: indeterminate-2 2s infinite;
 	}
-	:host([paused]) .indeterminate-indicator-1,
-	:host([paused]) .indeterminate-indicator-2 {
-		animation-play-state: paused;
-		background-color: transparent;
-	}
-	:host([paused]) .determinate {
-		background-color: #dddddd;
-	}
 	@keyframes indeterminate-1 {
 		0% {
 			opacity: 1;

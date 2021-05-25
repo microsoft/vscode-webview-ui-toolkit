@@ -4,15 +4,9 @@ export type ProgressRingArgs = {
 	value: number;
 	min: number;
 	max: number;
-	isPaused: boolean;
 };
 
-export function createProgressRing({
-	value,
-	min,
-	max,
-	isPaused,
-}: ProgressRingArgs) {
+export function createProgressRing({value, min, max}: ProgressRingArgs) {
 	const progressRing = new VSCodeProgressRing();
 
 	if (value) {
@@ -23,9 +17,6 @@ export function createProgressRing({
 	}
 	if (max) {
 		progressRing.setAttribute('max', max.toString());
-	}
-	if (isPaused) {
-		progressRing.setAttribute('paused', '');
 	}
 
 	return progressRing;

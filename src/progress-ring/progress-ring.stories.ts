@@ -9,7 +9,6 @@ export default {
 		value: {control: 'number'},
 		min: {control: 'number'},
 		max: {control: 'number'},
-		isPaused: {control: 'boolean'},
 	},
 	parameters: {
 		actions: {
@@ -23,9 +22,7 @@ const Template = ({...args}: ProgressRingArgs) => {
 };
 
 export const Default: any = Template.bind({});
-Default.args = {
-	isPaused: false,
-};
+Default.args = {};
 Default.parameters = {
 	docs: {
 		source: {
@@ -39,27 +36,11 @@ WithValue.args = {
 	value: 65,
 	min: 0,
 	max: 100,
-	isPaused: false,
 };
 WithValue.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-progress-ring min="0" max="100" value="65"></vscode-progress-ring>`,
-		},
-	},
-};
-
-export const WithPaused: any = Template.bind({});
-WithPaused.args = {
-	value: 65,
-	min: 0,
-	max: 100,
-	isPaused: true,
-};
-WithPaused.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-progress-ring min="0" max="100" value="65" paused></vscode-progress-ring>`,
 		},
 	},
 };
