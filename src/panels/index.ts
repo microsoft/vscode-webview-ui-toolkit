@@ -28,6 +28,12 @@ import {PanelViewStyles} from './panel-view.styles';
 	styles: PanelsStyles,
 })
 export class VSCodePanels extends Tabs {
+	/**
+	 * Component lifecycle method that runs when the element is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
 	public connectedCallback() {
 		super.connectedCallback();
 

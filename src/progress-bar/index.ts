@@ -21,12 +21,18 @@ import {ProgressBarStyles as styles} from './progress-bar.styles';
 	styles,
 })
 export class VSCodeProgressBar extends BaseProgress {
+	/**
+	 * Component lifecycle method that runs when the element is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
 	public connectedCallback() {
 		super.connectedCallback();
 
 		// This will override any usage of the paused attribute
 		// provided by the FAST Foundation BaseProgress component
-		// so that VSCodeProgressRings can never be paused
+		// so that VSCodeProgressBars can never be paused
 		if (this.paused) {
 			this.paused = false;
 		}

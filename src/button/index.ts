@@ -39,6 +39,12 @@ export class VSCodeButton extends Button {
 	 */
 	@attr public appearance: ButtonAppearance;
 
+	/**
+	 * Component lifecycle method that runs when the element is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
 	public connectedCallback() {
 		super.connectedCallback();
 		if (!this.appearance) {
