@@ -17,12 +17,12 @@ export const ProgressRingStyles = css`
 	.background {
 		stroke: transparent;
 		fill: none;
-		stroke-width: 2px;
+		stroke-width: 1px;
 	}
 	.determinate {
 		stroke: ${progressBackgroundColor};
 		fill: none;
-		stroke-width: 2px;
+		stroke-width: 1px;
 		stroke-linecap: square;
 		transform-origin: 50% 50%;
 		transform: rotate(-90deg);
@@ -31,7 +31,7 @@ export const ProgressRingStyles = css`
 	.indeterminate-indicator-1 {
 		stroke: ${progressBackgroundColor};
 		fill: none;
-		stroke-width: 2px;
+		stroke-width: 1px;
 		stroke-linecap: square;
 		transform-origin: 50% 50%;
 		transform: rotate(-90deg);
