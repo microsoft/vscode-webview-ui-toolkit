@@ -4,7 +4,20 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/size';
+import {
+	borderWidth,
+	cornerRadius,
+	designUnit,
+	disabledOpacity,
+	focusBorderWidth,
+	heightNumber,
+	inputBackgroundColor,
+	inputBorderColor,
+	inputForegroundColor,
+	inputPlaceholderForegroundColor,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const TextFieldStyles = css`
 	${display('inline-block')} :host {
@@ -17,10 +30,10 @@ export const TextFieldStyles = css`
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		color: var(--input-foreground-color);
-		background: var(--input-background-color);
-		border-radius: calc(var(--corner-radius) * 1px);
-		border: calc(var(--border-width) * 1px) solid var(--input-border-color);
+		color: ${inputForegroundColor};
+		background: ${inputBackgroundColor};
+		border-radius: calc(${cornerRadius} * 1px);
+		border: calc(${borderWidth} * 1px) solid ${inputBorderColor};
 		height: calc(${heightNumber} * 1px);
 	}
 	.control {
@@ -34,9 +47,9 @@ export const TextFieldStyles = css`
 		margin-top: auto;
 		margin-bottom: auto;
 		border: none;
-		padding: 0 calc(var(--design-unit) * 2px + 1px);
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		padding: 0 calc(${designUnit} * 2px + 1px);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 	}
 	.control:hover,
     .control:${focusVisible},
@@ -46,10 +59,10 @@ export const TextFieldStyles = css`
 	}
 	.label {
 		display: block;
-		color: var(--input-placeholder-foreground-color);
+		color: ${inputPlaceholderForegroundColor};
 		cursor: pointer;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 		margin-bottom: 4px;
 	}
 	.label__hidden {
@@ -74,16 +87,16 @@ export const TextFieldStyles = css`
 		margin-inline-end: 11px;
 	}
 	:host(:hover:not([disabled])) .root {
-		background: var(--input-background-color);
-		border-color: var(--input-border-color);
+		background: ${inputBackgroundColor};
+		border-color: ${inputBorderColor};
 	}
 	:host(:active:not([disabled])) .root {
-		background: var(--input-background-color);
-		border-color: var(--focus-border-color);
+		background: ${inputBackgroundColor};
+		border-color: ${focusBorderWidth};
 	}
 	:host(:focus-within:not([disabled])) .root {
-		border-color: var(--focus-border-color);
-		box-shadow: 0 0 0 1px var(--focus-border-color) inset;
+		border-color: ${focusBorderWidth};
+		box-shadow: 0 0 0 1px ${focusBorderWidth} inset;
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,
@@ -92,9 +105,9 @@ export const TextFieldStyles = css`
 		cursor: ${disabledCursor};
 	}
 	:host([disabled]) {
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
-		border-color: var(--input-border-color);
+		border-color: ${inputBorderColor};
 	}
 `;

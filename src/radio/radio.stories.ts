@@ -1,11 +1,5 @@
 import {action} from '@storybook/addon-actions';
-import {VSCodeDesignSystemProvider} from '../design-system-provider/index';
 import {createRadio, RadioArgs} from './fixtures/createRadio';
-import {VSCodeRadio} from './index';
-
-// Prevent tree-shaking
-VSCodeRadio;
-VSCodeDesignSystemProvider;
 
 export default {
 	title: 'Library/Radio',

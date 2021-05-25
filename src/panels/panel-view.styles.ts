@@ -1,5 +1,11 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
+import {
+	density,
+	designUnit,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const PanelViewStyles = css`
 	${display('flex')} :host {
@@ -7,9 +13,8 @@ export const PanelViewStyles = css`
 		background-color: transparent;
 		border: solid 1px transparent;
 		box-sizing: border-box;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
-		padding: 10px
-			calc((6 + (var(--design-unit) * 2 * var(--density))) * 1px);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
+		padding: 10px calc((6 + (${designUnit} * 2 * ${density})) * 1px);
 	}
 `;

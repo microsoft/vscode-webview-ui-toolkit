@@ -9,7 +9,8 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorderWidth,
+	focusBorderColor,
+	heightNumber,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
@@ -18,52 +19,43 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const TextAreaStyles = css`
+export const NumberFieldStyles = css`
 	${display('inline-block')} :host {
 		font-family: var(--body-font);
 		outline: none;
 		user-select: none;
 	}
-	.control {
+	.root {
 		box-sizing: border-box;
 		position: relative;
+		display: flex;
+		flex-direction: row;
 		color: ${inputForegroundColor};
 		background: ${inputBackgroundColor};
 		border-radius: calc(${cornerRadius} * 1px);
 		border: calc(${borderWidth} * 1px) solid ${inputBorderColor};
+		height: calc(${heightNumber} * 1px);
+	}
+	.control {
+		-webkit-appearance: none;
 		font: inherit;
+		background: transparent;
+		border: 0;
+		color: inherit;
+		height: calc(100% - 4px);
+		width: 100%;
+		margin-top: auto;
+		margin-bottom: auto;
+		border: none;
+		padding: 0 calc(${designUnit} * 2px + 1px);
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		padding: calc(${designUnit} * 2px + 1px);
-		width: 100%;
-		resize: none;
-	}
-	.control:hover:enabled {
-		background: ${inputBackgroundColor};
-		border-color: ${inputBorderColor};
-	}
-	.control:active:enabled {
-		background: ${inputBackgroundColor};
-		border-color: ${focusBorderWidth};
 	}
 	.control:hover,
     .control:${focusVisible},
     .control:disabled,
     .control:active {
 		outline: none;
-	}
-	:host(:focus-within:not([disabled])) .control {
-		border-color: ${focusBorderWidth};
-		box-shadow: 0 0 0 1px ${focusBorderWidth} inset;
-	}
-	:host([resize='both']) .control {
-		resize: both;
-	}
-	:host([resize='horizontal']) .control {
-		resize: horizontal;
-	}
-	:host([resize='vertical']) .control {
-		resize: vertical;
 	}
 	.label {
 		display: block;
@@ -76,6 +68,57 @@ export const TextAreaStyles = css`
 	.label__hidden {
 		display: none;
 		visibility: hidden;
+	}
+	.start,
+	.end {
+		display: flex;
+		margin: auto;
+		fill: currentcolor;
+	}
+	::slotted(svg),
+	::slotted(span) {
+		width: 16px;
+		height: 16px;
+	}
+	.start {
+		margin-inline-start: 11px;
+	}
+	.end {
+		margin-inline-end: 11px;
+	}
+	.step-up,
+	.step-down {
+		padding: 0 calc(${designUnit} * 2px);
+		height: 50%;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+	.step-up:before,
+	.step-down:before {
+		content: '';
+		display: block;
+		border: 5px solid transparent;
+	}
+	.step-up:before {
+		border-bottom-color: ${inputForegroundColor};
+		margin-bottom: 2px;
+	}
+	.step-down:before {
+		border-top-color: ${inputForegroundColor};
+		margin-top: 2px;
+	}
+	:host(:hover:not([disabled])) .root {
+		background: ${inputBackgroundColor};
+		border-color: ${inputBorderColor};
+	}
+	:host(:active:not([disabled])) .root {
+		background: ${inputBackgroundColor};
+		border-color: ${focusBorderColor};
+	}
+	:host(:focus-within:not([disabled])) .root {
+		border-color: ${focusBorderColor};
+		box-shadow: 0 0 0 1px ${focusBorderColor} inset;
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,

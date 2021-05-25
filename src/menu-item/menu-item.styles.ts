@@ -4,7 +4,16 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/size';
+import {
+	borderWidth,
+	cornerRadius,
+	designUnit,
+	disabledOpacity,
+	focusBorderWidth,
+	heightNumber,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const MenuItemStyles = css`
 	${display('grid')} :host {
@@ -19,15 +28,15 @@ export const MenuItemStyles = css`
 		justify-items: center;
 		align-items: center;
 		padding: 0;
-		margin: 0 calc(var(--design-unit) * 1px);
+		margin: 0 calc(${designUnit} * 1px);
 		white-space: nowrap;
 		color: #cccccc;
 		fill: currentcolor;
 		cursor: pointer;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
-		border-radius: calc(var(--corner-radius) * 1px);
-		border: calc(var(--focus-outline-width) * 1px) solid transparent;
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
+		border-radius: calc(${cornerRadius} * 1px);
+		border: calc(${focusBorderWidth} * 1px) solid transparent;
 	}
 	:host(:${focusVisible}) {
 		border-color: transparent;
@@ -46,7 +55,7 @@ export const MenuItemStyles = css`
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 	}
 	:host([disabled]:hover) {
 		color: #cccccc;
@@ -137,7 +146,7 @@ export const MenuItemStyles = css`
 	}
 	:host .checkbox,
 	:host .radio {
-		border: calc(var(--border-width) * 1px) solid transparent;
+		border: calc(${borderWidth} * 1px) solid transparent;
 	}
 	:host([aria-checked='true']) .checkbox,
 	:host([aria-checked='true']) .radio {
@@ -145,7 +154,7 @@ export const MenuItemStyles = css`
 		border-color: red;
 	}
 	:host .checkbox {
-		border-radius: calc(var(--corner-radius) * 1px);
+		border-radius: calc(${cornerRadius} * 1px);
 	}
 	:host .radio {
 		border-radius: 999px;

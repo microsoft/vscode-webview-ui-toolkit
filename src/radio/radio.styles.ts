@@ -4,38 +4,49 @@ import {
 	display,
 	focusVisible,
 } from '@microsoft/fast-foundation';
-import {heightNumber} from '../utilities/styles/size';
+import {
+	borderWidth,
+	checkboxBackgroundColor,
+	checkboxBorderColor,
+	checkboxForegroundColor,
+	designUnit,
+	disabledOpacity,
+	focusBorderColor,
+	focusBorderWidth,
+	heightNumber,
+	typeRampBaseFontSize,
+	typeRampBaseLineHeight,
+} from '../design-tokens';
 
 export const RadioStyles = css`
 	${display('inline-flex')} :host {
-		--input-size: calc((${heightNumber} / 2) + var(--design-unit));
+		--input-size: calc((${heightNumber} / 2) + ${designUnit});
 		align-items: center;
 		outline: none;
-		margin: calc(var(--design-unit) * 1px) 0;
+		margin: calc(${designUnit} * 1px) 0;
 		user-select: none;
 		position: relative;
 		flex-direction: row;
 		transition: all 0.2s ease-in-out;
-		font-size: var(--type-ramp-base-font-size);
-		line-height: var(--type-ramp-base-line-height);
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
 	}
 	.control {
 		position: relative;
-		width: calc((${heightNumber} / 2 + var(--design-unit)) * 1px);
-		height: calc((${heightNumber} / 2 + var(--design-unit)) * 1px);
+		width: calc((${heightNumber} / 2 + ${designUnit}) * 1px);
+		height: calc((${heightNumber} / 2 + ${designUnit}) * 1px);
 		box-sizing: border-box;
 		border-radius: 999px;
-		border: calc(var(--border-width) * 1px) solid
-			var(--checkbox-border-color);
-		background: var(--checkbox-background-color);
+		border: calc(${borderWidth} * 1px) solid ${checkboxBorderColor};
+		background: ${checkboxBackgroundColor};
 		outline: none;
 		cursor: pointer;
 	}
 	.label {
 		font-family: var(--body-font);
-		color: var(--checkbox-foreground-color);
-		padding-inline-start: calc(var(--design-unit) * 2px + 2px);
-		margin-inline-end: calc(var(--design-unit) * 2px + 2px);
+		color: ${checkboxForegroundColor};
+		padding-inline-start: calc(${designUnit} * 2px + 2px);
+		margin-inline-end: calc(${designUnit} * 2px + 2px);
 		cursor: pointer;
 	}
 	.label__hidden {
@@ -54,39 +65,35 @@ export const RadioStyles = css`
 		bottom: 5px;
 		border-radius: 999px;
 		display: inline-block;
-		background: var(--checkbox-foreground-color);
+		background: ${checkboxForegroundColor};
 		opacity: 0;
 		pointer-events: none;
 	}
 	:host(:not([disabled])) .control:hover {
-		background: var(--checkbox-background-color);
-		border-color: var(--checkbox-border-color);
+		background: ${checkboxBackgroundColor};
+		border-color: ${checkboxBorderColor};
 	}
 	:host(:not([disabled])) .control:active {
-		background: var(--checkbox-background-color);
-		border-color: var(--focus-border-color);
+		background: ${checkboxBackgroundColor};
+		border-color: ${focusBorderColor};
 	}
 	:host(:${focusVisible}) .control {
-		border: calc(var(--focus-border-width) * 1px) solid
-			var(--focus-border-color);
+		border: calc(${focusBorderWidth} * 1px) solid ${focusBorderColor};
 	}
 	:host([aria-checked='true']) .control {
-		background: var(--checkbox-background-color);
-		border: calc(var(--border-width) * 1px) solid
-			var(--checkbox-border-color);
+		background: ${checkboxBackgroundColor};
+		border: calc(${borderWidth} * 1px) solid ${checkboxBorderColor};
 	}
 	:host([aria-checked='true']:not([disabled])) .control:hover {
-		background: var(--checkbox-background-color);
-		border: calc(var(--border-width) * 1px) solid
-			var(--checkbox-border-color);
+		background: ${checkboxBackgroundColor};
+		border: calc(${borderWidth} * 1px) solid ${checkboxBorderColor};
 	}
 	:host([aria-checked='true']:not([disabled])) .control:active {
-		background: var(--checkbox-background-color);
-		border: calc(var(--border-width) * 1px) solid var(--focus-border-color);
+		background: ${checkboxBackgroundColor};
+		border: calc(${borderWidth} * 1px) solid ${focusBorderColor};
 	}
 	:host([aria-checked="true"]:${focusVisible}:not([disabled])) .control {
-		border: calc(var(--focus-border-width) * 1px) solid
-			var(--focus-border-color);
+		border: calc(${focusBorderWidth} * 1px) solid ${focusBorderColor};
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,
@@ -98,6 +105,6 @@ export const RadioStyles = css`
 		opacity: 1;
 	}
 	:host([disabled]) {
-		opacity: var(--disabled-opacity);
+		opacity: ${disabledOpacity};
 	}
 `;
