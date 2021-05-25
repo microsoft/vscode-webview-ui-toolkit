@@ -23,7 +23,7 @@ The `vscode-text-area` is a web component implementation of an [HTML Text Area E
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--default)
 
 ```html
 <vscode-text-area></vscode-text-area>
@@ -31,7 +31,7 @@ The `vscode-text-area` is a web component implementation of an [HTML Text Area E
 
 ### Autofocus Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-autofocus)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-autofocus)
 
 ```html
 <vscode-text-area autofocus></vscode-text-area>
@@ -39,7 +39,7 @@ The `vscode-text-area` is a web component implementation of an [HTML Text Area E
 
 ### Cols Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-custom-cols)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-custom-cols)
 
 ```html
 <vscode-text-area cols="50"></vscode-text-area>
@@ -47,7 +47,7 @@ The `vscode-text-area` is a web component implementation of an [HTML Text Area E
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-disabled)
 
 ```html
 <vscode-text-area disabled></vscode-text-area>
@@ -71,7 +71,7 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Max Length Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-max-length)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-max-length)
 
 ```html
 <vscode-text-area maxlength="10"></vscode-text-area>
@@ -79,7 +79,7 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Min Length Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-min-length)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-min-length)
 
 ```html
 <vscode-text-area minlength="10"></vscode-text-area>
@@ -93,7 +93,7 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Placeholder Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-placeholder)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-placeholder)
 
 ```html
 <vscode-text-area placeholder="Placeholder Text"></vscode-text-area>
@@ -101,7 +101,7 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Read Only Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-readonly)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-readonly)
 
 ```html
 <vscode-text-area readonly>Read Only Text</vscode-text-area>
@@ -109,25 +109,25 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Resize Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-resize-none)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-resize-none)
 
 ```html
 <vscode-text-area resize="none"></vscode-text-area>
 ```
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-resize-both)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-resize-both)
 
 ```html
 <vscode-text-area resize="both"></vscode-text-area>
 ```
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-resize-vertical)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-resize-vertical)
 
 ```html
 <vscode-text-area resize="vertical"></vscode-text-area>
 ```
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-resize-horizontal)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-resize-horizontal)
 
 ```html
 <vscode-text-area resize="horizontal"></vscode-text-area>
@@ -135,7 +135,7 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Rows Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-text-area--with-custom-rows)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-area--with-custom-rows)
 
 ```html
 <vscode-text-area rows="20"></vscode-text-area>

@@ -21,7 +21,7 @@ The `vscode-progress-ring` renders a circular visual appearance for progress sta
 
 The basic usage will display a looping animation to indicate an indeterminate state where the wait time is unspecified.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-progress-ring--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-ring--default)
 
 ```html
 <vscode-progress-ring></vscode-progress-ring>
@@ -29,7 +29,7 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ### Value Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-progress-ring--with-value)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-ring--with-value)
 
 ```html
 <vscode-progress-ring value="75"></vscode-progress-ring>
@@ -37,7 +37,7 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ### Min Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-progress-ring--with-value)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-ring--with-value)
 
 ```html
 <vscode-progress-ring min="0"></vscode-progress-ring>
@@ -45,7 +45,7 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ### Max Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-progress-ring--with-value)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-ring--with-value)
 
 ```html
 <vscode-progress-ring max="100"></vscode-progress-ring>
@@ -53,7 +53,7 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ### Paused Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-progress-ring--with-paused)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-ring--with-paused)
 
 ```html
 <vscode-progress-ring paused></vscode-progress-ring>

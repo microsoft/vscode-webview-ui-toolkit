@@ -16,7 +16,7 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-dropdown--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-dropdown--default)
 
 ```html
 <vscode-dropdown>
@@ -28,7 +28,7 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-dropdown--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-dropdown--with-disabled)
 
 ```html
 <vscode-dropdown disabled>
@@ -40,7 +40,7 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### Open Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-dropdown--with-open)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-dropdown--with-open)
 
 ```html
 <vscode-dropdown open>
@@ -52,7 +52,7 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### Position Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-dropdown--with-position-above)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-dropdown--with-position-above)
 
 ```html
 <vscode-dropdown position="above">
@@ -62,7 +62,7 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 </vscode-dropdown>
 ```
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-dropdown--with-position-below)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-dropdown--with-position-below)
 
 ```html
 <vscode-dropdown position="below">
@@ -76,7 +76,7 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 The default indicator is a downward facing chevron, but it can customized by adding an element with the attribute `slot="indicator"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-dropdown--with-custom-indicator)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-dropdown--with-custom-indicator)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->

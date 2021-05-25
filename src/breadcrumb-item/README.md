@@ -12,7 +12,7 @@ The `vscode-breadcrumb-item` is a component meant to be used with `vscode-breadc
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--default)
 
 ```html
 <vscode-breadcrumb-item>Breadcrumb Item Label</vscode-breadcrumb-item>
@@ -20,7 +20,7 @@ The `vscode-breadcrumb-item` is a component meant to be used with `vscode-breadc
 
 ### Href Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-link)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-link)
 
 ```html
 <vscode-breadcrumb-item href="#">Breadcrumb Item Label</vscode-breadcrumb-item>
@@ -30,7 +30,7 @@ The `vscode-breadcrumb-item` is a component meant to be used with `vscode-breadc
 
 The Breadcrumb Item usually contains text, but can also contain any valid HTML, such as a `<vscode-button>`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-custom-element)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-custom-element)
 
 ```html
 <vscode-breadcrumb-item href="#">
@@ -42,7 +42,7 @@ The Breadcrumb Item usually contains text, but can also contain any valid HTML, 
 
 The default separator is a `/` but it can customized by adding an element with the attribute `slot="separator"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-custom-separator)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-custom-separator)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -57,7 +57,7 @@ The default separator is a `/` but it can customized by adding an element with t
 
 An icon can be added to the left of Breadcrumb Item text by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-start-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-start-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -72,7 +72,7 @@ An icon can be added to the left of Breadcrumb Item text by adding an element wi
 
 An icon can be added to the right of Breadcrumb Item text by adding an element with the attribute `slot="end"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-breadcrumb-item--with-end-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-end-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
