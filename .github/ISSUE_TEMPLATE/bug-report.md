@@ -1,33 +1,42 @@
 ---
 name: Bug report
-about: Create a report to help us improve the Webview Toolkit
-title: ''
+about: Create a report to help us improve the toolkit
 labels: bug
-assignees: hawkticehurst, daviddossett
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!--
+  ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️
 
-**To Reproduce**
-Steps to reproduce the behavior:
+  📖 Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/
+  🔎 Please search existing issues to avoid creating duplicates.
+-->
+
+### Describe The Bug
+
+_A clear and concise description of what the bug is._
+
+### To Reproduce
+
+_Steps to reproduce the behavior:_
 
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+### Expected Behavior
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+_A clear and concise description of what you expected to happen._
 
-**Desktop (please complete the following information):**
+### Screenshots
 
--   OS: [e.g. iOS]
--   Browser [e.g. chrome, safari]
--   Version [e.g. 22]
+_If applicable, add screenshots to help explain your problem._
 
-**Additional context**
-Add any other context about the problem here.
+### Desktop (please complete the following information):
+
+-   OS Version: _[e.g. macOS 11.3.1]_
+-   Toolkit Version _[e.g. 0.5.0]_
+
+### Additional Context
+
+_Add any other context about the problem here._
