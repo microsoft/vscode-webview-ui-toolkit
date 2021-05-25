@@ -13,6 +13,12 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 | `required`  | boolean | Indicates that the user must check the checkbox before the owning form can be submitted. |
 | `value`     | string  | The string to use as the value of the checkbox when submitting the form                  |
 
+## Properties
+
+| Attribute       | Type    | Description                                                               |
+| --------------- | ------- | ------------------------------------------------------------------------- |
+| `indeterminate` | boolean | Determines if the element should render the indeterminate checkbox state. |
+
 ## Usage
 
 ### Basic Usage
@@ -69,6 +75,21 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ```html
 <vscode-checkbox value="foo">Label</vscode-checkbox>
+```
+
+### Indeterminate Property
+
+Checkboxes can also render an indeterminate state. This is achieved by getting a reference to a given checkbox using JavaScript and then setting the `indeterminate` property of the checkbox to `true`.
+
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-indeterminate)
+
+```javascript
+const checkbox = document.getElementById('foo');
+checkbox.indeterminate = true;
+```
+
+```html
+<vscode-checkbox id="foo">Label</vscode-checkbox>
 ```
 
 ### Form Usage

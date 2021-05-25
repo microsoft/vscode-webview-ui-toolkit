@@ -4,6 +4,7 @@ import {focusObserver} from '../../utilities/storybook/index';
 export type CheckboxArgs = {
 	label?: string;
 	isChecked: boolean;
+	isIndeterminate: boolean;
 	isDisabled: boolean;
 	isAutoFocused: boolean;
 	isReadOnly: boolean;
@@ -15,6 +16,7 @@ export type CheckboxArgs = {
 export function createCheckbox({
 	label,
 	isChecked,
+	isIndeterminate,
 	isDisabled,
 	isAutoFocused,
 	isReadOnly,
@@ -27,7 +29,12 @@ export function createCheckbox({
 	if (label) {
 		checkbox.textContent = label;
 	}
-	checkbox.setAttribute('checked', isChecked.toString());
+	if (isChecked) {
+		checkbox.setAttribute('checked', isChecked.toString());
+	}
+	if (isIndeterminate) {
+		checkbox.indeterminate = isIndeterminate;
+	}
 	if (isDisabled) {
 		checkbox.setAttribute('disabled', '');
 	}
