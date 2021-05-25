@@ -17,7 +17,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-number-field--default)
 
 ```html
 <vscode-number-field></vscode-number-field>
@@ -25,7 +25,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 
 ### Autofocus Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--with-autofocus)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-number-field--with-autofocus)
 
 ```html
 <vscode-number-field autofocus></vscode-number-field>
@@ -33,7 +33,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-number-field--with-disabled)
 
 ```html
 <vscode-number-field disabled></vscode-number-field>
@@ -47,7 +47,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 
 ### Placeholder Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--with-placeholder)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-number-field--with-placeholder)
 
 ```html
 <vscode-number-field placeholder="Placeholder Text"></vscode-number-field>
@@ -55,7 +55,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 
 ### Read Only Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--with-readonly)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-number-field--with-readonly)
 
 ```html
 <vscode-number-field readonly>Read Only Text</vscode-number-field>
@@ -63,7 +63,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 
 ### Size Attribute
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--with-custom-size)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-number-field--with-custom-size)
 
 ```html
 <vscode-number-field size="50"></vscode-number-field>
@@ -73,7 +73,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 
 An icon can be added to the left of the text field by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://mttallac.azurewebsites.net/?path=/story/library-number-field--with-start-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-number-field--with-start-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
