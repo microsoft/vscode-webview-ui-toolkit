@@ -23,6 +23,7 @@
 		"deploy:storybook": "npm run build:storybook && gh-pages -d storybook-static",
 		"doc": "api-extractor run --local",
 		"fmt": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
+		"fmt:check": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
 		"prepublishOnly": "npm run build",
