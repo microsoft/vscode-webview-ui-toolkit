@@ -1,0 +1,25 @@
+name: Build and Deploy Docs
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-and-deploy-docs:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout 🛎️
+              uses: actions/checkout@v2
+
+            - name: Install Dependencies 📥
+              run: npm install
+
+            - name: Build Docs 🔧
+              run: npm run build:docs
+
+            - name: Deploy Docs 🚀
+              uses: JamesIves/github-pages-deploy-action@4.1.3
+              with:
+                  branch: gh-pages # The branch the action should deploy to.
+                  folder: storybook-static # The folder the action should deploy.
