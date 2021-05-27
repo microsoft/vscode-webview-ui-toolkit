@@ -1,4 +1,4 @@
-import {attr, customElement} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {
 	NumberField,
 	NumberFieldTemplate as template,
