@@ -19,16 +19,15 @@
 	"scripts": {
 		"start": "start-storybook -p 6006",
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
-		"build:storybook": "build-storybook",
-		"deploy:storybook": "npm run build:storybook && gh-pages -d storybook-static",
+		"build:docs": "build-storybook",
+		"deploy:docs": "npm run build:docs && gh-pages -d storybook-static",
 		"doc": "api-extractor run --local",
-		"fmt": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
-		"fmt:check": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
+		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
+		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
 		"prepublishOnly": "npm run build",
-		"test": "jest --verbose",
-		"test:coverage": "jest --verbose --coverage"
+		"test": "jest --verbose --coverage"
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "^1.2.0",
