@@ -2,8 +2,6 @@
 
 Contributions are welcome, and they are greatly appreciated!
 
-Here's how to set up `vscode-webview-toolkit` for local development.
-
 ## Initial Set Up
 
 To start off, fork the `vscode-webview-toolkit` repo on GitHub.
