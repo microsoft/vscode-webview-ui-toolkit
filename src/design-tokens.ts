@@ -69,36 +69,6 @@ export const typeRampPlus1FontSize = create<string>(
 export const typeRampPlus1LineHeight = create<string>(
 	'type-ramp-plus1-line-height'
 ).withDefault('24px');
-export const typeRampPlus2FontSize = create<string>(
-	'type-ramp-plus2-font-size'
-).withDefault('20px');
-export const typeRampPlus2LineHeight = create<string>(
-	'type-ramp-plus2-line-height'
-).withDefault('28px');
-export const typeRampPlus3FontSize = create<string>(
-	'type-ramp-plus3-font-size'
-).withDefault('28px');
-export const typeRampPlus3LineHeight = create<string>(
-	'type-ramp-plus3-line-height'
-).withDefault('36px');
-export const typeRampPlus4FontSize = create<string>(
-	'type-ramp-plus4-font-size'
-).withDefault('34px');
-export const typeRampPlus4LineHeight = create<string>(
-	'type-ramp-plus4-line-height'
-).withDefault('44px');
-export const typeRampPlus5FontSize = create<string>(
-	'type-ramp-plus5-font-size'
-).withDefault('46px');
-export const typeRampPlus5LineHeight = create<string>(
-	'type-ramp-plus5-line-height'
-).withDefault('56px');
-export const typeRampPlus6FontSize = create<string>(
-	'type-ramp-plus6-font-size'
-).withDefault('60px');
-export const typeRampPlus6LineHeight = create<string>(
-	'type-ramp-plus6-line-height'
-).withDefault('72px');
 
 /**
  * Button design tokens.
