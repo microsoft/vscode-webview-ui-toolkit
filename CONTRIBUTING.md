@@ -15,19 +15,19 @@ Once the repo is forked, clone your fork locally using one of the following meth
 **Using SSH**
 
 ```
-$ git clone git@github.com:{your-github-username}/vscode-webview-toolkit.git
+git clone git@github.com:{your-github-username}/vscode-webview-toolkit.git
 ```
 
 **Using HTTPS**
 
 ```
-$ git clone https://github.com/{your-github-username}/vscode-webview-toolkit.git
+git clone https://github.com/{your-github-username}/vscode-webview-toolkit.git
 ```
 
 **Using GitHub CLI**
 
 ```
-$ gh repo clone {your-github-username}/vscode-webview-toolkit
+gh repo clone {your-github-username}/vscode-webview-toolkit
 ```
 
 ### Set an Upstream Remote
@@ -35,9 +35,9 @@ $ gh repo clone {your-github-username}/vscode-webview-toolkit
 Next, add an upstream remote pointing to the primary toolkit repo:
 
 ```
-$ cd vscode-webview-toolkit/
-$ git remote add upstream https://github.com/microsoft/vscode-webview-toolkit.git
-$ git fetch upstream main
+cd vscode-webview-toolkit/
+git remote add upstream https://github.com/microsoft/vscode-webview-toolkit.git
+git fetch upstream main
 ```
 
 ### Install Dependencies
@@ -45,7 +45,7 @@ $ git fetch upstream main
 Install the project dependencies:
 
 ```
-$ npm install
+npm install
 ```
 
 ### Create a Branch
@@ -53,7 +53,7 @@ $ npm install
 Create a branch for local development:
 
 ```
-$ git checkout -b {branch-name}
+git checkout -b {branch-name}
 ```
 
 Now you can make your changes locally.
@@ -63,11 +63,11 @@ Now you can make your changes locally.
 When you're done making changes, check that your changes pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors:
 
 ```
-$ npm run lint
-$ npm run fmt
-$ npm run test
-$ npm run build
-$ npm run build:docs
+npm run lint
+npm run fmt
+npm run test
+npm run build
+npm run build:docs
 ```
 
 ### Add & Commit Changes
@@ -75,8 +75,8 @@ $ npm run build:docs
 Commit your changes and push your branch to GitHub.
 
 ```
-$ git add .
-$ git commit -m "Detailed description of your changes."
+git add .
+git commit -m "Detailed description of your changes."
 ```
 
 ### Pull Any Upstream Changes
@@ -90,15 +90,15 @@ If there are no new commits from upstream's `main`, you can skip steps 1, 2, and
 1. Get the latest commits:
 
     ```
-    $ git checkout main
-    $ git pull --rebase upstream main
+    git checkout main
+    git pull --rebase upstream main
     ```
 
 2. Merge the latest commits into your branch:
 
     ```
-    $ git checkout {branch-name}
-    $ git merge main
+    git checkout {branch-name}
+    git merge main
     ```
 
 3. Resolve any merge conflicts and if needed run all the linting, formatting, tests, and builds again.
@@ -108,7 +108,7 @@ If there are no new commits from upstream's `main`, you can skip steps 1, 2, and
 Push your branch to GitHub:
 
 ```
-$ git push origin {branch-name}
+git push origin {branch-name}
 ```
 
 ### Deploy Forked Docs Site
@@ -118,7 +118,7 @@ You can also build and deploy the Storybook docs website to your forked repo's G
 _Note: If you're working on component features or bug fixes we will ask for this link to view your work._
 
 ```
-$ npm run deploy:docs
+npm run deploy:docs
 ```
 
 Once deployed, the site should be viewable at the following link: https://{your-github-username}.github.io/vscode-webview-toolkit/
@@ -140,14 +140,14 @@ Finally, submit a pull request through the GitHub website.
 Once your branch has been merged into upstream's `main` branch, if you want to keep your remote and local repo clean, you can delete your branch.
 
 ```
-$ git push origin --delete {branch-name}
-$ git branch -D {branch-name}
+git push origin --delete {branch-name}
+git branch -D {branch-name}
 ```
 
 Finally, you can keep your fork's `main` branch up-to-date with upstream's `main` branch:
 
 ```
-$ git checkout main
-$ git pull --rebase upstream main
-$ git push origin main
+git checkout main
+git pull --rebase upstream main
+git push origin main
 ```
