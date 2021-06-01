@@ -10,10 +10,24 @@ To start off, fork the `vscode-webview-toolkit` repo on GitHub.
 
 ### Clone the Forked Repo
 
-Once the repo is forked, clone your fork locally:
+Once the repo is forked, clone your fork locally using one of the following methods:
+
+**Using SSH**
 
 ```
 $ git clone git@github.com:{your-github-username}/vscode-webview-toolkit.git
+```
+
+**Using HTTPS**
+
+```
+$ git clone https://github.com/{your-github-username}/vscode-webview-toolkit.git
+```
+
+**Using GitHub CLI**
+
+```
+$ gh repo clone {your-github-username}/vscode-webview-toolkit
 ```
 
 ### Set an Upstream Remote
