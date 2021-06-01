@@ -99,7 +99,11 @@ If there are no new commits from upstream's `main`, you can skip steps 1, 2, and
     git merge main
     ```
 
-3. Resolve any merge conflicts and if needed run all the linting, formatting, tests, and builds again.
+3. Resolve any merge conflicts, run all the linting, formatting, tests, and builds again, and push the resulting merged code.
+
+    ```
+    git push origin {branch-name}
+    ```
 
 ### Push Local Changes
 
