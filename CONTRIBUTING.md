@@ -48,13 +48,11 @@ npm install
 
 ### Create a Branch
 
-Create a branch for local development.
+Create a branch for local development. Once that is complete, you can start making your changes locally.
 
 ```
 git checkout -b {branch-name}
 ```
-
-Now you can make your changes locally.
 
 ## Submitting Changes
 
