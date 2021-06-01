@@ -5,6 +5,7 @@ on: pull_request
 jobs:
     test:
         runs-on: ubuntu-latest
+        timeout-minutes: 10
         steps:
             - name: Checkout 🛎️
               uses: actions/checkout@v2
@@ -22,6 +23,7 @@ jobs:
 
     lint:
         runs-on: ubuntu-latest
+        timeout-minutes: 10
         steps:
             - name: Checkout 🛎️
               uses: actions/checkout@v2
@@ -42,6 +44,7 @@ jobs:
 
     build-toolkit:
         runs-on: ubuntu-latest
+        timeout-minutes: 10
         steps:
             - name: Checkout 🛎️
               uses: actions/checkout@v2
@@ -59,6 +62,7 @@ jobs:
 
     build-docs:
         runs-on: ubuntu-latest
+        timeout-minutes: 10
         steps:
             - name: Checkout 🛎️
               uses: actions/checkout@v2
