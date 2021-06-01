@@ -8,7 +8,7 @@ To start off, fork the `vscode-webview-toolkit` repo on GitHub.
 
 ### Clone the Forked Repo
 
-Once the repo is forked, clone your fork locally using one of the following methods:
+Once the repo is forked, clone your fork locally using one of the following methods.
 
 **Using SSH**
 
@@ -30,7 +30,7 @@ gh repo clone {your-github-username}/vscode-webview-toolkit
 
 ### Set an Upstream Remote
 
-Next, add an upstream remote pointing to the primary toolkit repo:
+Next, add an upstream remote pointing to the primary toolkit repo.
 
 ```
 cd vscode-webview-toolkit/
@@ -40,7 +40,7 @@ git fetch upstream main
 
 ### Install Dependencies
 
-Install the project dependencies:
+Install the project dependencies.
 
 ```
 npm install
@@ -48,7 +48,7 @@ npm install
 
 ### Create a Branch
 
-Create a branch for local development:
+Create a branch for local development.
 
 ```
 git checkout -b {branch-name}
@@ -58,7 +58,7 @@ Now you can make your changes locally.
 
 ## Submitting Changes
 
-When you're done making changes, check that your changes pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors:
+When you're done making changes, check that your changes pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors.
 
 ```
 npm run lint
@@ -85,14 +85,14 @@ merge conflicts locally.
 
 If there are no new commits from upstream's `main`, you can skip steps 1, 2, and 3.
 
-1. Get the latest commits:
+1. Get the latest commits.
 
     ```
     git checkout main
     git pull --rebase upstream main
     ```
 
-2. Merge the latest commits into your branch:
+2. Merge the latest commits into your branch.
 
     ```
     git checkout {branch-name}
@@ -103,7 +103,7 @@ If there are no new commits from upstream's `main`, you can skip steps 1, 2, and
 
 ### Push Local Changes
 
-Push your branch to GitHub:
+Push your branch to GitHub.
 
 ```
 git push origin {branch-name}
@@ -142,7 +142,7 @@ git push origin --delete {branch-name}
 git branch -D {branch-name}
 ```
 
-Finally, you can keep your fork's `main` branch up-to-date with upstream's `main` branch:
+Finally, you can keep your fork's `main` branch up-to-date with upstream's `main` branch.
 
 ```
 git checkout main
