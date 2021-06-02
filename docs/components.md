@@ -9,12 +9,14 @@ Here you can find a list of all the components currently available in this toolk
 | `breadcrumb-item` | [Breadcrumb Item Documentation](../src/breadcrumb-item/README.md) |
 | `button`          | [Button Documentation](../src/button/README.md)                   |
 | `checkbox`        | [Checkbox Documentation](../src/checkbox/README.md)               |
+| `combobox`        | [Combobox Documentation](../src/combobox/README.md)               |
 | `data-grid`       | [Data Grid Documentation](../src/data-grid/README.md)             |
 | `divider`         | [Divider Documentation](../src/divider/README.md)                 |
 | `dropdown`        | [Dropdown Documentation](../src/dropdown/README.md)               |
 | `link`            | [Link Documentation](../src/link/README.md)                       |
 | `menu`            | [Menu Documentation](../src/menu/README.md)                       |
 | `menu-item`       | [Menu Item Documentation](../src/menu-item/README.md)             |
+| `number-field`    | [Number Field Documentation](../src/number-field/README.md)       |
 | `option`          | [Option Documentation](../src/option/README.md)                   |
 | `panels`          | [Panels Documentation](../src/panels/README.md)                   |
 | `progress-bar`    | [Progress Bar Documentation](../src/progress-bar/README.md)       |
