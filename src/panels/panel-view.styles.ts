@@ -1,7 +1,6 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 import {
-	density,
 	designUnit,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -15,6 +14,6 @@ export const PanelViewStyles = css`
 		box-sizing: border-box;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		padding: 10px calc((6 + (${designUnit} * 2 * ${density})) * 1px);
+		padding: 10px calc((6 + (${designUnit}) * 1px);
 	}
 `;
