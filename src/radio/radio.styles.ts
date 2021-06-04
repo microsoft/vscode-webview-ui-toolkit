@@ -13,14 +13,13 @@ import {
 	disabledOpacity,
 	focusBorderColor,
 	focusBorderWidth,
-	heightNumber,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
 export const RadioStyles = css`
 	${display('inline-flex')} :host {
-		--input-size: calc((${heightNumber} / 2) + ${designUnit});
+		--input-size: calc(${designUnit} * 4px);
 		align-items: center;
 		outline: none;
 		margin: calc(${designUnit} * 1px) 0;
@@ -33,8 +32,8 @@ export const RadioStyles = css`
 	}
 	.control {
 		position: relative;
-		width: calc((${heightNumber} / 2 + ${designUnit}) * 1px);
-		height: calc((${heightNumber} / 2 + ${designUnit}) * 1px);
+		width: calc(${designUnit} * 4px);
+		height: calc(${designUnit} * 4px);
 		box-sizing: border-box;
 		border-radius: 999px;
 		border: calc(${borderWidth} * 1px) solid ${checkboxBorderColor};

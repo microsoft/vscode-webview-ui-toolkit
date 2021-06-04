@@ -14,7 +14,7 @@ import {
 	dropdownForegroundColor,
 	focusBorderColor,
 	focusBorderWidth,
-	heightNumber,
+	inputHeight,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -27,7 +27,7 @@ export const ComboboxStyles = css`
 		box-sizing: border-box;
 		color: ${dropdownForegroundColor};
 		contain: contents;
-		height: calc(${heightNumber} * 1px);
+		height: calc(${inputHeight} * 1px);
 		position: relative;
 		user-select: none;
 		min-width: 250px;
@@ -41,7 +41,7 @@ export const ComboboxStyles = css`
 		display: inline-flex;
 		flex-direction: column;
 		left: 0;
-		max-height: calc(var(--max-height) - (${heightNumber} * 1px));
+		max-height: calc(var(--max-height) - (${inputHeight}1px));
 		padding: calc(${designUnit} * 1px) 0;
 		overflow-y: auto;
 		position: absolute;
@@ -136,11 +136,11 @@ export const ComboboxStyles = css`
 	}
 	:host([open][position='above']) .listbox {
 		border-bottom: 0;
-		bottom: calc(${heightNumber} * 1px);
+		bottom: calc(${inputHeight} * 1px);
 	}
 	:host([open][position='below']) .listbox {
 		border-top: 0;
-		top: calc(${heightNumber} * 1px);
+		top: calc(${inputHeight} * 1px);
 	}
 	.indicator {
 		flex: 0 0 auto;

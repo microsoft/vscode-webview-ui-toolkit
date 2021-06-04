@@ -3,8 +3,8 @@ import {display, focusVisible} from '@microsoft/fast-foundation';
 import {
 	breadcrumbItemForegroundColor,
 	breadcrumbItemForegroundHoverColor,
+	designUnit,
 	focusBorderWidth,
-	heightNumber,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -18,7 +18,7 @@ export const BreadcrumbItemStyles = css`
         font-size: ${typeRampBaseFontSize};
         fill: currentColor;
         line-height: ${typeRampBaseLineHeight};
-        min-width: calc(${heightNumber} * 1px);
+        min-width: calc(${designUnit} * 7px);
         outline: none;
     }
     .listitem {

@@ -5,16 +5,9 @@ const {create} = DesignToken;
 /**
  * Global design tokens.
  */
-export const baseHeightMultiplier = create<number>(
-	'base-height-multiplier'
-).withDefault(7);
-export const baseHorizontalSpacingMultiplier = create<number>(
-	'base-horizontal-spacing-multiplier'
-).withDefault(3);
+export const designUnit = create<number>('design-unit').withDefault(4);
 export const borderWidth = create<number>('border-width').withDefault(1);
 export const cornerRadius = create<number>('corner-radius').withDefault(0);
-export const density = create<number>('density').withDefault(0);
-export const designUnit = create<number>('design-unit').withDefault(4);
 export const disabledOpacity = create<number>('disabled-opacity').withDefault(
 	0.4
 );
@@ -24,23 +17,6 @@ export const focusBorderColor = create<string>(
 export const focusBorderWidth = create<number>(
 	'focus-border-width'
 ).withDefault(1);
-
-/**
- * A formula to retrieve the control height. Use this as the value of
- * any CSS property that accepts a pixel size.
- *
- * @internal
- */
-export const heightNumber = create<number>('height-number');
-const body = document.querySelector('body');
-if (body) {
-	heightNumber.setValueFor(body, element => {
-		const multipler = baseHeightMultiplier.getValueFor(element);
-		const dens = density.getValueFor(element);
-		const unit = designUnit.getValueFor(element);
-		return (multipler + dens) * unit;
-	});
-}
 
 /**
  * Type-ramp font-size and line-height design tokens.
@@ -176,6 +152,7 @@ export const inputPlaceholderForegroundColor = create<string>(
 export const inputBorderColor = create<string>(
 	'input-border-color'
 ).withDefault('#3c3c3c');
+export const inputHeight = create<string>('input-height').withDefault('29');
 
 /**
  * Progress Bar & Ring design tokens.

@@ -10,10 +10,10 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorderColor,
-	heightNumber,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
+	inputHeight,
 	inputPlaceholderForegroundColor,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -34,7 +34,7 @@ export const NumberFieldStyles = css`
 		background: ${inputBackgroundColor};
 		border-radius: calc(${cornerRadius} * 1px);
 		border: calc(${borderWidth} * 1px) solid ${inputBorderColor};
-		height: calc(${heightNumber} * 1px);
+		height: calc(${inputHeight} * 1px);
 	}
 	.control {
 		-webkit-appearance: none;
