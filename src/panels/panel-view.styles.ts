@@ -14,6 +14,6 @@ export const PanelViewStyles = css`
 		box-sizing: border-box;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		padding: 10px calc((6 + (${designUnit}) * 1px);
+		padding: 10px calc((${designUnit} + 2) * 1px);
 	}
 `;
