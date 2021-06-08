@@ -96,7 +96,6 @@ export const TextFieldStyles = css`
 	}
 	:host(:focus-within:not([disabled])) .root {
 		border-color: ${focusBorderColor};
-		box-shadow: 0 0 0 1px ${focusBorderColor} inset;
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,

@@ -142,7 +142,7 @@ export const dropdownBorderColor = create<string>(
 ).withDefault('#3c3c3c');
 export const dropdownCornerRadius = create<number>(
 	'dropdown-corner-radius'
-).withDefault(5);
+).withDefault(0);
 
 /**
  * Option design tokens.
