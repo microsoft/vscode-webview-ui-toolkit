@@ -6,11 +6,11 @@ import {
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
+	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	dropdownBackgroundColor,
 	dropdownBorderColor,
-	dropdownCornerRadius,
 	dropdownForegroundColor,
 	focusBorderColor,
 	focusBorderWidth,
@@ -22,7 +22,7 @@ import {
 export const DropdownStyles = css`
 	${display('inline-flex')} :host {
 		background: ${dropdownBackgroundColor};
-		border-radius: calc(${dropdownCornerRadius} * 1px);
+		border-radius: ${cornerRadius};
 		border: calc(${borderWidth} * 1px) solid ${dropdownBorderColor};
 		box-sizing: border-box;
 		color: ${dropdownForegroundColor};
@@ -36,7 +36,7 @@ export const DropdownStyles = css`
 	.listbox {
 		background: ${dropdownBackgroundColor};
 		border: calc(${borderWidth} * 1px) solid ${dropdownBorderColor};
-		border-radius: calc(${dropdownCornerRadius} * 1px);
+		border-radius: ${cornerRadius};
 		box-sizing: border-box;
 		display: inline-flex;
 		flex-direction: column;
@@ -94,7 +94,7 @@ export const DropdownStyles = css`
 	:host(:not([disabled])) .control:active {
 		background: #094771;
 		border-color: ${dropdownBorderColor};
-		border-radius: calc(${dropdownCornerRadius} * 1px);
+		border-radius: ${cornerRadius};
 	}
 	:host([open]),
 	:host([open]) .listbox {
