@@ -50,6 +50,19 @@ export const typeRampPlus1LineHeight = create<string>(
 ).withDefault('24px');
 
 /**
+ * Breadcrumb Item design tokens.
+ */
+export const breadcrumbItemForeground = create<string>(
+	'breadcrumb-item-foreground'
+).withDefault('#cccccccc');
+export const breadcrumbItemForegroundHover = create<string>(
+	'breadcrumb-item-foreground-hover'
+).withDefault('#e0e0e0');
+export const breadcrumbSeparatorMarginHorizontal = create<string>(
+	'breadcrumb-separator-margin-horizontal'
+).withDefault('6px');
+
+/**
  * Button design tokens.
  */
 export const buttonPrimaryBackgroundColor = create<string>(
@@ -93,19 +106,6 @@ export const checkboxBorderColor = create<string>(
 export const checkboxCornerRadius = create<number>(
 	'checkbox-corner-radius'
 ).withDefault(3);
-
-/**
- * Breadcrumb Item design tokens.
- */
-export const breadcrumbItemBackgroundColor = create<string>(
-	'breadcrumb-item-background-color'
-).withDefault('#1e1e1e');
-export const breadcrumbItemForegroundColor = create<string>(
-	'breadcrumb-item-foreground-color'
-).withDefault('#cccccccc');
-export const breadcrumbItemForegroundHoverColor = create<string>(
-	'breadcrumb-item-foreground-hover-color'
-).withDefault('#e0e0e0');
 
 /**
  * Dropdown design tokens.

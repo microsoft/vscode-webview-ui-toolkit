@@ -2,9 +2,8 @@ import {CSSDesignToken} from '@microsoft/fast-foundation';
 import {
 	badgeBackgroundColor,
 	badgeForegroundColor,
-	breadcrumbItemBackgroundColor,
-	breadcrumbItemForegroundColor,
-	breadcrumbItemForegroundHoverColor,
+	breadcrumbItemForeground,
+	breadcrumbItemForegroundHover,
 	buttonPrimaryBackgroundColor,
 	buttonPrimaryForegroundColor,
 	buttonPrimaryHoverBackgroundColor,
@@ -40,6 +39,9 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Base Colors ----
 	'--vscode-focusBorder': focusBorderColor,
 	// ---- Contrast Colors ----
+	// ---- Breadcrumbs ----
+	'--vscode-breadcrumb-foreground': breadcrumbItemForeground,
+	'--vscode-breadcrumb-focusForeground': breadcrumbItemForegroundHover,
 	// ---- Buttons ----
 	'--vscode-button-background': buttonPrimaryBackgroundColor,
 	'--vscode-button-foreground': buttonPrimaryForegroundColor,
@@ -53,10 +55,6 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-checkbox-background': checkboxBackgroundColor,
 	'--vscode-checkbox-foreground': checkboxForegroundColor,
 	'--vscode-checkbox-border': checkboxBorderColor,
-	// ---- Breadcrumbs ----
-	'--vscode-breadcrumb-background': breadcrumbItemBackgroundColor,
-	'--vscode-breadcrumb-foreground': breadcrumbItemForegroundColor,
-	'--vscode-breadcrumb-focusForeground': breadcrumbItemForegroundHoverColor,
 	// ---- Dropdowns ----
 	'--vscode-dropdown-background': dropdownBackgroundColor,
 	'--vscode-dropdown-foreground': dropdownForegroundColor,
