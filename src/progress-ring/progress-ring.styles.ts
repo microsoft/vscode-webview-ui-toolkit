@@ -1,13 +1,13 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
-import {heightNumber, progressBackgroundColor} from '../design-tokens';
+import {designUnit, progressBackgroundColor} from '../design-tokens';
 
 export const ProgressRingStyles = css`
 	${display('flex')} :host {
 		align-items: center;
 		outline: none;
-		height: calc(${heightNumber} * 1px);
-		width: calc(${heightNumber} * 1px);
+		height: calc(${designUnit} * 7px);
+		width: calc(${designUnit} * 7px);
 		margin: 0;
 	}
 	.progress {

@@ -10,7 +10,7 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorderWidth,
-	heightNumber,
+	inputHeight,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -22,7 +22,7 @@ export const MenuItemStyles = css`
 		font-family: var(--body-font);
 		outline: none;
 		box-sizing: border-box;
-		height: calc(${heightNumber} * 1px);
+		height: calc(${inputHeight} * 1px);
 		grid-template-columns: minmax(24px, auto) 1fr minmax(42px, auto);
 		grid-template-rows: auto;
 		justify-items: center;

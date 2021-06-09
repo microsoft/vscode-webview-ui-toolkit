@@ -10,7 +10,6 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorderColor,
-	heightNumber,
 	panelTabActiveBorderColor,
 	panelTabActiveForegroundColor,
 	panelTabForegroundColor,
@@ -24,7 +23,7 @@ export const PanelTabStyles = css`
 		font-family: var(--body-font);
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		height: calc(${heightNumber} * 1px);
+		height: calc(${designUnit} * 7px);
 		padding: calc(${designUnit} * 1px) 0;
 		color: ${panelTabForegroundColor};
 		fill: currentcolor;
