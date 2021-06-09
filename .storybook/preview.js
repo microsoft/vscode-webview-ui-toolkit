@@ -7,6 +7,7 @@ export const parameters = {
 			order: ['Docs', 'Library'],
 		},
 		isToolshown: true,
+		enableShortcuts: false,
 	},
 	docs: {
 		theme: themes.light,
