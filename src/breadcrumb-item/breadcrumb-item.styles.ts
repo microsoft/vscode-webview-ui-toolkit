@@ -1,10 +1,15 @@
 import {css} from '@microsoft/fast-element';
 import {display, focusVisible} from '@microsoft/fast-foundation';
 import {
-	breadcrumbItemForegroundColor,
-	breadcrumbItemForegroundHoverColor,
+	borderWidth,
+	breadcrumbItemForeground,
+	breadcrumbItemForegroundHover,
+	breadcrumbSeparatorMarginHorizontal,
 	designUnit,
 	focusBorderWidth,
+	fontFamily,
+	iconHeight,
+	iconWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -12,11 +17,11 @@ import {
 export const BreadcrumbItemStyles = css`
     ${display('inline-flex')} :host {
         background: transparent;
-        color: ${breadcrumbItemForegroundColor};
         box-sizing: border-box;
-        font-family: var(--body-font);
+        color: ${breadcrumbItemForeground};
+        font-family: ${fontFamily};
         font-size: ${typeRampBaseFontSize};
-        fill: currentColor;
+        fill: current;
         line-height: ${typeRampBaseLineHeight};
         min-width: calc(${designUnit} * 7px);
         outline: none;
@@ -28,12 +33,12 @@ export const BreadcrumbItemStyles = css`
     .separator {
         display: flex;
         align-items: center;
-        margin: 0 6px;
+        margin: 0 ${breadcrumbSeparatorMarginHorizontal};
     }
     .control {
         align-items: center;
         box-sizing: border-box;
-        color: ${breadcrumbItemForegroundColor};
+        color: ${breadcrumbItemForeground};
         cursor: pointer;
         display: flex;
         fill: inherit;
@@ -42,10 +47,10 @@ export const BreadcrumbItemStyles = css`
         white-space: nowrap;
     }
     .control:hover {
-        color: ${breadcrumbItemForegroundHoverColor};
+        color: ${breadcrumbItemForegroundHover};
     }
     .control:active {
-        color: ${breadcrumbItemForegroundHoverColor};
+        color: ${breadcrumbItemForegroundHover};
     }
     .control .content {
         position: relative;
@@ -53,7 +58,7 @@ export const BreadcrumbItemStyles = css`
     .control .content::before {
         content: "";
         display: block;
-        height: calc(var(--outline-width) * 1px);
+        height: calc(${borderWidth} * 1px);
         left: 0;
         position: absolute;
         right: 0;
@@ -61,17 +66,17 @@ export const BreadcrumbItemStyles = css`
         width: 100%;
     }
     .control:hover .content::before {
-        background: ${breadcrumbItemForegroundHoverColor};
+        background: ${breadcrumbItemForegroundHover};
     }
     .control:active .content::before {
-        background: ${breadcrumbItemForegroundHoverColor};
+        background: ${breadcrumbItemForegroundHover};
     }
     .control:${focusVisible} .content::before {
-        background: ${breadcrumbItemForegroundColor};
+        background: ${breadcrumbItemForeground};
         height: calc(${focusBorderWidth} * 1px);
     }
     .control:not([href]) {
-        color: ${breadcrumbItemForegroundColor};
+        color: ${breadcrumbItemForeground};
         cursor: default;
     }
     .control:not([href]) .content::before {
@@ -82,8 +87,8 @@ export const BreadcrumbItemStyles = css`
         display: flex;
     }
     ::slotted(svg), ::slotted(span) {
-        width: 16px;
-        height: 16px;
+        width: ${iconWidth};
+        height: ${iconHeight};
     }
     .start {
         margin-inline-end: 6px;
