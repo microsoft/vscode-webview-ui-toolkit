@@ -54,7 +54,6 @@ export const TextAreaStyles = css`
 	}
 	:host(:focus-within:not([disabled])) .control {
 		border-color: ${focusBorderColor};
-		box-shadow: 0 0 0 1px ${focusBorderColor} inset;
 	}
 	:host([resize='both']) .control {
 		resize: both;

@@ -5,9 +5,9 @@ import {
 	focusVisible,
 } from '@microsoft/fast-foundation';
 import {
+	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	dropdownCornerRadius,
 	dropdownForegroundColor,
 	focusBorderColor,
 	focusBorderWidth,
@@ -19,7 +19,7 @@ import {
 export const OptionStyles = css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);
-		border-radius: calc(${dropdownCornerRadius} * 1px);
+		border-radius: ${cornerRadius};
 		border: calc(${focusBorderWidth} * 1px) solid transparent;
 		box-sizing: border-box;
 		color: ${dropdownForegroundColor};
