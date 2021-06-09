@@ -20,6 +20,8 @@ export const focusBorderWidth = create<number>(
 export const fontFamily = create<string>('font-family').withDefault(
 	'Arial, Helvetica, sans-serif'
 );
+export const iconWidth = create<string>('icon-width').withDefault('16px');
+export const iconHeight = create<string>('icon-height').withDefault('16px');
 
 /**
  * Type-ramp font-size and line-height design tokens.
