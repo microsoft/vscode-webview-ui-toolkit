@@ -17,6 +17,9 @@ export const focusBorderColor = create<string>(
 export const focusBorderWidth = create<number>(
 	'focus-border-width'
 ).withDefault(1);
+export const fontFamily = create<string>('font-family').withDefault(
+	'Arial, Helvetica, sans-serif'
+);
 
 /**
  * Type-ramp font-size and line-height design tokens.
