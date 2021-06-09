@@ -47,6 +47,25 @@ export const typeRampPlus1LineHeight = create<string>(
 ).withDefault('24px');
 
 /**
+ * Badge design tokens.
+ */
+export const badgePrimaryForeground = create<string>(
+	'badge-primary-foreground'
+).withDefault('#ffffff');
+export const badgePrimaryBackground = create<string>(
+	'badge-primary-background'
+).withDefault('#007acc');
+export const badgeSecondaryForeground = create<string>(
+	'badge-secondary-foreground'
+).withDefault('#ffffff');
+export const badgeSecondaryBackground = create<string>(
+	'badge-secondary-background'
+).withDefault('#4d4d4d');
+export const badgeCornerRadius = create<string>(
+	'badge-corner-radius'
+).withDefault('2px');
+
+/**
  * Button design tokens.
  */
 export const buttonPrimaryBackgroundColor = create<string>(
@@ -123,16 +142,6 @@ export const dropdownBorderColor = create<string>(
 export const optionBackgroundFocusColor = create<string>(
 	'option-background-focus-color'
 ).withDefault('#062f4a');
-
-/**
- * Badge design tokens.
- */
-export const badgeBackgroundColor = create<string>(
-	'badge-background-color'
-).withDefault('#4d4d4d');
-export const badgeForegroundColor = create<string>(
-	'badge-foreground-color'
-).withDefault('#ffffff');
 
 /**
  * Text Field & Area design tokens.
