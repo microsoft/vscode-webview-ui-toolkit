@@ -41,7 +41,7 @@ export const ComboboxStyles = css`
 		display: inline-flex;
 		flex-direction: column;
 		left: 0;
-		max-height: calc(var(--max-height) - (${inputHeight}1px));
+		max-height: calc(var(--max-height) - (${inputHeight} * 1px));
 		padding: calc(${designUnit} * 1px) 0;
 		overflow-y: auto;
 		position: absolute;
