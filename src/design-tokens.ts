@@ -152,7 +152,7 @@ export const inputPlaceholderForegroundColor = create<string>(
 export const inputBorderColor = create<string>(
 	'input-border-color'
 ).withDefault('#3c3c3c');
-export const inputHeight = create<string>('input-height').withDefault('29');
+export const inputHeight = create<string>('input-height').withDefault('26');
 
 /**
  * Progress Bar & Ring design tokens.
