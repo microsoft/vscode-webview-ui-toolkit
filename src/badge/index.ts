@@ -1,6 +1,12 @@
-import {customElement} from '@microsoft/fast-element';
+import {attr, customElement} from '@microsoft/fast-element';
 import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
 import {BadgeStyles as styles} from './badge.styles';
+
+/**
+ * Types of badge appearance.
+ * @public
+ */
+export type BadgeAppearance = 'primary' | 'secondary';
 
 /**
  * The VS Code Badge element. Extends
@@ -17,4 +23,24 @@ import {BadgeStyles as styles} from './badge.styles';
 	template,
 	styles,
 })
-export class VSCodeBadge extends Badge {}
+export class VSCodeBadge extends Badge {
+	/**
+	 * The appearance the badge should have.
+	 *
+	 * @remarks
+	 * HTML Attribute: appearance
+	 *
+	 * @public
+	 */
+	@attr public appearance: BadgeAppearance;
+
+	/**
+	 * @internal
+	 */
+	public connectedCallback() {
+		super.connectedCallback();
+		if (!this.appearance) {
+			this.appearance = 'primary';
+		}
+	}
+}
