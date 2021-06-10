@@ -37,6 +37,7 @@ export const BreadcrumbItemStyles = css`
 		align-items: center;
 		box-sizing: border-box;
 		color: ${breadcrumbItemForeground};
+		border: calc(${borderWidth} * 1px) solid transparent;
 		cursor: pointer;
 		display: flex;
 		fill: inherit;
