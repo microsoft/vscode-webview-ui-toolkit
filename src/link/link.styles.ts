@@ -50,8 +50,7 @@ export const LinkStyles = css`
 		border: 0;
 	}
 	:host(:not([disabled])) .control:focus {
-		outline: calc(${borderWidth} * 1px) solid
-			${textLinkForegroundColor};
+		outline: calc(${borderWidth} * 1px) solid ${textLinkForegroundColor};
 		outline-offset: calc(${borderWidth} * 1px);
 	}
 	:host([disabled]) {
