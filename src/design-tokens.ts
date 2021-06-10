@@ -14,9 +14,6 @@ export const disabledOpacity = create<number>('disabled-opacity').withDefault(
 export const focusBorder = create<string>(
 	'focus-border-color'
 ).withDefault('#007fd4');
-export const focusBorderWidth = create<number>(
-	'focus-border-width'
-).withDefault(1);
 export const fontFamily = create<string>('font-family').withDefault(
 	'Arial, Helvetica, sans-serif'
 );
