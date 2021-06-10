@@ -11,7 +11,7 @@ export const cornerRadius = create<number>('corner-radius').withDefault(0);
 export const disabledOpacity = create<number>('disabled-opacity').withDefault(
 	0.4
 );
-export const focusBorderColor = create<string>(
+export const focusBorder = create<string>(
 	'focus-border-color'
 ).withDefault('#007fd4');
 export const focusBorderWidth = create<number>(
