@@ -13,7 +13,6 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorder,
-	focusBorderWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -78,7 +77,7 @@ export const CheckboxStyles = css`
 		border-color: ${focusBorder});
 	}
 	:host(:${focusVisible}) .control {
-		border: calc(${focusBorderWidth} * 1px) solid
+		border: calc(${borderWidth} * 1px) solid
 			${focusBorder});
 	}
 	:host(.disabled) .label,

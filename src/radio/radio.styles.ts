@@ -12,7 +12,6 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorder,
-	focusBorderWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -77,7 +76,7 @@ export const RadioStyles = css`
 		border-color: ${focusBorder};
 	}
 	:host(:${focusVisible}) .control {
-		border: calc(${focusBorderWidth} * 1px) solid ${focusBorder};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host([aria-checked='true']) .control {
 		background: ${checkboxBackgroundColor};
@@ -92,7 +91,7 @@ export const RadioStyles = css`
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host([aria-checked="true"]:${focusVisible}:not([disabled])) .control {
-		border: calc(${focusBorderWidth} * 1px) solid ${focusBorder};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,

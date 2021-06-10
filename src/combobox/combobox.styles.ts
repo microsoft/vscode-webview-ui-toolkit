@@ -13,7 +13,6 @@ import {
 	dropdownBorderColor,
 	dropdownForegroundColor,
 	focusBorder,
-	focusBorderWidth,
 	inputHeight,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -94,7 +93,7 @@ export const ComboboxStyles = css`
 		border-color: ${focusBorder};
 	}
 	:host(:${focusVisible}) ::slotted([aria-selected="true"][role="option"]:not([disabled])) {
-		box-shadow: 0 0 0 calc(${focusBorderWidth} * 1px) inset
+		box-shadow: 0 0 0 calc(${borderWidth} * 1px) inset
 			${focusBorder};
 		border-color: ${focusBorder};
 		background: #094771;

@@ -5,12 +5,12 @@ import {
 	focusVisible,
 } from '@microsoft/fast-foundation';
 import {
+	borderWidth,
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	dropdownForegroundColor,
 	focusBorder,
-	focusBorderWidth,
 	optionBackgroundFocusColor,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -20,7 +20,7 @@ export const OptionStyles = css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);
 		border-radius: ${cornerRadius};
-		border: calc(${focusBorderWidth} * 1px) solid transparent;
+		border: calc(${borderWidth} * 1px) solid transparent;
 		box-sizing: border-box;
 		color: ${dropdownForegroundColor};
 		cursor: pointer;
