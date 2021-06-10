@@ -9,7 +9,7 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorderColor,
+	focusBorder,
 	panelTabActiveBorderColor,
 	panelTabActiveForegroundColor,
 	panelTabForegroundColor,
@@ -68,7 +68,7 @@ export const PanelTabStyles = css`
 	:host(:${focusVisible}) {
 		outline: none;
 		border: solid calc(${borderWidth} * 1px) ${panelTabActiveBorderColor};
-		box-shadow: 0 0 0 calc((${focusBorderColor} - ${borderWidth}) * 1px)
+		box-shadow: 0 0 0 calc((${focusBorder} - ${borderWidth}) * 1px)
 			transparent;
 	}
 	:host(:focus) {

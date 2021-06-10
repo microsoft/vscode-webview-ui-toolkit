@@ -12,7 +12,7 @@ import {
 	checkboxForegroundColor,
 	designUnit,
 	disabledOpacity,
-	focusBorderColor,
+	focusBorder,
 	focusBorderWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -75,11 +75,11 @@ export const CheckboxStyles = css`
 	}
 	:host(:enabled) .control:active {
 		background: ${checkboxBackgroundColor};
-		border-color: ${focusBorderColor});
+		border-color: ${focusBorder});
 	}
 	:host(:${focusVisible}) .control {
 		border: calc(${focusBorderWidth} * 1px) solid
-			${focusBorderColor});
+			${focusBorder});
 	}
 	:host(.disabled) .label,
 	:host(.readonly) .label,

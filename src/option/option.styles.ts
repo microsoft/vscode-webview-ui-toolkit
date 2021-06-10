@@ -9,7 +9,7 @@ import {
 	designUnit,
 	disabledOpacity,
 	dropdownForegroundColor,
-	focusBorderColor,
+	focusBorder,
 	focusBorderWidth,
 	optionBackgroundFocusColor,
 	typeRampBaseFontSize,
@@ -35,7 +35,7 @@ export const OptionStyles = css`
 		white-space: nowrap;
 	}
 	:host(:${focusVisible}) {
-		border-color: ${focusBorderColor};
+		border-color: ${focusBorder};
 		background: ${optionBackgroundFocusColor};
 		color: ${dropdownForegroundColor};
 	}

@@ -16,7 +16,7 @@ import {
 	dropdownBackgroundColor,
 	dropdownBorderColor,
 	dropdownForegroundColor,
-	focusBorderColor,
+	focusBorder,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
@@ -37,7 +37,7 @@ import {
  */
 export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Base Colors ----
-	'--vscode-focusBorder': focusBorderColor,
+	'--vscode-focusBorder': focusBorder,
 	// ---- Contrast Colors ----
 	// ---- Breadcrumbs ----
 	'--vscode-breadcrumb-foreground': breadcrumbItemForeground,

@@ -6,7 +6,7 @@ import {
 	breadcrumbItemForegroundHover,
 	breadcrumbSeparatorMarginHorizontal,
 	designUnit,
-	focusBorderColor,
+	focusBorder,
 	fontFamily,
 	iconHeight,
 	iconWidth,
@@ -28,7 +28,7 @@ export const BreadcrumbItemStyles = css`
 	}
 	:host(:${focusVisible}) .control {
 		color: ${breadcrumbItemForegroundHover};
-		border: calc(${borderWidth} * 1px) solid ${focusBorderColor};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host(:hover) .control {
 		color: ${breadcrumbItemForegroundHover};
