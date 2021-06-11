@@ -4,8 +4,12 @@ export default {
 	title: 'Library/Badge',
 	argTypes: {
 		label: {control: 'text'},
-		fill: {control: 'color'},
-		textColor: {control: 'color'},
+		appearance: {
+			control: {
+				type: 'select',
+				options: ['Primary', 'Secondary'],
+			},
+		},
 		isCircular: {control: 'boolean'},
 	},
 	parameters: {
@@ -21,42 +25,41 @@ const Template = ({...args}: BadgeArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
-	label: 'Badge Text',
+	label: 'BADGE TEXT',
+	appearance: 'Primary',
 	isCircular: false,
 };
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-badge>Badge Text</vscode-badge>`,
+			code: `<vscode-badge appearance="primary">BADGE TEXT</vscode-badge>`,
 		},
 	},
 };
 
-export const WithFill: any = Template.bind({});
-WithFill.args = {
+export const Secondary: any = Template.bind({});
+Secondary.args = {
 	...Default.args,
-	fill: '#007aac',
-	textColor: '#ffffff',
+	appearance: 'Secondary',
 };
-WithFill.parameters = {
+Secondary.parameters = {
 	docs: {
 		source: {
-			code: `vscode-badge {\n\t--badge-fill-foo: #007aac;\n\t--badge-color-bar: #ffffff;\n}\n<vscode-badge fill="foo" color="bar">Badge Text</vscode-badge>`,
+			code: `<vscode-badge appearance="secondary">BADGE TEXT</vscode-badge>`,
 		},
 	},
 };
 
 export const WithCircular: any = Template.bind({});
 WithCircular.args = {
+	...Default.args,
 	label: '1',
-	fill: '#007aac',
-	textColor: '#ffffff',
 	isCircular: true,
 };
 WithCircular.parameters = {
 	docs: {
 		source: {
-			code: `vscode-badge {\n\t--badge-fill-foo: #007aac;\n\t--badge-color-bar: #ffffff;\n}\n<vscode-badge fill="foo" color="bar" circular>1</vscode-badge>`,
+			code: `<vscode-badge circular>1</vscode-badge>`,
 		},
 	},
 };

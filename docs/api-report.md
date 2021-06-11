@@ -30,10 +30,16 @@ import { TextArea } from '@microsoft/fast-foundation';
 import { TextField } from '@microsoft/fast-foundation';
 
 // @public
+export type BadgeAppearance = 'primary' | 'secondary';
+
+// @public
 export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
 
 // @public
 export class VSCodeBadge extends Badge {
+    appearance: BadgeAppearance;
+    // @internal (undocumented)
+    connectedCallback(): void;
 }
 
 // @public
