@@ -6,14 +6,27 @@ import {
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
-	buttonPrimaryBackgroundColor,
-	buttonPrimaryForegroundColor,
-	buttonPrimaryHoverBackgroundColor,
-	buttonSecondaryBackgroundColor,
-	buttonSecondaryForegroundColor,
-	buttonSecondaryHoverBackgroundColor,
+	buttonBorder,
+	buttonIconBackground,
+	buttonIconCornerRadius,
+	buttonIconFocusBorderOffset,
+	buttonIconForeground,
+	buttonIconHoverBackground,
+	buttonIconPadding,
+	buttonPaddingHorizontal,
+	buttonPaddingVertical,
+	buttonPrimaryBackground,
+	buttonPrimaryForeground,
+	buttonPrimaryHoverBackground,
+	buttonSecondaryBackground,
+	buttonSecondaryForeground,
+	buttonSecondaryHoverBackground,
 	cornerRadius,
 	disabledOpacity,
+	focusBorder,
+	fontFamily,
+	iconHeight,
+	iconWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -24,13 +37,13 @@ import {
 const BaseButtonStyles = css`
 	${display('inline-flex')} :host {
 		outline: none;
-		font-family: var(--body-font);
+		font-family: ${fontFamily};
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		background: ${buttonPrimaryBackgroundColor};
-		color: ${buttonPrimaryForegroundColor};
+		color: ${buttonPrimaryForeground};
+		background: ${buttonPrimaryBackground};
 		border-radius: calc(${cornerRadius} * 1px);
-		fill: currentcolor;
+		fill: currentColor;
 		cursor: pointer;
 	}
 	.control {
@@ -41,11 +54,11 @@ const BaseButtonStyles = css`
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
-		padding: 6px 11px;
+		padding: ${buttonPaddingVertical} ${buttonPaddingHorizontal};
 		white-space: nowrap;
 		outline: none;
 		text-decoration: none;
-		border: calc(${borderWidth} * 1px) solid transparent;
+		border: calc(${borderWidth} * 1px) solid ${buttonBorder};
 		color: inherit;
 		border-radius: inherit;
 		fill: inherit;
@@ -53,22 +66,21 @@ const BaseButtonStyles = css`
 		font-family: inherit;
 	}
 	:host(:hover) {
-		background: ${buttonPrimaryHoverBackgroundColor};
+		background: ${buttonPrimaryHoverBackground};
 	}
 	:host(:active) {
-		background: ${buttonPrimaryBackgroundColor};
+		background: ${buttonPrimaryBackground};
 	}
 	.control: ${focusVisible} {
-		outline: calc(${borderWidth} * 1px) solid
-			${buttonPrimaryHoverBackgroundColor};
-		outline-offset: calc(${borderWidth} * 1px);
+		outline: calc(${borderWidth} * 1px) solid ${focusBorder};
+		outline-offset: calc(${borderWidth} * 2px);
 	}
 	.control::-moz-focus-inner {
 		border: 0;
 	}
 	:host([disabled]) {
 		opacity: ${disabledOpacity};
-		background: ${buttonPrimaryBackgroundColor};
+		background: ${buttonPrimaryBackground};
 		cursor: ${disabledCursor};
 	}
 	.content {
@@ -78,14 +90,10 @@ const BaseButtonStyles = css`
 	.end {
 		display: flex;
 	}
-	.control.icon-only {
-		padding: 0;
-		line-height: 0;
-	}
 	::slotted(svg),
 	::slotted(span) {
-		width: 16px;
-		height: 16px;
+		width: ${iconWidth};
+		height: ${iconHeight};
 	}
 	.start {
 		margin-inline-end: 8px;
@@ -100,25 +108,21 @@ const BaseButtonStyles = css`
  */
 const PrimaryButtonStyles = css`
 	:host([appearance='primary']) {
-		background: ${buttonPrimaryBackgroundColor};
-		color: ${buttonPrimaryForegroundColor};
+		background: ${buttonPrimaryBackground};
+		color: ${buttonPrimaryForeground};
 	}
 	:host([appearance='primary']:hover) {
-		background: ${buttonPrimaryHoverBackgroundColor};
-	}
-	:host([appearance='primary']) .control {
-		padding: 6px 11px;
+		background: ${buttonPrimaryHoverBackground};
 	}
 	:host([appearance='primary']:active) .control:active {
-		background: ${buttonPrimaryBackgroundColor};
+		background: ${buttonPrimaryBackground};
 	}
 	:host([appearance='primary']) .control:${focusVisible} {
-		outline: calc(${borderWidth} * 1px) solid
-			${buttonPrimaryHoverBackgroundColor};
-		outline-offset: calc(${borderWidth} * 1px);
+		outline: calc(${borderWidth} * 1px) solid ${focusBorder};
+		outline-offset: calc(${borderWidth} * 2px);
 	}
 	:host([appearance='primary'][disabled]) {
-		background: ${buttonPrimaryBackgroundColor};
+		background: ${buttonPrimaryBackground};
 	}
 `;
 
@@ -127,25 +131,21 @@ const PrimaryButtonStyles = css`
  */
 const SecondaryButtonStyles = css`
 	:host([appearance='secondary']) {
-		background: ${buttonSecondaryBackgroundColor};
-		color: ${buttonSecondaryForegroundColor};
+		background: ${buttonSecondaryBackground};
+		color: ${buttonSecondaryForeground};
 	}
 	:host([appearance='secondary']:hover) {
-		background: ${buttonSecondaryHoverBackgroundColor};
-	}
-	:host([appearance='secondary']) .control {
-		padding: 6px 11px;
+		background: ${buttonSecondaryHoverBackground};
 	}
 	:host([appearance='secondary']:active) .control:active {
-		background: ${buttonSecondaryBackgroundColor};
+		background: ${buttonSecondaryBackground};
 	}
 	:host([appearance='secondary']) .control:${focusVisible} {
-		outline: calc(${borderWidth} * 1px) solid
-			${buttonPrimaryHoverBackgroundColor};
-		outline-offset: calc(${borderWidth} * 1px);
+		outline: calc(${borderWidth} * 1px) solid ${focusBorder};
+		outline-offset: calc(${borderWidth} * 2px);
 	}
 	:host([appearance='secondary'][disabled]) {
-		background: ${buttonSecondaryBackgroundColor};
+		background: ${buttonSecondaryBackground};
 	}
 `;
 
@@ -154,26 +154,25 @@ const SecondaryButtonStyles = css`
  */
 const IconButtonStyles = css`
 	:host([appearance='icon']) {
-		background: transparent;
-		border-radius: 5px;
-		color: ${buttonSecondaryForegroundColor};
+		background: ${buttonIconBackground};
+		border-radius: ${buttonIconCornerRadius};
+		color: ${buttonIconForeground};
 	}
 	:host([appearance='icon']:hover) {
-		background: rgba(90, 93, 94, 0.31);
+		background: ${buttonIconHoverBackground};
 	}
 	:host([appearance='icon']) .control {
-		padding: 3px;
+		padding: ${buttonIconPadding};
 	}
 	:host([appearance='icon']:active) .control:active {
-		background: rgba(90, 93, 94, 0.31);
+		background: ${buttonIconHoverBackground};
 	}
 	:host([appearance='icon']) .control:${focusVisible} {
-		outline: calc(${borderWidth} * 1px) solid
-			${buttonPrimaryHoverBackgroundColor};
-		outline-offset: calc(${borderWidth} * 1px);
+		outline: calc(${borderWidth} * 1px) solid ${focusBorder};
+		outline-offset: ${buttonIconFocusBorderOffset};
 	}
 	:host([appearance='icon'][disabled]) {
-		background: transparent;
+		background: ${buttonIconBackground};
 	}
 `;
 
