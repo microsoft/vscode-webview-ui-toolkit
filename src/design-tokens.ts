@@ -7,6 +7,12 @@ const {create} = DesignToken;
  */
 export const designUnit = create<number>('design-unit').withDefault(4);
 export const borderWidth = create<number>('border-width').withDefault(1);
+export const contrastActiveBorder = create<string>(
+	'contrast-active-border'
+).withDefault('#f38518');
+export const contrastBorder = create<string>('contrast-border').withDefault(
+	'#6fc3df'
+);
 export const cornerRadius = create<number>('corner-radius').withDefault(0);
 export const disabledOpacity = create<number>('disabled-opacity').withDefault(
 	0.4
@@ -19,12 +25,6 @@ export const fontFamily = create<string>('font-family').withDefault(
 );
 export const iconWidth = create<string>('icon-width').withDefault('16px');
 export const iconHeight = create<string>('icon-height').withDefault('16px');
-export const focusBorderColor = create<string>(
-	'focus-border-color'
-).withDefault('#007fd4');
-export const focusBorderWidth = create<number>(
-	'focus-border-width'
-).withDefault(1);
 
 /**
  * Type-ramp font-size and line-height design tokens.
@@ -89,24 +89,53 @@ export const badgeCornerRadius = create<string>(
 /**
  * Button design tokens.
  */
-export const buttonPrimaryBackgroundColor = create<string>(
-	'button-primary-background-color'
+export const buttonPrimaryForeground = create<string>(
+	'button-primary-foreground'
+).withDefault('#ffffff');
+export const buttonPrimaryBackground = create<string>(
+	'button-primary-background'
 ).withDefault('#0e639c');
-export const buttonPrimaryForegroundColor = create<string>(
-	'button-primary-foreground-color'
-).withDefault('#ffffff');
-export const buttonPrimaryHoverBackgroundColor = create<string>(
-	'button-primary-hover-background-color'
+export const buttonPrimaryHoverBackground = create<string>(
+	'button-primary-hover-background'
 ).withDefault('#1177bb');
-export const buttonSecondaryBackgroundColor = create<string>(
-	'button-secondary-background-color'
-).withDefault('#3a3d41');
-export const buttonSecondaryForegroundColor = create<string>(
-	'button-secondary-foreground-color'
+export const buttonSecondaryForeground = create<string>(
+	'button-secondary-foreground'
 ).withDefault('#ffffff');
-export const buttonSecondaryHoverBackgroundColor = create<string>(
-	'button-secondary-hover-background-color'
+export const buttonSecondaryBackground = create<string>(
+	'button-secondary-background'
+).withDefault('#3a3d41');
+export const buttonSecondaryHoverBackground = create<string>(
+	'button-secondary-hover-background'
 ).withDefault('#45494e');
+export const buttonPaddingHorizontal = create<string>(
+	'button-padding-horizontal'
+).withDefault('11px');
+export const buttonPaddingVertical = create<string>(
+	'button-padding-vertical'
+).withDefault('6px');
+export const buttonIconForeground = create<string>(
+	'button-icon-foreground'
+).withDefault('#ffffff');
+export const buttonIconBackground = create<string>(
+	'button-icon-background'
+).withDefault('transparent');
+export const buttonIconHoverBackground = create<string>(
+	'button-icon-hover-background'
+).withDefault('rgba(90, 93, 94, 0.31)');
+export const buttonIconPadding = create<string>(
+	'button-icon-padding'
+).withDefault('3px');
+export const buttonIconCornerRadius = create<string>(
+	'button-icon-corner-radius'
+).withDefault('5px');
+export const buttonIconFocusBorderOffset = create<number>(
+	'button-icon-outline-offset'
+).withDefault(0);
+// Note: Button Border is used only for high contrast themes and should be
+// left as transparent otherwise.
+export const buttonBorder = create<string>('button-border').withDefault(
+	'transparent'
+);
 
 /**
  * Text link design tokens.
