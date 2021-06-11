@@ -19,6 +19,12 @@ export const fontFamily = create<string>('font-family').withDefault(
 );
 export const iconWidth = create<string>('icon-width').withDefault('16px');
 export const iconHeight = create<string>('icon-height').withDefault('16px');
+export const focusBorderColor = create<string>(
+	'focus-border-color'
+).withDefault('#007fd4');
+export const focusBorderWidth = create<number>(
+	'focus-border-width'
+).withDefault(1);
 
 /**
  * Type-ramp font-size and line-height design tokens.
@@ -60,6 +66,25 @@ export const breadcrumbItemForegroundHover = create<string>(
 export const breadcrumbSeparatorMarginHorizontal = create<string>(
 	'breadcrumb-separator-margin-horizontal'
 ).withDefault('6px');
+
+/**
+ * Badge design tokens.
+ */
+export const badgePrimaryForeground = create<string>(
+	'badge-primary-foreground'
+).withDefault('#ffffff');
+export const badgePrimaryBackground = create<string>(
+	'badge-primary-background'
+).withDefault('#007acc');
+export const badgeSecondaryForeground = create<string>(
+	'badge-secondary-foreground'
+).withDefault('#ffffff');
+export const badgeSecondaryBackground = create<string>(
+	'badge-secondary-background'
+).withDefault('#4d4d4d');
+export const badgeCornerRadius = create<string>(
+	'badge-corner-radius'
+).withDefault('2px');
 
 /**
  * Button design tokens.
@@ -125,16 +150,6 @@ export const dropdownBorderColor = create<string>(
 export const optionBackgroundFocusColor = create<string>(
 	'option-background-focus-color'
 ).withDefault('#062f4a');
-
-/**
- * Badge design tokens.
- */
-export const badgeBackgroundColor = create<string>(
-	'badge-background-color'
-).withDefault('#4d4d4d');
-export const badgeForegroundColor = create<string>(
-	'badge-foreground-color'
-).withDefault('#ffffff');
 
 /**
  * Text Field & Area design tokens.

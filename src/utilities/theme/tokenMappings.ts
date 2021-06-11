@@ -1,7 +1,9 @@
 import {CSSDesignToken} from '@microsoft/fast-foundation';
 import {
-	badgeBackgroundColor,
-	badgeForegroundColor,
+	badgePrimaryBackground,
+	badgePrimaryForeground,
+	badgeSecondaryBackground,
+	badgeSecondaryForeground,
 	breadcrumbItemForeground,
 	breadcrumbItemForegroundHover,
 	buttonPrimaryBackgroundColor,
@@ -42,6 +44,11 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Breadcrumbs ----
 	'--vscode-breadcrumb-foreground': breadcrumbItemForeground,
 	'--vscode-breadcrumb-focusForeground': breadcrumbItemForegroundHover,
+	// ---- Badges ----
+	'--vscode-activityBarBadge-background': badgePrimaryBackground,
+	'--vscode-activityBarBadge-foreground': badgePrimaryForeground,
+	'--vscode-badge-foreground': badgeSecondaryForeground,
+	'--vscode-badge-background': badgeSecondaryBackground,
 	// ---- Buttons ----
 	'--vscode-button-background': buttonPrimaryBackgroundColor,
 	'--vscode-button-foreground': buttonPrimaryForegroundColor,
@@ -61,9 +68,6 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-dropdown-border': dropdownBorderColor,
 	// ---- Dropdown Options ----
 	'--vscode-list-focusBackground': optionBackgroundFocusColor,
-	// ---- Badges ----
-	'--vscode-badge-background': badgeBackgroundColor,
-	'--vscode-badge-foreground': badgeForegroundColor,
 	// ---- Text Fields & Areas ----
 	'--vscode-input-background': inputBackgroundColor,
 	'--vscode-input-foreground': inputForegroundColor,

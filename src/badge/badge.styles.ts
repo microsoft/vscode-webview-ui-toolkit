@@ -1,26 +1,29 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 import {
-	badgeBackgroundColor,
-	badgeForegroundColor,
+	badgeCornerRadius,
+	badgePrimaryBackground,
+	badgePrimaryForeground,
+	badgeSecondaryBackground,
+	badgeSecondaryForeground,
 	designUnit,
+	fontFamily,
 	typeRampMinus1FontSize,
 	typeRampMinus1LineHeight,
 } from '../design-tokens';
 
-export const BadgeStyles = css`
+export const BaseBadgeStyles = css`
 	${display('inline-block')} :host {
-		font-family: var(--body-font);
-		box-sizing: border-box;
+		font-family: ${fontFamily};
 		font-size: ${typeRampMinus1FontSize};
 		line-height: ${typeRampMinus1LineHeight};
+		box-sizing: border-box;
 	}
 	.control {
-		border-radius: 2px;
+		border-radius: ${badgeCornerRadius};
 		padding: calc(${designUnit} * 0.5px) calc(${designUnit} * 1px);
-		color: ${badgeForegroundColor};
-		background-color: ${badgeBackgroundColor};
-		font-weight: 400;
+		color: ${badgePrimaryForeground};
+		background-color: ${badgePrimaryBackground};
 	}
 	:host([circular]) .control {
 		border-radius: 100px;
@@ -32,4 +35,24 @@ export const BadgeStyles = css`
 		justify-content: center;
 		box-sizing: border-box;
 	}
+`;
+
+export const PrimaryBadgeStyles = css`
+	:host([appearance='primary']) .control {
+		color: ${badgePrimaryForeground};
+		background: ${badgePrimaryBackground};
+	}
+`;
+
+export const SecondaryBadgeStyles = css`
+	:host([appearance='secondary']) .control {
+		color: ${badgeSecondaryForeground};
+		background: ${badgeSecondaryBackground};
+	}
+`;
+
+export const BadgeStyles = css`
+	${BaseBadgeStyles}
+	${PrimaryBadgeStyles}
+	${SecondaryBadgeStyles}
 `;
