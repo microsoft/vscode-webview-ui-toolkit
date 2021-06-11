@@ -9,7 +9,6 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorderWidth,
 	inputHeight,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -36,7 +35,7 @@ export const MenuItemStyles = css`
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
 		border-radius: calc(${cornerRadius} * 1px);
-		border: calc(${focusBorderWidth} * 1px) solid transparent;
+		border: calc(${borderWidth} * 1px) solid transparent;
 	}
 	:host(:${focusVisible}) {
 		border-color: transparent;

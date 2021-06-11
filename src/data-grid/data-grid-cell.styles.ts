@@ -4,7 +4,6 @@ import {
 	borderWidth,
 	cornerRadius,
 	designUnit,
-	focusBorderWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -27,7 +26,7 @@ export const DataGridCellStyles = css`
 		font-weight: 600;
 	}
 	:host(:${focusVisible}) {
-		border: solid calc(${borderWidth} * 1px) ${focusBorderWidth};
+		border: solid calc(${borderWidth} * 1px) ${borderWidth};
 		color: #cccccc;
 	}
 `;

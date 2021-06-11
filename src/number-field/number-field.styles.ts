@@ -9,7 +9,7 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorderColor,
+	focusBorder,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
@@ -114,10 +114,10 @@ export const NumberFieldStyles = css`
 	}
 	:host(:active:not([disabled])) .root {
 		background: ${inputBackgroundColor};
-		border-color: ${focusBorderColor};
+		border-color: ${focusBorder};
 	}
 	:host(:focus-within:not([disabled])) .root {
-		border-color: ${focusBorderColor};
+		border-color: ${focusBorder};
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,

@@ -11,15 +11,20 @@ export const cornerRadius = create<number>('corner-radius').withDefault(0);
 export const disabledOpacity = create<number>('disabled-opacity').withDefault(
 	0.4
 );
+export const focusBorder = create<string>('focus-border').withDefault(
+	'#007fd4'
+);
+export const fontFamily = create<string>('font-family').withDefault(
+	'Arial, Helvetica, sans-serif'
+);
+export const iconWidth = create<string>('icon-width').withDefault('16px');
+export const iconHeight = create<string>('icon-height').withDefault('16px');
 export const focusBorderColor = create<string>(
 	'focus-border-color'
 ).withDefault('#007fd4');
 export const focusBorderWidth = create<number>(
 	'focus-border-width'
 ).withDefault(1);
-export const fontFamily = create<string>('font-family').withDefault(
-	'Arial, Helvetica, sans-serif'
-);
 
 /**
  * Type-ramp font-size and line-height design tokens.
@@ -48,6 +53,19 @@ export const typeRampPlus1FontSize = create<string>(
 export const typeRampPlus1LineHeight = create<string>(
 	'type-ramp-plus1-line-height'
 ).withDefault('24px');
+
+/**
+ * Breadcrumb Item design tokens.
+ */
+export const breadcrumbItemForeground = create<string>(
+	'breadcrumb-item-foreground'
+).withDefault('#cccccccc');
+export const breadcrumbItemForegroundHover = create<string>(
+	'breadcrumb-item-foreground-hover'
+).withDefault('#e0e0e0');
+export const breadcrumbSeparatorMarginHorizontal = create<string>(
+	'breadcrumb-separator-margin-horizontal'
+).withDefault('6px');
 
 /**
  * Badge design tokens.
@@ -112,19 +130,6 @@ export const checkboxBorderColor = create<string>(
 export const checkboxCornerRadius = create<number>(
 	'checkbox-corner-radius'
 ).withDefault(3);
-
-/**
- * Breadcrumb Item design tokens.
- */
-export const breadcrumbItemBackgroundColor = create<string>(
-	'breadcrumb-item-background-color'
-).withDefault('#1e1e1e');
-export const breadcrumbItemForegroundColor = create<string>(
-	'breadcrumb-item-foreground-color'
-).withDefault('#cccccccc');
-export const breadcrumbItemForegroundHoverColor = create<string>(
-	'breadcrumb-item-foreground-hover-color'
-).withDefault('#e0e0e0');
 
 /**
  * Dropdown design tokens.

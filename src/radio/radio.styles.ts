@@ -11,8 +11,7 @@ import {
 	checkboxForegroundColor,
 	designUnit,
 	disabledOpacity,
-	focusBorderColor,
-	focusBorderWidth,
+	focusBorder,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -74,10 +73,10 @@ export const RadioStyles = css`
 	}
 	:host(:not([disabled])) .control:active {
 		background: ${checkboxBackgroundColor};
-		border-color: ${focusBorderColor};
+		border-color: ${focusBorder};
 	}
 	:host(:${focusVisible}) .control {
-		border: calc(${focusBorderWidth} * 1px) solid ${focusBorderColor};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host([aria-checked='true']) .control {
 		background: ${checkboxBackgroundColor};
@@ -89,10 +88,10 @@ export const RadioStyles = css`
 	}
 	:host([aria-checked='true']:not([disabled])) .control:active {
 		background: ${checkboxBackgroundColor};
-		border: calc(${borderWidth} * 1px) solid ${focusBorderColor};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host([aria-checked="true"]:${focusVisible}:not([disabled])) .control {
-		border: calc(${focusBorderWidth} * 1px) solid ${focusBorderColor};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,

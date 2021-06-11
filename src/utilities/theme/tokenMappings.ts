@@ -4,9 +4,8 @@ import {
 	badgePrimaryForeground,
 	badgeSecondaryBackground,
 	badgeSecondaryForeground,
-	breadcrumbItemBackgroundColor,
-	breadcrumbItemForegroundColor,
-	breadcrumbItemForegroundHoverColor,
+	breadcrumbItemForeground,
+	breadcrumbItemForegroundHover,
 	buttonPrimaryBackgroundColor,
 	buttonPrimaryForegroundColor,
 	buttonPrimaryHoverBackgroundColor,
@@ -19,7 +18,7 @@ import {
 	dropdownBackgroundColor,
 	dropdownBorderColor,
 	dropdownForegroundColor,
-	focusBorderColor,
+	focusBorder,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
@@ -40,8 +39,11 @@ import {
  */
 export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Base Colors ----
-	'--vscode-focusBorder': focusBorderColor,
+	'--vscode-focusBorder': focusBorder,
 	// ---- Contrast Colors ----
+	// ---- Breadcrumbs ----
+	'--vscode-breadcrumb-foreground': breadcrumbItemForeground,
+	'--vscode-breadcrumb-focusForeground': breadcrumbItemForegroundHover,
 	// ---- Badges ----
 	'--vscode-activityBarBadge-background': badgePrimaryBackground,
 	'--vscode-activityBarBadge-foreground': badgePrimaryForeground,
@@ -60,10 +62,6 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-checkbox-background': checkboxBackgroundColor,
 	'--vscode-checkbox-foreground': checkboxForegroundColor,
 	'--vscode-checkbox-border': checkboxBorderColor,
-	// ---- Breadcrumbs ----
-	'--vscode-breadcrumb-background': breadcrumbItemBackgroundColor,
-	'--vscode-breadcrumb-foreground': breadcrumbItemForegroundColor,
-	'--vscode-breadcrumb-focusForeground': breadcrumbItemForegroundHoverColor,
 	// ---- Dropdowns ----
 	'--vscode-dropdown-background': dropdownBackgroundColor,
 	'--vscode-dropdown-foreground': dropdownForegroundColor,

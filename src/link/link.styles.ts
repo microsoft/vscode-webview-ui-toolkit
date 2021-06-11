@@ -4,7 +4,6 @@ import {
 	borderWidth,
 	cornerRadius,
 	disabledOpacity,
-	focusBorderWidth,
 	textLinkForegroundColor,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -51,9 +50,8 @@ export const LinkStyles = css`
 		border: 0;
 	}
 	:host(:not([disabled])) .control:focus {
-		outline: calc(${focusBorderWidth} * 1px) solid
-			${textLinkForegroundColor};
-		outline-offset: calc(${focusBorderWidth} * 1px);
+		outline: calc(${borderWidth} * 1px) solid ${textLinkForegroundColor};
+		outline-offset: calc(${borderWidth} * 1px);
 	}
 	:host([disabled]) {
 		opacity: ${disabledOpacity};

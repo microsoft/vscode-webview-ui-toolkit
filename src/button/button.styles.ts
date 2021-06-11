@@ -14,7 +14,6 @@ import {
 	buttonSecondaryHoverBackgroundColor,
 	cornerRadius,
 	disabledOpacity,
-	focusBorderWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -60,9 +59,9 @@ const BaseButtonStyles = css`
 		background: ${buttonPrimaryBackgroundColor};
 	}
 	.control: ${focusVisible} {
-		outline: calc(${focusBorderWidth} * 1px) solid
+		outline: calc(${borderWidth} * 1px) solid
 			${buttonPrimaryHoverBackgroundColor};
-		outline-offset: calc(${focusBorderWidth} * 1px);
+		outline-offset: calc(${borderWidth} * 1px);
 	}
 	.control::-moz-focus-inner {
 		border: 0;
@@ -114,9 +113,9 @@ const PrimaryButtonStyles = css`
 		background: ${buttonPrimaryBackgroundColor};
 	}
 	:host([appearance='primary']) .control:${focusVisible} {
-		outline: calc(${focusBorderWidth} * 1px) solid
+		outline: calc(${borderWidth} * 1px) solid
 			${buttonPrimaryHoverBackgroundColor};
-		outline-offset: calc(${focusBorderWidth} * 1px);
+		outline-offset: calc(${borderWidth} * 1px);
 	}
 	:host([appearance='primary'][disabled]) {
 		background: ${buttonPrimaryBackgroundColor};
@@ -141,9 +140,9 @@ const SecondaryButtonStyles = css`
 		background: ${buttonSecondaryBackgroundColor};
 	}
 	:host([appearance='secondary']) .control:${focusVisible} {
-		outline: calc(${focusBorderWidth} * 1px) solid
+		outline: calc(${borderWidth} * 1px) solid
 			${buttonPrimaryHoverBackgroundColor};
-		outline-offset: calc(${focusBorderWidth} * 1px);
+		outline-offset: calc(${borderWidth} * 1px);
 	}
 	:host([appearance='secondary'][disabled]) {
 		background: ${buttonSecondaryBackgroundColor};
@@ -169,9 +168,9 @@ const IconButtonStyles = css`
 		background: rgba(90, 93, 94, 0.31);
 	}
 	:host([appearance='icon']) .control:${focusVisible} {
-		outline: calc(${focusBorderWidth} * 1px) solid
+		outline: calc(${borderWidth} * 1px) solid
 			${buttonPrimaryHoverBackgroundColor};
-		outline-offset: calc(${focusBorderWidth} * 1px);
+		outline-offset: calc(${borderWidth} * 1px);
 	}
 	:host([appearance='icon'][disabled]) {
 		background: transparent;
