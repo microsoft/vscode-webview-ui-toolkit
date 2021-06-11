@@ -6,15 +6,18 @@ import {
 	badgeSecondaryForeground,
 	breadcrumbItemForeground,
 	breadcrumbItemForegroundHover,
-	buttonPrimaryBackgroundColor,
-	buttonPrimaryForegroundColor,
-	buttonPrimaryHoverBackgroundColor,
-	buttonSecondaryBackgroundColor,
-	buttonSecondaryForegroundColor,
-	buttonSecondaryHoverBackgroundColor,
+	buttonBorder,
+	buttonPrimaryBackground,
+	buttonPrimaryForeground,
+	buttonPrimaryHoverBackground,
+	buttonSecondaryBackground,
+	buttonSecondaryForeground,
+	buttonSecondaryHoverBackground,
 	checkboxBackgroundColor,
 	checkboxBorderColor,
 	checkboxForegroundColor,
+	contrastActiveBorder,
+	contrastBorder,
 	dropdownBackgroundColor,
 	dropdownBorderColor,
 	dropdownForegroundColor,
@@ -40,7 +43,9 @@ import {
 export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Base Colors ----
 	'--vscode-focusBorder': focusBorder,
-	// ---- Contrast Colors ----
+	// ---- Contrast Styles ----
+	'--vscode-contrastActiveBorder': contrastActiveBorder,
+	'--vscode-contrastBorder': contrastBorder,
 	// ---- Breadcrumbs ----
 	'--vscode-breadcrumb-foreground': breadcrumbItemForeground,
 	'--vscode-breadcrumb-focusForeground': breadcrumbItemForegroundHover,
@@ -50,12 +55,13 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-badge-foreground': badgeSecondaryForeground,
 	'--vscode-badge-background': badgeSecondaryBackground,
 	// ---- Buttons ----
-	'--vscode-button-background': buttonPrimaryBackgroundColor,
-	'--vscode-button-foreground': buttonPrimaryForegroundColor,
-	'--vscode-button-hoverBackground': buttonPrimaryHoverBackgroundColor,
-	'--vscode-button-secondaryBackground': buttonSecondaryBackgroundColor,
-	'--vscode-button-secondaryForeground': buttonSecondaryForegroundColor,
-	'--vscode-button-secondaryHoverBackground': buttonSecondaryHoverBackgroundColor,
+	'--vscode-button-background': buttonPrimaryBackground,
+	'--vscode-button-foreground': buttonPrimaryForeground,
+	'--vscode-button-hoverBackground': buttonPrimaryHoverBackground,
+	'--vscode-button-secondaryBackground': buttonSecondaryBackground,
+	'--vscode-button-secondaryForeground': buttonSecondaryForeground,
+	'--vscode-button-secondaryHoverBackground': buttonSecondaryHoverBackground,
+	'--vscode-button-border': buttonBorder,
 	// ---- Links ----
 	'--vscode-textLink-foreground': textLinkForegroundColor,
 	// ---- Checkboxes ----
