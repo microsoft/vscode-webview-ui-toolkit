@@ -93,6 +93,8 @@ An icon can be added to the right of the Button text by adding an element with t
 
 An icon can also fill the default slot of the Button component (instead of text) to create an Icon Button.
 
+_Also note the usage of the `appearance="icon"` attribute._
+
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-button--with-icon-only)
 
 ```html
