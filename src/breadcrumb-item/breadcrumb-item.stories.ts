@@ -56,20 +56,6 @@ WithLink.parameters = {
 	},
 };
 
-export const WithCustomElement: any = Template.bind({});
-WithCustomElement.args = {
-	...Default.args,
-	href: '#',
-	customElement: true,
-};
-WithCustomElement.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-breadcrumb-item href="#">\n\t<vscode-button>Button Element</vscode-button>\n</vscode-breadcrumb-item>`,
-		},
-	},
-};
-
 export const WithCustomSeparator: any = Template.bind({});
 WithCustomSeparator.args = {
 	...Default.args,
