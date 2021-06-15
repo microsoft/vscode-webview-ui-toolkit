@@ -13,9 +13,9 @@ import {
 	buttonSecondaryBackground,
 	buttonSecondaryForeground,
 	buttonSecondaryHoverBackground,
-	checkboxBackgroundColor,
-	checkboxBorderColor,
-	checkboxForegroundColor,
+	checkboxBackground,
+	checkboxBorder,
+	checkboxForeground,
 	contrastActiveBorder,
 	contrastBorder,
 	dropdownBackgroundColor,
@@ -65,9 +65,9 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Links ----
 	'--vscode-textLink-foreground': textLinkForegroundColor,
 	// ---- Checkboxes ----
-	'--vscode-checkbox-background': checkboxBackgroundColor,
-	'--vscode-checkbox-foreground': checkboxForegroundColor,
-	'--vscode-checkbox-border': checkboxBorderColor,
+	'--vscode-checkbox-background': checkboxBackground,
+	'--vscode-checkbox-foreground': checkboxForeground,
+	'--vscode-checkbox-border': checkboxBorder,
 	// ---- Dropdowns ----
 	'--vscode-dropdown-background': dropdownBackgroundColor,
 	'--vscode-dropdown-foreground': dropdownForegroundColor,

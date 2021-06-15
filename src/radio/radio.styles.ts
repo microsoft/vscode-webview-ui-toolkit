@@ -6,9 +6,9 @@ import {
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
-	checkboxBackgroundColor,
-	checkboxBorderColor,
-	checkboxForegroundColor,
+	checkboxBackground,
+	checkboxBorder,
+	checkboxForeground,
 	designUnit,
 	disabledOpacity,
 	focusBorder,
@@ -35,14 +35,14 @@ export const RadioStyles = css`
 		height: calc(${designUnit} * 4px);
 		box-sizing: border-box;
 		border-radius: 999px;
-		border: calc(${borderWidth} * 1px) solid ${checkboxBorderColor};
-		background: ${checkboxBackgroundColor};
+		border: calc(${borderWidth} * 1px) solid ${checkboxBorder};
+		background: ${checkboxBackground};
 		outline: none;
 		cursor: pointer;
 	}
 	.label {
 		font-family: var(--body-font);
-		color: ${checkboxForegroundColor};
+		color: ${checkboxForeground};
 		padding-inline-start: calc(${designUnit} * 2px + 2px);
 		margin-inline-end: calc(${designUnit} * 2px + 2px);
 		cursor: pointer;
@@ -63,31 +63,31 @@ export const RadioStyles = css`
 		bottom: 5px;
 		border-radius: 999px;
 		display: inline-block;
-		background: ${checkboxForegroundColor};
+		background: ${checkboxForeground};
 		opacity: 0;
 		pointer-events: none;
 	}
 	:host(:not([disabled])) .control:hover {
-		background: ${checkboxBackgroundColor};
-		border-color: ${checkboxBorderColor};
+		background: ${checkboxBackground};
+		border-color: ${checkboxBorder};
 	}
 	:host(:not([disabled])) .control:active {
-		background: ${checkboxBackgroundColor};
+		background: ${checkboxBackground};
 		border-color: ${focusBorder};
 	}
 	:host(:${focusVisible}) .control {
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host([aria-checked='true']) .control {
-		background: ${checkboxBackgroundColor};
-		border: calc(${borderWidth} * 1px) solid ${checkboxBorderColor};
+		background: ${checkboxBackground};
+		border: calc(${borderWidth} * 1px) solid ${checkboxBorder};
 	}
 	:host([aria-checked='true']:not([disabled])) .control:hover {
-		background: ${checkboxBackgroundColor};
-		border: calc(${borderWidth} * 1px) solid ${checkboxBorderColor};
+		background: ${checkboxBackground};
+		border: calc(${borderWidth} * 1px) solid ${checkboxBorder};
 	}
 	:host([aria-checked='true']:not([disabled])) .control:active {
-		background: ${checkboxBackgroundColor};
+		background: ${checkboxBackground};
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 	:host([aria-checked="true"]:${focusVisible}:not([disabled])) .control {

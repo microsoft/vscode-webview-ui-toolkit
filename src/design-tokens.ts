@@ -147,15 +147,15 @@ export const textLinkForegroundColor = create<string>(
 /**
  * Checkbox design tokens.
  */
-export const checkboxBackgroundColor = create<string>(
-	'checkbox-background-color'
+export const checkboxBackground = create<string>(
+	'checkbox-background'
 ).withDefault('#3c3c3c');
-export const checkboxForegroundColor = create<string>(
-	'checkbox-foreground-color'
+export const checkboxForeground = create<string>(
+	'checkbox-foreground'
 ).withDefault('#f0f0f0');
-export const checkboxBorderColor = create<string>(
-	'checkbox-border-color'
-).withDefault('#3c3c3c');
+export const checkboxBorder = create<string>('checkbox-border').withDefault(
+	'#3c3c3c'
+);
 export const checkboxCornerRadius = create<number>(
 	'checkbox-corner-radius'
 ).withDefault(3);

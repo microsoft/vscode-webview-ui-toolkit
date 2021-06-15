@@ -6,13 +6,15 @@ import {
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
-	checkboxBackgroundColor,
-	checkboxBorderColor,
+	checkboxBackground,
+	checkboxBorder,
 	checkboxCornerRadius,
-	checkboxForegroundColor,
+	checkboxForeground,
+	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	focusBorder,
+	fontFamily,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -32,15 +34,14 @@ export const CheckboxStyles = css`
 		height: calc(${designUnit} * 4px);
 		box-sizing: border-box;
 		border-radius: calc(${checkboxCornerRadius} * 1px);
-		border: calc(${borderWidth} * 1px) solid
-			${checkboxBorderColor};
-		background: ${checkboxBackgroundColor};
+		border: calc(${borderWidth} * 1px) solid ${checkboxBorder};
+		background: ${checkboxBackground};
 		outline: none;
 		cursor: pointer;
 	}
 	.label {
-		font-family: var(--body-font);
-		color: ${checkboxForegroundColor};
+		font-family: ${fontFamily};
+		color: ${checkboxForeground};
 		padding-inline-start: calc(${designUnit} * 2px + 2px);
 		margin-inline-end: calc(${designUnit} * 2px + 2px);
 		cursor: pointer;
@@ -53,13 +54,13 @@ export const CheckboxStyles = css`
 		width: 100%;
 		height: 100%;
 		display: block;
-		fill: ${checkboxForegroundColor};
+		fill: ${checkboxForeground};
 		opacity: 0;
 		pointer-events: none;
 	}
 	.indeterminate-indicator {
 		border-radius: 2px;
-		background: ${checkboxForegroundColor};
+		background: ${checkboxForeground};
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -69,16 +70,16 @@ export const CheckboxStyles = css`
 		opacity: 0;
 	}
 	:host(:enabled) .control:hover {
-		background: ${checkboxBackgroundColor};
-		border-color: ${checkboxBackgroundColor};
+		background: ${checkboxBackground};
+		border-color: ${checkboxBorder};
 	}
 	:host(:enabled) .control:active {
-		background: ${checkboxBackgroundColor};
-		border-color: ${focusBorder});
+		background: ${checkboxBackground};
+		border-color: ${focusBorder};
 	}
 	:host(:${focusVisible}) .control {
-		border: calc(${borderWidth} * 1px) solid
-			${focusBorder});
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		border-radius: ${cornerRadius};
 	}
 	:host(.disabled) .label,
 	:host(.readonly) .label,
