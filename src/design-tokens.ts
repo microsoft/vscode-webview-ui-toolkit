@@ -163,13 +163,13 @@ export const checkboxCornerRadius = create<number>(
 /**
  * Dropdown design tokens.
  */
-export const dropdownBackgroundColor = create<string>(
+export const dropdownBackground = create<string>(
 	'dropdown-background-color'
 ).withDefault('#3c3c3c');
-export const dropdownForegroundColor = create<string>(
+export const dropdownForeground = create<string>(
 	'dropdown-foreground-color'
 ).withDefault('#f0f0f0');
-export const dropdownBorderColor = create<string>(
+export const dropdownBorder = create<string>(
 	'dropdown-border-color'
 ).withDefault('#3c3c3c');
 

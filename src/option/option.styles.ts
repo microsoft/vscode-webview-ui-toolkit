@@ -9,7 +9,7 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	dropdownForegroundColor,
+	dropdownForeground,
 	focusBorder,
 	optionBackgroundFocusColor,
 	typeRampBaseFontSize,
@@ -22,7 +22,7 @@ export const OptionStyles = css`
 		border-radius: ${cornerRadius};
 		border: calc(${borderWidth} * 1px) solid transparent;
 		box-sizing: border-box;
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 		cursor: pointer;
 		fill: currentcolor;
 		font-size: ${typeRampBaseFontSize};
@@ -37,23 +37,23 @@ export const OptionStyles = css`
 	:host(:${focusVisible}) {
 		border-color: ${focusBorder};
 		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 	}
 	:host([aria-selected='true']) {
 		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 	}
 	:host(:active) {
 		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 	}
 	:host(:not([aria-selected='true']):hover) {
 		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 	}
 	:host(:not([aria-selected='true']):active) {
 		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};

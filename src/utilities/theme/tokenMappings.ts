@@ -18,9 +18,9 @@ import {
 	checkboxForeground,
 	contrastActiveBorder,
 	contrastBorder,
-	dropdownBackgroundColor,
-	dropdownBorderColor,
-	dropdownForegroundColor,
+	dropdownBackground,
+	dropdownBorder,
+	dropdownForeground,
 	focusBorder,
 	inputBackgroundColor,
 	inputBorderColor,
@@ -68,10 +68,10 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-checkbox-background': checkboxBackground,
 	'--vscode-checkbox-foreground': checkboxForeground,
 	'--vscode-checkbox-border': checkboxBorder,
-	// ---- Dropdowns ----
-	'--vscode-dropdown-background': dropdownBackgroundColor,
-	'--vscode-dropdown-foreground': dropdownForegroundColor,
-	'--vscode-dropdown-border': dropdownBorderColor,
+	// ---- Dropdowns & Comboboxes ----
+	'--vscode-dropdown-background': dropdownBackground,
+	'--vscode-dropdown-foreground': dropdownForeground,
+	'--vscode-dropdown-border': dropdownBorder,
 	// ---- Dropdown Options ----
 	'--vscode-list-focusBackground': optionBackgroundFocusColor,
 	// ---- Text Fields & Areas ----

@@ -9,9 +9,9 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	dropdownBackgroundColor,
-	dropdownBorderColor,
-	dropdownForegroundColor,
+	dropdownBackground,
+	dropdownBorder,
+	dropdownForeground,
 	focusBorder,
 	inputHeight,
 	typeRampBaseFontSize,
@@ -20,11 +20,11 @@ import {
 
 export const ComboboxStyles = css`
 	${display('inline-flex')} :host {
-		background: ${dropdownBackgroundColor};
+		background: ${dropdownBackground};
 		border-radius: ${cornerRadius};
-		border: calc(${borderWidth} * 1px) solid ${dropdownBorderColor};
+		border: calc(${borderWidth} * 1px) solid ${dropdownBorder};
 		box-sizing: border-box;
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 		contain: contents;
 		height: calc(${inputHeight} * 1px);
 		position: relative;
@@ -33,8 +33,8 @@ export const ComboboxStyles = css`
 		outline: none;
 	}
 	.listbox {
-		background: ${dropdownBackgroundColor};
-		border: calc(${borderWidth} * 1px) ${dropdownBorderColor};
+		background: ${dropdownBackground};
+		border: calc(${borderWidth} * 1px) ${dropdownBorder};
 		border-radius: ${cornerRadius};
 		box-sizing: border-box;
 		display: inline-flex;
@@ -83,8 +83,8 @@ export const ComboboxStyles = css`
 		outline: none;
 	}
 	:host(:not([disabled]):hover) {
-		background: ${dropdownBackgroundColor});
-		border-color: ${dropdownBorderColor});
+		background: ${dropdownBackground});
+		border-color: ${dropdownBorder});
 	}
 	:host(:focus) {
 		border-color: ${focusBorder};
@@ -97,7 +97,7 @@ export const ComboboxStyles = css`
 			${focusBorder};
 		border-color: ${focusBorder};
 		background: #094771;
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};
@@ -107,13 +107,13 @@ export const ComboboxStyles = css`
 		cursor: ${disabledCursor};
 	}
 	:host([disabled]:hover) {
-		background: ${dropdownBackgroundColor});
-		color: ${dropdownForegroundColor};
+		background: ${dropdownBackground});
+		color: ${dropdownForeground};
 		fill: currentcolor;
 	}
 	:host(:not([disabled])) .control:active {
 		background: #094771;
-		border-color: ${dropdownBorderColor});
+		border-color: ${dropdownBorder});
 		border-radius: ${cornerRadius};
 	}
 	:host([open]),
