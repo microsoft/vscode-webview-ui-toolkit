@@ -26,6 +26,16 @@ export const BreadcrumbItemStyles = css`
 		min-width: calc(${designUnit} * 7px);
 		outline: none;
 	}
+	:host(:not([href])) slot:not([name]) {
+		display: block;
+		cursor: default;
+		color: ${breadcrumbItemForeground};
+		border: calc(${borderWidth} * 1px) solid transparent;
+	}
+	:host(:not([href]):${focusVisible}) slot:not([name]) {
+		color: ${breadcrumbItemForegroundHover};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+	}
 	:host(:${focusVisible}) .control {
 		color: ${breadcrumbItemForegroundHover};
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
@@ -47,10 +57,6 @@ export const BreadcrumbItemStyles = css`
 	}
 	.control .content {
 		position: relative;
-	}
-	.control:not([href]) {
-		color: ${breadcrumbItemForeground};
-		cursor: default;
 	}
 	.listitem {
 		display: flex;

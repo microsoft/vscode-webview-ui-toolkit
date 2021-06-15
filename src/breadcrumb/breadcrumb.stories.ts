@@ -36,19 +36,6 @@ Default.parameters = {
 	},
 };
 
-export const WithCustomElements: any = Template.bind({});
-WithCustomElements.args = {
-	...Default.args,
-	customElement: true,
-};
-WithCustomElements.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-breadcrumb>\n\t<vscode-breadcrumb-item href="#">\n\t\t<vscode-button>Button Element</vscode-button>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\t<vscode-button>Button Element</vscode-button>\n\t</vscode-breadcrumb-item>\n\t<vscode-breadcrumb-item href="#">\n\t\t<vscode-button>Button Element</vscode-button>\n\t</vscode-breadcrumb-item>\n</vscode-breadcrumb>`,
-		},
-	},
-};
-
 export const WithCustomSeparators: any = Template.bind({});
 WithCustomSeparators.args = {
 	...Default.args,

@@ -26,18 +26,6 @@ The `vscode-breadcrumb-item` is a component meant to be used with `vscode-breadc
 <vscode-breadcrumb-item href="#">Breadcrumb Item Label</vscode-breadcrumb-item>
 ```
 
-### Custom Element
-
-The Breadcrumb Item usually contains text, but can also contain any valid HTML, such as a `<vscode-button>`.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-custom-element)
-
-```html
-<vscode-breadcrumb-item href="#">
-	<vscode-button>Button Element</vscode-button>
-</vscode-breadcrumb-item>
-```
-
 ### Custom Separator
 
 The default separator is a `/` but it can customized by adding an element with the attribute `slot="separator"`.

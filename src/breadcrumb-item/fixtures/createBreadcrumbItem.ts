@@ -28,7 +28,9 @@ export function createBreadcrumbItem({
 	if (label && !customElement) {
 		breadcrumbItem.textContent = label;
 	}
-	breadcrumbItem.setAttribute('href', href);
+	if (href) {
+		breadcrumbItem.setAttribute('href', href);
+	}
 	if (customElement) {
 		const button = document.createElement('vscode-button');
 		button.textContent =
