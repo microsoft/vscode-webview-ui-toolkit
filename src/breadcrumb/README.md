@@ -22,26 +22,6 @@ The `vscode-breadcrumb` component must be used with the `vscode-breadcrumb-item`
 </vscode-breadcrumb>
 ```
 
-### Custom Elements
-
-The Breadcrumb Item usually contains text, but can also contain any valid HTML, such as a `<vscode-button>`.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb--with-custom-elements)
-
-```html
-<vscode-breadcrumb>
-	<vscode-breadcrumb-item href="#">
-		<vscode-button>src</vscode-button>
-	</vscode-breadcrumb-item>
-	<vscode-breadcrumb-item href="#">
-		<vscode-button>components</vscode-button>
-	</vscode-breadcrumb-item>
-	<vscode-breadcrumb-item href="#">
-		<vscode-button>index.ts</vscode-button>
-	</vscode-breadcrumb-item>
-</vscode-breadcrumb>
-```
-
 ### Custom Separators
 
 The default separator is a `/` but it can customized by adding an element with the attribute `slot="separator"`, such as an span icon.
