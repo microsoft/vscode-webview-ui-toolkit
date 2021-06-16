@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeMenu} from '../index';
 import {VSCodeMenuItem} from '../../menu-item/index';
 import {VSCodeDivider} from '../../divider/index';

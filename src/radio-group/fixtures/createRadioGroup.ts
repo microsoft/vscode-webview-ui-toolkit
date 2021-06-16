@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeRadioGroup} from '../index';
 import {VSCodeRadio} from '../../radio/index';
 

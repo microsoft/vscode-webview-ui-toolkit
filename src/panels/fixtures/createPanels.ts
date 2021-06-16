@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodePanels} from '../index';
 import {createPanelTab, PanelTabArgs} from './createPanelTab';
 import {createPanelView} from './createPanelView';

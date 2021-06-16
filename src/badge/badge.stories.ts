@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {BadgeArgs, createBadge} from './fixtures/createBadge';
 
 export default {

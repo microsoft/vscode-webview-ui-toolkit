@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {css} from '@microsoft/fast-element';
 import {display, focusVisible} from '@microsoft/fast-foundation';
 import {

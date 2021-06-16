@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 /**
  * This script configures a MutationObserver to watch for VS Code theme changes and
  * applies the current VS Code theme to the VS Code Webview Toolkit components.

@@ -1,4 +1,7 @@
 import {attr, customElement} from '@microsoft/fast-element';
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
 import {BadgeStyles as styles} from './badge.styles';
 

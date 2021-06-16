@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 import {borderWidth, designUnit} from '../design-tokens';

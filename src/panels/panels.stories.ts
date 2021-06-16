@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {createPanels, PanelsArgs} from './fixtures/createPanels';
 
 export default {

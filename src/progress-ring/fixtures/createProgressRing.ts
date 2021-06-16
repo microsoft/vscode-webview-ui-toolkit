@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeProgressRing} from '../index';
 
 export type ProgressRingArgs = {

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {createDataGrid, DataGridArgs} from './fixtures/createDataGrid';
 
 export default {

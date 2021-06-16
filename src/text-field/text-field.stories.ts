@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {createTextField, TextFieldArgs} from './fixtures/createTextField';
 
 export default {

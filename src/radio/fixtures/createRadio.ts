@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeRadio} from '../index';
 import {focusObserver} from '../../utilities/storybook/index';
 
