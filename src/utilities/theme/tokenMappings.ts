@@ -29,7 +29,7 @@ import {
 	inputBorderColor,
 	inputForegroundColor,
 	inputPlaceholderForegroundColor,
-	optionBackgroundFocusColor,
+	optionBackgroundFocus,
 	panelTabActiveBorderColor,
 	panelTabActiveForegroundColor,
 	panelTabForegroundColor,
@@ -76,7 +76,7 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-dropdown-foreground': dropdownForeground,
 	'--vscode-dropdown-border': dropdownBorder,
 	// ---- Dropdown Options ----
-	'--vscode-list-focusBackground': optionBackgroundFocusColor,
+	'--vscode-list-focusBackground': optionBackgroundFocus,
 	// ---- Text Fields & Areas ----
 	'--vscode-input-background': inputBackgroundColor,
 	'--vscode-input-foreground': inputForegroundColor,
