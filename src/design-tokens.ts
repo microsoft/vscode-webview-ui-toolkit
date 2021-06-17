@@ -28,6 +28,10 @@ export const fontFamily = create<string>('font-family').withDefault(
 );
 export const iconWidth = create<string>('icon-width').withDefault('16px');
 export const iconHeight = create<string>('icon-height').withDefault('16px');
+export const inputHeight = create<string>('input-height').withDefault('26');
+export const inputMinWidth = create<string>('input-min-width').withDefault(
+	'250px'
+);
 
 /**
  * Type-ramp font-size and line-height design tokens.
@@ -175,11 +179,14 @@ export const dropdownForeground = create<string>(
 export const dropdownBorder = create<string>(
 	'dropdown-border-color'
 ).withDefault('#3c3c3c');
+export const dropdownListMaxHeight = create<string>(
+	'dropdown-list-max-height'
+).withDefault('200px');
 
 /**
  * Option design tokens.
  */
-export const optionBackgroundFocusColor = create<string>(
+export const optionBackgroundFocus = create<string>(
 	'option-background-focus-color'
 ).withDefault('#062f4a');
 
@@ -198,7 +205,6 @@ export const inputPlaceholderForegroundColor = create<string>(
 export const inputBorderColor = create<string>(
 	'input-border-color'
 ).withDefault('#3c3c3c');
-export const inputHeight = create<string>('input-height').withDefault('26');
 
 /**
  * Progress Bar & Ring design tokens.
