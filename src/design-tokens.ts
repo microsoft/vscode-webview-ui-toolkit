@@ -26,8 +26,6 @@ export const focusBorder = create<string>('focus-border').withDefault(
 export const fontFamily = create<string>('font-family').withDefault(
 	'Arial, Helvetica, sans-serif'
 );
-export const iconWidth = create<string>('icon-width').withDefault('16px');
-export const iconHeight = create<string>('icon-height').withDefault('16px');
 export const inputHeight = create<string>('input-height').withDefault('26');
 export const inputMinWidth = create<string>('input-min-width').withDefault(
 	'250px'
