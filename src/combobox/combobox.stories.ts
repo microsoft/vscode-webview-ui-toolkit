@@ -93,22 +93,18 @@ WithOpen.parameters = {
 	},
 };
 
-export const WithAutocomplete: any = Template.bind({});
-WithAutocomplete.args = {
-	...Default.args,
-	autocomplete: 'inline',
-};
-WithAutocomplete.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-combobox autocomplete="inline"></vscode-combobox>`,
-		},
-	},
-};
-
 export const WithPositionAbove: any = Template.bind({});
+WithPositionAbove.decorators = [
+	story => {
+		const decorator = document.createElement('div');
+		decorator.style.marginTop = '5rem';
+		decorator.appendChild(story());
+		return decorator;
+	},
+];
 WithPositionAbove.args = {
 	...Default.args,
+	isOpen: true,
 	position: 'above',
 };
 WithPositionAbove.parameters = {
@@ -119,15 +115,16 @@ WithPositionAbove.parameters = {
 	},
 };
 
-export const WithPositionBelow: any = Template.bind({});
-WithPositionBelow.args = {
+export const WithAutocomplete: any = Template.bind({});
+WithAutocomplete.args = {
 	...Default.args,
-	position: 'below',
+	autocomplete: 'inline',
+	placeholder: 'Enter an option',
 };
-WithPositionBelow.parameters = {
+WithAutocomplete.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox position="below"></vscode-combobox>`,
+			code: `<vscode-combobox autocomplete="inline"></vscode-combobox>`,
 		},
 	},
 };
