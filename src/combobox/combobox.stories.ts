@@ -48,7 +48,7 @@ Default.args = {
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox></vscode-combobox>`,
+			code: `<vscode-combobox>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -61,7 +61,7 @@ WithPlaceholder.args = {
 WithPlaceholder.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox placeholder="Enter an option"></vscode-combobox>`,
+			code: `<vscode-combobox placeholder="Enter an option">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -75,7 +75,7 @@ WithDisabled.args = {
 WithDisabled.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox disabled></vscode-combobox>`,
+			code: `<vscode-combobox disabled>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -88,7 +88,7 @@ WithOpen.args = {
 WithOpen.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox open></vscode-combobox>`,
+			code: `<vscode-combobox open>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -110,7 +110,7 @@ WithPositionAbove.args = {
 WithPositionAbove.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox position="above"></vscode-combobox>`,
+			code: `<vscode-combobox position="above">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -124,7 +124,35 @@ WithAutocomplete.args = {
 WithAutocomplete.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox autocomplete="inline"></vscode-combobox>`,
+			code: `<vscode-combobox autocomplete="inline">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
+		},
+	},
+};
+
+export const WithNoOptions: any = Template.bind({});
+WithNoOptions.args = {
+	...Default.args,
+	isOpen: true,
+	numberOfChildren: 0,
+};
+WithNoOptions.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-combobox></vscode-combobox>`,
+		},
+	},
+};
+
+export const WithLongList: any = Template.bind({});
+WithLongList.args = {
+	...Default.args,
+	isOpen: true,
+	numberOfChildren: 50,
+};
+WithLongList.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-combobox>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n\t<!-- Insert more options... -->\n</vscode-combobox>`,
 		},
 	},
 };
