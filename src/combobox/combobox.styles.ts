@@ -13,9 +13,6 @@ import {DropdownStyles} from '../dropdown/dropdown.styles';
 export const ComboboxStyles = css`
 	${DropdownStyles}
 
-	:host(:empty) .listbox {
-		display: none;
-	}
 	:host([disabled]) *,
 	:host([disabled]) .selected-value {
 		cursor: ${disabledCursor};

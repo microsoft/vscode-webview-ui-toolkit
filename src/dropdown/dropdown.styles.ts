@@ -98,6 +98,9 @@ export const DropdownStyles = css`
 	:host(:not([disabled])) .control:active {
 		border-color: ${focusBorder};
 	}
+	:host(:empty) .listbox {
+		display: none;
+	}
 	:host([open]) .control {
 		border-color: ${focusBorder};
 	}
