@@ -2,177 +2,40 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {
-	disabledCursor,
-	display,
-	focusVisible,
-} from '@microsoft/fast-foundation';
+import {disabledCursor, focusVisible} from '@microsoft/fast-foundation';
 import {
 	borderWidth,
-	cornerRadius,
-	designUnit,
-	disabledOpacity,
-	dropdownBackground,
-	dropdownBorder,
-	dropdownForeground,
-	focusBorder,
-	inputHeight,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
+import {DropdownStyles} from '../dropdown/dropdown.styles';
 
 export const ComboboxStyles = css`
-	${display('inline-flex')} :host {
-		background: ${dropdownBackground};
-		border-radius: ${cornerRadius};
-		border: calc(${borderWidth} * 1px) solid ${dropdownBorder};
-		box-sizing: border-box;
-		color: ${dropdownForeground};
-		contain: contents;
-		height: calc(${inputHeight} * 1px);
-		position: relative;
-		user-select: none;
-		min-width: 250px;
-		outline: none;
-	}
-	.listbox {
-		background: ${dropdownBackground};
-		border: calc(${borderWidth} * 1px) ${dropdownBorder};
-		border-radius: ${cornerRadius};
-		box-sizing: border-box;
-		display: inline-flex;
-		flex-direction: column;
-		left: 0;
-		max-height: calc(var(--max-height) - (${inputHeight} * 1px));
-		padding: calc(${designUnit} * 1px) 0;
-		overflow-y: auto;
-		position: absolute;
-		width: 100%;
-		z-index: 1;
-	}
-	.listbox[hidden] {
+	${DropdownStyles}
+
+	:host(:empty) .listbox {
 		display: none;
 	}
-	.control {
-		align-items: center;
-		box-sizing: border-box;
-		cursor: pointer;
-		display: flex;
-		font-size: ${typeRampBaseFontSize};
-		font: inherit;
-		line-height: ${typeRampBaseLineHeight};
-		padding: 0 calc(${designUnit} * 2.25px);
-		width: 100%;
+	:host([disabled]) *,
+	:host([disabled]) .selected-value {
+		cursor: ${disabledCursor};
+		user-select: none;
 	}
 	.selected-value {
 		-webkit-appearance: none;
-		font: inherit;
+		background: transparent;
+		border: none;
+		color: inherit;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		text-align: start;
-		background: transparent;
-		border: 0;
-		color: inherit;
-		height: calc(100% - 4px);
+		height: calc(100% - (2 * (${borderWidth} * 1px)));
+		margin: auto 0;
 		width: 100%;
-		margin-top: auto;
-		margin-bottom: auto;
-		border: none;
-		padding: 0;
-		flex: 1 1 auto;
 	}
 	.selected-value:hover,
-	.selected-value:focus {
+	.selected-value:${focusVisible},
+	.selected-value:disabled,
+	.selected-value:active {
 		outline: none;
-	}
-	:host(:not([disabled]):hover) {
-		background: ${dropdownBackground});
-		border-color: ${dropdownBorder});
-	}
-	:host(:focus) {
-		border-color: ${focusBorder};
-	}
-	:host(:${focusVisible}) {
-		border-color: ${focusBorder};
-	}
-	:host(:${focusVisible}) ::slotted([aria-selected="true"][role="option"]:not([disabled])) {
-		box-shadow: 0 0 0 calc(${borderWidth} * 1px) inset
-			${focusBorder};
-		border-color: ${focusBorder};
-		background: #094771;
-		color: ${dropdownForeground};
-	}
-	:host([disabled]) {
-		cursor: ${disabledCursor};
-		opacity: ${disabledOpacity};
-	}
-	:host([disabled]) .control {
-		cursor: ${disabledCursor};
-	}
-	:host([disabled]:hover) {
-		background: ${dropdownBackground});
-		color: ${dropdownForeground};
-		fill: currentcolor;
-	}
-	:host(:not([disabled])) .control:active {
-		background: #094771;
-		border-color: ${dropdownBorder});
-		border-radius: ${cornerRadius};
-	}
-	:host([open]),
-	:host([open]) .listbox {
-		border: none;
-	}
-	:host([open]) .control {
-		padding: 0 calc((${designUnit} * 2.25px) + 1px);
-	}
-	:host([open][position='above']) .listbox,
-	:host([open][position='below']) {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-	:host([open][position='above']),
-	:host([open][position='below']) .listbox {
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
-	}
-	:host([open][position='above']) .listbox {
-		border-bottom: 0;
-		bottom: calc(${inputHeight} * 1px);
-	}
-	:host([open][position='below']) .listbox {
-		border-top: 0;
-		top: calc(${inputHeight} * 1px);
-	}
-	.indicator {
-		flex: 0 0 auto;
-		margin-inline-start: 1em;
-	}
-	slot[name='listbox'] {
-		display: none;
-		width: 100%;
-	}
-	:host([open]) slot[name='listbox'] {
-		display: flex;
-		position: absolute;
-	}
-	.end {
-		margin-inline-start: auto;
-	}
-	.start,
-	.end,
-	.indicator,
-	.select-indicator,
-	::slotted(svg),
-	::slotted(span) {
-		fill: currentcolor;
-		height: 1em;
-		min-height: calc(${designUnit} * 4px);
-		min-width: calc(${designUnit} * 4px);
-		width: 1em;
-	}
-	::slotted([role='option']),
-	::slotted(option) {
-		flex: 0 0 auto;
 	}
 `;
