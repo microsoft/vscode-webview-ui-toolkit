@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 /**
  * Creates a MutationObserver to watch for DOM changes (i.e. Storybook rerendering
  * a component based on changes to controls) and appropriately applies focus to the

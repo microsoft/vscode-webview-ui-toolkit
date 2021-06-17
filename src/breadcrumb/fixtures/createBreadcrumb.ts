@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeBreadcrumb} from '../index';
 import {createBreadcrumbItem} from '../../breadcrumb-item/fixtures/createBreadcrumbItem';
 

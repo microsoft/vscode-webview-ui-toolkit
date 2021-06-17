@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeMenuItem} from '../index';
 import {focusObserver} from '../../utilities/storybook/index';
 

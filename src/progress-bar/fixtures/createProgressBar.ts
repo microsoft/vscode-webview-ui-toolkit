@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeProgressBar} from '../index';
 
 export type ProgressBarArgs = {

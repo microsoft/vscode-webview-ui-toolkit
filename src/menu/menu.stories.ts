@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {createMenu, MenuArgs} from './fixtures/createMenu';
 
 export default {

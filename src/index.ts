@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 // Export components
 export * from './badge/index';
 export * from './breadcrumb/index';

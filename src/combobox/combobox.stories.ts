@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {action} from '@storybook/addon-actions';
 import {ComboboxArgs, createCombobox} from './fixtures/createCombobox';
 
