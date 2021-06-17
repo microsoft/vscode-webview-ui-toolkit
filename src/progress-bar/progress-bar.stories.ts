@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {createProgressBar, ProgressBarArgs} from './fixtures/createProgressBar';
 
 export default {

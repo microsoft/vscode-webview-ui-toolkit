@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {customElement} from '@microsoft/fast-element';
 import {Select, SelectTemplate as template} from '@microsoft/fast-foundation';
 import {DropdownStyles as styles} from './dropdown.styles';

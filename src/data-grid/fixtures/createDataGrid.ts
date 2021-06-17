@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {html} from '@microsoft/fast-element';
 import type {DataGridCell} from '@microsoft/fast-foundation';
 import {VSCodeDataGrid} from '../index';

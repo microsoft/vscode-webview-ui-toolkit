@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {DesignToken} from '@microsoft/fast-foundation';
 
 const {create} = DesignToken;

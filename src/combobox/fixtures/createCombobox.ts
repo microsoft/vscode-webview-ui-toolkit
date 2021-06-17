@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeCombobox} from '../index';
 import {VSCodeOption} from '../../option';
 

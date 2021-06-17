@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {customElement} from '@microsoft/fast-element';
 import {Anchor, AnchorTemplate as template} from '@microsoft/fast-foundation';
 import {LinkStyles as styles} from './link.styles';

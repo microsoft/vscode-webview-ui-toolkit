@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {customElement, ViewTemplate} from '@microsoft/fast-element';
 import {
 	createDataGridCellTemplate,

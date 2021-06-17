@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {attr, customElement} from '@microsoft/fast-element';
 import {Button, ButtonTemplate as template} from '@microsoft/fast-foundation';
 import {ButtonStyles as styles} from './button.styles';

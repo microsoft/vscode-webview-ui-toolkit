@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodePanelView} from '../index';
 
 export type PanelViewArgs = {

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {customElement} from '@microsoft/fast-element';
 import {createMenuItemTemplate, MenuItem} from '@microsoft/fast-foundation';
 import {MenuItemStyles as styles} from './menu-item.styles';

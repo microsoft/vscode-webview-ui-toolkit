@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {createLink, LinkArgs} from './fixtures/createLink';
 
 export default {

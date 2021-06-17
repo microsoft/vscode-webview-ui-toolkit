@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {BadgeAppearance, VSCodeBadge} from '../index';
 
 export type BadgeArgs = {

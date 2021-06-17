@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {VSCodeNumberField} from '../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
