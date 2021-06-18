@@ -29,6 +29,8 @@ import {
 	inputBorderColor,
 	inputForegroundColor,
 	inputPlaceholderForegroundColor,
+	linkActiveForeground,
+	linkForeground,
 	optionBackgroundFocusColor,
 	panelTabActiveBorderColor,
 	panelTabActiveForegroundColor,
@@ -36,7 +38,6 @@ import {
 	panelViewBackgroundColor,
 	panelViewBorderColor,
 	progressBackgroundColor,
-	textLinkForegroundColor,
 } from '../../design-tokens';
 
 /**
@@ -66,7 +67,8 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-button-secondaryHoverBackground': buttonSecondaryHoverBackground,
 	'--vscode-button-border': buttonBorder,
 	// ---- Links ----
-	'--vscode-textLink-foreground': textLinkForegroundColor,
+	'--vscode-textLink-foreground': linkForeground,
+	'--vscode-textLink-activeForeground': linkActiveForeground,
 	// ---- Checkboxes ----
 	'--vscode-checkbox-background': checkboxBackground,
 	'--vscode-checkbox-foreground': checkboxForeground,
