@@ -141,6 +141,13 @@ export const buttonBorder = create<string>('button-border').withDefault(
 );
 
 /**
+ * Divider design tokens.
+ */
+export const dividerBackground = create<string>(
+	'divider-background'
+).withDefault('#454545');
+
+/**
  * Text link design tokens.
  */
 export const textLinkForegroundColor = create<string>(
