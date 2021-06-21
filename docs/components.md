@@ -14,8 +14,6 @@ Here you can find a list of all the components currently available in this toolk
 | `divider`         | [Divider Documentation](../src/divider/README.md)                 |
 | `dropdown`        | [Dropdown Documentation](../src/dropdown/README.md)               |
 | `link`            | [Link Documentation](../src/link/README.md)                       |
-| `menu`            | [Menu Documentation](../src/menu/README.md)                       |
-| `menu-item`       | [Menu Item Documentation](../src/menu-item/README.md)             |
 | `number-field`    | [Number Field Documentation](../src/number-field/README.md)       |
 | `option`          | [Option Documentation](../src/option/README.md)                   |
 | `panels`          | [Panels Documentation](../src/panels/README.md)                   |
