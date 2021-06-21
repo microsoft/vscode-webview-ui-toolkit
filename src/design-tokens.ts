@@ -184,9 +184,13 @@ export const dropdownListMaxHeight = create<string>(
 /**
  * Option design tokens.
  */
-export const optionBackgroundFocus = create<string>(
-	'option-background-focus-color'
-).withDefault('#062f4a');
+// list.activeSelectionBackground;
+export const optionActiveSelectionBackground = create<string>(
+	'option-active-selection-background'
+).withDefault('#094771');
+export const optionActiveSelectionForeground = create<string>(
+	'option-active-selection-foreground'
+).withDefault('#ffffff');
 
 /**
  * Text Field & Area design tokens.
