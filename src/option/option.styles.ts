@@ -14,7 +14,8 @@ import {
 	disabledOpacity,
 	dropdownForeground,
 	focusBorder,
-	optionBackgroundFocus,
+	optionActiveSelectionBackground,
+	optionActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -39,23 +40,24 @@ export const OptionStyles = css`
 	}
 	:host(:${focusVisible}) {
 		border-color: ${focusBorder};
-		background: ${optionBackgroundFocus};
+		background: ${optionActiveSelectionBackground};
 		color: ${dropdownForeground};
 	}
 	:host([aria-selected='true']) {
-		background: ${optionBackgroundFocus};
-		color: ${dropdownForeground};
+		background: ${optionActiveSelectionBackground};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		color: ${optionActiveSelectionForeground};
 	}
 	:host(:active) {
-		background: ${optionBackgroundFocus};
-		color: ${dropdownForeground};
+		background: ${optionActiveSelectionBackground};
+		color: ${optionActiveSelectionForeground};
 	}
 	:host(:not([aria-selected='true']):hover) {
-		background: ${optionBackgroundFocus};
+		background: ${optionActiveSelectionBackground};
 		color: ${dropdownForeground};
 	}
 	:host(:not([aria-selected='true']):active) {
-		background: ${optionBackgroundFocus};
+		background: ${optionActiveSelectionBackground};
 		color: ${dropdownForeground};
 	}
 	:host([disabled]) {
