@@ -16,7 +16,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 | `readonly`    | boolean | When true, the control will be immutable by any user interaction.                          |
 | `size`        | number  | Sets the width of the element to a specified number of characters.                         |
 | `spellcheck`  | boolean | Sets if the component is eligible for spell checking.                                      |
-| `value`       | string  | The value (i.e. content) of the textarea.                                                  |
+| `value`       | string  | The value (i.e. content) of the text field.                                                |
 
 ## Usage
 
