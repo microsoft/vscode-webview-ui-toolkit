@@ -9,6 +9,7 @@ The `vscode-radio` is a web component implementation of an [HTML Radio Input Ele
 | `checked`  | boolean | When true, the radio is toggled on.                                                 |
 | `disabled` | boolean | Prevents the user from interacting with the radio––it cannot be pressed or focused. |
 | `readonly` | boolean | Indicates whether the radio is checked or not.                                      |
+| `value`    | string  | The string to use as the value of the radio.                                        |
 
 ## Usage
 
