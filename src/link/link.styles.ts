@@ -10,7 +10,6 @@ import {
 import {
 	borderWidth,
 	cornerRadius,
-	designUnit,
 	disabledOpacity,
 	focusBorder,
 	fontFamily,
@@ -72,24 +71,5 @@ export const LinkStyles = css`
 		background: transparent;
 		opacity: ${disabledOpacity};
 		text-decoration: none;
-	}
-	.start,
-	.end {
-		display: flex;
-	}
-	.control.icon-only {
-		line-height: 0;
-		padding: 0;
-	}
-	::slotted(svg),
-	::slotted(span) {
-		width: calc(${designUnit} * 4px);
-		height: calc(${designUnit} * 4px);
-	}
-	.start {
-		margin-inline-end: 8px;
-	}
-	.end {
-		margin-inline-start: 8px;
 	}
 `;
