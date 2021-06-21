@@ -12,7 +12,7 @@ The `vscode-number-field` is a web component implementation of an [HTML Text Fie
 | `placeholder` | string  | Sets the placeholder value of the component, generally used to provide a hint to the user. |
 | `readonly`    | boolean | When true, the control will be immutable by any user interaction.                          |
 | `size`        | number  | Sets the width of the element to a specified number of characters.                         |
-| `value`       | string  | The string to use as the value of the number field.                                        |
+| `value`       | string  | The value (i.e. content) of the number field.                                              |
 
 ## Usage
 
