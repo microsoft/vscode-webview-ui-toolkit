@@ -25,11 +25,10 @@ import {
 	buttonSecondaryForeground,
 	buttonSecondaryHoverBackground,
 	cornerRadius,
+	designUnit,
 	disabledOpacity,
 	focusBorder,
 	fontFamily,
-	iconHeight,
-	iconWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -95,8 +94,8 @@ const BaseButtonStyles = css`
 	}
 	::slotted(svg),
 	::slotted(span) {
-		width: ${iconWidth};
-		height: ${iconHeight};
+		width: calc(${designUnit} * 4px);
+		height: calc(${designUnit} * 4px);
 	}
 	.start {
 		margin-inline-end: 8px;

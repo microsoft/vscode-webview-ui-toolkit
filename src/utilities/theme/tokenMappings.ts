@@ -21,9 +21,9 @@ import {
 	checkboxForeground,
 	contrastActiveBorder,
 	contrastBorder,
-	dropdownBackgroundColor,
-	dropdownBorderColor,
-	dropdownForegroundColor,
+	dropdownBackground,
+	dropdownBorder,
+	dropdownForeground,
 	focusBorder,
 	inputBackgroundColor,
 	inputBorderColor,
@@ -31,7 +31,8 @@ import {
 	inputPlaceholderForegroundColor,
 	linkActiveForeground,
 	linkForeground,
-	optionBackgroundFocusColor,
+	optionActiveSelectionBackground,
+	optionActiveSelectionForeground,
 	panelTabActiveBorderColor,
 	panelTabActiveForegroundColor,
 	panelTabForegroundColor,
@@ -73,12 +74,13 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-checkbox-background': checkboxBackground,
 	'--vscode-checkbox-foreground': checkboxForeground,
 	'--vscode-checkbox-border': checkboxBorder,
-	// ---- Dropdowns ----
-	'--vscode-dropdown-background': dropdownBackgroundColor,
-	'--vscode-dropdown-foreground': dropdownForegroundColor,
-	'--vscode-dropdown-border': dropdownBorderColor,
+	// ---- Dropdowns & Comboboxes ----
+	'--vscode-dropdown-background': dropdownBackground,
+	'--vscode-dropdown-foreground': dropdownForeground,
+	'--vscode-dropdown-border': dropdownBorder,
 	// ---- Dropdown Options ----
-	'--vscode-list-focusBackground': optionBackgroundFocusColor,
+	'--vscode-list-activeSelectionBackground': optionActiveSelectionBackground,
+	'--vscode-list-activeSelectionForeground': optionActiveSelectionForeground,
 	// ---- Text Fields & Areas ----
 	'--vscode-input-background': inputBackgroundColor,
 	'--vscode-input-foreground': inputForegroundColor,
@@ -92,8 +94,4 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-panelTitle-activeBorder': panelTabActiveBorderColor,
 	'--vscode-panel-background': panelViewBackgroundColor,
 	'--vscode-panel-border': panelViewBorderColor,
-	// "--vscode-panelSectionHeader-background": "?"
-	// "--vscode-panelSectionHeader-foreground": "?"
-	// "--vscode-panelSectionHeader-border": "?"
-	// ---- Symbol & Debug Icons ----
 };

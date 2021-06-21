@@ -76,27 +76,23 @@ WithOpen.parameters = {
 };
 
 export const WithPositionAbove: any = Template.bind({});
+WithPositionAbove.decorators = [
+	story => {
+		const decorator = document.createElement('div');
+		decorator.style.marginTop = '5rem';
+		decorator.appendChild(story());
+		return decorator;
+	},
+];
 WithPositionAbove.args = {
 	...Default.args,
+	isOpen: true,
 	position: 'Above',
 };
 WithPositionAbove.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-dropdown position="above">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
-		},
-	},
-};
-
-export const WithPositionBelow: any = Template.bind({});
-WithPositionBelow.args = {
-	...Default.args,
-	position: 'Below',
-};
-WithPositionBelow.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-dropdown position="below">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
 		},
 	},
 };
@@ -117,6 +113,7 @@ WithCustomIndicator.parameters = {
 export const WithNoOptions: any = Template.bind({});
 WithNoOptions.args = {
 	...Default.args,
+	isOpen: true,
 	numberOfChildren: 0,
 };
 WithNoOptions.parameters = {
@@ -130,6 +127,7 @@ WithNoOptions.parameters = {
 export const WithLongList: any = Template.bind({});
 WithLongList.args = {
 	...Default.args,
+	isOpen: true,
 	numberOfChildren: 50,
 };
 WithLongList.parameters = {
