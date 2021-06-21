@@ -1,7 +1,7 @@
-import {attr, customElement} from '@microsoft/fast-element';
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+import {attr, customElement} from '@microsoft/fast-element';
 import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
 import {BadgeStyles as styles} from './badge.styles';
 
@@ -38,12 +38,22 @@ export class VSCodeBadge extends Badge {
 	@attr public appearance: BadgeAppearance;
 
 	/**
+	 * Component lifecycle method that runs when the element is inserted
+	 * into the DOM.
+	 *
 	 * @internal
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
 		if (!this.appearance) {
 			this.appearance = 'primary';
+		}
+
+		// This will override any usage of the circular attribute
+		// provided by the FAST Foundation Badge component so that
+		// VSCodeBadges are always circular
+		if (!this.circular) {
+			this.circular = true;
 		}
 	}
 }
