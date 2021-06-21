@@ -4,12 +4,13 @@ The `vscode-combo-box` is a web component implementation of an [HTML Text Field 
 
 ## Attributes
 
-| Attribute      | Type    | Description                                                                                                         |
-| -------------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
-| `autocomplete` | string  | Handles autocomplete features for the control on pageload. Accepted values are `none`, `inline`, `list`, and `both` |
-| `disabled`     | boolean | Disables the combobox and child options.                                                                            |
-| `open`         | boolean | If true, toggles the combobox to the open position.                                                                 |
-| `position`     | string  | The placement for the listbox when the combobox is open. Options: `above`, `below`                                  |
+| Attribute      | Type    | Description                                                                               |
+| -------------- | ------- | ----------------------------------------------------------------------------------------- |
+| `autocomplete` | string  | Handles autocomplete features for the control. Options: `none`, `inline`, `list`, `both`. |
+| `disabled`     | boolean | Disables the combobox and child options.                                                  |
+| `open`         | boolean | If true, toggles the combobox to the open position.                                       |
+| `position`     | string  | The placement for the listbox when the combobox is open. Options: `above`, `below`.       |
+| `value`        | string  | The string to use as the value of the combobox.                                           |
 
 ## Usage
 

@@ -18,6 +18,7 @@ The `vscode-text-area` is a web component implementation of an [HTML Text Area E
 | `resize`      | string  | The resize mode of the component. Options: `none`, `vertical`, `horizontal`, `both`.       |
 | `rows`        | number  | Sizes the component vertically by a number of character rows.                              |
 | `spellcheck`  | boolean | Sets if the component is eligible for spell checking.                                      |
+| `value`       | string  | The value (i.e. content) of the text area.                                                 |
 
 ## Usage
 

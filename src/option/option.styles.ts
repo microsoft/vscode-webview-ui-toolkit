@@ -12,9 +12,10 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	dropdownForegroundColor,
+	dropdownForeground,
 	focusBorder,
-	optionBackgroundFocusColor,
+	optionActiveSelectionBackground,
+	optionActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -25,12 +26,12 @@ export const OptionStyles = css`
 		border-radius: ${cornerRadius};
 		border: calc(${borderWidth} * 1px) solid transparent;
 		box-sizing: border-box;
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 		cursor: pointer;
 		fill: currentcolor;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		margin: 0 calc(${designUnit} * 1px);
+		margin: 0;
 		outline: none;
 		overflow: hidden;
 		padding: calc(${designUnit} * 1px);
@@ -39,24 +40,25 @@ export const OptionStyles = css`
 	}
 	:host(:${focusVisible}) {
 		border-color: ${focusBorder};
-		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		background: ${optionActiveSelectionBackground};
+		color: ${dropdownForeground};
 	}
 	:host([aria-selected='true']) {
-		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		background: ${optionActiveSelectionBackground};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		color: ${optionActiveSelectionForeground};
 	}
 	:host(:active) {
-		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		background: ${optionActiveSelectionBackground};
+		color: ${optionActiveSelectionForeground};
 	}
 	:host(:not([aria-selected='true']):hover) {
-		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		background: ${optionActiveSelectionBackground};
+		color: ${dropdownForeground};
 	}
 	:host(:not([aria-selected='true']):active) {
-		background: ${optionBackgroundFocusColor};
-		color: ${dropdownForegroundColor};
+		background: ${optionActiveSelectionBackground};
+		color: ${dropdownForeground};
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};

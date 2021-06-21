@@ -22,22 +22,24 @@ import {
 	contrastActiveBorder,
 	contrastBorder,
 	dividerBackground,
-	dropdownBackgroundColor,
-	dropdownBorderColor,
-	dropdownForegroundColor,
+	dropdownBackground,
+	dropdownBorder,
+	dropdownForeground,
 	focusBorder,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
 	inputPlaceholderForegroundColor,
-	optionBackgroundFocusColor,
+	linkActiveForeground,
+	linkForeground,
+	optionActiveSelectionBackground,
+	optionActiveSelectionForeground,
 	panelTabActiveBorderColor,
 	panelTabActiveForegroundColor,
 	panelTabForegroundColor,
 	panelViewBackgroundColor,
 	panelViewBorderColor,
 	progressBackgroundColor,
-	textLinkForegroundColor,
 } from '../../design-tokens';
 
 /**
@@ -67,19 +69,21 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-button-secondaryHoverBackground': buttonSecondaryHoverBackground,
 	'--vscode-button-border': buttonBorder,
 	// ---- Links ----
-	'--vscode-textLink-foreground': textLinkForegroundColor,
+	'--vscode-textLink-foreground': linkForeground,
+	'--vscode-textLink-activeForeground': linkActiveForeground,
 	// ---- Checkboxes ----
 	'--vscode-checkbox-background': checkboxBackground,
 	'--vscode-checkbox-foreground': checkboxForeground,
 	'--vscode-checkbox-border': checkboxBorder,
-	// ---- Dropdowns ----
-	'--vscode-dropdown-background': dropdownBackgroundColor,
-	'--vscode-dropdown-foreground': dropdownForegroundColor,
-	'--vscode-dropdown-border': dropdownBorderColor,
 	// ---- Divider ----
 	'--vscode-settings-dropdownListBorder': dividerBackground,
+	// ---- Dropdowns & Comboboxes ----
+	'--vscode-dropdown-background': dropdownBackground,
+	'--vscode-dropdown-foreground': dropdownForeground,
+	'--vscode-dropdown-border': dropdownBorder,
 	// ---- Dropdown Options ----
-	'--vscode-list-focusBackground': optionBackgroundFocusColor,
+	'--vscode-list-activeSelectionBackground': optionActiveSelectionBackground,
+	'--vscode-list-activeSelectionForeground': optionActiveSelectionForeground,
 	// ---- Text Fields & Areas ----
 	'--vscode-input-background': inputBackgroundColor,
 	'--vscode-input-foreground': inputForegroundColor,
@@ -93,8 +97,4 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-panelTitle-activeBorder': panelTabActiveBorderColor,
 	'--vscode-panel-background': panelViewBackgroundColor,
 	'--vscode-panel-border': panelViewBorderColor,
-	// "--vscode-panelSectionHeader-background": "?"
-	// "--vscode-panelSectionHeader-foreground": "?"
-	// "--vscode-panelSectionHeader-border": "?"
-	// ---- Symbol & Debug Icons ----
 };

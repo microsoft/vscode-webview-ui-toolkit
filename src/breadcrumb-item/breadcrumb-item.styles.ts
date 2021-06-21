@@ -11,8 +11,6 @@ import {
 	designUnit,
 	focusBorder,
 	fontFamily,
-	iconHeight,
-	iconWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -76,8 +74,8 @@ export const BreadcrumbItemStyles = css`
 	}
 	::slotted(svg),
 	::slotted(span) {
-		width: ${iconWidth};
-		height: ${iconHeight};
+		width: calc(${designUnit} * 4px);
+		height: calc(${designUnit} * 4px);
 	}
 	.start {
 		margin-inline-end: 6px;

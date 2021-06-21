@@ -48,7 +48,7 @@ Default.args = {
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox></vscode-combobox>`,
+			code: `<vscode-combobox>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -61,7 +61,7 @@ WithPlaceholder.args = {
 WithPlaceholder.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox placeholder="Enter an option"></vscode-combobox>`,
+			code: `<vscode-combobox placeholder="Enter an option">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -75,7 +75,7 @@ WithDisabled.args = {
 WithDisabled.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox disabled></vscode-combobox>`,
+			code: `<vscode-combobox disabled>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -88,7 +88,29 @@ WithOpen.args = {
 WithOpen.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox open></vscode-combobox>`,
+			code: `<vscode-combobox open>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
+		},
+	},
+};
+
+export const WithPositionAbove: any = Template.bind({});
+WithPositionAbove.decorators = [
+	story => {
+		const decorator = document.createElement('div');
+		decorator.style.marginTop = '5rem';
+		decorator.appendChild(story());
+		return decorator;
+	},
+];
+WithPositionAbove.args = {
+	...Default.args,
+	isOpen: true,
+	position: 'above',
+};
+WithPositionAbove.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-combobox position="above">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
@@ -97,37 +119,40 @@ export const WithAutocomplete: any = Template.bind({});
 WithAutocomplete.args = {
 	...Default.args,
 	autocomplete: 'inline',
+	placeholder: 'Enter an option',
 };
 WithAutocomplete.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox autocomplete="inline"></vscode-combobox>`,
+			code: `<vscode-combobox autocomplete="inline">\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-combobox>`,
 		},
 	},
 };
 
-export const WithPositionAbove: any = Template.bind({});
-WithPositionAbove.args = {
+export const WithNoOptions: any = Template.bind({});
+WithNoOptions.args = {
 	...Default.args,
-	position: 'above',
+	isOpen: true,
+	numberOfChildren: 0,
 };
-WithPositionAbove.parameters = {
+WithNoOptions.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox position="above"></vscode-combobox>`,
+			code: `<vscode-combobox></vscode-combobox>`,
 		},
 	},
 };
 
-export const WithPositionBelow: any = Template.bind({});
-WithPositionBelow.args = {
+export const WithLongList: any = Template.bind({});
+WithLongList.args = {
 	...Default.args,
-	position: 'below',
+	isOpen: true,
+	numberOfChildren: 50,
 };
-WithPositionBelow.parameters = {
+WithLongList.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-combobox position="below"></vscode-combobox>`,
+			code: `<vscode-combobox>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n\t<!-- Insert more options... -->\n</vscode-combobox>`,
 		},
 	},
 };

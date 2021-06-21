@@ -26,8 +26,10 @@ export const focusBorder = create<string>('focus-border').withDefault(
 export const fontFamily = create<string>('font-family').withDefault(
 	'Arial, Helvetica, sans-serif'
 );
-export const iconWidth = create<string>('icon-width').withDefault('16px');
-export const iconHeight = create<string>('icon-height').withDefault('16px');
+export const inputHeight = create<string>('input-height').withDefault('26');
+export const inputMinWidth = create<string>('input-min-width').withDefault(
+	'250px'
+);
 
 /**
  * Type-ramp font-size and line-height design tokens.
@@ -141,20 +143,6 @@ export const buttonBorder = create<string>('button-border').withDefault(
 );
 
 /**
- * Divider design tokens.
- */
-export const dividerBackground = create<string>(
-	'divider-background'
-).withDefault('#454545');
-
-/**
- * Text link design tokens.
- */
-export const textLinkForegroundColor = create<string>(
-	'text-link-foreground-color'
-).withDefault('#3794ff');
-
-/**
  * Checkbox design tokens.
  */
 export const checkboxBackground = create<string>(
@@ -171,24 +159,38 @@ export const checkboxCornerRadius = create<number>(
 ).withDefault(3);
 
 /**
+ * Divider design tokens.
+ */
+export const dividerBackground = create<string>(
+	'divider-background'
+).withDefault('#454545');
+
+/**
  * Dropdown design tokens.
  */
-export const dropdownBackgroundColor = create<string>(
+export const dropdownBackground = create<string>(
 	'dropdown-background-color'
 ).withDefault('#3c3c3c');
-export const dropdownForegroundColor = create<string>(
+export const dropdownForeground = create<string>(
 	'dropdown-foreground-color'
 ).withDefault('#f0f0f0');
-export const dropdownBorderColor = create<string>(
+export const dropdownBorder = create<string>(
 	'dropdown-border-color'
 ).withDefault('#3c3c3c');
+export const dropdownListMaxHeight = create<string>(
+	'dropdown-list-max-height'
+).withDefault('200px');
 
 /**
  * Option design tokens.
  */
-export const optionBackgroundFocusColor = create<string>(
-	'option-background-focus-color'
-).withDefault('#062f4a');
+// list.activeSelectionBackground;
+export const optionActiveSelectionBackground = create<string>(
+	'option-active-selection-background'
+).withDefault('#094771');
+export const optionActiveSelectionForeground = create<string>(
+	'option-active-selection-foreground'
+).withDefault('#ffffff');
 
 /**
  * Text Field & Area design tokens.
@@ -205,7 +207,16 @@ export const inputPlaceholderForegroundColor = create<string>(
 export const inputBorderColor = create<string>(
 	'input-border-color'
 ).withDefault('#3c3c3c');
-export const inputHeight = create<string>('input-height').withDefault('26');
+
+/**
+ * Link design tokens.
+ */
+export const linkForeground = create<string>(
+	'link-active-foreground'
+).withDefault('#3794ff');
+export const linkActiveForeground = create<string>(
+	'link-foreground'
+).withDefault('#3794ff');
 
 /**
  * Progress Bar & Ring design tokens.
