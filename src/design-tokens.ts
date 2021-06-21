@@ -159,6 +159,13 @@ export const checkboxCornerRadius = create<number>(
 ).withDefault(3);
 
 /**
+ * Divider design tokens.
+ */
+export const dividerBackground = create<string>(
+	'divider-background'
+).withDefault('#454545');
+
+/**
  * Dropdown design tokens.
  */
 export const dropdownBackground = create<string>(

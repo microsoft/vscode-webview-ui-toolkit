@@ -21,6 +21,7 @@ import {
 	checkboxForeground,
 	contrastActiveBorder,
 	contrastBorder,
+	dividerBackground,
 	dropdownBackground,
 	dropdownBorder,
 	dropdownForeground,
@@ -74,6 +75,8 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-checkbox-background': checkboxBackground,
 	'--vscode-checkbox-foreground': checkboxForeground,
 	'--vscode-checkbox-border': checkboxBorder,
+	// ---- Divider ----
+	'--vscode-settings-dropdownListBorder': dividerBackground,
 	// ---- Dropdowns & Comboboxes ----
 	'--vscode-dropdown-background': dropdownBackground,
 	'--vscode-dropdown-foreground': dropdownForeground,
