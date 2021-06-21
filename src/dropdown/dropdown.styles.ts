@@ -12,39 +12,58 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	dropdownBackgroundColor,
-	dropdownBorderColor,
-	dropdownForegroundColor,
+	dropdownBackground,
+	dropdownBorder,
+	dropdownForeground,
+	dropdownListMaxHeight,
 	focusBorder,
+	fontFamily,
 	inputHeight,
+	inputMinWidth,
+	optionActiveSelectionBackground,
+	optionActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
 export const DropdownStyles = css`
 	${display('inline-flex')} :host {
-		background: ${dropdownBackgroundColor};
-		border-radius: ${cornerRadius};
-		border: calc(${borderWidth} * 1px) solid ${dropdownBorderColor};
+		background: ${dropdownBackground};
 		box-sizing: border-box;
-		color: ${dropdownForegroundColor};
+		color: ${dropdownForeground};
 		contain: contents;
+		font-family: ${fontFamily};
 		height: calc(${inputHeight} * 1px);
 		position: relative;
 		user-select: none;
-		min-width: 250px;
+		min-width: ${inputMinWidth};
 		outline: none;
+		vertical-align: top;
+	}
+	.control {
+		align-items: center;
+		box-sizing: border-box;
+		border: calc(${borderWidth} * 1px) solid ${dropdownBorder};
+		border-radius: calc(${cornerRadius} * 1px);
+		cursor: pointer;
+		display: flex;
+		font-family: inherit;
+		font-size: ${typeRampBaseFontSize};
+		line-height: ${typeRampBaseLineHeight};
+		min-height: 100%;
+		padding: 0 calc(${designUnit} * 2px);
+		width: 100%;
 	}
 	.listbox {
-		background: ${dropdownBackgroundColor};
-		border: calc(${borderWidth} * 1px) solid ${dropdownBorderColor};
-		border-radius: ${cornerRadius};
+		background: ${dropdownBackground};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		border-radius: calc(${cornerRadius} * 1px);
 		box-sizing: border-box;
 		display: inline-flex;
 		flex-direction: column;
 		left: 0;
-		max-height: calc(var(--max-height) - (${inputHeight} * 1px));
-		padding: calc(${designUnit} * 1px) 0;
+		max-height: ${dropdownListMaxHeight};
+		padding: 0 0 calc(${designUnit} * 1px) 0;
 		overflow-y: auto;
 		position: absolute;
 		width: 100%;
@@ -53,32 +72,17 @@ export const DropdownStyles = css`
 	.listbox[hidden] {
 		display: none;
 	}
-	.control {
-		align-items: center;
-		box-sizing: border-box;
-		cursor: pointer;
-		display: flex;
-		font-size: ${typeRampBaseFontSize};
-		font: inherit;
-		line-height: ${typeRampBaseLineHeight};
-		padding: 0 calc(${designUnit} * 2.25px);
-		width: 100%;
+	:host(:${focusVisible}) .control {
+		border-color: ${focusBorder};
 	}
 	:host(:not([disabled]):hover) {
-		background: ${dropdownBackgroundColor};
-		border-color: ${dropdownBorderColor};
-	}
-	:host(:focus) {
-		border-color: ${focusBorder};
-	}
-	:host(:${focusVisible}) {
-		border-color: ${focusBorder};
+		background: ${dropdownBackground};
+		border-color: ${dropdownBorder};
 	}
 	:host(:${focusVisible}) ::slotted([aria-selected="true"][role="option"]:not([disabled])) {
-		box-shadow: 0 0 0 calc(${borderWidth} * 1px) inset ${focusBorder};
-		border-color: ${focusBorder};
-		background: #094771;
-		color: ${dropdownForegroundColor};
+		background: ${optionActiveSelectionBackground};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		color: ${optionActiveSelectionForeground};
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};
@@ -86,47 +90,45 @@ export const DropdownStyles = css`
 	}
 	:host([disabled]) .control {
 		cursor: ${disabledCursor};
+		user-select: none;
 	}
 	:host([disabled]:hover) {
-		background: ${dropdownBackgroundColor};
-		color: ${dropdownForegroundColor};
+		background: ${dropdownBackground};
+		color: ${dropdownForeground};
 		fill: currentcolor;
 	}
 	:host(:not([disabled])) .control:active {
-		background: #094771;
-		border-color: ${dropdownBorderColor};
-		border-radius: ${cornerRadius};
+		border-color: ${focusBorder};
 	}
-	:host([open]),
-	:host([open]) .listbox {
-		border: none;
+	:host(:empty) .listbox {
+		display: none;
 	}
 	:host([open]) .control {
-		padding: 0 calc((${designUnit} * 2.25px) + 1px);
+		border-color: ${focusBorder};
 	}
 	:host([open][position='above']) .listbox,
-	:host([open][position='below']) {
+	:host([open][position='below']) .control {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 	}
-	:host([open][position='above']),
+	:host([open][position='above']) .control,
 	:host([open][position='below']) .listbox {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}
 	:host([open][position='above']) .listbox {
-		border-bottom: 0;
 		bottom: calc(${inputHeight} * 1px);
 	}
 	:host([open][position='below']) .listbox {
-		border-top: 0;
 		top: calc(${inputHeight} * 1px);
 	}
 	.selected-value {
-		font-family: var(--body-font);
-		font-size: ${typeRampBaseFontSize};
 		flex: 1 1 auto;
+		font-family: inherit;
+		overflow: hidden;
 		text-align: start;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.indicator {
 		flex: 0 0 auto;

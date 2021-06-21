@@ -62,8 +62,6 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 </vscode-dropdown>
 ```
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-dropdown--with-position-below)
-
 ```html
 <vscode-dropdown position="below">
 	<vscode-option>Option Label #1</vscode-option>
