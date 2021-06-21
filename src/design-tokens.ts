@@ -143,13 +143,6 @@ export const buttonBorder = create<string>('button-border').withDefault(
 );
 
 /**
- * Text link design tokens.
- */
-export const textLinkForegroundColor = create<string>(
-	'text-link-foreground-color'
-).withDefault('#3794ff');
-
-/**
  * Checkbox design tokens.
  */
 export const checkboxBackground = create<string>(
@@ -207,6 +200,16 @@ export const inputPlaceholderForegroundColor = create<string>(
 export const inputBorderColor = create<string>(
 	'input-border-color'
 ).withDefault('#3c3c3c');
+
+/**
+ * Link design tokens.
+ */
+export const linkForeground = create<string>(
+	'link-active-foreground'
+).withDefault('#3794ff');
+export const linkActiveForeground = create<string>(
+	'link-foreground'
+).withDefault('#3794ff');
 
 /**
  * Progress Bar & Ring design tokens.
