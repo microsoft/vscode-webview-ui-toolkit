@@ -11,7 +11,6 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		href: {control: 'text'},
-		customElement: {control: 'boolean'},
 		startIcon: {control: 'boolean'},
 		separatorIcon: {control: 'boolean'},
 		endIcon: {control: 'boolean'},
@@ -32,7 +31,6 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: 'Breadcrumb Item Label',
 	href: '',
-	customElement: false,
 	startIcon: false,
 	separatorIcon: false,
 	endIcon: false,

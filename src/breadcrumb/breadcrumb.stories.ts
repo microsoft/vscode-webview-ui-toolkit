@@ -7,7 +7,6 @@ export default {
 	title: 'Library/Breadcrumb',
 	argTypes: {
 		breadcrumbItemList: {control: 'array'},
-		customElement: {control: 'boolean'},
 		startIcon: {control: 'boolean'},
 		separatorIcon: {control: 'boolean'},
 		endIcon: {control: 'boolean'},
@@ -26,7 +25,6 @@ const Template = ({...args}: BreadcrumbArgs) => {
 export const Default: any = Template.bind({});
 Default.args = {
 	breadcrumbItemList: ['src', 'components', 'index.ts'],
-	customElement: false,
 	startIcon: false,
 	separatorIcon: false,
 	endIcon: false,
