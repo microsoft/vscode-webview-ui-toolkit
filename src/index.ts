@@ -10,6 +10,7 @@ export * from './checkbox/index';
 export * from './combobox/index';
 export * from './data-grid/index';
 export * from './divider/index';
+export * from './dropdown/index';
 export * from './link/index';
 export * from './number-field/index';
 export * from './option/index';
@@ -18,7 +19,7 @@ export * from './progress-bar/index';
 export * from './progress-ring/index';
 export * from './radio-group/index';
 export * from './radio/index';
-export * from './dropdown/index';
+export * from './tag/index';
 export * from './text-area/index';
 export * from './text-field/index';
 
