@@ -26,6 +26,8 @@ import {
 	dropdownBorder,
 	dropdownForeground,
 	focusBorder,
+	fontFamily,
+	fontWeight,
 	inputBackgroundColor,
 	inputBorderColor,
 	inputForegroundColor,
@@ -40,6 +42,7 @@ import {
 	panelViewBackgroundColor,
 	panelViewBorderColor,
 	progressBackgroundColor,
+	typeRampBaseFontSize,
 } from '../../design-tokens';
 
 /**
@@ -81,6 +84,10 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-dropdown-background': dropdownBackground,
 	'--vscode-dropdown-foreground': dropdownForeground,
 	'--vscode-dropdown-border': dropdownBorder,
+	// ---- Fonts ----
+	'--vscode-font-family': fontFamily,
+	'--vscode-font-size': typeRampBaseFontSize,
+	'--vscode-font-weight': fontWeight,
 	// ---- Dropdown Options ----
 	'--vscode-list-activeSelectionBackground': optionActiveSelectionBackground,
 	'--vscode-list-activeSelectionForeground': optionActiveSelectionForeground,

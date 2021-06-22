@@ -24,8 +24,9 @@ export const focusBorder = create<string>('focus-border').withDefault(
 	'#007fd4'
 );
 export const fontFamily = create<string>('font-family').withDefault(
-	'Arial, Helvetica, sans-serif'
+	'-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol'
 );
+export const fontWeight = create<string>('font-weight').withDefault('400');
 export const inputHeight = create<string>('input-height').withDefault('26');
 export const inputMinWidth = create<string>('input-min-width').withDefault(
 	'250px'
@@ -185,6 +186,9 @@ export const dropdownListMaxHeight = create<string>(
 export const optionActiveSelectionBackground = create<string>(
 	'option-active-selection-background'
 ).withDefault('#094771');
+export const optionForeground = create<string>('option-foreground').withDefault(
+	'#cccccc'
+);
 export const optionActiveSelectionForeground = create<string>(
 	'option-active-selection-foreground'
 ).withDefault('#ffffff');
