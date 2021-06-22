@@ -27,13 +27,13 @@ const Template = ({...args}: TagArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
-	label: 'TAG TEXT',
+	label: 'Tag Text',
 	appearance: 'Primary',
 };
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-tag>TAG TEXT</vscode-tag>`,
+			code: `<vscode-tag>Tag Text</vscode-tag>`,
 		},
 	},
 };
@@ -46,7 +46,7 @@ Secondary.args = {
 Secondary.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-tag appearance="secondary">TAG TEXT</vscode-tag>`,
+			code: `<vscode-tag appearance="secondary">Tag Text</vscode-tag>`,
 		},
 	},
 };
