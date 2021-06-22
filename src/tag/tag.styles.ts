@@ -27,6 +27,7 @@ const BaseTagStyles = css`
 		border-radius: ${badgeCornerRadius};
 		color: ${badgePrimaryForeground};
 		padding: calc(${designUnit} * 0.5px) calc(${designUnit} * 1px);
+		text-transform: uppercase;
 	}
 `;
 
