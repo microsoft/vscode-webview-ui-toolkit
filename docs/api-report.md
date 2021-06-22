@@ -17,8 +17,6 @@ import { DataGridCell } from '@microsoft/fast-foundation';
 import { DataGridRow } from '@microsoft/fast-foundation';
 import { Divider } from '@microsoft/fast-foundation';
 import { ListboxOption } from '@microsoft/fast-foundation';
-import { Menu } from '@microsoft/fast-foundation';
-import { MenuItem } from '@microsoft/fast-foundation';
 import { NumberField } from '@microsoft/fast-foundation';
 import { Radio } from '@microsoft/fast-foundation';
 import { RadioGroup } from '@microsoft/fast-foundation';
@@ -38,7 +36,7 @@ export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
 // @public
 export class VSCodeBadge extends Badge {
     appearance: BadgeAppearance;
-    // @internal (undocumented)
+    // @internal
     connectedCallback(): void;
 }
 
@@ -87,16 +85,6 @@ export class VSCodeDropdown extends Select {
 
 // @public
 export class VSCodeLink extends Anchor {
-    // @internal
-    defaultSlottedContentChanged(): void;
-}
-
-// @public
-export class VSCodeMenu extends Menu {
-}
-
-// @public
-export class VSCodeMenuItem extends MenuItem {
 }
 
 // @public
@@ -139,6 +127,12 @@ export class VSCodeRadio extends Radio {
 
 // @public
 export class VSCodeRadioGroup extends RadioGroup {
+}
+
+// @public
+export class VSCodeTag extends Badge {
+    // @internal
+    connectedCallback(): void;
 }
 
 // @public
