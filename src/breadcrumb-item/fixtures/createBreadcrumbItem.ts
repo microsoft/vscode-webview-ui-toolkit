@@ -10,7 +10,6 @@ import {
 export type BreadcrumbItemArgs = {
 	label: string;
 	href: string;
-	customElement: boolean;
 	startIcon: boolean;
 	separatorIcon: boolean;
 	endIcon: boolean;
@@ -20,7 +19,6 @@ export type BreadcrumbItemArgs = {
 export function createBreadcrumbItem({
 	label,
 	href,
-	customElement,
 	startIcon,
 	separatorIcon,
 	endIcon,
@@ -28,17 +26,11 @@ export function createBreadcrumbItem({
 }: BreadcrumbItemArgs) {
 	const breadcrumbItem = new VSCodeBreadcrumbItem();
 
-	if (label && !customElement) {
+	if (label) {
 		breadcrumbItem.textContent = label;
 	}
 	if (href) {
 		breadcrumbItem.setAttribute('href', href);
-	}
-	if (customElement) {
-		const button = document.createElement('vscode-button');
-		button.textContent =
-			'Button Element (But This Could Be Any Valid HTML)';
-		breadcrumbItem.appendChild(button);
 	}
 	if (startIcon) {
 		const start = createCodiconIcon({

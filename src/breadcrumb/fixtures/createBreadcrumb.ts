@@ -6,7 +6,6 @@ import {createBreadcrumbItem} from '../../breadcrumb-item/fixtures/createBreadcr
 
 export type BreadcrumbArgs = {
 	breadcrumbItemList: string[];
-	customElement: boolean;
 	startIcon: boolean;
 	separatorIcon: boolean;
 	endIcon: boolean;
@@ -14,7 +13,6 @@ export type BreadcrumbArgs = {
 
 export function createBreadcrumb({
 	breadcrumbItemList,
-	customElement,
 	startIcon,
 	separatorIcon,
 	endIcon,
@@ -25,7 +23,6 @@ export function createBreadcrumb({
 		const breadcrumbItem = createBreadcrumbItem({
 			label: breadcrumbItemList[i],
 			href: '#',
-			customElement,
 			startIcon,
 			separatorIcon,
 			endIcon,
