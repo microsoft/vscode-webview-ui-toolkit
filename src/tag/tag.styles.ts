@@ -4,8 +4,6 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 import {
-	badgePrimaryBackground,
-	badgePrimaryForeground,
 	badgeSecondaryBackground,
 	badgeSecondaryForeground,
 	designUnit,
@@ -15,7 +13,7 @@ import {
 	typeRampMinus1LineHeight,
 } from '../design-tokens';
 
-const BaseTagStyles = css`
+export const TagStyles = css`
 	${display('inline-block')} :host {
 		box-sizing: border-box;
 		font-family: ${fontFamily};
@@ -23,30 +21,10 @@ const BaseTagStyles = css`
 		line-height: ${typeRampMinus1LineHeight};
 	}
 	.control {
-		background-color: ${badgePrimaryBackground};
+		background-color: ${badgeSecondaryBackground};
 		border-radius: ${tagCornerRadius};
-		color: ${badgePrimaryForeground};
+		color: ${badgeSecondaryForeground};
 		padding: calc(${designUnit} * 0.5px) calc(${designUnit} * 1px);
 		text-transform: uppercase;
 	}
-`;
-
-const PrimaryTagStyles = css`
-	:host([appearance='primary']) .control {
-		background: ${badgePrimaryBackground};
-		color: ${badgePrimaryForeground};
-	}
-`;
-
-const SecondaryTagStyles = css`
-	:host([appearance='secondary']) .control {
-		background: ${badgeSecondaryBackground};
-		color: ${badgeSecondaryForeground};
-	}
-`;
-
-export const TagStyles = css`
-	${BaseTagStyles}
-	${PrimaryTagStyles}
-	${SecondaryTagStyles}
 `;

@@ -1,15 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {attr, customElement} from '@microsoft/fast-element';
+import {customElement} from '@microsoft/fast-element';
 import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
 import {TagStyles as styles} from './tag.styles';
-
-/**
- * Types of tag appearance.
- * @public
- */
-export type TagAppearance = 'primary' | 'secondary';
 
 /**
  * The VS Code Tag element. Extends
@@ -28,16 +22,6 @@ export type TagAppearance = 'primary' | 'secondary';
 })
 export class VSCodeTag extends Badge {
 	/**
-	 * The appearance the tag should have.
-	 *
-	 * @remarks
-	 * HTML Attribute: appearance
-	 *
-	 * @public
-	 */
-	@attr public appearance: TagAppearance;
-
-	/**
 	 * Component lifecycle method that runs when the element is inserted
 	 * into the DOM.
 	 *
@@ -45,9 +29,6 @@ export class VSCodeTag extends Badge {
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
-		if (!this.appearance) {
-			this.appearance = 'primary';
-		}
 
 		// This will override any usage of the circular attribute
 		// provided by the FAST Foundation Badge component so that
