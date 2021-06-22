@@ -4,13 +4,13 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 import {
-	badgeCornerRadius,
 	badgePrimaryBackground,
 	badgePrimaryForeground,
 	badgeSecondaryBackground,
 	badgeSecondaryForeground,
 	designUnit,
 	fontFamily,
+	tagCornerRadius,
 	typeRampMinus1FontSize,
 	typeRampMinus1LineHeight,
 } from '../design-tokens';
@@ -24,7 +24,7 @@ const BaseTagStyles = css`
 	}
 	.control {
 		background-color: ${badgePrimaryBackground};
-		border-radius: ${badgeCornerRadius};
+		border-radius: ${tagCornerRadius};
 		color: ${badgePrimaryForeground};
 		padding: calc(${designUnit} * 0.5px) calc(${designUnit} * 1px);
 		text-transform: uppercase;
