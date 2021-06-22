@@ -87,9 +87,6 @@ export const badgeSecondaryForeground = create<string>(
 export const badgeSecondaryBackground = create<string>(
 	'badge-secondary-background'
 ).withDefault('#4d4d4d');
-export const badgeCornerRadius = create<string>(
-	'badge-corner-radius'
-).withDefault('2px');
 
 /**
  * Button design tokens.
@@ -243,3 +240,10 @@ export const panelTabActiveForegroundColor = create<string>(
 export const panelTabActiveBorderColor = create<string>(
 	'panel-tab-active-border-color'
 ).withDefault('#e7e7e7');
+
+/**
+ * Tag design tokens.
+ */
+export const tagCornerRadius = create<string>('tag-corner-radius').withDefault(
+	'2px'
+);

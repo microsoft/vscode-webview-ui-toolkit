@@ -21,5 +21,6 @@ Here you can find a list of all the components currently available in this toolk
 | `progress-ring`   | [Progress Ring Documentation](../src/progress-ring/README.md)     |
 | `radio`           | [Radio Documentation](../src/radio/README.md)                     |
 | `radio-group`     | [Radio Group Documentation](../src/radio-group/README.md)         |
+| `tag`             | [Tag Documentation](../src/tag/README.md)                         |
 | `text-area`       | [Text Area Documentation](../src/text-area/README.md)             |
 | `text-field`      | [Text Field Documentation](../src/text-field/README.md)           |

@@ -6,14 +6,13 @@ import {BadgeArgs, createBadge} from './fixtures/createBadge';
 export default {
 	title: 'Library/Badge',
 	argTypes: {
-		label: {control: 'text'},
+		label: {control: 'number'},
 		appearance: {
 			control: {
 				type: 'select',
 				options: ['Primary', 'Secondary'],
 			},
 		},
-		isCircular: {control: 'boolean'},
 	},
 	parameters: {
 		actions: {
@@ -28,14 +27,13 @@ const Template = ({...args}: BadgeArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
-	label: 'BADGE TEXT',
+	label: '1',
 	appearance: 'Primary',
-	isCircular: false,
 };
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-badge appearance="primary">BADGE TEXT</vscode-badge>`,
+			code: `<vscode-badge>1</vscode-badge>`,
 		},
 	},
 };
@@ -48,21 +46,7 @@ Secondary.args = {
 Secondary.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-badge appearance="secondary">BADGE TEXT</vscode-badge>`,
-		},
-	},
-};
-
-export const WithCircular: any = Template.bind({});
-WithCircular.args = {
-	...Default.args,
-	label: '1',
-	isCircular: true,
-};
-WithCircular.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-badge circular>1</vscode-badge>`,
+			code: `<vscode-badge appearance="secondary">1</vscode-badge>`,
 		},
 	},
 };
