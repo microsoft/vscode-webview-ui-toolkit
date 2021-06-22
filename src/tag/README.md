@@ -1,6 +1,6 @@
 # VS Code Tag
 
-The `vscode-tag` component is used to label an item, attract attention, and/or flag status.  
+The `vscode-tag` component is used to label an item, attract attention, and/or flag status.
 
 ## Attributes
 

@@ -244,6 +244,6 @@ export const panelTabActiveBorderColor = create<string>(
 /**
  * Tag design tokens.
  */
-export const tagCornerRadius = create<string>(
-	'tag-corner-radius'
-).withDefault('2px');
+export const tagCornerRadius = create<string>('tag-corner-radius').withDefault(
+	'2px'
+);
