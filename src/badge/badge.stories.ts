@@ -6,7 +6,7 @@ import {BadgeArgs, createBadge} from './fixtures/createBadge';
 export default {
 	title: 'Library/Badge',
 	argTypes: {
-		label: {control: 'text'},
+		label: {control: 'number'},
 		appearance: {
 			control: {
 				type: 'select',
