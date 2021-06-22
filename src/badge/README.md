@@ -10,6 +10,10 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 ## Usage
 
+A `vscode-badge` should only contain numbers to follow the conventions of the VS Code design language.
+
+If a component that labels an item with a string is desired, see the `vscode-tag` component.
+
 ### Basic Usage
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-badge--default)
