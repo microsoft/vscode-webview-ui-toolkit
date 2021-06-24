@@ -12,9 +12,10 @@ import {
 export const ProgressBarStyles = css`
 	${display('flex')} :host {
 		align-items: center;
-		outline: none;
-		height: calc(${designUnit} * 1px);
+		height: calc((${designUnit} + 1) * 1px);
 		margin: calc(${designUnit} * 1px) 0;
+		outline: none;
+		width: 100%;
 	}
 	.progress {
 		background-color: transparent;
@@ -33,32 +34,32 @@ export const ProgressBarStyles = css`
 		display: flex;
 	}
 	.indeterminate {
-		height: 100%;
 		border-radius: calc(${cornerRadius} * 1px);
 		display: flex;
-		width: 100%;
+		height: 100%;
 		position: relative;
 		overflow: hidden;
+		width: 100%;
 	}
 	.indeterminate-indicator-1 {
-		position: absolute;
-		opacity: 0;
-		height: 100%;
+		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+		animation: indeterminate-1 2s infinite;
 		background-color: ${progressBackgroundColor};
 		border-radius: calc(${cornerRadius} * 1px);
-		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+		height: 100%;
+		position: absolute;
+		opacity: 0;
 		width: 40%;
-		animation: indeterminate-1 2s infinite;
 	}
 	.indeterminate-indicator-2 {
-		position: absolute;
-		opacity: 0;
-		height: 100%;
+		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+		animation: indeterminate-2 2s infinite;
 		background-color: ${progressBackgroundColor};
 		border-radius: calc(${cornerRadius} * 1px);
-		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+		height: 100%;
+		position: absolute;
+		opacity: 0;
 		width: 60%;
-		animation: indeterminate-2 2s infinite;
 	}
 	@keyframes indeterminate-1 {
 		0% {
