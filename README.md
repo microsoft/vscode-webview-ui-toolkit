@@ -1,5 +1,3 @@
-![VS Code Webview Toolkit Banner Illustration](./docs/assets/vscode-webview-toolkit-illustration.jpg)
-
 # Visual Studio Code Webview Toolkit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
