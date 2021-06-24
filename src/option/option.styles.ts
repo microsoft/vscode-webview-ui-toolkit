@@ -34,7 +34,8 @@ export const OptionStyles = css`
 		margin: 0;
 		outline: none;
 		overflow: hidden;
-		padding: 0 calc(${designUnit} * 1px);
+		padding: 0 calc((${designUnit} / 2) * 1px)
+			calc((${designUnit} / 4) * 1px);
 		user-select: none;
 		white-space: nowrap;
 	}
