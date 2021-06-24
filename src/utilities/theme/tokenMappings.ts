@@ -36,6 +36,7 @@ import {
 	linkForeground,
 	optionActiveSelectionBackground,
 	optionActiveSelectionForeground,
+	optionForeground,
 	panelTabActiveBorderColor,
 	panelTabActiveForegroundColor,
 	panelTabForegroundColor,
@@ -91,6 +92,7 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Dropdown Options ----
 	'--vscode-list-activeSelectionBackground': optionActiveSelectionBackground,
 	'--vscode-list-activeSelectionForeground': optionActiveSelectionForeground,
+	'--vscode-menu-foreground': optionForeground,
 	// ---- Text Fields & Areas ----
 	'--vscode-input-background': inputBackgroundColor,
 	'--vscode-input-foreground': inputForegroundColor,
