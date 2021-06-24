@@ -18,23 +18,23 @@ export const ProgressRingStyles = css`
 		width: 100%;
 	}
 	.background {
-		stroke: transparent;
 		fill: none;
-		stroke-width: 1px;
+		stroke: transparent;
+		stroke-width: calc(${designUnit} / 2 * 1px);
 	}
 	.determinate {
-		stroke: ${progressBackgroundColor};
 		fill: none;
-		stroke-width: 1px;
+		stroke: ${progressBackgroundColor};
+		stroke-width: calc(${designUnit} / 2 * 1px);
 		stroke-linecap: square;
 		transform-origin: 50% 50%;
 		transform: rotate(-90deg);
 		transition: all 0.2s ease-in-out;
 	}
 	.indeterminate-indicator-1 {
-		stroke: ${progressBackgroundColor};
 		fill: none;
-		stroke-width: 1px;
+		stroke: ${progressBackgroundColor};
+		stroke-width: calc(${designUnit} / 2 * 1px);
 		stroke-linecap: square;
 		transform-origin: 50% 50%;
 		transform: rotate(-90deg);
