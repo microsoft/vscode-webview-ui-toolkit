@@ -12,10 +12,10 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	dropdownForeground,
 	focusBorder,
 	optionActiveSelectionBackground,
 	optionActiveSelectionForeground,
+	optionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -26,7 +26,7 @@ export const OptionStyles = css`
 		border-radius: ${cornerRadius};
 		border: calc(${borderWidth} * 1px) solid transparent;
 		box-sizing: border-box;
-		color: ${dropdownForeground};
+		color: ${optionForeground};
 		cursor: pointer;
 		fill: currentcolor;
 		font-size: ${typeRampBaseFontSize};
@@ -34,14 +34,15 @@ export const OptionStyles = css`
 		margin: 0;
 		outline: none;
 		overflow: hidden;
-		padding: calc(${designUnit} * 1px);
+		padding: 0 calc((${designUnit} / 2) * 1px)
+			calc((${designUnit} / 4) * 1px);
 		user-select: none;
 		white-space: nowrap;
 	}
 	:host(:${focusVisible}) {
 		border-color: ${focusBorder};
 		background: ${optionActiveSelectionBackground};
-		color: ${dropdownForeground};
+		color: ${optionForeground};
 	}
 	:host([aria-selected='true']) {
 		background: ${optionActiveSelectionBackground};
@@ -54,11 +55,12 @@ export const OptionStyles = css`
 	}
 	:host(:not([aria-selected='true']):hover) {
 		background: ${optionActiveSelectionBackground};
-		color: ${dropdownForeground};
+		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		color: ${optionActiveSelectionForeground};
 	}
 	:host(:not([aria-selected='true']):active) {
 		background: ${optionActiveSelectionBackground};
-		color: ${dropdownForeground};
+		color: ${optionForeground};
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};
