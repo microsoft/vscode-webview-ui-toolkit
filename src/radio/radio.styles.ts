@@ -15,40 +15,40 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorder,
+	fontFamily,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
 export const RadioStyles = css`
 	${display('inline-flex')} :host {
-		--input-size: calc(${designUnit} * 4px);
 		align-items: center;
-		outline: none;
-		margin: calc(${designUnit} * 1px) 0;
-		user-select: none;
-		position: relative;
 		flex-direction: row;
-		transition: all 0.2s ease-in-out;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
+		margin: calc(${designUnit} * 1px) 0;
+		outline: none;
+		position: relative;
+		transition: all 0.2s ease-in-out;
+		user-select: none;
 	}
 	.control {
-		position: relative;
-		width: calc(${designUnit} * 4px);
-		height: calc(${designUnit} * 4px);
-		box-sizing: border-box;
+		background: ${checkboxBackground};
 		border-radius: 999px;
 		border: calc(${borderWidth} * 1px) solid ${checkboxBorder};
-		background: ${checkboxBackground};
-		outline: none;
+		box-sizing: border-box;
 		cursor: pointer;
+		height: calc(${designUnit} * 4px);
+		position: relative;
+		outline: none;
+		width: calc(${designUnit} * 4px);
 	}
 	.label {
-		font-family: var(--body-font);
 		color: ${checkboxForeground};
-		padding-inline-start: calc(${designUnit} * 2px + 2px);
-		margin-inline-end: calc(${designUnit} * 2px + 2px);
 		cursor: pointer;
+		font-family: ${fontFamily};
+		margin-inline-end: calc(${designUnit} * 2px + 2px);
+		padding-inline-start: calc(${designUnit} * 2px + 2px);
 	}
 	.label__hidden {
 		display: none;
@@ -59,16 +59,13 @@ export const RadioStyles = css`
 		flex-shrink: 0;
 	}
 	.checked-indicator {
-		position: absolute;
-		top: 5px;
-		left: 5px;
-		right: 5px;
-		bottom: 5px;
+		background: ${checkboxForeground};
 		border-radius: 999px;
 		display: inline-block;
-		background: ${checkboxForeground};
+		inset: 4px;
 		opacity: 0;
 		pointer-events: none;
+		position: absolute;
 	}
 	:host(:not([disabled])) .control:hover {
 		background: ${checkboxBackground};
