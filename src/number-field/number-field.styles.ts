@@ -13,10 +13,12 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorder,
+	fontFamily,
 	inputBackground,
 	inputBorder,
 	inputForeground,
 	inputHeight,
+	inputMinWidth,
 	inputPlaceholderForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -24,7 +26,7 @@ import {
 
 export const NumberFieldStyles = css`
 	${display('inline-block')} :host {
-		font-family: var(--body-font);
+		font-family: ${fontFamily};
 		outline: none;
 		user-select: none;
 	}
@@ -38,6 +40,7 @@ export const NumberFieldStyles = css`
 		border-radius: calc(${cornerRadius} * 1px);
 		border: calc(${borderWidth} * 1px) solid ${inputBorder};
 		height: calc(${inputHeight} * 1px);
+		min-width: ${inputMinWidth};
 	}
 	.control {
 		-webkit-appearance: none;
@@ -45,7 +48,7 @@ export const NumberFieldStyles = css`
 		background: transparent;
 		border: 0;
 		color: inherit;
-		height: calc(100% - 4px);
+		height: calc(100% - (${designUnit} * 1px));
 		width: 100%;
 		margin-top: auto;
 		margin-bottom: auto;
@@ -55,9 +58,9 @@ export const NumberFieldStyles = css`
 		line-height: ${typeRampBaseLineHeight};
 	}
 	.control:hover,
-    .control:${focusVisible},
-    .control:disabled,
-    .control:active {
+	.control:${focusVisible},
+	.control:disabled,
+	.control:active {
 		outline: none;
 	}
 	.label {
@@ -66,7 +69,7 @@ export const NumberFieldStyles = css`
 		cursor: pointer;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		margin-bottom: 4px;
+		margin-bottom: calc(${designUnit} * 1px);
 	}
 	.label__hidden {
 		display: none;
@@ -80,8 +83,8 @@ export const NumberFieldStyles = css`
 	}
 	::slotted(svg),
 	::slotted(span) {
-		width: 16px;
-		height: 16px;
+		width: calc(${designUnit} * 4px);
+		height: calc(${designUnit} * 4px);
 	}
 	.start {
 		margin-inline-start: 11px;
