@@ -13,7 +13,6 @@ export default {
 		minLength: {control: 'number'},
 		maxLength: {control: 'number'},
 		size: {control: 'number'},
-		isRequired: {control: 'boolean'},
 		isReadOnly: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isAutoFocused: {control: 'boolean'},
@@ -35,7 +34,6 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: '',
 	placeholder: '',
-	isRequired: false,
 	isReadOnly: false,
 	isDisabled: false,
 	isAutoFocused: false,
@@ -136,7 +134,7 @@ WithMaxLength.args = {
 	...Default.args,
 	placeholder: 'This text field can only contain a maximum of 10 characters',
 	maxLength: 10,
-	size: 50,
+	size: 52,
 };
 WithMaxLength.parameters = {
 	docs: {
@@ -152,7 +150,7 @@ WithPattern.args = {
 	placeholder:
 		'The pattern requires a lowercase string that is 4-8 characters in length',
 	pattern: '[a-z]{4,8}',
-	size: 60,
+	size: 62,
 };
 WithPattern.parameters = {
 	docs: {
