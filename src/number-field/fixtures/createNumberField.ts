@@ -9,7 +9,6 @@ export type NumberFieldArgs = {
 	placeholder?: string;
 	value?: string;
 	size?: number;
-	isRequired?: boolean;
 	isReadOnly?: boolean;
 	isDisabled?: boolean;
 	isAutoFocused?: boolean;
@@ -21,7 +20,6 @@ export function createNumberField({
 	placeholder,
 	value,
 	size,
-	isRequired,
 	isReadOnly,
 	isDisabled,
 	isAutoFocused,
@@ -40,9 +38,6 @@ export function createNumberField({
 	}
 	if (size) {
 		numberField.setAttribute('size', size.toString());
-	}
-	if (isRequired) {
-		numberField.setAttribute('required', '');
 	}
 	if (isReadOnly) {
 		numberField.setAttribute('readonly', '');

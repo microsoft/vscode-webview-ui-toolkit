@@ -10,7 +10,6 @@ export default {
 		placeholder: {control: 'text'},
 		value: {control: 'text'},
 		size: {control: 'number'},
-		isRequired: {control: 'boolean'},
 		isReadOnly: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isAutoFocused: {control: 'boolean'},
@@ -31,7 +30,6 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: '',
 	placeholder: '',
-	isRequired: false,
 	isReadOnly: false,
 	isDisabled: false,
 	isAutoFocused: false,
