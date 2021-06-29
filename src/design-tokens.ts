@@ -196,16 +196,16 @@ export const optionActiveSelectionForeground = create<string>(
 /**
  * Text Field & Area design tokens.
  */
-export const inputBackgroundColor = create<string>(
+export const inputBackground = create<string>(
 	'input-background-color'
 ).withDefault('#3c3c3c');
-export const inputForegroundColor = create<string>(
+export const inputForeground = create<string>(
 	'input-foreground-color'
 ).withDefault('#cccccc');
-export const inputPlaceholderForegroundColor = create<string>(
+export const inputPlaceholderForeground = create<string>(
 	'input-placeholder-foreground-color'
 ).withDefault('#cccccc');
-export const inputBorderColor = create<string>(
+export const inputBorder = create<string>(
 	'input-border-color'
 ).withDefault('#3c3c3c');
 
