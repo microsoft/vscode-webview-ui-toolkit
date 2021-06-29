@@ -13,11 +13,11 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorder,
-	inputBackgroundColor,
-	inputBorderColor,
-	inputForegroundColor,
+	inputBackground,
+	inputBorder,
+	inputForeground,
 	inputHeight,
-	inputPlaceholderForegroundColor,
+	inputPlaceholderForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -33,10 +33,10 @@ export const NumberFieldStyles = css`
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		color: ${inputForegroundColor};
-		background: ${inputBackgroundColor};
+		color: ${inputForeground};
+		background: ${inputBackground};
 		border-radius: calc(${cornerRadius} * 1px);
-		border: calc(${borderWidth} * 1px) solid ${inputBorderColor};
+		border: calc(${borderWidth} * 1px) solid ${inputBorder};
 		height: calc(${inputHeight} * 1px);
 	}
 	.control {
@@ -62,7 +62,7 @@ export const NumberFieldStyles = css`
 	}
 	.label {
 		display: block;
-		color: ${inputPlaceholderForegroundColor};
+		color: ${inputPlaceholderForeground};
 		cursor: pointer;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
@@ -104,19 +104,19 @@ export const NumberFieldStyles = css`
 		border: 5px solid transparent;
 	}
 	.step-up:before {
-		border-bottom-color: ${inputForegroundColor};
+		border-bottom-color: ${inputForeground};
 		margin-bottom: 2px;
 	}
 	.step-down:before {
-		border-top-color: ${inputForegroundColor};
+		border-top-color: ${inputForeground};
 		margin-top: 2px;
 	}
 	:host(:hover:not([disabled])) .root {
-		background: ${inputBackgroundColor};
-		border-color: ${inputBorderColor};
+		background: ${inputBackground};
+		border-color: ${inputBorder};
 	}
 	:host(:active:not([disabled])) .root {
-		background: ${inputBackgroundColor};
+		background: ${inputBackground};
 		border-color: ${focusBorder};
 	}
 	:host(:focus-within:not([disabled])) .root {
@@ -132,6 +132,6 @@ export const NumberFieldStyles = css`
 		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
-		border-color: ${inputBorderColor};
+		border-color: ${inputBorder};
 	}
 `;
