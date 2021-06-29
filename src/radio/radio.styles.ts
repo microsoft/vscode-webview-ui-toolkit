@@ -62,7 +62,7 @@ export const RadioStyles = css`
 		background: ${checkboxForeground};
 		border-radius: 999px;
 		display: inline-block;
-		inset: 4px;
+		inset: calc(${designUnit} * 1px);
 		opacity: 0;
 		pointer-events: none;
 		position: absolute;
