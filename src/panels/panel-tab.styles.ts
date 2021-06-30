@@ -13,9 +13,9 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorder,
-	panelTabActiveBorderColor,
-	panelTabActiveForegroundColor,
-	panelTabForegroundColor,
+	panelTabActiveBorder,
+	panelTabActiveForeground,
+	panelTabForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -28,7 +28,7 @@ export const PanelTabStyles = css`
 		line-height: ${typeRampBaseLineHeight};
 		height: calc(${designUnit} * 7px);
 		padding: calc(${designUnit} * 1px) 0;
-		color: ${panelTabForegroundColor};
+		color: ${panelTabForeground};
 		fill: currentcolor;
 		border-radius: calc(${cornerRadius} * 1px);
 		border: solid calc(${borderWidth} * 1px) transparent;
@@ -38,11 +38,11 @@ export const PanelTabStyles = css`
 		cursor: pointer;
 	}
 	:host(:hover) {
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host(:active) {
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host([disabled]) {
@@ -50,27 +50,27 @@ export const PanelTabStyles = css`
 		opacity: ${disabledOpacity};
 	}
 	:host([disabled]:hover) {
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		background: transparent;
 	}
 	:host([aria-selected='true']) {
 		background: transparent;
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host([aria-selected='true']:hover) {
 		background: transparent;
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host([aria-selected='true']:active) {
 		background: transparent;
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host(:${focusVisible}) {
 		outline: none;
-		border: solid calc(${borderWidth} * 1px) ${panelTabActiveBorderColor};
+		border: solid calc(${borderWidth} * 1px) ${panelTabActiveBorder};
 		box-shadow: 0 0 0 calc((${focusBorder} - ${borderWidth}) * 1px)
 			transparent;
 	}
