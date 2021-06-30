@@ -12,7 +12,7 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorder,
+	fontFamily,
 	panelTabActiveBorder,
 	panelTabActiveForeground,
 	panelTabForeground,
@@ -23,7 +23,7 @@ import {
 export const PanelTabStyles = css`
 	${display('inline-flex')} :host {
 		box-sizing: border-box;
-		font-family: var(--body-font);
+		font-family: ${fontFamily};
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
 		height: calc(${designUnit} * 7px);
@@ -50,7 +50,7 @@ export const PanelTabStyles = css`
 		opacity: ${disabledOpacity};
 	}
 	:host([disabled]:hover) {
-		color: ${panelTabActiveForeground};
+		color: ${panelTabForeground};
 		background: transparent;
 	}
 	:host([aria-selected='true']) {
@@ -71,10 +71,11 @@ export const PanelTabStyles = css`
 	:host(:${focusVisible}) {
 		outline: none;
 		border: solid calc(${borderWidth} * 1px) ${panelTabActiveBorder};
-		box-shadow: 0 0 0 calc((${focusBorder} - ${borderWidth}) * 1px)
-			transparent;
 	}
 	:host(:focus) {
 		outline: none;
+	}
+	::slotted(vscode-badge) {
+		margin-inline-start: calc(${designUnit} * 2px);
 	}
 `;

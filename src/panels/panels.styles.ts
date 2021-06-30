@@ -6,6 +6,8 @@ import {display} from '@microsoft/fast-foundation';
 import {
 	cornerRadius,
 	designUnit,
+	fontFamily,
+	panelTabActiveForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -13,10 +15,10 @@ import {
 export const PanelsStyles = css`
 	${display('grid')} :host {
 		box-sizing: border-box;
-		font-family: var(--body-font);
+		font-family: ${fontFamily};
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		color: #a0a0a0;
+		color: #ffffff;
 		grid-template-columns: auto 1fr auto;
 		grid-template-rows: auto 1fr;
 	}
@@ -39,9 +41,9 @@ export const PanelsStyles = css`
 		grid-row: 2;
 		grid-column: 1;
 		width: 100%;
-		height: 1px;
+		height: calc((${designUnit} / 4) * 1px);
 		justify-self: center;
-		background: #ffffff;
+		background: ${panelTabActiveForeground};
 		margin: 0;
 		border-radius: calc(${cornerRadius} * 1px);
 	}
