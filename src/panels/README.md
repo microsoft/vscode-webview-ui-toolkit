@@ -8,10 +8,9 @@ The `vscode-panels` component is a web component implementation of a [tab](https
 
 ## Panels Attributes
 
-| Attribute         | Type    | Description                                  |
-| ----------------- | ------- | -------------------------------------------- |
-| `activeid`        | string  | The id of the active panel tab.              |
-| `activeindicator` | boolean | Whether or not to show the active indicator. |
+| Attribute  | Type   | Description                     |
+| ---------- | ------ | ------------------------------- |
+| `activeid` | string | The id of the active panel tab. |
 
 ## Panel Tab Attributes
 
@@ -59,23 +58,6 @@ None
 </vscode-panels>
 ```
 
-### Active Indicator Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-no-active-indicator)
-
-```html
-<vscode-panels activeindicator="false">
-	<vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>
-	<vscode-panel-tab id="tab-2">OUTPUT</vscode-panel-tab>
-	<vscode-panel-tab id="tab-3">DEBUG CONSOLE</vscode-panel-tab>
-	<vscode-panel-tab id="tab-4">TERMINAL</vscode-panel-tab>
-	<vscode-panel-view id="view-1">Problems content.</vscode-panel-view>
-	<vscode-panel-view id="view-2">Output content.</vscode-panel-view>
-	<vscode-panel-view id="view-3">Debug content.</vscode-panel-view>
-	<vscode-panel-view id="view-4">Terminal content.</vscode-panel-view>
-</vscode-panels>
-```
-
 ### Disabled Attribute
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-disabled)
@@ -93,38 +75,40 @@ None
 </vscode-panels>
 ```
 
-### Custom Icon
+### With VS Code Badge
 
-Instead of text, an icon can be used as the tab title.
+In addition to text, a VS Code Badge can be used in a panel tab to highlight an item, attract attention, and/or flag status.
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-custom-tab-icons)
 
 ```html
-<!-- Note: Using VS Code Codicon Library -->
-
 <vscode-panels>
 	<vscode-panel-tab id="tab-1">
-		<span class="codicon codicon-heart"></span>
+		PROBLEMS
+		<vscode-badge appearance="secondary">1</vscode-badge>
 	</vscode-panel-tab>
 	<vscode-panel-tab id="tab-2">
-		<span class="codicon codicon-database"></span>
+		OUTPUT
+		<vscode-badge appearance="secondary">1</vscode-badge>
 	</vscode-panel-tab>
 	<vscode-panel-tab id="tab-3">
-		<span class="codicon codicon-check"></span>
+		DEBUG CONSOLE
+		<vscode-badge appearance="secondary">1</vscode-badge>
 	</vscode-panel-tab>
 	<vscode-panel-tab id="tab-4">
-		<span class="codicon codicon-add"></span>
+		TERMINAL
+		<vscode-badge appearance="secondary">1</vscode-badge>
 	</vscode-panel-tab>
-	<vscode-panel-view id="view-1"> Tab Panel Content </vscode-panel-view>
-	<vscode-panel-view id="view-2"> Tab Panel Content </vscode-panel-view>
-	<vscode-panel-view id="view-3"> Tab Panel Content </vscode-panel-view>
-	<vscode-panel-view id="view-4"> Tab Panel Content </vscode-panel-view>
+	<vscode-panel-view id="view-1"> Problems Content </vscode-panel-view>
+	<vscode-panel-view id="view-2"> Output Content </vscode-panel-view>
+	<vscode-panel-view id="view-3"> Debug Console Content </vscode-panel-view>
+	<vscode-panel-view id="view-4"> Terminal Content </vscode-panel-view>
 </vscode-panels>
 ```
 
 ### Complex Content
 
-A `vscode-tab-panel` can also contain any valid HTML.
+A `vscode-panel-view` can also contain any valid HTML.
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-complex-panel-view-content)
 
