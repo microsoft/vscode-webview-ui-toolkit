@@ -6,7 +6,7 @@ import {display} from '@microsoft/fast-foundation';
 import {
 	cornerRadius,
 	designUnit,
-	progressBackgroundColor,
+	progressBackground,
 } from '../design-tokens';
 
 export const ProgressBarStyles = css`
@@ -27,7 +27,7 @@ export const ProgressBarStyles = css`
 		position: relative;
 	}
 	.determinate {
-		background-color: ${progressBackgroundColor};
+		background-color: ${progressBackground};
 		border-radius: calc(${cornerRadius} * 1px);
 		height: 100%;
 		transition: all 0.2s ease-in-out;
@@ -44,7 +44,7 @@ export const ProgressBarStyles = css`
 	.indeterminate-indicator-1 {
 		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 		animation: indeterminate-1 2s infinite;
-		background-color: ${progressBackgroundColor};
+		background-color: ${progressBackground};
 		border-radius: calc(${cornerRadius} * 1px);
 		height: 100%;
 		position: absolute;
@@ -54,7 +54,7 @@ export const ProgressBarStyles = css`
 	.indeterminate-indicator-2 {
 		animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 		animation: indeterminate-2 2s infinite;
-		background-color: ${progressBackgroundColor};
+		background-color: ${progressBackground};
 		border-radius: calc(${cornerRadius} * 1px);
 		height: 100%;
 		position: absolute;
