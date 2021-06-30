@@ -12,7 +12,6 @@ export type TextFieldArgs = {
 	minLength?: number;
 	maxLength?: number;
 	size?: number;
-	isRequired?: boolean;
 	isReadOnly?: boolean;
 	isDisabled?: boolean;
 	isAutoFocused?: boolean;
@@ -28,7 +27,6 @@ export function createTextField({
 	minLength,
 	maxLength,
 	size,
-	isRequired,
 	isReadOnly,
 	isDisabled,
 	isAutoFocused,
@@ -57,9 +55,6 @@ export function createTextField({
 	}
 	if (size) {
 		textField.setAttribute('size', size.toString());
-	}
-	if (isRequired) {
-		textField.setAttribute('required', '');
 	}
 	if (isReadOnly) {
 		textField.setAttribute('readonly', '');
