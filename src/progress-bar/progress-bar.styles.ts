@@ -3,11 +3,7 @@
 
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
-import {
-	cornerRadius,
-	designUnit,
-	progressBackground,
-} from '../design-tokens';
+import {cornerRadius, designUnit, progressBackground} from '../design-tokens';
 
 export const ProgressBarStyles = css`
 	${display('flex')} :host {
