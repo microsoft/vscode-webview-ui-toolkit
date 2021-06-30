@@ -37,12 +37,12 @@ import {
 	optionActiveSelectionBackground,
 	optionActiveSelectionForeground,
 	optionForeground,
-	panelTabActiveBorderColor,
-	panelTabActiveForegroundColor,
-	panelTabForegroundColor,
-	panelViewBackgroundColor,
-	panelViewBorderColor,
-	progressBackgroundColor,
+	panelTabActiveBorder,
+	panelTabActiveForeground,
+	panelTabForeground,
+	panelViewBackground,
+	panelViewBorder,
+	progressBackground,
 	typeRampBaseFontSize,
 } from '../../design-tokens';
 
@@ -99,11 +99,11 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-input-border': inputBorder,
 	'--vscode-input-placeholderForeground': inputPlaceholderForeground,
 	// ---- Progress Bars & Rings ----
-	'--vscode-progressBar-background': progressBackgroundColor,
+	'--vscode-progressBar-background': progressBackground,
 	// ---- Panels ----
-	'--vscode-panelTitle-inactiveForeground': panelTabForegroundColor,
-	'--vscode-panelTitle-activeForeground': panelTabActiveForegroundColor,
-	'--vscode-panelTitle-activeBorder': panelTabActiveBorderColor,
-	'--vscode-panel-background': panelViewBackgroundColor,
-	'--vscode-panel-border': panelViewBorderColor,
+	'--vscode-panelTitle-inactiveForeground': panelTabForeground,
+	'--vscode-panelTitle-activeForeground': panelTabActiveForeground,
+	'--vscode-panelTitle-activeBorder': panelTabActiveBorder,
+	'--vscode-panel-background': panelViewBackground,
+	'--vscode-panel-border': panelViewBorder,
 };
