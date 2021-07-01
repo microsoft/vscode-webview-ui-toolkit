@@ -7,6 +7,7 @@ import {
 	cornerRadius,
 	designUnit,
 	fontFamily,
+	foreground,
 	panelTabActiveForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -18,7 +19,7 @@ export const PanelsStyles = css`
 		font-family: ${fontFamily};
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		color: #ffffff;
+		color: ${foreground};
 		grid-template-columns: auto 1fr auto;
 		grid-template-rows: auto 1fr;
 	}
