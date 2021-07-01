@@ -12,10 +12,10 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
-	focusBorder,
-	panelTabActiveBorderColor,
-	panelTabActiveForegroundColor,
-	panelTabForegroundColor,
+	fontFamily,
+	panelTabActiveBorder,
+	panelTabActiveForeground,
+	panelTabForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -23,12 +23,12 @@ import {
 export const PanelTabStyles = css`
 	${display('inline-flex')} :host {
 		box-sizing: border-box;
-		font-family: var(--body-font);
+		font-family: ${fontFamily};
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
 		height: calc(${designUnit} * 7px);
 		padding: calc(${designUnit} * 1px) 0;
-		color: ${panelTabForegroundColor};
+		color: ${panelTabForeground};
 		fill: currentcolor;
 		border-radius: calc(${cornerRadius} * 1px);
 		border: solid calc(${borderWidth} * 1px) transparent;
@@ -38,11 +38,11 @@ export const PanelTabStyles = css`
 		cursor: pointer;
 	}
 	:host(:hover) {
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host(:active) {
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host([disabled]) {
@@ -50,31 +50,32 @@ export const PanelTabStyles = css`
 		opacity: ${disabledOpacity};
 	}
 	:host([disabled]:hover) {
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabForeground};
 		background: transparent;
 	}
 	:host([aria-selected='true']) {
 		background: transparent;
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host([aria-selected='true']:hover) {
 		background: transparent;
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host([aria-selected='true']:active) {
 		background: transparent;
-		color: ${panelTabActiveForegroundColor};
+		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
 	:host(:${focusVisible}) {
 		outline: none;
-		border: solid calc(${borderWidth} * 1px) ${panelTabActiveBorderColor};
-		box-shadow: 0 0 0 calc((${focusBorder} - ${borderWidth}) * 1px)
-			transparent;
+		border: solid calc(${borderWidth} * 1px) ${panelTabActiveBorder};
 	}
 	:host(:focus) {
 		outline: none;
+	}
+	::slotted(vscode-badge) {
+		margin-inline-start: calc(${designUnit} * 2px);
 	}
 `;

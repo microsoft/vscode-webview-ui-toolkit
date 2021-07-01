@@ -23,6 +23,7 @@ export const disabledOpacity = create<number>('disabled-opacity').withDefault(
 export const focusBorder = create<string>('focus-border').withDefault(
 	'#007fd4'
 );
+export const foreground = create<string>('foreground').withDefault('#cccccc');
 export const fontFamily = create<string>('font-family').withDefault(
 	'-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol'
 );
@@ -167,14 +168,14 @@ export const dividerBackground = create<string>(
  * Dropdown design tokens.
  */
 export const dropdownBackground = create<string>(
-	'dropdown-background-color'
+	'dropdown-background'
 ).withDefault('#3c3c3c');
 export const dropdownForeground = create<string>(
-	'dropdown-foreground-color'
+	'dropdown-foreground'
 ).withDefault('#f0f0f0');
-export const dropdownBorder = create<string>(
-	'dropdown-border-color'
-).withDefault('#3c3c3c');
+export const dropdownBorder = create<string>('dropdown-border').withDefault(
+	'#3c3c3c'
+);
 export const dropdownListMaxHeight = create<string>(
 	'dropdown-list-max-height'
 ).withDefault('200px');
@@ -196,16 +197,16 @@ export const optionActiveSelectionForeground = create<string>(
 /**
  * Text Field & Area design tokens.
  */
-export const inputBackground = create<string>(
-	'input-background-color'
-).withDefault('#3c3c3c');
-export const inputForeground = create<string>(
-	'input-foreground-color'
-).withDefault('#cccccc');
+export const inputBackground = create<string>('input-background').withDefault(
+	'#3c3c3c'
+);
+export const inputForeground = create<string>('input-foreground').withDefault(
+	'#cccccc'
+);
 export const inputPlaceholderForeground = create<string>(
-	'input-placeholder-foreground-color'
+	'input-placeholder-foreground'
 ).withDefault('#cccccc');
-export const inputBorder = create<string>('input-border-color').withDefault(
+export const inputBorder = create<string>('input-border').withDefault(
 	'#3c3c3c'
 );
 
@@ -222,27 +223,27 @@ export const linkActiveForeground = create<string>(
 /**
  * Progress Bar & Ring design tokens.
  */
-export const progressBackgroundColor = create<string>(
-	'progress-background-color'
+export const progressBackground = create<string>(
+	'progress-background'
 ).withDefault('#0e70c0');
 
 /**
  * Panels design tokens.
  */
-export const panelViewBackgroundColor = create<string>(
-	'panel-view-background-color'
+export const panelViewBackground = create<string>(
+	'panel-view-background'
 ).withDefault('#1e1e1e');
-export const panelViewBorderColor = create<string>(
-	'panel-view-border-color'
-).withDefault('#80808059');
-export const panelTabForegroundColor = create<string>(
-	'panel-tab-foreground-color'
+export const panelViewBorder = create<string>('panel-view-border').withDefault(
+	'#80808059'
+);
+export const panelTabForeground = create<string>(
+	'panel-tab-foreground'
 ).withDefault('#e7e7e799');
-export const panelTabActiveForegroundColor = create<string>(
-	'panel-tab-active-foreground-color'
+export const panelTabActiveForeground = create<string>(
+	'panel-tab-active-foreground'
 ).withDefault('#e7e7e7');
-export const panelTabActiveBorderColor = create<string>(
-	'panel-tab-active-border-color'
+export const panelTabActiveBorder = create<string>(
+	'panel-tab-active-border'
 ).withDefault('#e7e7e7');
 
 /**

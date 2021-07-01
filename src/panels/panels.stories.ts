@@ -12,7 +12,6 @@ export default {
 				options: ['Problems', 'Output', 'Debug Console', 'Terminal'],
 			},
 		},
-		activeIndicator: {control: 'boolean'},
 		hasComplexContent: {control: 'boolean'},
 		tabMetaData: {control: 'array'},
 	},
@@ -30,13 +29,12 @@ const Template = ({...args}: PanelsArgs) => {
 export const Default: any = Template.bind({});
 Default.args = {
 	activeTab: '',
-	activeIndicator: true,
 	hasComplexContent: false,
 	tabMetaData: [
-		{title: 'PROBLEMS', isDisabled: false, customIcon: false},
-		{title: 'OUTPUT', isDisabled: false, customIcon: false},
-		{title: 'DEBUG CONSOLE', isDisabled: false, customIcon: false},
-		{title: 'TERMINAL', isDisabled: false, customIcon: false},
+		{title: 'PROBLEMS', isDisabled: false, hasBadge: false},
+		{title: 'OUTPUT', isDisabled: false, hasBadge: false},
+		{title: 'DEBUG CONSOLE', isDisabled: false, hasBadge: false},
+		{title: 'TERMINAL', isDisabled: false, hasBadge: false},
 	],
 };
 Default.parameters = {
@@ -51,10 +49,10 @@ export const WithDisabled: any = Template.bind({});
 WithDisabled.args = {
 	...Default.args,
 	tabMetaData: [
-		{title: 'PROBLEMS', isDisabled: true, customIcon: false},
-		{title: 'OUTPUT', isDisabled: true, customIcon: false},
-		{title: 'DEBUG CONSOLE', isDisabled: true, customIcon: false},
-		{title: 'TERMINAL', isDisabled: true, customIcon: false},
+		{title: 'PROBLEMS', isDisabled: true, hasBadge: false},
+		{title: 'OUTPUT', isDisabled: true, hasBadge: false},
+		{title: 'DEBUG CONSOLE', isDisabled: true, hasBadge: false},
+		{title: 'TERMINAL', isDisabled: true, hasBadge: false},
 	],
 };
 WithDisabled.parameters = {
@@ -78,33 +76,20 @@ WithActiveTab.parameters = {
 	},
 };
 
-export const WithNoActiveIndicator: any = Template.bind({});
-WithNoActiveIndicator.args = {
-	...Default.args,
-	activeIndicator: false,
-};
-WithNoActiveIndicator.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-panels activeindicator="false">\n\t<vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-2">OUTPUT</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-3">DEBUG CONSOLE</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-4">TERMINAL</vscode-panel-tab>\n\t<vscode-panel-view id="view-1">\n\t\tProblems Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-2">\n\t\tOutput Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-3">\n\t\tDebug Console Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-4">\n\t\tTerminal Content\n\t</vscode-panel-view>\n</vscode-panels>`,
-		},
-	},
-};
-
-export const WithCustomTabIcons: any = Template.bind({});
-WithCustomTabIcons.args = {
+export const WithVSCodeBadge: any = Template.bind({});
+WithVSCodeBadge.args = {
 	...Default.args,
 	tabMetaData: [
-		{title: 'Tab Panel', isDisabled: false, customIcon: true},
-		{title: 'Tab Panel', isDisabled: false, customIcon: true},
-		{title: 'Tab Panel', isDisabled: false, customIcon: true},
-		{title: 'Tab Panel', isDisabled: false, customIcon: true},
+		{title: 'PROBLEMS', isDisabled: false, hasBadge: true},
+		{title: 'OUTPUT', isDisabled: false, hasBadge: true},
+		{title: 'DEBUG CONSOLE', isDisabled: false, hasBadge: true},
+		{title: 'TERMINAL', isDisabled: false, hasBadge: true},
 	],
 };
-WithCustomTabIcons.parameters = {
+WithVSCodeBadge.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-panels>\n\t<vscode-panel-tab id="tab-1">\n\t\t<span class="codicon codicon-heart"></span>\n\t</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-2">\n\t\t<span class="codicon codicon-database"></span>\n\t</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-3">\n\t\t<span class="codicon codicon-check"></span>\n\t</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-4">\n\t\t<span class="codicon codicon-add"></span>\n\t</vscode-panel-tab>\n\t<vscode-panel-view id="view-1">\n\t\tTab Panel Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-2">\n\t\tTab Panel Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-3">\n\t\tTab Panel Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-4">\n\t\tTab Panel Content\n\t</vscode-panel-view>\n</vscode-panels>`,
+			code: `<vscode-panels>\n\t<vscode-panel-tab id="tab-1">\n\t\tPROBLEMS\n\t\t<vscode-badge appearance="secondary">1</vscode-badge>\n\t</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-2">\n\t\tOUTPUT\n\t\t<vscode-badge appearance="secondary">1</vscode-badge>\n\t</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-3">\n\t\tDEBUG CONSOLE\n\t\t<vscode-badge appearance="secondary">1</vscode-badge>\n\t</vscode-panel-tab>\n\t<vscode-panel-tab id="tab-4">\n\t\tTERMINAL\n\t\t<vscode-badge appearance="secondary">1</vscode-badge>\n\t</vscode-panel-tab>\n\t<vscode-panel-view id="view-1">\n\t\tProblems Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-2">\n\t\tOutput Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-3">\n\t\tDebug Console Content\n\t</vscode-panel-view>\n\t<vscode-panel-view id="view-4">\n\t\tTerminal Content\n\t</vscode-panel-view>\n</vscode-panels>`,
 		},
 	},
 };
@@ -113,10 +98,10 @@ export const WithComplexPanelViewContent: any = Template.bind({});
 WithComplexPanelViewContent.args = {
 	...Default.args,
 	tabMetaData: [
-		{title: 'Smoothie Maker #1', isDisabled: false, customIcon: false},
-		{title: 'Smoothie Maker #2', isDisabled: false, customIcon: false},
-		{title: 'Smoothie Maker #3', isDisabled: false, customIcon: false},
-		{title: 'Smoothie Maker #4', isDisabled: false, customIcon: false},
+		{title: 'PROBLEMS', isDisabled: false, hasBadge: false},
+		{title: 'OUTPUT', isDisabled: false, hasBadge: false},
+		{title: 'DEBUG CONSOLE', isDisabled: false, hasBadge: false},
+		{title: 'TERMINAL', isDisabled: false, hasBadge: false},
 	],
 	hasComplexContent: true,
 };

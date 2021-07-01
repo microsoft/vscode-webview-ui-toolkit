@@ -7,14 +7,12 @@ import {createPanelView} from './createPanelView';
 
 export type PanelsArgs = {
 	activeTab?: string;
-	activeIndicator?: boolean;
 	hasComplexContent?: boolean;
-	tabMetaData: any;
+	tabMetaData?: any;
 };
 
 export function createPanels({
 	activeTab,
-	activeIndicator,
 	hasComplexContent,
 	tabMetaData,
 }: PanelsArgs) {
@@ -32,9 +30,6 @@ export function createPanels({
 			convertActiveTabNameToTabId(activeTab.toLowerCase(), tabTitles)
 		);
 	}
-	if (!activeIndicator) {
-		panels.setAttribute('activeindicator', activeIndicator.toString());
-	}
 
 	return panels;
 }
@@ -50,7 +45,7 @@ function createTabsWithChildren(
 		const panelTab = createPanelTab({
 			title: tabMetaData[i].title,
 			isDisabled: tabMetaData[i].isDisabled,
-			customIcon: tabMetaData[i].customIcon,
+			hasBadge: tabMetaData[i].hasBadge,
 		});
 		panelTab.setAttribute('id', `tab-${i + 1}`);
 		panels.appendChild(panelTab);

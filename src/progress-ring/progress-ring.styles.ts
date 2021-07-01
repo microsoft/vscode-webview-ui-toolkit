@@ -3,7 +3,7 @@
 
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
-import {designUnit, progressBackgroundColor} from '../design-tokens';
+import {designUnit, progressBackground} from '../design-tokens';
 
 export const ProgressRingStyles = css`
 	${display('flex')} :host {
@@ -24,7 +24,7 @@ export const ProgressRingStyles = css`
 	}
 	.determinate {
 		fill: none;
-		stroke: ${progressBackgroundColor};
+		stroke: ${progressBackground};
 		stroke-width: calc(${designUnit} / 2 * 1px);
 		stroke-linecap: square;
 		transform-origin: 50% 50%;
@@ -33,7 +33,7 @@ export const ProgressRingStyles = css`
 	}
 	.indeterminate-indicator-1 {
 		fill: none;
-		stroke: ${progressBackgroundColor};
+		stroke: ${progressBackground};
 		stroke-width: calc(${designUnit} / 2 * 1px);
 		stroke-linecap: square;
 		transform-origin: 50% 50%;
