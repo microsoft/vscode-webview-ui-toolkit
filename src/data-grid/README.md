@@ -215,6 +215,8 @@ This should contain the key from the `rowsData` object (representing a specific 
 
 This is where you define the custom title for a given column.
 
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--with-custom-titles)
+
 ```html
 <vscode-data-grid id="basic-grid"></vscode-data-grid>
 ```
