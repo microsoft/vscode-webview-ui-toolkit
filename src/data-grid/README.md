@@ -1,6 +1,6 @@
 # VS Code Data Grid
 
-The `vscode-data-grid` enables developers to display an array of data in a tabular layout. The component is created using three components that work together:
+The `vscode-data-grid` enables developers to display data in a tabular layout. The data grid is created using three components that work together:
 
 -   `<vscode-data-grid>`: The top level container element.
 -   `<vscode-data-grid-row>`: Displays a single row of data associated with a single record or a header row.
@@ -11,7 +11,7 @@ The `vscode-data-grid` enables developers to display an array of data in a tabul
 | Attribute               | Type   | Description                                                                            |
 | ----------------------- | ------ | -------------------------------------------------------------------------------------- |
 | `generate-header`       | string | The type of header row that should be generated. Options: `none`, `default`, `sticky`. |
-| `grid-template-columns` | string | A string that gets applied to the the `grid-template-columns` attribute of child rows. |
+| `grid-template-columns` | string | A string that gets applied to the `grid-template-columns` attribute of child rows.     |
 
 ## Data Grid Row Attributes
 
@@ -100,7 +100,7 @@ There are three values that can be passed to the attribute:
 
 **Important Note**
 
-As shown above in the Basic Usage example, if the `vscode-data-grid` is defined using only HTML this attribute should be set to `none` otherwise an attempt at generating a default header row will occur and result in an undefined header row being added to the DOM.
+As shown above in the Basic Usage example, if the `vscode-data-grid` is defined using only HTML this attribute should be set to `none` and the header row should be manually created with HTML.
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--with-no-header)
 
@@ -220,204 +220,20 @@ This is where you define the custom title for a given column.
 ```
 
 ```javascript
-document.getElementById('basic-grid').rowsData = [
+const basicGrid = document.getElementById('basic-grid');
+
+// Populate grid with data
+basicGrid.rowsData = [
 	{ColumnKey1: 'Cell Data', ColumnKey2: 'Cell Data', ColumnKey3: 'Cell Data', ColumnKey4: 'Cell Data'},
 	{ColumnKey1: 'Cell Data', ColumnKey2: 'Cell Data', ColumnKey3: 'Cell Data', ColumnKey4: 'Cell Data'},
 	{ColumnKey1: 'Cell Data', ColumnKey2: 'Cell Data', ColumnKey3: 'Cell Data', ColumnKey4: 'Cell Data'},
 ];
 
-document.getElementById('basic-grid').columnDefinitions = [
+// Add custom column titles to grid
+basicGrid.columnDefinitions = [
 	{columnDataKey: 'ColumnKey1', title: 'A Custom Header Title'},
 	{columnDataKey: 'ColumnKey2', title: 'Another Custom Title'},
 	{columnDataKey: 'ColumnKey3', title: 'Title Is Custom'},
 	{columnDataKey: 'ColumnKey4', title: 'Custom Title'},
 ];
-```
-
-### Custom Cell Element
-
-While a `vscode-data-grid-cell` usually contains text, it can also contain any valid HTML, such as a `<vscode-button>`.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-custom-element)
-
-The custom cell element can be defined using only HTML by simply inserting the element(s) as a child of the `vscode-data-grid-cell`. The major pitfall of this approach is that this will have to be manually done for every cell in the data grid.
-
-```html
-<vscode-data-grid-cell>
-	<vscode-button>Cell Data</vscode-button>
-</vscode-data-grid-cell>
-```
-
-A more powerful and programmatic way of defining a custom cell element is to create a cell template using Microsoft's FAST Framework (the technology that this component library is built from).
-
-A simple example is shown below, but further documentation for defining a template can be found [here](https://www.fast.design/docs/fast-element/declaring-templates).
-
-```html
-<vscode-data-grid id="basic-grid"></vscode-data-grid>
-```
-
-```typescript
-import {html} from '@microsoft/fast-element';
-import type {DataGridCell} from '@microsoft/fast-foundation';
-
-document.getElementById('basic-grid').rowsData = [
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-];
-
-document.getElementById('basic-grid').columnDefinitions = [
-	{
-		columnDataKey: 'Header1',
-		cellTemplate: buttonCellTemplate,
-		cellFocusTargetCallback: getFocusTarget,
-	},
-	{
-		columnDataKey: 'Header2',
-		cellTemplate: buttonCellTemplate,
-		cellFocusTargetCallback: getFocusTarget,
-	},
-	{
-		columnDataKey: 'Header3',
-		cellTemplate: buttonCellTemplate,
-		cellFocusTargetCallback: getFocusTarget,
-	},
-	{
-		columnDataKey: 'Header4',
-		cellTemplate: buttonCellTemplate,
-		cellFocusTargetCallback: getFocusTarget,
-	},
-];
-
-const buttonCellTemplate = html<DataGridCell>`
-	<template>
-		<vscode-button @click="${handleClick}" style="width: 100%;">
-			${cell => populateWithCellData(cell)}
-		</vscode-button>
-	</template>
-`;
-
-function handleClick(): void {
-	alert('Cell Clicked!');
-}
-
-function populateWithCellData(cell: DataGridCell) {
-	if (cell.columnDefinition) {
-		const columnMetaData = cell.columnDefinition;
-		const columnKey = columnMetaData.columnDataKey;
-
-		if (cell.cellType === 'columnheader') {
-			// If the cell is a header cell, return the cell title or column key
-			return columnMetaData.title ? columnMetaData.title : columnKey;
-		} else {
-			// If the cell is a default cell, return the cell data
-			if (cell.rowData) {
-				const parentRow = cell.rowData;
-				const cellData = parentRow[columnKey];
-				return cellData;
-			}
-		}
-	}
-}
-
-function getFocusTarget(cell: DataGridCell): HTMLElement {
-	return cell.querySelector('vscode-button');
-}
-```
-
-### Custom Header Cell Element
-
-A header cell can also contain and render abitrary HTML.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb-item--with-custom-element)
-
-Just like the custom cell element, a custom header cell can be defined using only HTML by simply inserting the element(s) as a child of the `vscode-data-grid-cell` that defines the `cell-type="columnheader"` attribute. Again, the major pitfall of this approach is that this will have to be manually done for every header cell in the data grid.
-
-```html
-<vscode-data-grid-cell cell-type="columnheader">
-	<vscode-button>Cell Data</vscode-button>
-</vscode-data-grid-cell>
-```
-
-A more powerful and programmatic way of defining a custom header cell element is to create a header cell template using Microsoft's FAST Framework (the technology that this component library is built from).
-
-A simple example is shown below, but further documentation for defining a template can be found [here](https://www.fast.design/docs/fast-element/declaring-templates).
-
-**Note**
-
-The major difference between this example and the custom cell example is that the array of objects that is passed to the `columnDefintions` property uses the `headerCellTemplate` and `headerCellFocusTargetCallback` keys (instead of `cellTemplate` and `cellFocusTargetCallback`).
-
-Additionally, all of these keys can be added to each object in the array to create a data grid that has _both_ custom cells and header cells.
-
-```html
-<vscode-data-grid id="basic-grid"></vscode-data-grid>
-```
-
-```typescript
-import {html} from '@microsoft/fast-element';
-import type {DataGridCell} from '@microsoft/fast-foundation';
-
-document.getElementById('basic-grid').rowsData = [
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-];
-
-document.getElementById('basic-grid').columnDefinitions = [
-	{
-		columnDataKey: 'Header1',
-		headerCellTemplate: buttonCellTemplate,
-		headerCellFocusTargetCallback: getFocusTarget,
-	},
-	{
-		columnDataKey: 'Header2',
-		headerCellTemplate: buttonCellTemplate,
-		headerCellFocusTargetCallback: getFocusTarget,
-	},
-	{
-		columnDataKey: 'Header3',
-		headerCellTemplate: buttonCellTemplate,
-		headerCellFocusTargetCallback: getFocusTarget,
-	},
-	{
-		columnDataKey: 'Header4',
-		headerCellTemplate: buttonCellTemplate,
-		headerCellFocusTargetCallback: getFocusTarget,
-	},
-];
-
-const buttonCellTemplate = html<DataGridCell>`
-	<template>
-		<vscode-button @click="${handleClick}" style="width: 100%;">
-			${cell => populateWithCellData(cell)}
-		</vscode-button>
-	</template>
-`;
-
-function handleClick(): void {
-	alert('Cell Clicked!');
-}
-
-function populateWithCellData(cell: DataGridCell) {
-	if (cell.columnDefinition) {
-		const columnMetaData = cell.columnDefinition;
-		const columnKey = columnMetaData.columnDataKey;
-
-		if (cell.cellType === 'columnheader') {
-			// If the cell is a header cell, return the cell title or column key
-			return columnMetaData.title ? columnMetaData.title : columnKey;
-		} else {
-			// If the cell is a default cell, return the cell data
-			if (cell.rowData) {
-				const parentRow = cell.rowData;
-				const cellData = parentRow[columnKey];
-				return cellData;
-			}
-		}
-	}
-}
-
-function getFocusTarget(cell: DataGridCell): HTMLElement {
-	return cell.querySelector('vscode-button');
-}
 ```
