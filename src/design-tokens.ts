@@ -23,6 +23,7 @@ export const disabledOpacity = create<number>('disabled-opacity').withDefault(
 export const focusBorder = create<string>('focus-border').withDefault(
 	'#007fd4'
 );
+export const foreground = create<string>('foreground').withDefault('#cccccc');
 export const fontFamily = create<string>('font-family').withDefault(
 	'-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol'
 );

@@ -28,6 +28,7 @@ import {
 	focusBorder,
 	fontFamily,
 	fontWeight,
+	foreground,
 	inputBackground,
 	inputBorder,
 	inputForeground,
@@ -53,6 +54,7 @@ import {
 export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Base Colors ----
 	'--vscode-focusBorder': focusBorder,
+	'--vscode-foreground': foreground,
 	// ---- Contrast Styles ----
 	'--vscode-contrastActiveBorder': contrastActiveBorder,
 	'--vscode-contrastBorder': contrastBorder,
