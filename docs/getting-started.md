@@ -96,7 +96,7 @@ When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd
 
 With an extension created, we can now install the toolkit via a private Azure NPM package
 
-Connect to the following Azure Artifacts feed to install the package here and create a .npmrc file in the root directory of any extension you create that looks like this:
+Connect to the following Azure Artifacts feed to install the package [here](https://dev.azure.com/devdiv/OnlineServices/_packaging?_a=package&feed=vscode-webview-toolkit&package=vscode-webview-toolkit&protocolType=Npm&version=0.5.0) and create a .npmrc file in the root directory of any extension you create that looks like this:
 
 ```
 registry=https://pkgs.dev.azure.com/devdiv/OnlineServices/_packaging/vscode-webview-toolkit/npm/registry/
