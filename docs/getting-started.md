@@ -2,10 +2,10 @@
 
 This guide will cover the following steps to get you up and running with the VS Code Webview Toolkit.
 
-1. Create a webview-based extension.
-2. Install and set up the toolkit.
+1. Create a webview-based extension
+2. Install and set up the toolkit
 
-## Create A Webview-Based Extension
+## Create a webview-based extension
 
 Before installing the toolkit we need to create a webview-based extension to use the toolkit in. The following steps are taken directly from the VS Code [Your First Extension Guide](https://code.visualstudio.com/api/get-started/your-first-extension).
 
@@ -33,7 +33,7 @@ yo code
 code ./helloworld
 ```
 
-### Create A Webview
+### Create a webview
 
 With this basic extension created, we now need to create a webview. The following steps are an adapted version of the steps provided in the [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)––for more information about Webviews visit the guide.
 
@@ -82,7 +82,7 @@ function getWebviewContent() {
 }
 ```
 
-### Test That It All Works
+### Test that it all works
 
 Congratulations! You have officially created a basic webview extension.
 
@@ -92,7 +92,7 @@ When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd
 
 ![Testing That The Webview Extension Works](./assets/webview-test.gif)
 
-## Install & Set Up The Toolkit
+## Install & set up the toolkit
 
 With an extension created, we can now install the toolkit with the following command.
 
@@ -100,7 +100,7 @@ With an extension created, we can now install the toolkit with the following com
 npm install --save @microsoft/vscode-webview-toolkit
 ```
 
-### Using The Toolkit Inside A Webview
+### Using The toolkit inside a webview
 
 With the package installed, we need to adjust the project so the toolkit is usable within our webview. We'll start by updating the `getWebviewContent` content function we defined earlier to accept two new parameters.
 
@@ -119,7 +119,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 ```
 
-### Create A Toolkit URI
+### Create a toolkit URI
 
 With those changes we can now use some VS Code APIs to create a URI pointing to the toolkit package. These API calls can get a bit verbose however so we'll also create a small helper function to keep our code clean.
 
@@ -135,7 +135,7 @@ function getUri(webview: vscode.Webview, extensionUri: vscode.Uri, pathList: str
 }
 ```
 
-### Pass The URI Into The Webview
+### Pass The URI into the webview
 
 With access to the toolkit URI we can pass it into our webview context via a regular `<script>` tag like so:
 
@@ -160,7 +160,7 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 }
 ```
 
-### Test That It All Works
+### Test that it all works
 
 Let's check that everything works by adding a `<vscode-button>` to the webview and then opening the extension in the Extension Development Host window by pressing `F5`.
 
@@ -194,7 +194,7 @@ Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), sear
 
 ![Testing That The Toolkit Theme Utilities Work](./assets/toolkit-theme-test.gif)
 
-## Next Steps
+## Next steps
 
 Congratulations on getting started with the VS Code Webview Toolkit! 🎊
 
