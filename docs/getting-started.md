@@ -94,7 +94,7 @@ When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd
 
 ## Install & set up the toolkit
 
-With an extension created, we can now install the toolkit via a private Azure NPM package
+With an extension created, we can now install the toolkit via a private Azure NPM package.
 
 Connect to the following Azure Artifacts feed to install the package [here](https://dev.azure.com/devdiv/OnlineServices/_packaging?_a=package&feed=vscode-webview-toolkit&package=vscode-webview-toolkit&protocolType=Npm&version=0.5.0) and create a .npmrc file in the root directory of any extension you create that looks like this:
 
@@ -104,7 +104,7 @@ registry=https://pkgs.dev.azure.com/devdiv/OnlineServices/_packaging/vscode-webv
 always-auth=true
 ```
 
-Install the package using this command
+Install the package using this command.
 
 ```
 npm install --save vscode-webview-toolkit
@@ -145,7 +145,7 @@ function getUri(webview: vscode.Webview, extensionUri: vscode.Uri, pathList: str
 }
 ```
 
-### Pass The URI into the webview
+### Pass the URI into the webview
 
 With access to the toolkit URI we can pass it into our webview context via a regular `<script>` tag like so:
 
