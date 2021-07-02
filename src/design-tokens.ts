@@ -158,6 +158,22 @@ export const checkboxCornerRadius = create<number>(
 ).withDefault(3);
 
 /**
+ * Data Grid design tokens
+ */
+export const listActiveSelectionBackground = create<string>(
+	'list-active-selection-background'
+).withDefault('#094771');
+export const listActiveSelectionForeground = create<string>(
+	'list-active-selection-foreground'
+).withDefault('#ffffff');
+export const listHoverBackground = create<string>(
+	'list-hover-background'
+).withDefault('#2a2d2e');
+export const quickInputBackground = create<string>(
+	'quick-input-background'
+).withDefault('#252526');
+
+/**
  * Divider design tokens.
  */
 export const dividerBackground = create<string>(
