@@ -6,10 +6,10 @@ import {VSCodeRadio} from '../../radio/index';
 
 export type RadioGroupArgs = {
 	label?: string;
-	orientation: string;
-	numberOfChildren: number;
-	isDisabled: boolean;
-	isReadonly: boolean;
+	orientation?: string;
+	numberOfChildren?: number;
+	isDisabled?: boolean;
+	isReadonly?: boolean;
 };
 
 export function createRadioGroup({

@@ -13,46 +13,49 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorder,
-	inputBackgroundColor,
-	inputBorderColor,
-	inputForegroundColor,
-	inputPlaceholderForegroundColor,
+	fontFamily,
+	inputBackground,
+	inputBorder,
+	inputForeground,
+	inputMinWidth,
+	inputPlaceholderForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
 export const TextAreaStyles = css`
 	${display('inline-block')} :host {
-		font-family: var(--body-font);
+		font-family: ${fontFamily};
 		outline: none;
 		user-select: none;
 	}
 	.control {
 		box-sizing: border-box;
 		position: relative;
-		color: ${inputForegroundColor};
-		background: ${inputBackgroundColor};
+		color: ${inputForeground};
+		background: ${inputBackground};
 		border-radius: calc(${cornerRadius} * 1px);
-		border: calc(${borderWidth} * 1px) solid ${inputBorderColor};
+		border: calc(${borderWidth} * 1px) solid ${inputBorder};
 		font: inherit;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
 		padding: calc(${designUnit} * 2px + 1px);
 		width: 100%;
+		min-width: ${inputMinWidth};
 		resize: none;
 	}
 	.control:hover:enabled {
-		background: ${inputBackgroundColor};
-		border-color: ${inputBorderColor};
+		background: ${inputBackground};
+		border-color: ${inputBorder};
 	}
 	.control:active:enabled {
-		background: ${inputBackgroundColor};
+		background: ${inputBackground};
 		border-color: ${focusBorder};
 	}
 	.control:hover,
-    .control:${focusVisible},
-    .control:disabled,
-    .control:active {
+	.control:${focusVisible},
+	.control:disabled,
+	.control:active {
 		outline: none;
 	}
 	:host(:focus-within:not([disabled])) .control {
@@ -69,11 +72,11 @@ export const TextAreaStyles = css`
 	}
 	.label {
 		display: block;
-		color: ${inputPlaceholderForegroundColor};
+		color: ${inputPlaceholderForeground};
 		cursor: pointer;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		margin-bottom: 4px;
+		margin-bottom: calc(${designUnit} * 1px);
 	}
 	.label__hidden {
 		display: none;
@@ -89,6 +92,6 @@ export const TextAreaStyles = css`
 		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
-		border-color: ${inputBorderColor};
+		border-color: ${inputBorder};
 	}
 `;

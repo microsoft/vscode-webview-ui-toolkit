@@ -4,6 +4,7 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 import {
+	borderWidth,
 	designUnit,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
@@ -11,9 +12,9 @@ import {
 
 export const PanelViewStyles = css`
 	${display('flex')} :host {
-		color: #ffffff;
+		color: inherit;
 		background-color: transparent;
-		border: solid 1px transparent;
+		border: solid calc(${borderWidth} * 1px) transparent;
 		box-sizing: border-box;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};

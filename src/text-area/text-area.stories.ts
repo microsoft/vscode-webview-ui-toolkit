@@ -19,7 +19,6 @@ export default {
 		rows: {control: 'number'},
 		minLength: {control: 'number'},
 		maxLength: {control: 'number'},
-		isRequired: {control: 'boolean'},
 		isReadOnly: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isAutoFocused: {control: 'boolean'},
@@ -40,7 +39,6 @@ Default.args = {
 	label: '',
 	placeholder: '',
 	resize: 'None',
-	isRequired: false,
 	isReadOnly: false,
 	isDisabled: false,
 	isAutoFocused: false,
@@ -125,7 +123,6 @@ WithMinLength.args = {
 	...Default.args,
 	placeholder: 'This text area requires a minimum of 10 characters',
 	minLength: 10,
-	cols: 50,
 };
 WithMinLength.parameters = {
 	docs: {
@@ -140,7 +137,6 @@ WithMaxLength.args = {
 	...Default.args,
 	placeholder: 'This text area can only contain a maximum of 10 characters',
 	maxLength: 10,
-	cols: 50,
 };
 WithMaxLength.parameters = {
 	docs: {
@@ -183,7 +179,6 @@ WithResizeNone.args = {
 	...Default.args,
 	placeholder: 'This text area cannot be resized',
 	resize: 'None',
-	cols: 50,
 };
 WithResizeNone.parameters = {
 	docs: {
@@ -199,7 +194,6 @@ WithResizeBoth.args = {
 	placeholder:
 		'This text area can be resized both vertically and horizontally',
 	resize: 'Both',
-	cols: 50,
 };
 WithResizeBoth.parameters = {
 	docs: {
@@ -214,7 +208,6 @@ WithResizeVertical.args = {
 	...Default.args,
 	placeholder: 'This text area can be resized vertically',
 	resize: 'Vertical',
-	cols: 50,
 };
 WithResizeVertical.parameters = {
 	docs: {
@@ -229,7 +222,6 @@ WithResizeHorizontal.args = {
 	...Default.args,
 	placeholder: 'This text area can be resized horizontally',
 	resize: 'Horizontal',
-	cols: 50,
 };
 WithResizeHorizontal.parameters = {
 	docs: {

@@ -13,18 +13,20 @@ import {
 	designUnit,
 	disabledOpacity,
 	focusBorder,
-	inputBackgroundColor,
-	inputBorderColor,
-	inputForegroundColor,
+	fontFamily,
+	inputBackground,
+	inputBorder,
+	inputForeground,
 	inputHeight,
-	inputPlaceholderForegroundColor,
+	inputMinWidth,
+	inputPlaceholderForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
 export const TextFieldStyles = css`
 	${display('inline-block')} :host {
-		font-family: var(--body-font);
+		font-family: ${fontFamily};
 		outline: none;
 		user-select: none;
 	}
@@ -33,11 +35,12 @@ export const TextFieldStyles = css`
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		color: ${inputForegroundColor};
-		background: ${inputBackgroundColor};
+		color: ${inputForeground};
+		background: ${inputBackground};
 		border-radius: calc(${cornerRadius} * 1px);
-		border: calc(${borderWidth} * 1px) solid ${inputBorderColor};
+		border: calc(${borderWidth} * 1px) solid ${inputBorder};
 		height: calc(${inputHeight} * 1px);
+		min-width: ${inputMinWidth};
 	}
 	.control {
 		-webkit-appearance: none;
@@ -45,7 +48,7 @@ export const TextFieldStyles = css`
 		background: transparent;
 		border: 0;
 		color: inherit;
-		height: calc(100% - 4px);
+		height: calc(100% - (${designUnit} * 1px));
 		width: 100%;
 		margin-top: auto;
 		margin-bottom: auto;
@@ -55,18 +58,18 @@ export const TextFieldStyles = css`
 		line-height: ${typeRampBaseLineHeight};
 	}
 	.control:hover,
-    .control:${focusVisible},
-    .control:disabled,
-    .control:active {
+	.control:${focusVisible},
+	.control:disabled,
+	.control:active {
 		outline: none;
 	}
 	.label {
 		display: block;
-		color: ${inputPlaceholderForegroundColor};
+		color: ${inputPlaceholderForeground};
 		cursor: pointer;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		margin-bottom: 4px;
+		margin-bottom: calc(${designUnit} * 1px);
 	}
 	.label__hidden {
 		display: none;
@@ -80,8 +83,8 @@ export const TextFieldStyles = css`
 	}
 	::slotted(svg),
 	::slotted(span) {
-		width: 16px;
-		height: 16px;
+		width: calc(${designUnit} * 4px);
+		height: calc(${designUnit} * 4px);
 	}
 	.start {
 		margin-inline-start: 11px;
@@ -90,11 +93,11 @@ export const TextFieldStyles = css`
 		margin-inline-end: 11px;
 	}
 	:host(:hover:not([disabled])) .root {
-		background: ${inputBackgroundColor};
-		border-color: ${inputBorderColor};
+		background: ${inputBackground};
+		border-color: ${inputBorder};
 	}
 	:host(:active:not([disabled])) .root {
-		background: ${inputBackgroundColor};
+		background: ${inputBackground};
 		border-color: ${focusBorder};
 	}
 	:host(:focus-within:not([disabled])) .root {
@@ -110,6 +113,6 @@ export const TextFieldStyles = css`
 		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
-		border-color: ${inputBorderColor};
+		border-color: ${inputBorder};
 	}
 `;

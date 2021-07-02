@@ -2,27 +2,25 @@
 // Licensed under the MIT License.
 
 import {VSCodePanelTab} from '../index';
-import {
-	createCodiconIcon,
-	focusObserver,
-} from '../../utilities/storybook/index';
+import {VSCodeBadge} from '../../badge/index';
+import {focusObserver} from '../../utilities/storybook/index';
 
 export type PanelTabArgs = {
 	title: string;
 	isDisabled?: boolean;
 	isFocused?: boolean;
-	customIcon?: boolean;
+	hasBadge?: boolean;
 };
 
 export function createPanelTab({
 	title,
 	isDisabled,
 	isFocused,
-	customIcon,
+	hasBadge,
 }: PanelTabArgs) {
 	const panelTab = new VSCodePanelTab();
 
-	if (title && !customIcon) {
+	if (title) {
 		panelTab.textContent = title;
 	}
 	if (isDisabled) {
@@ -31,9 +29,11 @@ export function createPanelTab({
 	if (isFocused) {
 		focusObserver(panelTab);
 	}
-	if (customIcon) {
-		const icon = createCodiconIcon({random: true});
-		panelTab.prepend(icon);
+	if (hasBadge) {
+		const badge = new VSCodeBadge();
+		badge.textContent = '1';
+		badge.setAttribute('appearance', 'secondary');
+		panelTab.append(badge);
 	}
 
 	return panelTab;
