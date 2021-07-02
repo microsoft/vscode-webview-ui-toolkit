@@ -35,6 +35,9 @@ import {
 	inputPlaceholderForeground,
 	linkActiveForeground,
 	linkForeground,
+	listActiveSelectionBackground,
+	listActiveSelectionForeground,
+	listHoverBackground,
 	optionActiveSelectionBackground,
 	optionActiveSelectionForeground,
 	optionForeground,
@@ -44,6 +47,7 @@ import {
 	panelViewBackground,
 	panelViewBorder,
 	progressBackground,
+	quickInputBackground,
 	typeRampBaseFontSize,
 } from '../../design-tokens';
 
@@ -74,13 +78,15 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-button-secondaryForeground': buttonSecondaryForeground,
 	'--vscode-button-secondaryHoverBackground': buttonSecondaryHoverBackground,
 	'--vscode-button-border': buttonBorder,
-	// ---- Links ----
-	'--vscode-textLink-foreground': linkForeground,
-	'--vscode-textLink-activeForeground': linkActiveForeground,
 	// ---- Checkboxes ----
 	'--vscode-checkbox-background': checkboxBackground,
 	'--vscode-checkbox-foreground': checkboxForeground,
 	'--vscode-checkbox-border': checkboxBorder,
+	// ---- Data Grid ----
+	'--vscode-list-activeSelectionBackground': listActiveSelectionBackground,
+	'--vscode-list-activeSelectionForeground': listActiveSelectionForeground,
+	'--vscode-list-hoverBackground': listHoverBackground,
+	'--vscode-quickInput-background': quickInputBackground,
 	// ---- Divider ----
 	'--vscode-settings-dropdownListBorder': dividerBackground,
 	// ---- Dropdowns & Comboboxes ----
@@ -91,21 +97,24 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	'--vscode-font-family': fontFamily,
 	'--vscode-font-size': typeRampBaseFontSize,
 	'--vscode-font-weight': fontWeight,
-	// ---- Dropdown Options ----
+	// ---- Links ----
+	'--vscode-textLink-foreground': linkForeground,
+	'--vscode-textLink-activeForeground': linkActiveForeground,
+	// ---- Options ----
 	'--vscode-list-activeSelectionBackground': optionActiveSelectionBackground,
 	'--vscode-list-activeSelectionForeground': optionActiveSelectionForeground,
 	'--vscode-menu-foreground': optionForeground,
-	// ---- Text Fields & Areas ----
-	'--vscode-input-background': inputBackground,
-	'--vscode-input-foreground': inputForeground,
-	'--vscode-input-border': inputBorder,
-	'--vscode-input-placeholderForeground': inputPlaceholderForeground,
-	// ---- Progress Bars & Rings ----
-	'--vscode-progressBar-background': progressBackground,
 	// ---- Panels ----
 	'--vscode-panelTitle-inactiveForeground': panelTabForeground,
 	'--vscode-panelTitle-activeForeground': panelTabActiveForeground,
 	'--vscode-panelTitle-activeBorder': panelTabActiveBorder,
 	'--vscode-panel-background': panelViewBackground,
 	'--vscode-panel-border': panelViewBorder,
+	// ---- Progress Bars & Rings ----
+	'--vscode-progressBar-background': progressBackground,
+	// ---- Text Fields & Areas ----
+	'--vscode-input-background': inputBackground,
+	'--vscode-input-foreground': inputForeground,
+	'--vscode-input-border': inputBorder,
+	'--vscode-input-placeholderForeground': inputPlaceholderForeground,
 };
