@@ -20,8 +20,8 @@ import {
 	fontFamily,
 	inputHeight,
 	inputMinWidth,
-	optionActiveSelectionBackground,
-	optionActiveSelectionForeground,
+	listActiveSelectionBackground,
+	listActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -80,9 +80,9 @@ export const DropdownStyles = css`
 		border-color: ${dropdownBorder};
 	}
 	:host(:${focusVisible}) ::slotted([aria-selected="true"][role="option"]:not([disabled])) {
-		background: ${optionActiveSelectionBackground};
+		background: ${listActiveSelectionBackground};
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
-		color: ${optionActiveSelectionForeground};
+		color: ${listActiveSelectionForeground};
 	}
 	:host([disabled]) {
 		cursor: ${disabledCursor};
