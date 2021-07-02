@@ -6,16 +6,14 @@
 
 ## Introduction
 
-The VS Code Webview Toolkit is a component library made specifically for building webview-based extensions in VS Code.
-
-This toolkit was created to give people the tools to build webview experiences that are consistent with the rest of VS Code. Features of the library include:
+The VS Code Webview Toolkit is a component library made for building webview-based extensions in VS Code that match the native look and behavior of VS Code itself. Features of the library include:
 
 -   **Implements The VS Code Design Language:** All components implement the VS Code design language, enabling developers to create extensions that have a consistent look and feel with the rest of VS Code.
--   **Theming As A First Class Citizen:** All of the components were designed with theming in mind and the toolkit ships with utilities that automatically consume and apply VS Code color theme changes.
--   **Plays Nice With Your Tech Stack:** The library is built with web components meaning no matter what tech stack your using (React, Svelte, Vanilla JS, etc.) the component library will play nice.
--   **Accessible Out Of The Box:** All components ship with web standard compliant ARIA labels and keyboard navigation meaning you don't have to worry about accessibility.
+-   **Theming As A First Class Citizen:** All components were designed with theming in mind and the toolkit ships with utilities that automatically consume and apply VS Code color theme changes.
+-   **Plays Nice With Your Tech Stack:** The library is built with web components meaning you will be able use the components no matter what tech stack (React, Vue, Svelte, etc.) you use.
+-   **Accessible Out Of The Box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
 
-## Getting Started
+## Getting started
 
 Follow the [Getting Started Guide](./docs/getting-started.md).
 
@@ -34,7 +32,7 @@ Beyond the Getting Started Guide, further documentation can be found in the foll
 
 See the [contributing](./CONTRIBUTING.md) documentation.
 
-## Legal Notices
+## Legal notices
 
 Microsoft and any contributors grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE](LICENSE) file.
 

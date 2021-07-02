@@ -6,11 +6,11 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Initial Set Up
+## Initial set up
 
 To start off, fork the `vscode-webview-toolkit` repo on GitHub.
 
-### Clone the Forked Repo
+### Clone the forked repo
 
 Once the repo is forked, clone your fork locally using one of the following methods.
 
@@ -32,7 +32,7 @@ git clone https://github.com/{your-github-username}/vscode-webview-toolkit.git
 gh repo clone {your-github-username}/vscode-webview-toolkit
 ```
 
-### Set an Upstream Remote
+### Set an upstream remote
 
 Next, add an upstream remote pointing to the primary toolkit repo.
 
@@ -42,7 +42,7 @@ git remote add upstream https://github.com/microsoft/vscode-webview-toolkit.git
 git fetch upstream main
 ```
 
-### Install Dependencies
+### Install dependencies
 
 Install the project dependencies.
 
@@ -50,7 +50,7 @@ Install the project dependencies.
 npm install
 ```
 
-### Create a Branch
+### Create a branch
 
 Create a branch for local development. Once that is complete, you can start making your changes locally.
 
@@ -58,7 +58,7 @@ Create a branch for local development. Once that is complete, you can start maki
 git checkout -b {branch-name}
 ```
 
-## Submitting Changes
+## Submitting changes
 
 When you're done making changes, check that your changes pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors.
 
@@ -70,7 +70,7 @@ npm run build
 npm run build:docs
 ```
 
-### Add & Commit Changes
+### Add & commit changes
 
 Commit your changes and push your branch to GitHub.
 
@@ -79,7 +79,7 @@ git add .
 git commit -m "Detailed description of your changes."
 ```
 
-### Pull Any Upstream Changes
+### Pull any upstream changes
 
 If there are new commits from upstream's `main` branch since your last git pull, you need
 to merge the latest commits from upstream's `main` into your branch and resolve any
@@ -103,7 +103,7 @@ If there are no new commits from upstream's `main`, you can skip steps 1, 2, and
 
 3. Resolve any merge conflicts and run all the linting, formatting, tests, and builds again.
 
-### Push Local Changes
+### Push local changes
 
 Push your branch to GitHub.
 
@@ -111,7 +111,7 @@ Push your branch to GitHub.
 git push origin {branch-name}
 ```
 
-### Deploy Forked Docs Site
+### Deploy forked docs site
 
 You can also build and deploy the Storybook docs website to your forked repo's GitHub Pages for a live preview of your changes.
 
@@ -131,11 +131,11 @@ Finally, note that the first time you deploy the docs site, navigating to this l
 -   Complete the confirmation popup dialog
 -   The site should now be publicly viewable!
 
-### Submit a Pull Request
+### Submit a pull request
 
 Finally, submit a pull request through the GitHub website.
 
-## Long Term Repo Maintenance
+## Long term repo maintenance
 
 Once your branch has been merged into upstream's `main` branch, if you want to keep your remote and local repo clean, you can delete your branch.
 
