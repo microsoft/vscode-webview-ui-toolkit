@@ -38,9 +38,6 @@ import {
 	listActiveSelectionBackground,
 	listActiveSelectionForeground,
 	listHoverBackground,
-	optionActiveSelectionBackground,
-	optionActiveSelectionForeground,
-	optionForeground,
 	panelTabActiveBorder,
 	panelTabActiveForeground,
 	panelTabForeground,
@@ -100,10 +97,6 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Links ----
 	'--vscode-textLink-foreground': linkForeground,
 	'--vscode-textLink-activeForeground': linkActiveForeground,
-	// ---- Options ----
-	'--vscode-list-activeSelectionBackground': optionActiveSelectionBackground,
-	'--vscode-list-activeSelectionForeground': optionActiveSelectionForeground,
-	'--vscode-menu-foreground': optionForeground,
 	// ---- Panels ----
 	'--vscode-panelTitle-inactiveForeground': panelTabForeground,
 	'--vscode-panelTitle-activeForeground': panelTabActiveForeground,
