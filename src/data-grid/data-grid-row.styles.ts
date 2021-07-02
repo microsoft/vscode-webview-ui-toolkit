@@ -2,23 +2,28 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
+import {
+	designUnit,
+	listHoverBackground,
+	quickInputBackground,
+} from '../design-tokens';
 
 export const DataGridRowStyles = css`
 	:host {
 		display: grid;
-		padding: 1px 0;
+		padding: calc((${designUnit} / 4) * 1px) 0;
 		box-sizing: border-box;
 		width: 100%;
-		background: #1e1e1e;
-	}
-	:host(:nth-child(odd)) {
-		background: #252526;
+		background: transparent;
 	}
 	:host(.header) {
 	}
 	:host(.sticky-header) {
-		background: #252526;
+		background: ${quickInputBackground};
 		position: sticky;
 		top: 0;
+	}
+	:host(:hover) {
+		background: ${listHoverBackground};
 	}
 `;

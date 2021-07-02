@@ -7,6 +7,11 @@ import {
 	borderWidth,
 	cornerRadius,
 	designUnit,
+	focusBorder,
+	fontFamily,
+	foreground,
+	listActiveSelectionBackground,
+	listActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -14,22 +19,28 @@ import {
 export const DataGridCellStyles = css`
 	:host {
 		padding: calc(${designUnit} * 1px) calc(${designUnit} * 3px);
-		color: #cccccc;
+		color: ${foreground};
+		opacity: 1;
 		box-sizing: border-box;
-		font-family: var(--body-font);
+		font-family: ${fontFamily};
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
 		font-weight: 400;
 		border: solid calc(${borderWidth} * 1px) transparent;
 		overflow: hidden;
+		text-overflow: ellipsis;
 		white-space: nowrap;
 		border-radius: calc(${cornerRadius} * 1px);
 	}
 	:host(.column-header) {
 		font-weight: 600;
 	}
-	:host(:${focusVisible}) {
-		border: solid calc(${borderWidth} * 1px) ${borderWidth};
-		color: #cccccc;
+	:host(:${focusVisible}),
+	:host(:focus),
+	:host(:active) {
+		background: ${listActiveSelectionBackground};
+		border: solid calc(${borderWidth} * 1px) ${focusBorder};
+		color: ${listActiveSelectionForeground};
+		outline: none;
 	}
 `;
