@@ -158,6 +158,22 @@ export const checkboxCornerRadius = create<number>(
 ).withDefault(3);
 
 /**
+ * Data Grid design tokens
+ */
+export const listActiveSelectionBackground = create<string>(
+	'list-active-selection-background'
+).withDefault('#094771');
+export const listActiveSelectionForeground = create<string>(
+	'list-active-selection-foreground'
+).withDefault('#ffffff');
+export const listHoverBackground = create<string>(
+	'list-hover-background'
+).withDefault('#2a2d2e');
+export const quickInputBackground = create<string>(
+	'quick-input-background'
+).withDefault('#252526');
+
+/**
  * Divider design tokens.
  */
 export const dividerBackground = create<string>(
@@ -179,20 +195,6 @@ export const dropdownBorder = create<string>('dropdown-border').withDefault(
 export const dropdownListMaxHeight = create<string>(
 	'dropdown-list-max-height'
 ).withDefault('200px');
-
-/**
- * Option design tokens.
- */
-// list.activeSelectionBackground;
-export const optionActiveSelectionBackground = create<string>(
-	'option-active-selection-background'
-).withDefault('#094771');
-export const optionForeground = create<string>('option-foreground').withDefault(
-	'#cccccc'
-);
-export const optionActiveSelectionForeground = create<string>(
-	'option-active-selection-foreground'
-).withDefault('#ffffff');
 
 /**
  * Text Field & Area design tokens.

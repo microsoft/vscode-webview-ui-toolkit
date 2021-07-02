@@ -8,5 +8,6 @@ export const DataGridStyles = css`
 		display: flex;
 		position: relative;
 		flex-direction: column;
+		width: 100%;
 	}
 `;
