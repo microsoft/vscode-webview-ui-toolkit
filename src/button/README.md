@@ -1,6 +1,6 @@
 # VS Code Button
 
-The `vscode-button` is a web component implementation of an [HTML Button Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button). The `vscode-button` also supports several visual appearances (primary, secondary, text, install, link).
+The `vscode-button` is a web component implementation of an [HTML Button Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button). The `vscode-button` also supports several visual appearances (primary, secondary, icon).
 
 ## Attributes
 
