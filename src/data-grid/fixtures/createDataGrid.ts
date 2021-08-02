@@ -6,14 +6,14 @@ import {VSCodeDataGrid} from '../index';
 export type DataGridArgs = {
 	gridData: any;
 	generateHeader: string;
-	gridTemplateComlumns: string;
+	gridTemplateColumns: string;
 	hasCustomTitles: boolean;
 };
 
 export function createDataGrid({
 	gridData,
 	generateHeader,
-	gridTemplateComlumns,
+	gridTemplateColumns,
 	hasCustomTitles,
 }: DataGridArgs) {
 	const dataGrid = new VSCodeDataGrid();
@@ -24,8 +24,8 @@ export function createDataGrid({
 	if (generateHeader) {
 		dataGrid.setAttribute('generate-header', generateHeader.toLowerCase());
 	}
-	if (gridTemplateComlumns) {
-		dataGrid.setAttribute('grid-template-columns', gridTemplateComlumns);
+	if (gridTemplateColumns) {
+		dataGrid.setAttribute('grid-template-columns', gridTemplateColumns);
 	}
 	if (hasCustomTitles) {
 		dataGrid.columnDefinitions = [
