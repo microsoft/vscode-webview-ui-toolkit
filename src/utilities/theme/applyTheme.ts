@@ -28,13 +28,13 @@ function applyCurrentTheme() {
 	// current VS Code theme
 	const styles = getComputedStyle(document.body);
 
-	for (const vscodeColorToken in tokenMappings) {
-		const toolkitToken = tokenMappings[vscodeColorToken];
-		const color = styles.getPropertyValue(vscodeColorToken).toString();
+	for (const vscodeTokenName in tokenMappings) {
+		const toolkitTokenName = tokenMappings[vscodeTokenName];
 		const body = document.querySelector('body');
+		const value = styles.getPropertyValue(vscodeTokenName).toString();
 
-		if (body) {
-			toolkitToken.setValueFor(body, color);
+		if (body && value.length > 0) {
+			toolkitTokenName.setValueFor(body, value);
 		}
 	}
 }
