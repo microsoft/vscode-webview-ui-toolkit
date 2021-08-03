@@ -12,7 +12,7 @@ export default {
 				options: ['None', 'Default', 'Sticky'],
 			},
 		},
-		gridTemplateComlumns: {control: 'text'},
+		gridTemplateColumns: {control: 'text'},
 		hasCustomTitles: {control: 'boolean'},
 		gridData: {control: 'object'},
 	},
@@ -30,7 +30,7 @@ const Template = ({...args}: DataGridArgs) => {
 export const Default: any = Template.bind({});
 Default.args = {
 	generateHeader: 'Default',
-	gridTemplateComlumns: '1fr 1fr 1fr 1fr',
+	gridTemplateColumns: '',
 	hasCustomTitles: false,
 	gridData: [
 		{
@@ -242,7 +242,7 @@ WithStickyHeader.parameters = {
 export const WithCustomColumnWidths: any = Template.bind({});
 WithCustomColumnWidths.args = {
 	...Default.args,
-	gridTemplateComlumns: '100px 10vw 3fr 30%',
+	gridTemplateColumns: '100px 10vw 3fr 30%',
 };
 WithCustomColumnWidths.parameters = {
 	docs: {
