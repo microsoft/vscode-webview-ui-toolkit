@@ -7,7 +7,7 @@ addons.setConfig({
 	showPanel: true,
 	panelPosition: 'bottom',
 	sidebarAnimations: true,
-	enableShortcuts: true,
+	enableShortcuts: false,
 	isToolshown: true,
 	theme: customTheme,
 	selectedPanel: undefined,
