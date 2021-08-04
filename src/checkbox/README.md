@@ -74,7 +74,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-value)
 
 ```html
-<vscode-checkbox value="foo">Label</vscode-checkbox>
+<vscode-checkbox value="baz">Label</vscode-checkbox>
 ```
 
 ### Indeterminate Property
@@ -84,12 +84,12 @@ Checkboxes can also render an indeterminate state. This is achieved by getting a
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-indeterminate)
 
 ```javascript
-const checkbox = document.getElementById('foo');
+const checkbox = document.getElementById('basic-checkbox');
 checkbox.indeterminate = true;
 ```
 
 ```html
-<vscode-checkbox id="foo">Label</vscode-checkbox>
+<vscode-checkbox id="basic-checkbox">Label</vscode-checkbox>
 ```
 
 ### Form Usage
@@ -104,7 +104,7 @@ Here is an example of the VS Code Checkbox and its various attributes being used
 		<vscode-checkbox checked readonly>Checked + Readonly</vscode-checkbox>
 		<vscode-checkbox autofocus>Autofocus</vscode-checkbox>
 		<vscode-checkbox disabled>Disabled</vscode-checkbox>
-		<vscode-checkbox value="Foo">Value Set To "Foo"</vscode-checkbox>
+		<vscode-checkbox value="baz">Value Set To "baz"</vscode-checkbox>
 	</fieldset>
 	<vscode-button type="submit">Submit Button</vscode-button>
 </form>
