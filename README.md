@@ -1,12 +1,12 @@
-# Visual Studio Code Webview Toolkit
+# Visual Studio Code Webview UI Toolkit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
-[![NPM Version](https://img.shields.io/badge/npm-v0.5.0-blue)](https://github.com/microsoft/vscode-webview-toolkit)
+[![NPM Version](https://img.shields.io/badge/npm-v0.6.1-blue)](https://github.com/microsoft/vscode-webview-toolkit)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
 
 ## Introduction
 
-The VS Code Webview Toolkit is a component library made for building webview-based extensions in VS Code that match the native look and behavior of VS Code itself. Features of the library include:
+The VS Code Webview UI Toolkit is a component library made for building webview-based extension UIs in VS Code that match the native look and behavior of VS Code itself. Features of the library include:
 
 -   **Implements The VS Code Design Language:** All components implement the VS Code design language, enabling developers to create extensions that have a consistent look and feel with the rest of VS Code.
 -   **Theming As A First Class Citizen:** All components were designed with theming in mind and the toolkit ships with utilities that automatically consume and apply VS Code color theme changes.

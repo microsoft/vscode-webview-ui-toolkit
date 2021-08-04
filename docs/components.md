@@ -1,6 +1,6 @@
-# VS Code Webview Toolkit Component Docs
+# Component Documentation List
 
-Here you can find a list of all the components currently available in this toolkit with links to documentation for each component.
+Here you can find a list of all the components currently available in the toolkit with links to documentation for each component.
 
 | Component         | Doc Link                                                          |
 | ----------------- | ----------------------------------------------------------------- |

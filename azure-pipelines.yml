@@ -15,14 +15,11 @@ jobs:
                 result: 'PoliCheck.xml'
                 optionsXS: 1 # Scan subfolders
                 optionsPE: 1 # Enable exclusions
-                # Exclude folders like node_modules, dist, .git etc.
                 optionsUEPATH: '$(Build.SourcesDirectory)/policheck/UserExclusion.xml'
 
-      # Guardian and ESLint are built on dotnet and need a Windows VM to run
     - job: Security
       pool:
           vmImage: 'windows-latest'
-      # Run the 1ES ESLint task using Guardian
       steps:
           - task: ESLint@1
             displayName: '🛡 Guardian: ESLint'

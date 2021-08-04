@@ -1,6 +1,6 @@
 # Getting Started Guide
 
-This guide will cover the following steps to get you up and running with the VS Code Webview Toolkit.
+This guide will cover the following steps to get you up and running with the Webview UI Toolkit.
 
 1. Create a webview-based extension
 2. Install and set up the toolkit
@@ -92,7 +92,7 @@ When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd
 
 ![Testing That The Webview Extension Works](./assets/webview-test.gif)
 
-## Install & set up the toolkit
+## Install and set up the toolkit
 
 With an extension created, we can now install the toolkit via a private Azure NPM package.
 
@@ -110,7 +110,7 @@ Install the package using this command.
 npm install --save vscode-webview-toolkit
 ```
 
-### Using The toolkit inside a webview
+### Using the toolkit inside a webview
 
 With the package installed, we need to adjust the project so the toolkit is usable within our webview. We'll start by updating the `getWebviewContent` content function we defined earlier to accept two new parameters.
 
@@ -206,7 +206,7 @@ Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), sear
 
 ## Next steps
 
-Congratulations on getting started with the VS Code Webview Toolkit! 🎊
+Congratulations on getting started with the VS Code Webview UI Toolkit! 🎊
 
 Now that you're set up, checkout the component docs for further documentation on what components are available and how to use them. Further component documentation and some guides on how to work with webviews is also provided too. Happy hacking!
 
