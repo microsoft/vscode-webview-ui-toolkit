@@ -8,7 +8,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 ## Initial set up
 
-To start off, fork the `vscode-webview-toolkit` repo on GitHub.
+To start off, fork this repo on GitHub.
 
 ### Clone the forked repo
 
@@ -58,7 +58,7 @@ Create a branch for local development. Once that is complete, you can start maki
 git checkout -b {branch-name}
 ```
 
-## Submitting changes
+## Validate changes
 
 When you're done making changes, check that your changes pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors.
 
@@ -70,7 +70,7 @@ npm run build
 npm run build:docs
 ```
 
-### Add & commit changes
+### Add and commit changes
 
 Commit your changes and push your branch to GitHub.
 
@@ -85,7 +85,7 @@ If there are new commits from upstream's `main` branch since your last git pull,
 to merge the latest commits from upstream's `main` into your branch and resolve any
 merge conflicts locally.
 
-If there are no new commits from upstream's `main`, you can skip steps 1, 2, and 3.
+If there are no new commits from upstream's `main`, you can skip the following steps.
 
 1. Get the latest commits.
 
@@ -123,7 +123,7 @@ npm run deploy:docs
 
 Once deployed, the site should be viewable at the following link: https://{your-github-username}.github.io/vscode-webview-toolkit/
 
-Finally, note that the first time you deploy the docs site, navigating to this link will likely result in a 401 error. This is because GitHub Pages defaults to private visibility. To change this:
+The first time you deploy the docs site, navigating to this link will likely result in a 401 error. This is because GitHub Pages defaults to private visibility. To change this:
 
 -   Navigate to the "Settings" page of your forked repo
 -   Click the "Pages" sidebar tab
@@ -133,7 +133,7 @@ Finally, note that the first time you deploy the docs site, navigating to this l
 
 ### Submit a pull request
 
-Finally, submit a pull request through the GitHub website.
+Finally, submit a pull request to the main toolkit repository through the GitHub website.
 
 ## Long term repo maintenance
 
