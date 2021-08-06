@@ -206,7 +206,7 @@ Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), sear
 
 ## Next steps
 
-Congratulations on getting started with the VS Code Webview UI Toolkit! 🎊
+Congratulations on getting started with the Webview UI Toolkit! 🎊
 
 Now that you're set up, checkout the component docs for further documentation on what components are available and how to use them. Further component documentation and some guides on how to work with webviews is also provided too. Happy hacking!
 
