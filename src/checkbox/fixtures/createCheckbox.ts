@@ -53,7 +53,7 @@ export function createCheckbox({
 		checkbox.setAttribute('required', '');
 	}
 	if (hasValue) {
-		checkbox.setAttribute('value', 'foo');
+		checkbox.setAttribute('value', 'baz');
 	}
 	checkbox.addEventListener('change', onChange);
 

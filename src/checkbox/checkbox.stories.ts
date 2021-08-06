@@ -72,7 +72,7 @@ WithIndeterminate.args = {
 WithIndeterminate.parameters = {
 	docs: {
 		source: {
-			code: `// JavaScript\n\nconst checkbox = document.getElementById("foo");\ncheckbox.indeterminate = true;\n\n<!-- HTML -->\n\n<vscode-checkbox id="foo">Label</vscode-checkbox>`,
+			code: `// JavaScript\n\nconst checkbox = document.getElementById("baz");\ncheckbox.indeterminate = true;\n\n<!-- HTML -->\n\n<vscode-checkbox id="baz">Label</vscode-checkbox>`,
 		},
 	},
 };
@@ -137,7 +137,7 @@ WithValue.args = {
 WithValue.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-checkbox value="foo">Label</vscode-checkbox>`,
+			code: `<vscode-checkbox value="baz">Label</vscode-checkbox>`,
 		},
 	},
 };
