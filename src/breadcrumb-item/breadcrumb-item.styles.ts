@@ -78,9 +78,9 @@ export const BreadcrumbItemStyles = css`
 		height: calc(${designUnit} * 4px);
 	}
 	.start {
-		margin-inline-end: 6px;
+		margin-inline-end: calc(var(--design-unit) * 1px);
 	}
 	.end {
-		margin-inline-start: 6px;
+		margin-inline-start: calc(var(--design-unit) * 1px);
 	}
 `;
