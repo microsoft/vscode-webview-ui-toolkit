@@ -32,7 +32,7 @@ function applyCurrentTheme() {
 		const body = document.querySelector('body');
 		const value = styles.getPropertyValue(vscodeTokenName).toString();
 
-		if (body && value.length > 0) {
+		if (body) {
 			toolkitTokenName.setValueFor(body, value);
 		}
 	}
