@@ -96,10 +96,10 @@ When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd
 
 With an extension created, we can now install the toolkit via a private Azure NPM package.
 
-Connect to the following Azure Artifacts feed to install the package [here](https://dev.azure.com/devdiv/OnlineServices/_packaging?_a=package&feed=vscode-webview-toolkit&package=vscode-webview-toolkit&protocolType=Npm&version=0.5.0) and create a .npmrc file in the root directory of any extension you create that looks like this:
+Connect to the following Azure Artifacts feed to install the package [here](https://dev.azure.com/devdiv/OnlineServices/_packaging?_a=package&feed=vscode-webview-ui-toolkit&package=vscode-webview-ui-toolkit&protocolType=Npm&version=0.6.1) and create a .npmrc file in the root directory of any extension you create that looks like this:
 
 ```
-registry=https://pkgs.dev.azure.com/devdiv/OnlineServices/_packaging/vscode-webview-toolkit/npm/registry/
+registry=https://pkgs.dev.azure.com/devdiv/OnlineServices/_packaging/vscode-webview-ui-toolkit/npm/registry/
 
 always-auth=true
 ```
@@ -107,7 +107,7 @@ always-auth=true
 Install the package using this command.
 
 ```
-npm install --save vscode-webview-toolkit
+npm install --save vscode-webview-ui-toolkit
 ```
 
 ### Using the toolkit inside a webview
@@ -135,7 +135,7 @@ With those changes we can now use some VS Code APIs to create a URI pointing to 
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
+  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-ui-toolkit", "dist", "toolkit.js"]);
 
   // ... Other implementation details should be left unchanged for now ...
 }
@@ -151,7 +151,7 @@ With access to the toolkit URI we can pass it into our webview context via a reg
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
+  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-ui-toolkit", "dist", "toolkit.js"]);
 
   return `
 	<!DOCTYPE html>
@@ -176,7 +176,7 @@ Let's check that everything works by adding a `<vscode-button>` to the webview a
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-toolkit", "dist", "toolkit.js"]);
+  const toolkitUri = getUri(webview, extensionUri, ["node_modules", "vscode-webview-ui-toolkit", "dist", "toolkit.js"]);
 
   return `
 	<!DOCTYPE html>
