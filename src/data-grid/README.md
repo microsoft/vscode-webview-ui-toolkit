@@ -35,7 +35,7 @@ The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or T
 
 With that said, a data grid can still be created with HTML only (also shown below).
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--default)
 
 _Using HTML & JavaScript_
 
@@ -102,7 +102,7 @@ There are three values that can be passed to the attribute:
 
 As shown above in the Basic Usage example, if the `vscode-data-grid` is defined using only HTML this attribute should be set to `none` and the header row should be manually created with HTML.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--with-no-header)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-no-header)
 
 ```html
 <vscode-data-grid id="basic-grid" generate-header="none"></vscode-data-grid>
@@ -134,7 +134,7 @@ When defined on a `<vscode-data-grid>` component, the value of the attribute is 
 
 When defined on a `<vscode-data-grid-row>` component, the value of the attribute is applied to only that row.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--with-custom-column-widths)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-custom-column-widths)
 
 ```html
 <vscode-data-grid id="basic-grid" grid-template-columns="100px 10vw 3fr 30%"></vscode-data-grid>
@@ -215,7 +215,7 @@ This should contain the key from the `rowsData` object (representing a specific 
 
 This is where you define the custom title for a given column.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-data-grid--with-custom-titles)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-custom-titles)
 
 ```html
 <vscode-data-grid id="basic-grid"></vscode-data-grid>

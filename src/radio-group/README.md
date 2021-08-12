@@ -16,7 +16,7 @@ The `vscode-radio-group` is a web component implementation of a [Radio Group](ht
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-radio-group--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--default)
 
 ```html
 <vscode-radio-group>
@@ -29,7 +29,7 @@ The `vscode-radio-group` is a web component implementation of a [Radio Group](ht
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-radio-group--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--with-disabled)
 
 ```html
 <vscode-radio-group disabled>
@@ -55,7 +55,7 @@ The `vscode-radio-group` is a web component implementation of a [Radio Group](ht
 
 If the orientation attribute is not set, the default orientation is `horizontal`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-radio-group--with-vertical-orientation)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--with-vertical-orientation)
 
 ```html
 <vscode-radio-group orientation="vertical">
@@ -75,7 +75,7 @@ If the orientation attribute is not set, the default orientation is `horizontal`
 
 ### Read Only Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-radio-group--with-read-only)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--with-read-only)
 
 ```html
 <vscode-radio-group readonly>

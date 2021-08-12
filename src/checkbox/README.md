@@ -23,7 +23,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--default)
 
 ```html
 <vscode-checkbox>Label</vscode-checkbox>
@@ -31,7 +31,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Autofocus Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-autofocus)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-autofocus)
 
 ```html
 <vscode-checkbox autofocus>Label</vscode-checkbox>
@@ -39,7 +39,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Checked Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-checked)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-checked)
 
 ```html
 <vscode-checkbox checked>Label</vscode-checkbox>
@@ -47,7 +47,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-disabled)
 
 ```html
 <vscode-checkbox disabled>Label</vscode-checkbox>
@@ -55,7 +55,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Readonly Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-read-only)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-read-only)
 
 ```html
 <vscode-checkbox readonly>Label</vscode-checkbox>
@@ -63,7 +63,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Required Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-required)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-required)
 
 ```html
 <vscode-checkbox required>Label</vscode-checkbox>
@@ -71,7 +71,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Value Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-value)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-value)
 
 ```html
 <vscode-checkbox value="baz">Label</vscode-checkbox>
@@ -81,7 +81,7 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 Checkboxes can also render an indeterminate state. This is achieved by getting a reference to a given checkbox using JavaScript and then setting the `indeterminate` property of the checkbox to `true`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-checkbox--with-indeterminate)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-indeterminate)
 
 ```javascript
 const checkbox = document.getElementById('basic-checkbox');

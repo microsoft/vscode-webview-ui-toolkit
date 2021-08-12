@@ -18,7 +18,7 @@ The `vscode-combobox` component must be used with the `vscode-option` component.
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-combobox--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-combobox--default)
 
 ```html
 <vscode-combobox>
@@ -30,7 +30,7 @@ The `vscode-combobox` component must be used with the `vscode-option` component.
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-combobox--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-combobox--with-disabled)
 
 ```html
 <vscode-combobox disabled>
@@ -42,7 +42,7 @@ The `vscode-combobox` component must be used with the `vscode-option` component.
 
 ### Open Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-combobox--with-open)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-combobox--with-open)
 
 ```html
 <vscode-combobox open>
@@ -54,7 +54,7 @@ The `vscode-combobox` component must be used with the `vscode-option` component.
 
 ### Position Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-combobox--with-position-above)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-combobox--with-position-above)
 
 ```html
 <vscode-combobox position="above">
@@ -64,7 +64,7 @@ The `vscode-combobox` component must be used with the `vscode-option` component.
 </vscode-combobox>
 ```
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-combobox--with-position-below)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-combobox--with-position-below)
 
 ```html
 <vscode-combobox position="below">

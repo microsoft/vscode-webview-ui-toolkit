@@ -12,7 +12,7 @@ The `vscode-breadcrumb` component must be used with the `vscode-breadcrumb-item`
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-breadcrumb--default)
 
 ```html
 <vscode-breadcrumb>
@@ -26,7 +26,7 @@ The `vscode-breadcrumb` component must be used with the `vscode-breadcrumb-item`
 
 The default separator is a `/` but it can customized by adding an element with the attribute `slot="separator"`, such as an span icon.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb--with-custom-separators)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-breadcrumb--with-custom-separators)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -51,7 +51,7 @@ The default separator is a `/` but it can customized by adding an element with t
 
 An icon can be added to the left of Breadcrumb Item text by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb--with-start-icons)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-breadcrumb--with-start-icons)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -76,7 +76,7 @@ An icon can be added to the left of Breadcrumb Item text by adding an element wi
 
 An icon can be added to the right of Breadcrumb Item text by adding an element with the attribute `slot="end"`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-breadcrumb--with-end-icons)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-breadcrumb--with-end-icons)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->

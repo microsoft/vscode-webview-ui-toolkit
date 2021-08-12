@@ -26,7 +26,7 @@ None
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--default)
 
 ```html
 <vscode-panels>
@@ -43,7 +43,7 @@ None
 
 ### Active ID Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-active-tab)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-active-tab)
 
 ```html
 <vscode-panels activeid="tab-4">
@@ -60,7 +60,7 @@ None
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-disabled)
 
 ```html
 <vscode-panels>
@@ -79,7 +79,7 @@ None
 
 In addition to text, a VS Code Badge can be used in a panel tab to highlight an item, attract attention, and/or flag status.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-custom-tab-icons)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-custom-tab-icons)
 
 ```html
 <vscode-panels>
@@ -110,7 +110,7 @@ In addition to text, a VS Code Badge can be used in a panel tab to highlight an 
 
 A `vscode-panel-view` can also contain any valid HTML.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-panels--with-complex-panel-view-content)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-complex-panel-view-content)
 
 ```html
 <vscode-panels>
