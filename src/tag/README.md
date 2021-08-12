@@ -14,7 +14,7 @@ If a component that highlights an item with a number is desired, see the `vscode
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-tag--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-tag--default)
 
 ```html
 <vscode-tag>Tag Text</vscode-tag>

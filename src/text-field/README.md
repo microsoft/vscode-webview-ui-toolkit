@@ -22,7 +22,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--default)
 
 ```html
 <vscode-text-field></vscode-text-field>
@@ -30,7 +30,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Autofocus Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-autofocus)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-autofocus)
 
 ```html
 <vscode-text-field autofocus></vscode-text-field>
@@ -38,7 +38,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-disabled)
 
 ```html
 <vscode-text-field disabled></vscode-text-field>
@@ -46,7 +46,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Max Length Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-max-length)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-max-length)
 
 ```html
 <vscode-text-field maxlength="10"></vscode-text-field>
@@ -54,7 +54,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Min Length Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-min-length)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-min-length)
 
 ```html
 <vscode-text-field minlength="10"></vscode-text-field>
@@ -68,7 +68,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Pattern Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-pattern)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-pattern)
 
 ```html
 <vscode-text-field pattern="[a-z]{4,8}"></vscode-text-field>
@@ -76,7 +76,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Placeholder Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-placeholder)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-placeholder)
 
 ```html
 <vscode-text-field placeholder="Placeholder Text"></vscode-text-field>
@@ -84,7 +84,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Read Only Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-readonly)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-readonly)
 
 ```html
 <vscode-text-field readonly>Read Only Text</vscode-text-field>
@@ -92,7 +92,7 @@ The `vscode-text-field` is a web component implementation of an [HTML Text Field
 
 ### Size Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-custom-size)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-custom-size)
 
 ```html
 <vscode-text-field size="50"></vscode-text-field>
@@ -114,7 +114,7 @@ Specifies whether the `vscode-text-field` is subject to spell checking by the un
 
 An icon can be added to the left of the text field by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-start-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-start-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->
@@ -128,7 +128,7 @@ An icon can be added to the left of the text field by adding an element with the
 
 An icon can be added to the right of the text field by adding an element with the attribute `slot="end"`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-text-field--with-end-icon)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-end-icon)
 
 ```html
 <!-- Note: Using VS Code Codicon Library -->

@@ -12,7 +12,7 @@ The `vscode-divider` is a web component implementation of an [HTML Horiztonal Ru
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-divider--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-divider--default)
 
 ```html
 <vscode-divider></vscode-divider>
@@ -26,7 +26,7 @@ The `separator` option is the default value and indicates that the divider seman
 
 The `presentation` option indicates that the divider has no semantic value and is for visual presentation only.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-divider--with-role)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-divider--with-role)
 
 ```html
 <!-- Indicates that the divider semantically separates content -->

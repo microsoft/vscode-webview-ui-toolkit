@@ -16,7 +16,7 @@ If a component that labels an item with a string is desired, see the `vscode-tag
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-badge--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-badge--default)
 
 ```html
 <vscode-badge>1</vscode-badge>
@@ -26,7 +26,7 @@ If a component that labels an item with a string is desired, see the `vscode-tag
 
 There are a number of visual appearances that the `vscode-badge` can have. The default appearance is `primary`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-badge--secondary)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-badge--secondary)
 
 ```html
 <vscode-badge appearance="primary">1</vscode-badge>

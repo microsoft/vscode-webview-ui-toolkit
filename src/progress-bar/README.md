@@ -20,7 +20,7 @@ The `vscode-progress-bar` renders a linear visual appearance for progress state.
 
 The basic usage will display a looping animation to indicate an indeterminate state where the wait time is unspecified.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-bar--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-progress-bar--default)
 
 ```html
 <vscode-progress-bar></vscode-progress-bar>
@@ -28,7 +28,7 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ### Value Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-bar--with-value)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-progress-bar--with-value)
 
 ```html
 <vscode-progress-bar value="75"></vscode-progress-bar>
@@ -36,7 +36,7 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ### Min Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-bar--with-value)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-progress-bar--with-value)
 
 ```html
 <vscode-progress-bar min="0"></vscode-progress-bar>
@@ -44,7 +44,7 @@ The basic usage will display a looping animation to indicate an indeterminate st
 
 ### Max Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-progress-bar--with-value)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-progress-bar--with-value)
 
 ```html
 <vscode-progress-bar max="100"></vscode-progress-bar>

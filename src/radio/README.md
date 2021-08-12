@@ -15,7 +15,7 @@ The `vscode-radio` is a web component implementation of an [HTML Radio Input Ele
 
 ### Basic Usage
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-radio--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio--default)
 
 ```html
 <vscode-radio>Radio Label</vscode-radio>
@@ -23,7 +23,7 @@ The `vscode-radio` is a web component implementation of an [HTML Radio Input Ele
 
 ### Checked Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-radio--with-checked)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio--with-checked)
 
 ```html
 <vscode-radio checked>Radio Label</vscode-radio>
@@ -31,7 +31,7 @@ The `vscode-radio` is a web component implementation of an [HTML Radio Input Ele
 
 ### Read Only Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-radio--with-read-only)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio--with-read-only)
 
 ```html
 <vscode-radio readonly>Radio Label</vscode-radio>
@@ -39,7 +39,7 @@ The `vscode-radio` is a web component implementation of an [HTML Radio Input Ele
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-radio--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio--with-disabled)
 
 ```html
 <vscode-radio disabled>Radio Label</vscode-radio>

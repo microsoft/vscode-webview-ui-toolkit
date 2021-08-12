@@ -20,7 +20,7 @@ The `vscode-link` is a web component implementation of an [HTML Anchor Element](
 
 ### Basic Usage (With Href Attribute)
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-link--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-link--default)
 
 ```html
 <vscode-link href="#">Link Text</vscode-link>
@@ -28,7 +28,7 @@ The `vscode-link` is a web component implementation of an [HTML Anchor Element](
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-toolkit/?path=/story/library-link--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-link--with-disabled)
 
 ```html
 <vscode-link href="#" disabled>Link Text</vscode-link>

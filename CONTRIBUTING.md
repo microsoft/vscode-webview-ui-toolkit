@@ -17,19 +17,19 @@ Once the repo is forked, clone your fork locally using one of the following meth
 **Using SSH**
 
 ```
-git clone git@github.com:{your-github-username}/vscode-webview-toolkit.git
+git clone git@github.com:{your-github-username}/vscode-webview-ui-toolkit.git
 ```
 
 **Using HTTPS**
 
 ```
-git clone https://github.com/{your-github-username}/vscode-webview-toolkit.git
+git clone https://github.com/{your-github-username}/vscode-webview-ui-toolkit.git
 ```
 
 **Using GitHub CLI**
 
 ```
-gh repo clone {your-github-username}/vscode-webview-toolkit
+gh repo clone {your-github-username}/vscode-webview-ui-toolkit
 ```
 
 ### Set an upstream remote
@@ -37,8 +37,8 @@ gh repo clone {your-github-username}/vscode-webview-toolkit
 Next, add an upstream remote pointing to the primary toolkit repo.
 
 ```
-cd vscode-webview-toolkit/
-git remote add upstream https://github.com/microsoft/vscode-webview-toolkit.git
+cd vscode-webview-ui-toolkit/
+git remote add upstream https://github.com/microsoft/vscode-webview-ui-toolkit.git
 git fetch upstream main
 ```
 
@@ -121,7 +121,7 @@ _Note: If you're working on component features or bug fixes we will ask for this
 npm run deploy:docs
 ```
 
-Once deployed, the site should be viewable at the following link: https://{your-github-username}.github.io/vscode-webview-toolkit/
+Once deployed, the site should be viewable at the following link: https://{your-github-username}.github.io/vscode-webview-ui-toolkit/
 
 The first time you deploy the docs site, navigating to this link will likely result in a 401 error. This is because GitHub Pages defaults to private visibility. To change this:
 

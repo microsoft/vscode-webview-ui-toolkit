@@ -1,7 +1,7 @@
 # Webview UI Toolkit for Visual Studio Code
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
-[![NPM Version](https://img.shields.io/badge/npm-v0.6.1-blue)](https://github.com/microsoft/vscode-webview-toolkit)
+[![NPM Version](https://img.shields.io/badge/npm-v0.6.1-blue)](https://github.com/microsoft/vscode-webview-ui-toolkit)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
 
 ## Introduction
@@ -22,8 +22,8 @@ Follow the [Getting Started Guide](./docs/getting-started.md).
 Beyond the Getting Started Guide, further documentation can be found in the following places:
 
 -   [Component Docs](./docs/components.md)
--   [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-toolkit/)
--   [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-toolkit-samples)
+-   [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-ui-toolkit/)
+-   [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
 -   [VS Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
 -   [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
 -   [VS Code Extension API Docs](https://code.visualstudio.com/api)
