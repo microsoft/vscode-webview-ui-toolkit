@@ -1,8 +1,8 @@
 # Webview UI Toolkit for Visual Studio Code
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
-[![NPM Version](https://img.shields.io/badge/npm-v0.6.1-blue)](https://github.com/microsoft/vscode-webview-ui-toolkit)
-[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
+[![License: MIT Badge](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+[![NPM Version Badge](https://img.shields.io/npm/v/@microsoft/vscode-webview-ui-toolkit?color=blue)](https://github.com/microsoft/vscode-webview-ui-toolkit)
+[![TypeScript Badge](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
 
 ## Introduction
 
