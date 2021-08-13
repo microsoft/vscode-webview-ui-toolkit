@@ -5,7 +5,7 @@ labels: enhancement
 ---
 
 <!--
-  ⚠️⚠️ Do Not Delete This! feature_request_template ⚠️⚠️
+  ⚠️⚠️ Please do the following before submitting: ⚠️⚠️
 
   📖 Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/
   🔎 Please search existing issues to avoid creating duplicates.
