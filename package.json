@@ -32,8 +32,7 @@
 	"dependencies": {
 		"@microsoft/fast-element": "^1.2.0",
 		"@microsoft/fast-foundation": "^1.24.7",
-		"lodash-es": "^4.17.21",
-		"vscode-codicons": "0.0.15"
+		"lodash-es": "^4.17.21"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.14.3",
@@ -52,6 +51,7 @@
 		"@storybook/html": "^6.3.6",
 		"@storybook/theming": "^6.3.6",
 		"@types/jest": "^26.0.20",
+		"@vscode/codicons": "^0.0.21",
 		"babel-jest": "^26.6.3",
 		"babel-loader": "^8.2.2",
 		"babel-plugin-transform-class-properties": "^6.24.1",
