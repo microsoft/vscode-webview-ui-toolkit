@@ -17,6 +17,12 @@ jobs:
                 optionsPE: 1 # Enable exclusions
                 optionsUEPATH: '$(Build.SourcesDirectory)/policheck/UserExclusion.xml'
 
+          - task: PublishBuildArtifacts@1
+            displayName: 'Create log artifact'
+            inputs:
+              pathToPublish: '..\_sdt\logs\PoliCheck\PoliCheck.xml'
+              artifactName: 'PoliCheck
+
     - job: Security
       pool:
           vmImage: 'windows-latest'
