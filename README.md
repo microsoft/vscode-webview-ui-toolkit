@@ -1,10 +1,11 @@
 # Webview UI Toolkit for Visual Studio Code
 
-![Test, Lint, and Build Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
-![Build and Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
 [![NPM Version](https://img.shields.io/badge/npm-v0.6.1-blue)](https://github.com/microsoft/vscode-webview-ui-toolkit)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
+
+![Test, Lint, and Build Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
+![Build and Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 
 ## Introduction
 
