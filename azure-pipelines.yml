@@ -20,8 +20,8 @@ jobs:
           - task: PublishBuildArtifacts@1
             displayName: 'Create log artifact'
             inputs:
-              pathToPublish: '..\_sdt\logs\PoliCheck\PoliCheck.xml'
-              artifactName: 'PoliCheck
+                pathToPublish: '..\_sdt\logs\PoliCheck\PoliCheck.xml'
+                artifactName: 'PoliCheck'
 
     - job: Security
       pool:
