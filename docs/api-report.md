@@ -7,11 +7,8 @@
 import { Anchor } from '@microsoft/fast-foundation';
 import { Badge } from '@microsoft/fast-foundation';
 import { BaseProgress } from '@microsoft/fast-foundation';
-import { Breadcrumb } from '@microsoft/fast-foundation';
-import { BreadcrumbItem } from '@microsoft/fast-foundation';
 import { Button } from '@microsoft/fast-foundation';
 import { Checkbox } from '@microsoft/fast-foundation';
-import { Combobox } from '@microsoft/fast-foundation';
 import { DataGrid } from '@microsoft/fast-foundation';
 import { DataGridCell } from '@microsoft/fast-foundation';
 import { DataGridRow } from '@microsoft/fast-foundation';
@@ -28,24 +25,12 @@ import { TextArea } from '@microsoft/fast-foundation';
 import { TextField } from '@microsoft/fast-foundation';
 
 // @public
-export type BadgeAppearance = 'primary' | 'secondary';
-
-// @public
 export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
 
 // @public
 export class VSCodeBadge extends Badge {
-    appearance: BadgeAppearance;
     // @internal
     connectedCallback(): void;
-}
-
-// @public
-export class VSCodeBreadcrumb extends Breadcrumb {
-}
-
-// @public
-export class VSCodeBreadcrumbItem extends BreadcrumbItem {
 }
 
 // @public
@@ -57,10 +42,6 @@ export class VSCodeButton extends Button {
 
 // @public
 export class VSCodeCheckbox extends Checkbox {
-}
-
-// @public
-export class VSCodeCombobox extends Combobox {
 }
 
 // @public
@@ -107,12 +88,6 @@ export class VSCodePanelTab extends Tab {
 
 // @public
 export class VSCodePanelView extends TabPanel {
-}
-
-// @public
-export class VSCodeProgressBar extends BaseProgress {
-    // @internal
-    connectedCallback(): void;
 }
 
 // @public

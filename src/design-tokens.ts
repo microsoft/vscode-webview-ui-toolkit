@@ -62,33 +62,14 @@ export const typeRampPlus1LineHeight = create<string>(
 ).withDefault('24px');
 
 /**
- * Breadcrumb Item design tokens.
- */
-export const breadcrumbItemForeground = create<string>(
-	'breadcrumb-item-foreground'
-).withDefault('#cccccccc');
-export const breadcrumbItemForegroundHover = create<string>(
-	'breadcrumb-item-foreground-hover'
-).withDefault('#e0e0e0');
-export const breadcrumbSeparatorMarginHorizontal = create<string>(
-	'breadcrumb-separator-margin-horizontal'
-).withDefault('6px');
-
-/**
  * Badge design tokens.
  */
-export const badgePrimaryForeground = create<string>(
-	'badge-primary-foreground'
-).withDefault('#ffffff');
-export const badgePrimaryBackground = create<string>(
-	'badge-primary-background'
-).withDefault('#007acc');
-export const badgeSecondaryForeground = create<string>(
-	'badge-secondary-foreground'
-).withDefault('#ffffff');
-export const badgeSecondaryBackground = create<string>(
-	'badge-secondary-background'
-).withDefault('#4d4d4d');
+export const badgeForeground = create<string>('badge-foreground').withDefault(
+	'#ffffff'
+);
+export const badgeBackground = create<string>('badge-background').withDefault(
+	'#4d4d4d'
+);
 
 /**
  * Button design tokens.

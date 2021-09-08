@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import '../../../node_modules/vscode-codicons/dist/codicon.css';
-import {default as iconMapping} from '../../../node_modules/vscode-codicons/src/template/mapping.json';
+import '../../../node_modules/@vscode/codicons/dist/codicon.css';
+import {default as iconMapping} from '../../../node_modules/@vscode/codicons/src/template/mapping.json';
 
 type createCodiconParams = {
 	iconName?: string;
