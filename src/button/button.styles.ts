@@ -13,7 +13,6 @@ import {
 	buttonIconBackground,
 	buttonIconCornerRadius,
 	buttonIconFocusBorderOffset,
-	buttonIconForeground,
 	buttonIconHoverBackground,
 	buttonIconPadding,
 	buttonPaddingHorizontal,
@@ -29,6 +28,7 @@ import {
 	disabledOpacity,
 	focusBorder,
 	fontFamily,
+	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -158,7 +158,7 @@ const IconButtonStyles = css`
 	:host([appearance='icon']) {
 		background: ${buttonIconBackground};
 		border-radius: ${buttonIconCornerRadius};
-		color: ${buttonIconForeground};
+		color: ${foreground};
 	}
 	:host([appearance='icon']:hover) {
 		background: ${buttonIconHoverBackground};
