@@ -8,7 +8,6 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		href: {control: 'text'},
-		isDisabled: {control: 'boolean'},
 	},
 	parameters: {
 		actions: {
@@ -25,25 +24,11 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: 'Link Text',
 	href: '#',
-	isDisabled: false,
 };
 Default.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-link href="#">Link Text</vscode-link>`,
-		},
-	},
-};
-
-export const WithDisabled: any = Template.bind({});
-WithDisabled.args = {
-	...Default.args,
-	isDisabled: true,
-};
-WithDisabled.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-link href="#" disabled>Link Text</vscode-link>`,
 		},
 	},
 };
