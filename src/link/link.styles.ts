@@ -2,15 +2,10 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {
-	disabledCursor,
-	display,
-	focusVisible,
-} from '@microsoft/fast-foundation';
+import {display, focusVisible} from '@microsoft/fast-foundation';
 import {
 	borderWidth,
 	cornerRadius,
-	disabledOpacity,
 	focusBorder,
 	fontFamily,
 	linkActiveForeground,
@@ -53,23 +48,17 @@ export const LinkStyles = css`
 	.control::-moz-focus-inner {
 		border: 0;
 	}
-	:host(:not([disabled]):hover) {
+	:host(:hover) {
 		color: ${linkActiveForeground};
 	}
-	:host(:not([disabled]):hover) .content {
+	:host(:hover) .content {
 		text-decoration: underline;
 	}
-	:host(:not([disabled]):active) {
+	:host(:active) {
 		background: transparent;
 		color: ${linkActiveForeground};
 	}
-	:host(:not([disabled]):${focusVisible}) .control {
+	:host(:${focusVisible}) .control {
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
-	}
-	:host([disabled]) {
-		cursor: ${disabledCursor};
-		background: transparent;
-		opacity: ${disabledOpacity};
-		text-decoration: none;
 	}
 `;
