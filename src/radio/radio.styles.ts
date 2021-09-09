@@ -11,11 +11,11 @@ import {
 	borderWidth,
 	checkboxBackground,
 	checkboxBorder,
-	checkboxForeground,
 	designUnit,
 	disabledOpacity,
 	focusBorder,
 	fontFamily,
+	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -44,7 +44,7 @@ export const RadioStyles = css`
 		width: calc(${designUnit} * 4px);
 	}
 	.label {
-		color: ${checkboxForeground};
+		color: ${foreground};
 		cursor: pointer;
 		font-family: ${fontFamily};
 		margin-inline-end: calc(${designUnit} * 2px + 2px);
@@ -59,7 +59,7 @@ export const RadioStyles = css`
 		flex-shrink: 0;
 	}
 	.checked-indicator {
-		background: ${checkboxForeground};
+		background: ${foreground};
 		border-radius: 999px;
 		display: inline-block;
 		inset: calc(${designUnit} * 1px);
