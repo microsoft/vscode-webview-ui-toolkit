@@ -50,6 +50,9 @@ export class VSCodeButton extends Button {
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
+		if (this.appearance === 'icon') {
+			// TODO: Add name attribute to icon button
+		}
 		if (!this.appearance) {
 			this.appearance = 'primary';
 		}
