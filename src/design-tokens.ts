@@ -98,9 +98,6 @@ export const buttonPaddingHorizontal = create<string>(
 export const buttonPaddingVertical = create<string>(
 	'button-padding-vertical'
 ).withDefault('6px');
-export const buttonIconForeground = create<string>(
-	'button-icon-foreground'
-).withDefault('#ffffff');
 export const buttonIconBackground = create<string>(
 	'button-icon-background'
 ).withDefault('transparent');
