@@ -30,7 +30,7 @@ export const fontFamily = create<string>('font-family').withDefault(
 export const fontWeight = create<string>('font-weight').withDefault('400');
 export const inputHeight = create<string>('input-height').withDefault('26');
 export const inputMinWidth = create<string>('input-min-width').withDefault(
-	'250px'
+	'100px'
 );
 
 /**
