@@ -26,7 +26,6 @@ import {
 	fontWeight,
 	foreground,
 	inputBackground,
-	inputBorder,
 	inputForeground,
 	inputPlaceholderForeground,
 	linkActiveForeground,
@@ -99,6 +98,5 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Text Fields & Areas ----
 	'--vscode-input-background': inputBackground,
 	'--vscode-input-foreground': inputForeground,
-	'--vscode-input-border': inputBorder,
 	'--vscode-input-placeholderForeground': inputPlaceholderForeground,
 };

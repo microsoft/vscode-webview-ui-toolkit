@@ -12,10 +12,10 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
+	dropdownBorder,
 	focusBorder,
 	fontFamily,
 	inputBackground,
-	inputBorder,
 	inputForeground,
 	inputHeight,
 	inputMinWidth,
@@ -38,7 +38,7 @@ export const TextFieldStyles = css`
 		color: ${inputForeground};
 		background: ${inputBackground};
 		border-radius: calc(${cornerRadius} * 1px);
-		border: calc(${borderWidth} * 1px) solid ${inputBorder};
+		border: calc(${borderWidth} * 1px) solid ${dropdownBorder};
 		height: calc(${inputHeight} * 1px);
 		min-width: ${inputMinWidth};
 	}
@@ -94,7 +94,7 @@ export const TextFieldStyles = css`
 	}
 	:host(:hover:not([disabled])) .root {
 		background: ${inputBackground};
-		border-color: ${inputBorder};
+		border-color: ${dropdownBorder};
 	}
 	:host(:active:not([disabled])) .root {
 		background: ${inputBackground};
@@ -113,6 +113,6 @@ export const TextFieldStyles = css`
 		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
-		border-color: ${inputBorder};
+		border-color: ${dropdownBorder};
 	}
 `;
