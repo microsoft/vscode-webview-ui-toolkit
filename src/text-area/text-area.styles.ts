@@ -12,10 +12,10 @@ import {
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
+	dropdownBorder,
 	focusBorder,
 	fontFamily,
 	inputBackground,
-	inputBorder,
 	inputForeground,
 	inputMinWidth,
 	inputPlaceholderForeground,
@@ -35,7 +35,7 @@ export const TextAreaStyles = css`
 		color: ${inputForeground};
 		background: ${inputBackground};
 		border-radius: calc(${cornerRadius} * 1px);
-		border: calc(${borderWidth} * 1px) solid ${inputBorder};
+		border: calc(${borderWidth} * 1px) solid ${dropdownBorder};
 		font: inherit;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
@@ -46,7 +46,7 @@ export const TextAreaStyles = css`
 	}
 	.control:hover:enabled {
 		background: ${inputBackground};
-		border-color: ${inputBorder};
+		border-color: ${dropdownBorder};
 	}
 	.control:active:enabled {
 		background: ${inputBackground};
@@ -92,6 +92,6 @@ export const TextAreaStyles = css`
 		opacity: ${disabledOpacity};
 	}
 	:host([disabled]) .control {
-		border-color: ${inputBorder};
+		border-color: ${dropdownBorder};
 	}
 `;
