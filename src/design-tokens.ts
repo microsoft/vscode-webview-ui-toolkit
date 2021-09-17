@@ -186,9 +186,6 @@ export const inputForeground = create<string>('input-foreground').withDefault(
 export const inputPlaceholderForeground = create<string>(
 	'input-placeholder-foreground'
 ).withDefault('#cccccc');
-export const inputBorder = create<string>('input-border').withDefault(
-	'#3c3c3c'
-);
 
 /**
  * Link design tokens.
