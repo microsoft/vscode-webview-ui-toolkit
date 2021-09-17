@@ -1,6 +1,6 @@
 {
 	"name": "vscode-webview-ui-toolkit",
-	"version": "0.6.3",
+	"version": "0.6.4",
 	"description": "A component library for building webview-based extension UIs in Visual Studio Code.",
 	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
 	"license": "MIT",
