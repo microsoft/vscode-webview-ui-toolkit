@@ -3,12 +3,8 @@
 
 import {CSSDesignToken} from '@microsoft/fast-foundation';
 import {
-	badgePrimaryBackground,
-	badgePrimaryForeground,
-	badgeSecondaryBackground,
-	badgeSecondaryForeground,
-	breadcrumbItemForeground,
-	breadcrumbItemForegroundHover,
+	badgeBackground,
+	badgeForeground,
 	buttonBorder,
 	buttonPrimaryBackground,
 	buttonPrimaryForeground,
@@ -30,7 +26,6 @@ import {
 	fontWeight,
 	foreground,
 	inputBackground,
-	inputBorder,
 	inputForeground,
 	inputPlaceholderForeground,
 	linkActiveForeground,
@@ -59,14 +54,9 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Contrast Styles ----
 	'--vscode-contrastActiveBorder': contrastActiveBorder,
 	'--vscode-contrastBorder': contrastBorder,
-	// ---- Breadcrumbs ----
-	'--vscode-breadcrumb-foreground': breadcrumbItemForeground,
-	'--vscode-breadcrumb-focusForeground': breadcrumbItemForegroundHover,
 	// ---- Badges ----
-	'--vscode-activityBarBadge-background': badgePrimaryBackground,
-	'--vscode-activityBarBadge-foreground': badgePrimaryForeground,
-	'--vscode-badge-foreground': badgeSecondaryForeground,
-	'--vscode-badge-background': badgeSecondaryBackground,
+	'--vscode-badge-foreground': badgeForeground,
+	'--vscode-badge-background': badgeBackground,
 	// ---- Buttons ----
 	'--vscode-button-background': buttonPrimaryBackground,
 	'--vscode-button-foreground': buttonPrimaryForeground,
@@ -108,6 +98,5 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Text Fields & Areas ----
 	'--vscode-input-background': inputBackground,
 	'--vscode-input-foreground': inputForeground,
-	'--vscode-input-border': inputBorder,
 	'--vscode-input-placeholderForeground': inputPlaceholderForeground,
 };

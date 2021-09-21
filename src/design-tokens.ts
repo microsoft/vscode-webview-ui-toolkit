@@ -30,7 +30,7 @@ export const fontFamily = create<string>('font-family').withDefault(
 export const fontWeight = create<string>('font-weight').withDefault('400');
 export const inputHeight = create<string>('input-height').withDefault('26');
 export const inputMinWidth = create<string>('input-min-width').withDefault(
-	'250px'
+	'100px'
 );
 
 /**
@@ -62,33 +62,14 @@ export const typeRampPlus1LineHeight = create<string>(
 ).withDefault('24px');
 
 /**
- * Breadcrumb Item design tokens.
- */
-export const breadcrumbItemForeground = create<string>(
-	'breadcrumb-item-foreground'
-).withDefault('#cccccccc');
-export const breadcrumbItemForegroundHover = create<string>(
-	'breadcrumb-item-foreground-hover'
-).withDefault('#e0e0e0');
-export const breadcrumbSeparatorMarginHorizontal = create<string>(
-	'breadcrumb-separator-margin-horizontal'
-).withDefault('6px');
-
-/**
  * Badge design tokens.
  */
-export const badgePrimaryForeground = create<string>(
-	'badge-primary-foreground'
-).withDefault('#ffffff');
-export const badgePrimaryBackground = create<string>(
-	'badge-primary-background'
-).withDefault('#007acc');
-export const badgeSecondaryForeground = create<string>(
-	'badge-secondary-foreground'
-).withDefault('#ffffff');
-export const badgeSecondaryBackground = create<string>(
-	'badge-secondary-background'
-).withDefault('#4d4d4d');
+export const badgeForeground = create<string>('badge-foreground').withDefault(
+	'#ffffff'
+);
+export const badgeBackground = create<string>('badge-background').withDefault(
+	'#4d4d4d'
+);
 
 /**
  * Button design tokens.
@@ -117,9 +98,6 @@ export const buttonPaddingHorizontal = create<string>(
 export const buttonPaddingVertical = create<string>(
 	'button-padding-vertical'
 ).withDefault('6px');
-export const buttonIconForeground = create<string>(
-	'button-icon-foreground'
-).withDefault('#ffffff');
 export const buttonIconBackground = create<string>(
 	'button-icon-background'
 ).withDefault('transparent');
@@ -208,9 +186,6 @@ export const inputForeground = create<string>('input-foreground').withDefault(
 export const inputPlaceholderForeground = create<string>(
 	'input-placeholder-foreground'
 ).withDefault('#cccccc');
-export const inputBorder = create<string>('input-border').withDefault(
-	'#3c3c3c'
-);
 
 /**
  * Link design tokens.

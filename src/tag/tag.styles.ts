@@ -4,8 +4,10 @@
 import {css} from '@microsoft/fast-element';
 import {display} from '@microsoft/fast-foundation';
 import {
-	badgeSecondaryBackground,
-	badgeSecondaryForeground,
+	badgeBackground,
+	badgeForeground,
+	borderWidth,
+	buttonBorder,
 	designUnit,
 	fontFamily,
 	tagCornerRadius,
@@ -21,9 +23,10 @@ export const TagStyles = css`
 		line-height: ${typeRampMinus1LineHeight};
 	}
 	.control {
-		background-color: ${badgeSecondaryBackground};
+		background-color: ${badgeBackground};
+		border: calc(${borderWidth} * 1px) solid ${buttonBorder};
 		border-radius: ${tagCornerRadius};
-		color: ${badgeSecondaryForeground};
+		color: ${badgeForeground};
 		padding: calc(${designUnit} * 0.5px) calc(${designUnit} * 1px);
 		text-transform: uppercase;
 	}
