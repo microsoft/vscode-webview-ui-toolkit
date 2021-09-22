@@ -50,11 +50,46 @@ export class VSCodeButton extends Button {
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
-		if (this.appearance === 'icon') {
-			// TODO: Add name attribute to icon button
-		}
 		if (!this.appearance) {
 			this.appearance = 'primary';
+		}
+	}
+
+	/**
+	 * Component lifecycle method that runs when an attribute of the
+	 * element is changed.
+	 *
+	 * @param attrName The attribute that was changed
+	 * @param oldVal The old value of the attribute
+	 * @param newVal The new value of the attribute
+	 *
+	 * @internal
+	 */
+	public attributeChangedCallback(
+		attrName: string,
+		oldVal: string,
+		newVal: string
+	) {
+		// In the case when an icon only button is created add a default ARIA
+		// Label to the button since there is no longer button text to use
+		// as the label.
+		//
+		// !Important!
+		// For best accessibility practices, this ARIA label should be
+		// overridden by extension developers to provide a more descriptive
+		// label about the intended use of the button.
+		//
+		// More documentation on this topic can be found in the button README.
+		if (attrName === 'appearance' && newVal === 'icon') {
+			this.ariaLabel = 'Icon Button';
+		}
+
+		// In the case when the aria-label attribute has been defined (i.e.
+		// overriding the default ARIA label) on the <vscode-button>, this
+		// will programmatically propogate the value to the <button> HTML
+		// element that lives in the Shadow DOM
+		if (attrName === 'aria-label') {
+			this.ariaLabel = newVal;
 		}
 	}
 }
