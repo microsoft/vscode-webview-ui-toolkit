@@ -95,9 +95,9 @@ An icon can be added to the right of the Button text by adding an element with t
 
 An icon can also fill the default slot of the Button component (instead of text) to create an Icon Button by using the `appearance="icon"` attribute and value.
 
-__❗️❗️❗️ Important ❗️❗️❗️__
+**❗️❗️❗️ Important ❗️❗️❗️**
 
-Because Icon Buttons do not have text that can be used by screen readers, they are not meaningfully/semantically accessible by default. 
+Because Icon Buttons do not have text that can be used by screen readers, they are not meaningfully/semantically accessible by default.
 
 An `aria-label` of "Icon Button" is automatically defined on all icon buttons so they are still technically accessible out of the box, however, a descriptive and meaningful label that fits the use case or context of the Icon Button should be defined to replace the default label.
 
