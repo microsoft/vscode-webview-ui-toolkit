@@ -73,7 +73,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-option>\n\tOption Label\n\t<span slot="start" class="codicon codicon-check"></span>\n</vscode-option>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-option>\n\tOption Label\n\t<span slot="start" class="codicon codicon-check"></span>\n</vscode-option>`,
 		},
 	},
 };
@@ -86,7 +86,7 @@ WithEndIcon.args = {
 WithEndIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-option>\n\tOption Label\n\t<span slot="end" class="codicon codicon-bug"></span>\n</vscode-option>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-option>\n\tOption Label\n\t<span slot="end" class="codicon codicon-bug"></span>\n</vscode-option>`,
 		},
 	},
 };

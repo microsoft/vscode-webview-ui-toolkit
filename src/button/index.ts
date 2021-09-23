@@ -12,7 +12,7 @@ import {ButtonStyles as styles} from './button.styles';
 export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
 
 /**
- * The VS Code Button Element. Extends
+ * The Visual Studio Code Button Element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.button/ | Button} and
  * {@link https://www.fast.design/docs/api/fast-foundation.buttontemplate/ | ButtonTemplate}.
  *

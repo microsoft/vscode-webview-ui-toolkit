@@ -9,7 +9,7 @@ import {
 import {TextFieldStyles as styles} from './text-field.styles';
 
 /**
- * The VS Code Text Field element. Extends
+ * The Visual Studio Code Text Field element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.textfield/ | TextField} and
  * {@link https://www.fast.design/docs/api/fast-foundation.textfieldtemplate/ | TextFieldTemplate}.
  *

@@ -6,7 +6,7 @@ import {Anchor, AnchorTemplate as template} from '@microsoft/fast-foundation';
 import {LinkStyles as styles} from './link.styles';
 
 /**
- * The VS Code Link element. Extends
+ * The Visual Studio Code Link element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.anchor/ | Anchor} and
  * {@link https://www.fast.design/docs/api/fast-foundation.anchortemplate/ | AnchorTemplate}.
  *
