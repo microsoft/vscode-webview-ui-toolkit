@@ -40,17 +40,17 @@ export class VSCodeProgressRing extends BaseProgress {
 			this.paused = false;
 		}
 
-		// Defines a default label that screen readers can access
-		this.ariaLabel = 'Loading';
+		// Defines a default aria label that screen readers can access
+		this.setAttribute('aria-label', 'Loading');
 	}
 
 	/**
 	 * Component lifecycle method that runs when an attribute of the
 	 * element is changed.
 	 *
-	 * @param attrName The attribute that was changed
-	 * @param oldVal The old value of the attribute
-	 * @param newVal The new value of the attribute
+	 * @param attrName - The attribute that was changed
+	 * @param oldVal - The old value of the attribute
+	 * @param newVal - The new value of the attribute
 	 *
 	 * @internal
 	 */

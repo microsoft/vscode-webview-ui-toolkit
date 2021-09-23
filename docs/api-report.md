@@ -93,6 +93,8 @@ export class VSCodePanelView extends TabPanel {
 // @public
 export class VSCodeProgressRing extends BaseProgress {
     // @internal
+    attributeChangedCallback(attrName: string, oldVal: string, newVal: string): void;
+    // @internal
     connectedCallback(): void;
 }
 
