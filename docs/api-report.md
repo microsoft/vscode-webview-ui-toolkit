@@ -84,6 +84,8 @@ export class VSCodePanels extends Tabs {
 
 // @public
 export class VSCodePanelTab extends Tab {
+    // @internal
+    connectedCallback(): void;
 }
 
 // @public
