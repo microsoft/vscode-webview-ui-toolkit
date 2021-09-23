@@ -64,7 +64,21 @@ export class VSCodePanels extends Tabs {
 	template: TabTemplate,
 	styles: PanelTabStyles,
 })
-export class VSCodePanelTab extends Tab {}
+export class VSCodePanelTab extends Tab {
+	/**
+	 * Component lifecycle method that runs when the element is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
+	public connectedCallback() {
+		super.connectedCallback();
+
+		if (this.textContent) {
+			this.setAttribute('aria-label', this.textContent);
+		}
+	}
+}
 
 /**
  * The VS Code Panel View element. Extends
