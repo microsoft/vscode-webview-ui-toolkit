@@ -182,7 +182,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-text-field>\n\t<span slot="start" class="codicon codicon-search"></span>\n</vscode-text-field>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-text-field>\n\t<span slot="start" class="codicon codicon-search"></span>\n</vscode-text-field>`,
 		},
 	},
 };
@@ -195,7 +195,7 @@ WithEndIcon.args = {
 WithEndIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-text-field>\n\t<span slot="end" class="codicon codicon-text-size"></span>\n</vscode-text-field>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-text-field>\n\t<span slot="end" class="codicon codicon-text-size"></span>\n</vscode-text-field>`,
 		},
 	},
 };

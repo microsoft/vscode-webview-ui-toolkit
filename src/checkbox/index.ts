@@ -9,7 +9,7 @@ import {
 import {CheckboxStyles as styles} from './checkbox.styles';
 
 /**
- * The VS Code Checkbox element. Extends
+ * The Visual Studio Code Checkbox element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.checkbox/ | Checkbox} and
  * {@link https://www.fast.design/docs/api/fast-foundation.checkboxtemplate/ | CheckboxTemplate}.
  *

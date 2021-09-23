@@ -6,7 +6,7 @@ import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
 import {TagStyles as styles} from './tag.styles';
 
 /**
- * The VS Code Tag element. Extends
+ * The Visual Studio Code Tag element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.badge/ | Badge} and
  * {@link https://www.fast.design/docs/api/fast-foundation.badgetemplate/ | BadgeTemplate}.
  *

@@ -7,9 +7,9 @@ This guide will cover the following steps to get you up and running with the Web
 
 ## Create a webview-based extension
 
-Before installing the toolkit we need to create a webview-based extension to use the toolkit in. The following steps are taken directly from the VS Code [Your First Extension Guide](https://code.visualstudio.com/api/get-started/your-first-extension).
+Before installing the toolkit we need to create a webview-based extension to use the toolkit in. The following steps are taken directly from the Visual Studio Code [Your First Extension Guide](https://code.visualstudio.com/api/get-started/your-first-extension).
 
-To generate a basic extension we can use [Yeoman](https://yeoman.io/) and the [VS Code Extension Generator](https://www.npmjs.com/package/generator-code). Make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed first, then install Yeoman and the generator using the following command:
+To generate a basic extension we can use [Yeoman](https://yeoman.io/) and the [Visual Studio Code Extension Generator](https://www.npmjs.com/package/generator-code). Make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed first, then install Yeoman and the generator using the following command:
 
 ```bash
 npm install -g yo generator-code
@@ -131,7 +131,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 ### Create a toolkit URI
 
-With those changes we can now use some VS Code APIs to create a URI pointing to the toolkit package. These API calls can get a bit verbose however so we'll also create a small helper function to keep our code clean.
+With those changes we can now use some Visual Studio Code APIs to create a URI pointing to the toolkit package. These API calls can get a bit verbose however so we'll also create a small helper function to keep our code clean.
 
 ```typescript
 function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
@@ -213,6 +213,6 @@ Now that you're set up, checkout the component docs for further documentation on
 - [Component Docs](./components.md)
 - [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-ui-toolkit/)
 - [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
-- [VS Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
-- [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
-- [VS Code Extension API Docs](https://code.visualstudio.com/api)
+- [Visual Studio Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
+- [Visual Studio Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
+- [Visual Studio Code Extension API Docs](https://code.visualstudio.com/api)

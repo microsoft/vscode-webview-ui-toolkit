@@ -1,4 +1,4 @@
-# VS Code Panels
+# Visual Studio Code Panels
 
 The `vscode-panels` component is a web component implementation of a [tab](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role). The component is created using three components that work together to interchangably display different content:
 
@@ -75,9 +75,9 @@ None
 </vscode-panels>
 ```
 
-### With VS Code Badge
+### With Visual Studio Code Badge
 
-In addition to text, a VS Code Badge can be used in a panel tab to highlight an item, attract attention, and/or flag status.
+In addition to text, a Visual Studio Code Badge can be used in a panel tab to highlight an item, attract attention, and/or flag status.
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-custom-tab-icons)
 
