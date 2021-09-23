@@ -9,7 +9,7 @@ import {
 import {TextAreaStyles as styles} from './text-area.styles';
 
 /**
- * The VS Code Text Area element. Extends
+ * The Visual Studio Code Text Area element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.textarea/ | TextArea} and
  * {@link https://www.fast.design/docs/api/fast-foundation.textareatemplate/ | TextAreaTemplate}.
  *

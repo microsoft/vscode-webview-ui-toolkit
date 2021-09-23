@@ -1,4 +1,4 @@
-# VS Code Number Field
+# Visual Studio Code Number Field
 
 The `vscode-number-field` is a web component implementation of an [HTML Text Field Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/text).
 
@@ -77,7 +77,7 @@ An icon can be added to the left of the text field by adding an element with the
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-number-field--with-start-icon)
 
 ```html
-<!-- Note: Using VS Code Codicon Library -->
+<!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-number-field>
 	<span slot="start" class="codicon codicon-git-merge"></span>

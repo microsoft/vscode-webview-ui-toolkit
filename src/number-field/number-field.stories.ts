@@ -132,7 +132,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-number-field>\n\t<span slot="start" class="codicon codicon-search"></span>\n</vscode-number-field>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-number-field>\n\t<span slot="start" class="codicon codicon-search"></span>\n</vscode-number-field>`,
 		},
 	},
 };

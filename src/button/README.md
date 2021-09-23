@@ -1,4 +1,4 @@
-# VS Code Button
+# Visual Studio Code Button
 
 The `vscode-button` is a web component implementation of an [HTML Button Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button). The `vscode-button` also supports several visual appearances (primary, secondary, icon).
 
@@ -66,7 +66,7 @@ An icon can be added to the left of Button text by adding an element with the at
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-start-icon)
 
 ```html
-<!-- Note: Using VS Code Codicon Library -->
+<!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-button>
 	Button Text
@@ -81,7 +81,7 @@ An icon can be added to the right of the Button text by adding an element with t
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-end-icon)
 
 ```html
-<!-- Note: Using VS Code Codicon Library -->
+<!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-button>
 	Button Text
@@ -98,7 +98,7 @@ _Also note the usage of the `appearance="icon"` attribute._
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-icon-only)
 
 ```html
-<!-- Note: Using VS Code Codicon Library -->
+<!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-button appearance="icon">
 	<span class="codicon codicon-check"></span>

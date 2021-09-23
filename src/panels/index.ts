@@ -16,7 +16,7 @@ import {PanelTabStyles} from './panel-tab.styles';
 import {PanelViewStyles} from './panel-view.styles';
 
 /**
- * The VS Code Panels element. Extends
+ * The Visual Studio Code Panels element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.tabs/ | Tabs} and
  * {@link https://www.fast.design/docs/api/fast-foundation.tabstemplate/ | TabsTemplate}.
  *
@@ -50,7 +50,7 @@ export class VSCodePanels extends Tabs {
 }
 
 /**
- * The VS Code Panel Tab element. Extends
+ * The Visual Studio Code Panel Tab element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.tab/ | Tab} and
  * {@link https://www.fast.design/docs/api/fast-foundation.tabtemplate/ | TabTemplate}.
  *
@@ -67,7 +67,7 @@ export class VSCodePanels extends Tabs {
 export class VSCodePanelTab extends Tab {}
 
 /**
- * The VS Code Panel View element. Extends
+ * The Visual Studio Code Panel View element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.tabpanel/ | TabPanel} and
  * {@link https://www.fast.design/docs/api/fast-foundation.tabpaneltemplate/ | TabPanelTemplate}.
  *

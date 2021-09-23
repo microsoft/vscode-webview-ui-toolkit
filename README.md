@@ -8,10 +8,10 @@
 
 ## Introduction
 
-The Webview UI Toolkit for VS Code is a component library made for building webview-based extension UIs in VS Code that match the native look and behavior of VS Code itself. Features of the library include:
+The Webview UI Toolkit for Visual Studio Code is a component library made for building webview-based extension UIs in Visual Studio Code that match the native look and behavior of Visual Studio Code itself. Features of the library include:
 
--   **Implements The VS Code Design Language:** All components implement the VS Code design language, enabling developers to create extensions that have a consistent look and feel with the rest of VS Code.
--   **Theming As A First Class Citizen:** All components were designed with theming in mind and the toolkit ships with utilities that automatically consume and apply VS Code color theme changes.
+-   **Implements The Visual Studio Code Design Language:** All components implement the Visual Studio Code design language, enabling developers to create extensions that have a consistent look and feel with the rest of Visual Studio Code.
+-   **Theming As A First Class Citizen:** All components were designed with theming in mind and the toolkit ships with utilities that automatically consume and apply Visual Studio Code color theme changes.
 -   **Plays Nice With Your Tech Stack:** The library is built with web components meaning you will be able use the components no matter what tech stack (React, Vue, Svelte, etc.) you use.
 -   **Accessible Out Of The Box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
 
@@ -26,9 +26,9 @@ Beyond the Getting Started Guide, further documentation can be found in the foll
 -   [Component Docs](./docs/components.md)
 -   [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-ui-toolkit/)
 -   [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
--   [VS Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
--   [VS Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
--   [VS Code Extension API Docs](https://code.visualstudio.com/api)
+-   [Visual Studio Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
+-   [Visual Studio Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
+-   [Visual Studio Code Extension API Docs](https://code.visualstudio.com/api)
 
 ## Contributing
 

@@ -9,7 +9,7 @@ import {
 import {NumberFieldStyles as styles} from './number-field.styles';
 
 /**
- * The VS Code Number Field element. Extends
+ * The Visual Studio Code Number Field element. Extends
  * {@link https://www.fast.design/docs/api/fast-foundation.NumberField/ | NumberField} and
  * {@link https://www.fast.design/docs/api/fast-foundation.NumberFieldtemplate/ | NumberFieldTemplate}.
  *

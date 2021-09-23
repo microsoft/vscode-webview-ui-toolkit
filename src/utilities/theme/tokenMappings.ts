@@ -44,7 +44,7 @@ import {
 } from '../../design-tokens';
 
 /**
- * A mapping of all the VS Code theme CSS variables mapped to the
+ * A mapping of all the Visual Studio Code theme CSS variables mapped to the
  * toolkit design tokens.
  */
 export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {

@@ -1,4 +1,4 @@
-# VS Code Radio
+# Visual Studio Code Radio
 
 The `vscode-radio-group` is a web component implementation of a [Radio Group](https://w3c.github.io/aria-practices/#radiobutton). While any DOM content is permissible as a child of the `vscode-radio-group`, only `vscode-radio` content and slotted content with a role of `radio` will receive keyboard support.
 
