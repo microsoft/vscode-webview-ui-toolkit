@@ -1,5 +1,6 @@
 # Webview UI Toolkit for Visual Studio Code
 
+![NPM Version](https://img.shields.io/badge/release-technical%20preview-orange)
 ![NPM Version](https://img.shields.io/badge/npm-v0.6.5-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
@@ -7,7 +8,7 @@
 
 ---
 
-⚠️ **Warning:** The Webview UI Toolkit is still in beta. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0). ⚠️
+⚠️ **Technical Preview:** The Webview UI Toolkit is in a public beta preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0). ⚠️
 
 ---
 
