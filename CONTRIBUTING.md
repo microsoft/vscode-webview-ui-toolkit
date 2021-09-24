@@ -8,33 +8,11 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 ## Initial set up
 
-To start off, fork this repo on GitHub.
-
-### Clone the forked repo
-
-Once the repo is forked, clone your fork locally using one of the following methods.
-
-**Using SSH**
-
-```
-git clone git@github.com:{your-github-username}/vscode-webview-ui-toolkit.git
-```
-
-**Using HTTPS**
-
-```
-git clone https://github.com/{your-github-username}/vscode-webview-ui-toolkit.git
-```
-
-**Using GitHub CLI**
-
-```
-gh repo clone {your-github-username}/vscode-webview-ui-toolkit
-```
+To start off, fork this repo on GitHub and then clone the fork to your local computer.
 
 ### Set an upstream remote
 
-Next, add an upstream remote pointing to the primary toolkit repo.
+Once cloned, add an upstream remote pointing to the primary toolkit repo.
 
 ```
 cd vscode-webview-ui-toolkit/
@@ -52,15 +30,23 @@ npm install
 
 ### Create a branch
 
-Create a branch for local development. Once that is complete, you can start making your changes locally.
+Create a branch for local development. Once that is complete, you can start working on the bug fix or new feature.
 
 ```
 git checkout -b {branch-name}
 ```
 
+### Development server
+
+As you're working, you can view your changes by running the Storybook development server.
+
+```
+npm start
+```
+
 ## Validate changes
 
-When you're done making changes, check that your changes pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors.
+When you're done making changes, check that they pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors.
 
 ```
 npm run lint
@@ -72,7 +58,7 @@ npm run build:docs
 
 ### Add and commit changes
 
-Commit your changes and push your branch to GitHub.
+Add and commit your changes with a descriptive message.
 
 ```
 git add .
@@ -81,11 +67,9 @@ git commit -m "Detailed description of your changes."
 
 ### Pull any upstream changes
 
-If there are new commits from upstream's `main` branch since your last git pull, you need
-to merge the latest commits from upstream's `main` into your branch and resolve any
-merge conflicts locally.
+If there are any new commits from the upstream `main` branch since your last git pull, you will need to merge the latest commits into your branch and resolve any merge conflicts locally.
 
-If there are no new commits from upstream's `main`, you can skip the following steps.
+If there are no new commits in upstream `main`, you can skip the following steps.
 
 1. Get the latest commits.
 
@@ -105,7 +89,7 @@ If there are no new commits from upstream's `main`, you can skip the following s
 
 ### Push local changes
 
-Push your branch to GitHub.
+You can now finally push your changes to GitHub.
 
 ```
 git push origin {branch-name}
@@ -115,13 +99,13 @@ git push origin {branch-name}
 
 You can also build and deploy the Storybook docs website to your forked repo's GitHub Pages for a live preview of your changes.
 
-_Note: If you're working on component features or bug fixes we will ask for this link to view your work._
+_Note: If you're working on visually oriented features or bug fixes we will ask for this link in your PR to view your work._
 
 ```
 npm run deploy:docs
 ```
 
-Once deployed, the site should be viewable at the following link: https://{your-github-username}.github.io/vscode-webview-ui-toolkit/
+Once deployed, the site should be viewable at the following link: `https://{your-github-username}.github.io/vscode-webview-ui-toolkit/`
 
 The first time you deploy the docs site, navigating to this link will likely result in a 401 error. This is because GitHub Pages defaults to private visibility. To change this:
 
@@ -133,18 +117,18 @@ The first time you deploy the docs site, navigating to this link will likely res
 
 ### Submit a pull request
 
-Finally, submit a pull request to the main toolkit repository through the GitHub website.
+Finally, submit a pull request to the [primary toolkit repository](https://github.com/microsoft/vscode-webview-ui-toolkit/compare) through the GitHub website.
 
 ## Long term repo maintenance
 
-Once your branch has been merged into upstream's `main` branch, if you want to keep your remote and local repo clean, you can delete your branch.
+Once your branch has been merged into the upstream `main` branch, if you want to keep your repo clean, you can delete your remote and local development branches.
 
 ```
 git push origin --delete {branch-name}
 git branch -D {branch-name}
 ```
 
-Finally, you can keep your fork's `main` branch up-to-date with upstream's `main` branch.
+Finally, you can keep your fork's `main` branch up-to-date with the upstream `main` branch.
 
 ```
 git checkout main
