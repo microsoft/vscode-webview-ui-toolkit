@@ -1,6 +1,6 @@
 # Webview UI Toolkit for Visual Studio Code
 
-![Release: Technical Preview](https://img.shields.io/badge/release-technical%20preview-orange)
+![Release: Public Preview](https://img.shields.io/badge/release-public%20preview-orange)
 ![NPM Version](https://img.shields.io/badge/npm-v0.6.5-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
@@ -17,9 +17,9 @@ Features of the library include:
 -   **Use any tech stack:** The library ships as a set of web components, meaning developers can use the toolkit no matter what tech stack (React, Vue, Svelte, etc.) their extension is built with.
 -   **Accessible out of the box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
 
-## Technical Preview
+## Release
 
-The Webview UI Toolkit is currently in a beta preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
+The Webview UI Toolkit is currently in a public preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
 
 ## Getting started
 
