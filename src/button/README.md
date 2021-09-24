@@ -74,21 +74,6 @@ An icon can be added to the left of Button text by adding an element with the at
 </vscode-button>
 ```
 
-### End Icon
-
-An icon can be added to the right of the Button text by adding an element with the attribute `slot="end"`.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-end-icon)
-
-```html
-<!-- Note: Using Visual Studio Code Codicon Library -->
-
-<vscode-button>
-	Button Text
-	<span slot="end" class="codicon codicon-chevron-right"></span>
-</vscode-button>
-```
-
 ### Icon Only
 
 An icon can also fill the default slot of the Button component (instead of text) to create an Icon Button.

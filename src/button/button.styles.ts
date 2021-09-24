@@ -88,8 +88,7 @@ const BaseButtonStyles = css`
 	.content {
 		display: flex;
 	}
-	.start,
-	.end {
+	.start {
 		display: flex;
 	}
 	::slotted(svg),
@@ -99,9 +98,6 @@ const BaseButtonStyles = css`
 	}
 	.start {
 		margin-inline-end: 8px;
-	}
-	.end {
-		margin-inline-start: 8px;
 	}
 `;
 

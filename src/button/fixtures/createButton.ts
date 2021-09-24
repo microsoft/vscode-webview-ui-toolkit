@@ -13,7 +13,6 @@ export type ButtonArgs = {
 	isDisabled: boolean;
 	isAutoFocused: boolean;
 	startIcon: boolean;
-	endIcon: boolean;
 	iconOnly: boolean;
 	onClick: any;
 };
@@ -24,7 +23,6 @@ export function createButton({
 	isDisabled,
 	isAutoFocused,
 	startIcon,
-	endIcon,
 	iconOnly,
 	onClick,
 }: ButtonArgs) {
@@ -50,13 +48,6 @@ export function createButton({
 			slotName: 'start',
 		});
 		button.appendChild(start);
-	}
-	if (endIcon) {
-		const end = createCodiconIcon({
-			iconName: 'chevron-right',
-			slotName: 'end',
-		});
-		button.appendChild(end);
 	}
 	if (iconOnly) {
 		const icon = createCodiconIcon({iconName: 'check'});
