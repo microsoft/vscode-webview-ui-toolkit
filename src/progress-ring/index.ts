@@ -37,6 +37,9 @@ export class VSCodeProgressRing extends BaseProgress {
 		if (this.paused) {
 			this.paused = false;
 		}
+
+		// Defines a default aria label that screen readers can access
+		this.setAttribute('aria-label', 'Loading');
 	}
 
 	/**
