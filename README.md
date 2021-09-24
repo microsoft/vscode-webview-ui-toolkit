@@ -6,9 +6,9 @@
 ![Test, Lint, and Build Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 ![Build and Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 
-**⚠️ Warning ⚠️**
+_**⚠️ Warning ⚠️**_
 
-The Webview UI Toolkit is still in beta. Expect bugs! Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
+_The Webview UI Toolkit is still in beta. Expect bugs! Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0)._
 
 ## Introduction
 
