@@ -70,7 +70,7 @@ An icon can be added to the left of Button text by adding an element with the at
 
 <vscode-button>
 	Button Text
-	<span slot="start" class="codicon codicon-git-merge"></span>
+	<span slot="start" class="codicon codicon-add"></span>
 </vscode-button>
 ```
 

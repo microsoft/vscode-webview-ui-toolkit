@@ -96,7 +96,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<span slot="start" class="codicon codicon-git-merge"></span>\n</vscode-button>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<span slot="start" class="codicon codicon-add"></span>\n</vscode-button>`,
 		},
 	},
 };

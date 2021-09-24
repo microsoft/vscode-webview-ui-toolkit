@@ -44,7 +44,7 @@ export function createButton({
 	}
 	if (startIcon) {
 		const start = createCodiconIcon({
-			iconName: 'git-merge',
+			iconName: 'add',
 			slotName: 'start',
 		});
 		button.appendChild(start);
