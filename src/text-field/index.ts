@@ -9,14 +9,10 @@ import {
 import {TextFieldStyles as styles} from './text-field.styles';
 
 /**
- * The Visual Studio Code Text Field element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.textfield/ | TextField} and
- * {@link https://www.fast.design/docs/api/fast-foundation.textfieldtemplate/ | TextFieldTemplate}.
+ * The Visual Studio Code text field component.
  *
  * @remarks
  * HTML Element: `<vscode-text-field>`
- *
- * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  *
  * @public
  */

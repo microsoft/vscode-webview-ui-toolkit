@@ -6,9 +6,7 @@ import {Radio, RadioTemplate as template} from '@microsoft/fast-foundation';
 import {RadioStyles as styles} from './radio.styles';
 
 /**
- * The Visual Studio Code Radio element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.radio/ | Radio} and
- * {@link https://www.fast.design/docs/api/fast-foundation.radiotemplate/ | RadioTemplate}.
+ * The Visual Studio Code radio component.
  *
  * @remarks
  * HTML Element: `<vscode-radio>`

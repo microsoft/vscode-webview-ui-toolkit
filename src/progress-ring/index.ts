@@ -9,9 +9,7 @@ import {
 import {ProgressRingStyles as styles} from './progress-ring.styles';
 
 /**
- * The Visual Studio Code Progress Ring element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.baseprogress/ | BaseProgress} and
- * {@link https://www.fast.design/docs/api/fast-foundation.progressringtemplate/ | ProgressRingTemplate}.
+ * The Visual Studio Code progress ring component.
  *
  * @remarks
  * HTML Element: `<vscode-progress-ring>`
@@ -25,7 +23,7 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
 })
 export class VSCodeProgressRing extends BaseProgress {
 	/**
-	 * Component lifecycle method that runs when the element is inserted
+	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
 	 *
 	 * @internal
@@ -34,7 +32,7 @@ export class VSCodeProgressRing extends BaseProgress {
 		super.connectedCallback();
 
 		// This will override any usage of the paused attribute
-		// provided by the FAST Foundation BaseProgress component
+		// inherited by the FAST Foundation BaseProgress component
 		// so that VSCodeProgressRings can never be paused
 		if (this.paused) {
 			this.paused = false;

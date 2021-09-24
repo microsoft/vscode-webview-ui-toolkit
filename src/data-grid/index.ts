@@ -19,8 +19,7 @@ const rowTemplate: ViewTemplate = createDataGridRowTemplate('vscode');
 const cellTemplate: ViewTemplate = createDataGridCellTemplate('vscode');
 
 /**
- * The Visual Studio Code Data Grid element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.datagrid/ | DataGrid}.
+ * The Visual Studio Code data grid component.
  *
  * @remarks
  * HTML Element: `<vscode-data-grid>`
@@ -35,8 +34,7 @@ const cellTemplate: ViewTemplate = createDataGridCellTemplate('vscode');
 export class VSCodeDataGrid extends DataGrid {}
 
 /**
- * The Visual Studio Code Data Grid Row element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.datagridrow/ | DataGridRow}.
+ * The Visual Studio Code data grid row component.
  *
  * @remarks
  * HTML Element: `<vscode-data-grid-row>`
@@ -51,8 +49,7 @@ export class VSCodeDataGrid extends DataGrid {}
 export class VSCodeDataGridRow extends DataGridRow {}
 
 /**
- * The Visual Studio Code Data Grid Cell element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.datagridcell/ | DataGridCell}.
+ * The Visual Studio Code data grid cell component.
  *
  * @remarks
  * HTML Element: `<vscode-data-grid-cell>`
