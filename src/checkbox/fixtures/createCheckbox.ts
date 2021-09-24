@@ -11,7 +11,6 @@ export type CheckboxArgs = {
 	isDisabled: boolean;
 	isAutoFocused: boolean;
 	isReadOnly: boolean;
-	isRequired: boolean;
 	hasValue: boolean;
 	onChange: any;
 };
@@ -23,7 +22,6 @@ export function createCheckbox({
 	isDisabled,
 	isAutoFocused,
 	isReadOnly,
-	isRequired,
 	hasValue,
 	onChange,
 }: CheckboxArgs) {
@@ -48,9 +46,6 @@ export function createCheckbox({
 	}
 	if (isReadOnly) {
 		checkbox.setAttribute('readonly', '');
-	}
-	if (isRequired) {
-		checkbox.setAttribute('required', '');
 	}
 	if (hasValue) {
 		checkbox.setAttribute('value', 'baz');
