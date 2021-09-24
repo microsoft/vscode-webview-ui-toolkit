@@ -10,7 +10,6 @@ export default {
 		placeholder: {control: 'text'},
 		value: {control: 'text'},
 		pattern: {control: 'text'},
-		minLength: {control: 'number'},
 		maxLength: {control: 'number'},
 		size: {control: 'number'},
 		isReadOnly: {control: 'boolean'},
@@ -36,7 +35,6 @@ Default.args = {
 	placeholder: '',
 	value: '',
 	pattern: '',
-	minLength: '',
 	maxLength: '',
 	size: '',
 	isReadOnly: false,
@@ -103,21 +101,6 @@ WithCustomSize.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-text-field size="50">Text Field Label</vscode-text-field>`,
-		},
-	},
-};
-
-export const WithMinLength: any = Template.bind({});
-WithMinLength.args = {
-	...Default.args,
-	placeholder: 'This text field requires a minimum of 10 characters',
-	minLength: 10,
-	size: 50,
-};
-WithMinLength.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-text-field minlength="10">Text Field Label</vscode-text-field>`,
 		},
 	},
 };

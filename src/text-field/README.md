@@ -9,7 +9,6 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | `autofocus`   | boolean | Indicates that this component should get focus after the page finishes loading.            |
 | `disabled`    | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.       |
 | `maxlength`   | number  | The maximum number of characters a user can enter.                                         |
-| `minlength`   | number  | The minimum number of characters a user can enter.                                         |
 | `name`        | string  | The name of the component.                                                                 |
 | `pattern`     | string  | A regular expression that the value must match to pass validation.                         |
 | `placeholder` | string  | Sets the placeholder value of the component, generally used to provide a hint to the user. |
@@ -49,14 +48,6 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ```html
 <vscode-text-field maxlength="10">Text Field Label</vscode-text-field>
-```
-
-### Min Length Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-min-length)
-
-```html
-<vscode-text-field minlength="10">Text Field Label</vscode-text-field>
 ```
 
 ### Name Attribute

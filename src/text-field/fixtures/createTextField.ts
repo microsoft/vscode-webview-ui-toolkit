@@ -9,7 +9,6 @@ export type TextFieldArgs = {
 	placeholder: string;
 	value: string;
 	pattern: string;
-	minLength: number;
 	maxLength: number;
 	size: number;
 	isReadOnly: boolean;
@@ -24,7 +23,6 @@ export function createTextField({
 	placeholder,
 	value,
 	pattern,
-	minLength,
 	maxLength,
 	size,
 	isReadOnly,
@@ -46,9 +44,6 @@ export function createTextField({
 	}
 	if (pattern) {
 		textField.setAttribute('pattern', pattern);
-	}
-	if (minLength) {
-		textField.setAttribute('minlength', minLength.toString());
 	}
 	if (maxLength) {
 		textField.setAttribute('maxlength', maxLength.toString());
