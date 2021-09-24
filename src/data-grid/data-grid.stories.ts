@@ -9,7 +9,7 @@ export default {
 		generateHeader: {
 			control: {
 				type: 'select',
-				options: ['None', 'Default', 'Sticky'],
+				options: ['Default', 'Sticky'],
 			},
 		},
 		gridTemplateColumns: {control: 'text'},
@@ -57,19 +57,6 @@ Default.parameters = {
 	docs: {
 		source: {
 			code: `<!-- HTML -->\n\n<vscode-data-grid id="basic-grid"></vscode-data-grid>\n\n// TypeScript or JavaScript\n\ndocument.getElementById('basic-grid').rowsData = [\n\t{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},\n\t{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},\n\t{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},\n];`,
-		},
-	},
-};
-
-export const WithNoHeader: any = Template.bind({});
-WithNoHeader.args = {
-	...Default.args,
-	generateHeader: 'None',
-};
-WithNoHeader.parameters = {
-	docs: {
-		source: {
-			code: `<!-- HTML -->\n\n<vscode-data-grid id="basic-grid" generate-header="none"></vscode-data-grid>\n\n// TypeScript or JavaScript\n\ndocument.getElementById('basic-grid').rowsData = [\n\t{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},\n\t{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},\n\t{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},\n];`,
 		},
 	},
 };
