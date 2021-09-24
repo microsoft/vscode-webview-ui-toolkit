@@ -9,9 +9,7 @@ import {
 import {OptionStyles as styles} from './option.styles';
 
 /**
- * The Visual Studio Code Option element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.listboxoption/ | ListboxOption} and
- * {@link https://www.fast.design/docs/api/fast-foundation.listboxoptiontemplate/ | ListboxOptionTemplate}.
+ * The Visual Studio Code option component.
  *
  * @remarks
  * HTML Element: `<vscode-option>`

@@ -4,17 +4,17 @@
 import {VSCodeTextArea} from '../index';
 
 export type TextAreaArgs = {
-	label?: string;
-	placeholder?: string;
-	value?: string;
-	resize?: string;
-	cols?: number;
-	rows?: number;
-	minLength?: number;
-	maxLength?: number;
-	isReadOnly?: boolean;
-	isDisabled?: boolean;
-	isAutoFocused?: boolean;
+	label: string;
+	placeholder: string;
+	value: string;
+	resize: string;
+	cols: number;
+	rows: number;
+	minLength: number;
+	maxLength: number;
+	isReadOnly: boolean;
+	isDisabled: boolean;
+	isAutoFocused: boolean;
 };
 
 export function createTextArea({

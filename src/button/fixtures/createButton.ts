@@ -9,7 +9,7 @@ import {
 
 export type ButtonArgs = {
 	label: string;
-	appearance?: ButtonAppearance;
+	appearance: ButtonAppearance;
 	isDisabled: boolean;
 	isAutoFocused: boolean;
 	startIcon: boolean;

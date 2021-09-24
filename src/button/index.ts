@@ -12,14 +12,10 @@ import {ButtonStyles as styles} from './button.styles';
 export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
 
 /**
- * The Visual Studio Code Button Element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.button/ | Button} and
- * {@link https://www.fast.design/docs/api/fast-foundation.buttontemplate/ | ButtonTemplate}.
+ * The Visual Studio Code button component.
  *
  * @remarks
  * HTML Element: `<vscode-button>`
- *
- * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  *
  * @public
  */
@@ -35,15 +31,12 @@ export class VSCodeButton extends Button {
 	/**
 	 * The appearance the button should have.
 	 *
-	 * @remarks
-	 * HTML Attribute: appearance
-	 *
 	 * @public
 	 */
 	@attr public appearance: ButtonAppearance;
 
 	/**
-	 * Component lifecycle method that runs when the element is inserted
+	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
 	 *
 	 * @internal

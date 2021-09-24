@@ -1,6 +1,6 @@
 # Visual Studio Code Dropdown
 
-The `vscode-dropdown` is a web component implementation of an [HTML Select Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
+The `vscode-dropdown` is a web component implementation of a [select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
 
 ## Attributes
 

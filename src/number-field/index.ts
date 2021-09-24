@@ -9,14 +9,10 @@ import {
 import {NumberFieldStyles as styles} from './number-field.styles';
 
 /**
- * The Visual Studio Code Number Field element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.NumberField/ | NumberField} and
- * {@link https://www.fast.design/docs/api/fast-foundation.NumberFieldtemplate/ | NumberFieldTemplate}.
+ * The Visual Studio Code number field component.
  *
  * @remarks
  * HTML Element: `<vscode-number-field>`
- *
- * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  *
  * @public
  */

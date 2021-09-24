@@ -8,7 +8,7 @@ export default {
 	argTypes: {
 		label: {control: 'text'},
 		placeholder: {control: 'text'},
-		value: {control: 'text'},
+		value: {control: 'number'},
 		size: {control: 'number'},
 		isReadOnly: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
@@ -30,9 +30,12 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: '',
 	placeholder: '',
+	value: '',
+	size: '',
 	isReadOnly: false,
 	isDisabled: false,
 	isAutoFocused: false,
+	startIcon: false,
 };
 Default.parameters = {
 	docs: {
@@ -63,7 +66,7 @@ WithLabel.args = {
 WithLabel.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-number-field>Text Field Label</vscode-number-field>`,
+			code: `<vscode-number-field>Number Field Label</vscode-number-field>`,
 		},
 	},
 };
@@ -84,9 +87,8 @@ WithAutofocus.parameters = {
 export const WithDisabled: any = Template.bind({});
 WithDisabled.args = {
 	...Default.args,
-	placeholder: 'This text field cannot be interacted with',
+	placeholder: 'This number field cannot be interacted with',
 	isDisabled: true,
-	size: 35,
 };
 WithDisabled.parameters = {
 	docs: {
@@ -99,7 +101,7 @@ WithDisabled.parameters = {
 export const WithCustomSize: any = Template.bind({});
 WithCustomSize.args = {
 	...Default.args,
-	placeholder: 'This text field is 50 characters in width',
+	placeholder: 'This number field is 50 characters in width',
 	size: 50,
 };
 WithCustomSize.parameters = {

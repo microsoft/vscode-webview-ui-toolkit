@@ -5,16 +5,16 @@ import {VSCodeTextField} from '../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
 export type TextFieldArgs = {
-	label?: string;
-	placeholder?: string;
-	value?: string;
-	pattern?: string;
-	minLength?: number;
-	maxLength?: number;
-	size?: number;
-	isReadOnly?: boolean;
-	isDisabled?: boolean;
-	isAutoFocused?: boolean;
+	label: string;
+	placeholder: string;
+	value: string;
+	pattern: string;
+	minLength: number;
+	maxLength: number;
+	size: number;
+	isReadOnly: boolean;
+	isDisabled: boolean;
+	isAutoFocused: boolean;
 	startIcon: boolean;
 	endIcon: boolean;
 };

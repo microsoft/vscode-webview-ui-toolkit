@@ -5,7 +5,7 @@ import {VSCodeRadio} from '../index';
 import {focusObserver} from '../../utilities/storybook/index';
 
 export type RadioArgs = {
-	label?: string;
+	label: string;
 	isChecked: boolean;
 	isReadonly: boolean;
 	isDisabled: boolean;

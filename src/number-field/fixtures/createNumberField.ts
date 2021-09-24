@@ -5,14 +5,14 @@ import {VSCodeNumberField} from '../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
 export type NumberFieldArgs = {
-	label?: string;
-	placeholder?: string;
-	value?: string;
-	size?: number;
-	isReadOnly?: boolean;
-	isDisabled?: boolean;
-	isAutoFocused?: boolean;
-	startIcon?: boolean;
+	label: string;
+	placeholder: string;
+	value: string;
+	size: number;
+	isReadOnly: boolean;
+	isDisabled: boolean;
+	isAutoFocused: boolean;
+	startIcon: boolean;
 };
 
 export function createNumberField({

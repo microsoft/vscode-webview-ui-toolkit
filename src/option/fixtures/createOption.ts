@@ -5,7 +5,7 @@ import {VSCodeOption} from '../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
 export type OptionArgs = {
-	label?: string;
+	label: string;
 	isDisabled: boolean;
 	isSelected: boolean;
 	startIcon: boolean;

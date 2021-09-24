@@ -6,14 +6,10 @@ import {Anchor, AnchorTemplate as template} from '@microsoft/fast-foundation';
 import {LinkStyles as styles} from './link.styles';
 
 /**
- * The Visual Studio Code Link element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.anchor/ | Anchor} and
- * {@link https://www.fast.design/docs/api/fast-foundation.anchortemplate/ | AnchorTemplate}.
+ * The Visual Studio Code link component.
  *
  * @remarks
  * HTML Element: `<vscode-link>`
- *
- * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  *
  * @public
  */

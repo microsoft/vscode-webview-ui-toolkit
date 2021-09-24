@@ -8,7 +8,7 @@ None
 
 ## Usage
 
-A `vscode-badge` should only contain numbers to follow the conventions of the Visual Studio Code design language.
+A `vscode-badge` can only contain numbers to follow the conventions of the Visual Studio Code design language.
 
 If a component that labels an item with a string is desired, see the `vscode-tag` component.
 

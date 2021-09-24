@@ -6,9 +6,7 @@ import {Select, SelectTemplate as template} from '@microsoft/fast-foundation';
 import {DropdownStyles as styles} from './dropdown.styles';
 
 /**
- * The Visual Studio Code Dropdown element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.select/ | Select} and
- * {@link https://www.fast.design/docs/api/fast-foundation.selecttemplate/ | SelectTemplate}.
+ * The Visual Studio Code dropdown component.
  *
  * @remarks
  * HTML Element: `<vscode-dropdown>`

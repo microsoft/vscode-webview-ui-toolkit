@@ -1,6 +1,6 @@
 # Visual Studio Code Divider
 
-The `vscode-divider` is a web component implementation of an [HTML Horiztonal Rule Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
+The `vscode-divider` is a web component implementation of a [horiztonal rule element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
 
 ## Attributes
 
@@ -31,7 +31,6 @@ The `presentation` option indicates that the divider has no semantic value and i
 ```html
 <!-- Indicates that the divider semantically separates content -->
 <vscode-divider role="separator"></vscode-divider>
-<vscode-divider></vscode-divider>
 
 <!-- Indicates that the divider has no semantic value and is for visual presentation only -->
 <vscode-divider role="presentation"></vscode-divider>

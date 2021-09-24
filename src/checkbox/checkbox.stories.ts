@@ -15,7 +15,6 @@ export default {
 		isReadOnly: {control: 'boolean'},
 		isRequired: {control: 'boolean'},
 		hasValue: {control: 'boolean'},
-		isPartOfForm: {control: 'boolean'},
 		indicatorIcon: {control: 'boolean'},
 		onChange: {
 			action: 'changed',
@@ -39,7 +38,6 @@ Default.args = {
 	isAutoFocused: false,
 	isReadOnly: false,
 	hasValue: false,
-	isPartOfForm: false,
 	indicatorIcon: false,
 	onChange: action('checkbox-onchange'),
 };

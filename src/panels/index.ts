@@ -16,9 +16,7 @@ import {PanelTabStyles} from './panel-tab.styles';
 import {PanelViewStyles} from './panel-view.styles';
 
 /**
- * The Visual Studio Code Panels element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.tabs/ | Tabs} and
- * {@link https://www.fast.design/docs/api/fast-foundation.tabstemplate/ | TabsTemplate}.
+ * The Visual Studio Code panels component.
  *
  * @remarks
  * HTML Element: `<vscode-panels>`
@@ -32,7 +30,7 @@ import {PanelViewStyles} from './panel-view.styles';
 })
 export class VSCodePanels extends Tabs {
 	/**
-	 * Component lifecycle method that runs when the element is inserted
+	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
 	 *
 	 * @internal
@@ -41,7 +39,7 @@ export class VSCodePanels extends Tabs {
 		super.connectedCallback();
 
 		// This will override any usage of the orientation attribute
-		// provided by the FAST Foundation Tabs component so that
+		// inherited by the FAST Foundation Tabs component so that
 		// VSCodePanels are always oriented horizontally
 		if (this.orientation) {
 			this.orientation = TabsOrientation.horizontal;
@@ -50,9 +48,7 @@ export class VSCodePanels extends Tabs {
 }
 
 /**
- * The Visual Studio Code Panel Tab element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.tab/ | Tab} and
- * {@link https://www.fast.design/docs/api/fast-foundation.tabtemplate/ | TabTemplate}.
+ * The Visual Studio Code panel tab component.
  *
  * @remarks
  * HTML Element: `<vscode-panel-tab>`
@@ -67,9 +63,7 @@ export class VSCodePanels extends Tabs {
 export class VSCodePanelTab extends Tab {}
 
 /**
- * The Visual Studio Code Panel View element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.tabpanel/ | TabPanel} and
- * {@link https://www.fast.design/docs/api/fast-foundation.tabpaneltemplate/ | TabPanelTemplate}.
+ * The Visual Studio Code panel view component.
  *
  * @remarks
  * HTML Element: `<vscode-panel-view>`

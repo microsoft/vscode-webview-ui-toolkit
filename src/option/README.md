@@ -1,6 +1,6 @@
 # Visual Studio Code Option
 
-The `vscode-option` is a web component implementation of an [Option](https://w3c.github.io/aria/#option).
+The `vscode-option` is a web component implementation of an [option](https://w3c.github.io/aria/#option).
 
 The `vscode-option` component will only provide internals related to form association when used within a form-associated component. See the `vscode-select` component for more details.
 
