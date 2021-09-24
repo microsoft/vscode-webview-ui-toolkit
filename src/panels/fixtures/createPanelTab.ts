@@ -7,9 +7,9 @@ import {focusObserver} from '../../utilities/storybook/index';
 
 export type PanelTabArgs = {
 	title: string;
-	isDisabled?: boolean;
+	isDisabled: boolean;
 	isFocused?: boolean;
-	hasBadge?: boolean;
+	hasBadge: boolean;
 };
 
 export function createPanelTab({

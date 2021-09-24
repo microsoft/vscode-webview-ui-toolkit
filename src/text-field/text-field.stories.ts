@@ -34,9 +34,16 @@ export const Default: any = Template.bind({});
 Default.args = {
 	label: '',
 	placeholder: '',
+	value: '',
+	pattern: '',
+	minLength: '',
+	maxLength: '',
+	size: '',
 	isReadOnly: false,
 	isDisabled: false,
 	isAutoFocused: false,
+	startIcon: false,
+	endIcon: false,
 };
 Default.parameters = {
 	docs: {
@@ -90,7 +97,6 @@ WithDisabled.args = {
 	...Default.args,
 	placeholder: 'This text field cannot be interacted with',
 	isDisabled: true,
-	size: 35,
 };
 WithDisabled.parameters = {
 	docs: {

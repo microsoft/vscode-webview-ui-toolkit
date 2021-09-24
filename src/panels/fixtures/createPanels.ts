@@ -6,9 +6,9 @@ import {createPanelTab, PanelTabArgs} from './createPanelTab';
 import {createPanelView} from './createPanelView';
 
 export type PanelsArgs = {
-	activeTab?: string;
-	hasComplexContent?: boolean;
-	tabMetaData?: any;
+	activeTab: string;
+	hasComplexContent: boolean;
+	tabMetaData: any;
 };
 
 export function createPanels({

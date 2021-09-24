@@ -4,7 +4,7 @@
 import {VSCodeTag} from '../index';
 
 export type TagArgs = {
-	label?: string;
+	label: string;
 };
 
 export function createTag({label}: TagArgs) {
