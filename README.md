@@ -6,6 +6,12 @@
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 ![Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 
+---
+
+**Technical Preview:** The Webview UI Toolkit is currently in a beta preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
+
+---
+
 ## Introduction
 
 The Webview UI Toolkit is a component library for building webview-based extensions in Visual Studio Code.
@@ -16,10 +22,6 @@ Features of the library include:
 -   **Automatic support for color themes:** All components are designed with theming in mind and will automatically display the current editor theme.
 -   **Use any tech stack:** The library ships as a set of web components, meaning developers can use the toolkit no matter what tech stack (React, Vue, Svelte, etc.) their extension is built with.
 -   **Accessible out of the box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
-
-## Technical Preview
-
-The Webview UI Toolkit is currently in a beta preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
 
 ## Getting started
 
