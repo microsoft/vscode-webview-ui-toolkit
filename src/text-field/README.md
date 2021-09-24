@@ -15,7 +15,6 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | `placeholder` | string  | Sets the placeholder value of the component, generally used to provide a hint to the user. |
 | `readonly`    | boolean | When true, the control will be immutable by any user interaction.                          |
 | `size`        | number  | Sets the width of the element to a specified number of characters.                         |
-| `spellcheck`  | boolean | Sets if the component is eligible for spell checking.                                      |
 | `value`       | string  | The value (i.e. content) of the text field.                                                |
 
 ## Usage
@@ -100,18 +99,6 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ```html
 <vscode-text-field size="50">Text Field Label</vscode-text-field>
-```
-
-### Spellcheck Attribute
-
-Specifies whether the `vscode-text-field` is subject to spell checking by the underlying browser/OS. The values can be:
-
--   `true`: Indicates that the element needs to have its spelling and grammar checked.
--   `false`: Indicates that the element should not be spell checked.
-
-```html
-<vscode-text-field spellcheck="true">Text Field Label</vscode-text-field>
-<vscode-text-field spellcheck="false">Text Field Label</vscode-text-field>
 ```
 
 ### Start Icon
