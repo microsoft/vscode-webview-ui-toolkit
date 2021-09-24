@@ -6,14 +6,19 @@
 ![Test, Lint, and Build Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 ![Build and Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 
+**❗️ Warning ❗️**
+>The Webview UI Toolkit is still in beta. Expect bugs! Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
+
 ## Introduction
 
-The Webview UI Toolkit for Visual Studio Code is a component library made for building webview-based extension UIs in Visual Studio Code that match the native look and behavior of Visual Studio Code itself. Features of the library include:
+The Webview UI Toolkit is a component library for building webview-based extensions in Visual Studio Code.
 
--   **Implements The Visual Studio Code Design Language:** All components implement the Visual Studio Code design language, enabling developers to create extensions that have a consistent look and feel with the rest of Visual Studio Code.
--   **Theming As A First Class Citizen:** All components were designed with theming in mind and the toolkit ships with utilities that automatically consume and apply Visual Studio Code color theme changes.
--   **Plays Nice With Your Tech Stack:** The library is built with web components meaning you will be able use the components no matter what tech stack (React, Vue, Svelte, etc.) you use.
--   **Accessible Out Of The Box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
+Features of the library include:
+
+-   **Implements the Visual Studio Code design language:** All components follow the design language of Visual Studio Code––enabling developers to create extensions that have a consistent look and feel with the rest of the editor.
+-   **Automatic support for color themes:** All components are designed with theming in mind and will automatically display the current editor theme.
+-   **Use any tech stack:** The library ships as a set of web components, meaning developers can use the toolkit no matter what tech stack (React, Vue, Svelte, etc.) their extension is built with.
+-   **Accessible out of the box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
 
 ## Getting started
 
@@ -21,7 +26,7 @@ Follow the [Getting Started Guide](./docs/getting-started.md).
 
 ## Documentation
 
-Beyond the Getting Started Guide, further documentation can be found in the following places:
+Further documentation can be found in the following places:
 
 -   [Component Docs](./docs/components.md)
 -   [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-ui-toolkit/)
