@@ -4,6 +4,7 @@ This guide will cover the following steps to get you up and running with the Web
 
 1. Create a webview-based extension
 2. Install and set up the toolkit
+3. Pass data between the webview and extension
 
 ## Create a webview-based extension
 
