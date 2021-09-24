@@ -25,7 +25,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--default)
 
 ```html
-<vscode-text-field></vscode-text-field>
+<vscode-text-field>Text Field Label</vscode-text-field>
 ```
 
 ### Autofocus Attribute
@@ -33,7 +33,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-autofocus)
 
 ```html
-<vscode-text-field autofocus></vscode-text-field>
+<vscode-text-field autofocus>Text Field Label</vscode-text-field>
 ```
 
 ### Disabled Attribute
@@ -41,7 +41,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-disabled)
 
 ```html
-<vscode-text-field disabled></vscode-text-field>
+<vscode-text-field disabled>Text Field Label</vscode-text-field>
 ```
 
 ### Max Length Attribute
@@ -49,7 +49,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-max-length)
 
 ```html
-<vscode-text-field maxlength="10"></vscode-text-field>
+<vscode-text-field maxlength="10">Text Field Label</vscode-text-field>
 ```
 
 ### Min Length Attribute
@@ -57,13 +57,15 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-min-length)
 
 ```html
-<vscode-text-field minlength="10"></vscode-text-field>
+<vscode-text-field minlength="10">Text Field Label</vscode-text-field>
 ```
 
 ### Name Attribute
 
 ```html
-<vscode-text-field name="example-vscode-text-field"></vscode-text-field>
+<vscode-text-field name="example-vscode-text-field"
+	>Text Field Label</vscode-text-field
+>
 ```
 
 ### Pattern Attribute
@@ -71,7 +73,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-pattern)
 
 ```html
-<vscode-text-field pattern="[a-z]{4,8}"></vscode-text-field>
+<vscode-text-field pattern="[a-z]{4,8}">Text Field Label</vscode-text-field>
 ```
 
 ### Placeholder Attribute
@@ -79,7 +81,9 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-placeholder)
 
 ```html
-<vscode-text-field placeholder="Placeholder Text"></vscode-text-field>
+<vscode-text-field placeholder="Placeholder Text"
+	>Text Field Label</vscode-text-field
+>
 ```
 
 ### Read Only Attribute
@@ -87,7 +91,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-readonly)
 
 ```html
-<vscode-text-field readonly>Read Only Text</vscode-text-field>
+<vscode-text-field readonly>Text Field Label</vscode-text-field>
 ```
 
 ### Size Attribute
@@ -95,7 +99,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-custom-size)
 
 ```html
-<vscode-text-field size="50"></vscode-text-field>
+<vscode-text-field size="50">Text Field Label</vscode-text-field>
 ```
 
 ### Spellcheck Attribute
@@ -106,8 +110,8 @@ Specifies whether the `vscode-text-field` is subject to spell checking by the un
 -   `false`: Indicates that the element should not be spell checked.
 
 ```html
-<vscode-text-field spellcheck="true"></vscode-text-field>
-<vscode-text-field spellcheck="false"></vscode-text-field>
+<vscode-text-field spellcheck="true">Text Field Label</vscode-text-field>
+<vscode-text-field spellcheck="false">Text Field Label</vscode-text-field>
 ```
 
 ### Start Icon
@@ -120,6 +124,7 @@ An icon can be added to the left of the text field by adding an element with the
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-text-field>
+	Text Field Label
 	<span slot="start" class="codicon codicon-git-merge"></span>
 </vscode-text-field>
 ```
@@ -134,6 +139,7 @@ An icon can be added to the right of the text field by adding an element with th
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-text-field>
+	Text Field Label
 	<span slot="end" class="codicon codicon-chevron-right"></span>
 </vscode-text-field>
 ```
