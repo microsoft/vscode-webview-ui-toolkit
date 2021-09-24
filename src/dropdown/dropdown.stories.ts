@@ -109,31 +109,3 @@ WithCustomIndicator.parameters = {
 		},
 	},
 };
-
-export const WithNoOptions: any = Template.bind({});
-WithNoOptions.args = {
-	...Default.args,
-	isOpen: true,
-	numberOfChildren: 0,
-};
-WithNoOptions.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-dropdown></vscode-dropdown>`,
-		},
-	},
-};
-
-export const WithLongList: any = Template.bind({});
-WithLongList.args = {
-	...Default.args,
-	isOpen: true,
-	numberOfChildren: 50,
-};
-WithLongList.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-dropdown>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n\t<!-- Insert more options... -->\n</vscode-dropdown>`,
-		},
-	},
-};

@@ -28,8 +28,6 @@ export const DataGridCellStyles = css`
 		font-weight: 400;
 		border: solid calc(${borderWidth} * 1px) transparent;
 		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
 		border-radius: calc(${cornerRadius} * 1px);
 	}
 	:host(.column-header) {

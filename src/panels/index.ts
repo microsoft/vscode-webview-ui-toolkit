@@ -60,7 +60,24 @@ export class VSCodePanels extends Tabs {
 	template: TabTemplate,
 	styles: PanelTabStyles,
 })
-export class VSCodePanelTab extends Tab {}
+export class VSCodePanelTab extends Tab {
+	/**
+	 * Component lifecycle method that runs when the component is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
+	public connectedCallback() {
+		super.connectedCallback();
+
+		// This will override any usage of the disabled attribute
+		// inherited by the FAST Foundation Tab component so that
+		// VSCodePanelTab can never be disabled
+		if (this.disabled) {
+			this.disabled = false;
+		}
+	}
+}
 
 /**
  * The Visual Studio Code panel view component.

@@ -10,7 +10,6 @@ The `vscode-radio-group` is a web component implementation of a [radio group](ht
 | `name`        | string  | The name of the radio group. This will also set the name value for all child radio elements. |
 | `orientation` | boolean | The orientation of the group. Options: `horiztonal`, `vertical`.                             |
 | `readonly`    | boolean | When true, the child radios will be immutable by user interaction.                           |
-| `value`       | string  | The value of the currently checked radio.                                                    |
 
 ## Usage
 

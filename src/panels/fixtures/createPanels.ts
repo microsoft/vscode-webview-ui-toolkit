@@ -44,7 +44,6 @@ function createTabsWithChildren(
 	for (let i = 0; i < tabMetaData.length; i++) {
 		const panelTab = createPanelTab({
 			title: tabMetaData[i].title,
-			isDisabled: tabMetaData[i].isDisabled,
 			hasBadge: tabMetaData[i].hasBadge,
 		});
 		panelTab.setAttribute('id', `tab-${i + 1}`);

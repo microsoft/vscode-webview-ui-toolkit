@@ -33,9 +33,36 @@ export class VSCodeProgressRing extends BaseProgress {
 
 		// This will override any usage of the paused attribute
 		// inherited by the FAST Foundation BaseProgress component
-		// so that VSCodeProgressRings can never be paused
+		// so that VSCodeProgressRing can never be paused
 		if (this.paused) {
 			this.paused = false;
+		}
+
+		// Defines a default aria label that screen readers can access
+		this.setAttribute('aria-label', 'Loading');
+	}
+
+	/**
+	 * Component lifecycle method that runs when an attribute of the
+	 * element is changed.
+	 *
+	 * @param attrName - The attribute that was changed
+	 * @param oldVal - The old value of the attribute
+	 * @param newVal - The new value of the attribute
+	 *
+	 * @internal
+	 */
+	public attributeChangedCallback(
+		attrName: string,
+		oldVal: string,
+		newVal: string
+	) {
+		if (attrName === 'value') {
+			// This will override any usage of the value attribute
+			// inherited by the FAST Foundation BaseProgress component
+			// so that VSCodeProgressRing can never set to be a
+			// determinate state
+			this.removeAttribute('value');
 		}
 	}
 }

@@ -14,9 +14,7 @@ The `vscode-panels` component is a web component implementation of a [tab](https
 
 ## Panel Tab Attributes
 
-| Attribute  | Type    | Description                                               |
-| ---------- | ------- | --------------------------------------------------------- |
-| `disabled` | boolean | When true, the tab will be immutable by user interaction. |
+None
 
 ## Panel View Attributes
 
@@ -58,28 +56,11 @@ None
 </vscode-panels>
 ```
 
-### Disabled Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-disabled)
-
-```html
-<vscode-panels>
-	<vscode-panel-tab id="tab-1" disabled>PROBLEMS</vscode-panel-tab>
-	<vscode-panel-tab id="tab-2" disabled>OUTPUT</vscode-panel-tab>
-	<vscode-panel-tab id="tab-3" disabled>DEBUG CONSOLE</vscode-panel-tab>
-	<vscode-panel-tab id="tab-4" disabled>TERMINAL</vscode-panel-tab>
-	<vscode-panel-view id="view-1"> Problems Content </vscode-panel-view>
-	<vscode-panel-view id="view-2"> Output Content </vscode-panel-view>
-	<vscode-panel-view id="view-3"> Debug Console Content </vscode-panel-view>
-	<vscode-panel-view id="view-4"> Terminal Content </vscode-panel-view>
-</vscode-panels>
-```
-
 ### With Visual Studio Code Badge
 
 In addition to text, a Visual Studio Code Badge can be used in a panel tab to highlight an item, attract attention, and/or flag status.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-custom-tab-icons)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-badge)
 
 ```html
 <vscode-panels>
@@ -110,7 +91,7 @@ In addition to text, a Visual Studio Code Badge can be used in a panel tab to hi
 
 A `vscode-panel-view` can also contain any valid HTML.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-complex-panel-view-content)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-complex-content)
 
 ```html
 <vscode-panels>
