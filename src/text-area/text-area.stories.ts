@@ -17,7 +17,6 @@ export default {
 		},
 		cols: {control: 'number'},
 		rows: {control: 'number'},
-		minLength: {control: 'number'},
 		maxLength: {control: 'number'},
 		isReadOnly: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
@@ -36,13 +35,12 @@ const Template = ({...args}: TextAreaArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
-	label: '',
+	label: 'Text Area Label',
 	placeholder: '',
 	resize: 'None',
 	value: '',
 	cols: '',
 	rows: '',
-	minLength: '',
 	maxLength: '',
 	isReadOnly: false,
 	isDisabled: false,
@@ -51,7 +49,7 @@ Default.args = {
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area></vscode-text-area>`,
+			code: `<vscode-text-area>Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -64,20 +62,7 @@ WithPlaceholder.args = {
 WithPlaceholder.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area placeholder="Placeholder Text"></vscode-text-area>`,
-		},
-	},
-};
-
-export const WithLabel: any = Template.bind({});
-WithLabel.args = {
-	...Default.args,
-	label: 'Text Area Label',
-};
-WithLabel.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-text-area>Text Area Label</vscode-text-area>`,
+			code: `<vscode-text-area placeholder="Placeholder Text">Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -90,7 +75,7 @@ WithAutofocus.args = {
 WithAutofocus.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area autofocus></vscode-text-area>`,
+			code: `<vscode-text-area autofocus>Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -104,7 +89,7 @@ WithCustomCols.args = {
 WithCustomCols.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area cols="50"></vscode-text-area>`,
+			code: `<vscode-text-area cols="50">Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -118,21 +103,7 @@ WithCustomRows.args = {
 WithCustomRows.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area rows="20"></vscode-text-area>`,
-		},
-	},
-};
-
-export const WithMinLength: any = Template.bind({});
-WithMinLength.args = {
-	...Default.args,
-	placeholder: 'This text area requires a minimum of 10 characters',
-	minLength: 10,
-};
-WithMinLength.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-text-area minlength="10"></vscode-text-area>`,
+			code: `<vscode-text-area rows="20">Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -146,7 +117,7 @@ WithMaxLength.args = {
 WithMaxLength.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area maxlength="10"></vscode-text-area>`,
+			code: `<vscode-text-area maxlength="10">Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -160,7 +131,7 @@ WithReadonly.args = {
 WithReadonly.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area readonly></vscode-text-area>`,
+			code: `<vscode-text-area readonly>Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -174,7 +145,7 @@ WithDisabled.args = {
 WithDisabled.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area disabled></vscode-text-area>`,
+			code: `<vscode-text-area disabled>Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -188,7 +159,7 @@ WithResizeNone.args = {
 WithResizeNone.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area resize="none"></vscode-text-area>`,
+			code: `<vscode-text-area resize="none">Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -203,7 +174,7 @@ WithResizeBoth.args = {
 WithResizeBoth.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area resize="both"></vscode-text-area>`,
+			code: `<vscode-text-area resize="both">Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -217,7 +188,7 @@ WithResizeVertical.args = {
 WithResizeVertical.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area resize="vertical"></vscode-text-area>`,
+			code: `<vscode-text-area resize="vertical">Text Area Label</vscode-text-area>`,
 		},
 	},
 };
@@ -231,7 +202,7 @@ WithResizeHorizontal.args = {
 WithResizeHorizontal.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-area resize="horizontal"></vscode-text-area>`,
+			code: `<vscode-text-area resize="horizontal">Text Area Label</vscode-text-area>`,
 		},
 	},
 };
