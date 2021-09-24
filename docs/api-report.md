@@ -14,7 +14,6 @@ import { DataGridCell } from '@microsoft/fast-foundation';
 import { DataGridRow } from '@microsoft/fast-foundation';
 import { Divider } from '@microsoft/fast-foundation';
 import { ListboxOption } from '@microsoft/fast-foundation';
-import { NumberField } from '@microsoft/fast-foundation';
 import { Radio } from '@microsoft/fast-foundation';
 import { RadioGroup } from '@microsoft/fast-foundation';
 import { Select } from '@microsoft/fast-foundation';
@@ -66,10 +65,6 @@ export class VSCodeDropdown extends Select {
 
 // @public
 export class VSCodeLink extends Anchor {
-}
-
-// @public
-export class VSCodeNumberField extends NumberField {
 }
 
 // @public
