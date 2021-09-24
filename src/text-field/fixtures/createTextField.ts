@@ -8,7 +8,6 @@ export type TextFieldArgs = {
 	label: string;
 	placeholder: string;
 	value: string;
-	pattern: string;
 	maxLength: number;
 	size: number;
 	isReadOnly: boolean;
@@ -22,7 +21,6 @@ export function createTextField({
 	label,
 	placeholder,
 	value,
-	pattern,
 	maxLength,
 	size,
 	isReadOnly,
@@ -41,9 +39,6 @@ export function createTextField({
 	}
 	if (value) {
 		textField.value = value;
-	}
-	if (pattern) {
-		textField.setAttribute('pattern', pattern);
 	}
 	if (maxLength) {
 		textField.setAttribute('maxlength', maxLength.toString());

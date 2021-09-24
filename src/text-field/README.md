@@ -10,7 +10,6 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | `disabled`    | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.       |
 | `maxlength`   | number  | The maximum number of characters a user can enter.                                         |
 | `name`        | string  | The name of the component.                                                                 |
-| `pattern`     | string  | A regular expression that the value must match to pass validation.                         |
 | `placeholder` | string  | Sets the placeholder value of the component, generally used to provide a hint to the user. |
 | `readonly`    | boolean | When true, the control will be immutable by any user interaction.                          |
 | `size`        | number  | Sets the width of the element to a specified number of characters.                         |
@@ -56,14 +55,6 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 <vscode-text-field name="example-vscode-text-field"
 	>Text Field Label</vscode-text-field
 >
-```
-
-### Pattern Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-pattern)
-
-```html
-<vscode-text-field pattern="[a-z]{4,8}">Text Field Label</vscode-text-field>
 ```
 
 ### Placeholder Attribute

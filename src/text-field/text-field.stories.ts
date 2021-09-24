@@ -9,7 +9,6 @@ export default {
 		label: {control: 'text'},
 		placeholder: {control: 'text'},
 		value: {control: 'text'},
-		pattern: {control: 'text'},
 		maxLength: {control: 'number'},
 		size: {control: 'number'},
 		isReadOnly: {control: 'boolean'},
@@ -34,7 +33,6 @@ Default.args = {
 	label: 'Text Field Label',
 	placeholder: '',
 	value: '',
-	pattern: '',
 	maxLength: '',
 	size: '',
 	isReadOnly: false,
@@ -116,22 +114,6 @@ WithMaxLength.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-text-field maxlength="10">Text Field Label</vscode-text-field>`,
-		},
-	},
-};
-
-export const WithPattern: any = Template.bind({});
-WithPattern.args = {
-	...Default.args,
-	placeholder:
-		'The pattern requires a lowercase string that is 4-8 characters in length',
-	pattern: '[a-z]{4,8}',
-	size: 62,
-};
-WithPattern.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-text-field pattern="[a-z]{4,8}">Text Field Label</vscode-text-field>`,
 		},
 	},
 };
