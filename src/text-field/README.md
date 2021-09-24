@@ -1,6 +1,6 @@
 # Visual Studio Code Text Field
 
-The `vscode-text-field` is a web component implementation of an [HTML Text Field Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/text).
+The `vscode-text-field` is a web component implementation of a [text field element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/text).
 
 ## Attributes
 
