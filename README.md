@@ -7,7 +7,7 @@
 
 ---
 
-**⚠️ Warning ⚠️** The Webview UI Toolkit is still in beta. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
+⚠️ **Warning:** The Webview UI Toolkit is still in beta. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0). ⚠️
 
 ---
 
