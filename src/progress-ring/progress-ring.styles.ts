@@ -22,15 +22,6 @@ export const ProgressRingStyles = css`
 		stroke: transparent;
 		stroke-width: calc(${designUnit} / 2 * 1px);
 	}
-	.determinate {
-		fill: none;
-		stroke: ${progressBackground};
-		stroke-width: calc(${designUnit} / 2 * 1px);
-		stroke-linecap: square;
-		transform-origin: 50% 50%;
-		transform: rotate(-90deg);
-		transition: all 0.2s ease-in-out;
-	}
 	.indeterminate-indicator-1 {
 		fill: none;
 		stroke: ${progressBackground};
