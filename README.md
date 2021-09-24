@@ -2,8 +2,8 @@
 
 [![Azure Artifacts NPM Version](https://feeds.dev.azure.com/devdiv/0bdbc590-a062-4c3f-b0f6-9383f67865ee/_apis/public/Packaging/Feeds/43a1b90f-64c3-43d5-acfb-fde3765033f5/Packages/78fc9bbc-176e-4945-88aa-22c6c55099a0/Badge)](https://dev.azure.com/devdiv/DevDiv/_packaging?_a=package&feed=43a1b90f-64c3-43d5-acfb-fde3765033f5&package=78fc9bbc-176e-4945-88aa-22c6c55099a0&preferRelease=true)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
-![Test, Lint, and Build Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
-![Build and Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
+![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
+![Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 
 _**⚠️ Warning ⚠️**_
 
