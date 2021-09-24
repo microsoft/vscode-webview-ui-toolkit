@@ -1,7 +1,5 @@
 # Webview UI Toolkit for Visual Studio Code
 
-![Webview UI Toolkit hero illustration](./docs/assets/toolkit-illustration.jpg)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
 [![Azure Artifacts NPM Version](https://feeds.dev.azure.com/devdiv/0bdbc590-a062-4c3f-b0f6-9383f67865ee/_apis/public/Packaging/Feeds/43a1b90f-64c3-43d5-acfb-fde3765033f5/Packages/78fc9bbc-176e-4945-88aa-22c6c55099a0/Badge)](https://dev.azure.com/devdiv/DevDiv/_packaging?_a=package&feed=43a1b90f-64c3-43d5-acfb-fde3765033f5&package=78fc9bbc-176e-4945-88aa-22c6c55099a0&preferRelease=true)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue)](https://www.typescriptlang.org/)
