@@ -7,24 +7,15 @@ import {focusObserver} from '../../utilities/storybook/index';
 
 export type PanelTabArgs = {
 	title: string;
-	isDisabled: boolean;
 	isFocused?: boolean;
 	hasBadge: boolean;
 };
 
-export function createPanelTab({
-	title,
-	isDisabled,
-	isFocused,
-	hasBadge,
-}: PanelTabArgs) {
+export function createPanelTab({title, isFocused, hasBadge}: PanelTabArgs) {
 	const panelTab = new VSCodePanelTab();
 
 	if (title) {
 		panelTab.textContent = title;
-	}
-	if (isDisabled) {
-		panelTab.setAttribute('disabled', '');
 	}
 	if (isFocused) {
 		focusObserver(panelTab);

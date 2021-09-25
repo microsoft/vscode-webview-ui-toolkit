@@ -75,21 +75,4 @@ export const OptionStyles = css`
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	.start,
-	.end,
-	::slotted(svg),
-	::slotted(span) {
-		display: flex;
-	}
-	::slotted(svg),
-	::slotted(span) {
-		height: calc(${designUnit} * 4px);
-		width: calc(${designUnit} * 4px);
-	}
-	::slotted([slot='end']) {
-		margin-inline-start: 6px;
-	}
-	::slotted([slot='start']) {
-		margin-inline-end: 6px;
-	}
 `;

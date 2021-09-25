@@ -2,7 +2,7 @@
 
 The `vscode-option` is a web component implementation of an [option](https://w3c.github.io/aria/#option).
 
-The `vscode-option` component will only provide internals related to form association when used within a form-associated component. See the `vscode-select` component for more details.
+The `vscode-option` component will only provide internals related to form association when used within a form-associated component. See the `vscode-dropdown` component for more details.
 
 ## Attributes
 
@@ -42,34 +42,4 @@ The `vscode-option` component will only provide internals related to form associ
 
 ```html
 <vscode-option value="example-option-value">Option Label</vscode-option>
-```
-
-### Start Icon
-
-An icon can be added to the left of the Option text by adding an element with the attribute `slot="start"`.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-option--with-start-icon)
-
-```html
-<!-- Note: Using Visual Studio Code Codicon Library -->
-
-<vscode-option>
-	Option Label
-	<span slot="start" class="codicon codicon-symbol-method"></span>
-</vscode-option>
-```
-
-### End Icon
-
-An icon can be added to the right of the Option text by adding an element with the attribute `slot="end"`.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-option--with-end-icon)
-
-```html
-<!-- Note: Using Visual Studio Code Codicon Library -->
-
-<vscode-option>
-	Option Label
-	<span slot="end" class="codicon codicon-symbol-method"></span>
-</vscode-option>
 ```

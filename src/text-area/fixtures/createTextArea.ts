@@ -10,7 +10,6 @@ export type TextAreaArgs = {
 	resize: string;
 	cols: number;
 	rows: number;
-	minLength: number;
 	maxLength: number;
 	isReadOnly: boolean;
 	isDisabled: boolean;
@@ -24,7 +23,6 @@ export function createTextArea({
 	resize,
 	cols,
 	rows,
-	minLength,
 	maxLength,
 	isReadOnly,
 	isDisabled,
@@ -49,9 +47,6 @@ export function createTextArea({
 	}
 	if (rows) {
 		textArea.setAttribute('rows', rows.toString());
-	}
-	if (minLength) {
-		textArea.setAttribute('minlength', minLength.toString());
 	}
 	if (maxLength) {
 		textArea.setAttribute('maxlength', maxLength.toString());

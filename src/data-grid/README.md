@@ -10,7 +10,7 @@ The `vscode-data-grid` enables developers to display data in a tabular layout. T
 
 | Attribute               | Type   | Description                                                                            |
 | ----------------------- | ------ | -------------------------------------------------------------------------------------- |
-| `generate-header`       | string | The type of header row that should be generated. Options: `none`, `default`, `sticky`. |
+| `generate-header`       | string | The type of header row that should be generated. Options: `default`, `sticky`, `none`. |
 | `grid-template-columns` | string | A string that gets applied to the `grid-template-columns` attribute of child rows.     |
 
 ## Data Grid Row Attributes
@@ -94,9 +94,9 @@ The `generate-header` attribute is applied to the `<vscode-data-grid>` component
 
 There are three values that can be passed to the attribute:
 
--   `none`: No header row will be generated.
 -   `default`: A default header row will be automatically generated. This is the default value if the `generate-header` is not defined on the component.
 -   `sticky`: A sticky header row will be automatically generated.
+-   `none`: No header row will be generated.
 
 **Important Note**
 
@@ -105,9 +105,9 @@ As shown above in the Basic Usage example, if the `vscode-data-grid` is defined 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-no-header)
 
 ```html
-<vscode-data-grid id="basic-grid" generate-header="none"></vscode-data-grid>
 <vscode-data-grid id="basic-grid" generate-header="default"></vscode-data-grid>
 <vscode-data-grid id="basic-grid" generate-header="sticky"></vscode-data-grid>
+<vscode-data-grid id="basic-grid" generate-header="none"></vscode-data-grid>
 ```
 
 ```javascript

@@ -9,8 +9,6 @@ export default {
 		label: {control: 'text'},
 		isDisabled: {control: 'boolean'},
 		isSelected: {control: 'boolean'},
-		startIcon: {control: 'boolean'},
-		endIcon: {control: 'boolean'},
 	},
 	parameters: {
 		actions: {
@@ -28,8 +26,6 @@ Default.args = {
 	label: 'Option Label',
 	isDisabled: false,
 	isSelected: false,
-	startIcon: false,
-	endIcon: false,
 };
 Default.parameters = {
 	docs: {
@@ -61,32 +57,6 @@ WithSelected.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-option selected>Option Label</vscode-option>`,
-		},
-	},
-};
-
-export const WithStartIcon: any = Template.bind({});
-WithStartIcon.args = {
-	...Default.args,
-	startIcon: true,
-};
-WithStartIcon.parameters = {
-	docs: {
-		source: {
-			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-option>\n\tOption Label\n\t<span slot="start" class="codicon codicon-check"></span>\n</vscode-option>`,
-		},
-	},
-};
-
-export const WithEndIcon: any = Template.bind({});
-WithEndIcon.args = {
-	...Default.args,
-	endIcon: true,
-};
-WithEndIcon.parameters = {
-	docs: {
-		source: {
-			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-option>\n\tOption Label\n\t<span slot="end" class="codicon codicon-bug"></span>\n</vscode-option>`,
 		},
 	},
 };

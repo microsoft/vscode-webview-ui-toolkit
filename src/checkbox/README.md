@@ -63,8 +63,6 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 ### Required Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-required)
-
 ```html
 <vscode-checkbox required>Label</vscode-checkbox>
 ```
