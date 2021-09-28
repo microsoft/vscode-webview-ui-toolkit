@@ -30,13 +30,10 @@ export class VSCodeOption extends ListboxOption {
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
-
-		// This will override any usage of the orientation attribute
-		// inherited by the FAST Foundation Tabs component so that
-		// VSCodePanels are always oriented horizontally
 		if (this.textContent) {
 			this.setAttribute('aria-label', this.textContent);
 		} else {
+			// Fallback to the label if there is no text content
 			this.setAttribute('aria-label', 'Option');
 		}
 	}
