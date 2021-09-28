@@ -25,6 +25,12 @@ The Webview UI Toolkit is currently in a public preview. Track progress towards 
 
 Follow the [Getting Started Guide](./docs/getting-started.md).
 
+If you already have a webview-based extension, you can install the toolkit with the following command:
+
+```
+npm install --save @microsoft/vscode-webview-ui-toolkit
+```
+
 ## Documentation
 
 Further documentation can be found in the following places:
