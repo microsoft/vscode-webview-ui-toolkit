@@ -6,6 +6,8 @@ This guide will cover the following steps to get you up and running with the Web
 2. Install and set up the toolkit
 3. Set up message passing between the extension and webview
 
+_If you get stuck at any point, a completed sample extension based on this guide can be found [here](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/hello-world)._
+
 ## Part 1: Create a webview-based extension
 
 Before installing the toolkit we need to create a webview-based extension to use the toolkit in. The following steps are taken directly from the Visual Studio Code [Your First Extension Guide](https://code.visualstudio.com/api/get-started/your-first-extension) and [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview).
@@ -137,7 +139,7 @@ Back in the `HelloWorldPanel` class we now need to define a `dispose` method so 
 
 ```typescript
 export class HelloWorldPanel {
-  // ... properties and methods ...
+  // ... other properties and methods ...
 
   /**
    * Cleans up and disposes of webview resources when the webview panel is closed.
@@ -179,7 +181,7 @@ This is also the place where references to CSS and JavaScript files/packages are
 
 ```typescript
 export class HelloWorldPanel {
-  // ... properties and methods ...
+  // ... other properties and methods ...
 
   /**
    * Defines and returns the HTML that should be rendered within the webview panel.
@@ -337,7 +339,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 }
 ```
 
-### Pass the URI into the webview
+### Pass the uri into the webview
 
 With access to the toolkit URI we can pass it into our webview context with a regular `<script>` tag like so:
 
@@ -403,7 +405,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
       </head>
       <body>
         <h1>Hello World!</h1>
-        <vscode-button>Howdy!</vscode-button>
+        <vscode-button id="howdy">Howdy!</vscode-button>
       </body>
     </html>
   `;
@@ -419,6 +421,121 @@ Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), sear
 ![Testing That The Toolkit Theme Utilities Work](./assets/toolkit-theme-test.gif)
 
 ## Part 3: Set up message passing
+
+In the final part of this guide we will adjust the extension once more so that when the `<vscode-button>` is clicked a Visual Studio Code information message is displayed with some text.
+
+### Create message listener method
+
+We can now finally create the `_setWebviewMessageListener` method in our `HelloWorldPanel` class. It will be responsible for setting up an event listener that listens for messages passed from the webview context and executes code based on the message that is recieved.
+
+```typescript
+export class HelloWorldPanel {
+  // ... other properties and methods ...
+
+  /**
+   * Sets up an event listener to listen for messages passed from the webview context and
+   * executes code based on the message that is recieved.
+   *
+   * @param webview A reference to the extension webview
+   * @param context A reference to the extension context
+   */
+  private _setWebviewMessageListener(webview: vscode.Webview) {
+    webview.onDidReceiveMessage(
+      (message: any) => {
+        const command = message.command;
+        const text = message.text;
+
+        switch (command) {
+          case "hello":
+            // Code that should run in response to the hello message command
+            vscode.window.showInformationMessage(text);
+            return;
+          // Add more switch case statements here as more webview message commands
+          // are created within the webview context (i.e. inside media/main.js)
+        }
+      },
+      undefined,
+      this._disposables
+    );
+  }
+}
+```
+
+We also need to call this method in our constructor.
+
+```typescript
+private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
+  // ... other code ...
+
+  // Set an event listener to listen for messages passed from the webview context
+  this._setWebviewMessageListener(this._panel.webview);
+}
+```
+
+### Create message sending code
+
+With the message listener code created, we need some message sending code.
+
+This will come in the form of a `main.js` file that will send a message whenever the `vscode-button` is clicked.
+
+Create a new file at `media/main.js`.
+
+```javascript
+// Get access to the VS Code API from within the webview context
+const vscode = acquireVsCodeApi();
+
+// Just like a regular webpage we need to wait for the webview
+// DOM to load before we can reference any of the HTML elements
+// or toolkit components
+window.addEventListener("load", main);
+
+// Main function that gets executed once the webview DOM loads
+function main() {
+  const howdyButton = document.getElementById("howdy");
+  howdyButton.addEventListener("click", handleHowdyClick);
+}
+
+// Callback function that is executed when the howdy button is clicked
+function handleHowdyClick() {
+  vscode.postMessage({
+    command: "hello",
+    text: "Hey there partner! 🤠",
+  });
+}
+```
+
+In order for this `main.js` file to run in the first place, the last thing to do is to create and pass a URI into the webview HTML just like we did for the toolkit package.
+
+```typescript
+private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
+  // ... other code ...
+
+  const mainUri = getUri(webview, extensionUri, ["media","main.js"]);
+
+  return /*html*/ `
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script type="module" src="${toolkitUri}"></script>
+        <script type="module" src="${mainUri}"></script>
+        <title>Hello World!</title>
+      </head>
+      <body>
+        <h1>Hello World!</h1>
+        <vscode-button id="howdy">Howdy!</vscode-button>
+      </body>
+    </html>
+  `;
+}
+```
+
+### One final test
+
+Per usual, let's test that this all works by running the extension and clicking the on the Howdy button.
+
+![Testing that the clicking the howdy button works](./assets/toolkit-button-click-test.png)
 
 ## Next steps
 
