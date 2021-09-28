@@ -164,7 +164,7 @@ export class HelloWorldPanel {
 With the `dispose` method defined we also need to update the constructor method by adding an `onDidDispose` event listener so the method can be triggered when the webview panel is closed.
 
 ```typescript
-private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
+private constructor(panel: vscode.WebviewPanel) {
     // ... other code ...
 
     // Set an event listener to listen for when the panel is disposed (i.e. when the user closes
@@ -211,7 +211,7 @@ export class HelloWorldPanel {
 This is another point where we need to update our constructor method to set the HTML content for the webview panel.
 
 ```typescript
-private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
+private constructor(panel: vscode.WebviewPanel) {
     // ... other code ...
 
     // Set the HTML content for the webview panel
