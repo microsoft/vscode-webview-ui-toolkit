@@ -21,4 +21,23 @@ import {OptionStyles as styles} from './option.styles';
 	template,
 	styles,
 })
-export class VSCodeOption extends ListboxOption {}
+export class VSCodeOption extends ListboxOption {
+	/**
+	 * Component lifecycle method that runs when the component is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
+	public connectedCallback() {
+		super.connectedCallback();
+
+		// This will override any usage of the orientation attribute
+		// inherited by the FAST Foundation Tabs component so that
+		// VSCodePanels are always oriented horizontally
+		if (this.textContent) {
+			this.ariaLabel = this.textContent;
+		} else {
+			this.ariaLabel = 'Option';
+		}
+	}
+}
