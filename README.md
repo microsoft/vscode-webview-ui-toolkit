@@ -6,6 +6,8 @@
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 ![Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 
+![Webview Toolkit for Visual Studio Code Artwork](./docs/assets/webview-toolkit-artwork.png)
+
 ## Introduction
 
 The Webview UI Toolkit is a component library for building webview-based extensions in Visual Studio Code.
