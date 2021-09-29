@@ -6,7 +6,7 @@ This guide will cover the following steps to get you up and running with the Web
 2. Install and set up the toolkit
 3. Set up message passing between the extension and webview
 
-_If you get stuck at any point, a completed sample extension based on this guide can be found [here](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/hello-world)._
+_If you get stuck at any point, a completed sample extension based on this guide (and with extensive documentation comments) can be found [here](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/hello-world)._
 
 ## Part 1: Create a webview-based extension
 
@@ -18,9 +18,9 @@ To generate a basic extension we can use [Yeoman](https://yeoman.io/) and the [V
 npm install -g yo generator-code
 ```
 
-The generator will scaffold a TypeScript or JavaScript project ready for development.
+The generator will scaffold a TypeScript or JavaScript extension ready for development.
 
-Run the generator and fill out a few fields for a TypeScript project:
+Run the generator and fill out a few fields for a TypeScript extension:
 
 ```bash
 yo code
@@ -38,18 +38,30 @@ code ./helloworld
 
 ### Create a webview
 
-With this basic extension created, we now need to create a webview. The following steps are an adapted version of the steps provided in the [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)––for more information about Webviews visit the guide.
+With this basic extension created, we now need to create a webview. The following steps are an adapted version of those provided in the [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)––for more information about webviews visit the guide.
 
 Start by navigating to the `extensions.ts` file inside the `src` directory and replacing the contents of the `activate` function with the following:
 
+`file: src/extension.ts`
+
 ```typescript
 export function activate(context: vscode.ExtensionContext) {
-  // Create the helloworld command
   const helloCommand = vscode.commands.registerCommand("helloworld.helloWorld", () => {
     HelloWorldPanel.render();
   });
 
-  // Add command to the extension context
+  context.subscriptions.push(helloCommand);
+}
+```
+
+```typescript
+// file: src/extension.ts
+
+export function activate(context: vscode.ExtensionContext) {
+  const helloCommand = vscode.commands.registerCommand("helloworld.helloWorld", () => {
+    HelloWorldPanel.render();
+  });
+
   context.subscriptions.push(helloCommand);
 }
 ```
