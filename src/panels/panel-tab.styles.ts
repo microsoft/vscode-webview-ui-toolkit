@@ -2,16 +2,11 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {
-	disabledCursor,
-	display,
-	focusVisible,
-} from '@microsoft/fast-foundation';
+import {display, focusVisible} from '@microsoft/fast-foundation';
 import {
 	borderWidth,
 	cornerRadius,
 	designUnit,
-	disabledOpacity,
 	fontFamily,
 	panelTabActiveBorder,
 	panelTabActiveForeground,
@@ -44,14 +39,6 @@ export const PanelTabStyles = css`
 	:host(:active) {
 		color: ${panelTabActiveForeground};
 		fill: currentcolor;
-	}
-	:host([disabled]) {
-		cursor: ${disabledCursor};
-		opacity: ${disabledOpacity};
-	}
-	:host([disabled]:hover) {
-		color: ${panelTabForeground};
-		background: transparent;
 	}
 	:host([aria-selected='true']) {
 		background: transparent;

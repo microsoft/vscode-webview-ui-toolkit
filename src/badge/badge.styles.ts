@@ -6,6 +6,8 @@ import {display} from '@microsoft/fast-foundation';
 import {
 	badgeBackground,
 	badgeForeground,
+	borderWidth,
+	buttonBorder,
 	designUnit,
 	fontFamily,
 	typeRampMinus1FontSize,
@@ -22,6 +24,7 @@ export const BadgeStyles = css`
 	.control {
 		align-items: center;
 		background-color: ${badgeBackground};
+		border: calc(${borderWidth} * 1px) solid ${buttonBorder};
 		border-radius: 100px;
 		box-sizing: border-box;
 		color: ${badgeForeground};

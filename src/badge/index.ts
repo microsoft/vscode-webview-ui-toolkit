@@ -6,9 +6,7 @@ import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
 import {BadgeStyles as styles} from './badge.styles';
 
 /**
- * The VS Code Badge element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.badge/ | Badge} and
- * {@link https://www.fast.design/docs/api/fast-foundation.badgetemplate/ | BadgeTemplate}.
+ * The Visual Studio Code badge component.
  *
  * @remarks
  * HTML Element: `<vscode-badge>`
@@ -22,7 +20,7 @@ import {BadgeStyles as styles} from './badge.styles';
 })
 export class VSCodeBadge extends Badge {
 	/**
-	 * Component lifecycle method that runs when the element is inserted
+	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
 	 *
 	 * @internal
@@ -31,8 +29,8 @@ export class VSCodeBadge extends Badge {
 		super.connectedCallback();
 
 		// This will override any usage of the circular attribute
-		// provided by the FAST Foundation Badge component so that
-		// VSCodeBadges are always circular
+		// inherited by the FAST Foundation Badge component so
+		// that VSCodeBadges are always circular
 		if (!this.circular) {
 			this.circular = true;
 		}

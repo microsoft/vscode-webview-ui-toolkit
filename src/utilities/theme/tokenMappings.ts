@@ -26,7 +26,6 @@ import {
 	fontWeight,
 	foreground,
 	inputBackground,
-	inputBorder,
 	inputForeground,
 	inputPlaceholderForeground,
 	linkActiveForeground,
@@ -45,7 +44,7 @@ import {
 } from '../../design-tokens';
 
 /**
- * A mapping of all the VS Code theme CSS variables mapped to the
+ * A mapping of all the Visual Studio Code theme CSS variables mapped to the
  * toolkit design tokens.
  */
 export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
@@ -99,6 +98,5 @@ export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
 	// ---- Text Fields & Areas ----
 	'--vscode-input-background': inputBackground,
 	'--vscode-input-foreground': inputForeground,
-	'--vscode-input-border': inputBorder,
 	'--vscode-input-placeholderForeground': inputPlaceholderForeground,
 };

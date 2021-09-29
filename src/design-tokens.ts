@@ -30,7 +30,7 @@ export const fontFamily = create<string>('font-family').withDefault(
 export const fontWeight = create<string>('font-weight').withDefault('400');
 export const inputHeight = create<string>('input-height').withDefault('26');
 export const inputMinWidth = create<string>('input-min-width').withDefault(
-	'250px'
+	'100px'
 );
 
 /**
@@ -98,9 +98,6 @@ export const buttonPaddingHorizontal = create<string>(
 export const buttonPaddingVertical = create<string>(
 	'button-padding-vertical'
 ).withDefault('6px');
-export const buttonIconForeground = create<string>(
-	'button-icon-foreground'
-).withDefault('#ffffff');
 export const buttonIconBackground = create<string>(
 	'button-icon-background'
 ).withDefault('transparent');
@@ -189,9 +186,6 @@ export const inputForeground = create<string>('input-foreground').withDefault(
 export const inputPlaceholderForeground = create<string>(
 	'input-placeholder-foreground'
 ).withDefault('#cccccc');
-export const inputBorder = create<string>('input-border').withDefault(
-	'#3c3c3c'
-);
 
 /**
  * Link design tokens.

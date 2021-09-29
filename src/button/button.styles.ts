@@ -13,7 +13,6 @@ import {
 	buttonIconBackground,
 	buttonIconCornerRadius,
 	buttonIconFocusBorderOffset,
-	buttonIconForeground,
 	buttonIconHoverBackground,
 	buttonIconPadding,
 	buttonPaddingHorizontal,
@@ -29,6 +28,7 @@ import {
 	disabledOpacity,
 	focusBorder,
 	fontFamily,
+	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -88,8 +88,7 @@ const BaseButtonStyles = css`
 	.content {
 		display: flex;
 	}
-	.start,
-	.end {
+	.start {
 		display: flex;
 	}
 	::slotted(svg),
@@ -99,9 +98,6 @@ const BaseButtonStyles = css`
 	}
 	.start {
 		margin-inline-end: 8px;
-	}
-	.end {
-		margin-inline-start: 8px;
 	}
 `;
 
@@ -158,7 +154,7 @@ const IconButtonStyles = css`
 	:host([appearance='icon']) {
 		background: ${buttonIconBackground};
 		border-radius: ${buttonIconCornerRadius};
-		color: ${buttonIconForeground};
+		color: ${foreground};
 	}
 	:host([appearance='icon']:hover) {
 		background: ${buttonIconHoverBackground};

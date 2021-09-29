@@ -5,16 +5,14 @@ import {VSCodeTextField} from '../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
 export type TextFieldArgs = {
-	label?: string;
-	placeholder?: string;
-	value?: string;
-	pattern?: string;
-	minLength?: number;
-	maxLength?: number;
-	size?: number;
-	isReadOnly?: boolean;
-	isDisabled?: boolean;
-	isAutoFocused?: boolean;
+	label: string;
+	placeholder: string;
+	value: string;
+	maxLength: number;
+	size: number;
+	isReadOnly: boolean;
+	isDisabled: boolean;
+	isAutoFocused: boolean;
 	startIcon: boolean;
 	endIcon: boolean;
 };
@@ -23,8 +21,6 @@ export function createTextField({
 	label,
 	placeholder,
 	value,
-	pattern,
-	minLength,
 	maxLength,
 	size,
 	isReadOnly,
@@ -43,12 +39,6 @@ export function createTextField({
 	}
 	if (value) {
 		textField.value = value;
-	}
-	if (pattern) {
-		textField.setAttribute('pattern', pattern);
-	}
-	if (minLength) {
-		textField.setAttribute('minlength', minLength.toString());
 	}
 	if (maxLength) {
 		textField.setAttribute('maxlength', maxLength.toString());

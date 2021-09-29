@@ -6,6 +6,8 @@ import {display} from '@microsoft/fast-foundation';
 import {
 	badgeBackground,
 	badgeForeground,
+	borderWidth,
+	buttonBorder,
 	designUnit,
 	fontFamily,
 	tagCornerRadius,
@@ -22,6 +24,7 @@ export const TagStyles = css`
 	}
 	.control {
 		background-color: ${badgeBackground};
+		border: calc(${borderWidth} * 1px) solid ${buttonBorder};
 		border-radius: ${tagCornerRadius};
 		color: ${badgeForeground};
 		padding: calc(${designUnit} * 0.5px) calc(${designUnit} * 1px);

@@ -17,7 +17,6 @@ export default {
 		isDisabled: {control: 'boolean'},
 		isAutoFocused: {control: 'boolean'},
 		startIcon: {control: 'boolean'},
-		endIcon: {control: 'boolean'},
 		iconOnly: {control: 'boolean'},
 		ariaLabel: {control: 'text'},
 		onClick: {
@@ -40,7 +39,6 @@ Default.args = {
 	isDisabled: false,
 	isAutoFocused: false,
 	startIcon: false,
-	endIcon: false,
 	iconOnly: false,
 	onClick: action('button-clicked'),
 };
@@ -99,20 +97,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<span slot="start" class="codicon codicon-git-merge"></span>\n</vscode-button>`,
-		},
-	},
-};
-
-export const WithEndIcon: any = Template.bind({});
-WithEndIcon.args = {
-	...Default.args,
-	endIcon: true,
-};
-WithEndIcon.parameters = {
-	docs: {
-		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<span slot="end" class="codicon codicon-chevron-right"></span>\n</vscode-button>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-button>\n\tButton Text\n\t<span slot="start" class="codicon codicon-add"></span>\n</vscode-button>`,
 		},
 	},
 };
@@ -127,7 +112,7 @@ WithIconOnly.args = {
 WithIconOnly.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-button appearance="icon" aria-label="Confirm">\n\t<span class="codicon codicon-check"></span>\n</vscode-button>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-button appearance="icon" aria-label="Confirm">\n\t<span class="codicon codicon-check"></span>\n</vscode-button>`,
 		},
 	},
 };

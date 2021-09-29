@@ -1,6 +1,6 @@
-# VS Code Dropdown
+# Visual Studio Code Dropdown
 
-The `vscode-dropdown` is a web component implementation of an [HTML Select Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
+The `vscode-dropdown` is a web component implementation of a [select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
 
 ## Attributes
 
@@ -77,7 +77,7 @@ The default indicator is a downward facing chevron, but it can customized by add
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-dropdown--with-custom-indicator)
 
 ```html
-<!-- Note: Using VS Code Codicon Library -->
+<!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-dropdown>
 	<span slot="indicator" class="codicon codicon-settings"></span>
