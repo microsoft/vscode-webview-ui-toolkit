@@ -42,18 +42,6 @@ With this basic extension created, we now need to create a webview. The followin
 
 Start by navigating to the `extensions.ts` file inside the `src` directory and replacing the contents of the `activate` function with the following:
 
-`file: src/extension.ts`
-
-```typescript
-export function activate(context: vscode.ExtensionContext) {
-  const helloCommand = vscode.commands.registerCommand("helloworld.helloWorld", () => {
-    HelloWorldPanel.render();
-  });
-
-  context.subscriptions.push(helloCommand);
-}
-```
-
 ```typescript
 // file: src/extension.ts
 
