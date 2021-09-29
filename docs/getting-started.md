@@ -508,7 +508,9 @@ Per usual, let's test that this all works by running the extension and clicking 
 
 Congratulations on getting started with the Webview UI Toolkit! 🎊
 
-Now that you're set up, checkout the component docs for further documentation on what components are available and how to use them. Further component documentation and some guides on how to work with webviews is also provided too. Happy hacking!
+You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/hello-world) based on this guide that includes documentation comments explaining the code in even more detail.
+
+Further component documentation and guides on how to work with webviews is also provided too. Happy hacking!
 
 - [Component Docs](./components.md)
 - [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-ui-toolkit/)
