@@ -450,7 +450,7 @@ This will come in the form of a `main.js` file that will send a message whenever
 Create a new file at `media/main.js`.
 
 ```javascript
-// file: src/panels/HelloWorldPanel.ts
+// file: media/main.js
 
 const vscode = acquireVsCodeApi();
 
