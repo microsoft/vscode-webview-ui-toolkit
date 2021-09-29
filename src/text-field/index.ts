@@ -24,4 +24,20 @@ import {TextFieldStyles as styles} from './text-field.styles';
 		delegatesFocus: true,
 	},
 })
-export class VSCodeTextField extends TextField {}
+export class VSCodeTextField extends TextField {
+	/**
+	 * Component lifecycle method that runs when the component is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
+	public connectedCallback() {
+		super.connectedCallback();
+		if (this.textContent) {
+			this.setAttribute('aria-label', this.textContent);
+		} else {
+			//Describe the generic component if no label is provided
+			this.setAttribute('aria-label', 'Text field');
+		}
+	}
+}
