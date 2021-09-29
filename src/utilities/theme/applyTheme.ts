@@ -2,8 +2,8 @@
 // Licensed under the MIT License.
 
 /**
- * This script configures a MutationObserver to watch for VS Code theme changes and
- * applies the current VS Code theme to the toolkit components.
+ * This script configures a MutationObserver to watch for Visual Studio Code theme changes and
+ * applies the current Visual Studio Code theme to the toolkit components.
  */
 
 import {tokenMappings} from './tokenMappings';
@@ -19,12 +19,12 @@ window.addEventListener('load', () => {
 });
 
 /**
- * Applies the current VS Code theme to the toolkit components.
+ * Applies the current Visual Studio Code theme to the toolkit components.
  */
 function applyCurrentTheme() {
 	// Get all the styles applied to the <body> tag in the webview HTML
 	// Importantly this includes all the CSS variables associated with the
-	// current VS Code theme
+	// current Visual Studio Code theme
 	const styles = getComputedStyle(document.body);
 
 	for (const vscodeTokenName in tokenMappings) {

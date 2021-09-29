@@ -10,7 +10,7 @@ None
 
 ### Basic Usage
 
-The progress rings displays a looping animation to indicate an indeterminate state where the wait time is unspecified.
+The progress ring displays a looping animation to indicate an indeterminate state where the wait time is unspecified.
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-progress-ring--default)
 

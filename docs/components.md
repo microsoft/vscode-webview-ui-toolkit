@@ -11,7 +11,6 @@ Here you can find a list of all the components currently available in the toolki
 | `divider`       | [Divider Documentation](../src/divider/README.md)             |
 | `dropdown`      | [Dropdown Documentation](../src/dropdown/README.md)           |
 | `link`          | [Link Documentation](../src/link/README.md)                   |
-| `number-field`  | [Number Field Documentation](../src/number-field/README.md)   |
 | `option`        | [Option Documentation](../src/option/README.md)               |
 | `panels`        | [Panels Documentation](../src/panels/README.md)               |
 | `progress-ring` | [Progress Ring Documentation](../src/progress-ring/README.md) |

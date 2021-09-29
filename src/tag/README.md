@@ -1,4 +1,4 @@
-# VS Code Tag
+# Visual Studio Code Tag
 
 The `vscode-tag` component is used to label an item, attract attention, and/or flag status.
 
@@ -8,7 +8,7 @@ None
 
 ## Usage
 
-A `vscode-tag` should only contain text and will be automatically be converted uppercase to follow the conventions of the VS Code design language.
+A `vscode-tag` should only contain text and will be automatically be converted uppercase to follow the conventions of the Visual Studio Code design language.
 
 If a component that highlights an item with a number is desired, see the `vscode-badge` component.
 

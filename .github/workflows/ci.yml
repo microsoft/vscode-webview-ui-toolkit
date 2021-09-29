@@ -1,4 +1,4 @@
-name: Test, Lint, and Build
+name: toolkit-ci
 
 on: pull_request
 
