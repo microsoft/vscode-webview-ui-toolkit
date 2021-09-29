@@ -9,7 +9,6 @@ export * from './data-grid/index';
 export * from './divider/index';
 export * from './dropdown/index';
 export * from './link/index';
-export * from './number-field/index';
 export * from './option/index';
 export * from './panels/index';
 export * from './progress-ring/index';

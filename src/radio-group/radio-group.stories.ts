@@ -44,19 +44,6 @@ Default.parameters = {
 	},
 };
 
-export const WithNoLabel: any = Template.bind({});
-WithNoLabel.args = {
-	...Default.args,
-	label: '',
-};
-WithNoLabel.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-radio-group>\n\t<vscode-radio>Radio Label</vscode-radio>\n\t<vscode-radio>Radio Label</vscode-radio>\n\t<vscode-radio>Radio Label</vscode-radio>\n</vscode-radio-group>`,
-		},
-	},
-};
-
 export const WithVerticalOrientation: any = Template.bind({});
 WithVerticalOrientation.args = {
 	...Default.args,

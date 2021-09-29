@@ -9,8 +9,6 @@ export default {
 		label: {control: 'text'},
 		placeholder: {control: 'text'},
 		value: {control: 'text'},
-		pattern: {control: 'text'},
-		minLength: {control: 'number'},
 		maxLength: {control: 'number'},
 		size: {control: 'number'},
 		isReadOnly: {control: 'boolean'},
@@ -32,16 +30,21 @@ const Template = ({...args}: TextFieldArgs) => {
 
 export const Default: any = Template.bind({});
 Default.args = {
-	label: '',
+	label: 'Text Field Label',
 	placeholder: '',
+	value: '',
+	maxLength: '',
+	size: '',
 	isReadOnly: false,
 	isDisabled: false,
 	isAutoFocused: false,
+	startIcon: false,
+	endIcon: false,
 };
 Default.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-field></vscode-text-field>`,
+			code: `<vscode-text-field>Text Field Label</vscode-text-field>`,
 		},
 	},
 };
@@ -54,20 +57,7 @@ WithPlaceholder.args = {
 WithPlaceholder.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-field placeholder="Placeholder Text"></vscode-text-field>`,
-		},
-	},
-};
-
-export const WithLabel: any = Template.bind({});
-WithLabel.args = {
-	...Default.args,
-	label: 'Text Field Label',
-};
-WithLabel.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-text-field>Text Field Label</vscode-text-field>`,
+			code: `<vscode-text-field placeholder="Placeholder Text">Text Field Label</vscode-text-field>`,
 		},
 	},
 };
@@ -80,7 +70,7 @@ WithAutofocus.args = {
 WithAutofocus.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-field autofocus></vscode-text-field>`,
+			code: `<vscode-text-field autofocus>Text Field Label</vscode-text-field>`,
 		},
 	},
 };
@@ -90,12 +80,11 @@ WithDisabled.args = {
 	...Default.args,
 	placeholder: 'This text field cannot be interacted with',
 	isDisabled: true,
-	size: 35,
 };
 WithDisabled.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-field disabled></vscode-text-field>`,
+			code: `<vscode-text-field disabled>Text Field Label</vscode-text-field>`,
 		},
 	},
 };
@@ -109,22 +98,7 @@ WithCustomSize.args = {
 WithCustomSize.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-field size="50"></vscode-text-field>`,
-		},
-	},
-};
-
-export const WithMinLength: any = Template.bind({});
-WithMinLength.args = {
-	...Default.args,
-	placeholder: 'This text field requires a minimum of 10 characters',
-	minLength: 10,
-	size: 50,
-};
-WithMinLength.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-text-field minlength="10"></vscode-text-field>`,
+			code: `<vscode-text-field size="50">Text Field Label</vscode-text-field>`,
 		},
 	},
 };
@@ -139,23 +113,7 @@ WithMaxLength.args = {
 WithMaxLength.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-field maxlength="10"></vscode-text-field>`,
-		},
-	},
-};
-
-export const WithPattern: any = Template.bind({});
-WithPattern.args = {
-	...Default.args,
-	placeholder:
-		'The pattern requires a lowercase string that is 4-8 characters in length',
-	pattern: '[a-z]{4,8}',
-	size: 62,
-};
-WithPattern.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-text-field pattern="[a-z]{4,8}"></vscode-text-field>`,
+			code: `<vscode-text-field maxlength="10">Text Field Label</vscode-text-field>`,
 		},
 	},
 };
@@ -169,7 +127,7 @@ WithReadonly.args = {
 WithReadonly.parameters = {
 	docs: {
 		source: {
-			code: `<vscode-text-field readonly></vscode-text-field>`,
+			code: `<vscode-text-field readonly>Text Field Label</vscode-text-field>`,
 		},
 	},
 };
@@ -182,7 +140,7 @@ WithStartIcon.args = {
 WithStartIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-text-field>\n\t<span slot="start" class="codicon codicon-search"></span>\n</vscode-text-field>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-text-field>\n\tText Field Label\n\t<span slot="start" class="codicon codicon-search"></span>\n</vscode-text-field>`,
 		},
 	},
 };
@@ -195,7 +153,7 @@ WithEndIcon.args = {
 WithEndIcon.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-text-field>\n\t<span slot="end" class="codicon codicon-text-size"></span>\n</vscode-text-field>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-text-field>\n\tText Field Label\n\t<span slot="end" class="codicon codicon-text-size"></span>\n</vscode-text-field>`,
 		},
 	},
 };

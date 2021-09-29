@@ -13,9 +13,7 @@ export default {
 		isDisabled: {control: 'boolean'},
 		isAutoFocused: {control: 'boolean'},
 		isReadOnly: {control: 'boolean'},
-		isRequired: {control: 'boolean'},
 		hasValue: {control: 'boolean'},
-		isPartOfForm: {control: 'boolean'},
 		indicatorIcon: {control: 'boolean'},
 		onChange: {
 			action: 'changed',
@@ -39,7 +37,6 @@ Default.args = {
 	isAutoFocused: false,
 	isReadOnly: false,
 	hasValue: false,
-	isPartOfForm: false,
 	indicatorIcon: false,
 	onChange: action('checkbox-onchange'),
 };
@@ -112,19 +109,6 @@ WithReadOnly.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-checkbox readonly>Label</vscode-checkbox>`,
-		},
-	},
-};
-
-export const WithRequired: any = Template.bind({});
-WithRequired.args = {
-	...Default.args,
-	isRequired: true,
-};
-WithRequired.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-checkbox required>Label</vscode-checkbox>`,
 		},
 	},
 };

@@ -5,13 +5,12 @@ import {VSCodeCheckbox} from '../index';
 import {focusObserver} from '../../utilities/storybook/index';
 
 export type CheckboxArgs = {
-	label?: string;
+	label: string;
 	isChecked: boolean;
 	isIndeterminate: boolean;
 	isDisabled: boolean;
 	isAutoFocused: boolean;
 	isReadOnly: boolean;
-	isRequired: boolean;
 	hasValue: boolean;
 	onChange: any;
 };
@@ -23,7 +22,6 @@ export function createCheckbox({
 	isDisabled,
 	isAutoFocused,
 	isReadOnly,
-	isRequired,
 	hasValue,
 	onChange,
 }: CheckboxArgs) {
@@ -48,9 +46,6 @@ export function createCheckbox({
 	}
 	if (isReadOnly) {
 		checkbox.setAttribute('readonly', '');
-	}
-	if (isRequired) {
-		checkbox.setAttribute('required', '');
 	}
 	if (hasValue) {
 		checkbox.setAttribute('value', 'baz');

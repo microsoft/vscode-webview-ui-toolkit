@@ -1,6 +1,6 @@
 # VSCode Radio
 
-The `vscode-radio` is a web component implementation of an [HTML Radio Input Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio).
+The `vscode-radio` is a web component implementation of a [radio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio).
 
 ## Attributes
 
