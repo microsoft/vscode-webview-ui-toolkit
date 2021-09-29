@@ -1,4 +1,4 @@
-name: Build and Deploy Docs
+name: docs
 
 on:
     push:
@@ -6,7 +6,7 @@ on:
             - main
 
 jobs:
-    build-and-deploy-docs:
+    deploy-docs:
         runs-on: ubuntu-latest
         timeout-minutes: 10
         steps:

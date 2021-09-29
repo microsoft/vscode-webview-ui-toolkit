@@ -55,19 +55,6 @@ WithChecked.parameters = {
 	},
 };
 
-export const WithNoLabel: any = Template.bind({});
-WithNoLabel.args = {
-	...Default.args,
-	label: '',
-};
-WithNoLabel.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-radio></vscode-radio>`,
-		},
-	},
-};
-
 export const WithReadOnly: any = Template.bind({});
 WithReadOnly.args = {
 	...Default.args,

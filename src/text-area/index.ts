@@ -9,14 +9,10 @@ import {
 import {TextAreaStyles as styles} from './text-area.styles';
 
 /**
- * The VS Code Text Area element. Extends
- * {@link https://www.fast.design/docs/api/fast-foundation.textarea/ | TextArea} and
- * {@link https://www.fast.design/docs/api/fast-foundation.textareatemplate/ | TextAreaTemplate}.
+ * The Visual Studio Code text area component.
  *
  * @remarks
  * HTML Element: `<vscode-text-area>`
- *
- * Shadow Option: {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  *
  * @public
  */

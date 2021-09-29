@@ -1,6 +1,6 @@
-# VS Code Link
+# Visual Studio Code Link
 
-The `vscode-link` is a web component implementation of an [HTML Anchor Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
+The `vscode-link` is a web component implementation of an [anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
 
 ## Attributes
 

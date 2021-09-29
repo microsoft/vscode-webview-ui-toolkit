@@ -1,6 +1,6 @@
-# VS Code Checkbox
+# Visual Studio Code Checkbox
 
-The `vscode-checkbox` is a web component implementation of an [HTML Input Checkbox Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox).
+The `vscode-checkbox` is a web component implementation of a [checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox).
 
 ## Attributes
 
@@ -63,8 +63,6 @@ The `vscode-checkbox` is a web component implementation of an [HTML Input Checkb
 
 ### Required Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-required)
-
 ```html
 <vscode-checkbox required>Label</vscode-checkbox>
 ```
@@ -94,7 +92,7 @@ checkbox.indeterminate = true;
 
 ### Form Usage
 
-Here is an example of the VS Code Checkbox and its various attributes being used in a form.
+Here is an example of the Visual Studio Code Checkbox and its various attributes being used in a form.
 
 ```html
 <form>

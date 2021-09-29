@@ -105,35 +105,7 @@ WithCustomIndicator.args = {
 WithCustomIndicator.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using VS Code Codicon Library -->\n\n<vscode-dropdown>\n\t<span slot="indicator" class="codicon codicon-settings"></span>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
-		},
-	},
-};
-
-export const WithNoOptions: any = Template.bind({});
-WithNoOptions.args = {
-	...Default.args,
-	isOpen: true,
-	numberOfChildren: 0,
-};
-WithNoOptions.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-dropdown></vscode-dropdown>`,
-		},
-	},
-};
-
-export const WithLongList: any = Template.bind({});
-WithLongList.args = {
-	...Default.args,
-	isOpen: true,
-	numberOfChildren: 50,
-};
-WithLongList.parameters = {
-	docs: {
-		source: {
-			code: `<vscode-dropdown>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n\t<!-- Insert more options... -->\n</vscode-dropdown>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-dropdown>\n\t<span slot="indicator" class="codicon codicon-settings"></span>\n\t<vscode-option>Option Label #1</vscode-option>\n\t<vscode-option>Option Label #2</vscode-option>\n\t<vscode-option>Option Label #3</vscode-option>\n</vscode-dropdown>`,
 		},
 	},
 };
