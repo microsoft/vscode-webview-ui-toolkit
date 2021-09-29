@@ -126,7 +126,7 @@ import { HelloWorldPanel } from "./panels/HelloWorldPanel";
 
 **Dispose method**
 
-Back in the `HelloWorldPanel` class we now need to define a `dispose` method so that webview resources are cleaned up when a the webview panel is closed by the user or closed programmatically.
+Back in the `HelloWorldPanel` class we now need to define a `dispose` method so that webview resources are cleaned up when the webview panel is closed by the user or closed programmatically.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -206,7 +206,7 @@ private constructor(panel: vscode.WebviewPanel) {
 
 **Set message listener method**
 
-We'll handle this in the the third part of this guide.
+We'll handle message passing in the third part of this guide.
 
 ### Test that it all works
 
@@ -228,7 +228,7 @@ npm install --save @microsoft/vscode-webview-ui-toolkit
 
 ### Using the toolkit inside a webview
 
-With the package installed, we need to adjust the project so the toolkit is usable within our webview. We'll start by updating the `_getWebviewContent` method we defined earlier to accept two new parameters.
+With the package installed, we need to adjust the project so the toolkit is usable within our webview. We'll start by updating the `_getWebviewContent` method to accept two new parameters.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -238,7 +238,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 }
 ```
 
-With this change we all need to update the parameters of a few other methods and method calls.
+With this change we also need to update the parameters of a few other methods and method calls.
 
 Update the `constructor` method with the following:
 
@@ -264,7 +264,7 @@ public static render(extensionUri: vscode.Uri) {
 }
 ```
 
-Finally in `src/extension.ts` update the call to the `render` method:
+Finally update the call to the `render` method:
 
 ```typescript
 // file: src/extension.ts
@@ -274,7 +274,7 @@ HelloWorldPanel.render(context.extensionUri);
 
 ### Create a webview uri
 
-With those changes we can now use some Visual Studio Code APIs to create a URI pointing to the toolkit package. These API calls can get a bit verbose however so we'll also create a small helper function to keep our code clean.
+With those changes we can now use some Visual Studio Code APIs to create a URI pointing to the toolkit package. These API calls can get a bit verbose, however, so we'll also create a small helper function to keep our code clean.
 
 Create a new file at `src/utilities/getUri.ts` with the following:
 
@@ -288,7 +288,7 @@ export function getUri(webview: Webview, extensionUri: Uri, pathList: string[]) 
 }
 ```
 
-We can use that helper function to get a webview URI pointing to the toolkit package.
+We can use that helper function to get a webview URI which points to the toolkit package.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -337,7 +337,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 }
 ```
 
-### Update webview configurations
+### Update webview configuration
 
 Before we can test these updates, the final thing we need to do is update the webview panel configuration option we left empty earlier in the `render` method so that JavaScript is enabled in the webview.
 
@@ -347,14 +347,9 @@ Before we can test these updates, the final thing we need to do is update the we
 public static render(extensionUri: vscode.Uri) {
   // ... other code ...
 
-  const panel = vscode.window.createWebviewPanel(
-    "helloworld",
-    "Hello World",
-    vscode.ViewColumn.One,
-    {
-      enableScripts: true,
-    }
-  );
+  const panel = vscode.window.createWebviewPanel("helloworld", "Hello World", vscode.ViewColumn.One, {
+    enableScripts: true,
+  });
 
   // ... other code ...
 }
@@ -392,7 +387,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 Theming is built right into the components so feel free to test that out too!
 
-Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme", and cycle through all the themes to see the components change!
+Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme", and cycle through all the themes to see the button change!
 
 ![Testing That The Toolkit Theme Utilities Work](./assets/toolkit-theme-test.gif)
 
@@ -445,7 +440,7 @@ private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
 
 With the message listener code created, we need some message sending code.
 
-This will come in the form of a `main.js` file that will send a message whenever the `vscode-button` is clicked.
+This will come in the form of a `main.js` file that will send a message whenever the `<vscode-button>` is clicked.
 
 Create a new file at `media/main.js`.
 
