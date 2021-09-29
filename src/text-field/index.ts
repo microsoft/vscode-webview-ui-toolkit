@@ -36,7 +36,7 @@ export class VSCodeTextField extends TextField {
 		if (this.textContent) {
 			this.setAttribute('aria-label', this.textContent);
 		} else {
-			//Describe the generic component if no label is provided
+			// Describe the generic component if no label is provided
 			this.setAttribute('aria-label', 'Text field');
 		}
 	}
