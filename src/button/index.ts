@@ -52,9 +52,9 @@ export class VSCodeButton extends Button {
 	 * Component lifecycle method that runs when an attribute of the
 	 * element is changed.
 	 *
-	 * @param attrName The attribute that was changed
-	 * @param oldVal The old value of the attribute
-	 * @param newVal The new value of the attribute
+	 * @param attrName - The attribute that was changed
+	 * @param oldVal - The old value of the attribute
+	 * @param newVal - The new value of the attribute
 	 *
 	 * @internal
 	 */

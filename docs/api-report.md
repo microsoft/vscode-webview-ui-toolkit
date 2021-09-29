@@ -36,6 +36,8 @@ export class VSCodeBadge extends Badge {
 export class VSCodeButton extends Button {
     appearance: ButtonAppearance;
     // @internal
+    attributeChangedCallback(attrName: string, oldVal: string, newVal: string): void;
+    // @internal
     connectedCallback(): void;
 }
 
