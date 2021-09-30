@@ -27,8 +27,10 @@ export const DataGridCellStyles = css`
 		line-height: ${typeRampBaseLineHeight};
 		font-weight: 400;
 		border: solid calc(${borderWidth} * 1px) transparent;
-		overflow: hidden;
 		border-radius: calc(${cornerRadius} * 1px);
+		min-width: 96px;
+		white-space: wrap;
+		overflow-wrap: break-word;
 	}
 	:host(.column-header) {
 		font-weight: 600;
