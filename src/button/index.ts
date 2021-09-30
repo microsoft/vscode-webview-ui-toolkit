@@ -43,8 +43,12 @@ export class VSCodeButton extends Button {
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
+
+		// If the appearance property has not been set, set it to the
+		// value of the appearance attribute.
 		if (!this.appearance) {
-			this.appearance = 'primary';
+			const appearanceValue = this.getAttribute('appearance');
+			this.appearance = appearanceValue as ButtonAppearance;
 		}
 	}
 
@@ -74,13 +78,21 @@ export class VSCodeButton extends Button {
 		//
 		// More documentation on this topic can be found in the button README.
 		if (attrName === 'appearance' && newVal === 'icon') {
-			this.ariaLabel = 'Icon Button';
+			// Only set the ARIA label to the default text if an aria-label attribute
+			// does not exist on the button OR if it does exist but has an empty string
+			// as a value
+			const ariaLabelValue = this.getAttribute('aria-label');
+			if (
+				!ariaLabelValue ||
+				(ariaLabelValue && ariaLabelValue.length <= 0)
+			) {
+				this.ariaLabel = 'Icon Button';
+			}
 		}
 
-		// In the case when the aria-label attribute has been defined (i.e.
-		// overriding the default ARIA label) on the <vscode-button>, this
-		// will programmatically propogate the value to the <button> HTML
-		// element that lives in the Shadow DOM
+		// In the case when the aria-label attribute has been defined on the
+		// <vscode-button>, this will programmatically propogate the value to
+		// the <button> HTML element that lives in the Shadow DOM
 		if (attrName === 'aria-label') {
 			this.ariaLabel = newVal;
 		}
