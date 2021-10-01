@@ -50,8 +50,10 @@ See the [contributing](./CONTRIBUTING.md) documentation.
 
 ## Known issues
 
--   Options within `vscode-dropdown` do not announce their text content on selection change
--   Occasional icon alignment issues when nested within components
+Medium to high-visibility issues that are intended to be fixed with high priority.
+
+-   Options within `vscode-dropdown` do not announce their text content on selection change [#181](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/181)
+-   Icon alignment issues when nested within components [#193](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/193)
 
 ## Legal notices
 
