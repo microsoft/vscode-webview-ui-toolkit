@@ -22,6 +22,12 @@ None
 
 ## Usage
 
+❗️❗️❗️ Important ❗️❗️❗️
+
+An aria-label of "Panels" is automatically defined on all panels so they are technically accessible out of the box. However, a descriptive and meaningful label that fits the use case or context of the panels should always be defined to replace the default label so those viewing your panels with a screen reader can better understand the meaning of what's being displayed.
+
+For example, if you're using panels to display photos of puppies and kittens, adding an aria-label with the value "Puppy and Kitten Photos" would be appropriate.
+
 ### Basic Usage
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--default)
