@@ -68,24 +68,13 @@ export class VSCodeButton extends Button {
 		newVal: string
 	) {
 		// In the case when an icon only button is created add a default ARIA
-		// Label to the button since there is no longer button text to use
-		// as the label.
-		//
-		// !Important!
-		// For best accessibility practices, this ARIA label should be
-		// overridden by extension developers to provide a more descriptive
-		// label about the intended use of the button.
-		//
-		// More documentation on this topic can be found in the button README.
+		// label to the button since there is no longer button text to use
+		// as the label
 		if (attrName === 'appearance' && newVal === 'icon') {
 			// Only set the ARIA label to the default text if an aria-label attribute
-			// does not exist on the button OR if it does exist but has an empty string
-			// as a value
+			// does not exist on the button
 			const ariaLabelValue = this.getAttribute('aria-label');
-			if (
-				!ariaLabelValue ||
-				(ariaLabelValue && ariaLabelValue.length <= 0)
-			) {
+			if (!ariaLabelValue) {
 				this.ariaLabel = 'Icon Button';
 			}
 		}
