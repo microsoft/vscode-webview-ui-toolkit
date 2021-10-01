@@ -44,6 +44,13 @@ export class VSCodePanels extends Tabs {
 		if (this.orientation) {
 			this.orientation = TabsOrientation.horizontal;
 		}
+
+		// Sets a default ARIA label on the panels component only if an
+		// aria-label attribute does not already exist
+		const ariaLabelValue = this.getAttribute('aria-label');
+		if (!ariaLabelValue) {
+			this.setAttribute('aria-label', 'Panels');
+		}
 	}
 }
 
