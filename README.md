@@ -48,6 +48,11 @@ Further documentation can be found in the following places:
 
 See the [contributing](./CONTRIBUTING.md) documentation.
 
+## Known issues
+
+-   Options within `vscode-dropdown` do not announce their text content on selection change
+-   Occasional icon alignment issues when nested within components
+
 ## Legal notices
 
 Microsoft and any contributors grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE](LICENSE) file.
