@@ -29,17 +29,17 @@ The `vscode-data-grid` enables developers to display data in a tabular layout. T
 
 ## Usage
 
+❗️❗️❗️ Important ❗️❗️❗️
+
+An aria-label of "Data Grid" is automatically defined on all data grids so they are technically accessible out of the box. However, a descriptive and meaningful label that fits the use case or context of the data grid should always be defined to replace the default label so those viewing your data grid with a screen reader can better understand the meaning of the data.
+
+For example, if you're using a data grid to display keyboard shortcuts, adding an aria-label with the value "Keyboard Shortcuts" would be appropriate.
+
 ### Basic Usage
 
 The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below.
 
 With that said, a data grid can still be created with HTML only (also shown below).
-
-❗️❗️❗️ Important ❗️❗️❗️
-
-An aria-label of "Data Grid" is automatically defined on all data grids so they are technically accessible out of the box. However, a descriptive and meaningful label that fits the use case or context of the data grid should always be defined to replace the default label so those viewing your data grid with a screen reader can better understand the meaning of the data.
-
-For example, if you're using a Data Grid to display keyboard shortcuts, adding an aria-label with the value "Keyboard Shortcuts" would be appropriate.
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--default)
 
