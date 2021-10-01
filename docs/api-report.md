@@ -45,6 +45,8 @@ export class VSCodeCheckbox extends Checkbox {
 
 // @public
 export class VSCodeDataGrid extends DataGrid {
+    // @internal
+    connectedCallback(): void;
 }
 
 // @public
