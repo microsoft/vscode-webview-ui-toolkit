@@ -23,6 +23,13 @@ Features of the library include:
 
 The Webview UI Toolkit is currently in a public preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
 
+### Known issues
+
+Medium to high-visibility issues that are intended to be fixed with high priority.
+
+-   Options within `vscode-dropdown` do not announce their text content on selection change [#181](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/181)
+-   Icon alignment issues when nested within components [#193](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/193)
+
 ## Getting started
 
 Follow the [Getting Started Guide](./docs/getting-started.md).
@@ -47,13 +54,6 @@ Further documentation can be found in the following places:
 ## Contributing
 
 See the [contributing](./CONTRIBUTING.md) documentation.
-
-## Known issues
-
-Medium to high-visibility issues that are intended to be fixed with high priority.
-
--   Options within `vscode-dropdown` do not announce their text content on selection change [#181](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/181)
--   Icon alignment issues when nested within components [#193](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/193)
 
 ## Legal notices
 
