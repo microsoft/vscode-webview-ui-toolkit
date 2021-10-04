@@ -238,7 +238,7 @@ When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd
 With an extension created, we can now install the toolkit package using this command.
 
 ```
-npm install --save @microsoft/vscode-webview-ui-toolkit
+npm install --save @vscode/webview-ui-toolkit
 ```
 
 ### Using the toolkit inside a webview
