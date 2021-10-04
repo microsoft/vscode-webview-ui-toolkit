@@ -1,7 +1,7 @@
 # Webview UI Toolkit for Visual Studio Code
 
 ![Release: Public Preview](https://img.shields.io/badge/release-public%20preview-orange)
-![NPM Version](https://img.shields.io/npm/v/@microsoft/vscode-webview-ui-toolkit?color=blue)
+![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 ![Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
@@ -37,7 +37,7 @@ Follow the [Getting Started Guide](./docs/getting-started.md).
 If you already have a webview-based extension, you can install the toolkit with the following command:
 
 ```
-npm install --save @microsoft/vscode-webview-ui-toolkit
+npm install --save @vscode/webview-ui-toolkit
 ```
 
 ## Documentation
