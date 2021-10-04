@@ -329,8 +329,8 @@ import { getUri } from "../utilities/getUri";
 private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
   const toolkitUri = getUri(webview, extensionUri, [
     "node_modules",
-    "@microsoft",
-    "vscode-webview-ui-toolkit",
+    "@vscode",
+    "webview-ui-toolkit",
     "dist",
     "toolkit.js",
   ]);
