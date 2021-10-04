@@ -1,7 +1,7 @@
 # Webview UI Toolkit for Visual Studio Code
 
 ![Release: Public Preview](https://img.shields.io/badge/release-public%20preview-orange)
-![NPM Version](https://img.shields.io/npm/v/@microsoft/vscode-webview-ui-toolkit?color=blue)
+![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 ![Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
@@ -23,6 +23,13 @@ Features of the library include:
 
 The Webview UI Toolkit is currently in a public preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
 
+### Known issues
+
+Medium to high-visibility issues that are intended to be fixed with high priority.
+
+-   Options within `vscode-dropdown` do not announce their text content on selection change [#181](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/181)
+-   Icon alignment issues when nested within components [#193](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/193)
+
 ## Getting started
 
 Follow the [Getting Started Guide](./docs/getting-started.md).
@@ -30,7 +37,7 @@ Follow the [Getting Started Guide](./docs/getting-started.md).
 If you already have a webview-based extension, you can install the toolkit with the following command:
 
 ```
-npm install --save @microsoft/vscode-webview-ui-toolkit
+npm install --save @vscode/webview-ui-toolkit
 ```
 
 ## Documentation
