@@ -19,6 +19,8 @@ Features of the library include:
 -   **Use any tech stack:** The library ships as a set of web components, meaning developers can use the toolkit no matter what tech stack (React, Vue, Svelte, etc.) their extension is built with.
 -   **Accessible out of the box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
 
+It's important to understand that webviews should only be used if you absolutely need them. Take a look at the [webview guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews) to learn more about when it is appropriate to use a webview.
+
 ## Release
 
 The Webview UI Toolkit is currently in a public preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
