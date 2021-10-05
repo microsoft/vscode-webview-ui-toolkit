@@ -21,4 +21,20 @@ import {OptionStyles as styles} from './option.styles';
 	template,
 	styles,
 })
-export class VSCodeOption extends ListboxOption {}
+export class VSCodeOption extends ListboxOption {
+	/**
+	 * Component lifecycle method that runs when the component is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
+	public connectedCallback() {
+		super.connectedCallback();
+		if (this.textContent) {
+			this.setAttribute('aria-label', this.textContent);
+		} else {
+			// Fallback to the label if there is no text content
+			this.setAttribute('aria-label', 'Option');
+		}
+	}
+}
