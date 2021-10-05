@@ -99,10 +99,14 @@ export class VSCodeProgressRing extends BaseProgress {
 
 // @public
 export class VSCodeRadio extends Radio {
+    // @internal
+    connectedCallback(): void;
 }
 
 // @public
 export class VSCodeRadioGroup extends RadioGroup {
+    // @internal
+    connectedCallback(): void;
 }
 
 // @public
