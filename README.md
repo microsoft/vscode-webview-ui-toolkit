@@ -19,7 +19,7 @@ Features of the library include:
 -   **Use any tech stack:** The library ships as a set of web components, meaning developers can use the toolkit no matter what tech stack (React, Vue, Svelte, etc.) their extension is built with.
 -   **Accessible out of the box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
 
-Note that this doesn't change our recommendation around [avoiding the use of webviews](https://code.visualstudio.com/api/references/extension-guidelines#webviews) in extensions unless you absolutely need them.
+Note that this doesn't change our recommendation of [avoiding the use of webviews](https://code.visualstudio.com/api/references/extension-guidelines#webviews) in extensions unless you absolutely need them.
 
 ## Release
 
