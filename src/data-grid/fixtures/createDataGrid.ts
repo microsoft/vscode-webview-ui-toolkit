@@ -8,6 +8,7 @@ export type DataGridArgs = {
 	generateHeader: string;
 	gridTemplateColumns: string;
 	hasCustomTitles: boolean;
+	ariaLabel: string;
 };
 
 export function createDataGrid({
@@ -15,6 +16,7 @@ export function createDataGrid({
 	generateHeader,
 	gridTemplateColumns,
 	hasCustomTitles,
+	ariaLabel,
 }: DataGridArgs) {
 	const dataGrid = new VSCodeDataGrid();
 
@@ -46,6 +48,9 @@ export function createDataGrid({
 				title: 'Custom Title',
 			},
 		];
+	}
+	if (ariaLabel) {
+		dataGrid.setAttribute('aria-label', ariaLabel);
 	}
 
 	return dataGrid;

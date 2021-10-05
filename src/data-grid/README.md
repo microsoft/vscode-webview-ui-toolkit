@@ -29,6 +29,12 @@ The `vscode-data-grid` enables developers to display data in a tabular layout. T
 
 ## Usage
 
+❗️❗️❗️ Important ❗️❗️❗️
+
+An aria-label of "Data Grid" is automatically defined on all data grids so they are technically accessible out of the box. However, a descriptive and meaningful label that fits the use case or context of the data grid should always be defined to replace the default label so those viewing your data grid with a screen reader can better understand the meaning of the data.
+
+For example, if you're using a data grid to display real-time earthquake data, adding an aria-label with the value "Real-Time Earthquakes" would be appropriate.
+
 ### Basic Usage
 
 The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below.
@@ -42,7 +48,7 @@ _Using HTML & JavaScript_
 Note that when using this method of data grid creation, the header row is automatically generated based on the data passed to `rowsData`.
 
 ```html
-<vscode-data-grid id="basic-grid"></vscode-data-grid>
+<vscode-data-grid id="basic-grid" aria-label="Basic"></vscode-data-grid>
 ```
 
 ```javascript
@@ -60,7 +66,7 @@ _Using Only HTML_
 Note that when using this method of data grid creation, the `generate-header` attribute should be set to `none` and the header row must be manually defined using HTML.
 
 ```html
-<vscode-data-grid generate-header="none">
+<vscode-data-grid generate-header="none" aria-label="Basic">
 	<vscode-data-grid-row row-type="header">
 		<vscode-data-grid-cell cell-type="columnheader" grid-column="1">Header 1</vscode-data-grid-cell>
 		<vscode-data-grid-cell cell-type="columnheader" grid-column="2">Header 2</vscode-data-grid-cell>
@@ -105,9 +111,9 @@ As shown above in the Basic Usage example, if the `vscode-data-grid` is defined 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-no-header)
 
 ```html
-<vscode-data-grid id="basic-grid" generate-header="default"></vscode-data-grid>
-<vscode-data-grid id="basic-grid" generate-header="sticky"></vscode-data-grid>
-<vscode-data-grid id="basic-grid" generate-header="none"></vscode-data-grid>
+<vscode-data-grid id="basic-grid" generate-header="default" aria-label="Default Header"></vscode-data-grid>
+<vscode-data-grid id="basic-grid" generate-header="sticky" aria-label="Sticky Header"></vscode-data-grid>
+<vscode-data-grid id="basic-grid" generate-header="none" aria-label="No Header"></vscode-data-grid>
 ```
 
 ```javascript
@@ -137,7 +143,11 @@ When defined on a `<vscode-data-grid-row>` component, the value of the attribute
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-custom-column-widths)
 
 ```html
-<vscode-data-grid id="basic-grid" grid-template-columns="100px 10vw 3fr 30%"></vscode-data-grid>
+<vscode-data-grid
+	id="basic-grid"
+	grid-template-columns="100px 10vw 3fr 30%"
+	aria-label="Custom Column Widths"
+></vscode-data-grid>
 ```
 
 ```javascript
@@ -218,7 +228,7 @@ This is where you define the custom title for a given column.
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-custom-titles)
 
 ```html
-<vscode-data-grid id="basic-grid"></vscode-data-grid>
+<vscode-data-grid id="basic-grid" aria-label="Custom Column Titles"></vscode-data-grid>
 ```
 
 ```javascript

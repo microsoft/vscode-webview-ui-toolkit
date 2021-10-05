@@ -9,12 +9,14 @@ export type PanelsArgs = {
 	activeTab: string;
 	hasComplexContent: boolean;
 	tabMetaData: any;
+	ariaLabel: string;
 };
 
 export function createPanels({
 	activeTab,
 	hasComplexContent,
 	tabMetaData,
+	ariaLabel,
 }: PanelsArgs) {
 	let panels: VSCodePanels;
 	if (tabMetaData) {
@@ -29,6 +31,9 @@ export function createPanels({
 			'activeid',
 			convertActiveTabNameToTabId(activeTab.toLowerCase(), tabTitles)
 		);
+	}
+	if (ariaLabel) {
+		panels.setAttribute('aria-label', ariaLabel);
 	}
 
 	return panels;

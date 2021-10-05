@@ -31,7 +31,24 @@ const cellTemplate: ViewTemplate = createDataGridCellTemplate('vscode');
 	template: gridTemplate,
 	styles: gridStyles,
 })
-export class VSCodeDataGrid extends DataGrid {}
+export class VSCodeDataGrid extends DataGrid {
+	/**
+	 * Component lifecycle method that runs when the component is inserted
+	 * into the DOM.
+	 *
+	 * @internal
+	 */
+	public connectedCallback() {
+		super.connectedCallback();
+
+		// Sets a default ARIA label on the data grid only if an aria-label attribute
+		// does not already exist
+		const ariaLabelValue = this.getAttribute('aria-label');
+		if (!ariaLabelValue) {
+			this.setAttribute('aria-label', 'Data Grid');
+		}
+	}
+}
 
 /**
  * The Visual Studio Code data grid row component.
