@@ -505,7 +505,7 @@ Congratulations on getting started with the Webview UI Toolkit! 🎊
 
 You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/hello-world) based on this guide that includes documentation comments explaining the code in even more detail.
 
-Also check out our component documentation and Visual Studio Code guides on how to work with webviews. Happy hacking!
+Also check out our component documentation and Visual Studio Code guides on how to work with webviews. Happy coding!
 
 - [Component Docs](./components.md)
 - [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-ui-toolkit/)
