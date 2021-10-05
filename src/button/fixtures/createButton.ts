@@ -14,6 +14,7 @@ export type ButtonArgs = {
 	isAutoFocused: boolean;
 	startIcon: boolean;
 	iconOnly: boolean;
+	ariaLabel: string;
 	onClick: any;
 };
 
@@ -24,6 +25,7 @@ export function createButton({
 	isAutoFocused,
 	startIcon,
 	iconOnly,
+	ariaLabel,
 	onClick,
 }: ButtonArgs) {
 	const button = new VSCodeButton();
@@ -52,6 +54,7 @@ export function createButton({
 	if (iconOnly) {
 		const icon = createCodiconIcon({iconName: 'check'});
 		button.appendChild(icon);
+		button.setAttribute('aria-label', ariaLabel);
 	}
 	button.addEventListener('click', onClick);
 

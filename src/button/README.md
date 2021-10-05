@@ -7,6 +7,8 @@ The `vscode-button` is a web component implementation of a [button element](http
 | Attribute        | Type    | Description                                                                             |
 | ---------------- | ------- | --------------------------------------------------------------------------------------- |
 | `appearance`     | string  | Determines the visual appearance _(primary, secondary, icon)_ of the button.            |
+| `aria-label`     | string  | Defines a label for buttons that screen readers can use.                                |
+| `appearance`     | string  | Determines the visual appearance _(primary, secondary, icon)_ of the button.            |
 | `autofocus`      | boolean | Determines if the element should receive document focus on page load.                   |
 | `disabled`       | boolean | Prevents the user from interacting with the button––it cannot be pressed or focused.    |
 | `form`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
@@ -76,16 +78,22 @@ An icon can be added to the left of Button text by adding an element with the at
 
 ### Icon Only
 
-An icon can also fill the default slot of the Button component (instead of text) to create an Icon Button.
+An icon can also fill the default slot of the Button component (instead of text) to create an Icon Button by using the `appearance="icon"` attribute and value.
 
-_Also note the usage of the `appearance="icon"` attribute._
+**❗️❗️❗️ Important ❗️❗️❗️**
+
+Because Icon Buttons do not have text that can be used by screen readers, they are not meaningfully/semantically accessible by default.
+
+An `aria-label` of "Icon Button" is automatically defined on all icon buttons so they are still technically accessible out of the box, however, a descriptive and meaningful label that fits the use case or context of the Icon Button should be defined to replace the default label.
+
+For example, if you're using an Icon Button to confirm a state change, adding an `aria-label` with the value "Confirm" or "Confirm Changes" would be appropriate.
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-icon-only)
 
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
-<vscode-button appearance="icon">
+<vscode-button appearance="icon" aria-label="Confirm">
 	<span class="codicon codicon-check"></span>
 </vscode-button>
 ```

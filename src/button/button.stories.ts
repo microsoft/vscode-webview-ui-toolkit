@@ -18,6 +18,7 @@ export default {
 		isAutoFocused: {control: 'boolean'},
 		startIcon: {control: 'boolean'},
 		iconOnly: {control: 'boolean'},
+		ariaLabel: {control: 'text'},
 		onClick: {
 			action: 'clicked',
 			table: {
@@ -106,11 +107,12 @@ WithIconOnly.args = {
 	...Default.args,
 	appearance: 'Icon',
 	iconOnly: true,
+	ariaLabel: 'Confirm',
 };
 WithIconOnly.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-button appearance="icon">\n\t<span class="codicon codicon-check"></span>\n</vscode-button>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-button appearance="icon" aria-label="Confirm">\n\t<span class="codicon codicon-check"></span>\n</vscode-button>`,
 		},
 	},
 };
