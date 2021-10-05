@@ -10,7 +10,7 @@
 
 ## Introduction
 
-The Webview UI Toolkit is a component library for building webview-based extensions in Visual Studio Code.
+The Webview UI Toolkit is a component library for building [webview-based extensions](https://code.visualstudio.com/api/extension-guides/webview) in Visual Studio Code.
 
 Features of the library include:
 
