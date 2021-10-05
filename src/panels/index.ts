@@ -83,6 +83,10 @@ export class VSCodePanelTab extends Tab {
 		if (this.disabled) {
 			this.disabled = false;
 		}
+
+		if (this.textContent) {
+			this.setAttribute('aria-label', this.textContent);
+		}
 	}
 }
 
