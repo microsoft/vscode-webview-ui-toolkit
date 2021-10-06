@@ -5,7 +5,8 @@
  * Creates a MutationObserver to watch for DOM changes (i.e. Storybook rerendering
  * a component based on changes to controls) and appropriately applies focus to the
  * given component.
- * @param component
+ *
+ * @param component A webview ui toolkit component
  *
  * @internal
  */

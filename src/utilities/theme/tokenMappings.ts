@@ -48,55 +48,42 @@ import {
  * toolkit design tokens.
  */
 export const tokenMappings: {[index: string]: CSSDesignToken<string>} = {
-	// ---- Base Colors ----
-	'--vscode-focusBorder': focusBorder,
-	'--vscode-foreground': foreground,
-	// ---- Contrast Styles ----
-	'--vscode-contrastActiveBorder': contrastActiveBorder,
-	'--vscode-contrastBorder': contrastBorder,
-	// ---- Badges ----
-	'--vscode-badge-foreground': badgeForeground,
 	'--vscode-badge-background': badgeBackground,
-	// ---- Buttons ----
+	'--vscode-badge-foreground': badgeForeground,
+	'--vscode-button-border': buttonBorder,
 	'--vscode-button-background': buttonPrimaryBackground,
 	'--vscode-button-foreground': buttonPrimaryForeground,
 	'--vscode-button-hoverBackground': buttonPrimaryHoverBackground,
 	'--vscode-button-secondaryBackground': buttonSecondaryBackground,
 	'--vscode-button-secondaryForeground': buttonSecondaryForeground,
 	'--vscode-button-secondaryHoverBackground': buttonSecondaryHoverBackground,
-	'--vscode-button-border': buttonBorder,
-	// ---- Checkboxes ----
 	'--vscode-checkbox-background': checkboxBackground,
-	'--vscode-checkbox-foreground': checkboxForeground,
 	'--vscode-checkbox-border': checkboxBorder,
-	// ---- Data Grid ----
-	'--vscode-list-activeSelectionBackground': listActiveSelectionBackground,
-	'--vscode-list-activeSelectionForeground': listActiveSelectionForeground,
-	'--vscode-list-hoverBackground': listHoverBackground,
-	'--vscode-quickInput-background': quickInputBackground,
-	// ---- Divider ----
-	'--vscode-settings-dropdownListBorder': dividerBackground,
-	// ---- Dropdowns & Comboboxes ----
+	'--vscode-checkbox-foreground': checkboxForeground,
+	'--vscode-contrastActiveBorder': contrastActiveBorder,
+	'--vscode-contrastBorder': contrastBorder,
 	'--vscode-dropdown-background': dropdownBackground,
-	'--vscode-dropdown-foreground': dropdownForeground,
 	'--vscode-dropdown-border': dropdownBorder,
-	// ---- Fonts ----
+	'--vscode-dropdown-foreground': dropdownForeground,
+	'--vscode-focusBorder': focusBorder,
 	'--vscode-font-family': fontFamily,
 	'--vscode-font-size': typeRampBaseFontSize,
 	'--vscode-font-weight': fontWeight,
-	// ---- Links ----
-	'--vscode-textLink-foreground': linkForeground,
-	'--vscode-textLink-activeForeground': linkActiveForeground,
-	// ---- Panels ----
-	'--vscode-panelTitle-inactiveForeground': panelTabForeground,
-	'--vscode-panelTitle-activeForeground': panelTabActiveForeground,
-	'--vscode-panelTitle-activeBorder': panelTabActiveBorder,
-	'--vscode-panel-background': panelViewBackground,
-	'--vscode-panel-border': panelViewBorder,
-	// ---- Progress Bars & Rings ----
-	'--vscode-progressBar-background': progressBackground,
-	// ---- Text Fields & Areas ----
+	'--vscode-foreground': foreground,
 	'--vscode-input-background': inputBackground,
 	'--vscode-input-foreground': inputForeground,
 	'--vscode-input-placeholderForeground': inputPlaceholderForeground,
+	'--vscode-list-activeSelectionBackground': listActiveSelectionBackground,
+	'--vscode-list-activeSelectionForeground': listActiveSelectionForeground,
+	'--vscode-list-hoverBackground': listHoverBackground,
+	'--vscode-panel-background': panelViewBackground,
+	'--vscode-panel-border': panelViewBorder,
+	'--vscode-panelTitle-activeBorder': panelTabActiveBorder,
+	'--vscode-panelTitle-activeForeground': panelTabActiveForeground,
+	'--vscode-panelTitle-inactiveForeground': panelTabForeground,
+	'--vscode-progressBar-background': progressBackground,
+	'--vscode-quickInput-background': quickInputBackground,
+	'--vscode-settings-dropdownListBorder': dividerBackground,
+	'--vscode-textLink-activeForeground': linkActiveForeground,
+	'--vscode-textLink-foreground': linkForeground,
 };
