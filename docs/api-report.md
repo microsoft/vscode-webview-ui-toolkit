@@ -43,6 +43,8 @@ export class VSCodeButton extends Button {
 
 // @public
 export class VSCodeCheckbox extends Checkbox {
+    // @internal
+    connectedCallback(): void;
 }
 
 // @public
@@ -73,6 +75,8 @@ export class VSCodeLink extends Anchor {
 
 // @public
 export class VSCodeOption extends ListboxOption {
+    // @internal
+    connectedCallback(): void;
 }
 
 // @public
@@ -119,10 +123,14 @@ export class VSCodeTag extends Badge {
 
 // @public
 export class VSCodeTextArea extends TextArea {
+    // @internal
+    connectedCallback(): void;
 }
 
 // @public
 export class VSCodeTextField extends TextField {
+    // @internal
+    connectedCallback(): void;
 }
 
 
