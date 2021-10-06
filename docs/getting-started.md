@@ -508,7 +508,7 @@ You can find a [completed hello world extension](https://github.com/microsoft/vs
 Also check out our component documentation and Visual Studio Code guides on how to work with webviews. Happy coding!
 
 - [Component Docs](./components.md)
-- [Storybook – Interactive Component Sandbox](https://microsoft.github.io/vscode-webview-ui-toolkit/)
+- [Storybook (Interactive Component Sandbox)](https://microsoft.github.io/vscode-webview-ui-toolkit/)
 - [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
 - [Visual Studio Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
 - [Visual Studio Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
