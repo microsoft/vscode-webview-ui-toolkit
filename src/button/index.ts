@@ -67,9 +67,6 @@ export class VSCodeButton extends Button {
 		oldVal: string,
 		newVal: string
 	) {
-		console.log(attrName);
-		console.log(newVal);
-
 		// In the case when an icon only button is created add a default ARIA
 		// label to the button since there is no longer button text to use
 		// as the label
