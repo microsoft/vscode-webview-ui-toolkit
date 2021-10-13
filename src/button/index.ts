@@ -85,5 +85,9 @@ export class VSCodeButton extends Button {
 		if (attrName === 'aria-label') {
 			this.ariaLabel = newVal;
 		}
+
+		if (attrName === 'disabled') {
+			this.disabled = true;
+		}
 	}
 }
