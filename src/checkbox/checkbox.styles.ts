@@ -12,12 +12,12 @@ import {
 	checkboxBackground,
 	checkboxBorder,
 	checkboxCornerRadius,
-	checkboxForeground,
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	focusBorder,
 	fontFamily,
+	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -44,7 +44,7 @@ export const CheckboxStyles = css`
 	}
 	.label {
 		font-family: ${fontFamily};
-		color: ${checkboxForeground};
+		color: ${foreground};
 		padding-inline-start: calc(${designUnit} * 2px + 2px);
 		margin-inline-end: calc(${designUnit} * 2px + 2px);
 		cursor: pointer;
@@ -57,13 +57,13 @@ export const CheckboxStyles = css`
 		width: 100%;
 		height: 100%;
 		display: block;
-		fill: ${checkboxForeground};
+		fill: ${foreground};
 		opacity: 0;
 		pointer-events: none;
 	}
 	.indeterminate-indicator {
 		border-radius: 2px;
-		background: ${checkboxForeground};
+		background: ${foreground};
 		position: absolute;
 		top: 50%;
 		left: 50%;
