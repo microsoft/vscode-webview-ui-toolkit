@@ -17,4 +17,12 @@ module.exports = {
 		'@typescript-eslint/no-non-null-assertion': 'off',
 		'@typescript-eslint/interface-name-prefix': 'off',
 	},
+	overrides: [
+		{
+		  files: ['*.ts'],
+		  parserOptions: {
+			project: ['./tsconfig.eslint.json'],
+		  },
+		},
+	],
 };
