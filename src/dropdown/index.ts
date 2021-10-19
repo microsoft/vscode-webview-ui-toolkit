@@ -5,7 +5,7 @@ import {Select, SelectOptions, selectTemplate as template} from '@microsoft/fast
 import {DropdownStyles as styles} from './dropdown.styles';
 
 /**
- * The Visual Studio Code dropdown component.
+ * The Visual Studio Code link dropdown registration.
  *
  * @remarks
  * HTML Element: `<vscode-dropdown>`

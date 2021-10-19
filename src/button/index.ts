@@ -82,7 +82,7 @@ export class VSCodeButton extends Button {
 }
 
 /**
- * The Visual Studio Code button component.
+ * The Visual Studio Code button component registration.
  *
  * @remarks
  * HTML Element: `<vscode-button>`

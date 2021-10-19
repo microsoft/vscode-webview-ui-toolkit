@@ -34,7 +34,7 @@ export class VSCodeTextArea extends TextArea {
 }
 
 /**
- * The Visual Studio Code text area component.
+ * The Visual Studio Code text area component registration.
  *
  * @remarks
  * HTML Element: `<vscode-text-area>`
@@ -42,7 +42,7 @@ export class VSCodeTextArea extends TextArea {
  * @public
  */
  export const vsCodeTextArea = VSCodeTextArea.compose({
-	name: 'text-area',
+	baseName: 'text-area',
 	template,
 	styles,
 	shadowOptions: {

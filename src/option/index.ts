@@ -32,7 +32,7 @@ export class VSCodeOption extends ListboxOption {
 }
 
 /**
- * The Visual Studio Code option component.
+ * The Visual Studio Code option component registration.
  *
  * @remarks
  * HTML Element: `<vscode-option>`
@@ -40,7 +40,7 @@ export class VSCodeOption extends ListboxOption {
  * @public
  */
 export const vsCodeOption = VSCodeOption.compose<ListboxOptionOptions>({
-	name: 'option',
+	baseName: 'option',
 	template,
 	styles,
 })

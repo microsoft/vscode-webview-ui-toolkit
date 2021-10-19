@@ -61,7 +61,7 @@ export class VSCodeProgressRing extends BaseProgress {
 }
 
 /**
- * The Visual Studio Code progress ring component.
+ * The Visual Studio Code progress ring component registration.
  *
  * @remarks
  * HTML Element: `<vscode-progress-ring>`
@@ -69,7 +69,7 @@ export class VSCodeProgressRing extends BaseProgress {
  * @public
  */
  export const vsCodeProgressRing = VSCodeProgressRing.compose<ProgressRingOptions>({
-	name: 'progress-ring',
+	baseName: 'progress-ring',
 	template,
 	styles,
 })

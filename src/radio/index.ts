@@ -28,7 +28,7 @@ export class VSCodeRadio extends Radio {
 }
 
 /**
- * The Visual Studio Code radio component.
+ * The Visual Studio Code radio component registration.
  *
  * @remarks
  * HTML Element: `<vscode-radio>`

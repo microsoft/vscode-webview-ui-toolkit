@@ -47,7 +47,7 @@ export class VSCodePanels extends Tabs {
 }
 
 /**
- * The Visual Studio Code panels component.
+ * The Visual Studio Code panels component registration.
  *
  * @remarks
  * HTML Element: `<vscode-panels>`
@@ -89,7 +89,7 @@ export class VSCodePanelTab extends Tab {
 }
 
 /**
- * The Visual Studio Code panel tab component.
+ * The Visual Studio Code panel tab component registration.
  *
  * @remarks
  * HTML Element: `<vscode-panel-tab>`
@@ -103,7 +103,7 @@ export const vsCodePanelTab = VSCodePanelTab.compose({
 })
 
 /**
- * The Visual Studio Code panel view component.
+ * The Visual Studio Code panel view component registration.
  *
  * @remarks
  * HTML Element: `<vscode-panel-view>`

@@ -29,7 +29,7 @@ export class VSCodeBadge extends Badge {
 }
 
 /**
- * A function that returns a {@link VSCodeBadge} registration for configuring the component with the VSCode DesignSystem.
+ * The Visual Studio Code badge component registration.
  *
  * @remarks
  * HTML Element: `<vscode-badge>`

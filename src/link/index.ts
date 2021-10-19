@@ -5,7 +5,7 @@ import {Anchor, AnchorOptions, anchorTemplate as template} from '@microsoft/fast
 import {LinkStyles as styles} from './link.styles';
 
 /**
- * The Visual Studio Code link component.
+ * The Visual Studio Code link component registration.
  *
  * @remarks
  * HTML Element: `<vscode-link>`
@@ -13,7 +13,7 @@ import {LinkStyles as styles} from './link.styles';
  * @public
  */
 export const vsCodeLink = Anchor.compose<AnchorOptions>({
-	name: 'vscode-link',
+	baseName: 'link',
 	template,
 	styles,
 	shadowOptions: {

@@ -29,7 +29,7 @@ export class VSCodeTag extends Badge {
 }
 
 /**
- * The Visual Studio Code tag component.
+ * The Visual Studio Code tag component registration.
  *
  * @remarks
  * HTML Element: `<vscode-tag>`
@@ -37,7 +37,7 @@ export class VSCodeTag extends Badge {
  * @public
  */
  export const vsCodeTag = VSCodeTag.compose({
-	name: 'tag',
+	baseName: 'tag',
 	template,
 	styles,
 })

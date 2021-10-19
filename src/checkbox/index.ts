@@ -32,7 +32,7 @@ export class VSCodeCheckbox extends Checkbox {
 }
 
 /**
- * The Visual Studio Code checkbox component.
+ * The Visual Studio Code checkbox component registration.
  *
  * @remarks
  * HTML Element: `<vscode-checkbox>`

@@ -34,7 +34,7 @@ export class VSCodeRadioGroup extends RadioGroup {
 }
 
 /**
- * The Visual Studio Code radio group component.
+ * The Visual Studio Code radio group component registration.
  *
  * @remarks
  * HTML Element: `<vscode-radio-group>`
@@ -42,7 +42,7 @@ export class VSCodeRadioGroup extends RadioGroup {
  * @public
  */
  export const vsCodeRadioGroup = VSCodeRadioGroup.compose({
-	name: 'radio-group',
+	baseName: 'radio-group',
 	template,
 	styles,
 })

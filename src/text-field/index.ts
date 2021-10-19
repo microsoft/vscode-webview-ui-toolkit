@@ -32,7 +32,7 @@ export class VSCodeTextField extends TextField {
 }
 
 /**
- * The Visual Studio Code text field component.
+ * The Visual Studio Code text field component registration.
  *
  * @remarks
  * HTML Element: `<vscode-text-field>`
@@ -40,7 +40,7 @@ export class VSCodeTextField extends TextField {
  * @public
  */
  export const vsCodeTextField = VSCodeTextField.compose<TextFieldOptions>({
-	name: 'text-field',
+	baseName: 'text-field',
 	template,
 	styles,
 	shadowOptions: {

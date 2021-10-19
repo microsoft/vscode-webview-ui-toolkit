@@ -38,7 +38,7 @@ export class VSCodeDataGrid extends DataGrid {
 }
 
 /**
- * The Visual Studio Code data grid component.
+ * The Visual Studio Code data grid component registration.
  *
  * @remarks
  * HTML Element: `<vscode-data-grid>`
@@ -52,7 +52,7 @@ export const vsCodeDataGrid = DataGrid.compose({
 })
 
 /**
- * The Visual Studio Code data grid row component.
+ * The Visual Studio Code data grid row component registration.
  *
  * @remarks
  * HTML Element: `<vscode-data-grid-row>`
@@ -60,13 +60,13 @@ export const vsCodeDataGrid = DataGrid.compose({
  * @public
  */
 export const vsCodeDataGridRow = DataGridRow.compose({
-	name: 'data-grid-row',
+	baseName: 'data-grid-row',
 	template: rowTemplate,
 	styles: rowStyles,
 })
 
 /**
- * The Visual Studio Code data grid cell component.
+ * The Visual Studio Code data grid cell component registration.
  *
  * @remarks
  * HTML Element: `<vscode-data-grid-cell>`
@@ -74,7 +74,7 @@ export const vsCodeDataGridRow = DataGridRow.compose({
  * @public
  */
 export const vsCodeDataGridCell = DataGridCell.compose({
-	name: 'vscode-data-grid-cell',
+	baseName: 'data-grid-cell',
 	template: cellTemplate,
 	styles: cellStyles,
 })
