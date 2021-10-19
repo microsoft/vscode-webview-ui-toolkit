@@ -5,6 +5,13 @@ import {Select, SelectOptions, selectTemplate as template} from '@microsoft/fast
 import {DropdownStyles as styles} from './dropdown.styles';
 
 /**
+ * The Visual Studio Code dropdown class.
+ *
+ * @public
+ */
+ export class VSCodeDropdown extends Select {}
+
+/**
  * The Visual Studio Code link dropdown registration.
  *
  * @remarks
@@ -12,7 +19,7 @@ import {DropdownStyles as styles} from './dropdown.styles';
  *
  * @public
  */
-export const vsCodeDropdown = Select.compose<SelectOptions>({
+export const vsCodeDropdown = VSCodeDropdown.compose<SelectOptions>({
 	baseName: 'dropdown',
 	template,
 	styles,

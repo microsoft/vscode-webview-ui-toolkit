@@ -45,11 +45,18 @@ export class VSCodeDataGrid extends DataGrid {
  *
  * @public
  */
-export const vsCodeDataGrid = DataGrid.compose({
+export const vsCodeDataGrid = VSCodeDataGrid.compose({
 	baseName: 'data-grid',
 	template: gridTemplate,
 	styles: gridStyles,
 })
+
+/**
+ * The Visual Studio Code data grid row class.
+ *
+ * @public
+ */
+ export class VSCodeDataGridRow extends DataGridRow {}
 
 /**
  * The Visual Studio Code data grid row component registration.
@@ -59,11 +66,18 @@ export const vsCodeDataGrid = DataGrid.compose({
  *
  * @public
  */
-export const vsCodeDataGridRow = DataGridRow.compose({
+export const vsCodeDataGridRow = VSCodeDataGridRow.compose({
 	baseName: 'data-grid-row',
 	template: rowTemplate,
 	styles: rowStyles,
 })
+
+/**
+ * The Visual Studio Code data grid cell class.
+ *
+ * @public
+ */
+ export class VSCodeDataGridCell extends DataGridCell {}
 
 /**
  * The Visual Studio Code data grid cell component registration.
@@ -73,7 +87,7 @@ export const vsCodeDataGridRow = DataGridRow.compose({
  *
  * @public
  */
-export const vsCodeDataGridCell = DataGridCell.compose({
+export const vsCodeDataGridCell = VSCodeDataGridCell.compose({
 	baseName: 'data-grid-cell',
 	template: cellTemplate,
 	styles: cellStyles,

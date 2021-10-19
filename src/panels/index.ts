@@ -103,6 +103,13 @@ export const vsCodePanelTab = VSCodePanelTab.compose({
 })
 
 /**
+ * The Visual Studio Code panel view class.
+ *
+ * @public
+ */
+ export class VSCodePanelView extends TabPanel {}
+
+/**
  * The Visual Studio Code panel view component registration.
  *
  * @remarks
@@ -110,7 +117,7 @@ export const vsCodePanelTab = VSCodePanelTab.compose({
  *
  * @public
  */
-export const vsCodePanelView = TabPanel.compose({
+export const vsCodePanelView = VSCodePanelView.compose({
 	baseName: 'panel-view',
 	template: tabPanelTemplate,
 	styles: PanelViewStyles,

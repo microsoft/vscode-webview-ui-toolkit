@@ -5,6 +5,13 @@ import {Anchor, AnchorOptions, anchorTemplate as template} from '@microsoft/fast
 import {LinkStyles as styles} from './link.styles';
 
 /**
+ * The Visual Studio Code link class.
+ *
+ * @public
+ */
+ export class VSCodeLink extends Anchor {}
+
+/**
  * The Visual Studio Code link component registration.
  *
  * @remarks
@@ -12,7 +19,7 @@ import {LinkStyles as styles} from './link.styles';
  *
  * @public
  */
-export const vsCodeLink = Anchor.compose<AnchorOptions>({
+export const vsCodeLink = VSCodeLink.compose<AnchorOptions>({
 	baseName: 'link',
 	template,
 	styles,
