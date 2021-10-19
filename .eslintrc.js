@@ -19,10 +19,10 @@ module.exports = {
 	},
 	overrides: [
 		{
-		  files: ['*.ts'],
-		  parserOptions: {
-			project: ['./tsconfig.eslint.json'],
-		  },
+			files: ['*.ts'],
+			parserOptions: {
+				project: ['./tsconfig.eslint.json'],
+			},
 		},
 	],
 };
