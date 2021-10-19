@@ -1,29 +1,20 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
-	TextAreaTemplate as template,
+	textAreaTemplate as template,
 	TextArea,
 } from '@microsoft/fast-foundation';
 import {TextAreaStyles as styles} from './text-area.styles';
 
 /**
- * The Visual Studio Code text area component.
+ * The Visual Studio Code text area class.
  *
  * @remarks
  * HTML Element: `<vscode-text-area>`
  *
  * @public
  */
-@customElement({
-	name: 'vscode-text-area',
-	template,
-	styles,
-	shadowOptions: {
-		delegatesFocus: true,
-	},
-})
 export class VSCodeTextArea extends TextArea {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -41,3 +32,20 @@ export class VSCodeTextArea extends TextArea {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code text area component.
+ *
+ * @remarks
+ * HTML Element: `<vscode-text-area>`
+ *
+ * @public
+ */
+ export const vsCodeTextArea = VSCodeTextArea.compose({
+	name: 'text-area',
+	template,
+	styles,
+	shadowOptions: {
+		delegatesFocus: true,
+	},
+})

@@ -4,23 +4,15 @@
 import {customElement} from '@microsoft/fast-element';
 import {
 	RadioGroup,
-	RadioGroupTemplate as template,
+	radioGroupTemplate as template,
 } from '@microsoft/fast-foundation';
 import {RadioGroupStyles as styles} from './radio-group.styles';
 
 /**
- * The Visual Studio Code radio group component.
- *
- * @remarks
- * HTML Element: `<vscode-radio-group>`
+ * The Visual Studio Code radio group class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-radio-group',
-	template,
-	styles,
-})
 export class VSCodeRadioGroup extends RadioGroup {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -40,3 +32,17 @@ export class VSCodeRadioGroup extends RadioGroup {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code radio group component.
+ *
+ * @remarks
+ * HTML Element: `<vscode-radio-group>`
+ *
+ * @public
+ */
+ export const vsCodeRadioGroup = VSCodeRadioGroup.compose({
+	name: 'radio-group',
+	template,
+	styles,
+})

@@ -5,7 +5,9 @@ import {css} from '@microsoft/fast-element';
 import {
 	disabledCursor,
 	display,
+	ElementDefinitionContext,
 	focusVisible,
+	TextFieldOptions,
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
@@ -24,7 +26,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const TextFieldStyles = css`
+export const TextFieldStyles = (context: ElementDefinitionContext, definition: TextFieldOptions) => css`
 	${display('inline-block')} :host {
 		font-family: ${fontFamily};
 		outline: none;

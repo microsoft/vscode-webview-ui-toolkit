@@ -1,8 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
-import {Divider, DividerTemplate as template} from '@microsoft/fast-foundation';
+import {Divider, dividerTemplate as template} from '@microsoft/fast-foundation';
 import {DividerStyles as styles} from './divider.styles';
 
 /**
@@ -13,9 +12,8 @@ import {DividerStyles as styles} from './divider.styles';
  *
  * @public
  */
-@customElement({
-	name: 'vscode-divider',
+export const vsCodeDivider = Divider.compose({
+	baseName: 'divider',
 	template,
 	styles,
 })
-export class VSCodeDivider extends Divider {}

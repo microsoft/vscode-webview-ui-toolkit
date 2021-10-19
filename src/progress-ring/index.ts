@@ -1,26 +1,18 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
 	BaseProgress,
-	ProgressRingTemplate as template,
+	ProgressRingOptions,
+	progressRingTemplate as template,
 } from '@microsoft/fast-foundation';
 import {ProgressRingStyles as styles} from './progress-ring.styles';
 
 /**
- * The Visual Studio Code progress ring component.
- *
- * @remarks
- * HTML Element: `<vscode-progress-ring>`
+ * The Visual Studio Code progress ring class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-progress-ring',
-	template,
-	styles,
-})
 export class VSCodeProgressRing extends BaseProgress {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -67,3 +59,17 @@ export class VSCodeProgressRing extends BaseProgress {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code progress ring component.
+ *
+ * @remarks
+ * HTML Element: `<vscode-progress-ring>`
+ *
+ * @public
+ */
+ export const vsCodeProgressRing = VSCodeProgressRing.compose<ProgressRingOptions>({
+	name: 'progress-ring',
+	template,
+	styles,
+})

@@ -1,23 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
-import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
+import {Badge, badgeTemplate as template} from '@microsoft/fast-foundation';
 import {BadgeStyles as styles} from './badge.styles';
 
 /**
- * The Visual Studio Code badge component.
- *
- * @remarks
- * HTML Element: `<vscode-badge>`
+ * The Visual Studio Code badge class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-badge',
-	template,
-	styles,
-})
 export class VSCodeBadge extends Badge {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -36,3 +27,17 @@ export class VSCodeBadge extends Badge {
 		}
 	}
 }
+
+/**
+ * A function that returns a {@link VSCodeBadge} registration for configuring the component with the VSCode DesignSystem.
+ *
+ * @remarks
+ * HTML Element: `<vscode-badge>`
+ *
+ * @public
+ */
+export const vsCodeBadge = VSCodeBadge.compose({
+	baseName: 'badge',
+	template,
+	styles
+})

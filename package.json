@@ -30,8 +30,8 @@
 		"test": "jest --verbose --coverage"
 	},
 	"dependencies": {
-		"@microsoft/fast-element": "^1.2.0",
-		"@microsoft/fast-foundation": "^1.24.7",
+		"@microsoft/fast-element": "^1.6.0",
+		"@microsoft/fast-foundation": "^2.21.0",
 		"lodash-es": "^4.17.21"
 	},
 	"devDependencies": {

@@ -5,7 +5,9 @@ import {css} from '@microsoft/fast-element';
 import {
 	disabledCursor,
 	display,
+	ElementDefinitionContext,
 	focusVisible,
+	RadioOptions,
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
@@ -20,7 +22,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const RadioStyles = css`
+export const RadioStyles = (context: ElementDefinitionContext, definition: RadioOptions) => css`
 	${display('inline-flex')} :host {
 		align-items: center;
 		flex-direction: row;

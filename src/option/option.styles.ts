@@ -1,11 +1,13 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import {css, ElementStyles} from '@microsoft/fast-element';
 import {
 	disabledCursor,
 	display,
+	ElementDefinitionContext,
 	focusVisible,
+	ListboxOptionOptions,
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
@@ -20,7 +22,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const OptionStyles = css`
+export const OptionStyles: (context: ElementDefinitionContext, definition: ListboxOptionOptions) => ElementStyles = (context: ElementDefinitionContext, definition: ListboxOptionOptions) => css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);
 		border-radius: ${cornerRadius};

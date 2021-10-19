@@ -2,8 +2,9 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
+import { ElementDefinitionContext, FoundationElementDefinition } from '@microsoft/fast-foundation';
 
-export const DataGridStyles = css`
+export const DataGridStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
 	:host {
 		display: flex;
 		position: relative;

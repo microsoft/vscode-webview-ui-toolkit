@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-// Export components
+// Export components and classes
 export * from './badge/index';
 export * from './button/index';
 export * from './checkbox/index';

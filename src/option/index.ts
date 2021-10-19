@@ -1,26 +1,18 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
 	ListboxOption,
-	ListboxOptionTemplate as template,
+	ListboxOptionOptions,
+	listboxOptionTemplate as template,
 } from '@microsoft/fast-foundation';
 import {OptionStyles as styles} from './option.styles';
 
 /**
- * The Visual Studio Code option component.
- *
- * @remarks
- * HTML Element: `<vscode-option>`
+ * The Visual Studio Code option class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-option',
-	template,
-	styles,
-})
 export class VSCodeOption extends ListboxOption {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -38,3 +30,17 @@ export class VSCodeOption extends ListboxOption {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code option component.
+ *
+ * @remarks
+ * HTML Element: `<vscode-option>`
+ *
+ * @public
+ */
+export const vsCodeOption = VSCodeOption.compose<ListboxOptionOptions>({
+	name: 'option',
+	template,
+	styles,
+})

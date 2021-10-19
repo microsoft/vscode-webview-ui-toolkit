@@ -5,29 +5,21 @@ import {customElement} from '@microsoft/fast-element';
 import {
 	Tab,
 	TabPanel,
-	TabPanelTemplate,
+	tabPanelTemplate,
 	Tabs,
 	TabsOrientation,
-	TabsTemplate,
-	TabTemplate,
+	tabsTemplate,
+	tabTemplate,
 } from '@microsoft/fast-foundation';
 import {PanelsStyles} from './panels.styles';
 import {PanelTabStyles} from './panel-tab.styles';
 import {PanelViewStyles} from './panel-view.styles';
 
 /**
- * The Visual Studio Code panels component.
- *
- * @remarks
- * HTML Element: `<vscode-panels>`
+ * The Visual Studio Code panels class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-panels',
-	template: TabsTemplate,
-	styles: PanelsStyles,
-})
 export class VSCodePanels extends Tabs {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -55,18 +47,24 @@ export class VSCodePanels extends Tabs {
 }
 
 /**
- * The Visual Studio Code panel tab component.
+ * The Visual Studio Code panels component.
  *
  * @remarks
- * HTML Element: `<vscode-panel-tab>`
+ * HTML Element: `<vscode-panels>`
  *
  * @public
  */
-@customElement({
-	name: 'vscode-panel-tab',
-	template: TabTemplate,
-	styles: PanelTabStyles,
+export const vsCodePanels = VSCodePanels.compose({
+	baseName: 'panels',
+	template: tabsTemplate,
+	styles: PanelsStyles,
 })
+
+/**
+ * The Visual Studio Code panel tab class.
+ *
+ * @public
+ */
 export class VSCodePanelTab extends Tab {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -91,6 +89,20 @@ export class VSCodePanelTab extends Tab {
 }
 
 /**
+ * The Visual Studio Code panel tab component.
+ *
+ * @remarks
+ * HTML Element: `<vscode-panel-tab>`
+ *
+ * @public
+ */
+export const vsCodePanelTab = VSCodePanelTab.compose({
+	baseName: 'panel-tab',
+	template: tabTemplate,
+	styles: PanelTabStyles,
+})
+
+/**
  * The Visual Studio Code panel view component.
  *
  * @remarks
@@ -98,9 +110,8 @@ export class VSCodePanelTab extends Tab {
  *
  * @public
  */
-@customElement({
-	name: 'vscode-panel-view',
-	template: TabPanelTemplate,
+export const vsCodePanelView = TabPanel.compose({
+	baseName: 'panel-view',
+	template: tabPanelTemplate,
 	styles: PanelViewStyles,
 })
-export class VSCodePanelView extends TabPanel {}

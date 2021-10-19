@@ -1,26 +1,18 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
 	Checkbox,
-	CheckboxTemplate as template,
+	CheckboxOptions,
+	checkboxTemplate as template,
 } from '@microsoft/fast-foundation';
 import {CheckboxStyles as styles} from './checkbox.styles';
 
 /**
- * The Visual Studio Code checkbox component.
- *
- * @remarks
- * HTML Element: `<vscode-checkbox>`
+ * The Visual Studio Code checkbox class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-checkbox',
-	template,
-	styles,
-})
 export class VSCodeCheckbox extends Checkbox {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -38,3 +30,17 @@ export class VSCodeCheckbox extends Checkbox {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code checkbox component.
+ *
+ * @remarks
+ * HTML Element: `<vscode-checkbox>`
+ *
+ * @public
+ */
+export const vsCodeCheckbox = Checkbox.compose<CheckboxOptions>({
+	baseName: 'checkbox',
+	template,
+	styles,
+})

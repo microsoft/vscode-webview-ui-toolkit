@@ -1,8 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
-import {Anchor, AnchorTemplate as template} from '@microsoft/fast-foundation';
+import {Anchor, AnchorOptions, anchorTemplate as template} from '@microsoft/fast-foundation';
 import {LinkStyles as styles} from './link.styles';
 
 /**
@@ -13,7 +12,7 @@ import {LinkStyles as styles} from './link.styles';
  *
  * @public
  */
-@customElement({
+export const vsCodeLink = Anchor.compose<AnchorOptions>({
 	name: 'vscode-link',
 	template,
 	styles,
@@ -21,4 +20,3 @@ import {LinkStyles as styles} from './link.styles';
 		delegatesFocus: true,
 	},
 })
-export class VSCodeLink extends Anchor {}

@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {display} from '@microsoft/fast-foundation';
+import {display, ElementDefinitionContext, FoundationElementDefinition} from '@microsoft/fast-foundation';
 import {
 	badgeBackground,
 	badgeForeground,
@@ -15,7 +15,7 @@ import {
 	typeRampMinus1LineHeight,
 } from '../design-tokens';
 
-export const TagStyles = css`
+export const TagStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
 	${display('inline-block')} :host {
 		box-sizing: border-box;
 		font-family: ${fontFamily};

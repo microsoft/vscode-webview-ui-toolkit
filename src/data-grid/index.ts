@@ -1,36 +1,23 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement, ViewTemplate} from '@microsoft/fast-element';
 import {
-	createDataGridCellTemplate,
-	createDataGridRowTemplate,
-	createDataGridTemplate,
+	dataGridCellTemplate as cellTemplate,
 	DataGrid,
 	DataGridCell,
 	DataGridRow,
+	dataGridTemplate as gridTemplate,
+	dataGridRowTemplate as rowTemplate,
 } from '@microsoft/fast-foundation';
 import {DataGridStyles as gridStyles} from './data-grid.styles';
 import {DataGridRowStyles as rowStyles} from './data-grid-row.styles';
 import {DataGridCellStyles as cellStyles} from './data-grid-cell.styles';
 
-const gridTemplate: ViewTemplate = createDataGridTemplate('vscode');
-const rowTemplate: ViewTemplate = createDataGridRowTemplate('vscode');
-const cellTemplate: ViewTemplate = createDataGridCellTemplate('vscode');
-
 /**
- * The Visual Studio Code data grid component.
- *
- * @remarks
- * HTML Element: `<vscode-data-grid>`
+ * The Visual Studio Code data grid class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-data-grid',
-	template: gridTemplate,
-	styles: gridStyles,
-})
 export class VSCodeDataGrid extends DataGrid {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
@@ -51,6 +38,20 @@ export class VSCodeDataGrid extends DataGrid {
 }
 
 /**
+ * The Visual Studio Code data grid component.
+ *
+ * @remarks
+ * HTML Element: `<vscode-data-grid>`
+ *
+ * @public
+ */
+export const vsCodeDataGrid = DataGrid.compose({
+	baseName: 'data-grid',
+	template: gridTemplate,
+	styles: gridStyles,
+})
+
+/**
  * The Visual Studio Code data grid row component.
  *
  * @remarks
@@ -58,12 +59,11 @@ export class VSCodeDataGrid extends DataGrid {
  *
  * @public
  */
-@customElement({
-	name: 'vscode-data-grid-row',
+export const vsCodeDataGridRow = DataGridRow.compose({
+	name: 'data-grid-row',
 	template: rowTemplate,
 	styles: rowStyles,
 })
-export class VSCodeDataGridRow extends DataGridRow {}
 
 /**
  * The Visual Studio Code data grid cell component.
@@ -73,9 +73,8 @@ export class VSCodeDataGridRow extends DataGridRow {}
  *
  * @public
  */
-@customElement({
+export const vsCodeDataGridCell = DataGridCell.compose({
 	name: 'vscode-data-grid-cell',
 	template: cellTemplate,
 	styles: cellStyles,
 })
-export class VSCodeDataGridCell extends DataGridCell {}

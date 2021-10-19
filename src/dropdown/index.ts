@@ -1,8 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
-import {Select, SelectTemplate as template} from '@microsoft/fast-foundation';
+import {Select, SelectOptions, selectTemplate as template} from '@microsoft/fast-foundation';
 import {DropdownStyles as styles} from './dropdown.styles';
 
 /**
@@ -13,9 +12,8 @@ import {DropdownStyles as styles} from './dropdown.styles';
  *
  * @public
  */
-@customElement({
-	name: 'vscode-dropdown',
+export const vsCodeDropdown = Select.compose<SelectOptions>({
+	baseName: 'dropdown',
 	template,
 	styles,
 })
-export class VSCodeDropdown extends Select {}
