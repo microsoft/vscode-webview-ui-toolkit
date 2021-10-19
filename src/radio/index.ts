@@ -39,4 +39,7 @@ export class VSCodeRadio extends Radio {
 	baseName: 'radio',
 	template,
 	styles,
+	checkedIndicator: `
+		<div part="checked-indicator" class="checked-indicator"></div>
+	`,
 })
