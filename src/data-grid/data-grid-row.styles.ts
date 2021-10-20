@@ -2,14 +2,20 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import { ElementDefinitionContext, FoundationElementDefinition } from '@microsoft/fast-foundation';
+import {
+	ElementDefinitionContext,
+	FoundationElementDefinition,
+} from '@microsoft/fast-foundation';
 import {
 	designUnit,
 	listHoverBackground,
 	quickInputBackground,
 } from '../design-tokens';
 
-export const DataGridRowStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
+export const DataGridRowStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	:host {
 		display: grid;
 		padding: calc((${designUnit} / 4) * 1px) 0;

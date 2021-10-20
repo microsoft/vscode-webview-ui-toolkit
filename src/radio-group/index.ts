@@ -1,7 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
 	RadioGroup,
 	radioGroupTemplate as template,
@@ -41,8 +40,8 @@ export class VSCodeRadioGroup extends RadioGroup {
  *
  * @public
  */
- export const vsCodeRadioGroup = VSCodeRadioGroup.compose({
+export const vsCodeRadioGroup = VSCodeRadioGroup.compose({
 	baseName: 'radio-group',
 	template,
 	styles,
-})
+});

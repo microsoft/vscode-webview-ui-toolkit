@@ -41,11 +41,11 @@ export class VSCodeTextArea extends TextArea {
  *
  * @public
  */
- export const vsCodeTextArea = VSCodeTextArea.compose({
+export const vsCodeTextArea = VSCodeTextArea.compose({
 	baseName: 'text-area',
 	template,
 	styles,
 	shadowOptions: {
 		delegatesFocus: true,
 	},
-})
+});

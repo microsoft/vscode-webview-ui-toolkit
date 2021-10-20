@@ -2,10 +2,17 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {display, ElementDefinitionContext, FoundationElementDefinition} from '@microsoft/fast-foundation';
+import {
+	display,
+	ElementDefinitionContext,
+	FoundationElementDefinition,
+} from '@microsoft/fast-foundation';
 import {borderWidth, designUnit, dividerBackground} from '../design-tokens';
 
-export const DividerStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
+export const DividerStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	${display('block')} :host {
 		border: none;
 		border-top: calc(${borderWidth} * 1px) solid ${dividerBackground};

@@ -1,0 +1,12 @@
+# don't ever lint node_modules
+node_modules
+# don't lint distribute package output
+dist
+# don't lint build folder output
+build
+# don't lint coverage output
+coverage
+# don't lint storybook files
+.storybook/
+# don't lint stories
+*.stories.*

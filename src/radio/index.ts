@@ -1,7 +1,11 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Radio, RadioOptions, radioTemplate as template} from '@microsoft/fast-foundation';
+import {
+	Radio,
+	RadioOptions,
+	radioTemplate as template,
+} from '@microsoft/fast-foundation';
 import {RadioStyles as styles} from './radio.styles';
 
 /**
@@ -35,11 +39,11 @@ export class VSCodeRadio extends Radio {
  *
  * @public
  */
- export const vsCodeRadio = VSCodeRadio.compose<RadioOptions>({
+export const vsCodeRadio = VSCodeRadio.compose<RadioOptions>({
 	baseName: 'radio',
 	template,
 	styles,
 	checkedIndicator: `
 		<div part="checked-indicator" class="checked-indicator"></div>
 	`,
-})
+});

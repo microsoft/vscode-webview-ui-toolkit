@@ -2,10 +2,17 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {display, ElementDefinitionContext, ProgressRingOptions} from '@microsoft/fast-foundation';
+import {
+	display,
+	ElementDefinitionContext,
+	ProgressRingOptions,
+} from '@microsoft/fast-foundation';
 import {designUnit, progressBackground} from '../design-tokens';
 
-export const ProgressRingStyles = (context: ElementDefinitionContext, definition: ProgressRingOptions) => css`
+export const ProgressRingStyles = (
+	context: ElementDefinitionContext,
+	definition: ProgressRingOptions
+) => css`
 	${display('flex')} :host {
 		align-items: center;
 		outline: none;

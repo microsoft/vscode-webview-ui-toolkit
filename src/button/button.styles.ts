@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css, ElementStyles} from '@microsoft/fast-element';
+import {css} from '@microsoft/fast-element';
 import {
 	ButtonOptions,
 	disabledCursor,
@@ -176,7 +176,10 @@ const IconButtonStyles = css`
 	}
 `;
 
-export const ButtonStyles = (context: ElementDefinitionContext, definition: ButtonOptions) => css`
+export const ButtonStyles = (
+	context: ElementDefinitionContext,
+	definition: ButtonOptions
+) => css`
 	${BaseButtonStyles}
 	${PrimaryButtonStyles}
 	${SecondaryButtonStyles}

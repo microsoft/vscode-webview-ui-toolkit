@@ -28,7 +28,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const DropdownStyles = (context: ElementDefinitionContext, definition: SelectOptions) => css`
+export const DropdownStyles = (
+	context: ElementDefinitionContext,
+	definition: SelectOptions
+) => css`
 	${display('inline-flex')} :host {
 		background: ${dropdownBackground};
 		box-sizing: border-box;

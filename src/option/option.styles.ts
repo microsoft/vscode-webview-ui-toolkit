@@ -22,7 +22,13 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const OptionStyles: (context: ElementDefinitionContext, definition: ListboxOptionOptions) => ElementStyles = (context: ElementDefinitionContext, definition: ListboxOptionOptions) => css`
+export const OptionStyles: (
+	context: ElementDefinitionContext,
+	definition: ListboxOptionOptions
+) => ElementStyles = (
+	context: ElementDefinitionContext,
+	definition: ListboxOptionOptions
+) => css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);
 		border-radius: ${cornerRadius};

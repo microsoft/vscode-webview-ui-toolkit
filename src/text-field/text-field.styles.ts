@@ -26,7 +26,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const TextFieldStyles = (context: ElementDefinitionContext, definition: TextFieldOptions) => css`
+export const TextFieldStyles = (
+	context: ElementDefinitionContext,
+	definition: TextFieldOptions
+) => css`
 	${display('inline-block')} :host {
 		font-family: ${fontFamily};
 		outline: none;

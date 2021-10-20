@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css, ElementStyles} from '@microsoft/fast-element';
+import {css} from '@microsoft/fast-element';
 import {
 	CheckboxOptions,
 	disabledCursor,
@@ -24,7 +24,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const CheckboxStyles = (context: ElementDefinitionContext, defintiion: CheckboxOptions) => css`
+export const CheckboxStyles = (
+	context: ElementDefinitionContext,
+	defintiion: CheckboxOptions
+) => css`
 	${display('inline-flex')} :host {
 		align-items: center;
 		outline: none;

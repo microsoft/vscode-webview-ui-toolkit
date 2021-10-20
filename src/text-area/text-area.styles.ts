@@ -25,7 +25,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const TextAreaStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
+export const TextAreaStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	${display('inline-block')} :host {
 		font-family: ${fontFamily};
 		outline: none;

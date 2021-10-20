@@ -23,4 +23,4 @@ export const vsCodeDivider = VSCodeDivider.compose({
 	baseName: 'divider',
 	template,
 	styles,
-})
+});

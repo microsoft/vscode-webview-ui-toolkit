@@ -2,7 +2,11 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {display, ElementDefinitionContext, FoundationElementDefinition} from '@microsoft/fast-foundation';
+import {
+	display,
+	ElementDefinitionContext,
+	FoundationElementDefinition,
+} from '@microsoft/fast-foundation';
 import {
 	borderWidth,
 	designUnit,
@@ -10,7 +14,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const PanelViewStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
+export const PanelViewStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	${display('flex')} :host {
 		color: inherit;
 		background-color: transparent;

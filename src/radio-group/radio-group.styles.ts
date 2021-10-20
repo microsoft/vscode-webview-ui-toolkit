@@ -2,14 +2,21 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {display, ElementDefinitionContext, FoundationElementDefinition} from '@microsoft/fast-foundation';
+import {
+	display,
+	ElementDefinitionContext,
+	FoundationElementDefinition,
+} from '@microsoft/fast-foundation';
 import {
 	checkboxForeground,
 	designUnit,
 	typeRampBaseFontSize,
 } from '../design-tokens';
 
-export const RadioGroupStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
+export const RadioGroupStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	${display('flex')} :host {
 		align-items: flex-start;
 		margin: calc(${designUnit} * 1px) 0;

@@ -1,8 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {attr, customElement} from '@microsoft/fast-element';
-import {Button, ButtonOptions, buttonTemplate as template} from '@microsoft/fast-foundation';
+import {attr} from '@microsoft/fast-element';
+import {
+	Button,
+	ButtonOptions,
+	buttonTemplate as template,
+} from '@microsoft/fast-foundation';
 import {ButtonStyles as styles} from './button.styles';
 
 /**
@@ -95,5 +99,5 @@ export const vsCodeButton = VSCodeButton.compose<ButtonOptions>({
 	styles,
 	shadowOptions: {
 		delegatesFocus: true,
-	}
-})
+	},
+});

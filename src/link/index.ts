@@ -1,7 +1,11 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Anchor, AnchorOptions, anchorTemplate as template} from '@microsoft/fast-foundation';
+import {
+	Anchor,
+	AnchorOptions,
+	anchorTemplate as template,
+} from '@microsoft/fast-foundation';
 import {LinkStyles as styles} from './link.styles';
 
 /**
@@ -9,7 +13,7 @@ import {LinkStyles as styles} from './link.styles';
  *
  * @public
  */
- export class VSCodeLink extends Anchor {}
+export class VSCodeLink extends Anchor {}
 
 /**
  * The Visual Studio Code link component registration.
@@ -26,4 +30,4 @@ export const vsCodeLink = VSCodeLink.compose<AnchorOptions>({
 	shadowOptions: {
 		delegatesFocus: true,
 	},
-})
+});

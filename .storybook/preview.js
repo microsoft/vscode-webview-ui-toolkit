@@ -1,4 +1,4 @@
-import * as VSCodeComponents from "../src/index-rollup";
+import * as VSCodeComponents from '../src/index-rollup';
 import {themes} from '@storybook/theming';
 
 VSCodeComponents;

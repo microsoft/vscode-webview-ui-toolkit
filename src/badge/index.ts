@@ -39,5 +39,5 @@ export class VSCodeBadge extends Badge {
 export const vsCodeBadge = VSCodeBadge.compose({
 	baseName: 'badge',
 	template,
-	styles
-})
+	styles,
+});

@@ -43,4 +43,4 @@ export const vsCodeOption = VSCodeOption.compose<ListboxOptionOptions>({
 	baseName: 'option',
 	template,
 	styles,
-})
+});

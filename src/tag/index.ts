@@ -36,8 +36,8 @@ export class VSCodeTag extends Badge {
  *
  * @public
  */
- export const vsCodeTag = VSCodeTag.compose({
+export const vsCodeTag = VSCodeTag.compose({
 	baseName: 'tag',
 	template,
 	styles,
-})
+});

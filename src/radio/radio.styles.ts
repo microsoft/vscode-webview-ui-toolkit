@@ -22,7 +22,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const RadioStyles = (context: ElementDefinitionContext, definition: RadioOptions) => css`
+export const RadioStyles = (
+	context: ElementDefinitionContext,
+	definition: RadioOptions
+) => css`
 	${display('inline-flex')} :host {
 		align-items: center;
 		flex-direction: row;

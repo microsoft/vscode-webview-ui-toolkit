@@ -39,11 +39,11 @@ export class VSCodeTextField extends TextField {
  *
  * @public
  */
- export const vsCodeTextField = VSCodeTextField.compose<TextFieldOptions>({
+export const vsCodeTextField = VSCodeTextField.compose<TextFieldOptions>({
 	baseName: 'text-field',
 	template,
 	styles,
 	shadowOptions: {
 		delegatesFocus: true,
 	},
-})
+});

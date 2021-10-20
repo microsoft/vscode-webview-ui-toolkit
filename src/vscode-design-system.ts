@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { DesignSystem } from "@microsoft/fast-foundation";
+import {DesignSystem} from '@microsoft/fast-foundation';
 
 /**
  * Provides a design system for the specified element either by returning one that was
@@ -11,5 +11,5 @@ import { DesignSystem } from "@microsoft/fast-foundation";
  * @public
  */
 export function provideVSCodeDesignSystem(element?: HTMLElement): DesignSystem {
-    return DesignSystem.getOrCreate(element).withPrefix("vscode");
+	return DesignSystem.getOrCreate(element).withPrefix('vscode');
 }

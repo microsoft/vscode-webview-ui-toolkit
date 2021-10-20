@@ -2,7 +2,11 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {ElementDefinitionContext, focusVisible, FoundationElementDefinition} from '@microsoft/fast-foundation';
+import {
+	ElementDefinitionContext,
+	focusVisible,
+	FoundationElementDefinition,
+} from '@microsoft/fast-foundation';
 import {
 	borderWidth,
 	cornerRadius,
@@ -16,7 +20,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const DataGridCellStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
+export const DataGridCellStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	:host {
 		padding: calc(${designUnit} * 1px) calc(${designUnit} * 3px);
 		color: ${foreground};

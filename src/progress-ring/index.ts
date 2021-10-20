@@ -68,11 +68,12 @@ export class VSCodeProgressRing extends BaseProgress {
  *
  * @public
  */
- export const vsCodeProgressRing = VSCodeProgressRing.compose<ProgressRingOptions>({
-	baseName: 'progress-ring',
-	template,
-	styles,
-	indeterminateIndicator: `
+export const vsCodeProgressRing =
+	VSCodeProgressRing.compose<ProgressRingOptions>({
+		baseName: 'progress-ring',
+		template,
+		styles,
+		indeterminateIndicator: `
 		<svg class="progress" part="progress" viewBox="0 0 16 16">
 			<circle
 				class="background"
@@ -90,4 +91,4 @@ export class VSCodeProgressRing extends BaseProgress {
 			></circle>
 		</svg>
 	`,
-})
+	});

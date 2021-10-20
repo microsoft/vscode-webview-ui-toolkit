@@ -1,7 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
 	Tab,
 	TabPanel,
@@ -58,7 +57,7 @@ export const vsCodePanels = VSCodePanels.compose({
 	baseName: 'panels',
 	template: tabsTemplate,
 	styles: PanelsStyles,
-})
+});
 
 /**
  * The Visual Studio Code panel tab class.
@@ -100,14 +99,14 @@ export const vsCodePanelTab = VSCodePanelTab.compose({
 	baseName: 'panel-tab',
 	template: tabTemplate,
 	styles: PanelTabStyles,
-})
+});
 
 /**
  * The Visual Studio Code panel view class.
  *
  * @public
  */
- export class VSCodePanelView extends TabPanel {}
+export class VSCodePanelView extends TabPanel {}
 
 /**
  * The Visual Studio Code panel view component registration.
@@ -121,4 +120,4 @@ export const vsCodePanelView = VSCodePanelView.compose({
 	baseName: 'panel-view',
 	template: tabPanelTemplate,
 	styles: PanelViewStyles,
-})
+});

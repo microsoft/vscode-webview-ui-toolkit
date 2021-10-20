@@ -60,4 +60,4 @@ export const vsCodeCheckbox = VSCodeCheckbox.compose<CheckboxOptions>({
 	indeterminateIndicator: `
 		<div part="indeterminate-indicator" class="indeterminate-indicator"></div>
 	`,
-})
+});

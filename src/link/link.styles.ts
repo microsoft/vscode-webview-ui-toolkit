@@ -2,7 +2,12 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {AnchorOptions, display, ElementDefinitionContext, focusVisible} from '@microsoft/fast-foundation';
+import {
+	AnchorOptions,
+	display,
+	ElementDefinitionContext,
+	focusVisible,
+} from '@microsoft/fast-foundation';
 import {
 	borderWidth,
 	cornerRadius,
@@ -14,7 +19,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const LinkStyles = (context: ElementDefinitionContext, definition: AnchorOptions) => css`
+export const LinkStyles = (
+	context: ElementDefinitionContext,
+	definition: AnchorOptions
+) => css`
 	${display('inline-flex')} :host {
 		background: transparent;
 		box-sizing: border-box;

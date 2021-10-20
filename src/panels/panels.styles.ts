@@ -2,7 +2,11 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {display, ElementDefinitionContext, FoundationElementDefinition} from '@microsoft/fast-foundation';
+import {
+	display,
+	ElementDefinitionContext,
+	FoundationElementDefinition,
+} from '@microsoft/fast-foundation';
 import {
 	cornerRadius,
 	designUnit,
@@ -13,7 +17,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const PanelsStyles = (context: ElementDefinitionContext, definition: FoundationElementDefinition) => css`
+export const PanelsStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	${display('grid')} :host {
 		box-sizing: border-box;
 		font-family: ${fontFamily};

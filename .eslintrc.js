@@ -1,13 +1,5 @@
 module.exports = {
 	extends: ['@microsoft/eslint-config-fast-dna', 'prettier'],
-	ignorePatterns: [
-		'node_modules',
-		'dist',
-		'build',
-		'coverage',
-		'.storybook',
-		'*.spec.*',
-	],
 	rules: {
 		'no-extra-boolean-cast': 'off',
 		'@typescript-eslint/no-use-before-define': 'off',

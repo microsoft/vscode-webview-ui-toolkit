@@ -3,10 +3,10 @@
 
 // TODO: Is exporting Foundation still necessary with the updated API's?
 // export * from "@microsoft/fast-element";
-import { allComponents } from "./custom-elements";
-import { provideVSCodeDesignSystem } from "./vscode-design-system";
+import {allComponents} from './custom-elements';
+import {provideVSCodeDesignSystem} from './vscode-design-system';
 
-export * from "./index";
+export * from './index';
 
 /**
  * The global VSCode Design System.
@@ -14,4 +14,5 @@ export * from "./index";
  * Only available if the components are added through a script tag
  * rather than a module/build system.
  */
-export const FASTDesignSystem = provideVSCodeDesignSystem().register(allComponents);
+export const FASTDesignSystem =
+	provideVSCodeDesignSystem().register(allComponents);
