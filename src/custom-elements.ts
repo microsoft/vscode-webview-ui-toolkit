@@ -113,7 +113,7 @@ export const allComponents = {
 				continue;
 			}
 
-			this[key]().register(container, ...rest);
+			(this as any)[key]().register(container, ...rest);
 		}
 	},
 };
