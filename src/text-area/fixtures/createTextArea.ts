@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeTextArea} from '../index';
+import {TextArea} from '../index';
 
 export type TextAreaArgs = {
 	label: string;
@@ -28,7 +28,7 @@ export function createTextArea({
 	isDisabled,
 	isAutoFocused,
 }: TextAreaArgs) {
-	const textArea = new VSCodeTextArea();
+	const textArea = new TextArea();
 
 	if (label) {
 		textArea.textContent = label;

@@ -2,18 +2,24 @@
 // Licensed under the MIT License.
 
 import {
-	Select,
+	Select as FoundationSelect,
 	SelectOptions,
 	selectTemplate as template,
 } from '@microsoft/fast-foundation';
 import {DropdownStyles as styles} from './dropdown.styles';
 
 /**
+ * Dropdown configuration options
+ * @public
+ */
+export type DropdownOptions = SelectOptions;
+
+/**
  * The Visual Studio Code dropdown class.
  *
  * @public
  */
-export class VSCodeDropdown extends Select {}
+export class Dropdown extends FoundationSelect {}
 
 /**
  * The Visual Studio Code link dropdown registration.
@@ -23,7 +29,7 @@ export class VSCodeDropdown extends Select {}
  *
  * @public
  */
-export const vsCodeDropdown = VSCodeDropdown.compose<SelectOptions>({
+export const vsCodeDropdown = Dropdown.compose<DropdownOptions>({
 	baseName: 'dropdown',
 	template,
 	styles,

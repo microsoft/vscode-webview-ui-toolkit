@@ -2,18 +2,24 @@
 // Licensed under the MIT License.
 
 import {
-	ListboxOption,
+	ListboxOption as FoundationListboxOption,
 	ListboxOptionOptions,
 	listboxOptionTemplate as template,
 } from '@microsoft/fast-foundation';
 import {OptionStyles as styles} from './option.styles';
 
 /**
+ * Dropdown option configuration options
+ * @public
+ */
+export type DropdownOptionOptions = ListboxOptionOptions;
+
+/**
  * The Visual Studio Code option class.
  *
  * @public
  */
-export class VSCodeOption extends ListboxOption {
+export class DropdownOption extends FoundationListboxOption {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -39,7 +45,7 @@ export class VSCodeOption extends ListboxOption {
  *
  * @public
  */
-export const vsCodeOption = VSCodeOption.compose<ListboxOptionOptions>({
+export const vsCodeOption = DropdownOption.compose<DropdownOptionOptions>({
 	baseName: 'option',
 	template,
 	styles,

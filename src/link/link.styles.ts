@@ -3,7 +3,6 @@
 
 import {css} from '@microsoft/fast-element';
 import {
-	AnchorOptions,
 	display,
 	ElementDefinitionContext,
 	focusVisible,
@@ -18,10 +17,11 @@ import {
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
+import {LinkOptions} from './';
 
 export const LinkStyles = (
 	context: ElementDefinitionContext,
-	definition: AnchorOptions
+	definition: LinkOptions
 ) => css`
 	${display('inline-flex')} :host {
 		background: transparent;

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeTextField} from '../index';
+import {TextField} from '../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
 export type TextFieldArgs = {
@@ -29,7 +29,7 @@ export function createTextField({
 	startIcon,
 	endIcon,
 }: TextFieldArgs) {
-	const textField = new VSCodeTextField();
+	const textField = new TextField();
 
 	if (label) {
 		textField.textContent = label;

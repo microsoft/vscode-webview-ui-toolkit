@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeCheckbox} from '../index';
+import {Checkbox} from '../index';
 import {focusObserver} from '../../utilities/storybook/index';
 
 export type CheckboxArgs = {
@@ -25,7 +25,7 @@ export function createCheckbox({
 	hasValue,
 	onChange,
 }: CheckboxArgs) {
-	const checkbox = new VSCodeCheckbox();
+	const checkbox = new Checkbox();
 
 	if (label) {
 		checkbox.textContent = label;

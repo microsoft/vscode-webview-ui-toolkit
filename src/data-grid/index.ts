@@ -3,9 +3,9 @@
 
 import {
 	dataGridCellTemplate as cellTemplate,
-	DataGrid,
-	DataGridCell,
-	DataGridRow,
+	DataGrid as FoundationDataGrid,
+	DataGridCell as FoundationDataGridCell,
+	DataGridRow as FoundationDataGridRow,
 	dataGridTemplate as gridTemplate,
 	dataGridRowTemplate as rowTemplate,
 } from '@microsoft/fast-foundation';
@@ -18,7 +18,7 @@ import {DataGridCellStyles as cellStyles} from './data-grid-cell.styles';
  *
  * @public
  */
-export class VSCodeDataGrid extends DataGrid {
+export class DataGrid extends FoundationDataGrid {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -45,7 +45,7 @@ export class VSCodeDataGrid extends DataGrid {
  *
  * @public
  */
-export const vsCodeDataGrid = VSCodeDataGrid.compose({
+export const vsCodeDataGrid = DataGrid.compose({
 	baseName: 'data-grid',
 	template: gridTemplate,
 	styles: gridStyles,
@@ -56,7 +56,7 @@ export const vsCodeDataGrid = VSCodeDataGrid.compose({
  *
  * @public
  */
-export class VSCodeDataGridRow extends DataGridRow {}
+export class DataGridRow extends FoundationDataGridRow {}
 
 /**
  * The Visual Studio Code data grid row component registration.
@@ -66,7 +66,7 @@ export class VSCodeDataGridRow extends DataGridRow {}
  *
  * @public
  */
-export const vsCodeDataGridRow = VSCodeDataGridRow.compose({
+export const vsCodeDataGridRow = DataGridRow.compose({
 	baseName: 'data-grid-row',
 	template: rowTemplate,
 	styles: rowStyles,
@@ -77,7 +77,7 @@ export const vsCodeDataGridRow = VSCodeDataGridRow.compose({
  *
  * @public
  */
-export class VSCodeDataGridCell extends DataGridCell {}
+export class DataGridCell extends FoundationDataGridCell {}
 
 /**
  * The Visual Studio Code data grid cell component registration.
@@ -87,7 +87,7 @@ export class VSCodeDataGridCell extends DataGridCell {}
  *
  * @public
  */
-export const vsCodeDataGridCell = VSCodeDataGridCell.compose({
+export const vsCodeDataGridCell = DataGridCell.compose({
 	baseName: 'data-grid-cell',
 	template: cellTemplate,
 	styles: cellStyles,

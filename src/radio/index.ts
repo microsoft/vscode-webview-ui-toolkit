@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {
-	Radio,
+	Radio as FoundationRadio,
 	RadioOptions,
 	radioTemplate as template,
 } from '@microsoft/fast-foundation';
@@ -13,7 +13,7 @@ import {RadioStyles as styles} from './radio.styles';
  *
  * @public
  */
-export class VSCodeRadio extends Radio {
+export class Radio extends FoundationRadio {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -39,7 +39,7 @@ export class VSCodeRadio extends Radio {
  *
  * @public
  */
-export const vsCodeRadio = VSCodeRadio.compose<RadioOptions>({
+export const vsCodeRadio = Radio.compose<RadioOptions>({
 	baseName: 'radio',
 	template,
 	styles,

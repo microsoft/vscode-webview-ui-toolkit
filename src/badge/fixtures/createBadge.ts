@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeBadge} from '../index';
+import {Badge} from '../index';
 
 export type BadgeArgs = {
 	label: string;
 };
 
 export function createBadge({label}: BadgeArgs) {
-	const badge = new VSCodeBadge();
+	const badge = new Badge();
 
 	if (label) {
 		badge.textContent = label;

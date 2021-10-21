@@ -1,7 +1,10 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Divider, dividerTemplate as template} from '@microsoft/fast-foundation';
+import {
+	Divider as FoundationDivider,
+	dividerTemplate as template,
+} from '@microsoft/fast-foundation';
 import {DividerStyles as styles} from './divider.styles';
 
 /**
@@ -9,7 +12,7 @@ import {DividerStyles as styles} from './divider.styles';
  *
  * @public
  */
-export class VSCodeDivider extends Divider {}
+export class Divider extends FoundationDivider {}
 
 /**
  * The Visual Studio Code divider component registration.
@@ -19,7 +22,7 @@ export class VSCodeDivider extends Divider {}
  *
  * @public
  */
-export const vsCodeDivider = VSCodeDivider.compose({
+export const vsCodeDivider = Divider.compose({
 	baseName: 'divider',
 	template,
 	styles,

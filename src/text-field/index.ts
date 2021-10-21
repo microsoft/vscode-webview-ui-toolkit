@@ -2,8 +2,8 @@
 // Licensed under the MIT License.
 
 import {
+	TextField as FoundationTextField,
 	textFieldTemplate as template,
-	TextField,
 	TextFieldOptions,
 } from '@microsoft/fast-foundation';
 import {TextFieldStyles as styles} from './text-field.styles';
@@ -13,7 +13,7 @@ import {TextFieldStyles as styles} from './text-field.styles';
  *
  * @public
  */
-export class VSCodeTextField extends TextField {
+export class TextField extends FoundationTextField {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -39,7 +39,7 @@ export class VSCodeTextField extends TextField {
  *
  * @public
  */
-export const vsCodeTextField = VSCodeTextField.compose<TextFieldOptions>({
+export const vsCodeTextField = TextField.compose<TextFieldOptions>({
 	baseName: 'text-field',
 	template,
 	styles,

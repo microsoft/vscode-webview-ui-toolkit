@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodePanels} from '../index';
+import {Panels} from '../index';
 import {createPanelTab, PanelTabArgs} from './createPanelTab';
 import {createPanelView} from './createPanelView';
 
@@ -18,7 +18,7 @@ export function createPanels({
 	tabMetaData,
 	ariaLabel,
 }: PanelsArgs) {
-	let panels: VSCodePanels;
+	let panels: Panels;
 	if (tabMetaData) {
 		panels = createTabsWithChildren(tabMetaData, hasComplexContent);
 	}

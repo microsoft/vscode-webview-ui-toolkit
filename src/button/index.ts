@@ -3,8 +3,8 @@
 
 import {attr} from '@microsoft/fast-element';
 import {
-	Button,
 	ButtonOptions,
+	Button as FoundationButton,
 	buttonTemplate as template,
 } from '@microsoft/fast-foundation';
 import {ButtonStyles as styles} from './button.styles';
@@ -20,7 +20,7 @@ export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
  *
  * @public
  */
-export class VSCodeButton extends Button {
+export class Button extends FoundationButton {
 	/**
 	 * The appearance the button should have.
 	 *
@@ -93,7 +93,7 @@ export class VSCodeButton extends Button {
  *
  * @public
  */
-export const vsCodeButton = VSCodeButton.compose<ButtonOptions>({
+export const vsCodeButton = Button.compose<ButtonOptions>({
 	baseName: 'button',
 	template,
 	styles,

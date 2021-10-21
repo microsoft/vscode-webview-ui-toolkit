@@ -2,10 +2,10 @@
 // Licensed under the MIT License.
 
 import {
-	Tab,
-	TabPanel,
+	Tab as FoundationTab,
+	TabPanel as FoundationTabPanel,
+	Tabs as FoundationTabs,
 	tabPanelTemplate,
-	Tabs,
 	TabsOrientation,
 	tabsTemplate,
 	tabTemplate,
@@ -19,7 +19,7 @@ import {PanelViewStyles} from './panel-view.styles';
  *
  * @public
  */
-export class VSCodePanels extends Tabs {
+export class Panels extends FoundationTabs {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -53,7 +53,7 @@ export class VSCodePanels extends Tabs {
  *
  * @public
  */
-export const vsCodePanels = VSCodePanels.compose({
+export const vsCodePanels = Panels.compose({
 	baseName: 'panels',
 	template: tabsTemplate,
 	styles: PanelsStyles,
@@ -64,7 +64,7 @@ export const vsCodePanels = VSCodePanels.compose({
  *
  * @public
  */
-export class VSCodePanelTab extends Tab {
+export class PanelTab extends FoundationTab {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -95,7 +95,7 @@ export class VSCodePanelTab extends Tab {
  *
  * @public
  */
-export const vsCodePanelTab = VSCodePanelTab.compose({
+export const vsCodePanelTab = PanelTab.compose({
 	baseName: 'panel-tab',
 	template: tabTemplate,
 	styles: PanelTabStyles,
@@ -106,7 +106,7 @@ export const vsCodePanelTab = VSCodePanelTab.compose({
  *
  * @public
  */
-export class VSCodePanelView extends TabPanel {}
+export class PanelView extends FoundationTabPanel {}
 
 /**
  * The Visual Studio Code panel view component registration.
@@ -116,7 +116,7 @@ export class VSCodePanelView extends TabPanel {}
  *
  * @public
  */
-export const vsCodePanelView = VSCodePanelView.compose({
+export const vsCodePanelView = PanelView.compose({
 	baseName: 'panel-view',
 	template: tabPanelTemplate,
 	styles: PanelViewStyles,

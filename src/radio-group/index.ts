@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {
-	RadioGroup,
+	RadioGroup as FoundationRadioGroup,
 	radioGroupTemplate as template,
 } from '@microsoft/fast-foundation';
 import {RadioGroupStyles as styles} from './radio-group.styles';
@@ -12,7 +12,7 @@ import {RadioGroupStyles as styles} from './radio-group.styles';
  *
  * @public
  */
-export class VSCodeRadioGroup extends RadioGroup {
+export class RadioGroup extends FoundationRadioGroup {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -40,7 +40,7 @@ export class VSCodeRadioGroup extends RadioGroup {
  *
  * @public
  */
-export const vsCodeRadioGroup = VSCodeRadioGroup.compose({
+export const vsCodeRadioGroup = RadioGroup.compose({
 	baseName: 'radio-group',
 	template,
 	styles,

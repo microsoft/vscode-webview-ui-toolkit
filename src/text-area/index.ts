@@ -2,8 +2,8 @@
 // Licensed under the MIT License.
 
 import {
+	TextArea as FoundationTextArea,
 	textAreaTemplate as template,
-	TextArea,
 } from '@microsoft/fast-foundation';
 import {TextAreaStyles as styles} from './text-area.styles';
 
@@ -15,7 +15,7 @@ import {TextAreaStyles as styles} from './text-area.styles';
  *
  * @public
  */
-export class VSCodeTextArea extends TextArea {
+export class TextArea extends FoundationTextArea {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -41,7 +41,7 @@ export class VSCodeTextArea extends TextArea {
  *
  * @public
  */
-export const vsCodeTextArea = VSCodeTextArea.compose({
+export const vsCodeTextArea = TextArea.compose({
 	baseName: 'text-area',
 	template,
 	styles,

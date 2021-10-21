@@ -2,8 +2,8 @@
 // Licensed under the MIT License.
 
 import {
-	Checkbox,
 	CheckboxOptions,
+	Checkbox as FoundationCheckbox,
 	checkboxTemplate as template,
 } from '@microsoft/fast-foundation';
 import {CheckboxStyles as styles} from './checkbox.styles';
@@ -13,7 +13,7 @@ import {CheckboxStyles as styles} from './checkbox.styles';
  *
  * @public
  */
-export class VSCodeCheckbox extends Checkbox {
+export class Checkbox extends FoundationCheckbox {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -39,7 +39,7 @@ export class VSCodeCheckbox extends Checkbox {
  *
  * @public
  */
-export const vsCodeCheckbox = VSCodeCheckbox.compose<CheckboxOptions>({
+export const vsCodeCheckbox = Checkbox.compose<CheckboxOptions>({
 	baseName: 'checkbox',
 	template,
 	styles,

@@ -1,7 +1,10 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Badge, badgeTemplate as template} from '@microsoft/fast-foundation';
+import {
+	Badge as FoundationBadge,
+	badgeTemplate as template,
+} from '@microsoft/fast-foundation';
 import {TagStyles as styles} from './tag.styles';
 
 /**
@@ -9,7 +12,7 @@ import {TagStyles as styles} from './tag.styles';
  *
  * @public
  */
-export class VSCodeTag extends Badge {
+export class Tag extends FoundationBadge {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -36,7 +39,7 @@ export class VSCodeTag extends Badge {
  *
  * @public
  */
-export const vsCodeTag = VSCodeTag.compose({
+export const vsCodeTag = Tag.compose({
 	baseName: 'tag',
 	template,
 	styles,

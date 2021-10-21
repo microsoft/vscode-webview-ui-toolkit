@@ -13,7 +13,7 @@ import {ProgressRingStyles as styles} from './progress-ring.styles';
  *
  * @public
  */
-export class VSCodeProgressRing extends BaseProgress {
+export class ProgressRing extends BaseProgress {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -68,12 +68,11 @@ export class VSCodeProgressRing extends BaseProgress {
  *
  * @public
  */
-export const vsCodeProgressRing =
-	VSCodeProgressRing.compose<ProgressRingOptions>({
-		baseName: 'progress-ring',
-		template,
-		styles,
-		indeterminateIndicator: `
+export const vsCodeProgressRing = ProgressRing.compose<ProgressRingOptions>({
+	baseName: 'progress-ring',
+	template,
+	styles,
+	indeterminateIndicator: `
 		<svg class="progress" part="progress" viewBox="0 0 16 16">
 			<circle
 				class="background"
@@ -91,4 +90,4 @@ export const vsCodeProgressRing =
 			></circle>
 		</svg>
 	`,
-	});
+});

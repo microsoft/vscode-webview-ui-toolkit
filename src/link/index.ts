@@ -2,18 +2,24 @@
 // Licensed under the MIT License.
 
 import {
-	Anchor,
 	AnchorOptions,
+	Anchor as FoundationAnchor,
 	anchorTemplate as template,
 } from '@microsoft/fast-foundation';
 import {LinkStyles as styles} from './link.styles';
+
+/**
+ * Link configuration options
+ * @public
+ */
+export type LinkOptions = AnchorOptions;
 
 /**
  * The Visual Studio Code link class.
  *
  * @public
  */
-export class VSCodeLink extends Anchor {}
+export class Link extends FoundationAnchor {}
 
 /**
  * The Visual Studio Code link component registration.
@@ -23,7 +29,7 @@ export class VSCodeLink extends Anchor {}
  *
  * @public
  */
-export const vsCodeLink = VSCodeLink.compose<AnchorOptions>({
+export const vsCodeLink = Link.compose<LinkOptions>({
 	baseName: 'link',
 	template,
 	styles,

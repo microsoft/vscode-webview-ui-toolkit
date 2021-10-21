@@ -7,7 +7,6 @@ import {
 	display,
 	ElementDefinitionContext,
 	focusVisible,
-	ListboxOptionOptions,
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
@@ -21,13 +20,14 @@ import {
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
+import {DropdownOptionOptions} from './';
 
 export const OptionStyles: (
 	context: ElementDefinitionContext,
-	definition: ListboxOptionOptions
+	definition: DropdownOptionOptions
 ) => ElementStyles = (
 	context: ElementDefinitionContext,
-	definition: ListboxOptionOptions
+	definition: DropdownOptionOptions
 ) => css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);
