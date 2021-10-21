@@ -47,6 +47,7 @@ export class DataGrid extends FoundationDataGrid {
  */
 export const vsCodeDataGrid = DataGrid.compose({
 	baseName: 'data-grid',
+	baseClass: FoundationDataGrid,
 	template: gridTemplate,
 	styles: gridStyles,
 });
@@ -68,6 +69,7 @@ export class DataGridRow extends FoundationDataGridRow {}
  */
 export const vsCodeDataGridRow = DataGridRow.compose({
 	baseName: 'data-grid-row',
+	baseClass: FoundationDataGridRow,
 	template: rowTemplate,
 	styles: rowStyles,
 });
@@ -89,6 +91,7 @@ export class DataGridCell extends FoundationDataGridCell {}
  */
 export const vsCodeDataGridCell = DataGridCell.compose({
 	baseName: 'data-grid-cell',
+	baseClass: FoundationDataGridCell,
 	template: cellTemplate,
 	styles: cellStyles,
 });

@@ -43,7 +43,7 @@ function createTabsWithChildren(
 	tabMetaData: PanelTabArgs[],
 	hasComplexContent: boolean
 ) {
-	const panels = new VSCodePanels();
+	const panels = new Panels();
 
 	// Create and append tab components
 	for (let i = 0; i < tabMetaData.length; i++) {

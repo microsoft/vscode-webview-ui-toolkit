@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {Dropdown} from '../index';
-import {DropdownOption} from '../../option/index';
+import {Option} from '../../option/index';
 import {
 	createCodiconIcon,
 	focusObserver,
@@ -57,7 +57,7 @@ function createDropdownWithNChildren(numberOfChildren: number) {
 	const dropdown = new Dropdown();
 
 	for (let i = 0; i < numberOfChildren; i++) {
-		const option = new DropdownOption();
+		const option = new Option();
 		option.textContent = `Option Label #${i + 1}`;
 		dropdown.appendChild(option);
 	}
