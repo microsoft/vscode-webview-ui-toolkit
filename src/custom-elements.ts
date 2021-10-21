@@ -24,29 +24,29 @@ import {vsCodeTextField} from './text-field/index';
 // Don't delete these. They're needed so that API-extractor doesn't add import types
 // with improper pathing
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import type {VSCodeBadge} from './badge/index';
-import type {VSCodeButton} from './button/index';
-import type {VSCodeCheckbox} from './checkbox/index';
+import type {Badge} from './badge/index';
+import type {Button} from './button/index';
+import type {Checkbox} from './checkbox/index';
 import type {
-	VSCodeDataGrid,
-	VSCodeDataGridCell,
-	VSCodeDataGridRow,
+	DataGrid,
+	DataGridCell,
+	DataGridRow,
 } from './data-grid/index';
-import type {VSCodeDivider} from './divider/index';
-import type {VSCodeDropdown} from './dropdown/index';
-import type {VSCodeLink} from './link/index';
-import type {VSCodeOption} from './option/index';
+import type {Divider} from './divider/index';
+import type {Dropdown} from './dropdown/index';
+import type {Link} from './link/index';
+import type {DropdownOption} from './option/index';
 import type {
-	VSCodePanels,
-	VSCodePanelTab,
-	VSCodePanelView,
+	Panels,
+	PanelTab,
+	PanelView,
 } from './panels/index';
-import type {VSCodeProgressRing} from './progress-ring/index';
-import type {VSCodeRadioGroup} from './radio-group/index';
-import type {VSCodeRadio} from './radio/index';
-import type {VSCodeTag} from './tag/index';
-import type {VSCodeTextArea} from './text-area/index';
-import type {VSCodeTextField} from './text-field/index';
+import type {ProgressRing} from './progress-ring/index';
+import type {RadioGroup} from './radio-group/index';
+import type {Radio} from './radio/index';
+import type {Tag} from './tag/index';
+import type {TextArea} from './text-area/index';
+import type {TextField} from './text-field/index';
 
 // When adding new components, make sure to add the component to the `allComponents` object
 // in addition to exporting the component by name. Ideally we would be able to just add
