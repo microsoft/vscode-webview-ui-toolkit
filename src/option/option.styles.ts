@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css, ElementStyles} from '@microsoft/fast-element';
+import {css} from '@microsoft/fast-element';
 import {
 	disabledCursor,
 	display,
@@ -22,10 +22,7 @@ import {
 } from '../design-tokens';
 import {DropdownOptionOptions} from './';
 
-export const optionStyles: (
-	context: ElementDefinitionContext,
-	definition: DropdownOptionOptions
-) => ElementStyles = (
+export const optionStyles = (
 	context: ElementDefinitionContext,
 	definition: DropdownOptionOptions
 ) => css`
