@@ -20,11 +20,11 @@ import {
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
-import {DropdownOptionOptions} from './';
+import {OptionOptions} from './';
 
 export const optionStyles = (
 	context: ElementDefinitionContext,
-	definition: DropdownOptionOptions
+	definition: OptionOptions
 ) => css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);

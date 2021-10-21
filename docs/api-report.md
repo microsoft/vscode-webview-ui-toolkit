@@ -83,15 +83,6 @@ export class Dropdown extends Select {
 }
 
 // @public
-export class DropdownOption extends ListboxOption {
-    // @internal
-    connectedCallback(): void;
-}
-
-// @public
-export type DropdownOptionOptions = ListboxOptionOptions;
-
-// @public
 export type DropdownOptions = SelectOptions;
 
 // @public
@@ -100,6 +91,16 @@ export class Link extends Anchor {
 
 // @public
 export type LinkOptions = AnchorOptions;
+
+// @public
+class Option_2 extends ListboxOption {
+    // @internal
+    connectedCallback(): void;
+}
+export { Option_2 as Option }
+
+// @public
+export type OptionOptions = ListboxOptionOptions;
 
 // @public
 export class Panels extends Tabs {

@@ -12,14 +12,14 @@ import {optionStyles as styles} from './option.styles';
  * Dropdown option configuration options
  * @public
  */
-export type DropdownOptionOptions = ListboxOptionOptions;
+export type OptionOptions = ListboxOptionOptions;
 
 /**
  * The Visual Studio Code option class.
  *
  * @public
  */
-export class DropdownOption extends FoundationListboxOption {
+export class Option extends FoundationListboxOption {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -45,7 +45,7 @@ export class DropdownOption extends FoundationListboxOption {
  *
  * @public
  */
-export const vsCodeOption = DropdownOption.compose<DropdownOptionOptions>({
+export const vsCodeOption = Option.compose<OptionOptions>({
 	baseName: 'option',
 	template,
 	styles,

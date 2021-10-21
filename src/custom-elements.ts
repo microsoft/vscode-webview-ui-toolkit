@@ -27,20 +27,12 @@ import {vsCodeTextField} from './text-field/index';
 import type {Badge} from './badge/index';
 import type {Button} from './button/index';
 import type {Checkbox} from './checkbox/index';
-import type {
-	DataGrid,
-	DataGridCell,
-	DataGridRow,
-} from './data-grid/index';
+import type {DataGrid, DataGridCell, DataGridRow} from './data-grid/index';
 import type {Divider} from './divider/index';
 import type {Dropdown} from './dropdown/index';
 import type {Link} from './link/index';
-import type {DropdownOption} from './option/index';
-import type {
-	Panels,
-	PanelTab,
-	PanelView,
-} from './panels/index';
+import type {Option} from './option/index';
+import type {Panels, PanelTab, PanelView} from './panels/index';
 import type {ProgressRing} from './progress-ring/index';
 import type {RadioGroup} from './radio-group/index';
 import type {Radio} from './radio/index';
