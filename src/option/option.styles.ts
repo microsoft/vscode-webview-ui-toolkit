@@ -22,7 +22,7 @@ import {
 } from '../design-tokens';
 import {DropdownOptionOptions} from './';
 
-export const OptionStyles: (
+export const optionStyles: (
 	context: ElementDefinitionContext,
 	definition: DropdownOptionOptions
 ) => ElementStyles = (

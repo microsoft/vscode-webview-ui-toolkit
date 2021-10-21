@@ -19,7 +19,7 @@ import {
 } from '../design-tokens';
 import {LinkOptions} from './';
 
-export const LinkStyles = (
+export const linkStyles = (
 	context: ElementDefinitionContext,
 	definition: LinkOptions
 ) => css`

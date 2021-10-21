@@ -24,7 +24,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const CheckboxStyles = (
+export const checkboxStyles = (
 	context: ElementDefinitionContext,
 	defintiion: CheckboxOptions
 ) => css`

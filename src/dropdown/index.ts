@@ -6,7 +6,7 @@ import {
 	SelectOptions,
 	selectTemplate as template,
 } from '@microsoft/fast-foundation';
-import {DropdownStyles as styles} from './dropdown.styles';
+import {dropdownStyles as styles} from './dropdown.styles';
 
 /**
  * Dropdown configuration options

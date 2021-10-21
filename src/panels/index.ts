@@ -10,9 +10,9 @@ import {
 	tabsTemplate,
 	tabTemplate,
 } from '@microsoft/fast-foundation';
-import {PanelsStyles} from './panels.styles';
-import {PanelTabStyles} from './panel-tab.styles';
-import {PanelViewStyles} from './panel-view.styles';
+import {panelsStyles} from './panels.styles';
+import {panelTabStyles} from './panel-tab.styles';
+import {panelViewStyles} from './panel-view.styles';
 
 /**
  * The Visual Studio Code panels class.
@@ -56,7 +56,7 @@ export class Panels extends FoundationTabs {
 export const vsCodePanels = Panels.compose({
 	baseName: 'panels',
 	template: tabsTemplate,
-	styles: PanelsStyles,
+	styles: panelsStyles,
 });
 
 /**
@@ -98,7 +98,7 @@ export class PanelTab extends FoundationTab {
 export const vsCodePanelTab = PanelTab.compose({
 	baseName: 'panel-tab',
 	template: tabTemplate,
-	styles: PanelTabStyles,
+	styles: panelTabStyles,
 });
 
 /**
@@ -119,5 +119,5 @@ export class PanelView extends FoundationTabPanel {}
 export const vsCodePanelView = PanelView.compose({
 	baseName: 'panel-view',
 	template: tabPanelTemplate,
-	styles: PanelViewStyles,
+	styles: panelViewStyles,
 });

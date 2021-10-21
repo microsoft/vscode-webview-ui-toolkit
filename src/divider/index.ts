@@ -5,7 +5,7 @@ import {
 	Divider as FoundationDivider,
 	dividerTemplate as template,
 } from '@microsoft/fast-foundation';
-import {DividerStyles as styles} from './divider.styles';
+import {dividerStyles as styles} from './divider.styles';
 
 /**
  * The Visual Studio Code divider class.

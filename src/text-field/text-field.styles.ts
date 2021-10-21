@@ -26,7 +26,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const TextFieldStyles = (
+export const textFieldStyles = (
 	context: ElementDefinitionContext,
 	definition: TextFieldOptions
 ) => css`

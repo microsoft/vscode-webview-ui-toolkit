@@ -176,7 +176,7 @@ const IconButtonStyles = css`
 	}
 `;
 
-export const ButtonStyles = (
+export const buttonStyles = (
 	context: ElementDefinitionContext,
 	definition: ButtonOptions
 ) => css`

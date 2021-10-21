@@ -9,7 +9,7 @@ import {
 } from '@microsoft/fast-foundation';
 import {borderWidth, designUnit, dividerBackground} from '../design-tokens';
 
-export const DividerStyles = (
+export const dividerStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`

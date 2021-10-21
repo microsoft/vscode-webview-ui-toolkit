@@ -12,7 +12,7 @@ import {
 	quickInputBackground,
 } from '../design-tokens';
 
-export const DataGridRowStyles = (
+export const dataGridRowStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`

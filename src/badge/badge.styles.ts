@@ -18,7 +18,7 @@ import {
 	typeRampMinus1LineHeight,
 } from '../design-tokens';
 
-export const BadgeStyles = (
+export const badgeStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`

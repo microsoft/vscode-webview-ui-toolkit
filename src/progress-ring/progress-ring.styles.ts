@@ -9,7 +9,7 @@ import {
 } from '@microsoft/fast-foundation';
 import {designUnit, progressBackground} from '../design-tokens';
 
-export const ProgressRingStyles = (
+export const progressRingStyles = (
 	context: ElementDefinitionContext,
 	definition: ProgressRingOptions
 ) => css`

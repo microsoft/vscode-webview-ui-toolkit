@@ -5,7 +5,7 @@ import {
 	TextArea as FoundationTextArea,
 	textAreaTemplate as template,
 } from '@microsoft/fast-foundation';
-import {TextAreaStyles as styles} from './text-area.styles';
+import {textAreaStyles as styles} from './text-area.styles';
 
 /**
  * The Visual Studio Code text area class.

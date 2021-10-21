@@ -25,7 +25,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const TextAreaStyles = (
+export const textAreaStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`

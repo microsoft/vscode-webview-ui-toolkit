@@ -22,7 +22,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const RadioStyles = (
+export const radioStyles = (
 	context: ElementDefinitionContext,
 	definition: RadioOptions
 ) => css`

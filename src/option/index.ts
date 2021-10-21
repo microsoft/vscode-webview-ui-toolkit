@@ -6,7 +6,7 @@ import {
 	ListboxOptionOptions,
 	listboxOptionTemplate as template,
 } from '@microsoft/fast-foundation';
-import {OptionStyles as styles} from './option.styles';
+import {optionStyles as styles} from './option.styles';
 
 /**
  * Dropdown option configuration options

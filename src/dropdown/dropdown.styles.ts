@@ -28,7 +28,7 @@ import {
 } from '../design-tokens';
 import {DropdownOptions} from './';
 
-export const DropdownStyles = (
+export const dropdownStyles = (
 	context: ElementDefinitionContext,
 	definition: DropdownOptions
 ) => css`

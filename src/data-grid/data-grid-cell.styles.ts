@@ -20,7 +20,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const DataGridCellStyles = (
+export const dataGridCellStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`

@@ -13,7 +13,7 @@ import {
 	typeRampBaseFontSize,
 } from '../design-tokens';
 
-export const RadioGroupStyles = (
+export const radioGroupStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`

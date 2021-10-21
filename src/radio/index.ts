@@ -6,7 +6,7 @@ import {
 	RadioOptions,
 	radioTemplate as template,
 } from '@microsoft/fast-foundation';
-import {RadioStyles as styles} from './radio.styles';
+import {radioStyles as styles} from './radio.styles';
 
 /**
  * The Visual Studio Code radio class.

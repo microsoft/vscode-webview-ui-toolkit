@@ -20,7 +20,7 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const PanelTabStyles = (
+export const panelTabStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`

@@ -19,7 +19,7 @@ import {
 	typeRampMinus1LineHeight,
 } from '../design-tokens';
 
-export const TagStyles = (
+export const tagStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`

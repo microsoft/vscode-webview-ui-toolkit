@@ -9,9 +9,9 @@ import {
 	dataGridTemplate as gridTemplate,
 	dataGridRowTemplate as rowTemplate,
 } from '@microsoft/fast-foundation';
-import {DataGridStyles as gridStyles} from './data-grid.styles';
-import {DataGridRowStyles as rowStyles} from './data-grid-row.styles';
-import {DataGridCellStyles as cellStyles} from './data-grid-cell.styles';
+import {dataGridStyles as gridStyles} from './data-grid.styles';
+import {dataGridRowStyles as rowStyles} from './data-grid-row.styles';
+import {dataGridCellStyles as cellStyles} from './data-grid-cell.styles';
 
 /**
  * The Visual Studio Code data grid class.

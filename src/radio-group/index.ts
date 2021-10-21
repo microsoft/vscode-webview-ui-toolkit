@@ -5,7 +5,7 @@ import {
 	RadioGroup as FoundationRadioGroup,
 	radioGroupTemplate as template,
 } from '@microsoft/fast-foundation';
-import {RadioGroupStyles as styles} from './radio-group.styles';
+import {radioGroupStyles as styles} from './radio-group.styles';
 
 /**
  * The Visual Studio Code radio group class.

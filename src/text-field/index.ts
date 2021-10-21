@@ -6,7 +6,7 @@ import {
 	textFieldTemplate as template,
 	TextFieldOptions,
 } from '@microsoft/fast-foundation';
-import {TextFieldStyles as styles} from './text-field.styles';
+import {textFieldStyles as styles} from './text-field.styles';
 
 /**
  * The Visual Studio Code text field class.

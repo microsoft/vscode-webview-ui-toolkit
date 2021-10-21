@@ -7,7 +7,7 @@ import {
 	FoundationElementDefinition,
 } from '@microsoft/fast-foundation';
 
-export const DataGridStyles = (
+export const dataGridStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`
