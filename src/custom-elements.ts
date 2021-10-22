@@ -40,10 +40,7 @@ import type {Tag} from './tag/index';
 import type {TextArea} from './text-area/index';
 import type {TextField} from './text-field/index';
 
-// When adding new components, make sure to add the component to the `allComponents` object
-// in addition to exporting the component by name. Ideally we would be able to just add
-// `export * as allComponents from "./custom-elements" from  src/index.ts but API extractor
-// throws for `export * as` expressions. https://github.com/microsoft/rushstack/pull/1796S
+// export all components
 export {
 	vsCodeBadge,
 	vsCodeButton,
