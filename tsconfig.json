@@ -17,6 +17,7 @@
 		"noEmitOnError": true,
 		"strict": true,
 		"strictNullChecks": true,
+		"strictFunctionTypes": false,
 		"allowJs": true
 	},
 	"include": ["src"],

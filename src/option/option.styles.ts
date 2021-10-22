@@ -5,6 +5,7 @@ import {css} from '@microsoft/fast-element';
 import {
 	disabledCursor,
 	display,
+	ElementDefinitionContext,
 	focusVisible,
 } from '@microsoft/fast-foundation';
 import {
@@ -19,8 +20,12 @@ import {
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
+import {OptionOptions} from './';
 
-export const OptionStyles = css`
+export const optionStyles = (
+	context: ElementDefinitionContext,
+	definition: OptionOptions
+) => css`
 	${display('inline-flex')} :host {
 		font-family: var(--body-font);
 		border-radius: ${cornerRadius};

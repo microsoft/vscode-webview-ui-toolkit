@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeDataGrid} from '../index';
+import {DataGrid} from '../index';
 
 export type DataGridArgs = {
 	gridData: any;
@@ -18,7 +18,7 @@ export function createDataGrid({
 	hasCustomTitles,
 	ariaLabel,
 }: DataGridArgs) {
-	const dataGrid = new VSCodeDataGrid();
+	const dataGrid = new DataGrid();
 
 	if (gridData) {
 		dataGrid.rowsData = gridData;

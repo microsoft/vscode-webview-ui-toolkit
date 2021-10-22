@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeLink} from '../index';
+import {Link} from '../index';
 
 export type LinkArgs = {
 	label: string;
@@ -9,7 +9,7 @@ export type LinkArgs = {
 };
 
 export function createLink({label, href}: LinkArgs) {
-	const link = new VSCodeLink();
+	const link = new Link();
 
 	if (label) {
 		link.textContent = label;

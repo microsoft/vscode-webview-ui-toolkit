@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeTag} from '../index';
+import {Tag} from '../index';
 
 export type TagArgs = {
 	label: string;
 };
 
 export function createTag({label}: TagArgs) {
-	const tag = new VSCodeTag();
+	const tag = new Tag();
 
 	if (label) {
 		tag.textContent = label;

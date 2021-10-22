@@ -1,4 +1,7 @@
+import * as VSCodeComponents from '../src/index-rollup';
 import {themes} from '@storybook/theming';
+
+VSCodeComponents;
 
 export const parameters = {
 	actions: {argTypesRegex: '^on[A-Z].*'},

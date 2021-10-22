@@ -5,6 +5,7 @@ import {css} from '@microsoft/fast-element';
 import {
 	disabledCursor,
 	display,
+	ElementDefinitionContext,
 	focusVisible,
 } from '@microsoft/fast-foundation';
 import {
@@ -25,8 +26,12 @@ import {
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
+import {DropdownOptions} from './';
 
-export const DropdownStyles = css`
+export const dropdownStyles = (
+	context: ElementDefinitionContext,
+	definition: DropdownOptions
+) => css`
 	${display('inline-flex')} :host {
 		background: ${dropdownBackground};
 		box-sizing: border-box;

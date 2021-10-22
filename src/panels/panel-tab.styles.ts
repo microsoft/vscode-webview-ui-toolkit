@@ -2,7 +2,12 @@
 // Licensed under the MIT License.
 
 import {css} from '@microsoft/fast-element';
-import {display, focusVisible} from '@microsoft/fast-foundation';
+import {
+	display,
+	ElementDefinitionContext,
+	focusVisible,
+	FoundationElementDefinition,
+} from '@microsoft/fast-foundation';
 import {
 	borderWidth,
 	cornerRadius,
@@ -15,7 +20,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const PanelTabStyles = css`
+export const panelTabStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	${display('inline-flex')} :host {
 		box-sizing: border-box;
 		font-family: ${fontFamily};

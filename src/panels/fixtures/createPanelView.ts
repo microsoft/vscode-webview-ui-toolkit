@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodePanelView} from '../index';
+import {PanelView} from '../index';
 
 export type PanelViewArgs = {
 	label?: string;
@@ -9,7 +9,7 @@ export type PanelViewArgs = {
 };
 
 export function createPanelView({label, hasComplexContent}: PanelViewArgs) {
-	const panelView = new VSCodePanelView();
+	const panelView = new PanelView();
 
 	if (label && !hasComplexContent) {
 		panelView.textContent = label;

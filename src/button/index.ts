@@ -1,9 +1,13 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {attr, customElement} from '@microsoft/fast-element';
-import {Button, ButtonTemplate as template} from '@microsoft/fast-foundation';
-import {ButtonStyles as styles} from './button.styles';
+import {attr} from '@microsoft/fast-element';
+import {
+	ButtonOptions,
+	Button as FoundationButton,
+	buttonTemplate as template,
+} from '@microsoft/fast-foundation';
+import {buttonStyles as styles} from './button.styles';
 
 /**
  * Types of button appearance.
@@ -12,22 +16,11 @@ import {ButtonStyles as styles} from './button.styles';
 export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
 
 /**
- * The Visual Studio Code button component.
- *
- * @remarks
- * HTML Element: `<vscode-button>`
+ * The Visual Studio Code button class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-button',
-	template,
-	styles,
-	shadowOptions: {
-		delegatesFocus: true,
-	},
-})
-export class VSCodeButton extends Button {
+export class Button extends FoundationButton {
 	/**
 	 * The appearance the button should have.
 	 *
@@ -91,3 +84,20 @@ export class VSCodeButton extends Button {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code button component registration.
+ *
+ * @remarks
+ * HTML Element: `<vscode-button>`
+ *
+ * @public
+ */
+export const vsCodeButton = Button.compose<ButtonOptions>({
+	baseName: 'button',
+	template,
+	styles,
+	shadowOptions: {
+		delegatesFocus: true,
+	},
+});

@@ -1,27 +1,18 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
-	RadioGroup,
-	RadioGroupTemplate as template,
+	RadioGroup as FoundationRadioGroup,
+	radioGroupTemplate as template,
 } from '@microsoft/fast-foundation';
-import {RadioGroupStyles as styles} from './radio-group.styles';
+import {radioGroupStyles as styles} from './radio-group.styles';
 
 /**
- * The Visual Studio Code radio group component.
- *
- * @remarks
- * HTML Element: `<vscode-radio-group>`
+ * The Visual Studio Code radio group class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-radio-group',
-	template,
-	styles,
-})
-export class VSCodeRadioGroup extends RadioGroup {
+export class RadioGroup extends FoundationRadioGroup {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -40,3 +31,17 @@ export class VSCodeRadioGroup extends RadioGroup {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code radio group component registration.
+ *
+ * @remarks
+ * HTML Element: `<vscode-radio-group>`
+ *
+ * @public
+ */
+export const vsCodeRadioGroup = RadioGroup.compose({
+	baseName: 'radio-group',
+	template,
+	styles,
+});

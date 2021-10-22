@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeProgressRing} from '../index';
+import {ProgressRing} from '../index';
 
 export function createProgressRing() {
-	const progressRing = new VSCodeProgressRing();
+	const progressRing = new ProgressRing();
 
 	return progressRing;
 }

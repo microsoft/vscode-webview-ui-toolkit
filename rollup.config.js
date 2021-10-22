@@ -54,22 +54,10 @@ export default [
 // ----- Helper Functions -----
 
 function transformHTMLFragment(data) {
-	const onlySpace = /^\s+$/g;
-	const spaceBeforeTagClose = /\s+(>)/g;
-	const spaceBetweenTags = /(>)\s+(<)/g;
-	const spaceBetweenAttrs = /(["'\w])(?!\s*>)\s+/g;
-	const openEnded = /(?:[^="'\w])?(["'\w])\s*$/g;
+	const spaceBeforeAfterAngleBrackets = /\s*([<>])\s*/g; // remove spaces before and after angle brackets
 
-	if (data.match(onlySpace)) {
-		return data.replace(onlySpace, ' ');
-	}
-	data = data.replace(spaceBeforeTagClose, '$1');
-	data = data.replace(spaceBetweenTags, '$1$2');
-	data = data.replace(spaceBetweenAttrs, '$1 ');
-	if (data.match(openEnded)) {
-		return data.trimStart();
-	}
-	return data.trim();
+	data = data.replace(spaceBeforeAfterAngleBrackets, '$1');
+	return data.replace(/\s{2,}/g, ' '); // Collapse all sequences to 1 space
 }
 
 function transformCSSFragment(data) {

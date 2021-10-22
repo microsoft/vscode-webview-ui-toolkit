@@ -3,12 +3,19 @@
 
 import {css} from '@microsoft/fast-element';
 import {
+	ElementDefinitionContext,
+	FoundationElementDefinition,
+} from '@microsoft/fast-foundation';
+import {
 	designUnit,
 	listHoverBackground,
 	quickInputBackground,
 } from '../design-tokens';
 
-export const DataGridRowStyles = css`
+export const dataGridRowStyles = (
+	context: ElementDefinitionContext,
+	definition: FoundationElementDefinition
+) => css`
 	:host {
 		display: grid;
 		padding: calc((${designUnit} / 4) * 1px) 0;

@@ -1,24 +1,18 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
-import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
-import {TagStyles as styles} from './tag.styles';
+import {
+	Badge as FoundationBadge,
+	badgeTemplate as template,
+} from '@microsoft/fast-foundation';
+import {tagStyles as styles} from './tag.styles';
 
 /**
- * The Visual Studio Code tag component.
- *
- * @remarks
- * HTML Element: `<vscode-tag>`
+ * The Visual Studio Code tag class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-tag',
-	template,
-	styles,
-})
-export class VSCodeTag extends Badge {
+export class Tag extends FoundationBadge {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -36,3 +30,17 @@ export class VSCodeTag extends Badge {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code tag component registration.
+ *
+ * @remarks
+ * HTML Element: `<vscode-tag>`
+ *
+ * @public
+ */
+export const vsCodeTag = Tag.compose({
+	baseName: 'tag',
+	template,
+	styles,
+});

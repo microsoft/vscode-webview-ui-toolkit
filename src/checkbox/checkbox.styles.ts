@@ -3,8 +3,10 @@
 
 import {css} from '@microsoft/fast-element';
 import {
+	CheckboxOptions,
 	disabledCursor,
 	display,
+	ElementDefinitionContext,
 	focusVisible,
 } from '@microsoft/fast-foundation';
 import {
@@ -22,7 +24,10 @@ import {
 	typeRampBaseLineHeight,
 } from '../design-tokens';
 
-export const CheckboxStyles = css`
+export const checkboxStyles = (
+	context: ElementDefinitionContext,
+	defintiion: CheckboxOptions
+) => css`
 	${display('inline-flex')} :host {
 		align-items: center;
 		outline: none;

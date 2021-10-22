@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeOption} from '../index';
+import {Option} from '../index';
 
 export type OptionArgs = {
 	label: string;
@@ -10,7 +10,7 @@ export type OptionArgs = {
 };
 
 export function createOption({label, isDisabled, isSelected}: OptionArgs) {
-	const option = new VSCodeOption();
+	const option = new Option();
 
 	if (label) {
 		option.textContent = label;

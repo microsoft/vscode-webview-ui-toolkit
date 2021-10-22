@@ -1,34 +1,25 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
-	Tab,
-	TabPanel,
-	TabPanelTemplate,
-	Tabs,
+	Tab as FoundationTab,
+	TabPanel as FoundationTabPanel,
+	Tabs as FoundationTabs,
+	tabPanelTemplate,
 	TabsOrientation,
-	TabsTemplate,
-	TabTemplate,
+	tabsTemplate,
+	tabTemplate,
 } from '@microsoft/fast-foundation';
-import {PanelsStyles} from './panels.styles';
-import {PanelTabStyles} from './panel-tab.styles';
-import {PanelViewStyles} from './panel-view.styles';
+import {panelsStyles} from './panels.styles';
+import {panelTabStyles} from './panel-tab.styles';
+import {panelViewStyles} from './panel-view.styles';
 
 /**
- * The Visual Studio Code panels component.
- *
- * @remarks
- * HTML Element: `<vscode-panels>`
+ * The Visual Studio Code panels class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-panels',
-	template: TabsTemplate,
-	styles: PanelsStyles,
-})
-export class VSCodePanels extends Tabs {
+export class Panels extends FoundationTabs {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -55,19 +46,25 @@ export class VSCodePanels extends Tabs {
 }
 
 /**
- * The Visual Studio Code panel tab component.
+ * The Visual Studio Code panels component registration.
  *
  * @remarks
- * HTML Element: `<vscode-panel-tab>`
+ * HTML Element: `<vscode-panels>`
  *
  * @public
  */
-@customElement({
-	name: 'vscode-panel-tab',
-	template: TabTemplate,
-	styles: PanelTabStyles,
-})
-export class VSCodePanelTab extends Tab {
+export const vsCodePanels = Panels.compose({
+	baseName: 'panels',
+	template: tabsTemplate,
+	styles: panelsStyles,
+});
+
+/**
+ * The Visual Studio Code panel tab class.
+ *
+ * @public
+ */
+export class PanelTab extends FoundationTab {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -91,16 +88,36 @@ export class VSCodePanelTab extends Tab {
 }
 
 /**
- * The Visual Studio Code panel view component.
+ * The Visual Studio Code panel tab component registration.
+ *
+ * @remarks
+ * HTML Element: `<vscode-panel-tab>`
+ *
+ * @public
+ */
+export const vsCodePanelTab = PanelTab.compose({
+	baseName: 'panel-tab',
+	template: tabTemplate,
+	styles: panelTabStyles,
+});
+
+/**
+ * The Visual Studio Code panel view class.
+ *
+ * @public
+ */
+export class PanelView extends FoundationTabPanel {}
+
+/**
+ * The Visual Studio Code panel view component registration.
  *
  * @remarks
  * HTML Element: `<vscode-panel-view>`
  *
  * @public
  */
-@customElement({
-	name: 'vscode-panel-view',
-	template: TabPanelTemplate,
-	styles: PanelViewStyles,
-})
-export class VSCodePanelView extends TabPanel {}
+export const vsCodePanelView = PanelView.compose({
+	baseName: 'panel-view',
+	template: tabPanelTemplate,
+	styles: panelViewStyles,
+});

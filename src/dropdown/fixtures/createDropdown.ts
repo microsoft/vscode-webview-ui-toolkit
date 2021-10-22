@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeDropdown} from '../index';
-import {VSCodeOption} from '../../option/index';
+import {Dropdown} from '../index';
+import {Option} from '../../option/index';
 import {
 	createCodiconIcon,
 	focusObserver,
@@ -54,10 +54,10 @@ export function createDropdown({
 }
 
 function createDropdownWithNChildren(numberOfChildren: number) {
-	const dropdown = new VSCodeDropdown();
+	const dropdown = new Dropdown();
 
 	for (let i = 0; i < numberOfChildren; i++) {
-		const option = new VSCodeOption();
+		const option = new Option();
 		option.textContent = `Option Label #${i + 1}`;
 		dropdown.appendChild(option);
 	}

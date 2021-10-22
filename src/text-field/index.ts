@@ -1,30 +1,19 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
 import {
-	TextFieldTemplate as template,
-	TextField,
+	TextField as FoundationTextField,
+	textFieldTemplate as template,
+	TextFieldOptions,
 } from '@microsoft/fast-foundation';
-import {TextFieldStyles as styles} from './text-field.styles';
+import {textFieldStyles as styles} from './text-field.styles';
 
 /**
- * The Visual Studio Code text field component.
- *
- * @remarks
- * HTML Element: `<vscode-text-field>`
+ * The Visual Studio Code text field class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-text-field',
-	template,
-	styles,
-	shadowOptions: {
-		delegatesFocus: true,
-	},
-})
-export class VSCodeTextField extends TextField {
+export class TextField extends FoundationTextField {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -41,3 +30,20 @@ export class VSCodeTextField extends TextField {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code text field component registration.
+ *
+ * @remarks
+ * HTML Element: `<vscode-text-field>`
+ *
+ * @public
+ */
+export const vsCodeTextField = TextField.compose<TextFieldOptions>({
+	baseName: 'text-field',
+	template,
+	styles,
+	shadowOptions: {
+		delegatesFocus: true,
+	},
+});

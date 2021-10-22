@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeRadioGroup} from '../index';
-import {VSCodeRadio} from '../../radio/index';
+import {RadioGroup} from '../index';
+import {Radio} from '../../radio/index';
 
 export type RadioGroupArgs = {
 	label: string;
@@ -41,10 +41,10 @@ export function createRadioGroup({
 }
 
 function createRadioGroupWithNChildren(numberOfChildren: number) {
-	const radioGroup = new VSCodeRadioGroup();
+	const radioGroup = new RadioGroup();
 
 	for (let i = 0; i < numberOfChildren; i++) {
-		const radio = new VSCodeRadio();
+		const radio = new Radio();
 		radio.textContent = 'Radio Label';
 		radioGroup.appendChild(radio);
 	}

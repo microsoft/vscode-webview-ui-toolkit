@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {ButtonAppearance, VSCodeButton} from '../index';
+import {Button, ButtonAppearance} from '../index';
 import {
 	createCodiconIcon,
 	focusObserver,
@@ -28,7 +28,7 @@ export function createButton({
 	ariaLabel,
 	onClick,
 }: ButtonArgs) {
-	const button = new VSCodeButton();
+	const button = new Button();
 
 	if (label && !iconOnly) {
 		button.textContent = label;

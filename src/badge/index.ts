@@ -1,24 +1,18 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
-import {Badge, BadgeTemplate as template} from '@microsoft/fast-foundation';
-import {BadgeStyles as styles} from './badge.styles';
+import {
+	Badge as FoundationBadge,
+	badgeTemplate as template,
+} from '@microsoft/fast-foundation';
+import {badgeStyles as styles} from './badge.styles';
 
 /**
- * The Visual Studio Code badge component.
- *
- * @remarks
- * HTML Element: `<vscode-badge>`
+ * The Visual Studio Code badge class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-badge',
-	template,
-	styles,
-})
-export class VSCodeBadge extends Badge {
+export class Badge extends FoundationBadge {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -30,9 +24,23 @@ export class VSCodeBadge extends Badge {
 
 		// This will override any usage of the circular attribute
 		// inherited by the FAST Foundation Badge component so
-		// that VSCodeBadges are always circular
+		// that VSCode Badges are always circular
 		if (!this.circular) {
 			this.circular = true;
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code badge component registration.
+ *
+ * @remarks
+ * HTML Element: `<vscode-badge>`
+ *
+ * @public
+ */
+export const vsCodeBadge = Badge.compose({
+	baseName: 'badge',
+	template,
+	styles,
+});

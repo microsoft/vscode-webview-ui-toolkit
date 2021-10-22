@@ -1,24 +1,19 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {customElement} from '@microsoft/fast-element';
-import {Radio, RadioTemplate as template} from '@microsoft/fast-foundation';
-import {RadioStyles as styles} from './radio.styles';
+import {
+	Radio as FoundationRadio,
+	RadioOptions,
+	radioTemplate as template,
+} from '@microsoft/fast-foundation';
+import {radioStyles as styles} from './radio.styles';
 
 /**
- * The Visual Studio Code radio component.
- *
- * @remarks
- * HTML Element: `<vscode-radio>`
+ * The Visual Studio Code radio class.
  *
  * @public
  */
-@customElement({
-	name: 'vscode-radio',
-	template,
-	styles,
-})
-export class VSCodeRadio extends Radio {
+export class Radio extends FoundationRadio {
 	/**
 	 * Component lifecycle method that runs when the component is inserted
 	 * into the DOM.
@@ -35,3 +30,20 @@ export class VSCodeRadio extends Radio {
 		}
 	}
 }
+
+/**
+ * The Visual Studio Code radio component registration.
+ *
+ * @remarks
+ * HTML Element: `<vscode-radio>`
+ *
+ * @public
+ */
+export const vsCodeRadio = Radio.compose<RadioOptions>({
+	baseName: 'radio',
+	template,
+	styles,
+	checkedIndicator: `
+		<div part="checked-indicator" class="checked-indicator"></div>
+	`,
+});

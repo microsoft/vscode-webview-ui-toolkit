@@ -3,8 +3,10 @@
 
 import {css} from '@microsoft/fast-element';
 import {
+	ButtonOptions,
 	disabledCursor,
 	display,
+	ElementDefinitionContext,
 	focusVisible,
 } from '@microsoft/fast-foundation';
 import {
@@ -174,7 +176,10 @@ const IconButtonStyles = css`
 	}
 `;
 
-export const ButtonStyles = css`
+export const buttonStyles = (
+	context: ElementDefinitionContext,
+	definition: ButtonOptions
+) => css`
 	${BaseButtonStyles}
 	${PrimaryButtonStyles}
 	${SecondaryButtonStyles}

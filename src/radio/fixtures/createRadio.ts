@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {VSCodeRadio} from '../index';
+import {Radio} from '../index';
 import {focusObserver} from '../../utilities/storybook/index';
 
 export type RadioArgs = {
@@ -21,7 +21,7 @@ export function createRadio({
 	isFocused,
 	onChange,
 }: RadioArgs) {
-	const radio = new VSCodeRadio();
+	const radio = new Radio();
 
 	if (label) {
 		radio.textContent = label;

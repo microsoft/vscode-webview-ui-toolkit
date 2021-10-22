@@ -5,35 +5,45 @@
 ```ts
 
 import { Anchor } from '@microsoft/fast-foundation';
-import { Badge } from '@microsoft/fast-foundation';
+import { AnchorOptions } from '@microsoft/fast-foundation';
+import { Badge as Badge_2 } from '@microsoft/fast-foundation';
 import { BaseProgress } from '@microsoft/fast-foundation';
-import { Button } from '@microsoft/fast-foundation';
-import { Checkbox } from '@microsoft/fast-foundation';
-import { DataGrid } from '@microsoft/fast-foundation';
-import { DataGridCell } from '@microsoft/fast-foundation';
-import { DataGridRow } from '@microsoft/fast-foundation';
-import { Divider } from '@microsoft/fast-foundation';
+import { Button as Button_2 } from '@microsoft/fast-foundation';
+import { ButtonOptions } from '@microsoft/fast-foundation';
+import { Checkbox as Checkbox_2 } from '@microsoft/fast-foundation';
+import { CheckboxOptions } from '@microsoft/fast-foundation';
+import { Constructable } from '@microsoft/fast-element';
+import { DataGrid as DataGrid_2 } from '@microsoft/fast-foundation';
+import { DataGridCell as DataGridCell_2 } from '@microsoft/fast-foundation';
+import { DataGridRow as DataGridRow_2 } from '@microsoft/fast-foundation';
+import { Divider as Divider_2 } from '@microsoft/fast-foundation';
+import { FoundationElement } from '@microsoft/fast-foundation';
+import { FoundationElementDefinition } from '@microsoft/fast-foundation';
+import { FoundationElementRegistry } from '@microsoft/fast-foundation';
 import { ListboxOption } from '@microsoft/fast-foundation';
-import { Radio } from '@microsoft/fast-foundation';
-import { RadioGroup } from '@microsoft/fast-foundation';
+import { ListboxOptionOptions } from '@microsoft/fast-foundation';
+import { OverrideFoundationElementDefinition } from '@microsoft/fast-foundation';
+import { ProgressRingOptions } from '@microsoft/fast-foundation';
+import { Radio as Radio_2 } from '@microsoft/fast-foundation';
+import { RadioGroup as RadioGroup_2 } from '@microsoft/fast-foundation';
+import { RadioOptions } from '@microsoft/fast-foundation';
 import { Select } from '@microsoft/fast-foundation';
+import { SelectOptions } from '@microsoft/fast-foundation';
 import { Tab } from '@microsoft/fast-foundation';
 import { TabPanel } from '@microsoft/fast-foundation';
 import { Tabs } from '@microsoft/fast-foundation';
-import { TextArea } from '@microsoft/fast-foundation';
-import { TextField } from '@microsoft/fast-foundation';
+import { TextArea as TextArea_2 } from '@microsoft/fast-foundation';
+import { TextField as TextField_2 } from '@microsoft/fast-foundation';
+import { TextFieldOptions } from '@microsoft/fast-foundation';
 
 // @public
-export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
-
-// @public
-export class VSCodeBadge extends Badge {
+export class Badge extends Badge_2 {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodeButton extends Button {
+export class Button extends Button_2 {
     appearance: ButtonAppearance;
     // @internal
     attributeChangedCallback(attrName: string, oldVal: string, newVal: string): void;
@@ -42,61 +52,74 @@ export class VSCodeButton extends Button {
 }
 
 // @public
-export class VSCodeCheckbox extends Checkbox {
+export type ButtonAppearance = 'primary' | 'secondary' | 'icon';
+
+// @public
+export class Checkbox extends Checkbox_2 {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodeDataGrid extends DataGrid {
+export class DataGrid extends DataGrid_2 {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodeDataGridCell extends DataGridCell {
+export class DataGridCell extends DataGridCell_2 {
 }
 
 // @public
-export class VSCodeDataGridRow extends DataGridRow {
+export class DataGridRow extends DataGridRow_2 {
 }
 
 // @public
-export class VSCodeDivider extends Divider {
+export class Divider extends Divider_2 {
 }
 
 // @public
-export class VSCodeDropdown extends Select {
+export class Dropdown extends Select {
 }
 
 // @public
-export class VSCodeLink extends Anchor {
+export type DropdownOptions = SelectOptions;
+
+// @public
+export class Link extends Anchor {
 }
 
 // @public
-export class VSCodeOption extends ListboxOption {
+export type LinkOptions = AnchorOptions;
+
+// @public
+class Option_2 extends ListboxOption {
+    // @internal
+    connectedCallback(): void;
+}
+export { Option_2 as Option }
+
+// @public
+export type OptionOptions = ListboxOptionOptions;
+
+// @public
+export class Panels extends Tabs {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodePanels extends Tabs {
+export class PanelTab extends Tab {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodePanelTab extends Tab {
-    // @internal
-    connectedCallback(): void;
+export class PanelView extends TabPanel {
 }
 
 // @public
-export class VSCodePanelView extends TabPanel {
-}
-
-// @public
-export class VSCodeProgressRing extends BaseProgress {
+export class ProgressRing extends BaseProgress {
     // @internal
     attributeChangedCallback(attrName: string, oldVal: string, newVal: string): void;
     // @internal
@@ -104,35 +127,91 @@ export class VSCodeProgressRing extends BaseProgress {
 }
 
 // @public
-export class VSCodeRadio extends Radio {
+export class Radio extends Radio_2 {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodeRadioGroup extends RadioGroup {
+export class RadioGroup extends RadioGroup_2 {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodeTag extends Badge {
+export class Tag extends Badge_2 {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodeTextArea extends TextArea {
+export class TextArea extends TextArea_2 {
     // @internal
     connectedCallback(): void;
 }
 
 // @public
-export class VSCodeTextField extends TextField {
+export class TextField extends TextField_2 {
     // @internal
     connectedCallback(): void;
 }
 
+// @public
+export const vsCodeBadge: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof Badge>;
+
+// @public
+export const vsCodeButton: (overrideDefinition?: OverrideFoundationElementDefinition<ButtonOptions> | undefined) => FoundationElementRegistry<ButtonOptions, Constructable<FoundationElement>>;
+
+// @public
+export const vsCodeCheckbox: (overrideDefinition?: OverrideFoundationElementDefinition<CheckboxOptions> | undefined) => FoundationElementRegistry<CheckboxOptions, Constructable<FoundationElement>>;
+
+// @public
+export const vsCodeDataGrid: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof DataGrid>;
+
+// @public
+export const vsCodeDataGridCell: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof DataGridCell>;
+
+// @public
+export const vsCodeDataGridRow: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof DataGridRow>;
+
+// @public
+export const vsCodeDivider: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof Divider>;
+
+// @public
+export const vsCodeDropdown: (overrideDefinition?: OverrideFoundationElementDefinition<SelectOptions> | undefined) => FoundationElementRegistry<SelectOptions, Constructable<FoundationElement>>;
+
+// @public
+export const vsCodeLink: (overrideDefinition?: OverrideFoundationElementDefinition<AnchorOptions> | undefined) => FoundationElementRegistry<AnchorOptions, Constructable<FoundationElement>>;
+
+// @public
+export const vsCodeOption: (overrideDefinition?: OverrideFoundationElementDefinition<ListboxOptionOptions> | undefined) => FoundationElementRegistry<ListboxOptionOptions, Constructable<FoundationElement>>;
+
+// @public
+export const vsCodePanels: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof Panels>;
+
+// @public
+export const vsCodePanelTab: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof PanelTab>;
+
+// @public
+export const vsCodePanelView: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof PanelView>;
+
+// @public
+export const vsCodeProgressRing: (overrideDefinition?: OverrideFoundationElementDefinition<ProgressRingOptions> | undefined) => FoundationElementRegistry<ProgressRingOptions, Constructable<FoundationElement>>;
+
+// @public
+export const vsCodeRadio: (overrideDefinition?: OverrideFoundationElementDefinition<RadioOptions> | undefined) => FoundationElementRegistry<RadioOptions, Constructable<FoundationElement>>;
+
+// @public
+export const vsCodeRadioGroup: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof RadioGroup>;
+
+// @public
+export const vsCodeTag: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof Tag>;
+
+// @public
+export const vsCodeTextArea: (overrideDefinition?: OverrideFoundationElementDefinition<FoundationElementDefinition> | undefined) => FoundationElementRegistry<FoundationElementDefinition, typeof TextArea>;
+
+// @public
+export const vsCodeTextField: (overrideDefinition?: OverrideFoundationElementDefinition<TextFieldOptions> | undefined) => FoundationElementRegistry<TextFieldOptions, Constructable<FoundationElement>>;
 
 // (No @packageDocumentation comment for this package)
 
