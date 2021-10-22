@@ -30,7 +30,6 @@ The Webview UI Toolkit is currently in a public preview. Track progress towards 
 Medium to high-visibility issues that are intended to be fixed with high priority.
 
 -   Options within `vscode-dropdown` do not announce their text content on selection change [#181](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/181)
--   Icon alignment issues when nested within components [#193](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/193)
 
 ## Getting started
 
