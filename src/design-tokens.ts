@@ -2,8 +2,18 @@
 // Licensed under the MIT License.
 
 import {DesignToken} from '@microsoft/fast-foundation';
+import {initThemeChangeListener} from './utilities/theme/applyTheme';
 
-const {create} = DesignToken;
+let isThemeListenerInitialized = false;
+
+function create<T>(name: string) {
+	if (!isThemeListenerInitialized) {
+		initThemeChangeListener();
+		isThemeListenerInitialized = true;
+	}
+
+	return DesignToken.create<T>(name);
+}
 
 /**
  * Global design tokens.
