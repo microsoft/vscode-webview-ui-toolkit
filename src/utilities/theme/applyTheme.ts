@@ -1,22 +1,23 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-/**
- * This script configures a MutationObserver to watch for Visual Studio Code theme changes and
- * applies the current Visual Studio Code theme to the toolkit components.
- */
-
 import {tokenMappings} from './tokenMappings';
 
-window.addEventListener('load', () => {
-	const observer = new MutationObserver(applyCurrentTheme);
-	observer.observe(document.body, {
-		attributes: true,
-		attributeFilter: ['class'],
-	});
+/**
+ * Configures a MutationObserver to watch for Visual Studio Code theme changes and
+ * applies the current Visual Studio Code theme to the toolkit components.
+ */
+export function initThemeChangeListener() {
+	window.addEventListener('load', () => {
+		const observer = new MutationObserver(applyCurrentTheme);
+		observer.observe(document.body, {
+			attributes: true,
+			attributeFilter: ['class'],
+		});
 
-	applyCurrentTheme();
-});
+		applyCurrentTheme();
+	});
+}
 
 /**
  * Applies the current Visual Studio Code theme to the toolkit components.
