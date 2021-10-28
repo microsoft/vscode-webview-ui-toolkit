@@ -33,6 +33,7 @@ export class ProgressRing extends BaseProgress {
 		// Defines a default aria label that screen readers can access
 		this.setAttribute('aria-label', 'Loading');
 		this.setAttribute('aria-live', 'assertive');
+		this.setAttribute('role', 'alert');
 	}
 
 	/**
