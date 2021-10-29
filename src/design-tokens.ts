@@ -1,19 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {DesignToken} from '@microsoft/fast-foundation';
-import {initThemeChangeListener} from './utilities/theme/applyTheme';
-
-let isThemeListenerInitialized = false;
-
-function create<T>(name: string) {
-	if (!isThemeListenerInitialized) {
-		initThemeChangeListener();
-		isThemeListenerInitialized = true;
-	}
-
-	return DesignToken.create<T>(name);
-}
+import {create} from './utilities/design-tokens/create';
 
 /**
  * Global design tokens.
@@ -21,20 +9,34 @@ function create<T>(name: string) {
 export const designUnit = create<number>('design-unit').withDefault(4);
 export const borderWidth = create<number>('border-width').withDefault(1);
 export const contrastActiveBorder = create<string>(
-	'contrast-active-border'
+	'contrast-active-border',
+	'--vscode-contrastActiveBorder'
 ).withDefault('#f38518');
-export const contrastBorder =
-	create<string>('contrast-border').withDefault('#6fc3df');
+export const contrastBorder = create<string>(
+	'contrast-border',
+	'--vscode-contrastBorder'
+).withDefault('#6fc3df');
 export const cornerRadius = create<number>('corner-radius').withDefault(0);
 export const disabledOpacity =
 	create<number>('disabled-opacity').withDefault(0.4);
-export const focusBorder =
-	create<string>('focus-border').withDefault('#007fd4');
-export const foreground = create<string>('foreground').withDefault('#cccccc');
-export const fontFamily = create<string>('font-family').withDefault(
+export const focusBorder = create<string>(
+	'focus-border',
+	'--vscode-focusBorder'
+).withDefault('#007fd4');
+export const foreground = create<string>(
+	'foreground',
+	'--vscode-foreground'
+).withDefault('#cccccc');
+export const fontFamily = create<string>(
+	'font-family',
+	'--vscode-font-family'
+).withDefault(
 	'-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol'
 );
-export const fontWeight = create<string>('font-weight').withDefault('400');
+export const fontWeight = create<string>(
+	'font-weight',
+	'--vscode-font-weight'
+).withDefault('400');
 export const inputHeight = create<string>('input-height').withDefault('26');
 export const inputMinWidth =
 	create<string>('input-min-width').withDefault('100px');
@@ -43,7 +45,8 @@ export const inputMinWidth =
  * Type-ramp font-size and line-height design tokens.
  */
 export const typeRampBaseFontSize = create<string>(
-	'type-ramp-base-font-size'
+	'type-ramp-base-font-size',
+	'--vscode-font-size'
 ).withDefault('13px');
 export const typeRampBaseLineHeight = create<string>(
 	'type-ramp-base-line-height'
@@ -70,31 +73,41 @@ export const typeRampPlus1LineHeight = create<string>(
 /**
  * Badge design tokens.
  */
-export const badgeForeground =
-	create<string>('badge-foreground').withDefault('#ffffff');
-export const badgeBackground =
-	create<string>('badge-background').withDefault('#4d4d4d');
+export const badgeForeground = create<string>(
+	'badge-foreground',
+	'--vscode-badge-foreground'
+).withDefault('#ffffff');
+export const badgeBackground = create<string>(
+	'badge-background',
+	'--vscode-badge-background'
+).withDefault('#4d4d4d');
 
 /**
  * Button design tokens.
  */
 export const buttonPrimaryForeground = create<string>(
-	'button-primary-foreground'
+	'button-primary-foreground',
+	'--vscode-button-foreground'
 ).withDefault('#ffffff');
 export const buttonPrimaryBackground = create<string>(
-	'button-primary-background'
+	'button-primary-background',
+	'--vscode-button-background'
 ).withDefault('#0e639c');
 export const buttonPrimaryHoverBackground = create<string>(
-	'button-primary-hover-background'
+	'button-primary-hover-background',
+	'--vscode-button-hoverBackground'
 ).withDefault('#1177bb');
 export const buttonSecondaryForeground = create<string>(
-	'button-secondary-foreground'
+	'button-secondary-foreground',
+	'--vscode-button-secondaryForeground'
 ).withDefault('#ffffff');
 export const buttonSecondaryBackground = create<string>(
-	'button-secondary-background'
+	'button-secondary-background',
+	'--vscode-button-secondaryBackground'
 ).withDefault('#3a3d41');
 export const buttonSecondaryHoverBackground = create<string>(
-	'button-secondary-hover-background'
+	'button-secondary-hover-background',
+	'--vscode-button-secondaryHoverBackground'
 ).withDefault('#45494e');
 export const buttonPaddingHorizontal = create<string>(
 	'button-padding-horizontal'
@@ -119,20 +132,26 @@ export const buttonIconFocusBorderOffset = create<number>(
 ).withDefault(0);
 // Note: Button Border is used only for high contrast themes and should be
 // left as transparent otherwise.
-export const buttonBorder =
-	create<string>('button-border').withDefault('transparent');
+export const buttonBorder = create<string>(
+	'button-border',
+	'--vscode-button-border'
+).withDefault('transparent');
 
 /**
  * Checkbox design tokens.
  */
 export const checkboxBackground = create<string>(
-	'checkbox-background'
+	'checkbox-background',
+	'--vscode-checkbox-background'
 ).withDefault('#3c3c3c');
 export const checkboxForeground = create<string>(
-	'checkbox-foreground'
+	'checkbox-foreground',
+	'--vscode-checkbox-foreground'
 ).withDefault('#f0f0f0');
-export const checkboxBorder =
-	create<string>('checkbox-border').withDefault('#3c3c3c');
+export const checkboxBorder = create<string>(
+	'checkbox-border',
+	'--vscode-checkbox-border'
+).withDefault('#3c3c3c');
 export const checkboxCornerRadius = create<number>(
 	'checkbox-corner-radius'
 ).withDefault(3);
@@ -141,35 +160,45 @@ export const checkboxCornerRadius = create<number>(
  * Data Grid design tokens
  */
 export const listActiveSelectionBackground = create<string>(
-	'list-active-selection-background'
+	'list-active-selection-background',
+	'--vscode-list-activeSelectionBackground'
 ).withDefault('#094771');
 export const listActiveSelectionForeground = create<string>(
-	'list-active-selection-foreground'
+	'list-active-selection-foreground',
+	'--vscode-list-activeSelectionForeground'
 ).withDefault('#ffffff');
 export const listHoverBackground = create<string>(
-	'list-hover-background'
+	'list-hover-background',
+	'--vscode-list-hoverBackground'
 ).withDefault('#2a2d2e');
 export const quickInputBackground = create<string>(
-	'quick-input-background'
+	'quick-input-background',
+	'--vscode-quickInput-background'
 ).withDefault('#252526');
 
 /**
  * Divider design tokens.
  */
-export const dividerBackground =
-	create<string>('divider-background').withDefault('#454545');
+export const dividerBackground = create<string>(
+	'divider-background',
+	'--vscode-settings-dropdownListBorder'
+).withDefault('#454545');
 
 /**
  * Dropdown design tokens.
  */
 export const dropdownBackground = create<string>(
-	'dropdown-background'
+	'dropdown-background',
+	'--vscode-dropdown-background'
 ).withDefault('#3c3c3c');
 export const dropdownForeground = create<string>(
-	'dropdown-foreground'
+	'dropdown-foreground',
+	'--vscode-dropdown-foreground'
 ).withDefault('#f0f0f0');
-export const dropdownBorder =
-	create<string>('dropdown-border').withDefault('#3c3c3c');
+export const dropdownBorder = create<string>(
+	'dropdown-border',
+	'--vscode-dropdown-border'
+).withDefault('#3c3c3c');
 export const dropdownListMaxHeight = create<string>(
 	'dropdown-list-max-height'
 ).withDefault('200px');
@@ -177,46 +206,61 @@ export const dropdownListMaxHeight = create<string>(
 /**
  * Text Field & Area design tokens.
  */
-export const inputBackground =
-	create<string>('input-background').withDefault('#3c3c3c');
-export const inputForeground =
-	create<string>('input-foreground').withDefault('#cccccc');
+export const inputBackground = create<string>(
+	'input-background',
+	'--vscode-input-background'
+).withDefault('#3c3c3c');
+export const inputForeground = create<string>(
+	'input-foreground',
+	'--vscode-input-foreground'
+).withDefault('#cccccc');
 export const inputPlaceholderForeground = create<string>(
-	'input-placeholder-foreground'
+	'input-placeholder-foreground',
+	'--vscode-input-placeholderForeground'
 ).withDefault('#cccccc');
 
 /**
  * Link design tokens.
  */
 export const linkForeground = create<string>(
-	'link-active-foreground'
+	'link-active-foreground',
+	'--vscode-textLink-foreground'
 ).withDefault('#3794ff');
-export const linkActiveForeground =
-	create<string>('link-foreground').withDefault('#3794ff');
+export const linkActiveForeground = create<string>(
+	'link-foreground',
+	'--vscode-textLink-activeForeground'
+).withDefault('#3794ff');
 
 /**
  * Progress Bar & Ring design tokens.
  */
 export const progressBackground = create<string>(
-	'progress-background'
+	'progress-background',
+	'--vscode-progressBar-background'
 ).withDefault('#0e70c0');
 
 /**
  * Panels design tokens.
  */
 export const panelViewBackground = create<string>(
-	'panel-view-background'
+	'panel-view-background',
+	'--vscode-panel-background'
 ).withDefault('#1e1e1e');
-export const panelViewBorder =
-	create<string>('panel-view-border').withDefault('#80808059');
+export const panelViewBorder = create<string>(
+	'panel-view-border',
+	'--vscode-panel-border'
+).withDefault('#80808059');
 export const panelTabForeground = create<string>(
-	'panel-tab-foreground'
+	'panel-tab-foreground',
+	'--vscode-panelTitle-inactiveForeground'
 ).withDefault('#e7e7e799');
 export const panelTabActiveForeground = create<string>(
-	'panel-tab-active-foreground'
+	'panel-tab-active-foreground',
+	'--vscode-panelTitle-activeForeground'
 ).withDefault('#e7e7e7');
 export const panelTabActiveBorder = create<string>(
-	'panel-tab-active-border'
+	'panel-tab-active-border',
+	'--vscode-panelTitle-activeBorder'
 ).withDefault('#e7e7e7');
 
 /**
