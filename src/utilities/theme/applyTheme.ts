@@ -1,28 +1,35 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {tokenMappings} from './tokenMappings';
+import {CSSDesignToken} from '@microsoft/fast-foundation';
+import type {T} from '../design-tokens/create';
 
 /**
  * Configures a MutationObserver to watch for Visual Studio Code theme changes and
  * applies the current Visual Studio Code theme to the toolkit components.
  */
-export function initThemeChangeListener() {
+export function initThemeChangeListener(tokenMappings: {
+	[index: string]: CSSDesignToken<T>;
+}) {
 	window.addEventListener('load', () => {
-		const observer = new MutationObserver(applyCurrentTheme);
+		const observer = new MutationObserver(() => {
+			applyCurrentTheme(tokenMappings);
+		});
 		observer.observe(document.body, {
 			attributes: true,
 			attributeFilter: ['class'],
 		});
 
-		applyCurrentTheme();
+		applyCurrentTheme(tokenMappings);
 	});
 }
 
 /**
  * Applies the current Visual Studio Code theme to the toolkit components.
  */
-function applyCurrentTheme() {
+function applyCurrentTheme(tokenMappings: {
+	[index: string]: CSSDesignToken<T>;
+}) {
 	// Get all the styles applied to the <body> tag in the webview HTML
 	// Importantly this includes all the CSS variables associated with the
 	// current Visual Studio Code theme
