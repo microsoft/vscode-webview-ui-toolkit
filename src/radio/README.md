@@ -1,4 +1,4 @@
-# VSCode Radio
+# Visual Studio Code Radio
 
 The `vscode-radio` is a web component implementation of a [radio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio).
 
