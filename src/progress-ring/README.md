@@ -1,4 +1,4 @@
-# VSCode Progress Ring
+# Visual Studio Code Progress Ring
 
 The `vscode-progress-ring` component is used to indicate an indeterminate loading state.
 
