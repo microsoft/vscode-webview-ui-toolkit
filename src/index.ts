@@ -17,6 +17,3 @@ export * from './radio/index';
 export * from './tag/index';
 export * from './text-area/index';
 export * from './text-field/index';
-
-// Export utility functions
-export * from './utilities/theme/applyTheme';
