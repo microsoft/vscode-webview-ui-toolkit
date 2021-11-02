@@ -30,7 +30,17 @@ function applyCurrentTheme() {
 	for (const vscodeTokenName in tokenMappings) {
 		const toolkitTokenName = tokenMappings[vscodeTokenName];
 		const body = document.querySelector('body');
-		const value = styles.getPropertyValue(vscodeTokenName).toString();
+		let value = styles.getPropertyValue(vscodeTokenName).toString();
+
+		// When the VS Code high contrast theme is set, button background color CSS variables
+		// do not exist and will default to the toolkit design token default color values (i.e.
+		// VS Code dark theme).
+		//
+		// This is incorrect theme behavior, so instead, we manually set these color values to
+		// be transparent.
+		if (vscodeTokenName.includes('button') && value.length <= 0) {
+			value = 'transparent';
+		}
 
 		if (body) {
 			toolkitTokenName.setValueFor(body, value);
