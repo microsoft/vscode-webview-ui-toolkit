@@ -25,6 +25,12 @@
 			"options": {
 				"printWidth": 110
 			}
+		},
+		{
+			"files": "src/design-tokens.ts",
+			"options": {
+				"printWidth": 200
+			}
 		}
 	]
 }
