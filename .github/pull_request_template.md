@@ -15,10 +15,12 @@ This pull request resolves #
 
 ### Description of changes
 
-_Include a description of the proposed changes._
+<!-- Include a description of the proposed changes. -->
 
 ### Link to forked docs site
 
-_If component changes (especially visual changes) are contained in this PR, we ask that you provide a link to a publicly viewable version of the Storybook docs site so PR reviewers can see your changes without having to install and view your code locally._
+<!--
+  If component changes (especially visual changes) are contained in this PR, we ask that you provide a link to a publicly viewable version of the Storybook docs site so PR reviewers can see your changes without having to install and view your code locally.
 
-_Please see `CONTRIBUTING.md` for directions on how this can be done._
+  Please see `CONTRIBUTING.md` for directions on how this can be done.
+-->
