@@ -22,11 +22,88 @@ None
 
 ## Usage
 
-❗️❗️❗️ Important ❗️❗️❗️
+**❗️❗️❗️ Important ❗️❗️❗️**
 
 An aria-label of "Panels" is automatically defined on all panels components so they are technically accessible out of the box. However, a descriptive and meaningful label that fits the use case or context of the panels component should always be defined to replace the default label so those viewing your panels component with a screen reader can better understand the meaning of what's being displayed.
 
 For example, if you're using a panels component to display photos of puppies and kittens, adding an aria-label with the value "Puppy and Kitten Photos" would be appropriate.
+
+**A Note About Panel Views**
+
+Panel view containers are rendered as a CSS [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) with default values––they will automatically flow any content contained within them horizontally starting from the left side of the container.
+
+This behavior can be overridden, however, by adding custom styles to all `<vscode-panel-view>` components or individual components. Below are a couple of examples for common overrides that may be desired.
+
+To completely opt out of `<vscode-panel-view>` components rendering as flexbox containers:
+
+```css
+vscode-panel-view {
+	display: block;
+}
+```
+
+To make the content flow vertically:
+
+```css
+vscode-panel-view {
+	flex-direction: column;
+}
+```
+
+To center the content within the container:
+
+```css
+vscode-panel-view {
+	justify-content: center;
+	align-items: center;
+}
+```
+
+To apply styling to one `<vscode-panel-view>` component:
+
+```html
+<vscode-panels>
+	...panel tabs...
+	<vscode-panel-view id="view-1">Problems content.</vscode-panel-view>
+	<vscode-panel-view id="view-2">Output content.</vscode-panel-view>
+	<vscode-panel-view id="view-3">Debug content.</vscode-panel-view>
+	<vscode-panel-view id="view-4">Terminal content.</vscode-panel-view>
+</vscode-panels>
+```
+
+```css
+#view-1 {
+	justify-content: center;
+	align-items: center;
+}
+```
+
+To apply styling to multiple `<vscode-panel-view>` components (but not all):
+
+```html
+<vscode-panels>
+	...panel tabs...
+	<vscode-panel-view id="view-1"> Problems content. </vscode-panel-view>
+	<vscode-panel-view id="view-2" class="custom-styles">
+		Output content.
+	</vscode-panel-view>
+	<vscode-panel-view id="view-3" class="custom-styles">
+		Debug content.
+	</vscode-panel-view>
+	<vscode-panel-view id="view-4" class="custom-styles">
+		Terminal content.
+	</vscode-panel-view>
+</vscode-panels>
+```
+
+```css
+.custom-styles {
+	justify-content: center;
+	align-items: center;
+}
+```
+
+_Finally, an important detail to be aware of is that `<br/>` tags are [known to not to play well with flexboxes](https://stackoverflow.com/questions/45087054/br-is-not-friendly-with-the-flexbox). So if you absolutely need that tag you should likely opt out of the default flexbox behavior._
 
 ### Basic Usage
 
