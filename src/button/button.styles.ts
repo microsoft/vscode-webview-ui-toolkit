@@ -59,7 +59,7 @@ const BaseButtonStyles = css`
 		justify-content: center;
 		align-items: center;
 		padding: ${buttonPaddingVertical} ${buttonPaddingHorizontal};
-		white-space: nowrap;
+		white-space: wrap;
 		outline: none;
 		text-decoration: none;
 		border: calc(${borderWidth} * 1px) solid ${buttonBorder};
@@ -68,6 +68,7 @@ const BaseButtonStyles = css`
 		fill: inherit;
 		cursor: inherit;
 		font-family: inherit;
+		max-width: 300px;
 	}
 	:host(:hover) {
 		background: ${buttonPrimaryHoverBackground};
