@@ -30,7 +30,7 @@ For example, if you're using a panels component to display photos of puppies and
 
 **A Note About Panel Views**
 
-Panel view containers are rendered as a CSS [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) with default values––they will automatically flow any content contained within them horizontally starting from the left side of the container.
+Panel view components are rendered as a CSS [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) with default values––they will automatically flow any content contained within them horizontally starting from the left side of the container.
 
 This behavior can be overridden, however, by adding custom styles to all `<vscode-panel-view>` components or individual components. Below are a couple of examples for common overrides that may be desired.
 
