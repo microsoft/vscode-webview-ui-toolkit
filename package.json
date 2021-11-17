@@ -31,7 +31,9 @@
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "^1.6.0",
-		"@microsoft/fast-foundation": "^2.30.0"
+		"@microsoft/fast-foundation": "^2.30.0",
+		"@microsoft/fast-react-wrapper": "^0.1.16",
+		"react": "^16.14.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.14.3",
