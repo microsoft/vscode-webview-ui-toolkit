@@ -18,6 +18,7 @@
 	"scripts": {
 		"start": "start-storybook -p 6006",
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
+		"build:react": "tsc -p ./tsconfig-react.json",
 		"build:docs": "build-storybook",
 		"deploy:docs": "npm run build:docs && gh-pages -d storybook-static",
 		"doc": "api-extractor run --local",
