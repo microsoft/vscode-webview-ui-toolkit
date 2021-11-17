@@ -12,4 +12,14 @@ module.exports = {
 	features: {
 		postcss: false,
 	},
+	refs: (config, {configType}) => {
+		if (configType === 'DEVELOPMENT') {
+			return {
+				react: {
+					title: 'React',
+					url: 'http://localhost:7007',
+				},
+			};
+		}
+	},
 };
