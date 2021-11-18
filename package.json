@@ -17,7 +17,8 @@
 	"sideEffects": false,
 	"scripts": {
 		"start": "start-storybook -p 6006",
-		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
+		"copy-manifest": "cp pkg-json-manifest dist/package.json",
+		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && npm run build:react && ./copy-pkg-json.js",
 		"build:react": "tsc -p ./tsconfig-react.json",
 		"build:docs": "build-storybook",
 		"deploy:docs": "npm run build:docs && gh-pages -d storybook-static",
@@ -26,9 +27,7 @@
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
-		"prepublishOnly": "npm run build",
-		"test": "jest --verbose --coverage",
-		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js"
+		"test": "jest --verbose --coverage"
 	},
 	"dependencies": {
 		"@microsoft/fast-components": "^2.16.3",
