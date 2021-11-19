@@ -19,6 +19,9 @@ import {
 	vsCodePanelView,
 	vsCodeRadio,
 	vsCodeRadioGroup,
+	vsCodeDataGrid,
+	vsCodeDataGridCell,
+	vsCodeDataGridRow,
 } from '..';
 
 const {wrap} = provideReactWrapper(React, provideFASTDesignSystem());
@@ -39,3 +42,6 @@ export const VSCodePanelTab = wrap(vsCodePanelTab());
 export const VSCodePanelView = wrap(vsCodePanelView());
 export const VSCodeRadio = wrap(vsCodeRadio());
 export const VSCodeRadioGroup = wrap(vsCodeRadioGroup());
+export const VSCodeDataGrid = wrap(vsCodeDataGrid());
+export const VSCodeDataGridCell = wrap(vsCodeDataGridCell());
+export const VSCodeDataGridRow = wrap(vsCodeDataGridRow());
