@@ -27,6 +27,7 @@
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
+		"prepublishOnly": "npm run build",
 		"test": "jest --verbose --coverage"
 	},
 	"dependencies": {
