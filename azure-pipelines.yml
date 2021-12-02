@@ -4,7 +4,7 @@ pr:
             - main
 
 stages:
-    - stage: security-compliance
+    - stage: security_compliance
       displayName: 'Security & Compliance'
       pool:
           vmImage: 'windows-latest'
@@ -38,7 +38,7 @@ stages:
                           $(Build.SourcesDirectory)/**/*.ts
                       ErrorLevel: 'warn'
 
-    - stage: build-test
+    - stage: build_test
       displayName: 'Build & Test'
       pool:
           vmImage: 'ubuntu-latest'
