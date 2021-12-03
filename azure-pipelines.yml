@@ -1,36 +1,108 @@
-trigger:
-    - main
+pr:
+    branches:
+        include:
+            - main
 
-jobs:
-    - job: Compliance
+stages:
+    - stage: security_compliance
+      displayName: 'Security & Compliance'
       pool:
           vmImage: 'windows-latest'
-      steps:
-          - task: PoliCheck@1
-            displayName: '🌎 PoliCheck'
-            inputs:
-                inputType: 'Basic'
-                targetType: 'F'
-                targetArgument: '$(Build.SourcesDirectory)'
-                result: 'PoliCheck.xml'
-                optionsXS: 1 # Scan subfolders
-                optionsPE: 1 # Enable exclusions
-                optionsUEPATH: '$(Build.SourcesDirectory)/policheck/UserExclusion.xml'
-          - task: PublishBuildArtifacts@1
-            displayName: 'Create log artifact'
-            inputs:
-                pathToPublish: '..\_sdt\logs\PoliCheck\PoliCheck.xml'
-                artifactName: 'PoliCheck'
+      jobs:
+          - job: compliance
+            steps:
+                - task: PoliCheck@1
+                  displayName: 'Run PoliCheck 🌎'
+                  inputs:
+                      inputType: 'Basic'
+                      targetType: 'F'
+                      targetArgument: '$(Build.SourcesDirectory)'
+                      result: 'PoliCheck.xml'
+                      optionsXS: 1
+                      optionsPE: 1
+                      optionsUEPATH: '$(Build.SourcesDirectory)/policheck/UserExclusion.xml'
+                - task: PublishBuildArtifacts@1
+                  displayName: 'Create log artifact'
+                  inputs:
+                      pathToPublish: '..\_sdt\logs\PoliCheck\PoliCheck.xml'
+                      artifactName: 'PoliCheck'
 
-    - job: Security
+          - job: security
+            steps:
+                - task: ESLint@1
+                  displayName: 'Guardian: ESLint 🛡'
+                  inputs:
+                      Configuration: 'recommended'
+                      TargetType: 'eslint'
+                      TargetsESLint: |
+                          $(Build.SourcesDirectory)/**/*.ts
+                      ErrorLevel: 'warn'
+
+    - stage: build_test
+      displayName: 'Build & Test'
       pool:
-          vmImage: 'windows-latest'
-      steps:
-          - task: ESLint@1
-            displayName: '🛡 Guardian: ESLint'
-            inputs:
-                Configuration: 'recommended'
-                TargetType: 'eslint'
-                TargetsESLint: |
-                    $(Build.SourcesDirectory)/**/*.js
-                ErrorLevel: 'warn'
+          vmImage: 'ubuntu-latest'
+
+      jobs:
+          - job: test
+            timeoutInMinutes: 10
+
+            steps:
+                - task: NodeTool@0
+                  displayName: 'Setup Node 💾'
+                  inputs:
+                      versionSpec: '14.x'
+
+                - script: npm install
+                  displayName: 'Install Dependencies 📥'
+
+                - script: npm run test
+                  displayName: 'Run Tests 🧪'
+
+          - job: lint
+            timeoutInMinutes: 10
+
+            steps:
+                - task: NodeTool@0
+                  displayName: 'Setup Node 💾'
+                  inputs:
+                      versionSpec: '14.x'
+
+                - script: npm install
+                  displayName: 'Install Dependencies 📥'
+
+                - script: npm run lint
+                  displayName: 'Run Lint Check 🔍'
+
+                - script: npm run fmt
+                  displayName: 'Run Format Check 🌸'
+
+          - job: build
+            timeoutInMinutes: 10
+
+            steps:
+                - task: NodeTool@0
+                  displayName: 'Setup Node 💾'
+                  inputs:
+                      versionSpec: '14.x'
+
+                - script: npm install
+                  displayName: 'Install Dependencies 📥'
+
+                - script: npm run build
+                  displayName: 'Build Toolkit 🏗'
+
+          - job: docs
+            timeoutInMinutes: 10
+
+            steps:
+                - task: NodeTool@0
+                  displayName: 'Setup Node 💾'
+                  inputs:
+                      versionSpec: '14.x'
+
+                - script: npm install
+                  displayName: 'Install Dependencies 📥'
+
+                - script: npm run build:docs
+                  displayName: 'Build Docs 🏗'
