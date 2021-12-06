@@ -18,7 +18,7 @@
 	"scripts": {
 		"start": "start-storybook -p 6006",
 		"copy-manifest": "cp pkg-json-manifest dist/package.json",
-		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && npm run build:react && ./copy-pkg-json.js",
+		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && npm run build:react && ./scripts/copy-pkg-json.js",
 		"build:react": "tsc -p ./tsconfig.react.json",
 		"build:docs": "build-storybook",
 		"deploy:docs": "npm run build:docs && gh-pages -d storybook-static",
@@ -33,7 +33,7 @@
 	"dependencies": {
 		"@microsoft/fast-element": "^1.6.0",
 		"@microsoft/fast-foundation": "^2.21.0",
-		"@microsoft/fast-react-wrapper": "^0.1.16"
+		"@microsoft/fast-react-wrapper": "^0.1.17"
 	},
 	"peerDependencies": {
 		"react": ">=16.9.0"
