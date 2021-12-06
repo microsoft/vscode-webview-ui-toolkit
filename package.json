@@ -31,7 +31,6 @@
 		"test": "jest --verbose --coverage"
 	},
 	"dependencies": {
-		"@microsoft/fast-components": "^2.16.3",
 		"@microsoft/fast-element": "^1.6.0",
 		"@microsoft/fast-foundation": "^2.21.0",
 		"@microsoft/fast-react-wrapper": "^0.1.16"
