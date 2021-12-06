@@ -1,6 +1,6 @@
 import React from 'react';
 import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
-import {provideFASTDesignSystem} from '@microsoft/fast-components';
+import {provideVSCodeDesignSystem} from '../vscode-design-system';
 
 import {
 	vsCodeButton,
@@ -24,7 +24,7 @@ import {
 	vsCodeDataGridRow,
 } from '..';
 
-const {wrap} = provideReactWrapper(React, provideFASTDesignSystem());
+const {wrap} = provideReactWrapper(React, provideVSCodeDesignSystem());
 
 export const VSCodeBadge = wrap(vsCodeBadge());
 export const VSCodeButton = wrap(vsCodeButton());
