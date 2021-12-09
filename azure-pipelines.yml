@@ -45,7 +45,7 @@ stages:
                   inputs:
                       BuildDropPath: '$(System.ArtifactsDirectory)/buildOutput'
 
-- stage: build_test
+    - stage: build_test
       displayName: 'Build & Test'
       pool:
           vmImage: 'ubuntu-latest'
