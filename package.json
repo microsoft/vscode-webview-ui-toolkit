@@ -4,9 +4,7 @@
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
 	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
 	"license": "MIT",
-	"author": {
-		"name": "Microsoft Corporation"
-	},
+	"author": "Microsoft Corporation",
 	"bugs": {
 		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
 	},
@@ -70,5 +68,15 @@
 		"tslib": "^2.1.0",
 		"typescript": "4.3.5",
 		"webpack": "^4.46.0"
-	}
+	},
+	"keywords": [
+		"vscode",
+		"visual studio code",
+		"webview",
+		"extension",
+		"ui",
+		"components",
+		"web components",
+		"react"
+	]
 }
