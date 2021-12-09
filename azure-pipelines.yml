@@ -38,7 +38,14 @@ stages:
                           $(Build.SourcesDirectory)/**/*.ts
                       ErrorLevel: 'warn'
 
-    - stage: build_test
+          - job: sbom
+            steps:
+                - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
+                  displayName: 'Generation Task 🧾'
+                  inputs:
+                      BuildDropPath: '$(System.ArtifactsDirectory)/buildOutput'
+
+- stage: build_test
       displayName: 'Build & Test'
       pool:
           vmImage: 'ubuntu-latest'
