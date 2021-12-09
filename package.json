@@ -68,5 +68,15 @@
 		"tslib": "^2.1.0",
 		"typescript": "4.3.5",
 		"webpack": "^4.46.0"
-	}
+	},
+	"keywords": [
+		"vscode",
+		"visual studio code",
+		"webview",
+		"extension",
+		"ui",
+		"components",
+		"web components",
+		"react"
+	]
 }
