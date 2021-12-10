@@ -107,6 +107,10 @@ _Finally, an important detail to be aware of is that `<br/>` tags are [known to 
 
 ### Basic Usage
 
+Note: Adding a unique ID to each `<vscode-panel-tab>` and `<vscode-panel-view>` component is a convention that helps with easily styling and identifying each tab and view component, but it is not explicitly required unless the `activeid` attribute is being used as demonstrated in the next section.
+
+Also, the unique ID can follow any format or convention as long as each component ID is, in fact, unique from all the others.
+
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--default)
 
 ```html
