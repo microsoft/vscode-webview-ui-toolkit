@@ -104,6 +104,7 @@ stages:
                   displayName: 'Generate Manifest 🧾'
                   inputs:
                       BuildDropPath: '$(Build.ArtifactStagingDirectory)'
+                      PackageName: 'Webview UI Toolkit for Visual Studio Code'
 
                 - task: PublishBuildArtifacts@1
                   displayName: 'Publish Artifacts 📦'
