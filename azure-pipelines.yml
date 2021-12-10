@@ -92,10 +92,17 @@ stages:
                 - script: npm run build
                   displayName: 'Build Toolkit 🏗'
 
+                - task: CopyFiles@2
+                  inputs:
+                    SourceFolder: "$(System.DefaultWorkingDirectory)/dist"
+                    Contents: |
+                        **/*
+                    TargetFolder: "$(Build.ArtifactStagingDirectory)"  
+
                 - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
                   displayName: 'Generation Task 🧾'
                   inputs:
-                      BuildDropPath: '$(Build.ArtifactStagingDirectory)/dist'
+                      BuildDropPath: '$(Build.ArtifactStagingDirectory)'
 
           - job: docs
             timeoutInMinutes: 10
