@@ -38,13 +38,6 @@ stages:
                           $(Build.SourcesDirectory)/**/*.ts
                       ErrorLevel: 'warn'
 
-          - job: sbom
-            steps:
-                - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
-                  displayName: 'Generation Task 🧾'
-                  inputs:
-                      BuildDropPath: '$(Build.ArtifactStagingDirectory)/buildOutput'
-
     - stage: build_test
       displayName: 'Build & Test'
       pool:
@@ -98,6 +91,11 @@ stages:
 
                 - script: npm run build
                   displayName: 'Build Toolkit 🏗'
+
+                - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
+                  displayName: 'Generation Task 🧾'
+                  inputs:
+                      BuildDropPath: '$(Build.ArtifactStagingDirectory)/dist'
 
           - job: docs
             timeoutInMinutes: 10
