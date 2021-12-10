@@ -105,6 +105,7 @@ stages:
                   inputs:
                       BuildDropPath: '$(Build.ArtifactStagingDirectory)'
                       PackageName: 'Webview UI Toolkit for Visual Studio Code'
+                      PackageVersion: '$(node -p "require(\"./package.json\").version")'
 
                 - task: PublishBuildArtifacts@1
                   displayName: 'Publish Artifacts 📦'
