@@ -93,6 +93,7 @@ stages:
                   displayName: 'Build Toolkit 🏗'
 
                 - task: CopyFiles@2
+                  displayName: "Copy to Staging 📂"
                   inputs:
                     SourceFolder: "$(System.DefaultWorkingDirectory)/dist"
                     Contents: |
@@ -100,7 +101,7 @@ stages:
                     TargetFolder: "$(Build.ArtifactStagingDirectory)"  
 
                 - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
-                  displayName: 'Generation Task 🧾'
+                  displayName: 'Generate Manifest 🧾'
                   inputs:
                       BuildDropPath: '$(Build.ArtifactStagingDirectory)'
 
