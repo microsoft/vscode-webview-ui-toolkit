@@ -43,7 +43,7 @@ stages:
                 - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
                   displayName: 'Generation Task 🧾'
                   inputs:
-                      BuildDropPath: '$(Build.ArtifactsStagingDirectory)/buildOutput'
+                      BuildDropPath: '$(Build.ArtifactStagingDirectory)/buildOutput'
 
     - stage: build_test
       displayName: 'Build & Test'
