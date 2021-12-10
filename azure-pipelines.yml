@@ -93,17 +93,22 @@ stages:
                   displayName: 'Build Toolkit 🏗'
 
                 - task: CopyFiles@2
-                  displayName: "Copy to Staging 📂"
+                  displayName: 'Copy to Staging 📂'
                   inputs:
-                    SourceFolder: "$(System.DefaultWorkingDirectory)/dist"
-                    Contents: |
-                        **/*
-                    TargetFolder: "$(Build.ArtifactStagingDirectory)"  
+                      SourceFolder: '$(System.DefaultWorkingDirectory)/dist'
+                      Contents: |
+                          **/*
+                      TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
                 - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
                   displayName: 'Generate Manifest 🧾'
                   inputs:
                       BuildDropPath: '$(Build.ArtifactStagingDirectory)'
+
+                - task: PublishBuildArtifacts@1
+                  displayName: 'Publish Artifacts 📦'
+                  inputs:
+                      ArtifactName: 'drop'
 
           - job: docs
             timeoutInMinutes: 10
