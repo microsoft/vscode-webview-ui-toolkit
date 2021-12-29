@@ -13,6 +13,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | `placeholder` | string  | Sets the placeholder value of the component, generally used to provide a hint to the user. |
 | `readonly`    | boolean | When true, the control will be immutable by any user interaction.                          |
 | `size`        | number  | Sets the width of the element to a specified number of characters.                         |
+| `type`        | string  | Sets the text field type from a set of options.                                            |
 | `value`       | string  | The value (i.e. content) of the text field.                                                |
 
 ## Usage
@@ -81,6 +82,20 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ```html
 <vscode-text-field size="50">Text Field Label</vscode-text-field>
+```
+
+### Type Attribute
+
+Sets the text field type. Valid options include: "email", "password", "tel", "text", and "url". The default value is "text".
+
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-type)
+
+```html
+<vscode-text-field type="email">Text Field Label</vscode-text-field>
+<vscode-text-field type="password">Text Field Label</vscode-text-field>
+<vscode-text-field type="tel">Text Field Label</vscode-text-field>
+<vscode-text-field type="text">Text Field Label</vscode-text-field>
+<vscode-text-field type="url">Text Field Label</vscode-text-field>
 ```
 
 ### Start Icon
