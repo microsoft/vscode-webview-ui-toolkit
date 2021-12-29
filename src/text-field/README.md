@@ -13,7 +13,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | `placeholder` | string  | Sets the placeholder value of the component, generally used to provide a hint to the user. |
 | `readonly`    | boolean | When true, the control will be immutable by any user interaction.                          |
 | `size`        | number  | Sets the width of the element to a specified number of characters.                         |
-| `type`        | string  | Sets the text field type from a set of options.                                            |
+| `type`        | string  | Sets the text field type.                                                                  |
 | `value`       | string  | The value (i.e. content) of the text field.                                                |
 
 ## Usage
