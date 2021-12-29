@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 import {
+	FoundationElementDefinition,
 	Tab as FoundationTab,
 	TabPanel as FoundationTabPanel,
 	Tabs as FoundationTabs,
@@ -53,7 +54,10 @@ export class Panels extends FoundationTabs {
  *
  * @public
  */
-export const vsCodePanels = Panels.compose({
+export const vsCodePanels = Panels.compose<
+	FoundationElementDefinition,
+	typeof Panels
+>({
 	baseName: 'panels',
 	template: tabsTemplate,
 	styles: panelsStyles,
@@ -95,7 +99,10 @@ export class PanelTab extends FoundationTab {
  *
  * @public
  */
-export const vsCodePanelTab = PanelTab.compose({
+export const vsCodePanelTab = PanelTab.compose<
+	FoundationElementDefinition,
+	typeof PanelTab
+>({
 	baseName: 'panel-tab',
 	template: tabTemplate,
 	styles: panelTabStyles,
@@ -116,7 +123,10 @@ export class PanelView extends FoundationTabPanel {}
  *
  * @public
  */
-export const vsCodePanelView = PanelView.compose({
+export const vsCodePanelView = PanelView.compose<
+	FoundationElementDefinition,
+	typeof PanelView
+>({
 	baseName: 'panel-view',
 	template: tabPanelTemplate,
 	styles: panelViewStyles,

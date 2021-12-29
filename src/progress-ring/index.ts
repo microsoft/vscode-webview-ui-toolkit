@@ -69,7 +69,10 @@ export class ProgressRing extends BaseProgress {
  *
  * @public
  */
-export const vsCodeProgressRing = ProgressRing.compose<ProgressRingOptions>({
+export const vsCodeProgressRing = ProgressRing.compose<
+	ProgressRingOptions,
+	typeof ProgressRing
+>({
 	baseName: 'progress-ring',
 	template,
 	styles,

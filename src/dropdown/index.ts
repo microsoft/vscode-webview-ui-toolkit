@@ -29,7 +29,10 @@ export class Dropdown extends FoundationSelect {}
  *
  * @public
  */
-export const vsCodeDropdown = Dropdown.compose<DropdownOptions>({
+export const vsCodeDropdown = Dropdown.compose<
+	DropdownOptions,
+	typeof Dropdown
+>({
 	baseName: 'dropdown',
 	template,
 	styles,

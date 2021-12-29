@@ -39,7 +39,7 @@ export class Radio extends FoundationRadio {
  *
  * @public
  */
-export const vsCodeRadio = Radio.compose<RadioOptions>({
+export const vsCodeRadio = Radio.compose<RadioOptions, typeof Radio>({
 	baseName: 'radio',
 	template,
 	styles,

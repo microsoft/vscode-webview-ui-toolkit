@@ -45,7 +45,7 @@ export class Option extends FoundationListboxOption {
  *
  * @public
  */
-export const vsCodeOption = Option.compose<OptionOptions>({
+export const vsCodeOption = Option.compose<OptionOptions, typeof Option>({
 	baseName: 'option',
 	template,
 	styles,

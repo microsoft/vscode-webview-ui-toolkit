@@ -3,6 +3,7 @@
 
 import {
 	Badge as FoundationBadge,
+	FoundationElementDefinition,
 	badgeTemplate as template,
 } from '@microsoft/fast-foundation';
 import {badgeStyles as styles} from './badge.styles';
@@ -39,7 +40,10 @@ export class Badge extends FoundationBadge {
  *
  * @public
  */
-export const vsCodeBadge = Badge.compose({
+export const vsCodeBadge = Badge.compose<
+	FoundationElementDefinition,
+	typeof Badge
+>({
 	baseName: 'badge',
 	template,
 	styles,

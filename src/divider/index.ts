@@ -3,6 +3,7 @@
 
 import {
 	Divider as FoundationDivider,
+	FoundationElementDefinition,
 	dividerTemplate as template,
 } from '@microsoft/fast-foundation';
 import {dividerStyles as styles} from './divider.styles';
@@ -22,7 +23,10 @@ export class Divider extends FoundationDivider {}
  *
  * @public
  */
-export const vsCodeDivider = Divider.compose({
+export const vsCodeDivider = Divider.compose<
+	FoundationElementDefinition,
+	typeof Divider
+>({
 	baseName: 'divider',
 	template,
 	styles,

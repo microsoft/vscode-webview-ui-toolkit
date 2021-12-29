@@ -93,7 +93,7 @@ export class Button extends FoundationButton {
  *
  * @public
  */
-export const vsCodeButton = Button.compose<ButtonOptions>({
+export const vsCodeButton = Button.compose<ButtonOptions, typeof Button>({
 	baseName: 'button',
 	template,
 	styles,
