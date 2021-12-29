@@ -42,7 +42,10 @@ export class TextArea extends FoundationTextArea {
  *
  * @public
  */
-export const vsCodeTextArea = TextArea.compose<FoundationElementDefinition, typeof TextArea>({
+export const vsCodeTextArea = TextArea.compose<
+	FoundationElementDefinition,
+	typeof TextArea
+>({
 	baseName: 'text-area',
 	template,
 	styles,
