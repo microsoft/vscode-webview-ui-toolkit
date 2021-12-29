@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 import {
+	FoundationElementDefinition,
 	RadioGroup as FoundationRadioGroup,
 	radioGroupTemplate as template,
 } from '@microsoft/fast-foundation';
@@ -40,7 +41,10 @@ export class RadioGroup extends FoundationRadioGroup {
  *
  * @public
  */
-export const vsCodeRadioGroup = RadioGroup.compose({
+export const vsCodeRadioGroup = RadioGroup.compose<
+	FoundationElementDefinition,
+	typeof RadioGroup
+>({
 	baseName: 'radio-group',
 	template,
 	styles,

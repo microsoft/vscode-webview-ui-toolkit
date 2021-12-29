@@ -39,7 +39,10 @@ export class TextField extends FoundationTextField {
  *
  * @public
  */
-export const vsCodeTextField = TextField.compose<TextFieldOptions>({
+export const vsCodeTextField = TextField.compose<
+	TextFieldOptions,
+	typeof TextField
+>({
 	baseName: 'text-field',
 	template,
 	styles,

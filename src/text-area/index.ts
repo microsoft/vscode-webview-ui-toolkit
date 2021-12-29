@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 import {
+	FoundationElementDefinition,
 	TextArea as FoundationTextArea,
 	textAreaTemplate as template,
 } from '@microsoft/fast-foundation';
@@ -41,7 +42,7 @@ export class TextArea extends FoundationTextArea {
  *
  * @public
  */
-export const vsCodeTextArea = TextArea.compose({
+export const vsCodeTextArea = TextArea.compose<FoundationElementDefinition, typeof TextArea>({
 	baseName: 'text-area',
 	template,
 	styles,
