@@ -30,9 +30,9 @@
 		"test": "jest --verbose --coverage"
 	},
 	"dependencies": {
-		"@microsoft/fast-element": "^1.6.0",
-		"@microsoft/fast-foundation": "^2.21.0",
-		"@microsoft/fast-react-wrapper": "^0.1.17"
+		"@microsoft/fast-element": "^1.6.2",
+		"@microsoft/fast-foundation": "^2.27.3",
+		"@microsoft/fast-react-wrapper": "^0.1.18"
 	},
 	"peerDependencies": {
 		"react": ">=16.9.0"
