@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Orientation} from '@microsoft/fast-web-utilities';
+import {Orientation as RadioGroupOrientation} from '@microsoft/fast-web-utilities';
 import {
 	FoundationElementDefinition,
 	RadioGroup as FoundationRadioGroup,
@@ -9,7 +9,7 @@ import {
 } from '@microsoft/fast-foundation';
 import {radioGroupStyles as styles} from './radio-group.styles';
 
-export {Orientation as RadioGroupOrientation};
+export {RadioGroupOrientation};
 
 /**
  * The Visual Studio Code radio group class.

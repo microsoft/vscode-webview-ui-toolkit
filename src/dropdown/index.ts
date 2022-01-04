@@ -2,14 +2,14 @@
 // Licensed under the MIT License.
 
 import {
+	SelectPosition as DropdownPosition,
 	Select as FoundationSelect,
 	SelectOptions,
-	SelectPosition,
 	selectTemplate as template,
 } from '@microsoft/fast-foundation';
 import {dropdownStyles as styles} from './dropdown.styles';
 
-export {SelectPosition as DropdownPosition};
+export {DropdownPosition};
 
 /**
  * Dropdown configuration options
