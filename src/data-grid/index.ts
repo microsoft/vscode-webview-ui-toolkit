@@ -3,16 +3,21 @@
 
 import {
 	dataGridCellTemplate as cellTemplate,
+	DataGridCellTypes,
+	DataGridRowTypes,
 	DataGrid as FoundationDataGrid,
 	DataGridCell as FoundationDataGridCell,
 	DataGridRow as FoundationDataGridRow,
 	FoundationElementDefinition,
+	GenerateHeaderOptions,
 	dataGridTemplate as gridTemplate,
 	dataGridRowTemplate as rowTemplate,
 } from '@microsoft/fast-foundation';
 import {dataGridStyles as gridStyles} from './data-grid.styles';
 import {dataGridRowStyles as rowStyles} from './data-grid-row.styles';
 import {dataGridCellStyles as cellStyles} from './data-grid-cell.styles';
+
+export {DataGridCellTypes, DataGridRowTypes, GenerateHeaderOptions};
 
 /**
  * The Visual Studio Code data grid class.
