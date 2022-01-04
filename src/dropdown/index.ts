@@ -4,9 +4,12 @@
 import {
 	Select as FoundationSelect,
 	SelectOptions,
+	SelectPosition,
 	selectTemplate as template,
 } from '@microsoft/fast-foundation';
 import {dropdownStyles as styles} from './dropdown.styles';
+
+export {SelectPosition as DropdownPosition};
 
 /**
  * Dropdown configuration options
