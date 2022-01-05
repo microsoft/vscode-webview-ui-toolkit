@@ -5,8 +5,11 @@ import {
 	FoundationElementDefinition,
 	TextArea as FoundationTextArea,
 	textAreaTemplate as template,
+	TextAreaResize,
 } from '@microsoft/fast-foundation';
 import {textAreaStyles as styles} from './text-area.styles';
+
+export {TextAreaResize};
 
 /**
  * The Visual Studio Code text area class.
