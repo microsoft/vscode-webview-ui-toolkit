@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {VSCodeButton} from '../../src/react';
 
 export default {
@@ -21,20 +22,43 @@ export default {
 			defaultValue: false,
 			control: 'boolean',
 		},
+		startIcon: {
+			defaultValue: false,
+			control: 'boolean',
+		},
+		iconOnly: {
+			defaultValue: false,
+			control: 'boolean',
+		},
 	},
 };
 
 const Template = args => {
-	const {label, appearance, isDisabled, isAutoFocused, ...rest} = args;
+	const {
+		label,
+		appearance,
+		isDisabled,
+		isAutoFocused,
+		startIcon,
+		iconOnly,
+		...rest
+	} = args;
 	return (
 		<>
 			<VSCodeButton
 				autofocus={isAutoFocused}
 				disabled={isDisabled}
-				appearance={'secondary'}
+				appearance={iconOnly ? 'icon' : appearance}
 				{...rest}
 			>
-				{label}
+				{startIcon && (
+					<span className="codicon codicon-add" slot="start"></span>
+				)}
+				{iconOnly ? (
+					<span className="codicon codicon-check"></span>
+				) : (
+					label
+				)}
 			</VSCodeButton>
 		</>
 	);
@@ -50,4 +74,25 @@ export const Secondary = Template.bind({});
 Secondary.args = {
 	label: 'Button Text',
 	appearance: 'secondary',
+};
+
+export const WithDisabled = Template.bind({});
+WithDisabled.args = {
+	label: 'Button Text',
+	appearance: 'primary',
+	isDisabled: true,
+};
+
+export const WithStartIcon = Template.bind({});
+WithStartIcon.args = {
+	label: 'Button Text',
+	appearance: 'primary',
+	startIcon: true,
+};
+
+export const WithIconOnly = Template.bind({});
+WithIconOnly.args = {
+	label: 'Button Text',
+	appearance: 'primary',
+	iconOnly: true,
 };

@@ -19,5 +19,7 @@
     "@storybook/react": "^6.4.9",
     "babel-loader": "^8.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@vscode/codicons": "^0.0.27"
+  }
 }
