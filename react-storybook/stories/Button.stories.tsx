@@ -1,17 +1,53 @@
 import React from 'react';
 import {VSCodeButton} from '../../src/react';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-	title: 'Example/Button',
+	title: 'Library/Button',
 	component: VSCodeButton,
 	argTypes: {
-		// backgroundColor: {control: 'color'},
+		label: {
+			control: 'text',
+		},
+		appearance: {
+			defaultValue: 'primary',
+			control: 'select',
+			options: ['primary', 'secondary', 'icon'],
+		},
+		isDisabled: {
+			defaultValue: false,
+			control: 'boolean',
+		},
+		isAutoFocused: {
+			defaultValue: false,
+			control: 'boolean',
+		},
 	},
 };
 
-const Template = args => <VSCodeButton {...args}>Button Text</VSCodeButton>;
+const Template = args => {
+	const {label, appearance, isDisabled, isAutoFocused, ...rest} = args;
+	return (
+		<>
+			<VSCodeButton
+				autofocus={isAutoFocused}
+				disabled={isDisabled}
+				appearance={'secondary'}
+				{...rest}
+			>
+				{label}
+			</VSCodeButton>
+		</>
+	);
+};
 
 export const Default = Template.bind({});
+Default.args = {
+	label: 'Button Text',
+	appearance: 'primary',
+};
 
-Default.args = {};
+export const Secondary = Template.bind({});
+Secondary.args = {
+	label: 'Button Text',
+	appearance: 'secondary',
+};
