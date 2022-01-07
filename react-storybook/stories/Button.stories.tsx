@@ -81,7 +81,7 @@ export const WithDisabled = Template.bind({});
 WithDisabled.args = {
 	label: 'Button Text',
 	appearance: 'primary',
-	isDisabled: true,
+	disabled: true,
 };
 
 export const WithStartIcon = Template.bind({});
