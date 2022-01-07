@@ -15,11 +15,11 @@ export default {
 			control: 'select',
 			options: ['primary', 'secondary', 'icon'],
 		},
-		isDisabled: {
+		disabled: {
 			defaultValue: false,
 			control: 'boolean',
 		},
-		isAutoFocused: {
+		autoFocus: {
 			defaultValue: false,
 			control: 'boolean',
 		},
@@ -38,8 +38,8 @@ const Template = args => {
 	const {
 		label,
 		appearance,
-		isDisabled,
-		isAutoFocused,
+		disabled,
+		autofocus,
 		startIcon,
 		iconOnly,
 		...rest
@@ -47,8 +47,8 @@ const Template = args => {
 	return (
 		<>
 			<VSCodeButton
-				autofocus={isAutoFocused}
-				disabled={isDisabled}
+				autoFocus={autofocus}
+				disabled={disabled}
 				appearance={iconOnly ? 'icon' : appearance}
 				{...rest}
 			>
