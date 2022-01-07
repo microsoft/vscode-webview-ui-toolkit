@@ -6,6 +6,7 @@ export default {
 	title: 'Library/Button',
 	component: VSCodeButton,
 	argTypes: {
+		onClick: {action: 'clicked'},
 		label: {
 			control: 'text',
 		},
