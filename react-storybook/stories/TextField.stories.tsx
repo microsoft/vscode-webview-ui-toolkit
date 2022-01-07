@@ -50,7 +50,21 @@ const Template = args => {
 	const {label, startIcon, endIcon, ...rest} = args;
 	return (
 		<>
-			<VSCodeTextField {...rest}>{label}</VSCodeTextField>
+			<VSCodeTextField {...rest}>
+				{label}
+				{startIcon && (
+					<span
+						slot="start"
+						className="codicon codicon-git-merge"
+					></span>
+				)}
+				{endIcon && (
+					<span
+						slot="end"
+						className="codicon codicon-chevron-right"
+					></span>
+				)}
+			</VSCodeTextField>
 		</>
 	);
 };
@@ -91,5 +105,10 @@ WithReadOnly.args = {
 
 export const WithStartIcon = Template.bind({});
 WithStartIcon.args = {
-	readOnly: true,
+	startIcon: true,
+};
+
+export const WithEndIcon = Template.bind({});
+WithEndIcon.args = {
+	endIcon: true,
 };
