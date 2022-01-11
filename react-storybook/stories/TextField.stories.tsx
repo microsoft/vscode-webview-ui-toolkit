@@ -6,7 +6,8 @@ export default {
 	title: 'Library/Text Field',
 	component: VSCodeTextField,
 	argTypes: {
-		onChange: {action: 'change'},
+		onChange: {action: 'changed'},
+		onInput: {action: 'input'},
 		label: {
 			defaultValue: 'Text Field Label',
 			control: 'text',

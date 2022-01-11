@@ -6,7 +6,7 @@ export default {
 	title: 'Library/Radio',
 	component: VSCodeRadio,
 	argTypes: {
-		onChange: {action: 'change'},
+		onChange: {action: 'changed'},
 		label: {
 			defaultValue: 'Option Label',
 			control: 'text',
