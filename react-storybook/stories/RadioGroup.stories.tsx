@@ -6,7 +6,7 @@ export default {
 	title: 'Library/Radio Group',
 	component: VSCodeRadioGroup,
 	argTypes: {
-		onChange: {action: 'changed'},
+		onChange: {action: 'change'},
 		label: {defaultValue: 'Radio Group', control: 'text'},
 		orientation: {
 			defaultValue: 'horizontal',

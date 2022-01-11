@@ -6,7 +6,7 @@ export default {
 	title: 'Library/Text Area',
 	component: VSCodeTextArea,
 	argTypes: {
-		onChange: {action: 'changed'},
+		onChange: {action: 'change'},
 		onInput: {action: 'input'},
 		label: {
 			defaultValue: 'Text Area Label',

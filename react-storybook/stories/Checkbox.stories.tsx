@@ -6,7 +6,7 @@ export default {
 	title: 'Library/Checkbox',
 	component: VSCodeCheckbox,
 	argTypes: {
-		onChange: {action: 'changed'},
+		onChange: {action: 'change'},
 		label: {
 			defaultValue: 'Option Label',
 			control: 'text',

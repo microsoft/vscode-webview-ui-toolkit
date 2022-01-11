@@ -11,7 +11,7 @@ export default {
 	title: 'Library/Panels',
 	component: VSCodePanels,
 	argTypes: {
-		onChange: {action: 'changed'},
+		onChange: {action: 'change'},
 		activeId: {
 			control: {
 				type: 'select',

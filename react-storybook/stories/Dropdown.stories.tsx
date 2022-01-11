@@ -20,7 +20,7 @@ export default {
 		customIndicator: {control: 'boolean'},
 		numberOfChildren: {defaultValue: 3, control: 'number'},
 		onChange: {
-			action: 'changed',
+			action: 'change',
 			table: {
 				disable: true,
 			},
