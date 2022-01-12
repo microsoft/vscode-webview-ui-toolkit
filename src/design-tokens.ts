@@ -102,8 +102,8 @@ export const inputPlaceholderForeground = create<string>('input-placeholder-fore
  * Link design tokens.
  */
 
-export const linkActiveForeground = create<string>('link-foreground', '--vscode-textLink-activeForeground').withDefault('#3794ff');
-export const linkForeground = create<string>('link-active-foreground', '--vscode-textLink-foreground').withDefault('#3794ff');
+export const linkActiveForeground = create<string>('link-active-foreground', '--vscode-textLink-activeForeground').withDefault('#3794ff');
+export const linkForeground = create<string>('link-foreground', '--vscode-textLink-foreground').withDefault('#3794ff');
 
 /**
  * Progress ring design tokens.
