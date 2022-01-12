@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeRadio} from '../../src/react';
 
+// @ts-ignore
+VSCodeRadio.displayName = 'VSCodeRadio';
+
 export default {
 	title: 'Library/Radio',
 	component: VSCodeRadio,

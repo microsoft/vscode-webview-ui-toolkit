@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeTag} from '../../src/react';
 
+// @ts-ignore
+VSCodeTag.displayName = 'VSCodeTag';
+
 export default {
 	title: 'Library/Tag',
 	component: VSCodeTag,

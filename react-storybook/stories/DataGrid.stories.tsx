@@ -10,6 +10,13 @@ import {
 	VSCodeDataGridRow,
 } from '../../src/react';
 
+// @ts-ignore
+VSCodeDataGrid.displayName = 'VSCodeDataGrid';
+// @ts-ignore
+VSCodeDataGridCell.displayName = 'VSCodeDataGridCell';
+// @ts-ignore
+VSCodeDataGridRow.displayName = 'VSCodeDataGridRow';
+
 export default {
 	title: 'Library/Data Grid',
 	component: VSCodeDataGrid,

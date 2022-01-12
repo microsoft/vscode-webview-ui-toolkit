@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeOption} from '../../src/react';
 
+// @ts-ignore
+VSCodeOption.displayName = 'VSCodeOption';
+
 export default {
 	title: 'Library/Option',
 	component: VSCodeOption,

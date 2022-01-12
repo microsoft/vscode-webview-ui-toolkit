@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeTextArea} from '../../src/react';
 
+// @ts-ignore
+VSCodeTextArea.displayName = 'VSCodeTextArea';
+
 export default {
 	title: 'Library/Text Area',
 	component: VSCodeTextArea,

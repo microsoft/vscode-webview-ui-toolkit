@@ -2,6 +2,11 @@ import React from 'react';
 
 import {VSCodeRadio, VSCodeRadioGroup} from '../../src/react';
 
+// @ts-ignore
+VSCodeRadio.displayName = 'VSCodeRadio';
+// @ts-ignore
+VSCodeRadioGroup.displayName = 'VSCodeRadioGroup';
+
 export default {
 	title: 'Library/Radio Group',
 	component: VSCodeRadioGroup,

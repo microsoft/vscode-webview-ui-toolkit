@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeTextField} from '../../src/react';
 
+// @ts-ignore
+VSCodeTextField.displayName = 'VSCodeTextField';
+
 export default {
 	title: 'Library/Text Field',
 	component: VSCodeTextField,

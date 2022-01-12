@@ -2,6 +2,11 @@ import React from 'react';
 
 import {VSCodeDropdown, VSCodeOption} from '../../src/react';
 
+// @ts-ignore
+VSCodeDropdown.displayName = 'VSCodeDropdown';
+// @ts-ignore
+VSCodeOption.displayName = 'VSCodeOption';
+
 export default {
 	title: 'Library/Dropdown',
 	component: VSCodeDropdown,

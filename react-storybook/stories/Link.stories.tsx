@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeLink} from '../../src/react';
 
+// @ts-ignore
+VSCodeLink.displayName = 'VSCodeLink';
+
 export default {
 	title: 'Library/Link',
 	component: VSCodeLink,

@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeCheckbox} from '../../src/react';
 
+// @ts-ignore
+VSCodeCheckbox.displayName = 'VSCodeButton';
+
 export default {
 	title: 'Library/Checkbox',
 	component: VSCodeCheckbox,

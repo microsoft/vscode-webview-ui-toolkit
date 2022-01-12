@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeDivider} from '../../src/react';
 
+// @ts-ignore
+VSCodeDivider.displayName = 'VSCodeDivider';
+
 export default {
 	title: 'Library/Divider',
 	component: VSCodeDivider,

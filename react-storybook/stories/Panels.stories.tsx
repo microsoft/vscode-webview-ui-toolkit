@@ -7,6 +7,15 @@ import {
 	VSCodePanelView,
 } from '../../src/react';
 
+// @ts-ignore
+VSCodeBadge.displayName = 'VSCodeBadge';
+// @ts-ignore
+VSCodePanels.displayName = 'VSCodePanels';
+// @ts-ignore
+VSCodePanelTab.displayName = 'VSCodePanelTab';
+// @ts-ignore
+VSCodePanelView.displayName = 'VSCodePanelView';
+
 export default {
 	title: 'Library/Panels',
 	component: VSCodePanels,

@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeBadge} from '../../src/react';
 
+// @ts-ignore
+VSCodeBadge.displayName = 'VSCodeBadge';
+
 export default {
 	title: 'Library/Badge',
 	component: VSCodeBadge,

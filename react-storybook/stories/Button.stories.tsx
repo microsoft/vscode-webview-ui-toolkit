@@ -2,6 +2,9 @@ import React from 'react';
 
 import {VSCodeButton} from '../../src/react';
 
+// @ts-ignore
+VSCodeButton.displayName = 'VSCodeButton';
+
 export default {
 	title: 'Library/Button',
 	component: VSCodeButton,
