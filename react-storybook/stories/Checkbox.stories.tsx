@@ -35,11 +35,7 @@ export default {
 
 const Template = args => {
 	const {label, ...rest} = args;
-	return (
-		<>
-			<VSCodeCheckbox {...rest}>{label}</VSCodeCheckbox>
-		</>
-	);
+	return <VSCodeCheckbox {...rest}>{label}</VSCodeCheckbox>;
 };
 
 export const Default = Template.bind({});

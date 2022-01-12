@@ -50,23 +50,18 @@ export default {
 const Template = args => {
 	const {label, startIcon, endIcon, ...rest} = args;
 	return (
-		<>
-			<VSCodeTextField {...rest}>
-				{label}
-				{startIcon && (
-					<span
-						slot="start"
-						className="codicon codicon-git-merge"
-					></span>
-				)}
-				{endIcon && (
-					<span
-						slot="end"
-						className="codicon codicon-chevron-right"
-					></span>
-				)}
-			</VSCodeTextField>
-		</>
+		<VSCodeTextField {...rest}>
+			{label}
+			{startIcon && (
+				<span slot="start" className="codicon codicon-git-merge"></span>
+			)}
+			{endIcon && (
+				<span
+					slot="end"
+					className="codicon codicon-chevron-right"
+				></span>
+			)}
+		</VSCodeTextField>
 	);
 };
 

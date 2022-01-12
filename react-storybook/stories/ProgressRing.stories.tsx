@@ -8,11 +8,7 @@ export default {
 };
 
 const Template = () => {
-	return (
-		<>
-			<VSCodeProgressRing />
-		</>
-	);
+	return <VSCodeProgressRing />;
 };
 
 export const Default = Template.bind({});

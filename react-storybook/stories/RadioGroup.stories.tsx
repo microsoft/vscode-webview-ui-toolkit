@@ -27,16 +27,14 @@ const Template = args => {
 	const options = Array.from({length: numberOfChildren}, (_, i) => i);
 
 	return (
-		<>
-			<VSCodeRadioGroup {...rest}>
-				<label slot="label">{label}</label>
-				{options.map((_, index) => (
-					<VSCodeRadio value={`Option #${index + 1}`}>
-						{`Option #${index + 1}`}
-					</VSCodeRadio>
-				))}
-			</VSCodeRadioGroup>
-		</>
+		<VSCodeRadioGroup {...rest}>
+			<label slot="label">{label}</label>
+			{options.map((_, index) => (
+				<VSCodeRadio value={`Option #${index + 1}`}>
+					{`Option #${index + 1}`}
+				</VSCodeRadio>
+			))}
+		</VSCodeRadioGroup>
 	);
 };
 

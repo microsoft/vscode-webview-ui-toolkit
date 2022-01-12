@@ -23,11 +23,7 @@ export default {
 
 const Template = args => {
 	const {label, ...rest} = args;
-	return (
-		<>
-			<VSCodeOption {...rest}>{label}</VSCodeOption>
-		</>
-	);
+	return <VSCodeOption {...rest}>{label}</VSCodeOption>;
 };
 
 export const Default = Template.bind({});

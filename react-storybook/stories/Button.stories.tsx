@@ -45,23 +45,17 @@ const Template = args => {
 		...rest
 	} = args;
 	return (
-		<>
-			<VSCodeButton
-				autoFocus={autofocus}
-				disabled={disabled}
-				appearance={iconOnly ? 'icon' : appearance}
-				{...rest}
-			>
-				{startIcon && (
-					<span className="codicon codicon-add" slot="start"></span>
-				)}
-				{iconOnly ? (
-					<span className="codicon codicon-check"></span>
-				) : (
-					label
-				)}
-			</VSCodeButton>
-		</>
+		<VSCodeButton
+			autoFocus={autofocus}
+			disabled={disabled}
+			appearance={iconOnly ? 'icon' : appearance}
+			{...rest}
+		>
+			{startIcon && (
+				<span className="codicon codicon-add" slot="start"></span>
+			)}
+			{iconOnly ? <span className="codicon codicon-check"></span> : label}
+		</VSCodeButton>
 	);
 };
 

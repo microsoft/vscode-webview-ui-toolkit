@@ -54,11 +54,7 @@ export default {
 
 const Template = args => {
 	const {label, ...rest} = args;
-	return (
-		<>
-			<VSCodeTextArea {...rest}>{label}</VSCodeTextArea>
-		</>
-	);
+	return <VSCodeTextArea {...rest}>{label}</VSCodeTextArea>;
 };
 
 export const Default = Template.bind({});

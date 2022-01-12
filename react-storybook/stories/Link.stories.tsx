@@ -20,11 +20,7 @@ export default {
 
 const Template = args => {
 	const {label, ...rest} = args;
-	return (
-		<>
-			<VSCodeLink {...rest}>{label}</VSCodeLink>
-		</>
-	);
+	return <VSCodeLink {...rest}>{label}</VSCodeLink>;
 };
 
 export const Default = Template.bind({});

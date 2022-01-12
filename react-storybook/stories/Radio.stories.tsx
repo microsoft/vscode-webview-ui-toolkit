@@ -31,11 +31,7 @@ export default {
 
 const Template = args => {
 	const {label, ...rest} = args;
-	return (
-		<>
-			<VSCodeRadio {...rest}>{label}</VSCodeRadio>
-		</>
-	);
+	return <VSCodeRadio {...rest}>{label}</VSCodeRadio>;
 };
 
 export const Default = Template.bind({});

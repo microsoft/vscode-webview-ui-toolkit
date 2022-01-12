@@ -15,11 +15,7 @@ export default {
 
 const Template = args => {
 	const {label, ...rest} = args;
-	return (
-		<>
-			<VSCodeTag {...rest}>{label}</VSCodeTag>
-		</>
-	);
+	return <VSCodeTag {...rest}>{label}</VSCodeTag>;
 };
 
 export const Default = Template.bind({});
