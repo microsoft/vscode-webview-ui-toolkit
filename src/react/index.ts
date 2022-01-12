@@ -45,7 +45,11 @@ export const VSCodeButton = wrap(vsCodeButton());
  *
  * @public
  */
-export const VSCodeCheckbox = wrap(vsCodeCheckbox());
+export const VSCodeCheckbox = wrap(vsCodeCheckbox(), {
+	events: {
+		onChange: 'change',
+	},
+});
 
 /**
  * VS Code Divider React component.
@@ -80,14 +84,24 @@ export const VSCodeTag = wrap(vsCodeTag());
  *
  * @public
  */
-export const VSCodeTextArea = wrap(vsCodeTextArea());
+export const VSCodeTextArea = wrap(vsCodeTextArea(), {
+	events: {
+		onChange: 'change',
+		onInput: 'input',
+	},
+});
 
 /**
  * VS Code Text Field React component.
  *
  * @public
  */
-export const VSCodeTextField = wrap(vsCodeTextField());
+export const VSCodeTextField = wrap(vsCodeTextField(), {
+	events: {
+		onChange: 'change',
+		onInput: 'input',
+	},
+});
 
 /**
  * VS Code Option React component.
@@ -101,14 +115,22 @@ export const VSCodeOption = wrap(vsCodeOption());
  *
  * @public
  */
-export const VSCodeDropdown = wrap(vsCodeDropdown());
+export const VSCodeDropdown = wrap(vsCodeDropdown(), {
+	events: {
+		onChange: 'change',
+	},
+});
 
 /**
  * VS Code Panels React component.
  *
  * @public
  */
-export const VSCodePanels = wrap(vsCodePanels());
+export const VSCodePanels = wrap(vsCodePanels(), {
+	events: {
+		onChange: 'change',
+	},
+});
 
 /**
  * VS Code Panel Tab React component.
@@ -129,14 +151,22 @@ export const VSCodePanelView = wrap(vsCodePanelView());
  *
  * @public
  */
-export const VSCodeRadio = wrap(vsCodeRadio());
+export const VSCodeRadio = wrap(vsCodeRadio(), {
+	events: {
+		onChange: 'change',
+	},
+});
 
 /**
  * VS Code Radio Group React component.
  *
  * @public
  */
-export const VSCodeRadioGroup = wrap(vsCodeRadioGroup());
+export const VSCodeRadioGroup = wrap(vsCodeRadioGroup(), {
+	events: {
+		onChange: 'change',
+	},
+});
 
 /**
  * VS Code Data Grid React component.
