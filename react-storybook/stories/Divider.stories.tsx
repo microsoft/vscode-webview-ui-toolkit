@@ -10,7 +10,6 @@ export default {
 	component: VSCodeDivider,
 	argTypes: {
 		role: {
-			defaultValue: 'separator',
 			control: 'select',
 			options: ['presentation', 'separator'],
 		},
@@ -22,7 +21,9 @@ const Template = args => {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+	role: 'separator',
+};
 
 export const WithRole = Template.bind({});
 WithRole.args = {
