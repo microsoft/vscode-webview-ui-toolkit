@@ -13,6 +13,11 @@ export default {
 			control: 'text',
 		},
 	},
+	parameters: {
+		actions: {
+			disabled: true,
+		},
+	},
 };
 
 const Template = args => {
@@ -21,5 +26,5 @@ const Template = args => {
 
 export const Default = Template.bind({});
 Default.args = {
-	label: '42',
+	label: '1',
 };
