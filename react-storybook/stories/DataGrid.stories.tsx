@@ -22,15 +22,18 @@ export default {
 	component: VSCodeDataGrid,
 	argTypes: {
 		'generateHeader': {
+			defaultValue: 'default',
 			control: {
 				type: 'select',
 				options: ['default', 'sticky'],
 			},
 		},
 		'numCols': {
+			defaultValue: 4,
 			control: 'number',
 		},
 		'numRows': {
+			defaultValue: 4,
 			control: 'number',
 		},
 		'gridTemplateColumns': {control: 'text'},
@@ -87,22 +90,4 @@ const Template = args => {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	'generateHeader': 'default',
-	'numCols': 4,
-	'numRows': 4,
-	'aria-label': 'Basic',
-};
-
-export const WithStickyHeader = Template.bind({});
-WithStickyHeader.args = {
-	...Default.args,
-	numRows: 20,
-	generateHeader: 'sticky',
-};
-
-export const WithCustomColumnWidths: any = Template.bind({});
-WithCustomColumnWidths.args = {
-	...Default.args,
-	gridTemplateColumns: '100px 10vw 3fr 30%',
-};
+Default.args = {};

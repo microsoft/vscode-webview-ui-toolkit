@@ -9,25 +9,28 @@ export default {
 	title: 'Library/Checkbox',
 	component: VSCodeCheckbox,
 	argTypes: {
-		onChange: {
-			action: 'change',
-		},
+		onChange: {action: 'change'},
 		label: {
+			defaultValue: 'Option Label',
 			control: 'text',
 		},
 		disabled: {
+			defaultValue: false,
 			control: 'boolean',
 		},
 		checked: {
+			defaultValue: false,
 			control: 'boolean',
 		},
 		readOnly: {
+			defaultValue: false,
 			control: 'boolean',
 		},
 		value: {
 			control: 'text',
 		},
 		indeterminate: {
+			defaultValue: false,
 			control: 'boolean',
 		},
 	},
@@ -39,40 +42,29 @@ const Template = args => {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-	label: 'Label',
-	checked: false,
-	indeterminate: false,
-	disabled: false,
-	readOnly: false,
-};
+Default.args = {};
 
 export const WithChecked = Template.bind({});
 WithChecked.args = {
-	...Default.args,
 	checked: true,
 };
 
 export const WithDisabled = Template.bind({});
 WithDisabled.args = {
-	...Default.args,
 	disabled: true,
 };
 
 export const WithReadOnly = Template.bind({});
 WithReadOnly.args = {
-	...Default.args,
-	readOnly: true,
+	disabled: true,
 };
 
 export const WithValue = Template.bind({});
 WithValue.args = {
-	...Default.args,
 	value: 'baz',
 };
 
 export const WithIndeterminate = Template.bind({});
 WithIndeterminate.args = {
-	...Default.args,
 	indeterminate: true,
 };

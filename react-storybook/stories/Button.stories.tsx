@@ -9,24 +9,29 @@ export default {
 	title: 'Library/Button',
 	component: VSCodeButton,
 	argTypes: {
-		onClick: {action: 'button-clicked'},
+		onClick: {action: 'clicked'},
 		label: {
 			control: 'text',
 		},
 		appearance: {
+			defaultValue: 'primary',
 			control: 'select',
 			options: ['primary', 'secondary', 'icon'],
 		},
 		disabled: {
+			defaultValue: false,
 			control: 'boolean',
 		},
 		autoFocus: {
+			defaultValue: false,
 			control: 'boolean',
 		},
 		startIcon: {
+			defaultValue: false,
 			control: 'boolean',
 		},
 		iconOnly: {
+			defaultValue: false,
 			control: 'boolean',
 		},
 	},
@@ -61,32 +66,31 @@ export const Default = Template.bind({});
 Default.args = {
 	label: 'Button Text',
 	appearance: 'primary',
-	isDisabled: false,
-	isAutoFocused: false,
-	startIcon: false,
-	iconOnly: false,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-	...Default.args,
+	label: 'Button Text',
 	appearance: 'secondary',
 };
 
 export const WithDisabled = Template.bind({});
 WithDisabled.args = {
-	...Default.args,
+	label: 'Button Text',
+	appearance: 'primary',
 	disabled: true,
 };
 
 export const WithStartIcon = Template.bind({});
 WithStartIcon.args = {
-	...Default.args,
+	label: 'Button Text',
+	appearance: 'primary',
 	startIcon: true,
 };
 
 export const WithIconOnly = Template.bind({});
 WithIconOnly.args = {
-	...Default.args,
+	label: 'Button Text',
+	appearance: 'primary',
 	iconOnly: true,
 };
