@@ -12,7 +12,7 @@ async function main() {
 	// Empty print line to pretty-ify command line output
 	console.log();
 
-	// Copy webview test environment locally if does not already exist
+	// Copy webview test environment locally if it does not already exist
 	if (!fs.existsSync('./test-webview')) {
 		try {
 			console.log(color(['dim'], 'Copying webview test environment locally...'));
@@ -34,7 +34,7 @@ async function main() {
 		}
 	}
 
-	// Copy latest toolkit build output into the webview test environment
+	// Copy latest toolkit build into the webview test environment
 	console.log(color(['dim'], 'Copying latest toolkit build into webview test environment...'));
 	delDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/dist');
 	createDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/dist');
@@ -77,18 +77,14 @@ function createDir(dir) {
 
 function copyDir(source, target) {
 	let files = [];
-
-	// Check if folder needs to be created or integrated
 	const targetFolder = path.join(target, path.basename(source));
 	if (!fs.existsSync(targetFolder)) {
 		fs.mkdirSync(targetFolder);
 	}
-
-	// Copy
 	if (fs.lstatSync(source).isDirectory()) {
 		files = fs.readdirSync(source);
 		files.forEach(function (file) {
-			var curSource = path.join(source, file);
+			const curSource = path.join(source, file);
 			if (fs.lstatSync(curSource).isDirectory()) {
 				copyDir(curSource, targetFolder);
 			} else {
@@ -100,14 +96,11 @@ function copyDir(source, target) {
 
 function copyFileSync(source, target) {
 	let targetFile = target;
-
-	// If target is a directory, a new file with the same name will be created
 	if (fs.existsSync(target)) {
 		if (fs.lstatSync(target).isDirectory()) {
 			targetFile = path.join(target, path.basename(source));
 		}
 	}
-
 	fs.writeFileSync(targetFile, fs.readFileSync(source));
 }
 
