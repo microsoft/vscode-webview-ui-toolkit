@@ -23,6 +23,7 @@
 	"include": ["src"],
 	"exclude": [
 		"node_modules",
+		"test-webview",
 		"src/**/*.spec.ts",
 		"src/**/*.stories.ts",
 		"src/**/fixtures/",

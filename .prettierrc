@@ -31,6 +31,12 @@
 			"options": {
 				"printWidth": 200
 			}
+		},
+		{
+			"files": "scripts/setup-webview-test-env.js",
+			"options": {
+				"printWidth": 200
+			}
 		}
 	]
 }
