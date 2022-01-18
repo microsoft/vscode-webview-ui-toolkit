@@ -6,6 +6,9 @@ build/
 dist/
 storybook-static/
 
+# Testing
+test-webview
+
 # Misc
 .DS_Store
 .vscode
