@@ -5,7 +5,7 @@ node_modules/
 dist/
 storybook-static/
 
-# Testing
+# Tests
 test-webview
 
 # Misc
