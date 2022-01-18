@@ -26,7 +26,8 @@
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
 		"prepublishOnly": "npm run build",
-		"test": "jest --verbose --coverage"
+		"test": "jest --verbose --coverage",
+		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js"
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "^1.6.0",
