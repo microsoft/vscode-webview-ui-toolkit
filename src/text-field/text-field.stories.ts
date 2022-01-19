@@ -11,6 +11,12 @@ export default {
 		value: {control: 'text'},
 		maxLength: {control: 'number'},
 		size: {control: 'number'},
+		type: {
+			control: {
+				type: 'select',
+				options: ['Email', 'Password', 'Tel', 'Text', 'Url'],
+			},
+		},
 		isReadOnly: {control: 'boolean'},
 		isDisabled: {control: 'boolean'},
 		isAutoFocused: {control: 'boolean'},
@@ -35,6 +41,7 @@ Default.args = {
 	value: '',
 	maxLength: '',
 	size: '',
+	type: 'Text',
 	isReadOnly: false,
 	isDisabled: false,
 	isAutoFocused: false,
@@ -99,6 +106,19 @@ WithCustomSize.parameters = {
 	docs: {
 		source: {
 			code: `<vscode-text-field size="50">Text Field Label</vscode-text-field>`,
+		},
+	},
+};
+
+export const WithType: any = Template.bind({});
+WithType.args = {
+	...Default.args,
+	type: 'Text',
+};
+WithType.parameters = {
+	docs: {
+		source: {
+			code: `<vscode-text-field type="email">Text Field Label</vscode-text-field>\n<vscode-text-field type="password">Text Field Label</vscode-text-field>\n<vscode-text-field type="tel">Text Field Label</vscode-text-field>\n<vscode-text-field type="text">Text Field Label</vscode-text-field>\n<vscode-text-field type="url">Text Field Label</vscode-text-field>`,
 		},
 	},
 };

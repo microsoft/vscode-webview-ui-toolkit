@@ -15,10 +15,10 @@ import {
 	disabledOpacity,
 	dropdownBackground,
 	dropdownBorder,
-	dropdownForeground,
 	dropdownListMaxHeight,
 	focusBorder,
 	fontFamily,
+	foreground,
 	inputHeight,
 	inputMinWidth,
 	listActiveSelectionBackground,
@@ -35,7 +35,7 @@ export const dropdownStyles = (
 	${display('inline-flex')} :host {
 		background: ${dropdownBackground};
 		box-sizing: border-box;
-		color: ${dropdownForeground};
+		color: ${foreground};
 		contain: contents;
 		font-family: ${fontFamily};
 		height: calc(${inputHeight} * 1px);
@@ -99,7 +99,7 @@ export const dropdownStyles = (
 	}
 	:host([disabled]:hover) {
 		background: ${dropdownBackground};
-		color: ${dropdownForeground};
+		color: ${foreground};
 		fill: currentcolor;
 	}
 	:host(:not([disabled])) .control:active {

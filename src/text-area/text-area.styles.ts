@@ -17,10 +17,10 @@ import {
 	dropdownBorder,
 	focusBorder,
 	fontFamily,
+	foreground,
 	inputBackground,
 	inputForeground,
 	inputMinWidth,
-	inputPlaceholderForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -77,7 +77,7 @@ export const textAreaStyles = (
 	}
 	.label {
 		display: block;
-		color: ${inputPlaceholderForeground};
+		color: ${foreground};
 		cursor: pointer;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};

@@ -10,3 +10,7 @@ coverage
 .storybook/
 # don't lint stories
 *.stories.*
+# don't lint scripts folder
+scripts
+# don't lint webview test environment
+test-webview

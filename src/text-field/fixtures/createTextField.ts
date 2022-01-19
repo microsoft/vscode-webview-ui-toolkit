@@ -4,12 +4,15 @@
 import {TextField} from '../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
+type TextFieldType = 'email' | 'password' | 'tel' | 'text' | 'url';
+
 export type TextFieldArgs = {
 	label: string;
 	placeholder: string;
 	value: string;
 	maxLength: number;
 	size: number;
+	type: TextFieldType;
 	isReadOnly: boolean;
 	isDisabled: boolean;
 	isAutoFocused: boolean;
@@ -23,6 +26,7 @@ export function createTextField({
 	value,
 	maxLength,
 	size,
+	type,
 	isReadOnly,
 	isDisabled,
 	isAutoFocused,
@@ -45,6 +49,9 @@ export function createTextField({
 	}
 	if (size) {
 		textField.setAttribute('size', size.toString());
+	}
+	if (type) {
+		textField.setAttribute('type', type.toLowerCase());
 	}
 	if (isReadOnly) {
 		textField.setAttribute('readonly', '');

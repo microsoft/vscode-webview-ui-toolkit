@@ -7,11 +7,7 @@ import {
 	ElementDefinitionContext,
 	FoundationElementDefinition,
 } from '@microsoft/fast-foundation';
-import {
-	checkboxForeground,
-	designUnit,
-	typeRampBaseFontSize,
-} from '../design-tokens';
+import {designUnit, foreground, typeRampBaseFontSize} from '../design-tokens';
 
 export const radioGroupStyles = (
 	context: ElementDefinitionContext,
@@ -33,7 +29,7 @@ export const radioGroupStyles = (
 		flex-direction: row;
 	}
 	::slotted([slot='label']) {
-		color: ${checkboxForeground};
+		color: ${foreground};
 		font-size: ${typeRampBaseFontSize};
 		margin: calc(${designUnit} * 1px) 0;
 	}

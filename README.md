@@ -23,13 +23,7 @@ Note that this doesn't change our recommendation of [avoiding the use of webview
 
 ## Release
 
-The Webview UI Toolkit is currently in a public preview. Track progress towards 1.0 [here](https://github.com/microsoft/vscode-webview-ui-toolkit/issues?q=is%3Aopen+is%3Aissue+milestone%3Av1.0).
-
-### Known issues
-
-Medium to high-visibility issues that are intended to be fixed with high priority.
-
--   Options within `vscode-dropdown` do not announce their text content on selection change [#181](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/181)
+The Webview UI Toolkit is currently in a public preview with the goal of reaching `v1.0` sometime in Winter 2022.
 
 ## Getting started
 

@@ -5,8 +5,11 @@ import {
 	TextField as FoundationTextField,
 	textFieldTemplate as template,
 	TextFieldOptions,
+	TextFieldType,
 } from '@microsoft/fast-foundation';
 import {textFieldStyles as styles} from './text-field.styles';
+
+export {TextFieldType};
 
 /**
  * The Visual Studio Code text field class.
@@ -39,7 +42,10 @@ export class TextField extends FoundationTextField {
  *
  * @public
  */
-export const vsCodeTextField = TextField.compose<TextFieldOptions>({
+export const vsCodeTextField = TextField.compose<
+	TextFieldOptions,
+	typeof TextField
+>({
 	baseName: 'text-field',
 	template,
 	styles,

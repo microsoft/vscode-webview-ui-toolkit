@@ -3,15 +3,21 @@
 
 import {
 	dataGridCellTemplate as cellTemplate,
+	DataGridCellTypes,
+	DataGridRowTypes,
 	DataGrid as FoundationDataGrid,
 	DataGridCell as FoundationDataGridCell,
 	DataGridRow as FoundationDataGridRow,
+	FoundationElementDefinition,
+	GenerateHeaderOptions,
 	dataGridTemplate as gridTemplate,
 	dataGridRowTemplate as rowTemplate,
 } from '@microsoft/fast-foundation';
 import {dataGridStyles as gridStyles} from './data-grid.styles';
 import {dataGridRowStyles as rowStyles} from './data-grid-row.styles';
 import {dataGridCellStyles as cellStyles} from './data-grid-cell.styles';
+
+export {DataGridCellTypes, DataGridRowTypes, GenerateHeaderOptions};
 
 /**
  * The Visual Studio Code data grid class.
@@ -45,7 +51,10 @@ export class DataGrid extends FoundationDataGrid {
  *
  * @public
  */
-export const vsCodeDataGrid = DataGrid.compose({
+export const vsCodeDataGrid = DataGrid.compose<
+	FoundationElementDefinition,
+	typeof DataGrid
+>({
 	baseName: 'data-grid',
 	baseClass: FoundationDataGrid,
 	template: gridTemplate,
@@ -67,7 +76,10 @@ export class DataGridRow extends FoundationDataGridRow {}
  *
  * @public
  */
-export const vsCodeDataGridRow = DataGridRow.compose({
+export const vsCodeDataGridRow = DataGridRow.compose<
+	FoundationElementDefinition,
+	typeof DataGridRow
+>({
 	baseName: 'data-grid-row',
 	baseClass: FoundationDataGridRow,
 	template: rowTemplate,
@@ -89,7 +101,10 @@ export class DataGridCell extends FoundationDataGridCell {}
  *
  * @public
  */
-export const vsCodeDataGridCell = DataGridCell.compose({
+export const vsCodeDataGridCell = DataGridCell.compose<
+	FoundationElementDefinition,
+	typeof DataGridCell
+>({
 	baseName: 'data-grid-cell',
 	baseClass: FoundationDataGridCell,
 	template: cellTemplate,

@@ -1,11 +1,15 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+import {Orientation as RadioGroupOrientation} from '@microsoft/fast-web-utilities';
 import {
+	FoundationElementDefinition,
 	RadioGroup as FoundationRadioGroup,
 	radioGroupTemplate as template,
 } from '@microsoft/fast-foundation';
 import {radioGroupStyles as styles} from './radio-group.styles';
+
+export {RadioGroupOrientation};
 
 /**
  * The Visual Studio Code radio group class.
@@ -40,7 +44,10 @@ export class RadioGroup extends FoundationRadioGroup {
  *
  * @public
  */
-export const vsCodeRadioGroup = RadioGroup.compose({
+export const vsCodeRadioGroup = RadioGroup.compose<
+	FoundationElementDefinition,
+	typeof RadioGroup
+>({
 	baseName: 'radio-group',
 	template,
 	styles,

@@ -1,6 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+export * from './vscode-design-system';
+export * from './custom-elements';
+
 // Export components and classes
 export * from './badge/index';
 export * from './button/index';

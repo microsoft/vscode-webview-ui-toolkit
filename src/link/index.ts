@@ -29,7 +29,7 @@ export class Link extends FoundationAnchor {}
  *
  * @public
  */
-export const vsCodeLink = Link.compose<LinkOptions>({
+export const vsCodeLink = Link.compose<LinkOptions, typeof Link>({
 	baseName: 'link',
 	template,
 	styles,

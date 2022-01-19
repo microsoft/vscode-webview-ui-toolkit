@@ -12,5 +12,5 @@ export * from './index';
  * Only available if the components are added through a script tag
  * rather than a module/build system.
  */
-export const FASTDesignSystem =
+export const VSCodeDesignSystem =
 	provideVSCodeDesignSystem().register(allComponents);

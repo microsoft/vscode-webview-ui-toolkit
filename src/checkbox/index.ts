@@ -39,7 +39,10 @@ export class Checkbox extends FoundationCheckbox {
  *
  * @public
  */
-export const vsCodeCheckbox = Checkbox.compose<CheckboxOptions>({
+export const vsCodeCheckbox = Checkbox.compose<
+	CheckboxOptions,
+	typeof Checkbox
+>({
 	baseName: 'checkbox',
 	template,
 	styles,
