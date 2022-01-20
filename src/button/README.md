@@ -2,6 +2,25 @@
 
 The `vscode-button` is a web component implementation of a [button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button). The `vscode-button` also supports several visual appearances––primary, secondary, and icon.
 
+![Button hero](/docs/assets/badge-hero.png)
+
+## Usage
+
+| ❌ Don't                                                                        | ✅ Do                                                              |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                          | ![Image placeholder](/docs/assets/img-placeholder.png)             |
+| Don't clutter the UI with multiple primary actions unless absolutely necessary. | Provide a single primary action with one or more secondary actions |
+
+| ❌ Don't                                                            | ✅ Do                                                                                                                                             |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png)              | ![Image placeholder](/docs/assets/img-placeholder.png)                                                                                            |
+| Don't override button widths to always fill their parent container. | Allow buttons to fill a [VS Code View](https://code.visualstudio.com/api/references/extension-guidelines#views) until a maximum width is reached. |
+
+| ❌ Don't                                               | ✅ Do                                                                                   |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                                  |
+| Don't use vague action text.                           | Use clear verbs like "Save" or "Cancel" to ensure users feel confident in their actions |
+
 ## Attributes
 
 | Attribute        | Type    | Description                                                                             |
@@ -19,8 +38,6 @@ The `vscode-button` is a web component implementation of a [button element](http
 | `name`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
 | `type`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
 | `value`          | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
-
-## Usage
 
 ### Basic Usage
 
