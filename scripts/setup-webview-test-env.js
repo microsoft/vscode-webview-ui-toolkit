@@ -6,7 +6,7 @@ const path = require('path');
 const process = require('process');
 const util = require('util');
 
-const execPromise = util.promisify(exec);
+const execShellCommand = util.promisify(exec);
 
 async function main() {
 	// Empty print line to pretty-ify command line output
@@ -49,10 +49,6 @@ async function main() {
 	console.log(`  2. Press ${color(['cyan'], 'F5')} to open the webview test extension with the most recent toolkit build loaded`);
 	console.log(`  3. Run the "${color(['cyan'], 'Webview UI Toolkit: All Components')}" command using the VS Code command palette`);
 	console.log();
-}
-
-async function execShellCommand(command) {
-	return await execPromise(command);
 }
 
 function delDir(path) {
