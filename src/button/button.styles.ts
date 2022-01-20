@@ -45,7 +45,7 @@ import {
  * This results in non-valid CSS that will not render a focus outline on base buttons.
  * 
  * Additionally, this prettier command must be declared on the entire code block and not 
- * directly above the CSS selector line because the below code block is template literal 
+ * directly above the CSS selector line because the below code block is a template literal 
  * string which will end up being used directly in the final component CSS.
  * 
  * Thus having '// prettier-ignore' directly in the final CSS will also break the component 
