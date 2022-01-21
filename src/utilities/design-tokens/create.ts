@@ -18,7 +18,7 @@ export type T =
  * A mapping of all the Visual Studio Code theme CSS variables mapped to the
  * toolkit design tokens.
  */
-export const tokenMappings: {[index: string]: CSSDesignToken<T>} = {};
+export const tokenMappings: Map<string, CSSDesignToken<T>> = new Map();
 
 /**
  * Boolean flag that ensures the VS Code theme listener is initialized once.
@@ -43,7 +43,7 @@ export function create<T>(name: string, vscodeThemeVar?: string) {
 	const designToken = DesignToken.create<T>(name);
 
 	if (vscodeThemeVar) {
-		tokenMappings[vscodeThemeVar] = designToken;
+		tokenMappings.set(vscodeThemeVar, designToken);
 	}
 	if (!isThemeListenerInitialized) {
 		initThemeChangeListener(tokenMappings);
