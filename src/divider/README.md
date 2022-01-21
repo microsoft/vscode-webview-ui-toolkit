@@ -2,13 +2,20 @@
 
 The `vscode-divider` is a web component implementation of a [horiztonal rule element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
 
+![Divider hero](/docs/assets/docs-hero.png)
+
+## Usage
+
+| ❌ Don't                                                     | ✅ Do                                                       |
+| ------------------------------------------------------------ | ----------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png)       | ![Image placeholder](/docs/assets/img-placeholder.png)      |
+| Don't use a divider to create pseudo-views within a webview. | Use dividers to create distinct sections of related content |
+
 ## Attributes
 
 | Attribute | Type   | Description                                    |
 | --------- | ------ | ---------------------------------------------- |
 | role      | string | Indicates the semantic meaning of the divider. |
-
-## Usage
 
 ### Basic Usage
 
