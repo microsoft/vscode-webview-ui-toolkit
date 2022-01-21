@@ -6,11 +6,7 @@ import {
 	ElementDefinitionContext,
 	FoundationElementDefinition,
 } from '@microsoft/fast-foundation';
-import {
-	designUnit,
-	listHoverBackground,
-	quickInputBackground,
-} from '../design-tokens';
+import {background, designUnit, listHoverBackground} from '../design-tokens';
 
 export const dataGridRowStyles = (
 	context: ElementDefinitionContext,
@@ -26,7 +22,7 @@ export const dataGridRowStyles = (
 	:host(.header) {
 	}
 	:host(.sticky-header) {
-		background: ${quickInputBackground};
+		background: ${background};
 		position: sticky;
 		top: 0;
 	}

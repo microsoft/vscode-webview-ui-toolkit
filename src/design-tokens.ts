@@ -7,6 +7,7 @@ import {create} from './utilities/design-tokens/create';
  * Global design tokens.
  */
 
+export const background = create<string>('background', '--vscode-editor-background').withDefault('#1e1e1e');
 export const borderWidth = create<number>('border-width').withDefault(1);
 export const contrastActiveBorder = create<string>('contrast-active-border', '--vscode-contrastActiveBorder').withDefault('#f38518');
 export const contrastBorder = create<string>('contrast-border', '--vscode-contrastBorder').withDefault('#6fc3df');
@@ -73,7 +74,6 @@ export const checkboxForeground = create<string>('checkbox-foreground', '--vscod
 export const listActiveSelectionBackground = create<string>('list-active-selection-background', '--vscode-list-activeSelectionBackground').withDefault('#094771');
 export const listActiveSelectionForeground = create<string>('list-active-selection-foreground', '--vscode-list-activeSelectionForeground').withDefault('#ffffff');
 export const listHoverBackground = create<string>('list-hover-background', '--vscode-list-hoverBackground').withDefault('#2a2d2e');
-export const quickInputBackground = create<string>('quick-input-background', '--vscode-quickInput-background').withDefault('#252526');
 
 /**
  * Divider design tokens.
