@@ -2,7 +2,7 @@
 
 The `vscode-button` is a web component implementation of a [button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button). The `vscode-button` also supports several visual appearances––primary, secondary, and icon.
 
-![Button hero](/docs/assets/badge-hero.png)
+![Button hero](/docs/assets/docs-hero.png)
 
 ## Usage
 
