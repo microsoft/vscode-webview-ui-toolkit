@@ -31,14 +31,18 @@ const {wrap} = provideReactWrapper(React, provideVSCodeDesignSystem());
  *
  * @public
  */
-export const VSCodeBadge = wrap(vsCodeBadge());
+export const VSCodeBadge = wrap(vsCodeBadge(), {
+	name: 'vscode-badge',
+});
 
 /**
  * VS Code Button React component.
  *
  * @public
  */
-export const VSCodeButton = wrap(vsCodeButton());
+export const VSCodeButton = wrap(vsCodeButton(), {
+	name: 'vscode-button',
+});
 
 /**
  * VS Code Checkbox React component.
@@ -46,6 +50,7 @@ export const VSCodeButton = wrap(vsCodeButton());
  * @public
  */
 export const VSCodeCheckbox = wrap(vsCodeCheckbox(), {
+	name: 'vscode-checkbox',
 	events: {
 		onChange: 'change',
 	},
@@ -56,28 +61,36 @@ export const VSCodeCheckbox = wrap(vsCodeCheckbox(), {
  *
  * @public
  */
-export const VSCodeDivider = wrap(vsCodeDivider());
+export const VSCodeDivider = wrap(vsCodeDivider(), {
+	name: 'vscode-divider',
+});
 
 /**
  * VS Code Link React component.
  *
  * @public
  */
-export const VSCodeLink = wrap(vsCodeLink());
+export const VSCodeLink = wrap(vsCodeLink(), {
+	name: 'vscode-link',
+});
 
 /**
  * VS Code Progress Ring React component.
  *
  * @public
  */
-export const VSCodeProgressRing = wrap(vsCodeProgressRing());
+export const VSCodeProgressRing = wrap(vsCodeProgressRing(), {
+	name: 'vscode-progress-ring',
+});
 
 /**
  * VS Code Tag React component.
  *
  * @public
  */
-export const VSCodeTag = wrap(vsCodeTag());
+export const VSCodeTag = wrap(vsCodeTag(), {
+	name: 'vscode-tag',
+});
 
 /**
  * VS Code Text Area React component.
@@ -85,6 +98,7 @@ export const VSCodeTag = wrap(vsCodeTag());
  * @public
  */
 export const VSCodeTextArea = wrap(vsCodeTextArea(), {
+	name: 'vscode-text-area',
 	events: {
 		onChange: 'change',
 		onInput: 'input',
@@ -97,6 +111,7 @@ export const VSCodeTextArea = wrap(vsCodeTextArea(), {
  * @public
  */
 export const VSCodeTextField = wrap(vsCodeTextField(), {
+	name: 'vscode-text-field',
 	events: {
 		onChange: 'change',
 		onInput: 'input',
@@ -108,7 +123,9 @@ export const VSCodeTextField = wrap(vsCodeTextField(), {
  *
  * @public
  */
-export const VSCodeOption = wrap(vsCodeOption());
+export const VSCodeOption = wrap(vsCodeOption(), {
+	name: 'vscode-option',
+});
 
 /**
  * VS Code Dropdown React component.
@@ -116,6 +133,7 @@ export const VSCodeOption = wrap(vsCodeOption());
  * @public
  */
 export const VSCodeDropdown = wrap(vsCodeDropdown(), {
+	name: 'vscode-dropdown',
 	events: {
 		onChange: 'change',
 	},
@@ -127,6 +145,7 @@ export const VSCodeDropdown = wrap(vsCodeDropdown(), {
  * @public
  */
 export const VSCodePanels = wrap(vsCodePanels(), {
+	name: 'vscode-panels',
 	events: {
 		onChange: 'change',
 	},
@@ -137,14 +156,18 @@ export const VSCodePanels = wrap(vsCodePanels(), {
  *
  * @public
  */
-export const VSCodePanelTab = wrap(vsCodePanelTab());
+export const VSCodePanelTab = wrap(vsCodePanelTab(), {
+	name: 'vscode-panel-tab',
+});
 
 /**
  * VS Code Panel View React component.
  *
  * @public
  */
-export const VSCodePanelView = wrap(vsCodePanelView());
+export const VSCodePanelView = wrap(vsCodePanelView(), {
+	name: 'vscode-panel-view',
+});
 
 /**
  * VS Code Radio React component.
@@ -152,6 +175,7 @@ export const VSCodePanelView = wrap(vsCodePanelView());
  * @public
  */
 export const VSCodeRadio = wrap(vsCodeRadio(), {
+	name: 'vscode-radio',
 	events: {
 		onChange: 'change',
 	},
@@ -163,6 +187,7 @@ export const VSCodeRadio = wrap(vsCodeRadio(), {
  * @public
  */
 export const VSCodeRadioGroup = wrap(vsCodeRadioGroup(), {
+	name: 'vscode-radio-group',
 	events: {
 		onChange: 'change',
 	},
@@ -173,18 +198,24 @@ export const VSCodeRadioGroup = wrap(vsCodeRadioGroup(), {
  *
  * @public
  */
-export const VSCodeDataGrid = wrap(vsCodeDataGrid());
+export const VSCodeDataGrid = wrap(vsCodeDataGrid(), {
+	name: 'vscode-data-grid',
+});
 
 /**
  * VS Code Data Grid Cell React component.
  *
  * @public
  */
-export const VSCodeDataGridCell = wrap(vsCodeDataGridCell());
+export const VSCodeDataGridCell = wrap(vsCodeDataGridCell(), {
+	name: 'vscode-data-grid-cell',
+});
 
 /**
  * VS Code Data Grid Row React component.
  *
  * @public
  */
-export const VSCodeDataGridRow = wrap(vsCodeDataGridRow());
+export const VSCodeDataGridRow = wrap(vsCodeDataGridRow(), {
+	name: 'vscode-data-grid-row',
+});
