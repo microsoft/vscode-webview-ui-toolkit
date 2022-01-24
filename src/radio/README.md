@@ -2,6 +2,8 @@
 
 The `vscode-radio` is a web component implementation of a [radio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio).
 
+![Radio hero](/docs/assets/radio-hero.png)
+
 ## Attributes
 
 | Attribute  | Type    | Description                                                                         |

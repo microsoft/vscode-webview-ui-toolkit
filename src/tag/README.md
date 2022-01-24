@@ -2,6 +2,8 @@
 
 The `vscode-tag` component is used to label an item, attract attention, and/or flag status.
 
+![Tag hero](/docs/assets/tag-hero.png)
+
 ## Attributes
 
 None

@@ -2,6 +2,8 @@
 
 The `vscode-option` is a web component implementation of an [option](https://w3c.github.io/aria/#option).
 
+![Option hero](/docs/assets/option-hero.png)
+
 The `vscode-option` component will only provide internals related to form association when used within a form-associated component. See the `vscode-dropdown` component for more details.
 
 ## Attributes

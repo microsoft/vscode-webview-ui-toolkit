@@ -2,6 +2,8 @@
 
 The `vscode-progress-ring` component is used to indicate an indeterminate loading state.
 
+![Progress ring hero](/docs/assets/progress-ring-hero.png)
+
 ## Attributes
 
 None

@@ -2,6 +2,8 @@
 
 The `vscode-text-area` is a web component implementation of a [text area element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
 
+![Text area hero](/docs/assets/text-area-hero.png)
+
 ## Attributes
 
 | Attribute     | Type    | Description                                                                                |

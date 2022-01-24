@@ -2,6 +2,8 @@
 
 The `vscode-text-field` is a web component implementation of a [text field element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/text).
 
+![Text field hero](/docs/assets/text-field-hero.png)
+
 ## Attributes
 
 | Attribute     | Type    | Description                                                                                |

@@ -1,6 +1,10 @@
 # Visual Studio Code Data Grid
 
-The `vscode-data-grid` enables developers to display data in a tabular layout. The data grid is created using three components that work together:
+The `vscode-data-grid` enables developers to display data in a tabular layout.
+
+![Data grid hero](/docs/assets/data-grid-hero.png)
+
+The data grid is created using three components that work together:
 
 -   `<vscode-data-grid>`: The top level container element.
 -   `<vscode-data-grid-row>`: Displays a single row of data associated with a single record or a header row.

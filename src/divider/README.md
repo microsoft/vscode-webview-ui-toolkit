@@ -2,7 +2,7 @@
 
 The `vscode-divider` is a web component implementation of a [horiztonal rule element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
 
-![Divider hero](/docs/assets/docs-hero.png)
+![Divider hero](/docs/assets/divider-hero.png)
 
 ## Usage
 

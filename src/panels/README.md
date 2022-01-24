@@ -1,6 +1,10 @@
 # Visual Studio Code Panels
 
-The `vscode-panels` component is a web component implementation of a [tab](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role). The component is created using three components that work together to interchangably display different content:
+The `vscode-panels` component is a web component implementation of a [tab](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role).
+
+![Panel hero](/docs/assets/panels-hero.png)
+
+The component is created using three components that work together to interchangably display different content:
 
 -   `<vscode-panels>`: The top level container element.
 -   `<vscode-panel-tab>`: Renders the panel tab that will be associated with a panel view.

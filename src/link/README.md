@@ -2,6 +2,8 @@
 
 The `vscode-link` is a web component implementation of an [anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
 
+![Link hero](/docs/assets/link-hero.png)
+
 ## Attributes
 
 | Attribute        | Type    | Description                                                                        |

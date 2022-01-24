@@ -2,6 +2,8 @@
 
 The `vscode-dropdown` is a web component implementation of a [select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
 
+![Dropdown hero](/docs/assets/dropdown-hero.png)
+
 ## Attributes
 
 | Attribute  | Type    | Description                                                                                  |

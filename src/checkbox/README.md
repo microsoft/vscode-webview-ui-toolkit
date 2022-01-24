@@ -2,7 +2,7 @@
 
 The `vscode-checkbox` is a web component implementation of a [checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox).
 
-![Checkbox hero](/docs/assets/docs-hero.png)
+![Checkbox hero](/docs/assets/checkbox-hero.png)
 
 ## Usage
 
