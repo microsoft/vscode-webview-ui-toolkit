@@ -1,3 +1,5 @@
+import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
+import React from 'react';
 import {
 	vsCodeBadge,
 	vsCodeButton,
@@ -20,9 +22,7 @@ import {
 	vsCodeTextField,
 } from '../index';
 
-import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
 import {provideVSCodeDesignSystem} from '../vscode-design-system';
-import React from 'react';
 
 const {wrap} = provideReactWrapper(React, provideVSCodeDesignSystem());
 
