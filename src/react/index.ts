@@ -18,7 +18,7 @@ import {
 	vsCodeTag,
 	vsCodeTextArea,
 	vsCodeTextField,
-} from '..';
+} from '../index';
 
 import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
 import {provideVSCodeDesignSystem} from '../vscode-design-system';
