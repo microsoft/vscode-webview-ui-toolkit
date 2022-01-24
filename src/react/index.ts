@@ -1,7 +1,3 @@
-import React from 'react';
-import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
-import {provideVSCodeDesignSystem} from '../vscode-design-system';
-
 import {
 	vsCodeBadge,
 	vsCodeButton,
@@ -23,6 +19,10 @@ import {
 	vsCodeTextArea,
 	vsCodeTextField,
 } from '..';
+
+import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
+import {provideVSCodeDesignSystem} from '../vscode-design-system';
+import React from 'react';
 
 const {wrap} = provideReactWrapper(React, provideVSCodeDesignSystem());
 
@@ -57,12 +57,51 @@ export const VSCodeCheckbox = wrap(vsCodeCheckbox(), {
 });
 
 /**
+ * VS Code Data Grid React component.
+ *
+ * @public
+ */
+export const VSCodeDataGrid = wrap(vsCodeDataGrid(), {
+	name: 'vscode-data-grid',
+});
+
+/**
+ * VS Code Data Grid Cell React component.
+ *
+ * @public
+ */
+export const VSCodeDataGridCell = wrap(vsCodeDataGridCell(), {
+	name: 'vscode-data-grid-cell',
+});
+
+/**
+ * VS Code Data Grid Row React component.
+ *
+ * @public
+ */
+export const VSCodeDataGridRow = wrap(vsCodeDataGridRow(), {
+	name: 'vscode-data-grid-row',
+});
+
+/**
  * VS Code Divider React component.
  *
  * @public
  */
 export const VSCodeDivider = wrap(vsCodeDivider(), {
 	name: 'vscode-divider',
+});
+
+/**
+ * VS Code Dropdown React component.
+ *
+ * @public
+ */
+export const VSCodeDropdown = wrap(vsCodeDropdown(), {
+	name: 'vscode-dropdown',
+	events: {
+		onChange: 'change',
+	},
 });
 
 /**
@@ -75,12 +114,75 @@ export const VSCodeLink = wrap(vsCodeLink(), {
 });
 
 /**
+ * VS Code Option React component.
+ *
+ * @public
+ */
+export const VSCodeOption = wrap(vsCodeOption(), {
+	name: 'vscode-option',
+});
+
+/**
+ * VS Code Panels React component.
+ *
+ * @public
+ */
+export const VSCodePanels = wrap(vsCodePanels(), {
+	name: 'vscode-panels',
+	events: {
+		onChange: 'change',
+	},
+});
+
+/**
+ * VS Code Panel Tab React component.
+ *
+ * @public
+ */
+export const VSCodePanelTab = wrap(vsCodePanelTab(), {
+	name: 'vscode-panel-tab',
+});
+
+/**
+ * VS Code Panel View React component.
+ *
+ * @public
+ */
+export const VSCodePanelView = wrap(vsCodePanelView(), {
+	name: 'vscode-panel-view',
+});
+
+/**
  * VS Code Progress Ring React component.
  *
  * @public
  */
 export const VSCodeProgressRing = wrap(vsCodeProgressRing(), {
 	name: 'vscode-progress-ring',
+});
+
+/**
+ * VS Code Radio React component.
+ *
+ * @public
+ */
+export const VSCodeRadio = wrap(vsCodeRadio(), {
+	name: 'vscode-radio',
+	events: {
+		onChange: 'change',
+	},
+});
+
+/**
+ * VS Code Radio Group React component.
+ *
+ * @public
+ */
+export const VSCodeRadioGroup = wrap(vsCodeRadioGroup(), {
+	name: 'vscode-radio-group',
+	events: {
+		onChange: 'change',
+	},
 });
 
 /**
@@ -116,106 +218,4 @@ export const VSCodeTextField = wrap(vsCodeTextField(), {
 		onChange: 'change',
 		onInput: 'input',
 	},
-});
-
-/**
- * VS Code Option React component.
- *
- * @public
- */
-export const VSCodeOption = wrap(vsCodeOption(), {
-	name: 'vscode-option',
-});
-
-/**
- * VS Code Dropdown React component.
- *
- * @public
- */
-export const VSCodeDropdown = wrap(vsCodeDropdown(), {
-	name: 'vscode-dropdown',
-	events: {
-		onChange: 'change',
-	},
-});
-
-/**
- * VS Code Panels React component.
- *
- * @public
- */
-export const VSCodePanels = wrap(vsCodePanels(), {
-	name: 'vscode-panels',
-	events: {
-		onChange: 'change',
-	},
-});
-
-/**
- * VS Code Panel Tab React component.
- *
- * @public
- */
-export const VSCodePanelTab = wrap(vsCodePanelTab(), {
-	name: 'vscode-panel-tab',
-});
-
-/**
- * VS Code Panel View React component.
- *
- * @public
- */
-export const VSCodePanelView = wrap(vsCodePanelView(), {
-	name: 'vscode-panel-view',
-});
-
-/**
- * VS Code Radio React component.
- *
- * @public
- */
-export const VSCodeRadio = wrap(vsCodeRadio(), {
-	name: 'vscode-radio',
-	events: {
-		onChange: 'change',
-	},
-});
-
-/**
- * VS Code Radio Group React component.
- *
- * @public
- */
-export const VSCodeRadioGroup = wrap(vsCodeRadioGroup(), {
-	name: 'vscode-radio-group',
-	events: {
-		onChange: 'change',
-	},
-});
-
-/**
- * VS Code Data Grid React component.
- *
- * @public
- */
-export const VSCodeDataGrid = wrap(vsCodeDataGrid(), {
-	name: 'vscode-data-grid',
-});
-
-/**
- * VS Code Data Grid Cell React component.
- *
- * @public
- */
-export const VSCodeDataGridCell = wrap(vsCodeDataGridCell(), {
-	name: 'vscode-data-grid-cell',
-});
-
-/**
- * VS Code Data Grid Row React component.
- *
- * @public
- */
-export const VSCodeDataGridRow = wrap(vsCodeDataGridRow(), {
-	name: 'vscode-data-grid-row',
 });
