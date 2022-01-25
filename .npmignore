@@ -28,6 +28,7 @@ storybook-static/
 babel.config.js
 tsconfig.json
 tsconfig.build.json
+tsconfig.eslint.json
 webpack.config.js
 rollup.config.js
 policheck

@@ -33,7 +33,7 @@
 			}
 		},
 		{
-			"files": "scripts/setup-webview-test-env.js",
+			"files": "scripts/*.js",
 			"options": {
 				"printWidth": 200
 			}
