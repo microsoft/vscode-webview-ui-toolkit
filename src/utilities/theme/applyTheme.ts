@@ -59,6 +59,13 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 				) {
 					value = 'transparent';
 				}
+
+				// Apply high-contrast-theme-specifc styling to data grid
+				// row outlines and icon button outlines
+				// 
+				// Data grid outline:
+				// outline: 1px dotted #f38518; ${contrast-active-border}
+				// outline-offset: -1px;
 			}
 
 			toolkitToken.setValueFor(body, value);
