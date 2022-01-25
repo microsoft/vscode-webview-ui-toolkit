@@ -4,8 +4,8 @@
 		"module": "esnext",
 		"moduleResolution": "node",
 		"rootDir": "src",
-		"outDir": "dist/esm",
-		"declarationDir": "dist/dts",
+		"outDir": "dist",
+		"declarationDir": "dist",
 		"lib": ["dom", "es6"],
 		"pretty": true,
 		"esModuleInterop": true,
@@ -24,7 +24,6 @@
 	"exclude": [
 		"node_modules",
 		"test-webview",
-		"src/react/index.ts",
 		"src/**/*.spec.ts",
 		"src/**/*.stories.ts",
 		"src/**/fixtures/",
