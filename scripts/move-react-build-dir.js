@@ -16,22 +16,24 @@ const process = require('process');
  *
  * This import syntax is accomplished by simply moving the already built react directory
  * out of the dist directory into the project root and then updating some of the import
- * paths in the React build files to reflect this new location.
- * 
- * It's important to note that this script is somewhat brittle because it relies on some 
- * assumptions about what the import paths in the React build files look like to begin 
- * with (reference the regex strings in the updateReactBuildImportPaths function). If 
+ * paths in the React build files to reflect this new location. This react folder is
+ * intentionally not included in .npmignore so it will be published in the root directory
+ * of the toolkit package.
+ *
+ * It's important to note that this script is somewhat brittle because it relies on some
+ * assumptions about what the import paths in the React build files look like to begin
+ * with (reference the regex strings in the updateReactBuildImportPaths function). If
  * anything about the starting import paths change it will likely break this script.
- * 
+ *
  * This is an intentional trade off for implementation simplicity, a light sense of confidence
- * that these import paths probably won't change soon, and the fact that this script is supposed 
+ * that these import paths probably won't change soon, and the fact that this script is supposed
  * to be temporary.
- * 
- * Eventually this script should be replaced with TypeScript support for package exports 
+ *
+ * Eventually this script should be replaced with TypeScript support for package exports
  * (https://github.com/microsoft/TypeScript/issues/33079). It was supposed to arrive in TS v4.5,
  * but was pushed back due to stability concerns. When those changes land, the toolkit should be
  * updated to the appropriate version of TS and start using the `exports` field in package.json.
- * 
+ *
  * Until that time, this script will achieve the same results in import syntax.
  */
 async function main() {
