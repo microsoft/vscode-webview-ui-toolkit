@@ -12,13 +12,12 @@
 		"type": "git",
 		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
 	},
-	"main": "dist/esm/index.js",
-	"types": "dist/dts/index.d.ts",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"sideEffects": false,
 	"scripts": {
 		"start": "start-storybook -p 6006",
-		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && npm run build:react && ./scripts/copy-pkg-json.js",
-		"build:react": "tsc -p ./tsconfig.react.json",
+		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
 		"build:docs": "build-storybook",
 		"deploy:docs": "npm run build:docs && gh-pages -d storybook-static",
 		"doc": "api-extractor run --local",
