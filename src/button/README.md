@@ -6,10 +6,20 @@ The `vscode-button` is a web component implementation of a [button element](http
 
 ## Usage
 
-| ❌ Don't                                                                        | ✅ Do                                                              |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/img-placeholder.png)                          | ![Image placeholder](/docs/assets/img-placeholder.png)             |
-| Don't clutter the UI with multiple primary actions unless absolutely necessary. | Provide a single primary action with one or more secondary actions |
+### Types
+
+| Type      | Example                                               | Usage                                                                              |
+| --------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Primary   | ![Primary](/docs/assets/button-types-primary.png)     | Emphasizes the highest priority action in a view.                                  |
+| Secondary | ![Secondary](/docs/assets/button-types-secondary.png) | Used for additional actions in a view that already features a primary action.      |
+| Icon      | ![Icon](/docs/assets/button-types-icon.png)           | A space-efficient style that renders a single icon to represent a specific action. |
+
+### Best Practices
+
+| ❌ Don't                                                        | ✅ Do                                                              |
+| --------------------------------------------------------------- | ------------------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)          | ![Image placeholder](/docs/assets/img-placeholder.png)             |
+| Don't use multiple primary buttons unless absolutely necessary. | Provide a single primary button with one or more secondary actions |
 
 | ❌ Don't                                                            | ✅ Do                                                                                                                                             |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,7 +36,14 @@ The `vscode-button` is a web component implementation of a [button element](http
 | ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                                  |
 | Don't use vague action text.                           | Use clear verbs like "Save" or "Cancel" to ensure users feel confident in their actions |
 
-## Attributes
+| ❌ Don't                                               | ✅ Do                                                        |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)       |
+| Don't use buttons as navigational elements.            | Use buttons to perform actions relevant to the current view. |
+
+## Implementation
+
+### Attributes
 
 | Attribute        | Type    | Description                                                                             |
 | ---------------- | ------- | --------------------------------------------------------------------------------------- |

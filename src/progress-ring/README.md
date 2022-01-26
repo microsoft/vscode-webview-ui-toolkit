@@ -4,11 +4,23 @@ The `vscode-progress-ring` component is used to indicate an indeterminate loadin
 
 ![Progress ring hero](/docs/assets/progress-ring-hero.png)
 
-## Attributes
+## Usage
+
+| ❌ Don't                                                                  | ✅ Do                                                                                                   |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                    | ![Image placeholder](/docs/assets/img-placeholder.png)                                                  |
+| Don't use a Progress Ring to indicate user progress on a multi-step task. | Indicate indeterminate progress while the extension waits for something to load or to finish executing. |
+
+| ❌ Don't                                               | ✅ Do                                                                                                                         |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                                                                        |
+| Don't use multiple Progress Rings in close proximity.  | Use a single Progress Ring in a view. If multiple must be used, ensure they are in clearly defined sections of the extension. |
+
+## Implementation
+
+### Attributes
 
 None
-
-## Usage
 
 ### Basic Usage
 
