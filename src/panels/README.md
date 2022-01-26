@@ -10,21 +10,28 @@ The component is created using three components that work together to interchang
 -   `<vscode-panel-tab>`: Renders the panel tab that will be associated with a panel view.
 -   `<vscode-panel-view>`: The container element that will hold content associated with a given tab.
 
-## Panels Attributes
+## Usage
+
+| ❌ Don't                                                                        | ✅ Do                                                                                                                              |
+| ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                          | ![Image placeholder](/docs/assets/img-placeholder.png)                                                                             |
+| Don't use an excessive number of panel tabs to organize your extension's views. | Structure content into as few tabs as possible. Use clear titles to ensure your extension's users know what to expect in each tab. |
+
+## Implementation
+
+### Panels Attributes
 
 | Attribute  | Type   | Description                     |
 | ---------- | ------ | ------------------------------- |
 | `activeid` | string | The id of the active panel tab. |
 
-## Panel Tab Attributes
+### Panel Tab Attributes
 
 None
 
-## Panel View Attributes
+### Panel View Attributes
 
 None
-
-## Usage
 
 **❗️❗️❗️ Important ❗️❗️❗️**
 

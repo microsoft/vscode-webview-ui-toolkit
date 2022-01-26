@@ -16,6 +16,11 @@ The `vscode-button` is a web component implementation of a [button element](http
 | ![Image placeholder](/docs/assets/img-placeholder.png)              | ![Image placeholder](/docs/assets/img-placeholder.png)                                                                                            |
 | Don't override button widths to always fill their parent container. | Allow buttons to fill a [VS Code View](https://code.visualstudio.com/api/references/extension-guidelines#views) until a maximum width is reached. |
 
+| ❌ Don't                                               | ✅ Do                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png) |
+| Don't use all caps or lowercase text.                  | Use sentence case for all button text.                 |
+
 | ❌ Don't                                               | ✅ Do                                                                                   |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------- |
 | ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                                  |

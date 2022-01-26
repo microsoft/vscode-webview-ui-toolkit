@@ -11,6 +11,11 @@ The `vscode-divider` is a web component implementation of a [horiztonal rule ele
 | ![Image placeholder](/docs/assets/img-placeholder.png)       | ![Image placeholder](/docs/assets/img-placeholder.png)      |
 | Don't use a divider to create pseudo-views within a webview. | Use dividers to create distinct sections of related content |
 
+| ❌ Don't                                               | ✅ Do                                                      |
+| ------------------------------------------------------ | ---------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)     |
+| Don't split up related form elements with a divider.   | Use a divider to separate multiple forms on the same page. |
+
 ## Attributes
 
 | Attribute | Type   | Description                                    |

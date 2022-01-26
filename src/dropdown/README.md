@@ -4,17 +4,34 @@ The `vscode-dropdown` is a web component implementation of a [select element](ht
 
 ![Dropdown hero](/docs/assets/dropdown-hero.png)
 
-## Attributes
+## Usage
+
+| ❌ Don't                                                                                                            | ✅ Do                                                  |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                                                              | ![Image placeholder](/docs/assets/img-placeholder.png) |
+| Don't use a dropdown for selections with with less than three options. Try a checkbox group or radio group instead. | Use dropdowns for selections with many unique options. |
+
+| ❌ Don't                                                         | ✅ Do                                                                          |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)           | ![Image placeholder](/docs/assets/img-placeholder.png)                         |
+| Don't align the dropdown's text with the edge of it's container. | Align form component containers to the grid or edge of their parent container. |
+
+| ❌ Don't                                               | ✅ Do                                                  |
+| ------------------------------------------------------ | ------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png) |
+| Avoid overflowing text in dropdown list options.       | Use concise language to describe a selection.          |
+
+## Implementation
+
+The `vscode-dropdown` component must be used with the `vscode-option` component.
+
+### Attributes
 
 | Attribute  | Type    | Description                                                                                  |
 | ---------- | ------- | -------------------------------------------------------------------------------------------- |
 | `disabled` | boolean | Disables the dropdown and child options.                                                     |
 | `open`     | boolean | If true, toggles the dropdown to the open position.                                          |
 | `position` | string  | Reflects the placement for the listbox when the dropdown is open. Options: `above`, `below`. |
-
-## Usage
-
-The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### Basic Usage
 

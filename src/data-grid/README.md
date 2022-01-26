@@ -10,6 +10,20 @@ The data grid is created using three components that work together:
 -   `<vscode-data-grid-row>`: Displays a single row of data associated with a single record or a header row.
 -   `<vscode-data-grid-cell>`: Displays a single cell of data within a row.
 
+## Usage
+
+| ❌ Don't                                               | ✅ Do                                                           |
+| ------------------------------------------------------ | --------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)          |
+| Don't use a data grid in place of a basic list.        | Use data grids to list complex data with secondary information. |
+
+| ❌ Don't                                                             | ✅ Do                                                                                                  |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)               | ![Image placeholder](/docs/assets/img-placeholder.png)                                                 |
+| Don't use data grids in small containers unless absolutely necessary | Data grids benefit from plentry of real estate to display as much information in one view as possible. |
+
+## Implementation
+
 ## Data Grid Attributes
 
 | Attribute               | Type   | Description                                                                            |
@@ -30,8 +44,6 @@ The data grid is created using three components that work together:
 | ------------- | ------ | ----------------------------------------------------- |
 | `cell-type`   | string | The type of cell. Options: `default`, `columnheader`. |
 | `grid-column` | string | The column index of the cell.                         |
-
-## Usage
 
 ❗️❗️❗️ Important ❗️❗️❗️
 

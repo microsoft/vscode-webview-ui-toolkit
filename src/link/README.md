@@ -4,7 +4,21 @@ The `vscode-link` is a web component implementation of an [anchor element](https
 
 ![Link hero](/docs/assets/link-hero.png)
 
-## Attributes
+## Usage
+
+| ❌ Don't                                               | ✅ Do                                                                     |
+| ------------------------------------------------------ | ------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                    |
+| Don't use a link for actions or commands.              | Use a link to to navigate to another location in a project or on the web. |
+
+| ❌ Don't                                               | ✅ Do                                                                   |
+| ------------------------------------------------------ | ----------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                  |
+| Avoid vague link text.                                 | Use descriptive language that provides context to what is being linked. |
+
+## Implementation
+
+### Attributes
 
 | Attribute        | Type    | Description                                                                        |
 | ---------------- | ------- | ---------------------------------------------------------------------------------- |
@@ -16,8 +30,6 @@ The `vscode-link` is a web component implementation of an [anchor element](https
 | `rel`            | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes). |
 | `target`         | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes). |
 | `type`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes). |
-
-## Usage
 
 ### Basic Usage (With Href Attribute)
 

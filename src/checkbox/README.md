@@ -14,14 +14,16 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 | ❌ Don't                                               | ✅ Do                                                                           |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------- |
 | ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                          |
-| Don't use horizontal checkbox groups.                  | Arrange checkbox groups vertically to make it easy to scan and compare options. |
+| Avoid using horizontal checkbox group layouts.         | Arrange checkbox groups vertically to make it easy to scan and compare options. |
 
-| ❌ Don't                                                                                                  | ✅ Do                                                  |
-| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/img-placeholder.png)                                                    | ![Image placeholder](/docs/assets/img-placeholder.png) |
-| Don't use checkboxes for options with more than two states. Consider using a radio button for such cases. | Use checkbox titles that imply opposite states.        |
+| ❌ Don't                                                                                                        | ✅ Do                                                  |
+| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                                                          | ![Image placeholder](/docs/assets/img-placeholder.png) |
+| Don't use checkboxes for options with more than two clear states. Consider using a radio button for such cases. | Use checkbox titles that imply opposite states.        |
 
-## Attributes
+## Implementation
+
+### Attributes
 
 | Attribute   | Type    | Description                                                                              |
 | ----------- | ------- | ---------------------------------------------------------------------------------------- |
@@ -32,7 +34,7 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 | `required`  | boolean | Indicates that the user must check the checkbox before the owning form can be submitted. |
 | `value`     | string  | The string to use as the value of the checkbox when submitting the form                  |
 
-## Properties
+### Properties
 
 | Attribute       | Type    | Description                                                               |
 | --------------- | ------- | ------------------------------------------------------------------------- |
