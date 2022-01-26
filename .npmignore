@@ -17,6 +17,9 @@ test-webview
 build/
 storybook-static/
 
+# Scripts
+scripts
+
 # Config files
 .vscode
 .github
