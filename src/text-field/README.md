@@ -4,7 +4,31 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ![Text field hero](/docs/assets/text-field-hero.png)
 
-## Attributes
+## Usage
+
+| ❌ Don't                                                                                                            | ✅ Do                                                  |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                                                              | ![Image placeholder](/docs/assets/img-placeholder.png) |
+| Don't use a text field for inputs that are greater than a single line of text. Use a `text-area` component instead. | Use text fields for short input values.                |
+
+| ❌ Don't                                                                      | ✅ Do                                                                     |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                        | ![Image placeholder](/docs/assets/img-placeholder.png)                    |
+| Don't use a placeholder value instead of a label unless absolutely necessary. | Use descriptive labels to help users understand the text field's purpose. |
+
+| ❌ Don't                                                   | ✅ Do                                                             |
+| ---------------------------------------------------------- | ----------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png)     | ![Image placeholder](/docs/assets/img-placeholder.png)            |
+| Don't use critical information within a placeholder value. | Use additional captions if necessary to provide more information. |
+
+| ❌ Don't                                               | ✅ Do                                                                 |
+| ------------------------------------------------------ | --------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                |
+| Don't use decorative icons in a text field.            | Use icons to help users quickly identify the purpose of a text field. |
+
+## Implementation
+
+### Attributes
 
 | Attribute     | Type    | Description                                                                                |
 | ------------- | ------- | ------------------------------------------------------------------------------------------ |
@@ -17,8 +41,6 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | `size`        | number  | Sets the width of the element to a specified number of characters.                         |
 | `type`        | string  | Sets the text field type.                                                                  |
 | `value`       | string  | The value (i.e. content) of the text field.                                                |
-
-## Usage
 
 ### Basic Usage
 
