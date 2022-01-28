@@ -24,21 +24,21 @@ The data grid is created using three components that work together:
 
 ## Implementation
 
-## Data Grid Attributes
+### Data Grid Attributes
 
 | Attribute               | Type   | Description                                                                            |
 | ----------------------- | ------ | -------------------------------------------------------------------------------------- |
 | `generate-header`       | string | The type of header row that should be generated. Options: `default`, `sticky`, `none`. |
 | `grid-template-columns` | string | A string that gets applied to the `grid-template-columns` attribute of child rows.     |
 
-## Data Grid Row Attributes
+### Data Grid Row Attributes
 
 | Attribute               | Type   | Description                                                          |
 | ----------------------- | ------ | -------------------------------------------------------------------- |
 | `grid-template-columns` | string | A CSS Grid string that defines the column widths of a data grid row. |
 | `row-type`              | string | The type of row. Options: `default`, `header`, `sticky-header`.      |
 
-## Data Grid Cell Attributes
+### Data Grid Cell Attributes
 
 | Attribute     | Type   | Description                                           |
 | ------------- | ------ | ----------------------------------------------------- |

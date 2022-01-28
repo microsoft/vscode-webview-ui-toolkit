@@ -31,10 +31,10 @@ The `vscode-button` is a web component implementation of a [button element](http
 | ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png) |
 | Don't use all caps or lowercase text.                  | Use sentence case for all button text.                 |
 
-| ❌ Don't                                               | ✅ Do                                                                                   |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                                  |
-| Don't use vague action text.                           | Use clear verbs like "Save" or "Cancel" to ensure users feel confident in their actions |
+| ❌ Don't                                               | ✅ Do                                                                                          |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                                         |
+| Don't use vague action text.                           | Use clear verbs like "Save" or "Cancel" to ensure users feel confident when peforming actions. |
 
 | ❌ Don't                                               | ✅ Do                                                        |
 | ------------------------------------------------------ | ------------------------------------------------------------ |

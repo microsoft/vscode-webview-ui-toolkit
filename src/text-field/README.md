@@ -6,10 +6,10 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ## Usage
 
-| ❌ Don't                                                                                                            | ✅ Do                                                  |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/img-placeholder.png)                                                              | ![Image placeholder](/docs/assets/img-placeholder.png) |
-| Don't use a text field for inputs that are greater than a single line of text. Use a `text-area` component instead. | Use text fields for short input values.                |
+| ❌ Don't                                                                                                                                    | ✅ Do                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                                                                                      | ![Image placeholder](/docs/assets/img-placeholder.png) |
+| Don't use a text field for inputs that are greater than a single line of text. Use a [text-area](../text-area/README.md) component instead. | Use text fields for short input values.                |
 
 | ❌ Don't                                                                      | ✅ Do                                                                     |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -19,7 +19,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | ❌ Don't                                                   | ✅ Do                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------- |
 | ![Image placeholder](/docs/assets/img-placeholder.png)     | ![Image placeholder](/docs/assets/img-placeholder.png)            |
-| Don't use critical information within a placeholder value. | Use additional captions if necessary to provide more information. |
+| Don't include critical information in a placeholder value. | Use additional captions if necessary to provide more information. |
 
 | ❌ Don't                                               | ✅ Do                                                                 |
 | ------------------------------------------------------ | --------------------------------------------------------------------- |

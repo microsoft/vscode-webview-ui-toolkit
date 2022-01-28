@@ -6,9 +6,10 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 ## Usage
 
-A `vscode-badge` can only contain numbers to follow the conventions of the Visual Studio Code design language.
-
-If a component that labels an item with a string is desired, see the `vscode-tag` component.
+| ❌ Don't                                                                                           | ✅ Do                                                  |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/img-placeholder.png)                                             | ![Image placeholder](/docs/assets/img-placeholder.png) |
+| Don't use a badge to display text content. Use a [vscode-tag](../tag/README.md) component instead. | Use a badge to display numbers.                        |
 
 | ❌ Don't                                            | ✅ Do                                                    |
 | --------------------------------------------------- | -------------------------------------------------------- |
