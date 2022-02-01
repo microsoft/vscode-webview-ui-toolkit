@@ -16,10 +16,10 @@ The `vscode-button` is a web component implementation of a [button element](http
 
 ### Best Practices
 
-| ❌ Don't                                                        | ✅ Do                                                              |
-| --------------------------------------------------------------- | ------------------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)   | ![Image placeholder](/docs/assets/images/img-placeholder.png)      |
-| Don't use multiple primary buttons unless absolutely necessary. | Provide a single primary button with one or more secondary actions |
+| ❌ Don't                                                      | ✅ Do                                                              |
+| ------------------------------------------------------------- | ------------------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)      |
+| Don't use multiple primary buttons in close proximity.        | Provide a single primary button with one or more secondary actions |
 
 | ❌ Don't                                                            | ✅ Do                                                                                                                                             |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
