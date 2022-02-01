@@ -11,10 +11,10 @@ The `vscode-dropdown` is a web component implementation of a [select element](ht
 | ![Image placeholder](/docs/assets/images/img-placeholder.png)                                                       | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
 | Don't use a dropdown for selections with with less than three options. Try a checkbox group or radio group instead. | Use dropdowns for selections with many unique options.        |
 
-| ❌ Don't                                                         | ✅ Do                                                                          |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)    | ![Image placeholder](/docs/assets/images/img-placeholder.png)                  |
-| Don't align the dropdown's text with the edge of it's container. | Align form component containers to the grid or edge of their parent container. |
+| ❌ Don't                                                      | ✅ Do                                                                          |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                  |
+| Don't align the value text with the edge of its container.    | Align form component containers to the grid or edge of their parent container. |
 
 | ❌ Don't                                                      | ✅ Do                                                         |
 | ------------------------------------------------------------- | ------------------------------------------------------------- |
