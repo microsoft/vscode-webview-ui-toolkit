@@ -12,20 +12,20 @@ The component is created using three components that work together to interchang
 
 ## Usage
 
-| ❌ Don't                                                                                       | ✅ Do                                                         |
-| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                  | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use more than six panel tabs to organize your extension's views to reduce load on users. | Structure content into as few tabs as possible.               |
+| ❌ Don't                                                                                      | ✅ Do                                                         |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                 | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Don't use more than six panel tabs to organize your extensions views to reduce load on users. | Structure content into as few tabs as possible.               |
 
 | ❌ Don't                                                      | ✅ Do                                                           |
 | ------------------------------------------------------------- | --------------------------------------------------------------- |
 | ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)   |
 | Don't use a random tab order.                                 | Tabs with related content should be grouped next to each other. |
 
-| ❌ Don't                                                      | ✅ Do                                                                              |
-| ------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                      |
-| Don't use too many words in a tab label.                      | Use clear titles to ensure your extension's users know what to expect in each tab. |
+| ❌ Don't                                                      | ✅ Do                                                                             |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                     |
+| Don't use too many words in a tab label.                      | Use clear titles to ensure your extensions users know what to expect in each tab. |
 
 ## Implementation
 
