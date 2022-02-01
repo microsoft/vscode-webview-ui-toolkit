@@ -2,19 +2,19 @@
 
 The `vscode-divider` is a web component implementation of a [horiztonal rule element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
 
-![Divider hero](/docs/assets/divider-hero.png)
+![Divider hero](/docs/assets/images/divider-hero.png)
 
 ## Usage
 
-| ❌ Don't                                                     | ✅ Do                                                       |
-| ------------------------------------------------------------ | ----------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png)       | ![Image placeholder](/docs/assets/img-placeholder.png)      |
-| Don't use a divider to create pseudo-views within a webview. | Use dividers to create distinct sections of related content |
+| ❌ Don't                                                      | ✅ Do                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Don't use a divider to create pseudo-views within a webview.  | Use dividers to create distinct sections of related content   |
 
-| ❌ Don't                                               | ✅ Do                                                      |
-| ------------------------------------------------------ | ---------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)     |
-| Don't split up related form elements with a divider.   | Use a divider to separate multiple forms on the same page. |
+| ❌ Don't                                                      | ✅ Do                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Don't split up related form elements with a divider.          | Use a divider to separate multiple forms on the same page.    |
 
 ## Attributes
 

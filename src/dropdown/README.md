@@ -2,24 +2,24 @@
 
 The `vscode-dropdown` is a web component implementation of a [select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select).
 
-![Dropdown hero](/docs/assets/dropdown-hero.png)
+![Dropdown hero](/docs/assets/images/dropdown-hero.png)
 
 ## Usage
 
-| ❌ Don't                                                                                                            | ✅ Do                                                  |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/img-placeholder.png)                                                              | ![Image placeholder](/docs/assets/img-placeholder.png) |
-| Don't use a dropdown for selections with with less than three options. Try a checkbox group or radio group instead. | Use dropdowns for selections with many unique options. |
+| ❌ Don't                                                                                                            | ✅ Do                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                                       | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Don't use a dropdown for selections with with less than three options. Try a checkbox group or radio group instead. | Use dropdowns for selections with many unique options.        |
 
 | ❌ Don't                                                         | ✅ Do                                                                          |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/img-placeholder.png)           | ![Image placeholder](/docs/assets/img-placeholder.png)                         |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png)    | ![Image placeholder](/docs/assets/images/img-placeholder.png)                  |
 | Don't align the dropdown's text with the edge of it's container. | Align form component containers to the grid or edge of their parent container. |
 
-| ❌ Don't                                               | ✅ Do                                                  |
-| ------------------------------------------------------ | ------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png) |
-| Avoid overflowing text in dropdown list options.       | Use concise language to describe a selection.          |
+| ❌ Don't                                                      | ✅ Do                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Avoid overflowing text in dropdown list options.              | Use concise language to describe a selection.                 |
 
 ## Implementation
 

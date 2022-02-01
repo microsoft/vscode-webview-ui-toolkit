@@ -2,7 +2,7 @@
 
 The `vscode-data-grid` enables developers to display data in a tabular layout.
 
-![Data grid hero](/docs/assets/data-grid-hero.png)
+![Data grid hero](/docs/assets/images/data-grid-hero.png)
 
 The data grid is created using three components that work together:
 
@@ -12,14 +12,14 @@ The data grid is created using three components that work together:
 
 ## Usage
 
-| ❌ Don't                                               | ✅ Do                                                           |
-| ------------------------------------------------------ | --------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)          |
-| Don't use a data grid in place of a basic list.        | Use data grids to list complex data with secondary information. |
+| ❌ Don't                                                      | ✅ Do                                                           |
+| ------------------------------------------------------------- | --------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)   |
+| Don't use a data grid in place of a basic list.               | Use data grids to list complex data with secondary information. |
 
 | ❌ Don't                                                             | ✅ Do                                                                                           |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png)               | ![Image placeholder](/docs/assets/img-placeholder.png)                                          |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png)        | ![Image placeholder](/docs/assets/images/img-placeholder.png)                                   |
 | Don't use data grids in small containers unless absolutely necessary | Place data grids in a main content area to display as much information in one view as possible. |
 
 ## Implementation

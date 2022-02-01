@@ -2,19 +2,19 @@
 
 The `vscode-link` is a web component implementation of an [anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
 
-![Link hero](/docs/assets/link-hero.png)
+![Link hero](/docs/assets/images/link-hero.png)
 
 ## Usage
 
-| ❌ Don't                                               | ✅ Do                                                                     |
-| ------------------------------------------------------ | ------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                    |
-| Don't use a link for actions or commands.              | Use a link to to navigate to another location in a project or on the web. |
+| ❌ Don't                                                      | ✅ Do                                                                     |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)             |
+| Don't use a link for actions or commands.                     | Use a link to to navigate to another location in a project or on the web. |
 
-| ❌ Don't                                               | ✅ Do                                                                   |
-| ------------------------------------------------------ | ----------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                  |
-| Avoid vague link text.                                 | Use descriptive language that provides context to what is being linked. |
+| ❌ Don't                                                      | ✅ Do                                                                   |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)           |
+| Avoid vague link text.                                        | Use descriptive language that provides context to what is being linked. |
 
 ## Implementation
 

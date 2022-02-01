@@ -2,29 +2,29 @@
 
 The `vscode-checkbox` is a web component implementation of a [checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox).
 
-![Checkbox hero](/docs/assets/checkbox-hero.png)
+![Checkbox hero](/docs/assets/images/checkbox-hero.png)
 
 ## Usage
 
-| ❌ Don't                                               | ✅ Do                                                             |
-| ------------------------------------------------------ | ----------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)            |
-| Don't group unrelated checkboxes together.             | Introduce a group of related checkboxes with a descriptive label. |
+| ❌ Don't                                                      | ✅ Do                                                             |
+| ------------------------------------------------------------- | ----------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)     |
+| Don't group unrelated checkboxes together.                    | Introduce a group of related checkboxes with a descriptive label. |
 
-| ❌ Don't                                               | ✅ Do                                                                           |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png)                          |
-| Avoid using horizontal checkbox group layouts.         | Arrange checkbox groups vertically to make it easy to scan and compare options. |
+| ❌ Don't                                                      | ✅ Do                                                                           |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                   |
+| Avoid using horizontal checkbox group layouts.                | Arrange checkbox groups vertically to make it easy to scan and compare options. |
 
-| ❌ Don't                                                                                                        | ✅ Do                                                  |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/img-placeholder.png)                                                          | ![Image placeholder](/docs/assets/img-placeholder.png) |
-| Don't use checkboxes for options with more than two clear states. Consider using a radio button for such cases. | Use checkbox titles that imply opposite states.        |
+| ❌ Don't                                                                                                        | ✅ Do                                                         |
+| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                                   | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Don't use checkboxes for options with more than two clear states. Consider using a radio button for such cases. | Use checkbox titles that imply opposite states.               |
 
-| ❌ Don't                                               | ✅ Do                                                  |
-| ------------------------------------------------------ | ------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/img-placeholder.png) | ![Image placeholder](/docs/assets/img-placeholder.png) |
-| Don't use long blocks of text.                         | Use concise language to describe each option.          |
+| ❌ Don't                                                      | ✅ Do                                                         |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Don't use long blocks of text.                                | Use concise language to describe each option.                 |
 
 ## Implementation
 

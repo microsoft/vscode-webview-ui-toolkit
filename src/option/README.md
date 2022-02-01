@@ -2,7 +2,7 @@
 
 The `vscode-option` is a web component implementation of an [option](https://w3c.github.io/aria/#option).
 
-![Option hero](/docs/assets/option-hero.png)
+![Option hero](/docs/assets/images/option-hero.png)
 
 ## Usage
 
