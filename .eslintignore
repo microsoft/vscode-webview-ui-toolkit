@@ -4,6 +4,7 @@ node_modules
 dist
 # don't lint build folder output
 build
+react
 # don't lint coverage output
 coverage
 # don't lint storybook files
