@@ -36,10 +36,10 @@ The `vscode-button` is a web component implementation of a [button element](http
 | ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                                  |
 | Don't use vague action text.                                  | Use clear verbs like "Save" or "Cancel" to ensure users feel confident when peforming actions. |
 
-| ❌ Don't                                                      | ✅ Do                                                         |
-| ------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use buttons as navigational elements.                   | Use buttons to perform actions relevant to the current view.  |
+| ❌ Don't                                                                                    | ✅ Do                                                         |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png)                               | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Don't use buttons as navigational elements. Use a [vscode-link](../link/README.md) instead. | Use buttons to perform actions relevant to the current view.  |
 
 ## Implementation
 
