@@ -4,20 +4,20 @@
 import {create} from './utilities/design-tokens/create';
 
 /**
- * A note about `--fake-vscode-token` usage:
+ * Developer note:
  *
  * There are some tokens defined in this file that make use of `--fake-vscode-token`. This is
  * done when a toolkit token should be added to the tokenMappings map (and subsequently altered
  * in the applyTheme function) but does not have a corresponding VS Code token that can be used.
  *
  * An example is buttonIconHoverBackground token which does not have a corresponding VS Code token
- * at this time (it's a hardcoded value in VS Code), but needs to be adjusted to transparent when a
+ * at this time (it's a hardcoded value in VS Code), but needs to be adjusted to be transparent when a
  * high contrast theme is applied.
  *
  * As a rule of thumb, if there are special cases where a token needs to be adjusted based on the
- * VS Code theme and does not have a corresponding VS Code token, the `--fake-vscode-token` can be used
+ * VS Code theme and does not have a corresponding VS Code token, `--fake-vscode-token` can be used
  * to indicate that it should be added to the tokenMappings map and thus make it accessible to the
- * applyTheme function where it can be adjusted.
+ * applyTheme function where it can be dynamically adjusted.
  */
 
 /**
