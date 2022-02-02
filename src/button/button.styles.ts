@@ -25,6 +25,7 @@ import {
 	buttonSecondaryBackground,
 	buttonSecondaryForeground,
 	buttonSecondaryHoverBackground,
+	contrastActiveBorder,
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
@@ -177,9 +178,12 @@ const IconButtonStyles = css`
 	}
 	:host([appearance='icon']:hover) {
 		background: ${buttonIconHoverBackground};
+		outline: 1px dotted ${contrastActiveBorder};
+		outline-offset: -1px;
 	}
 	:host([appearance='icon']) .control {
 		padding: ${buttonIconPadding};
+		border: calc(${borderWidth} * 1px) solid transparent;
 	}
 	:host([appearance='icon']:active) .control:active {
 		background: ${buttonIconHoverBackground};
