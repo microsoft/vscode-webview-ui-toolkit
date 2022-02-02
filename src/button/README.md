@@ -8,11 +8,11 @@ The `vscode-button` is a web component implementation of a [button element](http
 
 ### Types
 
-| Type      | Example                                                                                             | Usage                                                                              |
-| --------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Primary   | <img src="../../docs/assets/images/button-types-primary.png" alt="Primary button" width="100"/>     | Emphasizes the highest priority action in a view.                                  |
-| Secondary | <img src="../../docs/assets/images/button-types-secondary.png" alt="Secondary button" width="100"/> | Used for additional actions in a view that already features a primary action.      |
-| Icon      | <img src="../../docs/assets/images/button-types-icon.png" alt="Icon button" width="50"/>            | A space-efficient style that renders a single icon to represent a specific action. |
+| Type      | Example                                                                                               | Usage                                                                              |
+| --------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Primary   | <img src="../../docs/assets/images/button-types-primary.png" alt="Primary button" width="100px"/>     | Emphasizes the highest priority action in a view.                                  |
+| Secondary | <img src="../../docs/assets/images/button-types-secondary.png" alt="Secondary button" width="100px"/> | Used for additional actions in a view that already features a primary action.      |
+| Icon      | <img src="../../docs/assets/images/button-types-icon.png" alt="Icon button" width="50px"/>            | A space-efficient style that renders a single icon to represent a specific action. |
 
 ### Best Practices
 
