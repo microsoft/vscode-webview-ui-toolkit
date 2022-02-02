@@ -6,7 +6,12 @@ import {
 	ElementDefinitionContext,
 	FoundationElementDefinition,
 } from '@microsoft/fast-foundation';
-import {background, designUnit, listHoverBackground} from '../design-tokens';
+import {
+	background,
+	contrastActiveBorder,
+	designUnit,
+	listHoverBackground,
+} from '../design-tokens';
 
 export const dataGridRowStyles = (
 	context: ElementDefinitionContext,
@@ -28,5 +33,7 @@ export const dataGridRowStyles = (
 	}
 	:host(:hover) {
 		background: ${listHoverBackground};
+		outline: 1px dotted ${contrastActiveBorder};
+		outline-offset: -1px;
 	}
 `;
