@@ -43,6 +43,12 @@ export function create<T>(name: string, vscodeThemeVar?: string) {
 	const designToken = DesignToken.create<T>(name);
 
 	if (vscodeThemeVar) {
+		// If the fake vscode token is passed in, attach a unique ID to it so that it can
+		// be added to the tokenMappings map without overriding a previous fake token value
+		if (vscodeThemeVar.includes('--fake-vscode-token')) {
+			const uniqueId = 'id' + Math.random().toString(16).slice(2);
+			vscodeThemeVar = `${vscodeThemeVar}-${uniqueId}`;
+		}
 		tokenMappings.set(vscodeThemeVar, designToken);
 	}
 	if (!isThemeListenerInitialized) {

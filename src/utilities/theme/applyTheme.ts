@@ -43,7 +43,7 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 			if (themeKind === 'vscode-high-contrast') {
 				// Developer note:
 				//
-				// There a handful of VS Code theme tokens that have no value when a high
+				// There are a handful of VS Code theme tokens that have no value when a high
 				// contrast theme is applied.
 				//
 				// This is an issue because when no value is set the toolkit tokens will fall
@@ -60,12 +60,15 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 					value = 'transparent';
 				}
 
-				// Apply high-contrast-theme-specifc styling to data grid
-				// row outlines and icon button outlines
-				// 
-				// Data grid outline:
-				// outline: 1px dotted #f38518; ${contrast-active-border}
-				// outline-offset: -1px;
+				// Set icon button hover to be transparent when in high contrast mode
+				if (toolkitToken.name === 'button-icon-hover-background') {
+					value = 'transparent';
+				}
+			} else {
+				// Set contrast-active-border token to be transparent in non-high-contrast mode
+				if (toolkitToken.name === 'contrast-active-border') {
+					value = 'transparent';
+				}
 			}
 
 			toolkitToken.setValueFor(body, value);
