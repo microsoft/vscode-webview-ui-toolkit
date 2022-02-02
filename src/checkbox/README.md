@@ -8,23 +8,23 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 | ❌ Don't                                                      | ✅ Do                                                             |
 | ------------------------------------------------------------- | ----------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)     |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-1.png) | ![Image placeholder](/docs/assets/images/checkbox-do-1.png)       |
 | Don't group unrelated checkboxes together.                    | Introduce a group of related checkboxes with a descriptive label. |
 
 | ❌ Don't                                                      | ✅ Do                                                                           |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                   |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-2.png) | ![Image placeholder](/docs/assets/images/checkbox-do-2.png)                     |
 | Avoid using horizontal checkbox group layouts.                | Arrange checkbox groups vertically to make it easy to scan and compare options. |
 
-| ❌ Don't                                                                                   | ✅ Do                                                         |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)                              | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use an ambiguous label that makes it difficult to understand what the checkbox does. | Use checkbox labels that imply clearly opposite states.       |
+| ❌ Don't                                                                                   | ✅ Do                                                       |
+| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-3.png)                              | ![Image placeholder](/docs/assets/images/checkbox-do-3.png) |
+| Don't use an ambiguous label that makes it difficult to understand what the checkbox does. | Use checkbox labels that imply clearly opposite states.     |
 
-| ❌ Don't                                                      | ✅ Do                                                         |
-| ------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use long blocks of text.                                | Use concise language to describe each option.                 |
+| ❌ Don't                                                      | ✅ Do                                                       |
+| ------------------------------------------------------------- | ----------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-4.png) | ![Image placeholder](/docs/assets/images/checkbox-do-4.png) |
+| Don't use long blocks of text.                                | Use concise language to describe each option.               |
 
 ## Implementation
 
