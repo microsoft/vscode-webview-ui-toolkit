@@ -60,7 +60,7 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 					value = 'transparent';
 				}
 
-				// Set icon button hover to be transparent when in high contrast themes
+				// Set icon button hover to be transparent in high contrast themes
 				if (toolkitToken.name === 'button-icon-hover-background') {
 					value = 'transparent';
 				}
