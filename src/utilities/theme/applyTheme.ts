@@ -60,12 +60,12 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 					value = 'transparent';
 				}
 
-				// Set icon button hover to be transparent when in high contrast mode
+				// Set icon button hover to be transparent when in high contrast themes
 				if (toolkitToken.name === 'button-icon-hover-background') {
 					value = 'transparent';
 				}
 			} else {
-				// Set contrast-active-border token to be transparent in non-high-contrast mode
+				// Set contrast-active-border token to be transparent in non-high-contrast themes
 				if (toolkitToken.name === 'contrast-active-border') {
 					value = 'transparent';
 				}
