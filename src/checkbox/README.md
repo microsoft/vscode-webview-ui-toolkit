@@ -16,10 +16,10 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 | ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                   |
 | Avoid using horizontal checkbox group layouts.                | Arrange checkbox groups vertically to make it easy to scan and compare options. |
 
-| ❌ Don't                                                                                                        | ✅ Do                                                         |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                                   | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use checkboxes for options with more than two clear states. Consider using a radio button for such cases. | Use checkbox titles that imply opposite states.               |
+| ❌ Don't                                                                                   | ✅ Do                                                         |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/img-placeholder.png)                              | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
+| Don't use an ambiguous label that makes it difficult to understand what the checkbox does. | Use checkbox labels that imply clearly opposite states.       |
 
 | ❌ Don't                                                      | ✅ Do                                                         |
 | ------------------------------------------------------------- | ------------------------------------------------------------- |

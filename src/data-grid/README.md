@@ -20,7 +20,7 @@ The data grid is created using three components that work together:
 | ❌ Don't                                                             | ✅ Do                                                                                           |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | ![Image placeholder](/docs/assets/images/img-placeholder.png)        | ![Image placeholder](/docs/assets/images/img-placeholder.png)                                   |
-| Don't use data grids in small containers unless absolutely necessary | Place data grids in a main content area to display as much information in one view as possible. |
+| Don't use data grids in small containers unless absolutely necessary | Place data grids in a main content area to display as much information as possible in one view. |
 
 ## Implementation
 
