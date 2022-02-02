@@ -6,15 +6,15 @@ The `vscode-divider` is a web component implementation of a [horiztonal rule ele
 
 ## Usage
 
-| ❌ Don't                                                      | ✅ Do                                                         |
-| ------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use a divider to create pseudo-views within a webview.  | Use dividers to create distinct sections of related content   |
+| ❌ Don't                                                                             | ✅ Do                                                                                              |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| ![An editor panel divided into pseudo-views](/docs/assets/images/divider-dont-1.png) | ![A form with with multiple sections separated by a divider](/docs/assets/images/divider-do-1.png) |
+| Don't use a divider to create pseudo-views within a webview.                         | Use dividers to create distinct sections of related content in a single view.                      |
 
-| ❌ Don't                                                      | ✅ Do                                                         |
-| ------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't split up related form elements with a divider.          | Use a divider to separate multiple forms on the same page.    |
+| ❌ Don't                                                                           | ✅ Do                                                                          |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| ![A form with dividers between each input](/docs/assets/images/divider-dont-2.png) | ![A form with dividers between sections](/docs/assets/images/divider-do-2.png) |
+| Don't split up related form elements with a divider.                               | Use a divider to separate multiple forms on the same page.                     |
 
 ## Attributes
 

@@ -12,15 +12,15 @@ The data grid is created using three components that work together:
 
 ## Usage
 
-| ❌ Don't                                                      | ✅ Do                                                           |
-| ------------------------------------------------------------- | --------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)   |
-| Don't use a data grid in place of a basic list.               | Use data grids to list complex data with secondary information. |
+| ❌ Don't                                                                     | ✅ Do                                                                      |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| ![Data grid used as a simple list](/docs/assets/images/data-grid-dont-1.png) | ![Data grid with a large data set](/docs/assets/images/data-grid-do-1.png) |
+| Don't use a data grid in place of a basic list.                              | Use data grids to list complex data with secondary information.            |
 
-| ❌ Don't                                                             | ✅ Do                                                                                           |
-| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)        | ![Image placeholder](/docs/assets/images/img-placeholder.png)                                   |
-| Don't use data grids in small containers unless absolutely necessary | Place data grids in a main content area to display as much information as possible in one view. |
+| ❌ Don't                                                                    | ✅ Do                                                                                           |
+| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| ![Data grid in a VS Code sidebar](/docs/assets/images/data-grid-dont-2.png) | ![Data grid in a VS Code editor panel](/docs/assets/images/data-grid-do-2.png)                  |
+| Avoid data grids in small containers.                                       | Place data grids in a main content area to display as much information as possible in one view. |
 
 ## Implementation
 
