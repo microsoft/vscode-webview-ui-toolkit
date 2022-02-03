@@ -12,20 +12,20 @@ The component is created using three components that work together to interchang
 
 ## Usage
 
-| ❌ Don't                                                                                      | ✅ Do                                                         |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                 | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use more than six panel tabs to organize your extensions views to reduce load on users. | Structure content into as few tabs as possible.               |
+| ❌ Don't                                                                                      | ✅ Do                                                                               |
+| --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| ![Tab panel with too many tabs](/docs/assets/images/panels-dont-1.png)                        | ![Tab panel with several clearly labeled tabs](/docs/assets/images/panels-do-1.png) |
+| Don't use more than six panel tabs to organize your extensions views to reduce load on users. | Structure content into as few tabs as possible.                                     |
 
-| ❌ Don't                                                      | ✅ Do                                                           |
-| ------------------------------------------------------------- | --------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)   |
-| Don't use a random tab order.                                 | Tabs with related content should be grouped next to each other. |
+| ❌ Don't                                                                     | ✅ Do                                                           |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| ![Tab panel with random tab ordering](/docs/assets/images/panels-dont-2.png) | ![Image placeholder](/docs/assets/images/panels-do-2.png)       |
+| Don't use a random tab order.                                                | Tabs with related content should be grouped next to each other. |
 
-| ❌ Don't                                                      | ✅ Do                                                                             |
-| ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                     |
-| Don't use too many words in a tab label.                      | Use clear titles to ensure your extensions users know what to expect in each tab. |
+| ❌ Don't                                                                                           | ✅ Do                                                                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Tab featuring a very long label with multiple categories](/docs/assets/images/panels-dont-3.png) | ![Image placeholder](/docs/assets/images/panels-do-3.png)                                                                                                                                           |
+| Don't use too many words in a tab label.                                                           | Use clear, concise titles to ensure your extensions users know what to expect in each tab. Consider splitting content into multiple tabs if one panel contains many distinct categories of content. |
 
 ## Implementation
 
