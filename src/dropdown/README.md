@@ -6,15 +6,15 @@ The `vscode-dropdown` is a web component implementation of a [select element](ht
 
 ## Usage
 
-| ❌ Don't                                                                                                                                                                 | ✅ Do                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/dropdown-dont-1.png)                                                                                                            | ![Image placeholder](/docs/assets/images/dropdown-do-1.png) |
-| Don't use a dropdown for selections with with less than three options. Try a [checkbox group](../checkbox/README.md) or [radio group](../radio-group/README.md) instead. | Use dropdowns for selections with many unique options.      |
+| ❌ Don't                                                                                                                                                                 | ✅ Do                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
+| ![Dropdown with two options](/docs/assets/images/dropdown-dont-1.png)                                                                                                    | ![Dropdown with many options](/docs/assets/images/dropdown-do-1.png) |
+| Don't use a dropdown for selections with with less than three options. Try a [checkbox group](../checkbox/README.md) or [radio group](../radio-group/README.md) instead. | Use dropdowns for selections with many unique options.               |
 
-| ❌ Don't                                                      | ✅ Do                                                       |
-| ------------------------------------------------------------- | ----------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/dropdown-dont-2.png) | ![Image placeholder](/docs/assets/images/dropdown-do-2.png) |
-| Avoid overflowing text in dropdown list options.              | Use concise language to describe a selection.               |
+| ❌ Don't                                                                      | ✅ Do                                                                        |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![Dropdown with overflowing options](/docs/assets/images/dropdown-dont-2.png) | ![Dropdown options with short labels](/docs/assets/images/dropdown-do-2.png) |
+| Avoid overflowing text in dropdown list options.                              | Use concise language to describe a selection.                                |
 
 ## Implementation
 

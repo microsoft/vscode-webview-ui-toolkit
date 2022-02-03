@@ -6,15 +6,15 @@ The `vscode-link` is a web component implementation of an [anchor element](https
 
 ## Usage
 
-| ❌ Don't                                                      | ✅ Do                                                                     |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)             |
-| Don't use a link for actions or commands.                     | Use a link to to navigate to another location in a project or on the web. |
+| ❌ Don't                                                                               | ✅ Do                                                                     |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ![Link used for a refresh action](/docs/assets/images/link-dont-1.png)                 | ![Link used to navigate](/docs/assets/images/link-do-1.png)               |
+| Don't use a link for actions or commands. Try a [button](../button/README.md) instead. | Use a link to to navigate to another location in a project or on the web. |
 
-| ❌ Don't                                                      | ✅ Do                                                                   |
-| ------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)           |
-| Avoid vague link text.                                        | Use descriptive language that provides context to what is being linked. |
+| ❌ Don't                                                                                | ✅ Do                                                                                                                                    |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Link with text that fails to convey its purpose](/docs/assets/images/link-dont-2.png) | ![Link with clear language that conveys its purpose](/docs/assets/images/link-do-2.png)                                                  |
+| Avoid vague link text.                                                                  | Use descriptive language that provides context to what is being linked. Use inline links with text that provides additional information. |
 
 ## Implementation
 
