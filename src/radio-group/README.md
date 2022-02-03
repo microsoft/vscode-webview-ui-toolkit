@@ -8,18 +8,18 @@ The `vscode-radio-group` is a web component implementation of a [radio group](ht
 
 | ❌ Don't                                                                                                                 | ✅ Do                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                                            | ![Image placeholder](/docs/assets/images/img-placeholder.png)           |
+| ![Image placeholder](/docs/assets/images/radio-dont-1.png)                                                               | ![Image placeholder](/docs/assets/images/radio-do-1.png)                |
 | Don't use radio buttons when more than one selection is possible. Try using [checkboxes](../checkbox/README.md) instead. | Use radio groups for options that feature a single selection at a time. |
 
-| ❌ Don't                                                      | ✅ Do                                                                        |
-| ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                |
-| Avoid using horizontal radio group layouts.                   | Arrange radio groups vertically to make it easy to scan and compare options. |
+| ❌ Don't                                                   | ✅ Do                                                                        |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/radio-dont-2.png) | ![Image placeholder](/docs/assets/images/radio-do-2.png)                     |
+| Avoid using horizontal radio group layouts.                | Arrange radio groups vertically to make it easy to scan and compare options. |
 
-| ❌ Don't                                                      | ✅ Do                                                         |
-| ------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use long blocks of text.                                | Use concise language to describe each option.                 |
+| ❌ Don't                                                   | ✅ Do                                                    |
+| ---------------------------------------------------------- | -------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/radio-dont-3.png) | ![Image placeholder](/docs/assets/images/radio-do-3.png) |
+| Don't use long blocks of text.                             | Use concise language to describe each option.            |
 
 ## Implementation
 
