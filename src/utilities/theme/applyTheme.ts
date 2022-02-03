@@ -8,9 +8,9 @@ import type {T} from '../design-tokens/create';
  * Configures a MutationObserver to watch for Visual Studio Code theme changes and
  * applies the current Visual Studio Code theme to the toolkit components.
  */
-export function initThemeChangeListener(tokenMappings: {
-	[index: string]: CSSDesignToken<T>;
-}) {
+export function initThemeChangeListener(
+	tokenMappings: Map<string, CSSDesignToken<T>>
+) {
 	window.addEventListener('load', () => {
 		const observer = new MutationObserver(() => {
 			applyCurrentTheme(tokenMappings);
@@ -27,21 +27,51 @@ export function initThemeChangeListener(tokenMappings: {
 /**
  * Applies the current Visual Studio Code theme to the toolkit components.
  */
-function applyCurrentTheme(tokenMappings: {
-	[index: string]: CSSDesignToken<T>;
-}) {
+function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 	// Get all the styles applied to the <body> tag in the webview HTML
 	// Importantly this includes all the CSS variables associated with the
 	// current Visual Studio Code theme
 	const styles = getComputedStyle(document.body);
+	const body = document.querySelector('body');
 
-	for (const vscodeTokenName in tokenMappings) {
-		const toolkitTokenName = tokenMappings[vscodeTokenName];
-		const body = document.querySelector('body');
-		const value = styles.getPropertyValue(vscodeTokenName).toString();
+	if (body) {
+		const themeKind = body.getAttribute('data-vscode-theme-kind');
+		for (const [vscodeTokenName, toolkitToken] of tokenMappings) {
+			let value = styles.getPropertyValue(vscodeTokenName).toString();
 
-		if (body) {
-			toolkitTokenName.setValueFor(body, value);
+			// Handle a couple of styling edge cases when a high contrast theme is applied
+			if (themeKind === 'vscode-high-contrast') {
+				// Developer note:
+				//
+				// There are a handful of VS Code theme tokens that have no value when a high
+				// contrast theme is applied.
+				//
+				// This is an issue because when no value is set the toolkit tokens will fall
+				// back to their default color values (aka the VS Code dark theme color palette).
+				// This results in the backgrounds of a couple of components having default dark
+				// theme colors––thus breaking the high contrast theme.
+				//
+				// The below code, catches these tokens which have no value and are also background
+				// tokens, then overrides their value to be transparent.
+				if (
+					value.length === 0 &&
+					toolkitToken.name.includes('background')
+				) {
+					value = 'transparent';
+				}
+
+				// Set icon button hover to be transparent in high contrast themes
+				if (toolkitToken.name === 'button-icon-hover-background') {
+					value = 'transparent';
+				}
+			} else {
+				// Set contrast-active-border token to be transparent in non-high-contrast themes
+				if (toolkitToken.name === 'contrast-active-border') {
+					value = 'transparent';
+				}
+			}
+
+			toolkitToken.setValueFor(body, value);
 		}
 	}
 }

@@ -14,7 +14,7 @@ async function main() {
 	if (!fs.existsSync('./test-webview')) {
 		try {
 			console.log(color(['dim'], 'Copying webview test environment locally...'));
-			await execShellCommand('npx degit microsoft/vscode-webview-ui-toolkit-samples/all-components test-webview');
+			await execShellCommand('npx degit microsoft/vscode-webview-ui-toolkit-samples/default/all-components test-webview');
 		} catch (err) {
 			console.log(`${color(['red'], 'Error: Could not copy webview test environment locally')}\n    ${err}`);
 			process.exit();

@@ -25,6 +25,7 @@ import {
 	buttonSecondaryBackground,
 	buttonSecondaryForeground,
 	buttonSecondaryHoverBackground,
+	contrastActiveBorder,
 	cornerRadius,
 	designUnit,
 	disabledOpacity,
@@ -36,8 +37,24 @@ import {
 } from '../design-tokens';
 
 /**
+ * Developer note:
+ *
+ * The prettier-ignore command is used on this block of code because when removed the
+ * '.control:${focusVisible}' CSS selector will be automatically reformatted to
+ * '.control: ${focusVisible}' (note the space between the colon and dollar sign).
+ *
+ * This results in non-valid CSS that will not render a focus outline on base buttons.
+ *
+ * Additionally, this prettier command must be declared on the entire code block and not
+ * directly above the CSS selector line because the below code block is a template literal
+ * string which will end up being used directly in the final component CSS.
+ *
+ * Thus having '// prettier-ignore' directly in the final CSS will also break the component
+ * styling.
+ *
  * @internal
  */
+// prettier-ignore
 const BaseButtonStyles = css`
 	${display('inline-flex')} :host {
 		outline: none;
@@ -76,7 +93,7 @@ const BaseButtonStyles = css`
 	:host(:active) {
 		background: ${buttonPrimaryBackground};
 	}
-	.control: ${focusVisible} {
+	.control:${focusVisible} {
 		outline: calc(${borderWidth} * 1px) solid ${focusBorder};
 		outline-offset: calc(${borderWidth} * 2px);
 	}
@@ -161,9 +178,12 @@ const IconButtonStyles = css`
 	}
 	:host([appearance='icon']:hover) {
 		background: ${buttonIconHoverBackground};
+		outline: 1px dotted ${contrastActiveBorder};
+		outline-offset: -1px;
 	}
 	:host([appearance='icon']) .control {
 		padding: ${buttonIconPadding};
+		border: calc(${borderWidth} * 1px) solid transparent;
 	}
 	:host([appearance='icon']:active) .control:active {
 		background: ${buttonIconHoverBackground};
