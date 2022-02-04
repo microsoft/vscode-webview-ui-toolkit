@@ -1,6 +1,6 @@
 {
 	"name": "@vscode/webview-ui-toolkit",
-	"version": "0.8.5",
+	"version": "0.9.0",
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
 	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
 	"license": "MIT",
@@ -12,12 +12,12 @@
 		"type": "git",
 		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
 	},
-	"main": "dist/esm/index.js",
-	"types": "dist/dts/index.d.ts",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"sideEffects": false,
 	"scripts": {
 		"start": "start-storybook -p 6006",
-		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc",
+		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
 		"build:docs": "build-storybook",
 		"deploy:docs": "npm run build:docs && gh-pages -d storybook-static",
 		"doc": "api-extractor run --local",
@@ -30,8 +30,12 @@
 		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js"
 	},
 	"dependencies": {
-		"@microsoft/fast-element": "^1.6.0",
-		"@microsoft/fast-foundation": "^2.21.0"
+		"@microsoft/fast-element": "^1.6.2",
+		"@microsoft/fast-foundation": "^2.30.0",
+		"@microsoft/fast-react-wrapper": "^0.1.18"
+	},
+	"peerDependencies": {
+		"react": ">=16.9.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.14.3",
@@ -49,8 +53,8 @@
 		"@storybook/addon-links": "^6.4.0-beta.4",
 		"@storybook/html": "^6.4.0-beta.4",
 		"@storybook/theming": "^6.4.0-beta.4",
-		"@typescript-eslint/eslint-plugin": "^2.23.0",
 		"@types/jest": "^26.0.20",
+		"@typescript-eslint/eslint-plugin": "^2.23.0",
 		"@vscode/codicons": "^0.0.22",
 		"babel-jest": "^27.2.4",
 		"babel-loader": "^8.2.2",

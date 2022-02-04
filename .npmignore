@@ -17,6 +17,9 @@ test-webview
 build/
 storybook-static/
 
+# Scripts
+scripts
+
 # Config files
 .vscode
 .github
@@ -28,6 +31,7 @@ storybook-static/
 babel.config.js
 tsconfig.json
 tsconfig.build.json
+tsconfig.eslint.json
 webpack.config.js
 rollup.config.js
 policheck

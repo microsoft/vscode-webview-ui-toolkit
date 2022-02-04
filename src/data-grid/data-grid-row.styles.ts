@@ -7,9 +7,10 @@ import {
 	FoundationElementDefinition,
 } from '@microsoft/fast-foundation';
 import {
+	background,
+	contrastActiveBorder,
 	designUnit,
 	listHoverBackground,
-	quickInputBackground,
 } from '../design-tokens';
 
 export const dataGridRowStyles = (
@@ -26,11 +27,13 @@ export const dataGridRowStyles = (
 	:host(.header) {
 	}
 	:host(.sticky-header) {
-		background: ${quickInputBackground};
+		background: ${background};
 		position: sticky;
 		top: 0;
 	}
 	:host(:hover) {
 		background: ${listHoverBackground};
+		outline: 1px dotted ${contrastActiveBorder};
+		outline-offset: -1px;
 	}
 `;
