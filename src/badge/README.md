@@ -6,20 +6,20 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 ## Usage
 
-| ❌ Don't                                                                                           | ✅ Do                                                         |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                      | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use a badge to display text content. Use a [vscode-tag](../tag/README.md) component instead. | Use a badge to display numbers.                               |
+| ❌ Don't                                                                                           | ✅ Do                                                          |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| ![Badge with text value](/docs/assets/images/badge-dont-1.png)                                     | ![Badge with number value](/docs/assets/images/badge-do-1.png) |
+| Don't use a badge to display text content. Use a [vscode-tag](../tag/README.md) component instead. | Use a badge to display numbers.                                |
 
-| ❌ Don't                                                   | ✅ Do                                                    |
-| ---------------------------------------------------------- | -------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/badge-dont-1.png) | ![Image placeholder](/docs/assets/images/badge-do-1.png) |
-| Don't use a badge to indicate an error.                    | Use badges to indicate the numbered state of an element. |
+| ❌ Don't                                                                 | ✅ Do                                                                                      |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| ![Badge used to display and error](/docs/assets/images/badge-dont-2.png) | ![Badge showing the number of items in a history view](/docs/assets/images/badge-do-2.png) |
+| Don't use a badge to indicate an error.                                  | Use badges to indicate the numbered state of an element.                                   |
 
-| ❌ Don't                                                   | ✅ Do                                                          |
-| ---------------------------------------------------------- | -------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/badge-dont-2.png) | ![Image placeholder](/docs/assets/images/badge-do-2.png)       |
-| Don't use more than one badge on a single element.         | Ensure badges are clearly associated with their parent element |
+| ❌ Don't                                                                | ✅ Do                                                                            |
+| ----------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| ![Multiple badges on one element](/docs/assets/images/badge-dont-2.png) | ![One badge used for each section in a view](/docs/assets/images/badge-do-3.png) |
+| Don't use more than one badge on a single element.                      | Ensure badges are clearly associated with their parent element                   |
 
 ## Implementation
 
