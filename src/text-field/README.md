@@ -6,25 +6,25 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ## Usage
 
-| ❌ Don't                                                                                                                                    | ✅ Do                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)                                                                               | ![Image placeholder](/docs/assets/images/img-placeholder.png) |
-| Don't use a text field for inputs that are greater than a single line of text. Use a [text-area](../text-area/README.md) component instead. | Use text fields for short input values.                       |
+| ❌ Don't                                                                                                                                    | ✅ Do                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ![Text field with overflowing text](/docs/assets/images/text-field-dont-1.png)                                                              | ![Text field with a short value](/docs/assets/images/text-field-do-1.png) |
+| Don't use a text field for inputs that are greater than a single line of text. Use a [text-area](../text-area/README.md) component instead. | Use text fields for short input values.                                   |
 
-| ❌ Don't                                                                      | ✅ Do                                                                     |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png)                 | ![Image placeholder](/docs/assets/images/img-placeholder.png)             |
-| Don't use a placeholder value instead of a label unless absolutely necessary. | Use descriptive labels to help users understand the text field's purpose. |
+| ❌ Don't                                                                        | ✅ Do                                                                           |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ![Text field without a formal label](/docs/assets/images/text-field-dont-2.png) | ![Text label with a descriptive label](/docs/assets/images/text-field-do-2.png) |
+| Don't use a placeholder value instead of a label unless absolutely necessary.   | Use descriptive labels to help users understand the text field's purpose.       |
 
-| ❌ Don't                                                      | ✅ Do                                                                                         |
-| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)                                 |
-| Don't include critical information in a placeholder value.    | Use helper text if necessary to provide more information about the purpose of the text field. |
+| ❌ Don't                                                                                                   | ✅ Do                                                                                         |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| ![Text field with important information as a placeholder value](/docs/assets/images/text-field-dont-3.png) | ![Text field with helper text below](/docs/assets/images/text-field-do-3.png)                 |
+| Don't include critical information in a placeholder value.                                                 | Use helper text if necessary to provide more information about the purpose of the text field. |
 
-| ❌ Don't                                                      | ✅ Do                                                                 |
-| ------------------------------------------------------------- | --------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/img-placeholder.png) | ![Image placeholder](/docs/assets/images/img-placeholder.png)         |
-| Don't use decorative icons in a text field.                   | Use icons to help users quickly identify the purpose of a text field. |
+| ❌ Don't                                                                                     | ✅ Do                                                                                                      |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| ![Text field with an icon providing little value](/docs/assets/images/text-field-dont-4.png) | ![Text field with a search icon](/docs/assets/images/text-field-do-4.png)                                  |
+| Don't use decorative icons in a text field.                                                  | Use icons to help users quickly identify the purpose of a text field&mdash;especially if no label is used. |
 
 ## Implementation
 
