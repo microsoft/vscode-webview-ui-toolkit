@@ -6,7 +6,7 @@
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 ![Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 
-![Webview Toolkit for Visual Studio Code Artwork](./docs/assets/toolkit-artwork.png)
+![Webview Toolkit for Visual Studio Code Artwork](./docs/assets/images/toolkit-artwork.png)
 
 ## Introduction
 
