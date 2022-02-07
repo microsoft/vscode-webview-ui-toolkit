@@ -2,7 +2,33 @@
 
 The `vscode-checkbox` is a web component implementation of a [checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox).
 
-## Attributes
+![Checkbox hero](/docs/assets/images/checkbox-hero.png)
+
+## Usage
+
+| ❌ Don't                                                      | ✅ Do                                                                                                                                                                                             |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-1.png) | ![Image placeholder](/docs/assets/images/checkbox-do-1.png)                                                                                                                                       |
+| Avoid grouping unrelated checkboxes together.                 | Split related checkboxes into groups of with descriptive labels. It's ok to group up to three loosely-unrelated checkboxes into one group if using a label that generally captures their purpose. |
+
+| ❌ Don't                                                      | ✅ Do                                                                           |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-2.png) | ![Image placeholder](/docs/assets/images/checkbox-do-2.png)                     |
+| Avoid using horizontal checkbox group layouts.                | Arrange checkbox groups vertically to make it easy to scan and compare options. |
+
+| ❌ Don't                                                                                   | ✅ Do                                                       |
+| ------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-3.png)                              | ![Image placeholder](/docs/assets/images/checkbox-do-3.png) |
+| Don't use an ambiguous label that makes it difficult to understand what the checkbox does. | Use checkbox labels that imply clearly opposite states.     |
+
+| ❌ Don't                                                      | ✅ Do                                                       |
+| ------------------------------------------------------------- | ----------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-4.png) | ![Image placeholder](/docs/assets/images/checkbox-do-4.png) |
+| Don't use long blocks of text.                                | Use concise language to describe each option.               |
+
+## Implementation
+
+### Attributes
 
 | Attribute   | Type    | Description                                                                              |
 | ----------- | ------- | ---------------------------------------------------------------------------------------- |
@@ -13,15 +39,13 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 | `required`  | boolean | Indicates that the user must check the checkbox before the owning form can be submitted. |
 | `value`     | string  | The string to use as the value of the checkbox when submitting the form                  |
 
-## Properties
+### Properties
 
 | Attribute       | Type    | Description                                                               |
 | --------------- | ------- | ------------------------------------------------------------------------- |
 | `indeterminate` | boolean | Determines if the element should render the indeterminate checkbox state. |
 
-## Usage
-
-### Basic Usage
+### Basic Checkbox
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--default)
 
