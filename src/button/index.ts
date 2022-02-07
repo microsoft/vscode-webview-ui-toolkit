@@ -80,7 +80,7 @@ export class Button extends FoundationButton {
 		}
 
 		if (attrName === 'disabled') {
-			this.disabled = true;
+			this.disabled = newVal !== null;
 		}
 	}
 }
