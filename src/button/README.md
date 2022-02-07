@@ -24,7 +24,7 @@ The `vscode-button` is a web component implementation of a [button element](http
 | ❌ Don't                                                                | ✅ Do                                                               |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | ![Buttons with incorrect casing](/docs/assets/images/button-dont-2.png) | ![Buttons with correct casing](/docs/assets/images/button-do-2.png) |
-| Don't use all caps or lowercase text.                                   | Use sentence case for all button text.                              |
+| Don't use fully capitalized or lowercase text.                          | Use sentence case for all button text.                              |
 
 | ❌ Don't                                                            | ✅ Do                                                                                          |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |

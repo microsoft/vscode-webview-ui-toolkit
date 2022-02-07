@@ -14,7 +14,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | ❌ Don't                                                                        | ✅ Do                                                                           |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ![Text field without a formal label](/docs/assets/images/text-field-dont-2.png) | ![Text label with a descriptive label](/docs/assets/images/text-field-do-2.png) |
-| Don't use a placeholder value instead of a label unless absolutely necessary.   | Use descriptive labels to help users understand the text field's purpose.       |
+| Don't use a placeholder value instead of a label unless absolutely necessary.   | Use descriptive labels to help users understand the text fields purpose.        |
 
 | ❌ Don't                                                                                                   | ✅ Do                                                                                         |
 | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
