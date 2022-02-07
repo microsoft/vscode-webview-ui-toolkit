@@ -6,10 +6,10 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 ## Usage
 
-| ❌ Don't                                                      | ✅ Do                                                             |
-| ------------------------------------------------------------- | ----------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/checkbox-dont-1.png) | ![Image placeholder](/docs/assets/images/checkbox-do-1.png)       |
-| Don't group unrelated checkboxes together.                    | Introduce a group of related checkboxes with a descriptive label. |
+| ❌ Don't                                                      | ✅ Do                                                                                                                                                                                             |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Image placeholder](/docs/assets/images/checkbox-dont-1.png) | ![Image placeholder](/docs/assets/images/checkbox-do-1.png)                                                                                                                                       |
+| Avoid grouping unrelated checkboxes together.                 | Split related checkboxes into groups of with descriptive labels. It's ok to group up to three loosely-unrelated checkboxes into one group if using a label that generally captures their purpose. |
 
 | ❌ Don't                                                      | ✅ Do                                                                           |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------- |
