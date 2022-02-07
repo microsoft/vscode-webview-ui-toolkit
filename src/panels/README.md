@@ -22,10 +22,10 @@ The component is created using three components that work together to interchang
 | ![Tab panel with random tab ordering](/docs/assets/images/panels-dont-2.png) | ![Image placeholder](/docs/assets/images/panels-do-2.png)       |
 | Don't use a random tab order.                                                | Tabs with related content should be grouped next to each other. |
 
-| ❌ Don't                                                                                           | ✅ Do                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Tab featuring a very long label with multiple categories](/docs/assets/images/panels-dont-3.png) | ![Image placeholder](/docs/assets/images/panels-do-3.png)                                                                                                                                           |
-| Don't use too many words in a tab label.                                                           | Use clear, concise titles to ensure your extensions users know what to expect in each tab. Consider splitting content into multiple tabs if one panel contains many distinct categories of content. |
+| ❌ Don't                                                                                           | ✅ Do                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Tab featuring a very long label with multiple categories](/docs/assets/images/panels-dont-3.png) | ![Image placeholder](/docs/assets/images/panels-do-3.png)                                                                                                                    |
+| Don't use too many words in a tab label or group too many sections in a single tab.                | Use concise titles to ensure users know what to expect in each tab. Consider splitting content into multiple tabs if one panel contains many distinct categories of content. |
 
 ## Implementation
 
