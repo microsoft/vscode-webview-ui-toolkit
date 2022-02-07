@@ -26,15 +26,20 @@ The `vscode-button` is a web component implementation of a [button element](http
 | ![Buttons with incorrect casing](/docs/assets/images/button-dont-2.png) | ![Buttons with correct casing](/docs/assets/images/button-do-2.png) |
 | Don't use all caps or lowercase text.                                   | Use sentence case for all button text.                              |
 
-| ❌ Don't                                                    | ✅ Do                                                                                          |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| ![Image placeholder](/docs/assets/images/button-dont-3.png) | ![Image placeholder](/docs/assets/images/button-do-3.png)                                      |
-| Don't use vague action text.                                | Use clear verbs like "Save" or "Cancel" to ensure users feel confident when peforming actions. |
+| ❌ Don't                                                            | ✅ Do                                                                                          |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| ![Button with a vague label](/docs/assets/images/button-dont-3.png) | ![Button with a clear label](/docs/assets/images/button-do-3.png)                              |
+| Don't use vague action text.                                        | Use clear verbs like "Save" or "Cancel" to ensure users feel confident when peforming actions. |
 
-| ❌ Don't                                                                                    | ✅ Do                                                        |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| ![Image placeholder](/docs/assets/images//button-dont-4.png)                                | ![Image placeholder](/docs/assets/images//button-do-4.png)   |
-| Don't use buttons as navigational elements. Use a [vscode-link](../link/README.md) instead. | Use buttons to perform actions relevant to the current view. |
+| ❌ Don't                                                                                    | ✅ Do                                                                                  |
+| ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| ![Button used as a link](/docs/assets/images//button-dont-4.png)                            | ![Button clearly associated with the view above](/docs/assets/images//button-do-4.png) |
+| Don't use buttons as navigational elements. Use a [vscode-link](../link/README.md) instead. | Use buttons to perform actions relevant to the current view.                           |
+
+| ❌ Don't                                                                       | ✅ Do                                                                                                       |
+| ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| ![Icon button used for primary action](/docs/assets/images//button-dont-5.png) | ![Icon buttons in a group](/docs/assets/images//button-do-5.png)                                            |
+| Don't use an icon button for primary actions.                                  | Use icon buttons for supporting actions in space-constrained layouts. Use icons that convey clear outcomes. |
 
 ## Implementation
 
