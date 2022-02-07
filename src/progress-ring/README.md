@@ -22,7 +22,7 @@ The `vscode-progress-ring` component is used to indicate an indeterminate loadin
 
 None
 
-### Basic Usage
+### Basic Progress Ring
 
 The progress ring displays a looping animation to indicate an indeterminate state where the wait time is unspecified.
 

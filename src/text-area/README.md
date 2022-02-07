@@ -41,7 +41,7 @@ Read the [text-field](../text-field/README.md) usage guidelines for general guid
 | `rows`        | number  | Sizes the component vertically by a number of character rows.                              |
 | `value`       | string  | The value (i.e. content) of the text area.                                                 |
 
-### Basic Usage
+### Basic Text Area
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--default)
 

@@ -18,7 +18,7 @@ The `vscode-option` component will only provide internals related to form associ
 | `selected` | boolean | The selected attribute value. This sets the initial selected value. |
 | `value`    | string  | The initial value of the option.                                    |
 
-### Basic Usage
+### Basic Option
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-option--default)
 

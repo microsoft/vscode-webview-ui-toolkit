@@ -42,7 +42,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 | `type`        | string  | Sets the text field type.                                                                  |
 | `value`       | string  | The value (i.e. content) of the text field.                                                |
 
-### Basic Usage
+### Basic Text Field
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--default)
 

@@ -6,10 +6,10 @@ The `vscode-link` is a web component implementation of an [anchor element](https
 
 ## Usage
 
-| ❌ Don't                                                                               | ✅ Do                                                                     |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Link used for a refresh action](/docs/assets/images/link-dont-1.png)                 | ![Link used to navigate](/docs/assets/images/link-do-1.png)               |
-| Don't use a link for actions or commands. Try a [button](../button/README.md) instead. | Use a link to to navigate to another location in a project or on the web. |
+| ❌ Don't                                                                               | ✅ Do                                                                  |
+| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![Link used for a refresh action](/docs/assets/images/link-dont-1.png)                 | ![Link used to navigate](/docs/assets/images/link-do-1.png)            |
+| Don't use a link for actions or commands. Try a [button](../button/README.md) instead. | Use a link to navigate to another location in a project or on the web. |
 
 | ❌ Don't                                                                                | ✅ Do                                                                                                                                    |
 | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,7 +31,7 @@ The `vscode-link` is a web component implementation of an [anchor element](https
 | `target`         | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes). |
 | `type`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes). |
 
-### Basic Usage (With Href Attribute)
+### Basic Link (With Href Attribute)
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-link--default)
 

@@ -33,7 +33,7 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 | `open`     | boolean | If true, toggles the dropdown to the open position.                                          |
 | `position` | string  | Reflects the placement for the listbox when the dropdown is open. Options: `above`, `below`. |
 
-### Basic Usage
+### Basic Dropdown
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-dropdown--default)
 

@@ -22,7 +22,7 @@ The `vscode-divider` is a web component implementation of a [horiztonal rule ele
 | --------- | ------ | ---------------------------------------------- |
 | role      | string | Indicates the semantic meaning of the divider. |
 
-### Basic Usage
+### Basic Divider
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-divider--default)
 

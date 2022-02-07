@@ -51,7 +51,7 @@ An aria-label of "Data Grid" is automatically defined on all data grids so they 
 
 For example, if you're using a data grid to display real-time earthquake data, adding an aria-label with the value "Real-Time Earthquakes" would be appropriate.
 
-### Basic Usage
+### Basic Data Grid
 
 The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below.
 

@@ -17,7 +17,7 @@ The `vscode-tag` component is used to label an item, attract attention, and/or f
 
 None
 
-### Basic Usage
+### Basic Tag
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-tag--default)
 

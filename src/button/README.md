@@ -61,7 +61,7 @@ The `vscode-button` is a web component implementation of a [button element](http
 | `type`           | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
 | `value`          | string  | See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attributes). |
 
-### Basic Usage
+### Basic Button
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--default)
 

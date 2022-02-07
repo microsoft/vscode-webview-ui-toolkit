@@ -34,7 +34,7 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 | `orientation` | string  | The orientation of the group. Options: `horiztonal`, `vertical`.                             |
 | `readonly`    | boolean | When true, the child radios will be immutable by user interaction.                           |
 
-### Basic Usage
+### Basic Radio Group
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--default)
 

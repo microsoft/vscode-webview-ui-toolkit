@@ -45,7 +45,7 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 | --------------- | ------- | ------------------------------------------------------------------------- |
 | `indeterminate` | boolean | Determines if the element should render the indeterminate checkbox state. |
 
-### Basic Usage
+### Basic Checkbox
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--default)
 

@@ -27,7 +27,7 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 None
 
-### Default
+### Basic Badge
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-badge--default)
 

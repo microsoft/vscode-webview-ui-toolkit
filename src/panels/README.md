@@ -126,7 +126,7 @@ To apply styling to multiple `<vscode-panel-view>` components (but not all):
 
 _Finally, an important detail to be aware of is that `<br/>` tags are [known to not to play well with flexboxes](https://stackoverflow.com/questions/45087054/br-is-not-friendly-with-the-flexbox). So if you absolutely need that tag you should likely opt out of the default flexbox behavior._
 
-### Basic Usage
+### Basic Panel
 
 Note: Adding a unique ID to each `<vscode-panel-tab>` and `<vscode-panel-view>` component is a convention that helps with easily styling and identifying each tab and view component, but it is not explicitly required unless the `activeid` attribute is being used as demonstrated in the next section.
 

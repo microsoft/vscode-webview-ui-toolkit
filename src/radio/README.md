@@ -19,7 +19,7 @@ For guidelines on usage in an extension, see the [vscode-radio-group](../radio-g
 
 ## Implementation
 
-### Basic Usage
+### Basic Radio
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio--default)
 
