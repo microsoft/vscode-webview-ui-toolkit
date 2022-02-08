@@ -35,19 +35,15 @@ export const linkStyles = (
 		outline: none;
 	}
 	.control {
-		align-items: center;
 		background: transparent;
 		border: calc(${borderWidth} * 1px) solid transparent;
 		border-radius: calc(${cornerRadius} * 1px);
 		box-sizing: border-box;
 		color: inherit;
 		cursor: inherit;
-		display: inline-flex;
 		fill: inherit;
 		font-family: inherit;
-		flex-grow: 1;
 		height: inherit;
-		justify-content: center;
 		padding: 0;
 		outline: none;
 		text-decoration: none;
