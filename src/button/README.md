@@ -63,17 +63,25 @@ The `vscode-button` is a web component implementation of a [button element](http
 
 ### Basic Button
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--default)
+**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--default)
 
 ```html
 <vscode-button>Button Text</vscode-button>
+```
+
+**React Component**
+
+```jsx
+import {VSCodeButton} from '@vscode/webview-ui-toolkit/react';
+
+<VSCodeButton>Button text</VSCodeButton>
 ```
 
 ### Appearance Attribute
 
 There are a number of visual appearances that the `vscode-button` can have. The default appearance is `primary`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--default)
+**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--default)
 
 ```html
 <vscode-button appearance="primary">Button Text</vscode-button>
@@ -83,27 +91,55 @@ There are a number of visual appearances that the `vscode-button` can have. The 
 </vscode-button>
 ```
 
+**React Component**
+
+```jsx
+import {VSCodeButton} from '@vscode/webview-ui-toolkit/react';
+
+<VSCodeButton appearance="primary">Button Text</VSCodeButton>
+<VSCodeButton appearance="secondary">Button Text</VSCodeButton>
+<VSCodeButton appearance="icon">
+	<span class="codicon codicon-check"></span>
+</VSCodeButton>
+```
+
 ### Autofocus Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-autofocus)
+**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-autofocus)
 
 ```html
 <vscode-button autofocus>Button Text</vscode-button>
 ```
 
+**React Component**
+
+```jsx
+import {VSCodeButton} from '@vscode/webview-ui-toolkit/react';
+
+<VSCodeButton autofocus>Button Text</VSCodeButton>
+```
+
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-disabled)
+**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-disabled)
 
 ```html
 <vscode-button disabled>Button Text</vscode-button>
+```
+
+**React Component**
+
+```jsx
+import {VSCodeButton} from '@vscode/webview-ui-toolkit/react';
+
+<VSCodeButton disabled>Button Text</VSCodeButton>
 ```
 
 ### Start Icon
 
 An icon can be added to the left of Button text by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-start-icon)
+**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-start-icon)
 
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
@@ -112,6 +148,17 @@ An icon can be added to the left of Button text by adding an element with the at
 	Button Text
 	<span slot="start" class="codicon codicon-add"></span>
 </vscode-button>
+```
+
+**React Component**
+
+```jsx
+import {VSCodeButton} from '@vscode/webview-ui-toolkit/react';
+
+<VSCodeButton>
+	Button Text
+	<span slot="start" class="codicon codicon-add"></span>
+</VSCodeButton>
 ```
 
 ### Icon Only
@@ -126,7 +173,7 @@ An `aria-label` of "Icon Button" is automatically defined on all icon buttons so
 
 For example, if you're using an icon button to confirm a state change, adding an `aria-label` with the value "Confirm" or "Confirm Changes" would be appropriate.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-icon-only)
+**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-button--with-icon-only)
 
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
@@ -134,4 +181,14 @@ For example, if you're using an icon button to confirm a state change, adding an
 <vscode-button appearance="icon" aria-label="Confirm">
 	<span class="codicon codicon-check"></span>
 </vscode-button>
+```
+
+**React Component**
+
+```jsx
+import {VSCodeButton} from '@vscode/webview-ui-toolkit/react';
+
+<VSCodeButton appearance="icon" aria-label="Confirm">
+	<span class="codicon codicon-check"></span>
+</VSCodeButton>
 ```
