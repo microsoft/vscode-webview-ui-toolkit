@@ -2,9 +2,15 @@
 
 The `vscode-option` is a web component implementation of an [option](https://w3c.github.io/aria/#option).
 
-The `vscode-option` component will only provide internals related to form association when used within a form-associated component. See the `vscode-dropdown` component for more details.
+![Option hero](/docs/assets/images/option-hero.png)
 
-## Attributes
+## Usage
+
+The `vscode-option` component will only provide internals related to form association when used within a form-associated component. See the [vscode-dropdown](../dropdown/README.md) component for more details.
+
+## Implementation
+
+### Attributes
 
 | Attribute  | Type    | Description                                                         |
 | ---------- | ------- | ------------------------------------------------------------------- |
@@ -12,9 +18,7 @@ The `vscode-option` component will only provide internals related to form associ
 | `selected` | boolean | The selected attribute value. This sets the initial selected value. |
 | `value`    | string  | The initial value of the option.                                    |
 
-## Usage
-
-### Basic Usage
+### Basic Option
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-option--default)
 

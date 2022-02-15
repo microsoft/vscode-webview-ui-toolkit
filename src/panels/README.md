@@ -1,26 +1,47 @@
 # Visual Studio Code Panels
 
-The `vscode-panels` component is a web component implementation of a [tab](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role). The component is created using three components that work together to interchangably display different content:
+The `vscode-panels` component is a web component implementation of a [tab](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role).
+
+![Panel hero](/docs/assets/images/panels-hero.png)
+
+The component is created using three components that work together to interchangably display different content:
 
 -   `<vscode-panels>`: The top level container element.
 -   `<vscode-panel-tab>`: Renders the panel tab that will be associated with a panel view.
 -   `<vscode-panel-view>`: The container element that will hold content associated with a given tab.
 
-## Panels Attributes
+## Usage
+
+| ❌ Don't                                                                                      | ✅ Do                                                                               |
+| --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| ![Tab panel with too many tabs](/docs/assets/images/panels-dont-1.png)                        | ![Tab panel with several clearly labeled tabs](/docs/assets/images/panels-do-1.png) |
+| Don't use more than six panel tabs to organize your extensions views to reduce load on users. | Structure content into as few tabs as possible.                                     |
+
+| ❌ Don't                                                                     | ✅ Do                                                           |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| ![Tab panel with random tab ordering](/docs/assets/images/panels-dont-2.png) | ![Image placeholder](/docs/assets/images/panels-do-2.png)       |
+| Don't use a random tab order.                                                | Tabs with related content should be grouped next to each other. |
+
+| ❌ Don't                                                                                           | ✅ Do                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Tab featuring a very long label with multiple categories](/docs/assets/images/panels-dont-3.png) | ![Image placeholder](/docs/assets/images/panels-do-3.png)                                                                                                                    |
+| Don't use too many words in a tab label or group too many sections in a single tab.                | Use concise titles to ensure users know what to expect in each tab. Consider splitting content into multiple tabs if one panel contains many distinct categories of content. |
+
+## Implementation
+
+### Panels Attributes
 
 | Attribute  | Type   | Description                     |
 | ---------- | ------ | ------------------------------- |
 | `activeid` | string | The id of the active panel tab. |
 
-## Panel Tab Attributes
+### Panel Tab Attributes
 
 None
 
-## Panel View Attributes
+### Panel View Attributes
 
 None
-
-## Usage
 
 **❗️❗️❗️ Important ❗️❗️❗️**
 
@@ -105,7 +126,7 @@ To apply styling to multiple `<vscode-panel-view>` components (but not all):
 
 _Finally, an important detail to be aware of is that `<br/>` tags are [known to not to play well with flexboxes](https://stackoverflow.com/questions/45087054/br-is-not-friendly-with-the-flexbox). So if you absolutely need that tag you should likely opt out of the default flexbox behavior._
 
-### Basic Usage
+### Basic Panel
 
 Note: Adding a unique ID to each `<vscode-panel-tab>` and `<vscode-panel-view>` component is a convention that helps with easily styling and identifying each tab and view component, but it is not explicitly required unless the `activeid` attribute is being used as demonstrated in the next section.
 

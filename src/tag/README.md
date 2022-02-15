@@ -2,17 +2,22 @@
 
 The `vscode-tag` component is used to label an item, attract attention, and/or flag status.
 
-## Attributes
-
-None
+![Tag hero](/docs/assets/images/tag-hero.png)
 
 ## Usage
 
-A `vscode-tag` should only contain text and will be automatically be converted uppercase to follow the conventions of the Visual Studio Code design language.
+| ❌ Don't                                                                                                                                                  | ✅ Do                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| ![A tag incorrectly displaying numbers](/docs/assets/images/tag-dont-1.png)                                                                               | ![A tag using a text label](/docs/assets/images/tag-do-1.png)      |
+| Don't use tags to display numbers. If a component that highlights an item with a number is desired, see the [vscode-badge](../badge/README.md) component. | Use tags as text labels to indicate purpose or status for content. |
 
-If a component that highlights an item with a number is desired, see the `vscode-badge` component.
+## Implementation
 
-### Basic Usage
+### Attributes
+
+None
+
+### Basic Tag
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-tag--default)
 

@@ -1,33 +1,49 @@
 # Visual Studio Code Data Grid
 
-The `vscode-data-grid` enables developers to display data in a tabular layout. The data grid is created using three components that work together:
+The `vscode-data-grid` enables developers to display data in a tabular layout.
+
+![Data grid hero](/docs/assets/images/data-grid-hero.png)
+
+The data grid is created using three components that work together:
 
 -   `<vscode-data-grid>`: The top level container element.
 -   `<vscode-data-grid-row>`: Displays a single row of data associated with a single record or a header row.
 -   `<vscode-data-grid-cell>`: Displays a single cell of data within a row.
 
-## Data Grid Attributes
+## Usage
+
+| ❌ Don't                                                                     | ✅ Do                                                                      |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| ![Data grid used as a simple list](/docs/assets/images/data-grid-dont-1.png) | ![Data grid with a large data set](/docs/assets/images/data-grid-do-1.png) |
+| Don't use a data grid in place of a basic list.                              | Use data grids to list complex data with secondary information.            |
+
+| ❌ Don't                                                                    | ✅ Do                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Data grid in a VS Code sidebar](/docs/assets/images/data-grid-dont-2.png) | ![Data grid in a VS Code editor panel](/docs/assets/images/data-grid-do-2.png)                                                                                                                                  |
+| Avoid data grids in small containers if possible.                           | Place data grids in a main content area to display as much information as possible in one view. It's ok to use a data grid in a small container if only using 2-3 small columns that don't scroll horizontally. |
+
+## Implementation
+
+### Data Grid Attributes
 
 | Attribute               | Type   | Description                                                                            |
 | ----------------------- | ------ | -------------------------------------------------------------------------------------- |
 | `generate-header`       | string | The type of header row that should be generated. Options: `default`, `sticky`, `none`. |
 | `grid-template-columns` | string | A string that gets applied to the `grid-template-columns` attribute of child rows.     |
 
-## Data Grid Row Attributes
+### Data Grid Row Attributes
 
 | Attribute               | Type   | Description                                                          |
 | ----------------------- | ------ | -------------------------------------------------------------------- |
 | `grid-template-columns` | string | A CSS Grid string that defines the column widths of a data grid row. |
 | `row-type`              | string | The type of row. Options: `default`, `header`, `sticky-header`.      |
 
-## Data Grid Cell Attributes
+### Data Grid Cell Attributes
 
 | Attribute     | Type   | Description                                           |
 | ------------- | ------ | ----------------------------------------------------- |
 | `cell-type`   | string | The type of cell. Options: `default`, `columnheader`. |
 | `grid-column` | string | The column index of the cell.                         |
-
-## Usage
 
 ❗️❗️❗️ Important ❗️❗️❗️
 
@@ -35,7 +51,7 @@ An aria-label of "Data Grid" is automatically defined on all data grids so they 
 
 For example, if you're using a data grid to display real-time earthquake data, adding an aria-label with the value "Real-Time Earthquakes" would be appropriate.
 
-### Basic Usage
+### Basic Data Grid
 
 The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below.
 
