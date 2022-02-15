@@ -47,82 +47,42 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 ### Basic Checkbox
 
-**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--default)
 
 ```html
 <vscode-checkbox>Label</vscode-checkbox>
 ```
 
-**React Component**
-
-```jsx
-import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeCheckbox>Label</VSCodeCheckbox>
-```
-
 ### Autofocus Attribute
 
-**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-autofocus)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-autofocus)
 
 ```html
 <vscode-checkbox autofocus>Label</vscode-checkbox>
 ```
 
-**React Component**
-
-```jsx
-import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeCheckbox autofocus>Label</VSCodeCheckbox>
-```
-
 ### Checked Attribute
 
-**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-checked)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-checked)
 
 ```html
 <vscode-checkbox checked>Label</vscode-checkbox>
 ```
 
-**React Component**
-
-```jsx
-import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeCheckbox checked>Label</VSCodeCheckbox>
-```
-
 ### Disabled Attribute
 
-**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-disabled)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-disabled)
 
 ```html
 <vscode-checkbox disabled>Label</vscode-checkbox>
 ```
 
-**React Component**
-
-```jsx
-import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeCheckbox disabled>Label</VSCodeCheckbox>
-```
-
 ### Readonly Attribute
 
-**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-read-only)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-read-only)
 
 ```html
 <vscode-checkbox readonly>Label</vscode-checkbox>
-```
-
-**React Component**
-
-```jsx
-import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeCheckbox readonly>Label</VSCodeCheckbox>
 ```
 
 ### Required Attribute
@@ -131,51 +91,27 @@ import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
 <vscode-checkbox required>Label</vscode-checkbox>
 ```
 
-**React Component**
-
-```jsx
-import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeCheckbox required>Label</VSCodeCheckbox>
-```
-
 ### Value Attribute
 
-**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-value)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-value)
 
 ```html
 <vscode-checkbox value="baz">Label</vscode-checkbox>
-```
-
-**React Component**
-
-```jsx
-import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeCheckbox value="baz">Label</VSCodeCheckbox>
 ```
 
 ### Indeterminate Property
 
 Checkboxes can also render an indeterminate state. This is achieved by getting a reference to a given checkbox using JavaScript and then setting the `indeterminate` property of the checkbox to `true`.
 
-**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-indeterminate)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-indeterminate)
 
 ```javascript
-const checkbox = document.getElementById('basic-checkbox');
+const checkbox = document.getElementById("basic-checkbox");
 checkbox.indeterminate = true;
 ```
 
 ```html
 <vscode-checkbox id="basic-checkbox">Label</vscode-checkbox>
-```
-
-**React Component**
-
-```jsx
-import {VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-// TODO: Add example
 ```
 
 ### Form Usage
@@ -184,33 +120,14 @@ Here is an example of the Visual Studio Code Checkbox and its various attributes
 
 ```html
 <form>
-	<fieldset>
-		<legend>Fieldset Legend</legend>
-		<vscode-checkbox checked required>Checked + Required</vscode-checkbox>
-		<vscode-checkbox checked readonly>Checked + Readonly</vscode-checkbox>
-		<vscode-checkbox autofocus>Autofocus</vscode-checkbox>
-		<vscode-checkbox disabled>Disabled</vscode-checkbox>
-		<vscode-checkbox value="baz">Value Set To "baz"</vscode-checkbox>
-	</fieldset>
-	<vscode-button type="submit">Submit Button</vscode-button>
-</form>
-```
-
-**React Component**
-
-```jsx
-import {VSCodeButton, VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeCheckbox value="baz">Label</VSCodeCheckbox>
-<form>
-	<fieldset>
-		<legend>Fieldset Legend</legend>
-		<VSCodeCheckbox checked required>Checked + Required</VSCodeCheckbox>
-		<VSCodeCheckbox checked readonly>Checked + Readonly</VSCodeCheckbox>
-		<VSCodeCheckbox autofocus>Autofocus</VSCodeCheckbox>
-		<VSCodeCheckbox disabled>Disabled</VSCodeCheckbox>
-		<VSCodeCheckbox value="baz">Value Set To "baz"</VSCodeCheckbox>
-	</fieldset>
-	<VSCodeButton type="submit">Submit Button</VSCodeButton>
+  <fieldset>
+    <legend>Fieldset Legend</legend>
+    <vscode-checkbox checked required>Checked + Required</vscode-checkbox>
+    <vscode-checkbox checked readonly>Checked + Readonly</vscode-checkbox>
+    <vscode-checkbox autofocus>Autofocus</vscode-checkbox>
+    <vscode-checkbox disabled>Disabled</vscode-checkbox>
+    <vscode-checkbox value="baz">Value Set To "baz"</vscode-checkbox>
+  </fieldset>
+  <vscode-button type="submit">Submit Button</vscode-button>
 </form>
 ```

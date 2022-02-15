@@ -29,16 +29,8 @@ None
 
 ### Basic Badge
 
-**Web Component:** [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-badge--default)
+[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-badge--default)
 
 ```html
 <vscode-badge>1</vscode-badge>
-```
-
-**React Component**
-
-```jsx
-import {VSCodeBadge} from '@vscode/webview-ui-toolkit/react';
-
-<VSCodeBadge>1</VSCodeBadge>
 ```

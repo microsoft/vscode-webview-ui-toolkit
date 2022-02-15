@@ -11,7 +11,7 @@
 	"arrowParens": "avoid",
 	"overrides": [
 		{
-			"files": "docs/*.md",
+			"files": ["docs/*.md", "src/**/README.md"],
 			"options": {
 				"printWidth": 130,
 				"singleQuote": false,
