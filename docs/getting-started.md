@@ -216,7 +216,7 @@ To test that everything is working, inside the editor, press `F5`. This will com
 
 When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), type "Hello World", and click `enter` to run the command which should display the webview panel.
 
-![Testing That The Webview Extension Works](./assets/webview-test.gif)
+![Testing That The Webview Extension Works](./assets/images/webview-test.gif)
 
 ## Part 2: Install and set up the toolkit
 
@@ -383,13 +383,13 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 }
 ```
 
-![Testing That The Toolkit Works](./assets/toolkit-button-test.gif)
+![Testing That The Toolkit Works](./assets/images/toolkit-button-test.gif)
 
 Theming is built right into the components so feel free to test that out too!
 
 Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme", and cycle through all the themes to see the button change!
 
-![Testing That The Toolkit Theme Utilities Work](./assets/toolkit-theme-test.gif)
+![Testing That The Toolkit Theme Utilities Work](./assets/images/toolkit-theme-test.gif)
 
 ## Part 3: Set up message passing
 
@@ -497,7 +497,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 Per usual, let's test that this all works by running the extension and clicking the on the Howdy button.
 
-![Testing that the clicking the howdy button works](./assets/toolkit-button-click-test.png)
+![Testing that the clicking the howdy button works](./assets/images/toolkit-button-click-test.png)
 
 ## Next steps
 
