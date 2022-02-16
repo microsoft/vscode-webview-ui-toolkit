@@ -2,6 +2,12 @@
 
 The `vscode-radio` is a web component implementation of a [radio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio).
 
+![Radio hero](/docs/assets/images/radio-hero.png)
+
+## Usage
+
+For guidelines on usage in an extension, see the [vscode-radio-group](../radio-group/README.md) component.
+
 ## Attributes
 
 | Attribute  | Type    | Description                                                                         |
@@ -11,9 +17,9 @@ The `vscode-radio` is a web component implementation of a [radio element](https:
 | `readonly` | boolean | Indicates whether the radio is checked or not.                                      |
 | `value`    | string  | The string to use as the value of the radio.                                        |
 
-## Usage
+## Implementation
 
-### Basic Usage
+### Basic Radio
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio--default)
 

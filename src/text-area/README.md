@@ -2,7 +2,30 @@
 
 The `vscode-text-area` is a web component implementation of a [text area element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
 
-## Attributes
+![Text area hero](/docs/assets/images/text-area-hero.png)
+
+## Usage
+
+Read the [text-field](../text-field/README.md) usage guidelines for general guidance when using text inputs.
+
+| ❌ Don't                                                                                                                              | ✅ Do                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| ![Text area with one line of text](/docs/assets/images/text-area-dont-1.png)                                                          | ![Text area with multiple lines of text](/docs/assets/images/text-area-do-2.png) |
+| Don't use a text area for inputs requiring only a single line of text. Use a [text-field](../text-field/README.md) component instead. | Use text areas for longer text blocks that span multiple lines.                  |
+
+| ❌ Don't                                                                                             | ✅ Do                                                                                                   |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| ![Text area being resized until content flows out of view](/docs/assets/images/text-area-dont-2.png) | ![Text area being resized causing layout reflow](/docs/assets/images/text-area-do-2.png)                |
+| Don't let a resizable text area break an extension's layout when resized.                            | Ensure your layout reflows appropriately when a text area is resized vertically, horizontally, or both. |
+
+| ❌ Don't                                                              | ✅ Do                                                                                              |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| ![Text area without label](/docs/assets/images/text-area-dont-3.png)  | ![Text area without label with supporting context](/docs/assets/images/text-area-do-3.png)         |
+| Don't use a text area without a label without any supporting context. | Sparingly use text areas without labels in contexts where their purpose can be easily indentified. |
+
+## Implementation
+
+### Attributes
 
 | Attribute     | Type    | Description                                                                                |
 | ------------- | ------- | ------------------------------------------------------------------------------------------ |
@@ -18,9 +41,7 @@ The `vscode-text-area` is a web component implementation of a [text area element
 | `rows`        | number  | Sizes the component vertically by a number of character rows.                              |
 | `value`       | string  | The value (i.e. content) of the text area.                                                 |
 
-## Usage
-
-### Basic Usage
+### Basic Text Area
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--default)
 
