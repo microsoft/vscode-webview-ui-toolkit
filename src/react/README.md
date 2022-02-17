@@ -20,7 +20,7 @@ There are still some exceptions to the general usage patterns when using the Rea
 
 ### Use `onInput` instead of `onChange` to handle keystrokes
 
-Due to the fact that the toolkit React components are built with web components under the hood, it means that input components like `VSCodeTextField` or `VSCodeTextArea` follow the native browser `change` and `input` event model. This means the `onChange` event is fired focus is blurred away from the input element and `onInput` is fired on every keystroke. _Note that this exception is the result of the React team deciding to [override native browser behavior](https://reactjs.org/docs/dom-elements.html#onchange)._
+Due to the fact that the toolkit React components are built with web components under the hood, it means that input components like `VSCodeTextField` or `VSCodeTextArea` follow the native browser `change` and `input` event model. This means the `onChange` event is fired when focus is blurred away from the input element and `onInput` is fired on every keystroke. _Note that this exception is the result of the React team deciding to [override native browser behavior](https://reactjs.org/docs/dom-elements.html#onchange)._
 
 As an example, if you would like to update the value of a text field on every keystroke, the `onInput` should be used instead of `onChange`.
 
@@ -34,9 +34,9 @@ function SomeComponent() {
 }
 ```
 
-### Some component attributes must use enums at this time
+### Some component attributes must use enums (for now)
 
-At this time there is a slightly less convenient way of needing to define a handful of component attributes with enums instead of string values. There is an [upstream issue](https://github.com/microsoft/fast/issues/5494) open with the goal of addressing this. However, for the time being, if you use any of the following component attributes you will need to import an enum to use them.
+At this time, there is a slightly less convenient way of needing to define a handful of component attributes with enums instead of string values. There is an [upstream issue](https://github.com/microsoft/fast/issues/5494) open with the goal of addressing this. However, for the time being, if you use any of the following component attributes you will need to import an enum to use them.
 
 - Data grid `cell-type` attr ==> import `DataGridCellTypes` enum
 - Data grid `row-type` attr ==> import `DataGridRowTypes` enum
