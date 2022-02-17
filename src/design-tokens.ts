@@ -47,6 +47,11 @@ export const typeRampMinus2FontSize = create<string>('type-ramp-minus2-font-size
 export const typeRampMinus2LineHeight = create<string>('type-ramp-minus2-line-height').withDefault('16px');
 export const typeRampPlus1FontSize = create<string>('type-ramp-plus1-font-size').withDefault('16px');
 export const typeRampPlus1LineHeight = create<string>('type-ramp-plus1-line-height').withDefault('24px');
+export const scrollbarWidth = create<string>('scrollbarWidth').withDefault('10px');
+export const scrollbarHeight = create<string>('scrollbarHeight').withDefault('10px');
+export const scrollbarSliderBackground = create<string>('scrollbar-slider-background', '--vscode-scrollbarSliderBackground').withDefault('#79797966');
+export const scrollbarSliderHoverBackground = create<string>('scrollbar-slider-hover-background', '--vscode-scrollbarSlider-hoverBackground').withDefault('#646464b3');
+export const scrollbarSliderActiveBackground = create<string>('scrollbar-slider-active-background', '--vscode-scrollbarSlider-activeBackground').withDefault('#bfbfbf66');
 
 /**
  * Badge design tokens.
