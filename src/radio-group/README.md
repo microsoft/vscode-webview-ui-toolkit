@@ -40,10 +40,10 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 
 ```html
 <vscode-radio-group>
-	<label slot="label">Radio Group Label</label>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
+  <label slot="label">Radio Group Label</label>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
 </vscode-radio-group>
 ```
 
@@ -53,10 +53,10 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 
 ```html
 <vscode-radio-group disabled>
-	<label slot="label">Radio Group Label</label>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
+  <label slot="label">Radio Group Label</label>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
 </vscode-radio-group>
 ```
 
@@ -64,10 +64,10 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 
 ```html
 <vscode-radio-group name="example-radio-group">
-	<label slot="label">Radio Group Label</label>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
+  <label slot="label">Radio Group Label</label>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
 </vscode-radio-group>
 ```
 
@@ -79,17 +79,17 @@ If the orientation attribute is not set, the default orientation is `horizontal`
 
 ```html
 <vscode-radio-group orientation="vertical">
-	<label slot="label">Radio Group Label</label>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
+  <label slot="label">Radio Group Label</label>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
 </vscode-radio-group>
 
 <vscode-radio-group orientation="horizontal">
-	<label slot="label">Radio Group Label</label>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
+  <label slot="label">Radio Group Label</label>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
 </vscode-radio-group>
 ```
 
@@ -99,9 +99,9 @@ If the orientation attribute is not set, the default orientation is `horizontal`
 
 ```html
 <vscode-radio-group readonly>
-	<label slot="label">Radio Group Label</label>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
-	<vscode-radio>Radio Label</vscode-radio>
+  <label slot="label">Radio Group Label</label>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
+  <vscode-radio>Radio Label</vscode-radio>
 </vscode-radio-group>
 ```
