@@ -21,6 +21,11 @@ import {
 	inputBackground,
 	inputForeground,
 	inputMinWidth,
+	scrollbarHeight,
+	scrollbarSliderActiveBackground,
+	scrollbarSliderBackground,
+	scrollbarSliderHoverBackground,
+	scrollbarWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
 } from '../design-tokens';
@@ -62,6 +67,22 @@ export const textAreaStyles = (
 	.control:disabled,
 	.control:active {
 		outline: none;
+	}
+	.control::-webkit-scrollbar {
+		width: ${scrollbarWidth};
+		height: ${scrollbarHeight};
+	}
+	.control::-webkit-scrollbar-corner {
+		background: ${inputBackground};
+	}
+	.control::-webkit-scrollbar-thumb {
+		background: ${scrollbarSliderBackground};
+	}
+	.control::-webkit-scrollbar-thumb:hover {
+		background: ${scrollbarSliderHoverBackground};
+	}
+	.control::-webkit-scrollbar-thumb:active {
+		background: ${scrollbarSliderActiveBackground};
 	}
 	:host(:focus-within:not([disabled])) .control {
 		border-color: ${focusBorder};

@@ -106,7 +106,7 @@ Checkboxes can also render an indeterminate state. This is achieved by getting a
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-indeterminate)
 
 ```javascript
-const checkbox = document.getElementById('basic-checkbox');
+const checkbox = document.getElementById("basic-checkbox");
 checkbox.indeterminate = true;
 ```
 
@@ -120,14 +120,14 @@ Here is an example of the Visual Studio Code Checkbox and its various attributes
 
 ```html
 <form>
-	<fieldset>
-		<legend>Fieldset Legend</legend>
-		<vscode-checkbox checked required>Checked + Required</vscode-checkbox>
-		<vscode-checkbox checked readonly>Checked + Readonly</vscode-checkbox>
-		<vscode-checkbox autofocus>Autofocus</vscode-checkbox>
-		<vscode-checkbox disabled>Disabled</vscode-checkbox>
-		<vscode-checkbox value="baz">Value Set To "baz"</vscode-checkbox>
-	</fieldset>
-	<vscode-button type="submit">Submit Button</vscode-button>
+  <fieldset>
+    <legend>Fieldset Legend</legend>
+    <vscode-checkbox checked required>Checked + Required</vscode-checkbox>
+    <vscode-checkbox checked readonly>Checked + Readonly</vscode-checkbox>
+    <vscode-checkbox autofocus>Autofocus</vscode-checkbox>
+    <vscode-checkbox disabled>Disabled</vscode-checkbox>
+    <vscode-checkbox value="baz">Value Set To "baz"</vscode-checkbox>
+  </fieldset>
+  <vscode-button type="submit">Submit Button</vscode-button>
 </form>
 ```
