@@ -6,9 +6,9 @@ The `vscode-panels` component is a web component implementation of a [tab](https
 
 The component is created using three components that work together to interchangably display different content:
 
--   `<vscode-panels>`: The top level container element.
--   `<vscode-panel-tab>`: Renders the panel tab that will be associated with a panel view.
--   `<vscode-panel-view>`: The container element that will hold content associated with a given tab.
+- `<vscode-panels>`: The top level container element.
+- `<vscode-panel-tab>`: Renders the panel tab that will be associated with a panel view.
+- `<vscode-panel-view>`: The container element that will hold content associated with a given tab.
 
 ## Usage
 
@@ -59,7 +59,7 @@ To completely opt out of `<vscode-panel-view>` components rendering as flexbox c
 
 ```css
 vscode-panel-view {
-	display: block;
+  display: block;
 }
 ```
 
@@ -67,7 +67,7 @@ To make the content flow vertically:
 
 ```css
 vscode-panel-view {
-	flex-direction: column;
+  flex-direction: column;
 }
 ```
 
@@ -75,8 +75,8 @@ To center the content within the container:
 
 ```css
 vscode-panel-view {
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 ```
 
@@ -84,18 +84,18 @@ To apply styling to one `<vscode-panel-view>` component:
 
 ```html
 <vscode-panels>
-	...panel tabs...
-	<vscode-panel-view id="view-1">Problems content.</vscode-panel-view>
-	<vscode-panel-view id="view-2">Output content.</vscode-panel-view>
-	<vscode-panel-view id="view-3">Debug content.</vscode-panel-view>
-	<vscode-panel-view id="view-4">Terminal content.</vscode-panel-view>
+  ...panel tabs...
+  <vscode-panel-view id="view-1">Problems content.</vscode-panel-view>
+  <vscode-panel-view id="view-2">Output content.</vscode-panel-view>
+  <vscode-panel-view id="view-3">Debug content.</vscode-panel-view>
+  <vscode-panel-view id="view-4">Terminal content.</vscode-panel-view>
 </vscode-panels>
 ```
 
 ```css
 #view-1 {
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 ```
 
@@ -103,24 +103,18 @@ To apply styling to multiple `<vscode-panel-view>` components (but not all):
 
 ```html
 <vscode-panels>
-	...panel tabs...
-	<vscode-panel-view id="view-1"> Problems content. </vscode-panel-view>
-	<vscode-panel-view id="view-2" class="custom-styles">
-		Output content.
-	</vscode-panel-view>
-	<vscode-panel-view id="view-3" class="custom-styles">
-		Debug content.
-	</vscode-panel-view>
-	<vscode-panel-view id="view-4" class="custom-styles">
-		Terminal content.
-	</vscode-panel-view>
+  ...panel tabs...
+  <vscode-panel-view id="view-1"> Problems content. </vscode-panel-view>
+  <vscode-panel-view id="view-2" class="custom-styles"> Output content. </vscode-panel-view>
+  <vscode-panel-view id="view-3" class="custom-styles"> Debug content. </vscode-panel-view>
+  <vscode-panel-view id="view-4" class="custom-styles"> Terminal content. </vscode-panel-view>
 </vscode-panels>
 ```
 
 ```css
 .custom-styles {
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 ```
 
@@ -136,14 +130,14 @@ Also, the unique ID can follow any format or convention as long as each componen
 
 ```html
 <vscode-panels>
-	<vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>
-	<vscode-panel-tab id="tab-2">OUTPUT</vscode-panel-tab>
-	<vscode-panel-tab id="tab-3">DEBUG CONSOLE</vscode-panel-tab>
-	<vscode-panel-tab id="tab-4">TERMINAL</vscode-panel-tab>
-	<vscode-panel-view id="view-1">Problems content.</vscode-panel-view>
-	<vscode-panel-view id="view-2">Output content.</vscode-panel-view>
-	<vscode-panel-view id="view-3">Debug content.</vscode-panel-view>
-	<vscode-panel-view id="view-4">Terminal content.</vscode-panel-view>
+  <vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>
+  <vscode-panel-tab id="tab-2">OUTPUT</vscode-panel-tab>
+  <vscode-panel-tab id="tab-3">DEBUG CONSOLE</vscode-panel-tab>
+  <vscode-panel-tab id="tab-4">TERMINAL</vscode-panel-tab>
+  <vscode-panel-view id="view-1">Problems content.</vscode-panel-view>
+  <vscode-panel-view id="view-2">Output content.</vscode-panel-view>
+  <vscode-panel-view id="view-3">Debug content.</vscode-panel-view>
+  <vscode-panel-view id="view-4">Terminal content.</vscode-panel-view>
 </vscode-panels>
 ```
 
@@ -153,14 +147,14 @@ Also, the unique ID can follow any format or convention as long as each componen
 
 ```html
 <vscode-panels activeid="tab-4">
-	<vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>
-	<vscode-panel-tab id="tab-2">OUTPUT</vscode-panel-tab>
-	<vscode-panel-tab id="tab-3">DEBUG CONSOLE</vscode-panel-tab>
-	<vscode-panel-tab id="tab-4">TERMINAL</vscode-panel-tab>
-	<vscode-panel-view id="view-1">Problems content.</vscode-panel-view>
-	<vscode-panel-view id="view-2">Output content.</vscode-panel-view>
-	<vscode-panel-view id="view-3">Debug content.</vscode-panel-view>
-	<vscode-panel-view id="view-4">Terminal content.</vscode-panel-view>
+  <vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>
+  <vscode-panel-tab id="tab-2">OUTPUT</vscode-panel-tab>
+  <vscode-panel-tab id="tab-3">DEBUG CONSOLE</vscode-panel-tab>
+  <vscode-panel-tab id="tab-4">TERMINAL</vscode-panel-tab>
+  <vscode-panel-view id="view-1">Problems content.</vscode-panel-view>
+  <vscode-panel-view id="view-2">Output content.</vscode-panel-view>
+  <vscode-panel-view id="view-3">Debug content.</vscode-panel-view>
+  <vscode-panel-view id="view-4">Terminal content.</vscode-panel-view>
 </vscode-panels>
 ```
 
@@ -172,26 +166,26 @@ In addition to text, a Visual Studio Code Badge can be used in a panel tab to hi
 
 ```html
 <vscode-panels>
-	<vscode-panel-tab id="tab-1">
-		PROBLEMS
-		<vscode-badge appearance="secondary">1</vscode-badge>
-	</vscode-panel-tab>
-	<vscode-panel-tab id="tab-2">
-		OUTPUT
-		<vscode-badge appearance="secondary">1</vscode-badge>
-	</vscode-panel-tab>
-	<vscode-panel-tab id="tab-3">
-		DEBUG CONSOLE
-		<vscode-badge appearance="secondary">1</vscode-badge>
-	</vscode-panel-tab>
-	<vscode-panel-tab id="tab-4">
-		TERMINAL
-		<vscode-badge appearance="secondary">1</vscode-badge>
-	</vscode-panel-tab>
-	<vscode-panel-view id="view-1"> Problems Content </vscode-panel-view>
-	<vscode-panel-view id="view-2"> Output Content </vscode-panel-view>
-	<vscode-panel-view id="view-3"> Debug Console Content </vscode-panel-view>
-	<vscode-panel-view id="view-4"> Terminal Content </vscode-panel-view>
+  <vscode-panel-tab id="tab-1">
+    PROBLEMS
+    <vscode-badge appearance="secondary">1</vscode-badge>
+  </vscode-panel-tab>
+  <vscode-panel-tab id="tab-2">
+    OUTPUT
+    <vscode-badge appearance="secondary">1</vscode-badge>
+  </vscode-panel-tab>
+  <vscode-panel-tab id="tab-3">
+    DEBUG CONSOLE
+    <vscode-badge appearance="secondary">1</vscode-badge>
+  </vscode-panel-tab>
+  <vscode-panel-tab id="tab-4">
+    TERMINAL
+    <vscode-badge appearance="secondary">1</vscode-badge>
+  </vscode-panel-tab>
+  <vscode-panel-view id="view-1"> Problems Content </vscode-panel-view>
+  <vscode-panel-view id="view-2"> Output Content </vscode-panel-view>
+  <vscode-panel-view id="view-3"> Debug Console Content </vscode-panel-view>
+  <vscode-panel-view id="view-4"> Terminal Content </vscode-panel-view>
 </vscode-panels>
 ```
 
@@ -203,31 +197,25 @@ A `vscode-panel-view` can also contain any valid HTML.
 
 ```html
 <vscode-panels>
-	<vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>
-	<vscode-panel-tab id="tab-2">OUTPUT</vscode-panel-tab>
-	<vscode-panel-tab id="tab-3">DEBUG CONSOLE</vscode-panel-tab>
-	<vscode-panel-tab id="tab-4">TERMINAL</vscode-panel-tab>
-	<vscode-panel-view id="view-1">
-		<section style="display: flex; flex-direction: column; width: 100%;">
-			<h1 style="margin-top: 0;">Smoothie Maker 🍓</h1>
-			<vscode-checkbox>Apples</vscode-checkbox>
-			<vscode-checkbox>Oranges</vscode-checkbox>
-			<vscode-checkbox>Grapes</vscode-checkbox>
-			<vscode-checkbox disabled>Blueberries</vscode-checkbox>
-			<vscode-checkbox>Pineapple</vscode-checkbox>
-			<vscode-checkbox>Mango</vscode-checkbox>
-			<vscode-checkbox>Lemon</vscode-checkbox>
-			<vscode-button>Make Smoothie!</vscode-button>
-		</section>
-	</vscode-panel-view>
-	<vscode-panel-view id="view-2">
-		... Insert Complex Content ...
-	</vscode-panel-view>
-	<vscode-panel-view id="view-3">
-		... Insert Complex Content ...
-	</vscode-panel-view>
-	<vscode-panel-view id="view-4">
-		... Insert Complex Content ...
-	</vscode-panel-view>
+  <vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>
+  <vscode-panel-tab id="tab-2">OUTPUT</vscode-panel-tab>
+  <vscode-panel-tab id="tab-3">DEBUG CONSOLE</vscode-panel-tab>
+  <vscode-panel-tab id="tab-4">TERMINAL</vscode-panel-tab>
+  <vscode-panel-view id="view-1">
+    <section style="display: flex; flex-direction: column; width: 100%;">
+      <h1 style="margin-top: 0;">Smoothie Maker 🍓</h1>
+      <vscode-checkbox>Apples</vscode-checkbox>
+      <vscode-checkbox>Oranges</vscode-checkbox>
+      <vscode-checkbox>Grapes</vscode-checkbox>
+      <vscode-checkbox disabled>Blueberries</vscode-checkbox>
+      <vscode-checkbox>Pineapple</vscode-checkbox>
+      <vscode-checkbox>Mango</vscode-checkbox>
+      <vscode-checkbox>Lemon</vscode-checkbox>
+      <vscode-button>Make Smoothie!</vscode-button>
+    </section>
+  </vscode-panel-view>
+  <vscode-panel-view id="view-2"> ... Insert Complex Content ... </vscode-panel-view>
+  <vscode-panel-view id="view-3"> ... Insert Complex Content ... </vscode-panel-view>
+  <vscode-panel-view id="view-4"> ... Insert Complex Content ... </vscode-panel-view>
 </vscode-panels>
 ```

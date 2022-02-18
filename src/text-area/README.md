@@ -100,9 +100,7 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 ### Name Attribute
 
 ```html
-<vscode-text-area name="example-vscode-text-area">
-	Text Area Label
-</vscode-text-area>
+<vscode-text-area name="example-vscode-text-area"> Text Area Label </vscode-text-area>
 ```
 
 ### Placeholder Attribute
@@ -110,9 +108,7 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-placeholder)
 
 ```html
-<vscode-text-area placeholder="Placeholder Text">
-	Text Area Label
-</vscode-text-area>
+<vscode-text-area placeholder="Placeholder Text"> Text Area Label </vscode-text-area>
 ```
 
 ### Read Only Attribute

@@ -14,7 +14,7 @@ async function main() {
 	if (!fs.existsSync('./test-webview')) {
 		try {
 			console.log(color(['dim'], 'Copying webview test environment locally...'));
-			await execShellCommand('npx degit microsoft/vscode-webview-ui-toolkit-samples/default/all-components test-webview');
+			await execShellCommand('npx degit microsoft/vscode-webview-ui-toolkit-samples/default/component-gallery test-webview');
 		} catch (err) {
 			console.log(`${color(['red'], 'Error: Could not copy webview test environment locally')}\n    ${err}`);
 			process.exit();
@@ -55,7 +55,7 @@ async function main() {
 	console.log('Next steps:');
 	console.log(`  1. Open the ${color(['cyan'], 'test-webview')} folder in a new VS Code window`);
 	console.log(`  2. Press ${color(['cyan'], 'F5')} to open the webview test extension with the most recent toolkit build loaded`);
-	console.log(`  3. Run the "${color(['cyan'], 'Webview UI Toolkit: Open all components gallery')}" command using the VS Code command palette`);
+	console.log(`  3. Run the "${color(['cyan'], 'Component Gallery: Show')}" command using the VS Code command palette`);
 	console.log();
 }
 
