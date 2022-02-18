@@ -76,7 +76,7 @@ export const textAreaStyles = (
 		background: ${inputBackground};
 	}
 	.control::-webkit-scrollbar-thumb {
-		background: ${scrollbarSliderBackground} !important;
+		background: ${scrollbarSliderBackground};
 	}
 	.control::-webkit-scrollbar-thumb:hover {
 		background: ${scrollbarSliderHoverBackground};
