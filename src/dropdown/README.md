@@ -39,9 +39,9 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ```html
 <vscode-dropdown>
-	<vscode-option>Option Label #1</vscode-option>
-	<vscode-option>Option Label #2</vscode-option>
-	<vscode-option>Option Label #3</vscode-option>
+  <vscode-option>Option Label #1</vscode-option>
+  <vscode-option>Option Label #2</vscode-option>
+  <vscode-option>Option Label #3</vscode-option>
 </vscode-dropdown>
 ```
 
@@ -51,9 +51,9 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ```html
 <vscode-dropdown disabled>
-	<vscode-option>Option Label #1</vscode-option>
-	<vscode-option>Option Label #2</vscode-option>
-	<vscode-option>Option Label #3</vscode-option>
+  <vscode-option>Option Label #1</vscode-option>
+  <vscode-option>Option Label #2</vscode-option>
+  <vscode-option>Option Label #3</vscode-option>
 </vscode-dropdown>
 ```
 
@@ -63,9 +63,9 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ```html
 <vscode-dropdown open>
-	<vscode-option>Option Label #1</vscode-option>
-	<vscode-option>Option Label #2</vscode-option>
-	<vscode-option>Option Label #3</vscode-option>
+  <vscode-option>Option Label #1</vscode-option>
+  <vscode-option>Option Label #2</vscode-option>
+  <vscode-option>Option Label #3</vscode-option>
 </vscode-dropdown>
 ```
 
@@ -75,17 +75,17 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ```html
 <vscode-dropdown position="above">
-	<vscode-option>Option Label #1</vscode-option>
-	<vscode-option>Option Label #2</vscode-option>
-	<vscode-option>Option Label #3</vscode-option>
+  <vscode-option>Option Label #1</vscode-option>
+  <vscode-option>Option Label #2</vscode-option>
+  <vscode-option>Option Label #3</vscode-option>
 </vscode-dropdown>
 ```
 
 ```html
 <vscode-dropdown position="below">
-	<vscode-option>Option Label #1</vscode-option>
-	<vscode-option>Option Label #2</vscode-option>
-	<vscode-option>Option Label #3</vscode-option>
+  <vscode-option>Option Label #1</vscode-option>
+  <vscode-option>Option Label #2</vscode-option>
+  <vscode-option>Option Label #3</vscode-option>
 </vscode-dropdown>
 ```
 
@@ -99,9 +99,9 @@ The default indicator is a downward facing chevron, but it can customized by add
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-dropdown>
-	<span slot="indicator" class="codicon codicon-settings"></span>
-	<vscode-option>Option Label #1</vscode-option>
-	<vscode-option>Option Label #2</vscode-option>
-	<vscode-option>Option Label #3</vscode-option>
+  <span slot="indicator" class="codicon codicon-settings"></span>
+  <vscode-option>Option Label #1</vscode-option>
+  <vscode-option>Option Label #2</vscode-option>
+  <vscode-option>Option Label #3</vscode-option>
 </vscode-dropdown>
 ```

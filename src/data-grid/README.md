@@ -6,9 +6,9 @@ The `vscode-data-grid` enables developers to display data in a tabular layout.
 
 The data grid is created using three components that work together:
 
--   `<vscode-data-grid>`: The top level container element.
--   `<vscode-data-grid-row>`: Displays a single row of data associated with a single record or a header row.
--   `<vscode-data-grid-cell>`: Displays a single cell of data within a row.
+- `<vscode-data-grid>`: The top level container element.
+- `<vscode-data-grid-row>`: Displays a single row of data associated with a single record or a header row.
+- `<vscode-data-grid-cell>`: Displays a single cell of data within a row.
 
 ## Usage
 
@@ -70,10 +70,10 @@ Note that when using this method of data grid creation, the header row is automa
 ```javascript
 // A row is automatically generated for each object in the rowsData array.
 // A column is automatically generated for each key in the first object in the rowsData array.
-document.getElementById('basic-grid').rowsData = [
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
+document.getElementById("basic-grid").rowsData = [
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
 ];
 ```
 
@@ -83,30 +83,30 @@ Note that when using this method of data grid creation, the `generate-header` at
 
 ```html
 <vscode-data-grid generate-header="none" aria-label="Basic">
-	<vscode-data-grid-row row-type="header">
-		<vscode-data-grid-cell cell-type="columnheader" grid-column="1">Header 1</vscode-data-grid-cell>
-		<vscode-data-grid-cell cell-type="columnheader" grid-column="2">Header 2</vscode-data-grid-cell>
-		<vscode-data-grid-cell cell-type="columnheader" grid-column="3">Header 3</vscode-data-grid-cell>
-		<vscode-data-grid-cell cell-type="columnheader" grid-column="3">Header 4</vscode-data-grid-cell>
-	</vscode-data-grid-row>
-	<vscode-data-grid-row>
-		<vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="2">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="3">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
-	</vscode-data-grid-row>
-	<vscode-data-grid-row>
-		<vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="2">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="3">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
-	</vscode-data-grid-row>
-	<vscode-data-grid-row>
-		<vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="2">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="3">Cell Data</vscode-data-grid-cell>
-		<vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
-	</vscode-data-grid-row>
+  <vscode-data-grid-row row-type="header">
+    <vscode-data-grid-cell cell-type="columnheader" grid-column="1">Header 1</vscode-data-grid-cell>
+    <vscode-data-grid-cell cell-type="columnheader" grid-column="2">Header 2</vscode-data-grid-cell>
+    <vscode-data-grid-cell cell-type="columnheader" grid-column="3">Header 3</vscode-data-grid-cell>
+    <vscode-data-grid-cell cell-type="columnheader" grid-column="3">Header 4</vscode-data-grid-cell>
+  </vscode-data-grid-row>
+  <vscode-data-grid-row>
+    <vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="2">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="3">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
+  </vscode-data-grid-row>
+  <vscode-data-grid-row>
+    <vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="2">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="3">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
+  </vscode-data-grid-row>
+  <vscode-data-grid-row>
+    <vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="2">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="3">Cell Data</vscode-data-grid-cell>
+    <vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
+  </vscode-data-grid-row>
 </vscode-data-grid>
 ```
 
@@ -116,9 +116,9 @@ The `generate-header` attribute is applied to the `<vscode-data-grid>` component
 
 There are three values that can be passed to the attribute:
 
--   `default`: A default header row will be automatically generated. This is the default value if the `generate-header` is not defined on the component.
--   `sticky`: A sticky header row will be automatically generated.
--   `none`: No header row will be generated.
+- `default`: A default header row will be automatically generated. This is the default value if the `generate-header` is not defined on the component.
+- `sticky`: A sticky header row will be automatically generated.
+- `none`: No header row will be generated.
 
 **Important Note**
 
@@ -133,10 +133,10 @@ As shown above in the Basic Usage example, if the `vscode-data-grid` is defined 
 ```
 
 ```javascript
-document.getElementById('basic-grid').rowsData = [
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
+document.getElementById("basic-grid").rowsData = [
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
 ];
 ```
 
@@ -160,17 +160,17 @@ When defined on a `<vscode-data-grid-row>` component, the value of the attribute
 
 ```html
 <vscode-data-grid
-	id="basic-grid"
-	grid-template-columns="100px 10vw 3fr 30%"
-	aria-label="Custom Column Widths"
+  id="basic-grid"
+  grid-template-columns="100px 10vw 3fr 30%"
+  aria-label="Custom Column Widths"
 ></vscode-data-grid>
 ```
 
 ```javascript
-document.getElementById('basic-grid').rowsData = [
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
-	{Header1: 'Cell Data', Header2: 'Cell Data', Header3: 'Cell Data', Header4: 'Cell Data'},
+document.getElementById("basic-grid").rowsData = [
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
 ];
 ```
 
@@ -178,9 +178,9 @@ document.getElementById('basic-grid').rowsData = [
 
 The `row-type` attribute is used to define what type of row should be rendered. There are three values that can be passed to the attribute:
 
--   `default`: A default row will be rendered. This is the default value if the `row-type` is not defined on the component.
--   `header`: A header row will be rendered.
--   `sticky`: A sticky header row will be rendered.
+- `default`: A default row will be rendered. This is the default value if the `row-type` is not defined on the component.
+- `header`: A header row will be rendered.
+- `sticky`: A sticky header row will be rendered.
 
 **Usage Note**
 
@@ -196,8 +196,8 @@ Use this attribute when defining a data grid using only HTML. This attribute is 
 
 The `cell-type` attribute is used to define what type of cell should be rendered. There are two values that can be passed to the attribute:
 
--   `default`: A default cell will be rendered. This is the default value if the `cell-type` is not defined on the component.
--   `columnheader`: A column header cell will be rendered.
+- `default`: A default cell will be rendered. This is the default value if the `cell-type` is not defined on the component.
+- `columnheader`: A column header cell will be rendered.
 
 **Usage Note**
 
@@ -218,10 +218,10 @@ Use this attribute when defining a data grid using only HTML. This attribute is 
 
 ```html
 <vscode-data-grid-row>
-	<vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>
-	<vscode-data-grid-cell grid-column="2">Cell Data</vscode-data-grid-cell>
-	<vscode-data-grid-cell grid-column="3">Cell Data</vscode-data-grid-cell>
-	<vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
+  <vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>
+  <vscode-data-grid-cell grid-column="2">Cell Data</vscode-data-grid-cell>
+  <vscode-data-grid-cell grid-column="3">Cell Data</vscode-data-grid-cell>
+  <vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
 </vscode-data-grid-row>
 ```
 
@@ -248,20 +248,20 @@ This is where you define the custom title for a given column.
 ```
 
 ```javascript
-const basicGrid = document.getElementById('basic-grid');
+const basicGrid = document.getElementById("basic-grid");
 
 // Populate grid with data
 basicGrid.rowsData = [
-	{ColumnKey1: 'Cell Data', ColumnKey2: 'Cell Data', ColumnKey3: 'Cell Data', ColumnKey4: 'Cell Data'},
-	{ColumnKey1: 'Cell Data', ColumnKey2: 'Cell Data', ColumnKey3: 'Cell Data', ColumnKey4: 'Cell Data'},
-	{ColumnKey1: 'Cell Data', ColumnKey2: 'Cell Data', ColumnKey3: 'Cell Data', ColumnKey4: 'Cell Data'},
+  { ColumnKey1: "Cell Data", ColumnKey2: "Cell Data", ColumnKey3: "Cell Data", ColumnKey4: "Cell Data" },
+  { ColumnKey1: "Cell Data", ColumnKey2: "Cell Data", ColumnKey3: "Cell Data", ColumnKey4: "Cell Data" },
+  { ColumnKey1: "Cell Data", ColumnKey2: "Cell Data", ColumnKey3: "Cell Data", ColumnKey4: "Cell Data" },
 ];
 
 // Add custom column titles to grid
 basicGrid.columnDefinitions = [
-	{columnDataKey: 'ColumnKey1', title: 'A Custom Header Title'},
-	{columnDataKey: 'ColumnKey2', title: 'Another Custom Title'},
-	{columnDataKey: 'ColumnKey3', title: 'Title Is Custom'},
-	{columnDataKey: 'ColumnKey4', title: 'Custom Title'},
+  { columnDataKey: "ColumnKey1", title: "A Custom Header Title" },
+  { columnDataKey: "ColumnKey2", title: "Another Custom Title" },
+  { columnDataKey: "ColumnKey3", title: "Title Is Custom" },
+  { columnDataKey: "ColumnKey4", title: "Custom Title" },
 ];
 ```
