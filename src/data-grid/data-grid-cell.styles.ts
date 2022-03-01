@@ -35,12 +35,12 @@ export const dataGridCellStyles = (
 		font-weight: 400;
 		border: solid calc(${borderWidth} * 1px) transparent;
 		border-radius: calc(${cornerRadius} * 1px);
-		min-width: 96px;
 		white-space: wrap;
-		overflow-wrap: break-word;
+		overflow-wrap: anywhere;
 	}
 	:host(.column-header) {
 		font-weight: 600;
+		overflow-wrap: normal;
 	}
 	:host(:${focusVisible}),
 	:host(:focus),
