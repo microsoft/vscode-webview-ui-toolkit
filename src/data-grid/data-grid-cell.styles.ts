@@ -50,4 +50,9 @@ export const dataGridCellStyles = (
 		color: ${listActiveSelectionForeground};
 		outline: none;
 	}
+	:host(:${focusVisible}) ::slotted(*),
+	:host(:focus) ::slotted(*),
+	:host(:active) ::slotted(*) {
+		color: ${listActiveSelectionForeground} !important;
+	}
 `;
