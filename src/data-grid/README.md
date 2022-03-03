@@ -79,10 +79,14 @@ document.getElementById("basic-grid").rowsData = [
 
 _Using Only HTML_
 
-Note that when using this method of data grid creation, the `generate-header` attribute should be set to `none` and the header row must be manually defined using HTML.
+Note: When defining data grids using only HTML, a header row must be manually defined (as demonstrated below).
+
+Additionally, in previous versions of the toolkit (less than or equal to `v0.9.1`), an attribute of `generate-header="none"` needs to be applied to the `vscode-data-grid` component. This ensures that an extra empty header row is not automatically generated.
+
+Starting in `v0.9.2`, however, this behavior has changed so a header row is not automatically generated when data grids are manually defined and the `generate-header="none"` attribute is no longer needed.
 
 ```html
-<vscode-data-grid generate-header="none" aria-label="Basic">
+<vscode-data-grid aria-label="Basic">
   <vscode-data-grid-row row-type="header">
     <vscode-data-grid-cell cell-type="columnheader" grid-column="1">Header 1</vscode-data-grid-cell>
     <vscode-data-grid-cell cell-type="columnheader" grid-column="2">Header 2</vscode-data-grid-cell>
@@ -120,10 +124,6 @@ There are three values that can be passed to the attribute:
 - `sticky`: A sticky header row will be automatically generated.
 - `none`: No header row will be generated.
 
-**Important Note**
-
-As shown above in the Basic Usage example, if the `vscode-data-grid` is defined using only HTML this attribute should be set to `none` and the header row should be manually created with HTML.
-
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-no-header)
 
 ```html
@@ -144,9 +144,9 @@ document.getElementById("basic-grid").rowsData = [
 
 The `grid-template-columns` attribute can be applied to either the `<vscode-data-grid>` or `<vscode-data-grid-row>` component and can be used to define the width of each column in either all rows or a given row.
 
-Each row of a data grid is rendered using CSS Grid layout. As a result, the value passed to the `grid-template-columns` attribute of these components can be the same as a the `grid-template-columns` CSS Grid property (i.e. `grid-template-columns="1fr 1fr 1fr 1fr"`).
+Each row of a data grid is rendered using CSS Grid layout. As a result, the value passed to the `grid-template-columns` attribute can be the same as the `grid-template-columns` CSS Grid property (i.e. `grid-template-columns="1fr 1fr 1fr 1fr"`).
 
-By default the data grid automatically sets the width of each column to `"1fr"`.
+Starting in toolkit `v0.9.2`, the data grid automatically sets the width of each column to `"1fr"` so they take equal width within the data grid container.
 
 **Differences Between Components**
 
