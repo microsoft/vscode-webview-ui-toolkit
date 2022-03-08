@@ -11,9 +11,17 @@ labels: enhancement
   🔎 Please search existing issues to avoid creating duplicates.
 -->
 
-### Feature/component description
+### Feature request
 
 <!-- A clear and concise description of the feature or component you're requesting. -->
+
+### Expected Behavior
+
+<!-- Tell us how the feature should work. -->
+
+### Current Behavior
+
+<!-- Explain how the feature would alter/enhance current behavior. -->
 
 ### Use case
 
