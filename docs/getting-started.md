@@ -303,7 +303,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
     "@vscode",
     "webview-ui-toolkit",
     "dist",
-    "toolkit.js",
+    "toolkit.js", // A toolkit.min.js file is also available
   ]);
 
   // ... other code ...
