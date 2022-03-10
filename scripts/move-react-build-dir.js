@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 const {copyDir, color, delDir} = require('./helpers');
 const fsPromises = require('fs').promises;
 const process = require('process');

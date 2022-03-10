@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
 import React from 'react';
 import {
