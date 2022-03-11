@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 const {createDir, copyDir, color, delDir} = require('./helpers');
 const {exec} = require('child_process');
 const fs = require('fs');

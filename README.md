@@ -19,12 +19,6 @@ Features of the library include:
 -   **Use any tech stack:** The library ships as a set of web components, meaning developers can use the toolkit no matter what tech stack (React, Vue, Svelte, etc.) their extension is built with.
 -   **Accessible out of the box:** All components ship with web standard compliant ARIA labels and keyboard navigation.
 
-Note that this doesn't change our recommendation of [avoiding the use of webviews](https://code.visualstudio.com/api/references/extension-guidelines#webviews) in extensions unless you absolutely need them.
-
-## Release
-
-The Webview UI Toolkit is currently in a public preview with the goal of reaching `v1.0` sometime in Winter 2022.
-
 ## Getting started
 
 Follow the [Getting Started Guide](./docs/getting-started.md).
@@ -45,6 +39,22 @@ Further documentation can be found in the following places:
 -   [Visual Studio Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
 -   [Visual Studio Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
 -   [Visual Studio Code Extension API Docs](https://code.visualstudio.com/api)
+
+## A note on webview usage
+
+Webviews are a powerful way to add custom functionality that is beyond what the VS Code API supports. They are fully customizable, which has historically meant that the responsibility of developing UI that aligns with the VS Code design language and follows our [webview guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews) lies in the hands of extension authors.
+
+The Webview UI Toolkit shifts _some_ of this responsibility away from extension developers by providing core components that make it easier to build higher quality webview UIs in VS Code.
+
+With all this said, we still strongly encourage a careful review of whether your extension needs to use webviews or not before building. While webviews provide a great way to add custom functionality it often comes at the cost of performance and accessibility.
+
+The core VS Code API provides a vast array of building blocks for highly performant, accessible, and tighly integrated extension experiences and we will generally encourage their usage before webviews. If you haven't already, feel free to check out this [overview of API capabilities](https://code.visualstudio.com/api/extension-capabilities/overview) to get an idea of what's possible.
+
+Finally, if you are ever unsure if your extension should make use of webviews or not, please open an issue and we would be more than happy to give some feedback and guidance.
+
+## Release
+
+The Webview UI Toolkit is currently in a public preview with the goal of reaching `v1.0` sometime in Winter 2022.
 
 ## Contributing
 

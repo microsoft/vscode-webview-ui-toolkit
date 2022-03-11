@@ -1,7 +1,7 @@
 import {create} from '@storybook/theming/create';
 
 export default create({
-	base: 'light',
+	base: 'dark',
 	brandTitle: 'Webview UI Toolkit',
 	brandUrl: 'https://github.com/microsoft/vscode-webview-ui-toolkit',
 });

@@ -6,7 +6,7 @@ This guide will cover the following steps to get you up and running with the Web
 2. Install and set up the toolkit
 3. Set up message passing between the extension and webview
 
-_If you get stuck at any point, a completed sample extension based on this guide (and with extensive documentation comments) can be found [here](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/hello-world)._
+_If you get stuck at any point (or just want a pre-configured starter extension template), feel free to install our [completed hello world sample extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide._
 
 ## Part 1: Create a webview-based extension
 
@@ -20,20 +20,20 @@ npm install -g yo generator-code
 
 The generator will scaffold a TypeScript or JavaScript extension ready for development.
 
-Run the generator and fill out a few fields for a TypeScript extension:
+Run the generator and fill out a few fields for a new TypeScript extension:
 
 ```bash
 yo code
 
 # ? What type of extension do you want to create? New Extension (TypeScript)
-# ? What's the name of your extension? helloworld
-# ? What's the identifier of your extension? helloworld
+# ? What's the name of your extension? hello-world
+# ? What's the identifier of your extension? hello-world
 # ? What's the description of your extension? LEAVE BLANK
 # ? Initialize a git repository? Yes
 # ? Bundle the source code with webpack? No
 # ? Which package manager to use? npm
 
-code ./helloworld
+code ./hello-world
 ```
 
 ### Create a webview
@@ -46,7 +46,7 @@ Start by navigating to the `extensions.ts` file inside the `src` directory and r
 // file: src/extension.ts
 
 export function activate(context: vscode.ExtensionContext) {
-  const helloCommand = vscode.commands.registerCommand("helloworld.helloWorld", () => {
+  const helloCommand = vscode.commands.registerCommand("hello-world.helloWorld", () => {
     HelloWorldPanel.render();
   });
 
@@ -103,7 +103,7 @@ export class HelloWorldPanel {
     if (HelloWorldPanel.currentPanel) {
       HelloWorldPanel.currentPanel._panel.reveal(vscode.ViewColumn.One);
     } else {
-      const panel = vscode.window.createWebviewPanel("helloworld", "Hello World", vscode.ViewColumn.One, {
+      const panel = vscode.window.createWebviewPanel("hello-world", "Hello World", vscode.ViewColumn.One, {
         // Empty for now
       });
 
@@ -303,7 +303,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
     "@vscode",
     "webview-ui-toolkit",
     "dist",
-    "toolkit.js",
+    "toolkit.js", // A toolkit.min.js file is also available
   ]);
 
   // ... other code ...
@@ -357,7 +357,7 @@ public static render(extensionUri: vscode.Uri) {
 
 ### Test that it all works
 
-Let's check that everything works by adding a `<vscode-button>` to the webview and then opening the extension in the Extension Development Host window by pressing `F5`.
+Let's check that everything works by adding a `<vscode-button>` to the webview HTML and then opening the extension in the Extension Development Host window by pressing `F5`.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -395,7 +395,7 @@ Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), sear
 
 In the final part of this guide we will adjust the extension once more so that when the `<vscode-button>` is clicked a Visual Studio Code information message is displayed with some text.
 
-### Create message listener method
+### Create the message listener method
 
 We can now finally create the `_setWebviewMessageListener` method in our `HelloWorldPanel` class. It will be responsible for setting up an event listener that listens for messages passed from the webview context and executes code based on the message that is recieved.
 
@@ -442,10 +442,10 @@ With the message listener code created, we need some message sending code.
 
 This will come in the form of a `main.js` file that will send a message whenever the `<vscode-button>` is clicked.
 
-Create a new file at `media/main.js`.
+Create a new file at `webview-ui/main.js`.
 
 ```javascript
-// file: media/main.js
+// file: webview-ui/main.js
 
 const vscode = acquireVsCodeApi();
 
@@ -472,7 +472,7 @@ In order for this `main.js` file to run in the first place, the last thing to do
 private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
   // ... other code ...
 
-  const mainUri = getUri(webview, extensionUri, ["media","main.js"]);
+  const mainUri = getUri(webview, extensionUri, ["webview-ui", "main.js"]);
 
   return /*html*/ `
     <!DOCTYPE html>
@@ -503,7 +503,7 @@ Per usual, let's test that this all works by running the extension and clicking 
 
 Congratulations on getting started with the Webview UI Toolkit! 🎊
 
-You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/hello-world) based on this guide that includes documentation comments explaining the code in even more detail.
+You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. Additionally, other sample extensions/templates demonstrating the toolkit in more complex scenarios or with different frontend frameworks/build tools can be found in the same repository.
 
 Also check out our component documentation and Visual Studio Code guides on how to work with webviews. Happy coding!
 

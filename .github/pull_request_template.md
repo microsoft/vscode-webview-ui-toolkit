@@ -16,11 +16,3 @@ This pull request resolves #
 ### Description of changes
 
 <!-- Include a description of the proposed changes. -->
-
-### Link to forked docs site
-
-<!--
-  If component changes (especially visual changes) are contained in this PR, we ask that you provide a link to a publicly viewable version of the Storybook docs site so PR reviewers can see your changes without having to install and view your code locally.
-
-  Please see `CONTRIBUTING.md` for directions on how this can be done.
--->

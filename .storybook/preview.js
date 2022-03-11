@@ -13,22 +13,14 @@ export const parameters = {
 		enableShortcuts: false,
 	},
 	docs: {
-		theme: themes.light,
+		theme: themes.dark,
 	},
 	backgrounds: {
 		default: 'dark',
 		values: [
 			{
-				name: 'light',
-				value: '#f9f9f9',
-			},
-			{
-				name: 'grey',
-				value: '#929396',
-			},
-			{
 				name: 'dark',
-				value: '#252526',
+				value: '#1e1e1e',
 			},
 		],
 	},
