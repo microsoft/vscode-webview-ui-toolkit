@@ -6,7 +6,7 @@ This guide will cover the following steps to get you up and running with the Web
 2. Install and set up the toolkit
 3. Set up message passing between the extension and webview
 
-_If you get stuck at any point (or just want a pre-configured starter extension template), feel free to install our [completed hello world sample extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide. Additionally, other sample extensions/templates demonstrating the toolkit in more complex scenarios or with different frontend frameworks/build tools can be found in the same repository._
+_If you get stuck at any point (or just want a pre-configured starter extension template), feel free to install our [completed hello world sample extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide._
 
 ## Part 1: Create a webview-based extension
 
@@ -503,7 +503,7 @@ Per usual, let's test that this all works by running the extension and clicking 
 
 Congratulations on getting started with the Webview UI Toolkit! 🎊
 
-You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail.
+You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. Additionally, other sample extensions/templates demonstrating the toolkit in more complex scenarios or with different frontend frameworks/build tools can be found in the same repository.
 
 Also check out our component documentation and Visual Studio Code guides on how to work with webviews. Happy coding!
 
