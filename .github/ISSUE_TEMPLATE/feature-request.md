@@ -15,11 +15,11 @@ labels: enhancement
 
 <!-- A clear and concise description of the feature or component you're requesting. -->
 
-### Expected Behavior
+### Expected behavior
 
 <!-- Tell us how the feature should work. -->
 
-### Current Behavior
+### Current behavior
 
 <!-- Explain how the feature would alter/enhance current behavior. -->
 

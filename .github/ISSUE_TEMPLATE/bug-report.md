@@ -24,7 +24,7 @@ assignees: hawkticehurst
 
 <!-- A clear and concise description of what you expected to happen. -->
 
-### Current Behavior
+### Current behavior
 
 <!-- Tell us what happens instead of the expected behavior. -->
 <!-- If you are seeing an error, please include the full error message and stack trace. -->
