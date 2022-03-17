@@ -38,10 +38,10 @@ git checkout -b {branch-name}
 
 ### Development server
 
-As you're working, you can view your changes by running the Storybook development server.
+As you're working, you can test your changes in a VS Code extension development environment by running the following command and following the directions that it provides.
 
 ```
-npm start
+npm run test:webview
 ```
 
 ## Validate changes
@@ -94,26 +94,6 @@ You can now finally push your changes to GitHub.
 ```
 git push origin {branch-name}
 ```
-
-### Deploy forked docs site
-
-You can also build and deploy the Storybook docs website to your forked repo's GitHub Pages for a live preview of your changes.
-
-_Note: If you're working on visually oriented features or bug fixes we will ask for this link in your PR to view your work._
-
-```
-npm run deploy:docs
-```
-
-Once deployed, the site should be viewable at the following link: `https://{your-github-username}.github.io/vscode-webview-ui-toolkit/`
-
-The first time you deploy the docs site, navigating to this link will likely result in a 401 error. This is because GitHub Pages defaults to private visibility. To change this:
-
--   Navigate to the "Settings" page of your forked repo
--   Click the "Pages" sidebar tab
--   Find the "GitHub Pages visibility" dropdown settings option and change it to "Public"
--   Complete the confirmation popup dialog
--   The site should now be publicly viewable!
 
 ### Submit a pull request
 
