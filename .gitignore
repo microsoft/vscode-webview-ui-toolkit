@@ -11,6 +11,7 @@ react/
 
 # Tests
 test-webview
+.vscode-test-web/
 
 # Misc
 .DS_Store
