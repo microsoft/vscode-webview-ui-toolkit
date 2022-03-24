@@ -27,18 +27,20 @@ export const badgeStyles = (
 		font-family: ${fontFamily};
 		font-size: ${typeRampMinus1FontSize};
 		line-height: ${typeRampMinus1LineHeight};
+		text-align: center;
 	}
 	.control {
 		align-items: center;
 		background-color: ${badgeBackground};
 		border: calc(${borderWidth} * 1px) solid ${buttonBorder};
-		border-radius: 100px;
+		border-radius: 11px;
 		box-sizing: border-box;
 		color: ${badgeForeground};
 		display: flex;
 		height: calc(${designUnit} * 4px);
 		justify-content: center;
-		min-width: calc(${designUnit} * 4px);
-		padding: 0 calc(${designUnit} * 1px);
+		min-width: calc(${designUnit} * 4px + 2px);
+		min-height: calc(${designUnit} * 4px + 2px);
+		padding: 3px 6px;
 	}
 `;
