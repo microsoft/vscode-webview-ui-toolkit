@@ -183,7 +183,7 @@ const IconButtonStyles = css`
 	}
 	:host([appearance='icon']) .control {
 		padding: ${buttonIconPadding};
-		border: calc(${borderWidth} * 1px) solid transparent;
+		border: none;
 	}
 	:host([appearance='icon']:active) .control:active {
 		background: ${buttonIconHoverBackground};

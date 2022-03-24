@@ -14,7 +14,6 @@ import {
 	checkboxBackground,
 	checkboxBorder,
 	checkboxCornerRadius,
-	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	focusBorder,
@@ -38,8 +37,8 @@ export const checkboxStyles = (
 	}
 	.control {
 		position: relative;
-		width: calc(${designUnit} * 4px);
-		height: calc(${designUnit} * 4px);
+		width: calc(${designUnit} * 4px + 2px);
+		height: calc(${designUnit} * 4px + 2px);
 		box-sizing: border-box;
 		border-radius: calc(${checkboxCornerRadius} * 1px);
 		border: calc(${borderWidth} * 1px) solid ${checkboxBorder};
@@ -87,7 +86,6 @@ export const checkboxStyles = (
 	}
 	:host(:${focusVisible}) .control {
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
-		border-radius: ${cornerRadius};
 	}
 	:host(.disabled) .label,
 	:host(.readonly) .label,
