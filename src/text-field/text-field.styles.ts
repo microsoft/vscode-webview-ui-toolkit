@@ -74,7 +74,7 @@ export const textFieldStyles = (
 		cursor: pointer;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		margin-bottom: calc(${designUnit} * 1px);
+		margin-bottom: 2px;
 	}
 	.label__hidden {
 		display: none;
