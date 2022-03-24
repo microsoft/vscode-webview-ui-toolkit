@@ -182,8 +182,8 @@ const IconButtonStyles = css`
 		outline-offset: -1px;
 	}
 	:host([appearance='icon']) .control {
+		border: none;
 		padding: ${buttonIconPadding};
-		border: calc(${borderWidth} * 1px) solid transparent;
 	}
 	:host([appearance='icon']:active) .control:active {
 		background: ${buttonIconHoverBackground};
