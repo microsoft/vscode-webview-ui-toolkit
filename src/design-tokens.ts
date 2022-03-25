@@ -79,7 +79,7 @@ export const buttonSecondaryBackground = create<string>('button-secondary-backgr
 export const buttonSecondaryForeground = create<string>('button-secondary-foreground', '--vscode-button-secondaryForeground').withDefault('#ffffff');
 export const buttonSecondaryHoverBackground = create<string>('button-secondary-hover-background', '--vscode-button-secondaryHoverBackground').withDefault('#45494e');
 export const buttonPaddingHorizontal = create<string>('button-padding-horizontal').withDefault('11px');
-export const buttonPaddingVertical = create<string>('button-padding-vertical').withDefault('6px');
+export const buttonPaddingVertical = create<string>('button-padding-vertical').withDefault('4px');
 
 /**
  * Checkbox design tokens.

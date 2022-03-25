@@ -74,7 +74,7 @@ export const textFieldStyles = (
 		cursor: pointer;
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
-		margin-bottom: calc(${designUnit} * 1px);
+		margin-bottom: 2px;
 	}
 	.label__hidden {
 		display: none;
@@ -92,10 +92,10 @@ export const textFieldStyles = (
 		height: calc(${designUnit} * 4px);
 	}
 	.start {
-		margin-inline-start: 11px;
+		margin-inline-start: calc(${designUnit} * 2px);
 	}
 	.end {
-		margin-inline-end: 11px;
+		margin-inline-end: calc(${designUnit} * 2px);
 	}
 	:host(:hover:not([disabled])) .root {
 		background: ${inputBackground};

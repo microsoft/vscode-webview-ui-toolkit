@@ -56,7 +56,7 @@ export const dropdownStyles = (
 		font-size: ${typeRampBaseFontSize};
 		line-height: ${typeRampBaseLineHeight};
 		min-height: 100%;
-		padding: 0 calc(${designUnit} * 2px);
+		padding: 2px 6px 2px 8px;
 		width: 100%;
 	}
 	.listbox {
