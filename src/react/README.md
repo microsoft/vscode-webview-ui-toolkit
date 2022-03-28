@@ -2,7 +2,7 @@
 
 In addition to the web components that the Webview UI Toolkit for Visual Studio Code provides, the toolkit also provides a set of React components that can be used to build webview-based extension UIs.
 
-These components are actually built with the same exact web components that the toolkit ships under the hood, but they are wrapped in a React component using the [`@microsoft/fast-react-wrapper`](https://www.npmjs.com/package/@microsoft/fast-react-wrapper). You can find the wrapping code in the `src/react/index.ts` file.
+These components are actually built with the same exact web components mentioned above, but are simply wrapped in a React component using the [`@microsoft/fast-react-wrapper`](https://www.npmjs.com/package/@microsoft/fast-react-wrapper) package. You can find the wrapping code in the `src/react/index.ts` file.
 
 ## Usage 
 
