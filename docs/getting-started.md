@@ -6,13 +6,13 @@ This guide will cover the following steps to get you up and running with the Web
 2. Install and set up the toolkit
 3. Set up message passing between the extension and webview
 
-_If you get stuck at any point (or just want a pre-configured starter extension template), feel free to install our [completed hello world sample extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide._
+_If you get stuck at any point or if you just want a pre-configured starter extension template, install our [completed hello world sample extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide._
 
 ## Part 1: Create a webview-based extension
 
-Before installing the toolkit we need to create a webview-based extension to use the toolkit in. The following steps are taken directly from the Visual Studio Code [Your First Extension Guide](https://code.visualstudio.com/api/get-started/your-first-extension) and [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview).
+Before installing the toolkit, you need to create a webview-based extension to use the toolkit in. The following steps are taken directly from the Visual Studio Code [Your First Extension](https://code.visualstudio.com/api/get-started/your-first-extension) guide and [Webview API](https://code.visualstudio.com/api/extension-guides/webview) guide.
 
-To generate a basic extension we can use [Yeoman](https://yeoman.io/) and the [Visual Studio Code Extension Generator](https://www.npmjs.com/package/generator-code). Make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed first, then install Yeoman and the generator using the following command:
+To generate a basic extension, we can use [Yeoman](https://yeoman.io/) and the [Visual Studio Code Extension Generator](https://www.npmjs.com/package/generator-code). First, though, make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed. Then, install Yeoman and the generator using the following command:
 
 ```bash
 npm install -g yo generator-code
@@ -38,7 +38,7 @@ code ./hello-world
 
 ### Create a webview
 
-With this basic extension created, we now need to create a webview. The following steps are an adapted version of those provided in the [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)––for more information about webviews visit the guide.
+With this basic extension created, you now need to create a webview. The following steps are an adapted version of those provided in the [Webview API](https://code.visualstudio.com/api/extension-guides/webview) guide – for more info about webviews, read the guide.
 
 Start by navigating to the `extensions.ts` file inside the `src` directory and replacing the contents of the `activate` function with the following:
 
@@ -54,18 +54,18 @@ export function activate(context: vscode.ExtensionContext) {
 }
 ```
 
-At this point you'll probably have noticed that there is an error because `HelloWorldPanel` does not exist, so let's fix that!
+At this point, you probably have noticed that there's an error because `HelloWorldPanel` doesn't exist. Here's how to fix that.
 
 ### Create a webview panel class
 
 Create a new directory/file at `src/panels/HelloWorldPanel.ts`.
 
-Inside this file we're going to create a class that manages the state and behavior of Hello World webview panels.
+Inside this file, create a class that manages the state and behavior of Hello World webview panels.
 
-It will contain all the data and methods for:
+It'll contain all the data and methods for:
 
 - Creating and rendering Hello World webview panels
-- Properly cleaning up and disposing of webview resources when the panel is closed
+- Properly cleaning up and disposing webview resources when the panel is closed
 - Setting the HTML content of the webview panel
 - Setting message listeners so data can be passed between the webview and extension
 
@@ -91,7 +91,7 @@ export class HelloWorldPanel {
 
 **Render method**
 
-We can now add the render method which will be responsible for rendering the current webview panel if it exists or creating and a displaying a new webview panel if it does not.
+Now, add the render method. This will be responsible for rendering the current webview panel – if it exists – or creating and displaying a new webview panel.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -113,7 +113,7 @@ export class HelloWorldPanel {
 }
 ```
 
-At this point we can also go back to the `src/extension.ts` file and add an import statement to resolve the error from earlier.
+At this point, you can also go back to the `src/extension.ts` file and add an import statement to resolve the earlier error.
 
 ```typescript
 // file: src/extension.ts
@@ -126,7 +126,7 @@ import { HelloWorldPanel } from "./panels/HelloWorldPanel";
 
 **Dispose method**
 
-Back in the `HelloWorldPanel` class we now need to define a `dispose` method so that webview resources are cleaned up when the webview panel is closed by the user or closed programmatically.
+Back in the `HelloWorldPanel` class, you now need to define a `dispose` method so that webview resources are cleaned up when the webview panel is closed by the user or closed programmatically.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -149,7 +149,7 @@ export class HelloWorldPanel {
 }
 ```
 
-With the `dispose` method defined we also need to update the constructor method by adding an `onDidDispose` event listener so the method can be triggered when the webview panel is closed.
+With the `dispose` method defined, you also need to update the constructor method. To do this, add an `onDidDispose` event listener, so the method can be triggered when the webview panel is closed.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -165,7 +165,7 @@ private constructor(panel: vscode.WebviewPanel) {
 
 The `_getWebviewContent` method is where the UI of the extension will be defined.
 
-This is also the place where references to CSS and JavaScript files/packages are created and inserted into the webview HTML. We will configure the Webview UI Toolkit here, in the second part of this guide.
+This is also where references to CSS and JavaScript files/packages are created and inserted into the webview HTML. You'll configure the Webview UI Toolkit here, in the second part of this guide.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -192,7 +192,7 @@ export class HelloWorldPanel {
 }
 ```
 
-This is another point where we need to update our constructor method to set the HTML content for the webview panel.
+This is another point in which you need to update the constructor method to set the HTML content for the webview panel.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -206,21 +206,21 @@ private constructor(panel: vscode.WebviewPanel) {
 
 **Set message listener method**
 
-We'll handle message passing in the third part of this guide.
+Message passing is handled in the third part of this guide.
 
-### Test that it all works
+### Test that everything works
 
-Congratulations! You have officially created a basic webview extension.
+Congratulations! You officially created a basic webview extension.
 
-To test that everything is working, inside the editor, press `F5`. This will compile and run the extension in a new Extension Development Host window.
+Inside the editor, press `F5` to test that everything is working. This will compile and run the extension in a new Extension Development Host window.
 
-When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), type "Hello World", and click `enter` to run the command which should display the webview panel.
+When the host window opens, open the Command Palette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), type "Hello World", and click `enter` to run the command – which should display the webview panel.
 
 ![Testing That The Webview Extension Works](./assets/images/webview-test.gif)
 
 ## Part 2: Install and set up the toolkit
 
-With an extension created, we can now install the toolkit package using this command.
+With an extension created, install the toolkit package using this command:
 
 ```
 npm install --save @vscode/webview-ui-toolkit
@@ -228,7 +228,7 @@ npm install --save @vscode/webview-ui-toolkit
 
 ### Using the toolkit inside a webview
 
-With the package installed, we need to adjust the project so the toolkit is usable within our webview. We'll start by updating the `_getWebviewContent` method to accept two new parameters.
+With the package installed, you need to adjust the project so the toolkit is usable within your webview. To do this, start by updating the `_getWebviewContent` method to accept two new parameters.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -238,7 +238,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 }
 ```
 
-With this change we also need to update the parameters of a few other methods and method calls.
+With this change, you also need to update the parameters of a few other methods and method calls.
 
 Update the `constructor` method with the following:
 
@@ -264,7 +264,7 @@ public static render(extensionUri: vscode.Uri) {
 }
 ```
 
-Finally update the call to the `render` method:
+Finally, update the call to the `render` method:
 
 ```typescript
 // file: src/extension.ts
@@ -274,7 +274,7 @@ HelloWorldPanel.render(context.extensionUri);
 
 ### Create a webview uri
 
-With those changes we can now use some Visual Studio Code APIs to create a URI pointing to the toolkit package. These API calls can get a bit verbose, however, so we'll also create a small helper function to keep our code clean.
+With those changes, you can now use some Visual Studio Code APIs to create a URI pointing to the toolkit package. Just a heads-up: These API calls can get a bit verbose, so you also need to create a small helper function to keep your code clean.
 
 Create a new file at `src/utilities/getUri.ts` with the following:
 
@@ -288,7 +288,7 @@ export function getUri(webview: Webview, extensionUri: Uri, pathList: string[]) 
 }
 ```
 
-We can use that helper function to get a webview URI which points to the toolkit package.
+You can use that helper function to get a webview URI which points to the toolkit package.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -312,7 +312,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 ### Pass the uri into the webview
 
-With access to the toolkit URI we can pass it into our webview context with a regular `<script>` tag like so:
+With access to the toolkit URI, you can pass it into the webview context with a regular `<script>` tag by doing this:
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -339,7 +339,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 ### Update webview configuration
 
-Before we can test these updates, the final thing we need to do is update the webview panel configuration option we left empty earlier in the `render` method so that JavaScript is enabled in the webview.
+The final thing you need to do before you can test these updates is update the webview panel configuration option you left empty earlier in the `render` method so that JavaScript is enabled in the webview.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -355,9 +355,9 @@ public static render(extensionUri: vscode.Uri) {
 }
 ```
 
-### Test that it all works
+### Make sure everything works
 
-Let's check that everything works by adding a `<vscode-button>` to the webview HTML and then opening the extension in the Extension Development Host window by pressing `F5`.
+It's time to run a test to see if everything works. To do this, add a `<vscode-button>` to the webview HTML, and then open the extension in the Extension Development Host window by pressing `F5`.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -385,19 +385,17 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 ![Testing That The Toolkit Works](./assets/images/toolkit-button-test.gif)
 
-Theming is built right into the components so feel free to test that out too!
-
-Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme", and cycle through all the themes to see the button change!
+Theming is built right into the components, so you can test that out, too. Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme," and cycle through all the themes to see the button change.
 
 ![Testing That The Toolkit Theme Utilities Work](./assets/images/toolkit-theme-test.gif)
 
 ## Part 3: Set up message passing
 
-In the final part of this guide we will adjust the extension once more so that when the `<vscode-button>` is clicked a Visual Studio Code information message is displayed with some text.
+The final part of this guide will help you adjust the extension once more, so that, when the `<vscode-button>` is clicked, a Visual Studio Code information message is displayed with some text.
 
 ### Create the message listener method
 
-We can now finally create the `_setWebviewMessageListener` method in our `HelloWorldPanel` class. It will be responsible for setting up an event listener that listens for messages passed from the webview context and executes code based on the message that is recieved.
+Now, you can create the `_setWebviewMessageListener` method in our `HelloWorldPanel` class. It'll be responsible for setting up an event listener that listens for messages passed from the webview context, and executes code based on the received message.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -424,7 +422,7 @@ export class HelloWorldPanel {
 }
 ```
 
-We also need to call this method in our constructor.
+You also need to call this method in your constructor.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -436,11 +434,11 @@ private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
 }
 ```
 
-### Create message sending code
+### Create message-sending code
 
-With the message listener code created, we need some message sending code.
+Now that the message listener code created, you need message-sending code.
 
-This will come in the form of a `main.js` file that will send a message whenever the `<vscode-button>` is clicked.
+This will come in the form of a `main.js` file that'll send a message whenever the `<vscode-button>` is clicked.
 
 Create a new file at `webview-ui/main.js`.
 
@@ -464,7 +462,7 @@ function handleHowdyClick() {
 }
 ```
 
-In order for this `main.js` file to run in the first place, the last thing to do is to create and pass a URI into the webview HTML just like we did for the toolkit package.
+In order for this `main.js` file to run, the last thing to do is create and pass a URI into the webview HTML – just like you did for the toolkit package.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -495,7 +493,7 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
 ### One final test
 
-Per usual, let's test that this all works by running the extension and clicking the on the Howdy button.
+You should test that this all works. To do this, run the extension and click the "Howdy!" button.
 
 ![Testing that the clicking the howdy button works](./assets/images/toolkit-button-click-test.png)
 
@@ -503,9 +501,9 @@ Per usual, let's test that this all works by running the extension and clicking 
 
 Congratulations on getting started with the Webview UI Toolkit! 🎊
 
-You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. Additionally, other sample extensions/templates demonstrating the toolkit in more complex scenarios or with different frontend frameworks/build tools can be found in the same repository.
+You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. Also, in the same repository, you can take a look at other sample extensions/templates demonstrating the toolkit in more complex scenarios or with different frontend frameworks/build tools.
 
-Also check out our component documentation and Visual Studio Code guides on how to work with webviews. Happy coding!
+One more thing: Check out our component documentation and Visual Studio Code guides on how to work with webviews.
 
 - [Component Docs](./components.md)
 - [Storybook (Interactive Component Sandbox)](https://microsoft.github.io/vscode-webview-ui-toolkit/)
