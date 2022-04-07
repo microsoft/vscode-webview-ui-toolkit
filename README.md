@@ -1,6 +1,5 @@
 # Webview UI Toolkit for Visual Studio Code
 
-![Release: Public Preview](https://img.shields.io/badge/release-public%20preview-orange)
 [![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
@@ -52,10 +51,6 @@ With all this said, we still strongly encourage you to carefully review whether 
 The core Visual Studio Code API provides a vast array of building blocks for highly performant, accessible, and tightly integrated extension experiences. Generally, we encourage you to use them before webviews. If you haven't already, check out this [overview of API capabilities](https://code.visualstudio.com/api/extension-capabilities/overview) to get an idea of what's possible.
 
 Finally, if you're ever unsure if your extension should use webviews or not, you should open an issue and we'll give you some feedback and guidance.
-
-## Release
-
-The Webview UI Toolkit is currently in a public preview with the goal of reaching `v1.0` sometime in Winter 2022.
 
 ## Contributing
 
