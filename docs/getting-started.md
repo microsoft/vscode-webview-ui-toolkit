@@ -228,7 +228,7 @@ npm install --save @vscode/webview-ui-toolkit
 
 ### Register the toolkit components
 
-It can be helpful to think of webviews as having a frontend and a backend. 
+It can be helpful to think of webviews as having a frontend and a backend.
 
 In the first part of this guide, you created the backend of a webview (i.e. `HelloWorldPanel`) and in this part, you'll create and configure the frontend JavaScript of a webview.
 
@@ -237,10 +237,7 @@ To do this, start by creating a new directory/file at `src/webview/index.ts`. Fo
 ```js
 // file: src/webview/index.ts
 
-import {
-  provideVSCodeDesignSystem,
-  vsCodeButton,
-} from "@vscode/webview-ui-toolkit";
+import { provideVSCodeDesignSystem, vsCodeButton } from "@vscode/webview-ui-toolkit";
 
 provideVSCodeDesignSystem().register(vsCodeButton());
 ```
@@ -252,26 +249,16 @@ registration function and call it from within the register
 method, like so:
 
 ```js
-import {
-  provideVSCodeDesignSystem,
-  vsCodeButton,
-  vsCodeCheckbox,
-} from "@vscode/webview-ui-toolkit";
+import { provideVSCodeDesignSystem, vsCodeButton, vsCodeCheckbox } from "@vscode/webview-ui-toolkit";
 
-provideVSCodeDesignSystem().register(
-  vsCodeButton(),
-  vsCodeCheckbox()
-);
+provideVSCodeDesignSystem().register(vsCodeButton(), vsCodeCheckbox());
 ```
 
 Finally, if you would like to register all of the toolkit
 components at once, there's a handy convenience function:
 
 ```js
-import {
-  provideVSCodeDesignSystem,
-  allComponents,
-} from "@vscode/webview-ui-toolkit";
+import { provideVSCodeDesignSystem, allComponents } from "@vscode/webview-ui-toolkit";
 
 provideVSCodeDesignSystem().register(allComponents.register());
 ```
@@ -303,7 +290,7 @@ private _getWebviewHtml() {
 
 ### Updating webpack config
 
-At this point, the component registration code has been created, but it has not been configured to run inside the webview. 
+At this point, the component registration code has been created, but it has not been configured to run inside the webview.
 
 To do this, you need to first update the extension Webpack configuration so that the `src/webview/index.ts` file is included in the extension build.
 
@@ -315,24 +302,24 @@ Inside `webpack.config.js`, in the root directory, add the following changes:
 const extensionConfig = {
   // Add a `webview` entry point to the `entry` config
   entry: {
-    extension: './src/extension.ts',
-    webview: './src/webview/index.ts',
+    extension: "./src/extension.ts",
+    webview: "./src/webview/index.ts",
   },
   // Update the `output.filename` config to be '[name].js'
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
-    libraryTarget: 'commonjs2'
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].js",
+    libraryTarget: "commonjs2",
   },
   // ... other extension configs ...
-}
+};
 ```
 
 These configurations will create a build output that contains a `dist/extension.js` file and a `dist/webview.js` file.
 
 ### Add a script tag to the webview markup
 
-You can now use some Visual Studio Code APIs to create a URI pointing to the `dist/webview.js` file. 
+You can now use some Visual Studio Code APIs to create a URI pointing to the `dist/webview.js` file.
 
 These API calls can get a bit verbose, so create a small helper function to keep your code clean.
 
@@ -343,11 +330,7 @@ Add a new file at `src/utilities/getUri.ts` with the following:
 
 import { Uri, Webview } from "vscode";
 
-export function getUri(
-  webview: Webview,
-  extensionUri: Uri,
-  pathList: string[]
-) {
+export function getUri(webview: Webview, extensionUri: Uri, pathList: string[]) {
   return webview.asWebviewUri(Uri.joinPath(extensionUri, ...pathList));
 }
 ```
@@ -455,12 +438,12 @@ You should also update the content security policy of your webview to only allow
 // file: src/utilities/getNonce.ts
 
 export function getNonce() {
-	let text = '';
-	const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	for (let i = 0; i < 32; i++) {
-		text += possible.charAt(Math.floor(Math.random() * possible.length));
-	}
-	return text;
+  let text = "";
+  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (let i = 0; i < 32; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return text;
 }
 ```
 
@@ -588,10 +571,7 @@ You'll notice a few errors. To fix them, update the `tsconfig.json` file by chan
 
 {
   "compilerOptions": {
-    "lib": [
-      "ES2020",
-      "DOM"
-    ],
+    "lib": ["ES2020", "DOM"]
     // ... other options ...
   }
 }
