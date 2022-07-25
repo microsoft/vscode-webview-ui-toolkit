@@ -10,7 +10,7 @@ _If you get stuck at any point or if you just want a pre-configured starter exte
 
 ## Part 1: Create a webview-based extension
 
-Before installing the toolkit, you need to create a webview-based extension to use the toolkit in. The following steps are taken directly from the Visual Studio Code [Your First Extension](https://code.visualstudio.com/api/get-started/your-first-extension) guide and [Webview API](https://code.visualstudio.com/api/extension-guides/webview) guide.
+Before installing the toolkit, you need to create a webview-based extension. The following steps are taken directly from the Visual Studio Code [Your First Extension](https://code.visualstudio.com/api/get-started/your-first-extension) guide and [Webview API](https://code.visualstudio.com/api/extension-guides/webview) guide.
 
 To generate a basic extension, we can use [Yeoman](https://yeoman.io/) and the [Visual Studio Code Extension Generator](https://www.npmjs.com/package/generator-code). First, though, make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed. Then, install Yeoman and the generator using the following command:
 
@@ -20,7 +20,7 @@ npm install -g yo generator-code
 
 The generator will scaffold a TypeScript or JavaScript extension ready for development.
 
-Run the generator and fill out a few fields for a new TypeScript extension:
+Run the generator and fill out a few fields for a new TypeScript + Webpack extension:
 
 ```bash
 yo code
@@ -30,7 +30,7 @@ yo code
 # ? What's the identifier of your extension? hello-world
 # ? What's the description of your extension? LEAVE BLANK
 # ? Initialize a git repository? Yes
-# ? Bundle the source code with webpack? No
+# ? Bundle the source code with webpack? Yes
 # ? Which package manager to use? npm
 
 code ./hello-world
@@ -38,7 +38,7 @@ code ./hello-world
 
 ### Create a webview
 
-With this basic extension created, you now need to create a webview. The following steps are an adapted version of those provided in the [Webview API](https://code.visualstudio.com/api/extension-guides/webview) guide – for more info about webviews, read the guide.
+With this basic extension created, you now need to create a webview. The following steps are an adapted version of those provided in the [Webview API](https://code.visualstudio.com/api/extension-guides/webview) guide – for more info about webviews read the guide.
 
 Start by navigating to the `extensions.ts` file inside the `src` directory and replacing the contents of the `activate` function with the following:
 
@@ -65,7 +65,7 @@ Inside this file, create a class that manages the state and behavior of Hello Wo
 It'll contain all the data and methods for:
 
 - Creating and rendering Hello World webview panels
-- Properly cleaning up and disposing webview resources when the panel is closed
+- Properly cleaning up and disposing of webview resources when the panel is closed
 - Setting the HTML content of the webview panel
 - Setting message listeners so data can be passed between the webview and extension
 
@@ -163,9 +163,9 @@ private constructor(panel: vscode.WebviewPanel) {
 
 **Get webview content method**
 
-The `_getWebviewContent` method is where the UI of the extension will be defined.
+The `_getWebviewHtml` method is where the UI of the extension will be defined.
 
-This is also where references to CSS and JavaScript files/packages are created and inserted into the webview HTML. You'll configure the Webview UI Toolkit here, in the second part of this guide.
+This is also where references to CSS and JavaScript files/packages are created and inserted into the webview HTML. You'll configure a reference to the Webview UI Toolkit here, in the second part of this guide.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -173,7 +173,7 @@ This is also where references to CSS and JavaScript files/packages are created a
 export class HelloWorldPanel {
   // ... other properties and methods ...
 
-  private _getWebviewContent() {
+  private _getWebviewHtml() {
     // Tip: Install the es6-string-html VS Code extension to enable code highlighting below
     return /*html*/ `
       <!DOCTYPE html>
@@ -200,7 +200,7 @@ This is another point in which you need to update the constructor method to set 
 private constructor(panel: vscode.WebviewPanel) {
     // ... other code ...
 
-    this._panel.webview.html = this._getWebviewContent();
+    this._panel.webview.html = this._getWebviewHtml();
 }
 ```
 
@@ -226,14 +226,170 @@ With an extension created, install the toolkit package using this command:
 npm install --save @vscode/webview-ui-toolkit
 ```
 
-### Using the toolkit inside a webview
+### Register the toolkit components
 
-With the package installed, you need to adjust the project so the toolkit is usable within your webview. To do this, start by updating the `_getWebviewContent` method to accept two new parameters.
+It can be helpful to think of webviews as having a frontend and a backend. 
+
+In the first part of this guide, you created the backend of a webview (i.e. `HelloWorldPanel`) and in this part, you'll create and configure the frontend JavaScript of a webview.
+
+To do this, start by creating a new directory/file at `src/webview/index.ts`. For now, it will contain the code that will register the toolkit web components (in this case a `<vscode-button>`) with the webview sandbox/iframe.
+
+```js
+// file: src/webview/index.ts
+
+import {
+  provideVSCodeDesignSystem,
+  vsCodeButton,
+} from "@vscode/webview-ui-toolkit";
+
+provideVSCodeDesignSystem().register(vsCodeButton());
+```
+
+**A quick note on registering other components**
+
+To register more toolkit components, simply import the component
+registration function and call it from within the register
+method, like so:
+
+```js
+import {
+  provideVSCodeDesignSystem,
+  vsCodeButton,
+  vsCodeCheckbox,
+} from "@vscode/webview-ui-toolkit";
+
+provideVSCodeDesignSystem().register(
+  vsCodeButton(),
+  vsCodeCheckbox()
+);
+```
+
+Finally, if you would like to register all of the toolkit
+components at once, there's a handy convenience function:
+
+```js
+import {
+  provideVSCodeDesignSystem,
+  allComponents,
+} from "@vscode/webview-ui-toolkit";
+
+provideVSCodeDesignSystem().register(allComponents.register());
+```
+
+### Add the button to the webview markup
+
+With those changes, you can now add the `<vscode-button>` to the webview markup like so:
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
 
-private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
+private _getWebviewHtml() {
+  return /*html*/ `
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Hello World!</title>
+      </head>
+      <body>
+        <h1>Hello World!</h1>
+        <vscode-button id="howdy">Howdy!</vscode-button>
+      </body>
+    </html>
+  `;
+}
+```
+
+### Updating webpack config
+
+At this point, the component registration code has been created, but it has not been configured to run inside the webview. 
+
+To do this, you need to first update the extension Webpack configuration so that the `src/webview/index.ts` file is included in the extension build.
+
+Inside `webpack.config.js`, in the root directory, add the following changes:
+
+```js
+// file: webpack.config.js
+
+const extensionConfig = {
+  // Add a `webview` entry point to the `entry` config
+  entry: {
+    extension: './src/extension.ts',
+    webview: './src/webview/index.ts',
+  },
+  // Update the `output.filename` config to be '[name].js'
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
+    libraryTarget: 'commonjs2'
+  },
+  // ... other extension configs ...
+}
+```
+
+These configurations will create a build output that contains a `dist/extension.js` file and a `dist/webview.js` file.
+
+### Add a script tag to the webview markup
+
+You can now use some Visual Studio Code APIs to create a URI pointing to the `dist/webview.js` file. 
+
+These API calls can get a bit verbose, so create a small helper function to keep your code clean.
+
+Add a new file at `src/utilities/getUri.ts` with the following:
+
+```typescript
+// file: src/utilities/getUri.ts
+
+import { Uri, Webview } from "vscode";
+
+export function getUri(
+  webview: Webview,
+  extensionUri: Uri,
+  pathList: string[]
+) {
+  return webview.asWebviewUri(Uri.joinPath(extensionUri, ...pathList));
+}
+```
+
+You can use that helper function to get a webview URI that points to the `webview.js` file and then add a script tag to the webview markup.
+
+```typescript
+// file: src/panels/HelloWorldPanel.ts
+
+import { getUri } from "../utilities/getUri";
+
+// ... other code ...
+
+private _getWebviewHtml() {
+  const webviewUri = getUri(webview, extensionUri, ["dist", "webview.js"]);
+
+  return /*html*/ `
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script type="module" src="${webviewUri}"></script>
+        <title>Hello World!</title>
+      </head>
+      <body>
+        <h1>Hello World!</h1>
+        <vscode-button id="howdy">Howdy!</vscode-button>
+      </body>
+    </html>
+  `;
+}
+```
+
+### Add missing parameters
+
+You might have noticed that there are some errors in the `getUri` function call. To fix this, start by updating the `_getWebviewHtml` method to accept two new parameters.
+
+```typescript
+// file: src/panels/HelloWorldPanel.ts
+
+private _getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri) {
   // ... Implementation details should be left unchanged for now ...
 }
 ```
@@ -248,7 +404,7 @@ Update the `constructor` method with the following:
 private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
   // ... other code ...
 
-  this._panel.webview.html = this._getWebviewContent(this._panel.webview, extensionUri);
+  this._panel.webview.html = this._getWebviewHtml(this._panel.webview, extensionUri);
 }
 ```
 
@@ -272,74 +428,9 @@ Finally, update the call to the `render` method:
 HelloWorldPanel.render(context.extensionUri);
 ```
 
-### Create a webview uri
+### Enable webview scripts and improve security
 
-With those changes, you can now use some Visual Studio Code APIs to create a URI pointing to the toolkit package. Just a heads-up: These API calls can get a bit verbose, so you also need to create a small helper function to keep your code clean.
-
-Create a new file at `src/utilities/getUri.ts` with the following:
-
-```typescript
-// file: src/utilities/getUri.ts
-
-import { Uri, Webview } from "vscode";
-
-export function getUri(webview: Webview, extensionUri: Uri, pathList: string[]) {
-  return webview.asWebviewUri(Uri.joinPath(extensionUri, ...pathList));
-}
-```
-
-You can use that helper function to get a webview URI which points to the toolkit package.
-
-```typescript
-// file: src/panels/HelloWorldPanel.ts
-
-import { getUri } from "../utilities/getUri";
-
-// ... other code ...
-
-private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-  const toolkitUri = getUri(webview, extensionUri, [
-    "node_modules",
-    "@vscode",
-    "webview-ui-toolkit",
-    "dist",
-    "toolkit.js", // A toolkit.min.js file is also available
-  ]);
-
-  // ... other code ...
-}
-```
-
-### Pass the uri into the webview
-
-With access to the toolkit URI, you can pass it into the webview context with a regular `<script>` tag by doing this:
-
-```typescript
-// file: src/panels/HelloWorldPanel.ts
-
-private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-  // ... toolkit uri ...
-
-  return /*html*/ `
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <script type="module" src="${toolkitUri}"></script>
-        <title>Hello World!</title>
-      </head>
-      <body>
-        <h1>Hello World!</h1>
-      </body>
-    </html>
-  `;
-}
-```
-
-### Update webview configuration
-
-The final thing you need to do before you can test these updates is update the webview panel configuration option you left empty earlier in the `render` method so that JavaScript is enabled in the webview.
+The final thing you need to do is update the webview panel configuration option you left empty earlier in the `render` method so that JavaScript is enabled in the webview.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -348,30 +439,53 @@ public static render(extensionUri: vscode.Uri) {
   // ... other code ...
 
   const panel = vscode.window.createWebviewPanel("helloworld", "Hello World", vscode.ViewColumn.One, {
+    // Enable javascript in the webview
     enableScripts: true,
+    // Restrict the webview to only load resources from the `dist` directory
+    localResourceRoots: [vscode.Uri.joinPath(extensionUri, 'dist')]
   });
 
   // ... other code ...
 }
 ```
 
-### Make sure everything works
+You should also update the content security policy of your webview to only allow scripts that have a specific nonce. To do this, create another utility function at `src/utilities/getNonce.ts`.
 
-It's time to run a test to see if everything works. To do this, add a `<vscode-button>` to the webview HTML, and then open the extension in the Extension Development Host window by pressing `F5`.
+```typescript
+// file: src/utilities/getNonce.ts
+
+export function getNonce() {
+	let text = '';
+	const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	for (let i = 0; i < 32; i++) {
+		text += possible.charAt(Math.floor(Math.random() * possible.length));
+	}
+	return text;
+}
+```
+
+Back in `HelloWorldPanel.ts` add the following changes so that only loading scripts with a nonce is allowed (as well as only loading styles from the extension directory, and only loading images from HTTPS or the extension directory).
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
 
-private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-  // ... other code ...
+import { getNonce } from "../utilities/getNonce";
+
+// ... other code ...
+
+private _getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri) {
+  const webviewUri = getUri(webview, extensionUri, ["dist", "webview.js"]);
+
+  const nonce = getNonce();
 
   return /*html*/ `
     <!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <script type="module" src="${toolkitUri}"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource}; img-src ${webview.cspSource} https:; script-src 'nonce-${nonce}';">
+        <script type="module" nonce="${nonce}" src="${webviewUri}"></script>
         <title>Hello World!</title>
       </head>
       <body>
@@ -381,11 +495,16 @@ private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
     </html>
   `;
 }
+
 ```
+
+### Make sure everything works
+
+It's time to run a test to see if everything works. Just as before, open the extension in the Extension Development Host window by pressing `F5` and then run the `Hello World` command.
 
 ![Testing That The Toolkit Works](./assets/images/toolkit-button-test.gif)
 
-Theming is built right into the components, so you can test that out, too. Open the Command Pallette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme," and cycle through all the themes to see the button change.
+Theming is built right into the components, so you can test that out, too. Open the Command Palette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme," and cycle through all the themes to see the button change.
 
 ![Testing That The Toolkit Theme Utilities Work](./assets/images/toolkit-theme-test.gif)
 
@@ -395,7 +514,7 @@ The final part of this guide will help you adjust the extension once more, so th
 
 ### Create the message listener method
 
-Now, you can create the `_setWebviewMessageListener` method in our `HelloWorldPanel` class. It'll be responsible for setting up an event listener that listens for messages passed from the webview context, and executes code based on the received message.
+Now, you can create the `_setWebviewMessageListener` method in our `HelloWorldPanel` class. It'll be responsible for setting up an event listener that listens for messages passed from the webview context and executes code based on the received message.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -436,14 +555,14 @@ private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
 
 ### Create message-sending code
 
-Now that the message listener code created, you need message-sending code.
+Now that the message listener code is created, you need message-sending code.
 
-This will come in the form of a `main.js` file that'll send a message whenever the `<vscode-button>` is clicked.
+Back in `src/webview/index.ts` add the following code that will send a message whenever the `<vscode-button>` is clicked.
 
-Create a new file at `webview-ui/main.js`.
+```typescript
+// file: src/webview/index.ts
 
-```javascript
-// file: webview-ui/main.js
+// ... toolkit registeration code ...
 
 const vscode = acquireVsCodeApi();
 
@@ -451,7 +570,7 @@ window.addEventListener("load", main);
 
 function main() {
   const howdyButton = document.getElementById("howdy");
-  howdyButton.addEventListener("click", handleHowdyClick);
+  howdyButton?.addEventListener("click", handleHowdyClick);
 }
 
 function handleHowdyClick() {
@@ -462,40 +581,33 @@ function handleHowdyClick() {
 }
 ```
 
-In order for this `main.js` file to run, the last thing to do is create and pass a URI into the webview HTML – just like you did for the toolkit package.
+You'll notice a few errors. To fix them, update the `tsconfig.json` file by changing the `lib` compiler option to include `DOM`.
 
-```typescript
-// file: src/panels/HelloWorldPanel.ts
+```json
+// file: tsconfig.json
 
-private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
-  // ... other code ...
-
-  const mainUri = getUri(webview, extensionUri, ["webview-ui", "main.js"]);
-
-  return /*html*/ `
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <script type="module" src="${toolkitUri}"></script>
-        <script type="module" src="${mainUri}"></script>
-        <title>Hello World!</title>
-      </head>
-      <body>
-        <h1>Hello World!</h1>
-        <vscode-button id="howdy">Howdy!</vscode-button>
-      </body>
-    </html>
-  `;
+{
+  "compilerOptions": {
+    "lib": [
+      "ES2020",
+      "DOM"
+    ],
+    // ... other options ...
+  }
 }
+```
+
+Also, install the `@types/vscode-webview` package as a development dependency.
+
+```
+npm install --save-dev @types/vscode-webview
 ```
 
 ### One final test
 
 You should test that this all works. To do this, run the extension and click the "Howdy!" button.
 
-![Testing that the clicking the howdy button works](./assets/images/toolkit-button-click-test.png)
+![Testing that clicking the howdy button works](./assets/images/toolkit-button-click-test.png)
 
 ## Next steps
 
