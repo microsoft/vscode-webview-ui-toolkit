@@ -85,7 +85,6 @@ const BaseButtonStyles = css`
 		fill: inherit;
 		cursor: inherit;
 		font-family: inherit;
-		max-width: 300px;
 	}
 	:host(:hover) {
 		background: ${buttonPrimaryHoverBackground};
