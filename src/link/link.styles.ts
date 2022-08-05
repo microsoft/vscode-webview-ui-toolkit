@@ -47,6 +47,7 @@ export const linkStyles = (
 		padding: 0;
 		outline: none;
 		text-decoration: none;
+		word-break: break-word;
 	}
 	.control::-moz-focus-inner {
 		border: 0;
