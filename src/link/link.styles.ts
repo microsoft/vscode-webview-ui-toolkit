@@ -62,7 +62,8 @@ export const linkStyles = (
 		background: transparent;
 		color: ${linkActiveForeground};
 	}
-	:host(:${focusVisible}) .control {
+	:host(:${focusVisible}) .control,
+	:host(:focus) .control {
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 `;
