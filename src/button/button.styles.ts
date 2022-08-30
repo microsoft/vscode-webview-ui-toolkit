@@ -26,7 +26,6 @@ import {
 	buttonSecondaryForeground,
 	buttonSecondaryHoverBackground,
 	contrastActiveBorder,
-	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	focusBorder,
@@ -63,7 +62,7 @@ const BaseButtonStyles = css`
 		line-height: ${typeRampBaseLineHeight};
 		color: ${buttonPrimaryForeground};
 		background: ${buttonPrimaryBackground};
-		border-radius: calc(${cornerRadius} * 1px);
+		border-radius: 2px;
 		fill: currentColor;
 		cursor: pointer;
 	}
