@@ -26,7 +26,6 @@ import {
 	buttonSecondaryForeground,
 	buttonSecondaryHoverBackground,
 	contrastActiveBorder,
-	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	focusBorder,
