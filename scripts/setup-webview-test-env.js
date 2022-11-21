@@ -1,20 +1,20 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-const {createDir, copyDir, color, delDir} = require('./helpers');
-const {exec} = require('child_process');
-const fs = require('fs');
-const process = require('process');
-const util = require('util');
+import {createDir, copyDir, color, delDir} from './helpers.js';
+import {existsSync} from 'fs';
+import {exec} from 'child_process';
+import {promisify} from 'util';
+import process from 'process';
 
-const execShellCommand = util.promisify(exec);
+const execShellCommand = promisify(exec);
 
 async function main() {
 	// Empty print line to pretty-ify command line output
 	console.log();
 
 	// Copy webview test environment locally if it does not already exist
-	if (!fs.existsSync('./test-webview')) {
+	if (!existsSync('./test-webview')) {
 		try {
 			console.log(color(['dim'], 'Copying webview test environment locally...'));
 			await execShellCommand('npx degit microsoft/vscode-webview-ui-toolkit-samples/default/component-gallery test-webview');
@@ -25,7 +25,7 @@ async function main() {
 	}
 
 	// Install the webview test environment dependencies if they do not exist
-	if (!fs.existsSync('./test-webview/node_modules')) {
+	if (!existsSync('./test-webview/node_modules')) {
 		try {
 			console.log(color(['dim'], 'Installing webview test environment dependencies...'));
 			await execShellCommand('cd ./test-webview && npm install');
