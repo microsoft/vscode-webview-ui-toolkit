@@ -40,7 +40,6 @@ export const dataGridCellStyles = (
 	}
 	:host(.column-header) {
 		font-weight: 600;
-		overflow-wrap: normal;
 	}
 	:host(:${focusVisible}),
 	:host(:focus),
