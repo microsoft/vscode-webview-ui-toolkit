@@ -5,6 +5,7 @@
 	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
 	"license": "MIT",
 	"author": "Microsoft Corporation",
+	"type": "module",
 	"bugs": {
 		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
 	},
