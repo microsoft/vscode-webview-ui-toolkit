@@ -45,6 +45,17 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 </vscode-dropdown>
 ```
 
+### With Label
+
+```html
+<label for="my-dropdown">Choose an option:</label>
+<vscode-dropdown id="my-dropdown">
+  <vscode-option>Option Label #1</vscode-option>
+  <vscode-option>Option Label #2</vscode-option>
+  <vscode-option>Option Label #3</vscode-option>
+</vscode-dropdown>
+```
+
 ### Disabled Attribute
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-dropdown--with-disabled)
