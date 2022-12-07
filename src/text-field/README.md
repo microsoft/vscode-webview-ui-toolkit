@@ -152,7 +152,7 @@ An icon can be added to the right of the text field by adding an element with th
 
 Building on top of the icon examples, it's worth noting that any arbitrary HTML can be inserted into the start and end slots of a text field with the `slot="start"` and `slot="end"` attributes.
 
-The below example demonstrate how the native search text field from VS Code might be _visually_ implemented with a `section` tag that wraps a few `vscode-buttons` with an icon appearance applied (please note that further behavior is needed to make this functional).
+The below example demonstrate how the native search text field from VS Code might be _visually_ implemented with a `section` tag that wraps a few `vscode-buttons` with an icon appearance applied (please note that further JavaScript is needed to make this example functional).
 
 **❗️ An important note ❗️**
 
