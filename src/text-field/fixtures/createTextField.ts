@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 import {TextField} from '../index';
+import {Button, ButtonAppearance} from '../../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
 type TextFieldType = 'email' | 'password' | 'tel' | 'text' | 'url';
@@ -18,6 +19,7 @@ export type TextFieldArgs = {
 	isAutoFocused: boolean;
 	startIcon: boolean;
 	endIcon: boolean;
+	slottedContent: boolean;
 };
 
 export function createTextField({
@@ -32,6 +34,7 @@ export function createTextField({
 	isAutoFocused,
 	startIcon,
 	endIcon,
+	slottedContent,
 }: TextFieldArgs) {
 	const textField = new TextField();
 
@@ -72,6 +75,26 @@ export function createTextField({
 	if (endIcon) {
 		const end = createCodiconIcon({iconName: 'text-size', slotName: 'end'});
 		textField.appendChild(end);
+	}
+	if (slottedContent) {
+		const section = document.createElement('section');
+		section.setAttribute('slot', 'end');
+		section.style.display = 'flex';
+		section.style.alignItems = 'center';
+
+		section.innerHTML = /*html*/ `
+			<vscode-button appearance="icon" aria-label="Toggle case sensitive search">
+					<span class="codicon codicon-case-sensitive"></span>
+			</vscode-button>
+			<vscode-button appearance="icon" aria-label="Toggle whole word search">
+					<span class="codicon codicon-whole-word"></span>
+			</vscode-button>
+			<vscode-button appearance="icon" aria-label="Toggle regex search">
+					<span class="codicon codicon-regex"></span>
+			</vscode-button>
+		`;
+
+		textField.appendChild(section);
 	}
 
 	return textField;
