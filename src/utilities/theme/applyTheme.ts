@@ -64,6 +64,25 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 				if (toolkitToken.name === 'button-icon-hover-background') {
 					value = 'transparent';
 				}
+			} else if (themeKind === 'vscode-high-contrast-light') {
+				if (
+					value.length === 0 &&
+					toolkitToken.name.includes('background')
+				) {
+					// Set button variant hover backgrounds to correct values based on VS Code core source:
+					// https://github.com/microsoft/vscode/blob/fd0ee4f77e354de10ae591c9e97fe5ad41b398fc/src/vs/platform/theme/common/colorRegistry.ts#L270-L276
+					switch (toolkitToken.name) {
+						case 'button-primary-hover-background':
+							value = '#0F4A85';
+							break;
+						case 'button-secondary-hover-background':
+							value = 'transparent';
+							break;
+						case 'button-icon-hover-background':
+							value = 'transparent';
+							break;
+					}
+				}
 			} else {
 				// Set contrast-active-border token to be transparent in non-high-contrast themes
 				if (toolkitToken.name === 'contrast-active-border') {
