@@ -2,7 +2,6 @@
 // Licensed under the MIT License.
 
 import {TextField} from '../index';
-import {Button, ButtonAppearance} from '../../index';
 import {createCodiconIcon} from '../../utilities/storybook/index';
 
 type TextFieldType = 'email' | 'password' | 'tel' | 'text' | 'url';
