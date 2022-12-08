@@ -22,6 +22,7 @@ export default {
 		isAutoFocused: {control: 'boolean'},
 		startIcon: {control: 'boolean'},
 		endIcon: {control: 'boolean'},
+		multipleIcons: {control: 'boolean'},
 	},
 	parameters: {
 		actions: {
@@ -47,6 +48,7 @@ Default.args = {
 	isAutoFocused: false,
 	startIcon: false,
 	endIcon: false,
+	multipleIcons: false,
 };
 Default.parameters = {
 	docs: {
@@ -174,6 +176,19 @@ WithEndIcon.parameters = {
 	docs: {
 		source: {
 			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-text-field>\n\tText Field Label\n\t<span slot="end" class="codicon codicon-text-size"></span>\n</vscode-text-field>`,
+		},
+	},
+};
+
+export const WithMultipleIcons: any = Template.bind({});
+WithMultipleIcons.args = {
+	...Default.args,
+	multipleIcons: true,
+};
+WithMultipleIcons.parameters = {
+	docs: {
+		source: {
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-text-field>\n\tText Field Label\n\t<section slot="end" style="display:flex; align-items: center;">\n\t\t<vscode-button appearance="icon" aria-label="Match Case">\n\t\t\t<span class="codicon codicon-case-sensitive"></span>\n\t\t</vscode-button>\n\t\t<vscode-button appearance="icon" aria-label="Match Whole Word">\n\t\t\t<span class="codicon codicon-whole-word"></span>\n\t\t</vscode-button>\n\t\t<vscode-button appearance="icon" aria-label="Use Regular Expression">\n\t\t\t<span class="codicon codicon-regex"></span>\n\t\t</vscode-button>\n\t</section>\n</vscode-text-field>`,
 		},
 	},
 };
