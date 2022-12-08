@@ -152,7 +152,7 @@ An icon can be added to the right of the text field by adding an element with th
 
 Building on top of the icon examples above, multiple icons can also be inserted into the start and end slots of a text field with the `slot="start"` and `slot="end"` attributes.
 
-The below example demonstrate how the native search text field from VS Code might be _visually_ implemented with a `section` tag that wraps a few `vscode-buttons` with an icon appearance applied (please note that further JavaScript is needed to make this example functional, however).
+The below example demonstrates how the native search text field from VS Code might be _visually_ implemented with a `section` tag that wraps a few `vscode-buttons` with an icon appearance applied (please note that further JavaScript is needed to make this example functional, however).
 
 [Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-multiple-icons)
 
