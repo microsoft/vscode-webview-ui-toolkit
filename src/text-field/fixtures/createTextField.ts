@@ -18,7 +18,7 @@ export type TextFieldArgs = {
 	isAutoFocused: boolean;
 	startIcon: boolean;
 	endIcon: boolean;
-	slottedContent: boolean;
+	multipleIcons: boolean;
 };
 
 export function createTextField({
@@ -33,7 +33,7 @@ export function createTextField({
 	isAutoFocused,
 	startIcon,
 	endIcon,
-	slottedContent,
+	multipleIcons,
 }: TextFieldArgs) {
 	const textField = new TextField();
 
@@ -75,20 +75,20 @@ export function createTextField({
 		const end = createCodiconIcon({iconName: 'text-size', slotName: 'end'});
 		textField.appendChild(end);
 	}
-	if (slottedContent) {
+	if (multipleIcons) {
 		const section = document.createElement('section');
 		section.setAttribute('slot', 'end');
 		section.style.display = 'flex';
 		section.style.alignItems = 'center';
 
 		section.innerHTML = /*html*/ `
-			<vscode-button appearance="icon" aria-label="Toggle case sensitive search">
+			<vscode-button appearance="icon" aria-label="Match Case">
 					<span class="codicon codicon-case-sensitive"></span>
 			</vscode-button>
-			<vscode-button appearance="icon" aria-label="Toggle whole word search">
+			<vscode-button appearance="icon" aria-label="Match Whole Word">
 					<span class="codicon codicon-whole-word"></span>
 			</vscode-button>
-			<vscode-button appearance="icon" aria-label="Toggle regex search">
+			<vscode-button appearance="icon" aria-label="Use Regular Expression">
 					<span class="codicon codicon-regex"></span>
 			</vscode-button>
 		`;

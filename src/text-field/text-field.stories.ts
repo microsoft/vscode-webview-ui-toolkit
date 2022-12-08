@@ -22,7 +22,7 @@ export default {
 		isAutoFocused: {control: 'boolean'},
 		startIcon: {control: 'boolean'},
 		endIcon: {control: 'boolean'},
-		slottedContent: {control: 'boolean'},
+		multipleIcons: {control: 'boolean'},
 	},
 	parameters: {
 		actions: {
@@ -48,7 +48,7 @@ Default.args = {
 	isAutoFocused: false,
 	startIcon: false,
 	endIcon: false,
-	slottedContent: false,
+	multipleIcons: false,
 };
 Default.parameters = {
 	docs: {
@@ -180,15 +180,15 @@ WithEndIcon.parameters = {
 	},
 };
 
-export const WithSlottedContent: any = Template.bind({});
-WithSlottedContent.args = {
+export const WithMultipleIcons: any = Template.bind({});
+WithMultipleIcons.args = {
 	...Default.args,
-	slottedContent: true,
+	multipleIcons: true,
 };
-WithSlottedContent.parameters = {
+WithMultipleIcons.parameters = {
 	docs: {
 		source: {
-			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-text-field>\n\tText Field Label\n\t<section slot="end" style="display:flex; align-items: center;">\n\t\t<vscode-button appearance="icon" aria-label="Toggle case sensitive search">\n\t\t\t<span class="codicon codicon-case-sensitive"></span>\n\t\t</vscode-button>\n\t\t<vscode-button appearance="icon" aria-label="Toggle whole word search">\n\t\t\t<span class="codicon codicon-whole-word"></span>\n\t\t</vscode-button>\n\t\t<vscode-button appearance="icon" aria-label="Toggle regex search">\n\t\t\t<span class="codicon codicon-regex"></span>\n\t\t</vscode-button>\n\t</section>\n</vscode-text-field>`,
+			code: `<!-- Note: Using Visual Studio Code Codicon Library -->\n\n<vscode-text-field>\n\tText Field Label\n\t<section slot="end" style="display:flex; align-items: center;">\n\t\t<vscode-button appearance="icon" aria-label="Match Case">\n\t\t\t<span class="codicon codicon-case-sensitive"></span>\n\t\t</vscode-button>\n\t\t<vscode-button appearance="icon" aria-label="Match Whole Word">\n\t\t\t<span class="codicon codicon-whole-word"></span>\n\t\t</vscode-button>\n\t\t<vscode-button appearance="icon" aria-label="Use Regular Expression">\n\t\t\t<span class="codicon codicon-regex"></span>\n\t\t</vscode-button>\n\t</section>\n</vscode-text-field>`,
 		},
 	},
 };
