@@ -21,7 +21,7 @@ import {
 	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
+} from '../design-tokens.js';
 
 export const checkboxStyles = (
 	context: ElementDefinitionContext,

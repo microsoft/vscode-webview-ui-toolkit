@@ -7,7 +7,7 @@ import {
 	FoundationElementDefinition,
 	dividerTemplate as template,
 } from '@microsoft/fast-foundation';
-import {dividerStyles as styles} from './divider.styles';
+import {dividerStyles as styles} from './divider.styles.js';
 
 export {DividerRole};
 

@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {CSSDesignToken, DesignToken} from '@microsoft/fast-foundation';
-import {initThemeChangeListener} from '../theme/applyTheme';
+import {initThemeChangeListener} from '../theme/applyTheme.js';
 
 /**
  * The possible CSSDesignToken generic types.

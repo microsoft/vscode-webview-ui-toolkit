@@ -11,9 +11,9 @@ import {
 	tabsTemplate,
 	tabTemplate,
 } from '@microsoft/fast-foundation';
-import {panelsStyles} from './panels.styles';
-import {panelTabStyles} from './panel-tab.styles';
-import {panelViewStyles} from './panel-view.styles';
+import {panelsStyles} from './panels.styles.js';
+import {panelTabStyles} from './panel-tab.styles.js';
+import {panelViewStyles} from './panel-view.styles.js';
 
 /**
  * The Visual Studio Code panels class.

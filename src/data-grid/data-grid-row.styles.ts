@@ -11,7 +11,7 @@ import {
 	contrastActiveBorder,
 	designUnit,
 	listHoverBackground,
-} from '../design-tokens';
+} from '../design-tokens.js';
 
 export const dataGridRowStyles = (
 	context: ElementDefinitionContext,

@@ -25,8 +25,8 @@ import {
 	listActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
-import {DropdownOptions} from './';
+} from '../design-tokens.js';
+import {DropdownOptions} from './index.js';
 
 export const dropdownStyles = (
 	context: ElementDefinitionContext,

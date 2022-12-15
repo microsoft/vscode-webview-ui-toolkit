@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {create} from './utilities/design-tokens/create';
+import {create} from './utilities/design-tokens/create.js';
 
 /**
  * Developer note:

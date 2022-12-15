@@ -6,7 +6,7 @@ import {
 	ProgressRingOptions,
 	progressRingTemplate as template,
 } from '@microsoft/fast-foundation';
-import {progressRingStyles as styles} from './progress-ring.styles';
+import {progressRingStyles as styles} from './progress-ring.styles.js';
 
 /**
  * The Visual Studio Code progress ring class.

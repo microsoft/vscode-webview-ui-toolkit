@@ -7,7 +7,7 @@ import {
 	ElementDefinitionContext,
 	FoundationElementDefinition,
 } from '@microsoft/fast-foundation';
-import {borderWidth, designUnit, dividerBackground} from '../design-tokens';
+import {borderWidth, designUnit, dividerBackground} from '../design-tokens.js';
 
 export const dividerStyles = (
 	context: ElementDefinitionContext,
