@@ -7,7 +7,11 @@ import {
 	ElementDefinitionContext,
 	FoundationElementDefinition,
 } from '@microsoft/fast-foundation';
-import {designUnit, foreground, typeRampBaseFontSize} from '../design-tokens.js';
+import {
+	designUnit,
+	foreground,
+	typeRampBaseFontSize,
+} from '../design-tokens.js';
 
 export const radioGroupStyles = (
 	context: ElementDefinitionContext,
