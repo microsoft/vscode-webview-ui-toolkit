@@ -6,7 +6,7 @@ import {
 	Checkbox as FoundationCheckbox,
 	checkboxTemplate as template,
 } from '@microsoft/fast-foundation';
-import {checkboxStyles as styles} from './checkbox.styles';
+import {checkboxStyles as styles} from './checkbox.styles.js';
 
 /**
  * The Visual Studio Code checkbox class.

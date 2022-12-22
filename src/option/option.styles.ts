@@ -19,8 +19,8 @@ import {
 	listActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
-import {OptionOptions} from './';
+} from '../design-tokens.js';
+import {OptionOptions} from './index.js';
 
 export const optionStyles = (
 	context: ElementDefinitionContext,

@@ -1,22 +1,22 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-export * from './vscode-design-system';
-export * from './custom-elements';
+export * from './vscode-design-system.js';
+export * from './custom-elements.js';
 
 // Export components and classes
-export * from './badge/index';
-export * from './button/index';
-export * from './checkbox/index';
-export * from './data-grid/index';
-export * from './divider/index';
-export * from './dropdown/index';
-export * from './link/index';
-export * from './option/index';
-export * from './panels/index';
-export * from './progress-ring/index';
-export * from './radio-group/index';
-export * from './radio/index';
-export * from './tag/index';
-export * from './text-area/index';
-export * from './text-field/index';
+export * from './badge/index.js';
+export * from './button/index.js';
+export * from './checkbox/index.js';
+export * from './data-grid/index.js';
+export * from './divider/index.js';
+export * from './dropdown/index.js';
+export * from './link/index.js';
+export * from './option/index.js';
+export * from './panels/index.js';
+export * from './progress-ring/index.js';
+export * from './radio-group/index.js';
+export * from './radio/index.js';
+export * from './tag/index.js';
+export * from './text-area/index.js';
+export * from './text-field/index.js';

@@ -7,7 +7,7 @@ import {
 	textAreaTemplate as template,
 	TextAreaResize,
 } from '@microsoft/fast-foundation';
-import {textAreaStyles as styles} from './text-area.styles';
+import {textAreaStyles as styles} from './text-area.styles.js';
 
 export {TextAreaResize};
 

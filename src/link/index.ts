@@ -6,7 +6,7 @@ import {
 	Anchor as FoundationAnchor,
 	anchorTemplate as template,
 } from '@microsoft/fast-foundation';
-import {linkStyles as styles} from './link.styles';
+import {linkStyles as styles} from './link.styles.js';
 
 /**
  * Link configuration options

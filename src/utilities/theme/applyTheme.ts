@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {CSSDesignToken} from '@microsoft/fast-foundation';
-import type {T} from '../design-tokens/create';
+import type {T} from '../design-tokens/create.js';
 
 /**
  * Configures a MutationObserver to watch for Visual Studio Code theme changes and

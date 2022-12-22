@@ -6,7 +6,7 @@ import {
 	FoundationElementDefinition,
 	badgeTemplate as template,
 } from '@microsoft/fast-foundation';
-import {tagStyles as styles} from './tag.styles';
+import {tagStyles as styles} from './tag.styles.js';
 
 /**
  * The Visual Studio Code tag class.

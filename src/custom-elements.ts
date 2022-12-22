@@ -1,44 +1,44 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 import type {Container} from '@microsoft/fast-foundation';
-import {vsCodeBadge} from './badge/index';
-import {vsCodeButton} from './button/index';
-import {vsCodeCheckbox} from './checkbox/index';
+import {vsCodeBadge} from './badge/index.js';
+import {vsCodeButton} from './button/index.js';
+import {vsCodeCheckbox} from './checkbox/index.js';
 import {
 	vsCodeDataGrid,
 	vsCodeDataGridCell,
 	vsCodeDataGridRow,
-} from './data-grid/index';
-import {vsCodeDivider} from './divider/index';
-import {vsCodeDropdown} from './dropdown/index';
-import {vsCodeLink} from './link/index';
-import {vsCodeOption} from './option/index';
-import {vsCodePanels, vsCodePanelTab, vsCodePanelView} from './panels/index';
-import {vsCodeProgressRing} from './progress-ring/index';
-import {vsCodeRadioGroup} from './radio-group/index';
-import {vsCodeRadio} from './radio/index';
-import {vsCodeTag} from './tag/index';
-import {vsCodeTextArea} from './text-area/index';
-import {vsCodeTextField} from './text-field/index';
+} from './data-grid/index.js';
+import {vsCodeDivider} from './divider/index.js';
+import {vsCodeDropdown} from './dropdown/index.js';
+import {vsCodeLink} from './link/index.js';
+import {vsCodeOption} from './option/index.js';
+import {vsCodePanels, vsCodePanelTab, vsCodePanelView} from './panels/index.js';
+import {vsCodeProgressRing} from './progress-ring/index.js';
+import {vsCodeRadioGroup} from './radio-group/index.js';
+import {vsCodeRadio} from './radio/index.js';
+import {vsCodeTag} from './tag/index.js';
+import {vsCodeTextArea} from './text-area/index.js';
+import {vsCodeTextField} from './text-field/index.js';
 
 // Don't delete these. They're needed so that API-extractor doesn't add import types
 // with improper pathing
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import type {Badge} from './badge/index';
-import type {Button} from './button/index';
-import type {Checkbox} from './checkbox/index';
-import type {DataGrid, DataGridCell, DataGridRow} from './data-grid/index';
-import type {Divider} from './divider/index';
-import type {Dropdown} from './dropdown/index';
-import type {Link} from './link/index';
-import type {Option} from './option/index';
-import type {Panels, PanelTab, PanelView} from './panels/index';
-import type {ProgressRing} from './progress-ring/index';
-import type {RadioGroup} from './radio-group/index';
-import type {Radio} from './radio/index';
-import type {Tag} from './tag/index';
-import type {TextArea} from './text-area/index';
-import type {TextField} from './text-field/index';
+import type {Badge} from './badge/index.js';
+import type {Button} from './button/index.js';
+import type {Checkbox} from './checkbox/index.js';
+import type {DataGrid, DataGridCell, DataGridRow} from './data-grid/index.js';
+import type {Divider} from './divider/index.js';
+import type {Dropdown} from './dropdown/index.js';
+import type {Link} from './link/index.js';
+import type {Option} from './option/index.js';
+import type {Panels, PanelTab, PanelView} from './panels/index.js';
+import type {ProgressRing} from './progress-ring/index.js';
+import type {RadioGroup} from './radio-group/index.js';
+import type {Radio} from './radio/index.js';
+import type {Tag} from './tag/index.js';
+import type {TextArea} from './text-area/index.js';
+import type {TextField} from './text-field/index.js';
 
 // export all components
 export {

@@ -7,7 +7,7 @@ import {
 	TextFieldOptions,
 	TextFieldType,
 } from '@microsoft/fast-foundation';
-import {textFieldStyles as styles} from './text-field.styles';
+import {textFieldStyles as styles} from './text-field.styles.js';
 
 export {TextFieldType};
 

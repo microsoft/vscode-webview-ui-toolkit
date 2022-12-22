@@ -16,8 +16,8 @@ import {
 	linkForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
-import {LinkOptions} from './';
+} from '../design-tokens.js';
+import {LinkOptions} from './index.js';
 
 export const linkStyles = (
 	context: ElementDefinitionContext,

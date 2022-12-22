@@ -7,7 +7,7 @@ import {
 	RadioGroup as FoundationRadioGroup,
 	radioGroupTemplate as template,
 } from '@microsoft/fast-foundation';
-import {radioGroupStyles as styles} from './radio-group.styles';
+import {radioGroupStyles as styles} from './radio-group.styles.js';
 
 export {RadioGroupOrientation};
 
