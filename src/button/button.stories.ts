@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {action} from '@storybook/addon-actions';
-import {ButtonArgs, createButton} from './fixtures/createButton.js';
+import {ButtonArgs, createButton} from './fixtures/createButton';
 
 export default {
 	title: 'Library/Button',

@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Dropdown} from '../index.js';
-import {Option} from '../../option/index.js';
+import {Dropdown} from '../index';
+import {Option} from '../../option/index';
 import {
 	createCodiconIcon,
 	focusObserver,
-} from '../../utilities/storybook/index.js';
+} from '../../utilities/storybook/index';
 
 export type DropdownArgs = {
 	isOpen: boolean;

@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {RadioGroup} from '../index.js';
-import {Radio} from '../../radio/index.js';
+import {RadioGroup} from '../index';
+import {Radio} from '../../radio/index';
 
 export type RadioGroupArgs = {
 	label: string;

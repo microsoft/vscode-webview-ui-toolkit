@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Badge} from '../index.js';
+import {Badge} from '../index';
 
 export type BadgeArgs = {
 	label: string;

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createOption, OptionArgs} from './fixtures/createOption.js';
+import {createOption, OptionArgs} from './fixtures/createOption';
 
 export default {
 	title: 'Library/Option',

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createProgressRing} from './fixtures/createProgressRing.js';
+import {createProgressRing} from './fixtures/createProgressRing';
 
 export default {
 	title: 'Library/Progress Ring',

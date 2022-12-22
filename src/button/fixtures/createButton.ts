@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Button, ButtonAppearance} from '../index.js';
+import {Button, ButtonAppearance} from '../index';
 import {
 	createCodiconIcon,
 	focusObserver,
-} from '../../utilities/storybook/index.js';
+} from '../../utilities/storybook/index';
 
 export type ButtonArgs = {
 	label: string;

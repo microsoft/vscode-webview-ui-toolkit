@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createDivider, DividerArgs} from './fixtures/createDivider.js';
+import {createDivider, DividerArgs} from './fixtures/createDivider';
 
 export default {
 	title: 'Library/Divider',

@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {action} from '@storybook/addon-actions';
-import {createDropdown, DropdownArgs} from './fixtures/createDropdown.js';
+import {createDropdown, DropdownArgs} from './fixtures/createDropdown';
 
 export default {
 	title: 'Library/Dropdown',
