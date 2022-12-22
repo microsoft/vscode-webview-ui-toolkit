@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createTag, TagArgs} from './fixtures/createTag';
+import {createTag, TagArgs} from './fixtures/createTag.js';
 
 export default {
 	title: 'Library/Tag',

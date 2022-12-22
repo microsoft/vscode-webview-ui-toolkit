@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {action} from '@storybook/addon-actions';
-import {createRadio, RadioArgs} from './fixtures/createRadio';
+import {createRadio, RadioArgs} from './fixtures/createRadio.js';
 
 export default {
 	title: 'Library/Radio',

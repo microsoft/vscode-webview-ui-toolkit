@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Tag} from '../index';
+import {Tag} from '../index.js';
 
 export type TagArgs = {
 	label: string;

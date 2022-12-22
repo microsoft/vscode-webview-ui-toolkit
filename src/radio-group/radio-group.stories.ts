@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createRadioGroup, RadioGroupArgs} from './fixtures/createRadioGroup';
+import {createRadioGroup, RadioGroupArgs} from './fixtures/createRadioGroup.js';
 
 export default {
 	title: 'Library/Radio Group',

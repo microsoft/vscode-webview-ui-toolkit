@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {TextArea} from '../index';
+import {TextArea} from '../index.js';
 
 export type TextAreaArgs = {
 	label: string;

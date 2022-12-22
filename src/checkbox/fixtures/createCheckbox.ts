@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Checkbox} from '../index';
-import {focusObserver} from '../../utilities/storybook/index';
+import {Checkbox} from '../index.js';
+import {focusObserver} from '../../utilities/storybook/index.js';
 
 export type CheckboxArgs = {
 	label: string;

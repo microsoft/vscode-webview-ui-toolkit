@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createTextArea, TextAreaArgs} from './fixtures/createTextArea';
+import {createTextArea, TextAreaArgs} from './fixtures/createTextArea.js';
 
 export default {
 	title: 'Library/Text Area',

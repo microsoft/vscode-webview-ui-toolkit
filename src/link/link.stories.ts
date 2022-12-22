@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createLink, LinkArgs} from './fixtures/createLink';
+import {createLink, LinkArgs} from './fixtures/createLink.js';
 
 export default {
 	title: 'Library/Link',

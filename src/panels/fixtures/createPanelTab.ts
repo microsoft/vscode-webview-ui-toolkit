@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {PanelTab} from '../index';
-import {Badge} from '../../badge/index';
-import {focusObserver} from '../../utilities/storybook/index';
+import {PanelTab} from '../index.js';
+import {Badge} from '../../badge/index.js';
+import {focusObserver} from '../../utilities/storybook/index.js';
 
 export type PanelTabArgs = {
 	title: string;

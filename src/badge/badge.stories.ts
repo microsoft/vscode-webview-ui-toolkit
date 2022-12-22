@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {BadgeArgs, createBadge} from './fixtures/createBadge';
+import {BadgeArgs, createBadge} from './fixtures/createBadge.js';
 
 export default {
 	title: 'Library/Badge',

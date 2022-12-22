@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Option} from '../index';
+import {Option} from '../index.js';
 
 export type OptionArgs = {
 	label: string;

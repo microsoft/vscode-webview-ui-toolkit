@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Link} from '../index';
+import {Link} from '../index.js';
 
 export type LinkArgs = {
 	label: string;

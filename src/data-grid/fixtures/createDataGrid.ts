@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {DataGrid} from '../index';
+import {DataGrid} from '../index.js';
 
 export type DataGridArgs = {
 	gridData: any;

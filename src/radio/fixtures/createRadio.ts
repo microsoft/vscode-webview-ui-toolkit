@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Radio} from '../index';
-import {focusObserver} from '../../utilities/storybook/index';
+import {Radio} from '../index.js';
+import {focusObserver} from '../../utilities/storybook/index.js';
 
 export type RadioArgs = {
 	label: string;

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createDataGrid, DataGridArgs} from './fixtures/createDataGrid';
+import {createDataGrid, DataGridArgs} from './fixtures/createDataGrid.js';
 
 export default {
 	title: 'Library/Data Grid',

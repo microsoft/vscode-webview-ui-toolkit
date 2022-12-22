@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createTextField, TextFieldArgs} from './fixtures/createTextField';
+import {createTextField, TextFieldArgs} from './fixtures/createTextField.js';
 
 export default {
 	title: 'Library/Text Field',

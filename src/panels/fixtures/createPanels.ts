@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Panels} from '../index';
-import {createPanelTab, PanelTabArgs} from './createPanelTab';
-import {createPanelView} from './createPanelView';
+import {Panels} from '../index.js';
+import {createPanelTab, PanelTabArgs} from './createPanelTab.js';
+import {createPanelView} from './createPanelView.js';
 
 export type PanelsArgs = {
 	activeTab: string;

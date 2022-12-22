@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import {action} from '@storybook/addon-actions';
-import {CheckboxArgs, createCheckbox} from './fixtures/createCheckbox';
+import {CheckboxArgs, createCheckbox} from './fixtures/createCheckbox.js';
 
 export default {
 	title: 'Library/Checkbox',

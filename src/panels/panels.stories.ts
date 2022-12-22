@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {createPanels, PanelsArgs} from './fixtures/createPanels';
+import {createPanels, PanelsArgs} from './fixtures/createPanels.js';
 
 export default {
 	title: 'Library/Panels',

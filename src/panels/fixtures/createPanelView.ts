@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {PanelView} from '../index';
+import {PanelView} from '../index.js';
 
 export type PanelViewArgs = {
 	label?: string;

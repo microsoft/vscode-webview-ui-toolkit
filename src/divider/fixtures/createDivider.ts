@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {Divider} from '../index';
+import {Divider} from '../index.js';
 
 export type DividerArgs = {
 	role: string;

@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {TextField} from '../index';
-import {createCodiconIcon} from '../../utilities/storybook/index';
+import {TextField} from '../index.js';
+import {createCodiconIcon} from '../../utilities/storybook/index.js';
 
 type TextFieldType = 'email' | 'password' | 'tel' | 'text' | 'url';
 
