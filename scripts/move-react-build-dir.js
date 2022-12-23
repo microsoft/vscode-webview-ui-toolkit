@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-const {copyDir, color, delDir} = require('./helpers');
-const fsPromises = require('fs').promises;
-const process = require('process');
+import {copyDir, color, delDir} from './helpers.js';
+import process from 'process';
+import {readFile, writeFile} from 'fs/promises';
 
 /**
  * Developer note:
@@ -67,7 +67,7 @@ async function updateReactBuildImportPaths(path) {
 
 	// Read React build file and update import paths if appropriate
 	try {
-		const fileContents = await fsPromises.readFile(path, {encoding: 'utf8'});
+		const fileContents = await readFile(path, {encoding: 'utf8'});
 		// These regex strings rely on an assumption that they will not change
 		// If importing React components from the toolkit starts to break check here first
 		result = fileContents.replace(/\.\.\/index/g, '../dist/index');
@@ -80,7 +80,7 @@ async function updateReactBuildImportPaths(path) {
 
 	// Overwrite React build file with any updated import paths
 	try {
-		await fsPromises.writeFile(path, result, {encoding: 'utf8'});
+		await writeFile(path, result, {encoding: 'utf8'});
 	} catch (err) {
 		console.log(`${color(['red'], 'Error: Writing new React build file import paths failed.')}\n    ${err}`);
 		process.exit();

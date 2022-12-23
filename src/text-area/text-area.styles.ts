@@ -28,7 +28,7 @@ import {
 	scrollbarWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
+} from '../design-tokens.js';
 
 export const textAreaStyles = (
 	context: ElementDefinitionContext,

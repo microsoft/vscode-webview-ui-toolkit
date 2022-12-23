@@ -16,8 +16,8 @@ import {
 	linkForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
-import {LinkOptions} from './';
+} from '../design-tokens.js';
+import {LinkOptions} from './index.js';
 
 export const linkStyles = (
 	context: ElementDefinitionContext,
@@ -47,7 +47,7 @@ export const linkStyles = (
 		padding: 0;
 		outline: none;
 		text-decoration: none;
-		white-space: nowrap;
+		word-break: break-word;
 	}
 	.control::-moz-focus-inner {
 		border: 0;
@@ -62,7 +62,8 @@ export const linkStyles = (
 		background: transparent;
 		color: ${linkActiveForeground};
 	}
-	:host(:${focusVisible}) .control {
+	:host(:${focusVisible}) .control,
+	:host(:focus) .control {
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
 `;

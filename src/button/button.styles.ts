@@ -26,7 +26,6 @@ import {
 	buttonSecondaryForeground,
 	buttonSecondaryHoverBackground,
 	contrastActiveBorder,
-	cornerRadius,
 	designUnit,
 	disabledOpacity,
 	focusBorder,
@@ -34,7 +33,7 @@ import {
 	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
+} from '../design-tokens.js';
 
 /**
  * Developer note:
@@ -63,7 +62,7 @@ const BaseButtonStyles = css`
 		line-height: ${typeRampBaseLineHeight};
 		color: ${buttonPrimaryForeground};
 		background: ${buttonPrimaryBackground};
-		border-radius: calc(${cornerRadius} * 1px);
+		border-radius: 2px;
 		fill: currentColor;
 		cursor: pointer;
 	}
@@ -85,7 +84,6 @@ const BaseButtonStyles = css`
 		fill: inherit;
 		cursor: inherit;
 		font-family: inherit;
-		max-width: 300px;
 	}
 	:host(:hover) {
 		background: ${buttonPrimaryHoverBackground};

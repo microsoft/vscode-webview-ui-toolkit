@@ -1,26 +1,26 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-const fs = require('fs');
-const path = require('path');
+import {existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, rmdirSync, unlinkSync, writeFileSync} from 'fs';
+import path from 'path';
 
-function createDir(dir) {
-	if (!fs.existsSync(dir)) {
-		fs.mkdirSync(dir);
+export function createDir(dir) {
+	if (!existsSync(dir)) {
+		mkdirSync(dir);
 	}
 }
 
-function copyDir(source, target) {
+export function copyDir(source, target) {
 	let files = [];
 	const targetFolder = path.join(target, path.basename(source));
-	if (!fs.existsSync(targetFolder)) {
-		fs.mkdirSync(targetFolder);
+	if (!existsSync(targetFolder)) {
+		mkdirSync(targetFolder);
 	}
-	if (fs.lstatSync(source).isDirectory()) {
-		files = fs.readdirSync(source);
+	if (lstatSync(source).isDirectory()) {
+		files = readdirSync(source);
 		files.forEach(function (file) {
 			const curSource = path.join(source, file);
-			if (fs.lstatSync(curSource).isDirectory()) {
+			if (lstatSync(curSource).isDirectory()) {
 				copyDir(curSource, targetFolder);
 			} else {
 				copyFile(curSource, targetFolder);
@@ -29,14 +29,14 @@ function copyDir(source, target) {
 	}
 }
 
-function copyFile(source, target) {
+export function copyFile(source, target) {
 	let targetFile = target;
-	if (fs.existsSync(target)) {
-		if (fs.lstatSync(target).isDirectory()) {
+	if (existsSync(target)) {
+		if (lstatSync(target).isDirectory()) {
 			targetFile = path.join(target, path.basename(source));
 		}
 	}
-	fs.writeFileSync(targetFile, fs.readFileSync(source));
+	writeFileSync(targetFile, readFileSync(source));
 }
 
 const colors = {
@@ -48,7 +48,7 @@ const colors = {
 	cyan: '\x1b[36m',
 };
 
-function color(opts, text) {
+export function color(opts, text) {
 	let colorString = '';
 	for (const opt of opts) {
 		colorString += colors[opt];
@@ -56,24 +56,16 @@ function color(opts, text) {
 	return `${colorString}${text}${colors.reset}`;
 }
 
-function delDir(path) {
-	if (fs.existsSync(path) && fs.lstatSync(path).isDirectory()) {
-		fs.readdirSync(path).forEach(function (file, index) {
+export function delDir(path) {
+	if (existsSync(path) && lstatSync(path).isDirectory()) {
+		readdirSync(path).forEach(function (file, index) {
 			const currPath = path + '/' + file;
-			if (fs.lstatSync(currPath).isDirectory()) {
+			if (lstatSync(currPath).isDirectory()) {
 				delDir(currPath);
 			} else {
-				fs.unlinkSync(currPath);
+				unlinkSync(currPath);
 			}
 		});
-		fs.rmdirSync(path);
+		rmdirSync(path);
 	}
 }
-
-module.exports = {
-	createDir,
-	copyDir,
-	copyFile,
-	color,
-	delDir,
-};

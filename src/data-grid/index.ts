@@ -13,9 +13,9 @@ import {
 	dataGridTemplate as gridTemplate,
 	dataGridRowTemplate as rowTemplate,
 } from '@microsoft/fast-foundation';
-import {dataGridStyles as gridStyles} from './data-grid.styles';
-import {dataGridRowStyles as rowStyles} from './data-grid-row.styles';
-import {dataGridCellStyles as cellStyles} from './data-grid-cell.styles';
+import {dataGridStyles as gridStyles} from './data-grid.styles.js';
+import {dataGridRowStyles as rowStyles} from './data-grid-row.styles.js';
+import {dataGridCellStyles as cellStyles} from './data-grid-cell.styles.js';
 
 export {DataGridCellTypes, DataGridRowTypes, GenerateHeaderOptions};
 

@@ -23,7 +23,7 @@ The `vscode-radio-group` is a web component implementation of a [radio group](ht
 
 ## Implementation
 
-While any DOM content is permissible as a child of the `vscode-radio-group`, only `vscode-radio` content and slotted content with a role of `radio` will receive keyboard support.
+While any DOM content is permissible as a child of the `vscode-radio-group`, only `vscode-radio` components and slotted content with a role of `radio` will receive keyboard support.
 
 ## Attributes
 

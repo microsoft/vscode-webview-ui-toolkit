@@ -18,7 +18,7 @@ import {
 	listActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
+} from '../design-tokens.js';
 
 export const dataGridCellStyles = (
 	context: ElementDefinitionContext,
@@ -40,7 +40,6 @@ export const dataGridCellStyles = (
 	}
 	:host(.column-header) {
 		font-weight: 600;
-		overflow-wrap: normal;
 	}
 	:host(:${focusVisible}),
 	:host(:focus),

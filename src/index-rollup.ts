@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {allComponents} from './custom-elements';
-import {provideVSCodeDesignSystem} from './vscode-design-system';
+import {allComponents} from './custom-elements.js';
+import {provideVSCodeDesignSystem} from './vscode-design-system.js';
 
-export * from './index';
+export * from './index.js';
 
 /**
  * The global VSCode Design System.

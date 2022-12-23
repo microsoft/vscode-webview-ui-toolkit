@@ -24,7 +24,7 @@ import {
 	inputMinWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
+} from '../design-tokens.js';
 
 export const textFieldStyles = (
 	context: ElementDefinitionContext,

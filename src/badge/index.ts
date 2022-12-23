@@ -6,7 +6,7 @@ import {
 	FoundationElementDefinition,
 	badgeTemplate as template,
 } from '@microsoft/fast-foundation';
-import {badgeStyles as styles} from './badge.styles';
+import {badgeStyles as styles} from './badge.styles.js';
 
 /**
  * The Visual Studio Code badge class.

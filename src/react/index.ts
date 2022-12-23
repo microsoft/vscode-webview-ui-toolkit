@@ -23,9 +23,9 @@ import {
 	vsCodeTag,
 	vsCodeTextArea,
 	vsCodeTextField,
-} from '../index';
+} from '../index.js';
 
-import {provideVSCodeDesignSystem} from '../vscode-design-system';
+import {provideVSCodeDesignSystem} from '../vscode-design-system.js';
 
 const {wrap} = provideReactWrapper(React, provideVSCodeDesignSystem());
 

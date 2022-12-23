@@ -7,7 +7,7 @@ import {
 	ElementDefinitionContext,
 	ProgressRingOptions,
 } from '@microsoft/fast-foundation';
-import {designUnit, progressBackground} from '../design-tokens';
+import {designUnit, progressBackground} from '../design-tokens.js';
 
 export const progressRingStyles = (
 	context: ElementDefinitionContext,

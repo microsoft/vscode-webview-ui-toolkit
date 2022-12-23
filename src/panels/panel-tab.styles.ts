@@ -18,7 +18,7 @@ import {
 	panelTabForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens';
+} from '../design-tokens.js';
 
 export const panelTabStyles = (
 	context: ElementDefinitionContext,

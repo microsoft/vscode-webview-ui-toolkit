@@ -17,7 +17,7 @@ import {
 	tagCornerRadius,
 	typeRampMinus1FontSize,
 	typeRampMinus1LineHeight,
-} from '../design-tokens';
+} from '../design-tokens.js';
 
 export const tagStyles = (
 	context: ElementDefinitionContext,
