@@ -3,6 +3,9 @@ pr:
         include:
             - main
 
+variables:
+    Codeql.enabled: true
+
 stages:
     - stage: security_compliance
       displayName: 'Security & Compliance'
