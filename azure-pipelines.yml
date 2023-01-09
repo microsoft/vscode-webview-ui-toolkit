@@ -5,6 +5,8 @@ pr:
 
 variables:
     Codeql.enabled: true
+    # LGTM.UploadSnapshot: true
+    # Semmle.SkipAnalysis: true
 
 stages:
     - stage: security_compliance
