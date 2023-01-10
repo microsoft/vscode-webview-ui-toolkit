@@ -26,6 +26,7 @@ scripts
 .github
 .eslintrc.js
 .eslintrc.cjs
+.eslintrc.mjs
 .eslintignore
 .prettierrc
 .prettierignore
