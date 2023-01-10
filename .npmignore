@@ -25,6 +25,8 @@ scripts
 .vscode
 .github
 .eslintrc.js
+.eslintrc.cjs
+.eslintrc.mjs
 .eslintignore
 .prettierrc
 .prettierignore
