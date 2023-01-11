@@ -18,8 +18,6 @@ To generate a basic extension, we can use [Yeoman](https://yeoman.io/) and the [
 npm install -g yo generator-code
 ```
 
-The generator will scaffold a TypeScript or JavaScript extension ready for development.
-
 Run the generator and fill out a few fields for a new TypeScript extension:
 
 ```bash
@@ -32,20 +30,149 @@ yo code
 # ? Initialize a git repository? Yes
 # ? Bundle the source code with webpack? No
 # ? Which package manager to use? npm
-
-code ./hello-world
+# ? Do you want to open the new folder with Visual Studio Code? Open with `code`
 ```
 
 ### Install and configure esbuild
 
-This extension will use [esbuild](https://esbuild.github.io/) bundle source code. The following steps are an adapted version of those provided in the [Bundling Extensions](https://code.visualstudio.com/api/working-with-extensions/bundling-extension#using-esbuild) guide.
+This extension will use [esbuild](https://esbuild.github.io/) to bundle source code. The following steps are an adapted version of those provided in the [Bundling Extensions](https://code.visualstudio.com/api/working-with-extensions/bundling-extension#using-esbuild) guide.
 
-- Install esbuild
-- Create `esbuild.js` build script for bundling just extension code
-- Update npm scripts
-- Install esbuild-problem-matchers extension
-- Update `.vscode/settings.json` and `.vscode/tasks.json`
-- Test extension
+First install esbuild as a development dependency:
+
+```
+npm i --save-dev esbuild
+```
+
+Next, create an `esbuild.js` build script (in the root of the project) for bundling the extension code:
+
+```js
+// file: esbuild.js
+
+const { build } = require("esbuild");
+
+const baseConfig = {
+  bundle: true,
+  minify: process.env.NODE_ENV === "production",
+  sourcemap: process.env.NODE_ENV !== "production",
+};
+
+const extensionConfig = {
+  ...baseConfig,
+  platform: "node",
+  format: "cjs",
+  entryPoints: ["./src/extension.ts"],
+  outfile: "./out/extension.js",
+  external: ["vscode"],
+};
+
+(async () => {
+  try {
+    await build(extensionConfig);
+    console.log("build complete");
+  } catch (err) {
+    process.stderr.write(err.stderr);
+    process.exit(1);
+  }
+})();
+```
+
+This is a basic config that will build extension source code for a Node/CommonJS-based environment (required to run VS Code extensions). It accepts a `src/extension.ts` file as the input and outputs a single `out/extension.js` file. Additionally, when a "production" environment variable is set the output code will be minified and will not include sourcemaps.
+
+To test that this works, update the `compile` and `vscode:prepublish` scripts and add a `package` script in `package.json`:
+
+```json
+// file: package.json
+
+"scripts": {
+  "vscode:prepublish": "npm run package",
+  "compile": "node ./esbuild.js",
+  "package": "NODE_ENV=production node ./esbuild.js",
+},
+```
+
+Now run the `package` and `compile` scripts:
+
+```
+npm run package
+npm run compile
+```
+
+Running `package` should generate an `out` folder containing a minified `extension.js` file, while `compile` should generate a non-minified `extension.js` file and an `extension.js.map` sourcemap file.
+
+**Configure source code watching**
+
+To configure source code watching, which is required to achieve a good extension debugging experience a few more things need to be updated.
+
+Back in `esbuild.js`, add a `watchConfig` and update the script to accept a `--watch` flag:
+
+```js
+// file: esbuild.js
+
+// ... other configs ...
+
+const watchConfig = {
+  watch: {
+    onRebuild(error, result) {
+      console.log("[watch] build started");
+      if (error) {
+        error.errors.forEach(error =>
+          console.error(`> ${error.location.file}:${error.location.line}:${error.location.column}: error: ${error.text}`)
+        );
+      } else {
+        console.log("[watch] build finished");
+      }
+    },
+  },
+};
+
+(async () => {
+  const args = process.argv.slice(2);
+  try {
+    if (args.includes("--watch")) {
+      // Build and watch source code
+      console.log("[watch] build started");
+      await build({
+        ...extensionConfig,
+        ...watchConfig,
+      });
+      console.log("[watch] build finished");
+    } else {
+      // Build source code
+      await build(extensionConfig);
+      console.log("build complete");
+    }
+  } catch (err) {
+    process.stderr.write(err.stderr);
+    process.exit(1);
+  }
+})();
+```
+
+This watch config adheres to the conventions of the [esbuild-problem-matchers extension](https://github.com/connor4312/esbuild-problem-matchers#esbuild-via-js) and is an extension you need to [install here](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers).
+
+Finally, the npm `watch` script should be updated, along with the `problemMatcher` field in `.vscode/tasks.json`.
+
+```json
+// file: package.json
+
+"scripts": {
+  "watch": "node ./esbuild.js --watch",
+}
+```
+
+```json
+// file: .vscode/tasks.json
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "problemMatcher": "$esbuild-watch"
+      // ... other configs ...
+    }
+  ]
+}
+```
 
 ### Create a webview
 
@@ -174,9 +301,9 @@ private constructor(panel: vscode.WebviewPanel) {
 
 **Get webview content method**
 
-The `_getWebviewHtml` method is where the UI of the extension will be defined.
+The `_getWebviewContent` method is where the UI of the extension will be defined.
 
-This is also where references to CSS and JavaScript files/packages are created and inserted into the webview HTML. You'll configure a reference to the Webview UI Toolkit here, in the second part of this guide.
+This is also where references to CSS and JavaScript files are created and inserted into the webview HTML.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -184,7 +311,7 @@ This is also where references to CSS and JavaScript files/packages are created a
 export class HelloWorldPanel {
   // ... other properties and methods ...
 
-  private _getWebviewHtml() {
+  private _getWebviewContent() {
     // Tip: Install the es6-string-html VS Code extension to enable code highlighting below
     return /*html*/ `
       <!DOCTYPE html>
@@ -211,17 +338,13 @@ This is another point in which you need to update the constructor method to set 
 private constructor(panel: vscode.WebviewPanel) {
     // ... other code ...
 
-    this._panel.webview.html = this._getWebviewHtml();
+    this._panel.webview.html = this._getWebviewContent();
 }
 ```
 
 **Set message listener method**
 
 Message passing is handled in the third part of this guide.
-
-### Update esbuild config
-
-- Update esbuild config one more time to build webview code
 
 ### Test that everything works
 
@@ -245,9 +368,9 @@ npm install --save @vscode/webview-ui-toolkit
 
 It can be helpful to think of webviews as having a frontend and a backend.
 
-In the first part of this guide, you created the backend of a webview (i.e. `HelloWorldPanel`) and in this part, you'll create and configure the frontend JavaScript of a webview.
+In the first part of this guide, you created the backend of your webview (i.e. `HelloWorldPanel`) and in this part, you'll create and configure the frontend of your webview.
 
-To do this, start by creating a new directory/file at `src/webview/main.ts`. For now, it will contain the code that will register the toolkit web components (in this case a `<vscode-button>`) with the webview sandbox/iframe.
+To do this, start by creating a new directory/file at `src/webview/main.ts`. For now, it will contain the code that will register the toolkit web components (in this case a `<vscode-button>`).
 
 ```js
 // file: src/webview/main.ts
@@ -276,7 +399,7 @@ With those changes, you can now add the `<vscode-button>` to the webview markup 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
 
-private _getWebviewHtml() {
+private _getWebviewContent() {
   return /*html*/ `
     <!DOCTYPE html>
     <html lang="en">
@@ -294,9 +417,56 @@ private _getWebviewHtml() {
 }
 ```
 
+### Update esbuild config
+
+In the next step you'll add a script tag into the webview HTML that references a bundled version of the toolkit registration code from above. This means you need to update the esbuild config one final time:
+
+```js
+// file: esbuild.js
+
+// ... other configs ...
+
+const webviewConfig = {
+  ...baseConfig,
+  target: "es2020",
+  format: "esm",
+  entryPoints: ["./src/webview/main.ts"],
+  outfile: "./out/webview.js",
+};
+
+(async () => {
+  const args = process.argv.slice(2);
+  try {
+    if (args.includes("--watch")) {
+      // Build and watch extension and webview code
+      console.log("[watch] build started");
+      await build({
+        ...extensionConfig,
+        ...watchConfig,
+      });
+      await build({
+        ...webviewConfig,
+        ...watchConfig,
+      });
+      console.log("[watch] build finished");
+    } else {
+      // Build extension and webview code
+      await build(extensionConfig);
+      await build(webviewConfig);
+      console.log("build complete");
+    }
+  } catch (err) {
+    process.stderr.write(err.stderr);
+    process.exit(1);
+  }
+})();
+```
+
+This additional config will build webview source code for an ESM-based environment (required for running code within a webview context, which you can think of as running code in a browser because webviews are just an iframe under the hood). It accepts a `src/webview/main.ts` file as the input and outputs a single `out/webview.js` file. Additionally, it inherits the `baseConfig` you added earlier, so when a "production" environment variable is set the webview code will be minified and will not include sourcemaps.
+
 ### Add a script tag to the webview markup
 
-You can now use some Visual Studio Code APIs to create a URI pointing to the `dist/webview.js` file.
+You can now use some Visual Studio Code APIs to create a URI pointing to the `out/webview.js` file.
 
 These API calls can get a bit verbose, so create a small helper function to keep your code clean.
 
@@ -321,8 +491,8 @@ import { getUri } from "../utilities/getUri";
 
 // ... other code ...
 
-private _getWebviewHtml() {
-  const webviewUri = getUri(webview, extensionUri, ["dist", "webview.js"]);
+private _getWebviewContent() {
+  const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
 
   return /*html*/ `
     <!DOCTYPE html>
@@ -330,12 +500,12 @@ private _getWebviewHtml() {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <script type="module" src="${webviewUri}"></script>
         <title>Hello World!</title>
       </head>
       <body>
         <h1>Hello World!</h1>
         <vscode-button id="howdy">Howdy!</vscode-button>
+        <script type="module" src="${webviewUri}"></script>
       </body>
     </html>
   `;
@@ -344,12 +514,12 @@ private _getWebviewHtml() {
 
 ### Add missing parameters
 
-You might have noticed that there are some errors in the `getUri` function call. To fix this, start by updating the `_getWebviewHtml` method to accept two new parameters.
+You might have noticed that there are some errors in the `getUri` function call. To fix this, start by updating the `_getWebviewContent` method to accept two new parameters.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
 
-private _getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri) {
+private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
   // ... Implementation details should be left unchanged for now ...
 }
 ```
@@ -364,7 +534,7 @@ Update the `constructor` method with the following:
 private constructor(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
   // ... other code ...
 
-  this._panel.webview.html = this._getWebviewHtml(this._panel.webview, extensionUri);
+  this._panel.webview.html = this._getWebviewContent(this._panel.webview, extensionUri);
 }
 ```
 
@@ -390,7 +560,9 @@ HelloWorldPanel.render(context.extensionUri);
 
 ### Enable webview scripts and improve security
 
-The final thing you need to do is update the webview panel configuration option you left empty earlier in the `render` method so that JavaScript is enabled in the webview.
+The final set of steps you need to take are enabling and improving webview security.
+
+Start by updating the webview panel configuration option you left empty earlier in the `render` method so that JavaScript is enabled in the webview.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -401,8 +573,8 @@ public static render(extensionUri: vscode.Uri) {
   const panel = vscode.window.createWebviewPanel("helloworld", "Hello World", vscode.ViewColumn.One, {
     // Enable javascript in the webview
     enableScripts: true,
-    // Restrict the webview to only load resources from the `dist` directory
-    localResourceRoots: [vscode.Uri.joinPath(extensionUri, 'dist')]
+    // Restrict the webview to only load resources from the `out` directory
+    localResourceRoots: [vscode.Uri.joinPath(extensionUri, 'out')]
   });
 
   // ... other code ...
@@ -424,7 +596,7 @@ export function getNonce() {
 }
 ```
 
-Back in `HelloWorldPanel.ts` add the following changes so that only loading scripts with a nonce is allowed (as well as only loading styles from the extension directory, and only loading images from HTTPS or the extension directory).
+Back in `HelloWorldPanel.ts` add the nonce to the webview `script` tag and create a content security policy `meta` tag so that only loading scripts with a nonce is allowed.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -433,8 +605,8 @@ import { getNonce } from "../utilities/getNonce";
 
 // ... other code ...
 
-private _getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri) {
-  const webviewUri = getUri(webview, extensionUri, ["dist", "webview.js"]);
+private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
+  const webviewUri = getUri(webview, extensionUri, ["out", "webview.js"]);
 
   const nonce = getNonce();
 
@@ -444,15 +616,26 @@ private _getWebviewHtml(webview: vscode.Webview, extensionUri: vscode.Uri) {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource}; font-src ${webview.cspSource}; img-src ${webview.cspSource} https:; script-src 'nonce-${nonce}';">
-        <script type="module" nonce="${nonce}" src="${webviewUri}"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'nonce-${nonce}';">
         <title>Hello World!</title>
       </head>
       <body>
         <h1>Hello World!</h1>
         <vscode-button id="howdy">Howdy!</vscode-button>
+        <script type="module" nonce="${nonce}" src="${webviewUri}"></script>
       </body>
     </html>
+  `;
+}
+```
+
+_Note: As your extension grows you will likely want to add custom styles, fonts, and/or images to your webview. If you do, you will need to update the content security policy meta tag to explicity allow for these resources. This [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) provides further information on the topic. Also here's a simple example of configuring these:_
+
+```js
+private _getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri) {
+  return /*html*/ `
+    // ... other markup ...
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource}; font-src ${webview.cspSource}; img-src ${webview.cspSource} https:; script-src 'nonce-${nonce}';">
   `;
 }
 ```
@@ -463,7 +646,7 @@ It's time to run a test to see if everything works. Just as before, open the ext
 
 ![Testing That The Toolkit Works](./assets/images/toolkit-button-test.gif)
 
-Theming is built right into the components, so you can test that out, too. Open the Command Palette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme," and cycle through all the themes to see the button change.
+Theming is built right into the components, so you can test that out too. Open the Command Palette (`Crtl + Shift + P` or `Cmd + Shift + P` on Mac), search for "Preferences: Color Theme," and cycle through all the themes to see the button change.
 
 ![Testing That The Toolkit Theme Utilities Work](./assets/images/toolkit-theme-test.gif)
 
@@ -574,12 +757,11 @@ You should test that this all works. To do this, run the extension and click the
 
 Congratulations on getting started with the Webview UI Toolkit! 🎊
 
-You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. Also, in the same repository, you can take a look at other sample extensions/templates demonstrating the toolkit in more complex scenarios or with different frontend frameworks/build tools.
+You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. In the same repository, you can take a look at [other sample extensions/templates](https://github.com/microsoft/vscode-webview-ui-toolkit-samples) demonstrating the toolkit in more complex scenarios or with different frontend frameworks and build tools.
 
-One more thing: Check out our component documentation and Visual Studio Code guides on how to work with webviews.
+Also, check out our component documentation and Visual Studio Code resources on how to build webview-based extensions.
 
 - [Component Docs](./components.md)
-- [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
 - [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
 - [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
 - [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
