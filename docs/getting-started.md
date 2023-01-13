@@ -366,11 +366,7 @@ npm install --save @vscode/webview-ui-toolkit
 
 ### Register the toolkit components
 
-It can be helpful to think of webviews as having a frontend and a backend.
-
-In the first part of this guide, you created the backend of your webview (i.e. `HelloWorldPanel`) and in this part, you'll create and configure the frontend of your webview.
-
-To do this, start by creating a new directory/file at `src/webview/main.ts`. For now, it will contain the code that will register the toolkit web components (in this case a `<vscode-button>`).
+Create a new directory/file at `src/webview/main.ts`. For now, it will contain the code that will register the toolkit web components (in this case a `<vscode-button>`).
 
 ```js
 // file: src/webview/main.ts
@@ -380,7 +376,7 @@ import { provideVSCodeDesignSystem, vsCodeButton } from "@vscode/webview-ui-tool
 provideVSCodeDesignSystem().register(vsCodeButton());
 ```
 
-**A quick note on registering other components**
+_A quick note on registering other components:_
 
 To register more toolkit components, simply import the component
 registration function and call it from within the register
@@ -419,7 +415,7 @@ private _getWebviewContent() {
 
 ### Update esbuild config
 
-In the next step you'll add a script tag into the webview HTML that references a bundled version of the toolkit registration code from above. This means you need to update the esbuild config one final time:
+In the next step you'll add a script tag into the webview HTML that references a bundled version `src/webview/main.ts`. This means you need to update the esbuild config one final time to bundle webview code:
 
 ```js
 // file: esbuild.js
@@ -562,7 +558,7 @@ HelloWorldPanel.render(context.extensionUri);
 
 The final set of steps you need to take are enabling and improving webview security.
 
-Start by updating the webview panel configuration option you left empty earlier in the `render` method so that JavaScript is enabled in the webview.
+Start by updating the webview panel configuration option you left empty earlier in the `render` method so that JavaScript is enabled in the webview and resource loading is restricted to the `out` directory.
 
 ```typescript
 // file: src/panels/HelloWorldPanel.ts
@@ -746,6 +742,8 @@ Also, install the `@types/vscode-webview` package as a development dependency.
 ```
 npm install --save-dev @types/vscode-webview
 ```
+
+_Tip: Sometimes you need to restart the TypeScript language server for this change to be picked up. Run "TypeScript: Restart TS server" in the command palette if you're still getting type errors._
 
 ### One final test
 
