@@ -10,7 +10,7 @@ _If you get stuck at any point or if you just want a pre-configured starter exte
 
 ## Part 1: Create a webview-based extension
 
-Before installing the toolkit, you need to create a webview-based extension. The following steps are taken directly from the Visual Studio Code [Your First Extension](https://code.visualstudio.com/api/get-started/your-first-extension) guide and [Webview API](https://code.visualstudio.com/api/extension-guides/webview) guide.
+Before installing the toolkit, you need to create an extension that uses a webview. The following steps are taken directly from the Visual Studio Code [Your First Extension](https://code.visualstudio.com/api/get-started/your-first-extension) guide and [Webview API](https://code.visualstudio.com/api/extension-guides/webview) guide.
 
 To generate a basic extension, we can use [Yeoman](https://yeoman.io/) and the [Visual Studio Code Extension Generator](https://www.npmjs.com/package/generator-code). First, though, make sure you have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed. Then, install Yeoman and the generator using the following command:
 
@@ -757,7 +757,7 @@ Congratulations on getting started with the Webview UI Toolkit! 🎊
 
 You can find a [completed hello world extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/hello-world) based on this guide that includes documentation comments explaining the code in even more detail. In the same repository, you can take a look at [other sample extensions/templates](https://github.com/microsoft/vscode-webview-ui-toolkit-samples) demonstrating the toolkit in more complex scenarios or with different frontend frameworks and build tools.
 
-Also, check out our component documentation and Visual Studio Code resources on how to build webview-based extensions.
+Also, check out our component documentation and Visual Studio Code resources on how to build extensions.
 
 - [Component Docs](./components.md)
 - [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
