@@ -1,6 +1,11 @@
 trigger:
     - main
 
+pr:
+    branches:
+        include:
+            - main
+
 variables:
     Codeql.Enabled: true
 
