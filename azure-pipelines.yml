@@ -3,6 +3,9 @@ pr:
         include:
             - main
 
+variables:
+    Codeql.Enabled: true
+
 stages:
     - stage: security_compliance
       displayName: 'Security & Compliance'
@@ -42,11 +45,9 @@ stages:
       displayName: 'Build & Test'
       pool:
           vmImage: 'ubuntu-latest'
-
       jobs:
           - job: test
             timeoutInMinutes: 10
-
             steps:
                 - task: NodeTool@0
                   displayName: 'Setup Node 💾'
@@ -61,7 +62,6 @@ stages:
 
           - job: lint
             timeoutInMinutes: 10
-
             steps:
                 - task: NodeTool@0
                   displayName: 'Setup Node 💾'
@@ -79,7 +79,6 @@ stages:
 
           - job: build
             timeoutInMinutes: 10
-
             steps:
                 - task: NodeTool@0
                   displayName: 'Setup Node 💾'
