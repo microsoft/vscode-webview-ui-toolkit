@@ -3,7 +3,6 @@
 [![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
-![Deploy Docs Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/docs-cd.yml/badge.svg)
 
 ![Webview Toolkit for Visual Studio Code Artwork](./docs/assets/images/toolkit-artwork.png)
 
@@ -34,11 +33,11 @@ For more information, check out the following documentation:
 
 -   [Component Docs](./docs/components.md)
 -   [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
+-   [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
+-   [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
+-   [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
+-   [Extension API Docs](https://code.visualstudio.com/api)
 -   [Figma Toolkit](https://www.figma.com/community/file/1071566662997054792/Webview-UI-Toolkit-for-Visual-Studio-Code)
--   [Storybook (Interactive Component Sandbox)](https://microsoft.github.io/vscode-webview-ui-toolkit/)
--   [Visual Studio Code Webview Guide](https://code.visualstudio.com/api/extension-guides/webview)
--   [Visual Studio Code Webview Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
--   [Visual Studio Code Extension API Docs](https://code.visualstudio.com/api)
 
 ## A note on webview usage
 
