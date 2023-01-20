@@ -40,8 +40,10 @@ This extension will use [esbuild](https://esbuild.github.io/) to bundle source c
 First install esbuild as a development dependency:
 
 ```
-npm i --save-dev esbuild
+npm i --save-dev esbuild@0.16.17
 ```
+
+_Note: Esbuild recently [released breaking changes in v0.17.0](https://github.com/evanw/esbuild/releases/tag/v0.17.0). This guide and associated sample extensions will be updated to account for this soon. But for the time being the installed version of esbuild should be pinned to the last v0.16 release._
 
 Next, create an `esbuild.js` build script (in the root of the project) for bundling the extension code:
 
@@ -148,9 +150,9 @@ const watchConfig = {
 })();
 ```
 
-This watch config adheres to the conventions of the [esbuild-problem-matchers extension](https://github.com/connor4312/esbuild-problem-matchers#esbuild-via-js) and is an extension you need to [install here](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers).
+This watch config adheres to the conventions of the [esbuild-problem-matchers extension](https://github.com/connor4312/esbuild-problem-matchers#esbuild-via-js).
 
-Finally, the npm `watch` script should be updated, along with the `problemMatcher` field in `.vscode/tasks.json`.
+The npm `watch` script should now be updated, along with the `problemMatcher` field in `.vscode/tasks.json`.
 
 ```json
 // file: package.json
@@ -173,6 +175,8 @@ Finally, the npm `watch` script should be updated, along with the `problemMatche
   ]
 }
 ```
+
+Finally, you'll likely see a warning in `tasks.json` stating "Unrecognized problem matcher. Is the extension that contributes this problem matcher installed?". To fix this [install the esbuild-problem-matchers extension](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers).
 
 ### Create a webview
 
@@ -251,7 +255,7 @@ export class HelloWorldPanel {
 }
 ```
 
-At this point, you can also go back to the `src/extension.ts` file and add an import statement to resolve the earlier error.
+At this point, you can go back to the `src/extension.ts` file and add an import statement to resolve the earlier error.
 
 ```typescript
 // file: src/extension.ts
