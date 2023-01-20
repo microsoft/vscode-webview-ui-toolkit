@@ -1,7 +1,5 @@
-pr:
-    branches:
-        include:
-            - main
+trigger:
+    - main
 
 variables:
     Codeql.Enabled: true
@@ -45,11 +43,9 @@ stages:
       displayName: 'Build & Test'
       pool:
           vmImage: 'ubuntu-latest'
-
       jobs:
           - job: test
             timeoutInMinutes: 10
-
             steps:
                 - task: NodeTool@0
                   displayName: 'Setup Node 💾'
@@ -64,7 +60,6 @@ stages:
 
           - job: lint
             timeoutInMinutes: 10
-
             steps:
                 - task: NodeTool@0
                   displayName: 'Setup Node 💾'
@@ -82,7 +77,6 @@ stages:
 
           - job: build
             timeoutInMinutes: 10
-
             steps:
                 - task: NodeTool@0
                   displayName: 'Setup Node 💾'
