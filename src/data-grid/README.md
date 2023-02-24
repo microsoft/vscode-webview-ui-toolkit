@@ -53,7 +53,7 @@ For example, if you're using a data grid to display real-time earthquake data, a
 
 ### Basic Data Grid
 
-The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below.
+The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below. _Notable exception: The `rowsData` property doesn't work at this time when using the React toolkit components –– see below for an alternative approach._
 
 With that said, a data grid can still be created with HTML only (also shown below).
 
@@ -78,6 +78,8 @@ document.getElementById("basic-grid").rowsData = [
 ```
 
 _Using Only HTML_
+
+This is the recommended way of creating data grids when using React.
 
 Note: When defining data grids using only HTML, a header row must be manually defined (as demonstrated below).
 
@@ -112,6 +114,47 @@ Starting in `v0.9.2`, however, this behavior has changed so a header row is not 
     <vscode-data-grid-cell grid-column="4">Cell Data</vscode-data-grid-cell>
   </vscode-data-grid-row>
 </vscode-data-grid>
+```
+
+Here's a further example of how you might use React's templating syntax to programmatically generate data rows.
+
+```jsx
+import { VSCodeDataGrid, VSCodeDataGridRow, VSCodeDataGridCell } from "@vscode/webview-ui-toolkit/react";
+
+function SomeComponent() {
+  const rowData = [
+    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
+    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
+    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
+  ];
+
+  return (
+    <VSCodeDataGrid>
+      <VSCodeDataGridRow row-type="header">
+        <VSCodeDataGridCell cell-type="columnheader" grid-column="1">
+          A Custom Header Title
+        </VSCodeDataGridCell>
+        <VSCodeDataGridCell cell-type="columnheader" grid-column="2">
+          Another Custom Title
+        </VSCodeDataGridCell>
+        <VSCodeDataGridCell cell-type="columnheader" grid-column="3">
+          Title Is Custom
+        </VSCodeDataGridCell>
+        <VSCodeDataGridCell cell-type="columnheader" grid-column="4">
+          Custom Title
+        </VSCodeDataGridCell>
+      </VSCodeDataGridRow>
+      {rowData.map(row => (
+        <VSCodeDataGridRow>
+          <VSCodeDataGridCell grid-column="1">{row.cell1}</VSCodeDataGridCell>
+          <VSCodeDataGridCell grid-column="2">{row.cell2}</VSCodeDataGridCell>
+          <VSCodeDataGridCell grid-column="3">{row.cell3}</VSCodeDataGridCell>
+          <VSCodeDataGridCell grid-column="4">{row.cell4}</VSCodeDataGridCell>
+        </VSCodeDataGridRow>
+      ))}
+    </VSCodeDataGrid>
+  );
+}
 ```
 
 ### Generate Header Attribute
