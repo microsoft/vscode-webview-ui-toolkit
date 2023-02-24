@@ -72,7 +72,7 @@ async function updateReactBuildImportPaths(path) {
 		// If importing React components from the toolkit starts to break check here first
 		result = fileContents.replace(/\.\.\/index/g, '../dist/index');
 		result = result.replace(/\.\.\/vscode-design-system/g, '../dist/vscode-design-system');
-		result = result.replace(/Pick<import\("\.\.\//g, 'Pick<import("../dist/');
+		result = result.replace(/Pick<import\("\.\.\//g, 'Pick<import("../');
 	} catch (err) {
 		console.log(`${color(['red'], 'Error: Reading and updating React build file import paths failed.')}\n    ${err}`);
 		process.exit();
