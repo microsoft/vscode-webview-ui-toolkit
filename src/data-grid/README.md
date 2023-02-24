@@ -53,7 +53,7 @@ For example, if you're using a data grid to display real-time earthquake data, a
 
 ### Basic Data Grid
 
-The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below.
+The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below. (Notable exception: The `rowsData` property doesn't work at this time when using the React toolkit components).
 
 With that said, a data grid can still be created with HTML only (also shown below).
 
