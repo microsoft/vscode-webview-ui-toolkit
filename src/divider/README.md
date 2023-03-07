@@ -16,15 +16,17 @@ The `vscode-divider` is a web component implementation of a [horiztonal rule ele
 | ![A form with dividers between each input](/docs/assets/images/divider-dont-2.png) | ![A form with dividers between sections](/docs/assets/images/divider-do-2.png) |
 | Don't split up related form elements with a divider.                               | Use a divider to separate multiple forms on the same page.                     |
 
-## Attributes
+## Implementation
+
+[Interactive component examples](https://codesandbox.io/s/divider-sample-xrs7t2?file=/index.html)
+
+### Attributes
 
 | Attribute | Type   | Description                                    |
 | --------- | ------ | ---------------------------------------------- |
 | role      | string | Indicates the semantic meaning of the divider. |
 
 ### Basic Divider
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-divider--default)
 
 ```html
 <vscode-divider></vscode-divider>
@@ -37,8 +39,6 @@ The role attribute determines the semantic meaning (or lack there of) of a Visua
 The `separator` option is the default value and indicates that the divider semantically separates content.
 
 The `presentation` option indicates that the divider has no semantic value and is for visual presentation only.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-divider--with-role)
 
 ```html
 <!-- Indicates that the divider semantically separates content -->

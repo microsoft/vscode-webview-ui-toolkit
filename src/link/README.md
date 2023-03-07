@@ -18,6 +18,8 @@ The `vscode-link` is a web component implementation of an [anchor element](https
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/link-sample-371wey?file=/index.html)
+
 ### Attributes
 
 | Attribute        | Type    | Description                                                                        |
@@ -33,8 +35,12 @@ The `vscode-link` is a web component implementation of an [anchor element](https
 
 ### Basic Link (With Href Attribute)
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-link--default)
-
 ```html
 <vscode-link href="#">Link Text</vscode-link>
+```
+
+### Inline Link
+
+```html
+<p>An <vscode-link href="#">inline link</vscode-link> that is a part of a sentence.</p>
 ```

@@ -23,13 +23,13 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/badge-sample-y8386m?file=/index.html)
+
 ### Attributes
 
 None
 
 ### Basic Badge
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-badge--default)
 
 ```html
 <vscode-badge>1</vscode-badge>

@@ -29,6 +29,8 @@ The component is created using three components that work together to interchang
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/panels-sample-ch0224?file=/index.html)
+
 ### Panels Attributes
 
 | Attribute  | Type   | Description                     |
@@ -126,8 +128,6 @@ Note: Adding a unique ID to each `<vscode-panel-tab>` and `<vscode-panel-view>` 
 
 Also, the unique ID can follow any format or convention as long as each component ID is, in fact, unique from all the others.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--default)
-
 ```html
 <vscode-panels>
   <vscode-panel-tab id="tab-1">PROBLEMS</vscode-panel-tab>
@@ -142,8 +142,6 @@ Also, the unique ID can follow any format or convention as long as each componen
 ```
 
 ### Active ID Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-active-tab)
 
 ```html
 <vscode-panels activeid="tab-4">
@@ -161,8 +159,6 @@ Also, the unique ID can follow any format or convention as long as each componen
 ### With Visual Studio Code Badge
 
 In addition to text, a Visual Studio Code Badge can be used in a panel tab to highlight an item, attract attention, and/or flag status.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-badge)
 
 ```html
 <vscode-panels>
@@ -192,8 +188,6 @@ In addition to text, a Visual Studio Code Badge can be used in a panel tab to hi
 ### Complex Content
 
 A `vscode-panel-view` can also contain any valid HTML.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-panels--with-complex-content)
 
 ```html
 <vscode-panels>

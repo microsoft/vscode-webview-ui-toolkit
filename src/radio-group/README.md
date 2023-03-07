@@ -25,7 +25,9 @@ The `vscode-radio-group` is a web component implementation of a [radio group](ht
 
 While any DOM content is permissible as a child of the `vscode-radio-group`, only `vscode-radio` components and slotted content with a role of `radio` will receive keyboard support.
 
-## Attributes
+[Interactive component examples](https://codesandbox.io/s/radio-group-sample-5c8rq2?file=/index.html)
+
+### Attributes
 
 | Attribute     | Type    | Description                                                                                  |
 | ------------- | ------- | -------------------------------------------------------------------------------------------- |
@@ -35,8 +37,6 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 | `readonly`    | boolean | When true, the child radios will be immutable by user interaction.                           |
 
 ### Basic Radio Group
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--default)
 
 ```html
 <vscode-radio-group>
@@ -48,8 +48,6 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 ```
 
 ### Disabled Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--with-disabled)
 
 ```html
 <vscode-radio-group disabled>
@@ -75,8 +73,6 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 
 If the orientation attribute is not set, the default orientation is `horizontal`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--with-vertical-orientation)
-
 ```html
 <vscode-radio-group orientation="vertical">
   <label slot="label">Radio Group Label</label>
@@ -94,8 +90,6 @@ If the orientation attribute is not set, the default orientation is `horizontal`
 ```
 
 ### Read Only Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-radio-group--with-read-only)
 
 ```html
 <vscode-radio-group readonly>
