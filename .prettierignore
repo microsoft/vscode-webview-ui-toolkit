@@ -5,7 +5,6 @@ node_modules/
 build/
 dist/
 react/
-storybook-static/
 
 # Tests
 test-webview
