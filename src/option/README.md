@@ -10,6 +10,8 @@ The `vscode-option` component will only provide internals related to form associ
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/option-sample-yqlv57?file=/index.html)
+
 ### Attributes
 
 | Attribute  | Type    | Description                                                         |
@@ -20,23 +22,17 @@ The `vscode-option` component will only provide internals related to form associ
 
 ### Basic Option
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-option--default)
-
 ```html
 <vscode-option>Option Label</vscode-option>
 ```
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-option--with-disabled)
-
 ```html
 <vscode-option disabled>Option Label</vscode-option>
 ```
 
 ### Selected Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-option--with-selected)
 
 ```html
 <vscode-option selected>Option Label</vscode-option>

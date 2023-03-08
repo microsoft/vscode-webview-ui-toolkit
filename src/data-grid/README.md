@@ -24,6 +24,8 @@ The data grid is created using three components that work together:
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/data-grid-sample-vol4xv?file=/index.html)
+
 ### Data Grid Attributes
 
 | Attribute               | Type   | Description                                                                            |
@@ -56,8 +58,6 @@ For example, if you're using a data grid to display real-time earthquake data, a
 The recommended basic usage of the `vscode-data-grid` is to use JavaScript (or TypeScript) to programmatically populate the rows and cells of the grid using the `rowsData` property as shown below. _Notable exception: The `rowsData` property doesn't work at this time when using the React toolkit components –– see below for an alternative approach._
 
 With that said, a data grid can still be created with HTML only (also shown below).
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--default)
 
 _Using HTML & JavaScript_
 
@@ -167,8 +167,6 @@ There are three values that can be passed to the attribute:
 - `sticky`: A sticky header row will be automatically generated.
 - `none`: No header row will be generated.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-no-header)
-
 ```html
 <vscode-data-grid id="basic-grid" generate-header="default" aria-label="Default Header"></vscode-data-grid>
 <vscode-data-grid id="basic-grid" generate-header="sticky" aria-label="Sticky Header"></vscode-data-grid>
@@ -198,8 +196,6 @@ The primary difference between using the `grid-template-columns` attribute on th
 When defined on a `<vscode-data-grid>` component, the value of the attribute is automatically applied to every child row inside the component.
 
 When defined on a `<vscode-data-grid-row>` component, the value of the attribute is applied to only that row.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-custom-column-widths)
 
 ```html
 <vscode-data-grid
@@ -283,8 +279,6 @@ This should contain the key from the `rowsData` object (representing a specific 
 **`title` Property**
 
 This is where you define the custom title for a given column.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-data-grid--with-custom-titles)
 
 ```html
 <vscode-data-grid id="basic-grid" aria-label="Custom Column Titles"></vscode-data-grid>

@@ -13,13 +13,13 @@ The `vscode-tag` component is used to label an item, attract attention, and/or f
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/tag-sample-3z2l6e?file=/index.html)
+
 ### Attributes
 
 None
 
 ### Basic Tag
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-tag--default)
 
 ```html
 <vscode-tag>Tag Text</vscode-tag>

@@ -18,6 +18,8 @@ The `vscode-progress-ring` component is used to indicate an indeterminate loadin
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/progress-ring-sample-n94o56?file=/index.html)
+
 ### Attributes
 
 None
@@ -25,8 +27,6 @@ None
 ### Basic Progress Ring
 
 The progress ring displays a looping animation to indicate an indeterminate state where the wait time is unspecified.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-progress-ring--default)
 
 ```html
 <vscode-progress-ring></vscode-progress-ring>

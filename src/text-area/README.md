@@ -25,6 +25,8 @@ Read the [text-field](../text-field/README.md) usage guidelines for general guid
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/text-area-sample-64nv4i?file=/index.html)
+
 ### Attributes
 
 | Attribute     | Type    | Description                                                                                |
@@ -43,15 +45,11 @@ Read the [text-field](../text-field/README.md) usage guidelines for general guid
 
 ### Basic Text Area
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--default)
-
 ```html
 <vscode-text-area>Text Area Label</vscode-text-area>
 ```
 
 ### Autofocus Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-autofocus)
 
 ```html
 <vscode-text-area autofocus>Text Area Label</vscode-text-area>
@@ -59,15 +57,11 @@ Read the [text-field](../text-field/README.md) usage guidelines for general guid
 
 ### Cols Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-custom-cols)
-
 ```html
 <vscode-text-area cols="50">Text Area Label</vscode-text-area>
 ```
 
 ### Disabled Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-disabled)
 
 ```html
 <vscode-text-area disabled>Text Area Label</vscode-text-area>
@@ -91,8 +85,6 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Max Length Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-max-length)
-
 ```html
 <vscode-text-area maxlength="10">Text Area Label</vscode-text-area>
 ```
@@ -105,15 +97,11 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Placeholder Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-placeholder)
-
 ```html
 <vscode-text-area placeholder="Placeholder Text"> Text Area Label </vscode-text-area>
 ```
 
 ### Read Only Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-readonly)
 
 ```html
 <vscode-text-area readonly>Text Area Label</vscode-text-area>
@@ -121,33 +109,14 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 
 ### Resize Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-resize-none)
-
 ```html
 <vscode-text-area resize="none">Text Area Label</vscode-text-area>
-```
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-resize-both)
-
-```html
 <vscode-text-area resize="both">Text Area Label</vscode-text-area>
-```
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-resize-vertical)
-
-```html
 <vscode-text-area resize="vertical">Text Area Label</vscode-text-area>
-```
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-resize-horizontal)
-
-```html
 <vscode-text-area resize="horizontal">Text Area Label</vscode-text-area>
 ```
 
 ### Rows Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-area--with-custom-rows)
 
 ```html
 <vscode-text-area rows="20">Text Area Label</vscode-text-area>

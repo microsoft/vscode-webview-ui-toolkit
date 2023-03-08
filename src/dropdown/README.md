@@ -25,6 +25,8 @@ The `vscode-dropdown` is a web component implementation of a [select element](ht
 
 The `vscode-dropdown` component must be used with the `vscode-option` component.
 
+[Interactive component examples](https://codesandbox.io/s/dropdown-sample-j2ozdp?file=/index.html)
+
 ### Attributes
 
 | Attribute  | Type    | Description                                                                                  |
@@ -34,8 +36,6 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 | `position` | string  | Reflects the placement for the listbox when the dropdown is open. Options: `above`, `below`. |
 
 ### Basic Dropdown
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-dropdown--default)
 
 ```html
 <vscode-dropdown>
@@ -58,10 +58,9 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-dropdown--with-disabled)
-
 ```html
-<vscode-dropdown disabled>
+<label for="my-dropdown">Choose an option:</label>
+<vscode-dropdown id="my-dropdown" disabled>
   <vscode-option>Option Label #1</vscode-option>
   <vscode-option>Option Label #2</vscode-option>
   <vscode-option>Option Label #3</vscode-option>
@@ -70,10 +69,9 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### Open Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-dropdown--with-open)
-
 ```html
-<vscode-dropdown open>
+<label for="my-dropdown">Choose an option:</label>
+<vscode-dropdown id="my-dropdown" open>
   <vscode-option>Option Label #1</vscode-option>
   <vscode-option>Option Label #2</vscode-option>
   <vscode-option>Option Label #3</vscode-option>
@@ -82,10 +80,9 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 ### Position Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-dropdown--with-position-above)
-
 ```html
-<vscode-dropdown position="above">
+<label for="my-dropdown">Choose an option:</label>
+<vscode-dropdown id="my-dropdown" position="above">
   <vscode-option>Option Label #1</vscode-option>
   <vscode-option>Option Label #2</vscode-option>
   <vscode-option>Option Label #3</vscode-option>
@@ -93,7 +90,8 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 ```
 
 ```html
-<vscode-dropdown position="below">
+<label for="my-dropdown">Choose an option:</label>
+<vscode-dropdown id="my-dropdown" position="below">
   <vscode-option>Option Label #1</vscode-option>
   <vscode-option>Option Label #2</vscode-option>
   <vscode-option>Option Label #3</vscode-option>
@@ -104,12 +102,11 @@ The `vscode-dropdown` component must be used with the `vscode-option` component.
 
 The default indicator is a downward facing chevron, but it can customized by adding an element with the attribute `slot="indicator"`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-dropdown--with-custom-indicator)
-
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
-<vscode-dropdown>
+<label for="my-dropdown">Choose an option:</label>
+<vscode-dropdown id="my-dropdown">
   <span slot="indicator" class="codicon codicon-settings"></span>
   <vscode-option>Option Label #1</vscode-option>
   <vscode-option>Option Label #2</vscode-option>

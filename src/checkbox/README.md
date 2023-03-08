@@ -28,6 +28,8 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/checkbox-sample-xu5llt?file=/index.html)
+
 ### Attributes
 
 | Attribute   | Type    | Description                                                                              |
@@ -47,15 +49,11 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 ### Basic Checkbox
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--default)
-
 ```html
 <vscode-checkbox>Label</vscode-checkbox>
 ```
 
 ### Autofocus Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-autofocus)
 
 ```html
 <vscode-checkbox autofocus>Label</vscode-checkbox>
@@ -63,23 +61,17 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 ### Checked Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-checked)
-
 ```html
 <vscode-checkbox checked>Label</vscode-checkbox>
 ```
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-disabled)
-
 ```html
 <vscode-checkbox disabled>Label</vscode-checkbox>
 ```
 
 ### Readonly Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-read-only)
 
 ```html
 <vscode-checkbox readonly>Label</vscode-checkbox>
@@ -93,8 +85,6 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 ### Value Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-value)
-
 ```html
 <vscode-checkbox value="baz">Label</vscode-checkbox>
 ```
@@ -102,8 +92,6 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 ### Indeterminate Property
 
 Checkboxes can also render an indeterminate state. This is achieved by getting a reference to a given checkbox using JavaScript and then setting the `indeterminate` property of the checkbox to `true`.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-checkbox--with-indeterminate)
 
 ```javascript
 const checkbox = document.getElementById("basic-checkbox");

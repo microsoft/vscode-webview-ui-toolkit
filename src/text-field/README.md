@@ -28,6 +28,8 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ## Implementation
 
+[Interactive component examples](https://codesandbox.io/s/text-field-sample-7ejw3c?file=/index.html)
+
 ### Attributes
 
 | Attribute     | Type    | Description                                                                                |
@@ -44,15 +46,11 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ### Basic Text Field
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--default)
-
 ```html
 <vscode-text-field>Text Field Label</vscode-text-field>
 ```
 
 ### Autofocus Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-autofocus)
 
 ```html
 <vscode-text-field autofocus>Text Field Label</vscode-text-field>
@@ -60,15 +58,11 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ### Disabled Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-disabled)
-
 ```html
 <vscode-text-field disabled>Text Field Label</vscode-text-field>
 ```
 
 ### Max Length Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-max-length)
 
 ```html
 <vscode-text-field maxlength="10">Text Field Label</vscode-text-field>
@@ -82,23 +76,17 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ### Placeholder Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-placeholder)
-
 ```html
 <vscode-text-field placeholder="Placeholder Text">Text Field Label</vscode-text-field>
 ```
 
 ### Read Only Attribute
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-readonly)
-
 ```html
 <vscode-text-field readonly>Text Field Label</vscode-text-field>
 ```
 
 ### Size Attribute
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-custom-size)
 
 ```html
 <vscode-text-field size="50">Text Field Label</vscode-text-field>
@@ -107,8 +95,6 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 ### Type Attribute
 
 Sets the text field type. Valid options include: "email", "password", "tel", "text", and "url". The default value is "text".
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-type)
 
 ```html
 <vscode-text-field type="email">Text Field Label</vscode-text-field>
@@ -122,8 +108,6 @@ Sets the text field type. Valid options include: "email", "password", "tel", "te
 
 An icon can be added to the left of the text field by adding an element with the attribute `slot="start"`.
 
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-start-icon)
-
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
@@ -136,8 +120,6 @@ An icon can be added to the left of the text field by adding an element with the
 ### End Icon
 
 An icon can be added to the right of the text field by adding an element with the attribute `slot="end"`.
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-end-icon)
 
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
@@ -153,8 +135,6 @@ An icon can be added to the right of the text field by adding an element with th
 Building on top of the icon examples above, multiple icons can also be inserted into the start and end slots of a text field with the `slot="start"` and `slot="end"` attributes.
 
 The below example demonstrates how the native search text field from VS Code might be _visually_ implemented with a `section` tag that wraps a few `vscode-buttons` with an icon appearance applied (please note that further JavaScript is needed to make this example functional, however).
-
-[Interactive Storybook Example](https://microsoft.github.io/vscode-webview-ui-toolkit/?path=/story/library-text-field--with-multiple-icons)
 
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
