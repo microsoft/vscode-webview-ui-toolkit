@@ -1,6 +1,6 @@
 # Visual Studio Code Divider
 
-The `vscode-divider` is a web component implementation of a [horiztonal rule element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
+The `vscode-divider` is a web component implementation of a [horizontal rule element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
 
 ![Divider hero](/docs/assets/images/divider-hero.png)
 

@@ -33,7 +33,7 @@ While any DOM content is permissible as a child of the `vscode-radio-group`, onl
 | ------------- | ------- | -------------------------------------------------------------------------------------------- |
 | `disabled`    | boolean | Disables the radio group and child radios.                                                   |
 | `name`        | string  | The name of the radio group. This will also set the name value for all child radio elements. |
-| `orientation` | string  | The orientation of the group. Options: `horiztonal`, `vertical`.                             |
+| `orientation` | string  | The orientation of the group. Options: `horizontal`, `vertical`.                             |
 | `readonly`    | boolean | When true, the child radios will be immutable by user interaction.                           |
 
 ### Basic Radio Group
