@@ -33,6 +33,7 @@ babel.config.js
 tsconfig.json
 tsconfig.build.json
 tsconfig.eslint.json
+tsdoc.json
 webpack.config.js
 rollup.config.js
 policheck
