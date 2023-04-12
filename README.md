@@ -53,7 +53,7 @@ Finally, if you're ever unsure if your extension should use webviews or not, you
 
 ## Contributing
 
-Read the [contributing](./CONTRIBUTING.md) documentation.
+Read the [contributing](./docs/contributing.md) documentation.
 
 ## Legal notices
 
