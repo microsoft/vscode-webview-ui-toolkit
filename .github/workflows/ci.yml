@@ -36,8 +36,11 @@ jobs:
             - name: Install Dependencies 📥
               run: npm install
 
-            - name: Run Lint Check 🔍
-              run: npm run lint
+            - name: Run Toolkit Lint Check 🔍
+              run: cd packages/toolkit/ && npm run lint
+            
+            - name: Run React Toolkit Lint Check 🔍
+              run: cd packages/toolkit-react/ && npm run lint
 
             - name: Run Format Check 🌸
               run: npm run fmt
@@ -58,4 +61,7 @@ jobs:
               run: npm install
 
             - name: Build Toolkit 🏗
-              run: npm run build
+              run: cd packages/toolkit/ && npm run build
+            
+            - name: Build React Toolkit 🏗
+              run: cd packages/toolkit-react/ && npm run build
