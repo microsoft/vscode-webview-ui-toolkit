@@ -17,6 +17,7 @@
 		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
 		"lint": "npm run lint --workspaces",
-		"lint:fix": "npm run lint:fix --workspaces"
+		"lint:fix": "npm run lint:fix --workspaces",
+		"test": "echo 'Todo: add tests'"
 	}
 }
