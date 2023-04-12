@@ -11,7 +11,7 @@
 	"arrowParens": "avoid",
 	"overrides": [
 		{
-			"files": ["docs/*.md", "src/**/README.md"],
+			"files": ["docs/*.md", "packages/toolkit/src/**/README.md"],
 			"options": {
 				"printWidth": 130,
 				"singleQuote": false,
@@ -21,19 +21,10 @@
 			}
 		},
 		{
-			"files": "src/data-grid/README.md",
-			"options": {
-				"printWidth": 110
-			}
-		},
-		{
-			"files": "src/design-tokens.ts",
-			"options": {
-				"printWidth": 200
-			}
-		},
-		{
-			"files": "scripts/*.js",
+			"files": [
+				"packages/toolkit/src/design-tokens.ts",
+				"packages/**/scripts/setup-webview-test-env.js"
+			],
 			"options": {
 				"printWidth": 200
 			}
