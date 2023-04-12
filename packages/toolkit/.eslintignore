@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# Build files
+dist
+build
+
+# Tests
+coverage
+test-webview
+
+# Misc
+scripts

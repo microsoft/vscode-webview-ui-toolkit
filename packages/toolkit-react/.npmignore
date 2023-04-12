@@ -1,22 +1,21 @@
 # Source files
-src/
+src
 
 # Docs
-docs/
-samples/
+docs
+samples
 CODE_OF_CONDUCT.md
 SECURITY.md
 CONTRIBUTING.md
 
 # Tests
 *.spec.*
-coverage/
+coverage
 test-webview
-.vscode-test-web/
+.vscode-test-web
 
 # Builds
-build/
-storybook-static/
+build
 
 # Scripts
 scripts

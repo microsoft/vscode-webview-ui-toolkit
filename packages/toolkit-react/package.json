@@ -1,0 +1,55 @@
+{
+	"name": "@vscode/webview-ui-toolkit-react",
+	"version": "2.0.0-beta.1",
+	"description": "A React component library for building webview-based extensions in Visual Studio Code.",
+	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
+	"license": "MIT",
+	"author": "Microsoft Corporation",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsc -p ./tsconfig.json",
+		"lint": "eslint . --ext .ts",
+		"lint:fix": "eslint . --ext .ts --fix",
+		"prepublishOnly": "npm run build"
+	},
+	"dependencies": {
+		"@microsoft/fast-element": "^1.6.2",
+		"@microsoft/fast-foundation": "^2.38.0",
+		"@microsoft/fast-react-wrapper": "^0.1.18",
+		"@vscode/webview-ui-toolkit": "^2.0.0-beta.1"
+	},
+	"peerDependencies": {
+		"react": ">=16.9.0"
+	},
+	"devDependencies": {
+		"@microsoft/eslint-config-fast-dna": "^1.2.0",
+		"@types/react": "^18.0.28",
+		"@typescript-eslint/eslint-plugin": "^2.23.0",
+		"eslint": "6.8.0",
+		"eslint-config-prettier": "6.10.1",
+		"eslint-plugin-import": "^2.25.2",
+		"prettier": "^2.2.1",
+		"tslib": "^2.1.0",
+		"typescript": "4.3.5"
+	},
+	"keywords": [
+		"vscode",
+		"visual studio code",
+		"webview",
+		"extension",
+		"ui",
+		"components",
+		"web components",
+		"react"
+	]
+}

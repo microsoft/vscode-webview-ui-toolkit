@@ -1,0 +1,27 @@
+module.exports = {
+	extends: ['@microsoft/eslint-config-fast-dna', 'prettier'],
+	rules: {
+		'no-extra-boolean-cast': 'off',
+		'@typescript-eslint/no-use-before-define': 'off',
+		'@typescript-eslint/typedef': 'off',
+		'@typescript-eslint/explicit-function-return-type': 'off',
+		'@typescript-eslint/explicit-module-boundary-types': 'off',
+		'@typescript-eslint/no-non-null-assertion': 'off',
+		'@typescript-eslint/interface-name-prefix': 'off',
+	},
+	// This is added to silence a warning that shows up when running eslint
+	// Todo: Figure out if there's a better way to resolve this warning
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
+	overrides: [
+		{
+			files: ['*.ts'],
+			parserOptions: {
+				project: ['./tsconfig.eslint.json'],
+			},
+		},
+	],
+};

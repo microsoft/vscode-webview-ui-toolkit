@@ -9,6 +9,11 @@ module.exports = {
 		'@typescript-eslint/no-non-null-assertion': 'off',
 		'@typescript-eslint/interface-name-prefix': 'off',
 	},
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 	overrides: [
 		{
 			files: ['*.ts'],
