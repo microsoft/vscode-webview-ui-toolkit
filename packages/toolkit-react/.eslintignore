@@ -1,13 +1,17 @@
 # Dependencies
 node_modules
 
-# Build files
+# Production
 dist
 build
 
 # Tests
-coverage
+.vscode-test-web
 test-webview
+coverage
+
+# Cache
+temp
 
 # Misc
 scripts

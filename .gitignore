@@ -10,6 +10,9 @@ dist
 test-webview
 coverage
 
+# Cache
+temp
+
 # Misc
 .DS_Store
 .env.local
@@ -22,6 +25,3 @@ coverage
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Cache
-temp

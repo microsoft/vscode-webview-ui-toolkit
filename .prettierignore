@@ -10,6 +10,9 @@ dist
 test-webview
 coverage
 
+# Cache
+temp
+
 # Misc
 .DS_Store
 .env.local
@@ -17,7 +20,6 @@ coverage
 .env.test.local
 .env.production.local
 .eslintcache
-temp
 api-report.md
 
 npm-debug.log*
