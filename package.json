@@ -13,11 +13,14 @@
 		"./packages/toolkit-react"
 	],
 	"scripts": {
-		"build": "npm run build --workspaces",
+		"build": "npm run build:toolkit && npm run build:toolkit-react",
+		"build:toolkit": "cd ./packages/toolkit && npm run build",
+		"build:toolkit-react": "cd ./packages/toolkit-react && npm run build",
 		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
-		"lint": "npm run lint --workspaces",
-		"lint:fix": "npm run lint:fix --workspaces",
+		"lint": "npm run lint:toolkit && npm run lint:toolkit-react",
+		"lint:toolkit": "cd ./packages/toolkit && npm run lint",
+		"lint:toolkit-react": "cd ./packages/toolkit-react && npm run lint",
 		"test": "echo 'Todo: add tests'"
 	}
 }
