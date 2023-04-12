@@ -243,11 +243,7 @@ When defined on a `<vscode-data-grid>` component, the value of the attribute is 
 When defined on a `<vscode-data-grid-row>` component, the value of the attribute is applied to only that row.
 
 ```html
-<vscode-data-grid
-  id="basic-grid"
-  grid-template-columns="100px 10vw 3fr 30%"
-  aria-label="Custom Column Widths"
-></vscode-data-grid>
+<vscode-data-grid id="basic-grid" grid-template-columns="100px 10vw 3fr 30%" aria-label="Custom Column Widths"></vscode-data-grid>
 ```
 
 ```javascript

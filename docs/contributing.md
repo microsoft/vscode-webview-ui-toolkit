@@ -73,17 +73,17 @@ If there are no new commits in upstream `main`, you can skip the following steps
 
 1. Get the latest commits.
 
-    ```
-    git checkout main
-    git pull --rebase upstream main
-    ```
+   ```
+   git checkout main
+   git pull --rebase upstream main
+   ```
 
 2. Merge the latest commits into your branch.
 
-    ```
-    git checkout {branch-name}
-    git merge main
-    ```
+   ```
+   git checkout {branch-name}
+   git merge main
+   ```
 
 3. Resolve any merge conflicts and run all the linting, formatting, tests, and builds again.
 
