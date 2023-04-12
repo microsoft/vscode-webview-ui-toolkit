@@ -35,8 +35,9 @@ assignees: hawkticehurst
 
 ### Desktop (please complete the following information):
 
--   OS Version: [e.g. `macOS 11.3.1`]
--   Toolkit Version: [e.g. `v0.8.0`]
+-   OS Version: [e.g. `macOS 12.3.1`]
+-   Toolkit Package: [e.g. `@vscode/webview-ui-toolkit` or `@vscode/webview-ui-toolkit-react`]
+-   Toolkit Version: [e.g. `v2.1.0`]
 
 ### Additional context
 
