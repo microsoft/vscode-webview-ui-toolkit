@@ -16,7 +16,7 @@ jobs:
                   node-version: '14'
 
             - name: Install Dependencies 📥
-              run: npm ci --workspaces="true" --include-workspace-root="true"
+              run: npm ci --include=dev
 
             - name: Run Tests 🧪
               run: npm run test
@@ -34,7 +34,7 @@ jobs:
                   node-version: '14'
 
             - name: Install Dependencies 📥
-              run: npm ci --workspaces="true" --include-workspace-root="true"
+              run: npm ci --include=dev
 
             - name: Run Format Check 🌸
               run: npm run fmt
@@ -55,7 +55,7 @@ jobs:
                   node-version: '14'
 
             - name: Install Dependencies 📥
-              run: npm ci --workspaces="true" --include-workspace-root="true"
+              run: npm ci --include=dev
 
             - name: Build Toolkit 🏗
               run: npm run build
