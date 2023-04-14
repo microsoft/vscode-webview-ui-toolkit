@@ -13,11 +13,11 @@
 		"./packages/toolkit-react"
 	],
 	"scripts": {
-		"build": "npm run build --workspaces",
+		"build": "npm run build --if-present --workspaces",
 		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
-		"lint": "npm run lint --workspaces",
-		"lint:fix": "npm run lint:fix --workspaces",
+		"lint": "npm run lint --if-present --workspaces",
+		"lint:fix": "npm run lint:fix --if-present --workspaces",
 		"test": "echo 'Todo: add tests'"
 	},
 	"devDependencies": {
