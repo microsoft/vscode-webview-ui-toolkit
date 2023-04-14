@@ -36,11 +36,11 @@ jobs:
             - name: Install Dependencies 📥
               run: npm install
 
-            - name: Run Lint Check 🔍
-              run: npm run lint
-
             - name: Run Format Check 🌸
               run: npm run fmt
+
+            - name: Run Lint Check 🔍
+              run: npm run lint
 
     build-toolkit:
         runs-on: ubuntu-latest
