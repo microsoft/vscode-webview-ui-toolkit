@@ -19,5 +19,8 @@
 		"lint": "npm run lint --workspaces",
 		"lint:fix": "npm run lint:fix --workspaces",
 		"test": "echo 'Todo: add tests'"
+	},
+	"devDependencies": {
+		"prettier": "^2.2.1"
 	}
 }
