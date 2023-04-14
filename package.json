@@ -12,6 +12,10 @@
 		"./packages/toolkit",
 		"./packages/toolkit-react"
 	],
+	"engines": {
+    "yarn": ">=1.13 <2",
+    "node": ">15.0.0"
+  },
 	"scripts": {
 		"build": "npm run build --workspaces",
 		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
