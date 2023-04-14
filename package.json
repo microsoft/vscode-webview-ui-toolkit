@@ -13,10 +13,10 @@
 		"./packages/toolkit-react"
 	],
 	"scripts": {
-		"build": "echo 'Building the project...' && npm run build --workspaces --no-progress",
+		"build": "npm run build --workspaces",
 		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
-		"lint": "echo 'Running lint...' && npm run lint --workspaces --no-progress",
+		"lint": "npm run lint --workspaces",
 		"lint:fix": "npm run lint:fix --workspaces",
 		"test": "echo 'Todo: add tests'"
 	},

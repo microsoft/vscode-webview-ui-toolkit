@@ -33,7 +33,15 @@ jobs:
               with:
                   node-version: '14'
 
-            - name: Install Dependencies 📥
+            - name: Install Root Dependencies 📥
+              run: npm ci
+
+            - name: Install Toolkit Dependencies 📥
+              working-directory: ./packages/toolkit
+              run: npm ci
+
+            - name: Install Toolkit React Dependencies 📥
+              working-directory: ./packages/toolkit-react
               run: npm ci
 
             - name: Run Format Check 🌸
@@ -54,7 +62,15 @@ jobs:
               with:
                   node-version: '14'
 
-            - name: Install Dependencies 📥
+            - name: Install Root Dependencies 📥
+              run: npm ci
+
+            - name: Install Toolkit Dependencies 📥
+              working-directory: ./packages/toolkit
+              run: npm ci
+
+            - name: Install Toolkit React Dependencies 📥
+              working-directory: ./packages/toolkit-react
               run: npm ci
 
             - name: Build Toolkit 🏗
