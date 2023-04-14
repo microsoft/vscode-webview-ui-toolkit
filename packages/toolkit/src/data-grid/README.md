@@ -71,9 +71,24 @@ Note that when using this method of data grid creation, the header row is automa
 // A row is automatically generated for each object in the rowsData array.
 // A column is automatically generated for each key in the first object in the rowsData array.
 document.getElementById("basic-grid").rowsData = [
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
 ];
 ```
 
@@ -123,9 +138,24 @@ import { VSCodeDataGrid, VSCodeDataGridRow, VSCodeDataGridCell } from "@vscode/w
 
 function SomeComponent() {
   const rowData = [
-    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
-    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
-    { cell1: "Cell Data", cell2: "Cell Data", cell3: "Cell Data", cell4: "Cell Data" },
+    {
+      cell1: "Cell Data",
+      cell2: "Cell Data",
+      cell3: "Cell Data",
+      cell4: "Cell Data",
+    },
+    {
+      cell1: "Cell Data",
+      cell2: "Cell Data",
+      cell3: "Cell Data",
+      cell4: "Cell Data",
+    },
+    {
+      cell1: "Cell Data",
+      cell2: "Cell Data",
+      cell3: "Cell Data",
+      cell4: "Cell Data",
+    },
   ];
 
   return (
@@ -175,9 +205,24 @@ There are three values that can be passed to the attribute:
 
 ```javascript
 document.getElementById("basic-grid").rowsData = [
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
 ];
 ```
 
@@ -198,18 +243,29 @@ When defined on a `<vscode-data-grid>` component, the value of the attribute is 
 When defined on a `<vscode-data-grid-row>` component, the value of the attribute is applied to only that row.
 
 ```html
-<vscode-data-grid
-  id="basic-grid"
-  grid-template-columns="100px 10vw 3fr 30%"
-  aria-label="Custom Column Widths"
-></vscode-data-grid>
+<vscode-data-grid id="basic-grid" grid-template-columns="100px 10vw 3fr 30%" aria-label="Custom Column Widths"></vscode-data-grid>
 ```
 
 ```javascript
 document.getElementById("basic-grid").rowsData = [
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
-  { Header1: "Cell Data", Header2: "Cell Data", Header3: "Cell Data", Header4: "Cell Data" },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
+  {
+    Header1: "Cell Data",
+    Header2: "Cell Data",
+    Header3: "Cell Data",
+    Header4: "Cell Data",
+  },
 ];
 ```
 
@@ -289,9 +345,24 @@ const basicGrid = document.getElementById("basic-grid");
 
 // Populate grid with data
 basicGrid.rowsData = [
-  { ColumnKey1: "Cell Data", ColumnKey2: "Cell Data", ColumnKey3: "Cell Data", ColumnKey4: "Cell Data" },
-  { ColumnKey1: "Cell Data", ColumnKey2: "Cell Data", ColumnKey3: "Cell Data", ColumnKey4: "Cell Data" },
-  { ColumnKey1: "Cell Data", ColumnKey2: "Cell Data", ColumnKey3: "Cell Data", ColumnKey4: "Cell Data" },
+  {
+    ColumnKey1: "Cell Data",
+    ColumnKey2: "Cell Data",
+    ColumnKey3: "Cell Data",
+    ColumnKey4: "Cell Data",
+  },
+  {
+    ColumnKey1: "Cell Data",
+    ColumnKey2: "Cell Data",
+    ColumnKey3: "Cell Data",
+    ColumnKey4: "Cell Data",
+  },
+  {
+    ColumnKey1: "Cell Data",
+    ColumnKey2: "Cell Data",
+    ColumnKey3: "Cell Data",
+    ColumnKey4: "Cell Data",
+  },
 ];
 
 // Add custom column titles to grid

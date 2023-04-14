@@ -1,7 +1,16 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, rmdirSync, unlinkSync, writeFileSync} from 'fs';
+import {
+	existsSync,
+	lstatSync,
+	mkdirSync,
+	readdirSync,
+	readFileSync,
+	rmdirSync,
+	unlinkSync,
+	writeFileSync,
+} from 'fs';
 import path from 'path';
 
 export function createDir(dir) {

@@ -4,6 +4,7 @@
 import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
 import React from 'react';
 import {
+	provideVSCodeDesignSystem,
 	vsCodeBadge,
 	vsCodeButton,
 	vsCodeCheckbox,
@@ -23,9 +24,7 @@ import {
 	vsCodeTag,
 	vsCodeTextArea,
 	vsCodeTextField,
-} from '../index.js';
-
-import {provideVSCodeDesignSystem} from '../vscode-design-system.js';
+} from '@vscode/webview-ui-toolkit';
 
 const {wrap} = provideReactWrapper(React, provideVSCodeDesignSystem());
 

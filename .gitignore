@@ -1,32 +1,27 @@
 # Dependencies
-node_modules/
+node_modules
 
 # Production
-dist/
-storybook-static/
-react/
-
-# ensure that the react folder inside src is included
-!src/react/
+build
+dist
 
 # Tests
+.vscode-test-web
 test-webview
-.vscode-test-web/
+coverage
+
+# Cache
+temp
 
 # Misc
 .DS_Store
-.vscode
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 .eslintcache
-coverage/
 .npmrc
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Cache
-temp

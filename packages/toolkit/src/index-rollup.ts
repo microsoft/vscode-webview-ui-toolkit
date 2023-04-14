@@ -12,5 +12,6 @@ export * from './index.js';
  * Only available if the components are added through a script tag
  * rather than a module/build system.
  */
-export const VSCodeDesignSystem =
-	provideVSCodeDesignSystem().register(allComponents);
+export const VSCodeDesignSystem = provideVSCodeDesignSystem().register(
+	allComponents
+);

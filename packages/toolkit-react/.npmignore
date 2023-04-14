@@ -1,22 +1,21 @@
 # Source files
-src/
+src
 
 # Docs
-docs/
-samples/
+docs
+samples
 CODE_OF_CONDUCT.md
 SECURITY.md
 CONTRIBUTING.md
 
 # Tests
 *.spec.*
-coverage/
+coverage
 test-webview
-.vscode-test-web/
+.vscode-test-web
 
 # Builds
-build/
-storybook-static/
+build
 
 # Scripts
 scripts
@@ -34,6 +33,7 @@ babel.config.js
 tsconfig.json
 tsconfig.build.json
 tsconfig.eslint.json
+tsdoc.json
 webpack.config.js
 rollup.config.js
 policheck

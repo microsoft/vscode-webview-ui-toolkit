@@ -9,6 +9,13 @@ module.exports = {
 		'@typescript-eslint/no-non-null-assertion': 'off',
 		'@typescript-eslint/interface-name-prefix': 'off',
 	},
+	// This config was added to silence a warning that shows up when running eslint
+	// Todo: Figure out if there's a better way to resolve this warning
+	settings: {
+		react: {
+			version: 'detect',
+		},
+	},
 	overrides: [
 		{
 			files: ['*.ts'],

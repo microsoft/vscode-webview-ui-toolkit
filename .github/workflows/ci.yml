@@ -13,10 +13,10 @@ jobs:
             - name: Setup Node 💾
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '18'
 
             - name: Install Dependencies 📥
-              run: npm install
+              run: npm ci
 
             - name: Run Tests 🧪
               run: npm run test
@@ -31,16 +31,16 @@ jobs:
             - name: Setup Node 💾
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '18'
 
             - name: Install Dependencies 📥
-              run: npm install
-
-            - name: Run Lint Check 🔍
-              run: npm run lint
+              run: npm ci
 
             - name: Run Format Check 🌸
               run: npm run fmt
+
+            - name: Run Lint Check 🔍
+              run: npm run lint
 
     build-toolkit:
         runs-on: ubuntu-latest
@@ -52,10 +52,10 @@ jobs:
             - name: Setup Node 💾
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '18'
 
             - name: Install Dependencies 📥
-              run: npm install
+              run: npm ci
 
             - name: Build Toolkit 🏗
               run: npm run build

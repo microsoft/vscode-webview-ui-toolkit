@@ -1,0 +1,17 @@
+# Dependencies
+node_modules
+
+# Production
+dist
+build
+
+# Tests
+.vscode-test-web
+test-webview
+coverage
+
+# Cache
+temp
+
+# Misc
+scripts

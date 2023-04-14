@@ -42,10 +42,6 @@ async function main() {
 		delDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/dist');
 		createDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/dist');
 		copyDir('./dist', './test-webview/node_modules/@vscode/webview-ui-toolkit');
-		// Copy react build directory
-		delDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/react');
-		createDir('./test-webview/node_modules/@vscode/webview-ui-toolkit/react');
-		copyDir('./react', './test-webview/node_modules/@vscode/webview-ui-toolkit');
 	} catch (err) {
 		console.log(`${color(['red'], 'Error: Failed to copy latest toolkit build into webview test environment')}\n    ${err}`);
 		process.exit();
