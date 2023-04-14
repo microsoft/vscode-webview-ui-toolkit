@@ -9,7 +9,7 @@ These components are actually built with the same exact web components mentioned
 To use the React components in your extension, simply install the `@vscode/webview-ui-toolkit` package and import the components using the following syntax:
 
 ```ts
-import {VSCodeButton, VSCodeCheckbox} from '@vscode/webview-ui-toolkit/react';
+import { VSCodeButton, VSCodeCheckbox } from "@vscode/webview-ui-toolkit/react";
 ```
 
 You should be able to (for the most part) follow the same usage patterns and attributes as the web components. See our [component documentation](../../docs/components.md) for more details.
@@ -25,16 +25,11 @@ Due to the fact that the toolkit React components are built with web components 
 As an example, if you would like to update the value of a text field on every keystroke, the `onInput` should be used instead of `onChange`.
 
 ```tsx
-import {VSCodeTextField} from '@vscode/webview-ui-toolkit/react';
+import { VSCodeTextField } from "@vscode/webview-ui-toolkit/react";
 
 function SomeComponent() {
-	const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
-	return (
-		<VSCodeTextField
-			value={value}
-			onInput={e => setValue(e.target.value)}
-		/>
-	);
+  return <VSCodeTextField value={value} onInput={e => setValue(e.target.value)} />;
 }
 ```
