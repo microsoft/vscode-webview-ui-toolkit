@@ -13,9 +13,9 @@
 		"./packages/toolkit-react"
 	],
 	"engines": {
-    "yarn": ">=1.13 <2",
-    "node": ">15.0.0"
-  },
+		"yarn": ">=1.13 <2",
+		"node": ">15.0.0"
+	},
 	"scripts": {
 		"build": "npm run build --workspaces",
 		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
@@ -23,8 +23,5 @@
 		"lint": "npm run lint --workspaces",
 		"lint:fix": "npm run lint:fix --workspaces",
 		"test": "echo 'Todo: add tests'"
-	},
-	"devDependencies": {
-		"prettier": "^2.2.1"
 	}
 }
