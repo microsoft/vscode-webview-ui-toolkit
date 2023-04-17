@@ -45,11 +45,11 @@ cd packages/toolkit
 npm run test:webview
 ```
 
-_*Note: There is no testing script/environment for `packages/toolkit-react` components at this time._
+_\*Note: There is no testing script/environment for `packages/toolkit-react` components at this time._
 
 #### Working on `@vscode/webview-ui-toolkit-react`
 
-When making changes to the React components in `packages/toolkit-react`, make sure that you first build the source code in `packages/toolkit` in order to get proper IntelliSense and type annotations. 
+When making changes to the React components in `packages/toolkit-react`, make sure that you first build the source code in `packages/toolkit` in order to get proper IntelliSense and type annotations.
 
 This can be done easily by running `npm run build` command from the root directory of the project –– this will build both packages, ensuring that the core toolkit components are built first.
 

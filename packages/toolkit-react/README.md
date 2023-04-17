@@ -30,12 +30,12 @@ Also see our [React + Vite sample extension](https://github.com/microsoft/vscode
 
 For more information, check out the following documentation:
 
--   [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
--   [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
--   [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
--   [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
--   [Extension API Docs](https://code.visualstudio.com/api)
--   [Figma Toolkit](https://www.figma.com/community/file/1071566662997054792/Webview-UI-Toolkit-for-Visual-Studio-Code)
+- [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
+- [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
+- [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
+- [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
+- [Extension API Docs](https://code.visualstudio.com/api)
+- [Figma Toolkit](https://www.figma.com/community/file/1071566662997054792/Webview-UI-Toolkit-for-Visual-Studio-Code)
 
 ## Some exceptions
 
