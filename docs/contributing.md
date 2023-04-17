@@ -22,7 +22,7 @@ git fetch upstream main
 
 ### Install dependencies
 
-Install the project dependencies.
+From the root directory, install the project dependencies. This will install the dependencies for all packages in the monorepo.
 
 ```
 npm install
@@ -38,22 +38,37 @@ git checkout -b {branch-name}
 
 ### Development server
 
-As you're working, you can test your changes in a VS Code extension development environment by running the following command and following the directions that it provides.
+When working on the core components in `packages/toolkit`, you can test your changes in a VS Code extension development environment by running the following command and following the directions that it provides.
 
 ```
+cd packages/toolkit
 npm run test:webview
 ```
 
+_\*Note: There is no testing script/environment for `packages/toolkit-react` components at this time._
+
+#### Working on `@vscode/webview-ui-toolkit-react`
+
+When making changes to the React components in `packages/toolkit-react`, make sure that you first build the source code in `packages/toolkit` in order to get proper IntelliSense and type annotations.
+
+This can be done easily by running `npm run build` command from the root directory of the project –– this will build both packages, ensuring that the core toolkit components are built first.
+
 ## Validate changes
 
-When you're done making changes, check that they pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors.
+When you're done making changes, check that they pass linting, formatting, tests, and that both the toolkit package and docs site can be built without errors. You can run the following commands from the root directory:
 
 ```
 npm run lint
 npm run fmt
 npm run test
 npm run build
-npm run build:docs
+```
+
+If there are any issues with linting or formatting, the two following commands are provided as convience to fix them:
+
+```
+npm run lint:fix
+npm run fmt:fix
 ```
 
 ### Add and commit changes
@@ -97,7 +112,7 @@ git push origin {branch-name}
 
 ### Submit a pull request
 
-Finally, submit a pull request to the [primary toolkit repository](https://github.com/microsoft/vscode-webview-ui-toolkit/compare) through the GitHub website.
+Finally, [submit a pull request](https://github.com/microsoft/vscode-webview-ui-toolkit/pulls) to the primary toolkit repository through the GitHub website.
 
 ## Long term repo maintenance
 

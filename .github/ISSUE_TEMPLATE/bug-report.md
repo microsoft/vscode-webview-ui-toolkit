@@ -33,11 +33,11 @@ assignees: hawkticehurst
 
 <!-- If applicable, add screenshots to help explain your problem. -->
 
-### Desktop (please complete the following information):
+### Details (please complete the following information):
 
 -   OS Version: [e.g. `macOS 12.3.1`]
 -   Toolkit Package: [e.g. `@vscode/webview-ui-toolkit` or `@vscode/webview-ui-toolkit-react`]
--   Toolkit Version: [e.g. `v2.1.0`]
+-   Package Version: [e.g. `v2.1.0`]
 
 ### Additional context
 

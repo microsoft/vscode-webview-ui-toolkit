@@ -1,18 +1,41 @@
 # React Webview UI Toolkit for Visual Studio Code
 
-In addition to the web components that the Webview UI Toolkit for Visual Studio Code provides, the toolkit also provides a set of React components that can be used to build webview-based extension UIs.
+[![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
+[![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
+![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 
-These components are actually built with the same exact web components mentioned above, but are simply wrapped in a React component using the [`@microsoft/fast-react-wrapper`](https://www.npmjs.com/package/@microsoft/fast-react-wrapper) package. You can find the wrapping code in the `src/react/index.ts` file.
+A React component library for building [webview-based extensions](https://code.visualstudio.com/api/extension-guides/webview) in Visual Studio Code.
+
+This is a companion package to the core web components provided in the [Webview UI Toolkit for Visual Studio Code](https://github.com/microsoft/vscode-webview-ui-toolkit/tree/vnext/packages/toolkit). In fact, these components are built with the same exact web components mentioned above, but are simply wrapped in a React component using the [`@microsoft/fast-react-wrapper`](https://www.npmjs.com/package/@microsoft/fast-react-wrapper) package.
 
 ## Usage
 
-To use the React components in your extension, simply install the `@vscode/webview-ui-toolkit` package and import the components using the following syntax:
+To use the React components in your extension, install the package with the following command:
 
-```ts
-import { VSCodeButton, VSCodeCheckbox } from "@vscode/webview-ui-toolkit/react";
+```
+npm install --save @vscode/webview-ui-toolkit-react
 ```
 
-You should be able to (for the most part) follow the same usage patterns and attributes as the web components. See our [component documentation](../../docs/components.md) for more details.
+To import the components use the following syntax:
+
+```ts
+import { VSCodeButton, VSCodeCheckbox } from "@vscode/webview-ui-toolkit-react";
+```
+
+You should be able to (for the most part) follow the same usage patterns and attributes as the web components. See our [component documentation](https://github.com/microsoft/vscode-webview-ui-toolkit/blob/vnext/docs/components.md) for more details.
+
+Also see our [React + Vite sample extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/frameworks/hello-world-react-vite) for further help scaffolding a new webview-based extension.
+
+## Documentation
+
+For more information, check out the following documentation:
+
+- [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
+- [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
+- [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
+- [Webview UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/webviews)
+- [Extension API Docs](https://code.visualstudio.com/api)
+- [Figma Toolkit](https://www.figma.com/community/file/1071566662997054792/Webview-UI-Toolkit-for-Visual-Studio-Code)
 
 ## Some exceptions
 

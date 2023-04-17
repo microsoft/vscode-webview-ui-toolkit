@@ -4,10 +4,6 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 
-![Webview Toolkit for Visual Studio Code Artwork](./docs/assets/images/toolkit-artwork.png)
-
-## Introduction
-
 The Webview UI Toolkit is a component library for building [webview-based extensions](https://code.visualstudio.com/api/extension-guides/webview) in Visual Studio Code.
 
 Some of the library's features include:
@@ -19,7 +15,7 @@ Some of the library's features include:
 
 ## Getting started
 
-Follow the [Getting Started Guide](./docs/getting-started.md).
+Follow the [Getting Started Guide](https://github.com/microsoft/vscode-webview-ui-toolkit/blob/vnext/docs/getting-started.md).
 
 If you already have a webview-based extension, you can install the toolkit with the following command:
 
@@ -31,7 +27,7 @@ npm install --save @vscode/webview-ui-toolkit
 
 For more information, check out the following documentation:
 
--   [Component Docs](./docs/components.md)
+-   [Component Docs](https://github.com/microsoft/vscode-webview-ui-toolkit/blob/vnext/docs/components.md)
 -   [Toolkit Extension Samples](https://github.com/microsoft/vscode-webview-ui-toolkit-samples)
 -   [Webview API Guide](https://code.visualstudio.com/api/extension-guides/webview)
 -   [Webview API Guidelines](https://code.visualstudio.com/api/references/extension-guidelines#webviews)
@@ -50,17 +46,3 @@ With all this said, we still strongly encourage you to carefully review whether 
 The core Visual Studio Code API provides a vast array of building blocks for highly performant, accessible, and tightly integrated extension experiences. Generally, we encourage you to use them before webviews. If you haven't already, check out this [overview of API capabilities](https://code.visualstudio.com/api/extension-capabilities/overview) to get an idea of what's possible.
 
 Finally, if you're ever unsure if your extension should use webviews or not, you should open an issue and we'll give you some feedback and guidance.
-
-## Contributing
-
-Read the [contributing](./CONTRIBUTING.md) documentation.
-
-## Legal notices
-
-Microsoft and any contributors grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE](LICENSE) file.
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
-
-Privacy information can be found [here](https://privacy.microsoft.com/en-us/).
-
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.

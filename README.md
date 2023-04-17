@@ -1,10 +1,11 @@
 # Webview UI Toolkit for Visual Studio Code
 
-[![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 
 ![Webview Toolkit for Visual Studio Code Artwork](./docs/assets/images/toolkit-artwork.png)
+
+This is the Webview UI Toolkit monorepo. It contains component packages and documentation.
 
 ## Introduction
 
@@ -17,15 +18,21 @@ Some of the library's features include:
 -   **Tech stacks:** The library ships as a set of web components. This means developers can use the toolkit no matter which tech stack – React, Vue, Svelte, etc. – their extension is built with.
 -   **Immediate accessibility:** All components ship with web-standard compliant ARIA labels and keyboard navigation.
 
-## Getting started
+## Packages
 
-Follow the [Getting Started Guide](./docs/getting-started.md).
+**[`@vscode/webview-ui-toolkit`](./packages/toolkit/)**
 
-If you already have a webview-based extension, you can install the toolkit with the following command:
+[![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
 
-```
-npm install --save @vscode/webview-ui-toolkit
-```
+A library of web components (built using [FAST](https://www.fast.design/)) that makes up the core of this project. These components implement the Visual Studio Code design langauge, color theme support, and can used with any framework that supports custom elements or even without a framework. See the [Getting Started Guide](./docs/getting-started.md) to get up and running.
+
+**[`@vscode/webview-ui-toolkit-react`](./packages/toolkit-react/)**
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
+
+A componanion libary of React components, provided as a convience since React does not natively support web components at this time. These React components are simply the core web components wrapped in React using the [`@microsoft/fast-react-wrapper`](https://www.npmjs.com/package/@microsoft/fast-react-wrapper) package. See the `packages/toolkit-react` directory for more [details and documentation](./packages/toolkit-react/README.md).
 
 ## Documentation
 
