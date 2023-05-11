@@ -11,6 +11,7 @@ react/
 
 # Tests
 test-webview
+test-webview-react
 .vscode-test-web/
 
 # Misc
