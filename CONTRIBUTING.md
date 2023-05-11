@@ -40,8 +40,12 @@ git checkout -b {branch-name}
 
 As you're working, you can test your changes in a VS Code extension development environment by running the following command and following the directions that it provides.
 
-```
+```bash
+# Configures an environment to test toolkit web components
 npm run test:webview
+
+# Configures an environment to test toolkit React components
+npm run test:webview-react
 ```
 
 ## Validate changes

@@ -17,7 +17,7 @@ import {readFile, writeFile} from 'fs/promises';
  *
  *     import { ComponentName } from "@vscode/webview-ui-toolkit/dist/react";
  *
- * This import syntax is accomplished by simply moving the already built react directory
+ * This import syntax is accomplished by simply moving the already built React directory
  * out of the dist directory into the project root and then updating some of the import
  * paths in the React build files to reflect this new location. This react folder is
  * intentionally not included in .npmignore so it will be published in the root directory
@@ -40,14 +40,14 @@ import {readFile, writeFile} from 'fs/promises';
  * Until that time, this script will achieve the same results in import syntax.
  */
 async function main() {
-	// Move the react build directory out of dist and into the project root
+	// Move the React build directory out of dist and into the project root
 	try {
-		console.log(color(['dim'], '\nMoving react build into root...'));
+		console.log(color(['dim'], '\nMoving React build into root...'));
 		// Delete the root react directory if it already exists
 		delDir('./react');
-		// Copy react build directory into root
+		// Copy React build directory into root
 		copyDir('./dist/react', './');
-		// Delete react build directory in dist
+		// Delete React build directory in dist
 		delDir('./dist/react');
 	} catch (err) {
 		console.log(`${color(['red'], 'Error: Moving the React build directory into the project root failed.')}\n    ${err}`);
