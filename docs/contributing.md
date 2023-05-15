@@ -40,9 +40,16 @@ git checkout -b {branch-name}
 
 When working on the core components in `packages/toolkit`, you can test your changes in a VS Code extension development environment by running the following command and following the directions that it provides.
 
+```bash
+# Configures an environment to test toolkit web components (run from project root)
+npm run test:toolkit
 ```
-cd packages/toolkit
-npm run test:webview
+
+Similarly, when working on the components in `packages/toolkit-react`, you can test your changes by running the following command.
+
+```bash
+# Configures an environment to test toolkit React components (run from project root)
+npm run test:toolkit-react
 ```
 
 _\*Note: There is no testing script/environment for `packages/toolkit-react` components at this time._

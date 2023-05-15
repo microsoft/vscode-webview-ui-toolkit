@@ -22,6 +22,7 @@
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
 		"lint": "npm run lint --workspaces",
 		"lint:fix": "npm run lint:fix --workspaces",
-		"test": "echo 'Todo: add tests'"
+		"test:toolkit": "cd packages/toolkit && npm run test:webview",
+		"test:toolkit-react": "npm run build && cd packages/toolkit-react && npm run test:webview-react"
 	}
 }

@@ -108,7 +108,7 @@ Starting in `v0.9.2`, however, this behavior has changed so a header row is not 
     <vscode-data-grid-cell cell-type="columnheader" grid-column="1">Header 1</vscode-data-grid-cell>
     <vscode-data-grid-cell cell-type="columnheader" grid-column="2">Header 2</vscode-data-grid-cell>
     <vscode-data-grid-cell cell-type="columnheader" grid-column="3">Header 3</vscode-data-grid-cell>
-    <vscode-data-grid-cell cell-type="columnheader" grid-column="3">Header 4</vscode-data-grid-cell>
+    <vscode-data-grid-cell cell-type="columnheader" grid-column="4">Header 4</vscode-data-grid-cell>
   </vscode-data-grid-row>
   <vscode-data-grid-row>
     <vscode-data-grid-cell grid-column="1">Cell Data</vscode-data-grid-cell>

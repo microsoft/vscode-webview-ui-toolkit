@@ -52,7 +52,7 @@ async function main() {
 	console.log(color(['bold', 'green'], 'Webview test environment successfully configured!'));
 	console.log();
 	console.log('Next steps:');
-	console.log(`  1. Open the ${color(['cyan'], 'test-webview')} folder in a new VS Code window`);
+	console.log(`  1. Open the ${color(['cyan'], 'packages/toolkit/test-webview')} folder in a new VS Code window`);
 	console.log(`  2. Press ${color(['cyan'], 'F5')} to open the webview test extension with the most recent toolkit build loaded`);
 	console.log(`  3. Run the "${color(['cyan'], 'Component Gallery: Show')}" command using the VS Code command palette`);
 	console.log();
