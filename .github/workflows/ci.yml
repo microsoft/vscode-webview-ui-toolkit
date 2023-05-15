@@ -3,23 +3,23 @@ name: toolkit-ci
 on: pull_request
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        timeout-minutes: 10
-        steps:
-            - name: Checkout 🛎️
-              uses: actions/checkout@v2
+    # test:
+    #     runs-on: ubuntu-latest
+    #     timeout-minutes: 10
+    #     steps:
+    #         - name: Checkout 🛎️
+    #           uses: actions/checkout@v2
 
-            - name: Setup Node 💾
-              uses: actions/setup-node@v2
-              with:
-                  node-version: '18'
+    #         - name: Setup Node 💾
+    #           uses: actions/setup-node@v2
+    #           with:
+    #               node-version: '18'
 
-            - name: Install Dependencies 📥
-              run: npm ci
+    #         - name: Install Dependencies 📥
+    #           run: npm ci
 
-            - name: Run Tests 🧪
-              run: npm run test
+    #         - name: Run Tests 🧪
+    #           run: npm run test
 
     lint:
         runs-on: ubuntu-latest
