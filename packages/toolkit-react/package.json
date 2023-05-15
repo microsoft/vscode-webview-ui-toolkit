@@ -20,7 +20,8 @@
 		"build": "tsc -p ./tsconfig.json",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "npm run build",
+		"test:webview-react": "node ./scripts/setup-webview-react-test-env.js"
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "^1.6.2",
