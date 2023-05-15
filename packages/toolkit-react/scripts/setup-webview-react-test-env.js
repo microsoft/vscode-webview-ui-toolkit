@@ -103,7 +103,12 @@ async function main() {
 		console.log(color(['dim'], 'Building React webview...'));
 		await execShellCommand('cd ./test-webview && npm run build:webview');
 	} catch (err) {
-		console.log(`${color(['red'], 'Error: Could not build React webview')}\n    ${err}`);
+		console.log(
+			`${color(
+				['red'],
+				'Error: Could not build React webview'
+			)}\n    ${err}`
+		);
 		process.exit();
 	}
 
