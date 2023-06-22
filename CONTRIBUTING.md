@@ -55,9 +55,7 @@ When you're done making changes, check that they pass linting, formatting, tests
 ```
 npm run lint
 npm run fmt
-npm run test
 npm run build
-npm run build:docs
 ```
 
 ### Add and commit changes
