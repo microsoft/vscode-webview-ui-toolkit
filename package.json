@@ -29,9 +29,9 @@
 		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
 	},
 	"dependencies": {
-		"@microsoft/fast-element": "^1.6.2",
-		"@microsoft/fast-foundation": "^2.38.0",
-		"@microsoft/fast-react-wrapper": "^0.1.18"
+		"@microsoft/fast-element": "^1.12.0",
+		"@microsoft/fast-foundation": "^2.49.0",
+		"@microsoft/fast-react-wrapper": "^0.3.18"
 	},
 	"peerDependencies": {
 		"react": ">=16.9.0"
