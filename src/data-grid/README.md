@@ -307,6 +307,6 @@ basicGrid.columnDefinitions = [
 
 Interactive/editable data grids are a highly requested feature in the Webview UI Toolkit.
 
-By default, the toolkit and in particular [FAST](https://www.fast.design/) (the underlying framework that the toolkit uses) **do not** offer any first-party APIs for enabling interactivity or editability in data grids. Additionally, since FAST owns the underlying data grid implementation, first-party support for interactivity will eventually need to come from them. 
+By default, the toolkit and in particular [FAST](https://www.fast.design/) (the underlying framework that the toolkit uses) **do not** offer any first-party APIs for enabling interactivity or editability in data grids. Additionally, since FAST owns the underlying data grid implementation, first-party support for interactivity will eventually need to come from them.
 
 With that said, workaround solutions are possible and a reference implementation for making the `vscode-data-grid` component editable is [available as a sample extension](https://github.com/microsoft/vscode-webview-ui-toolkit-samples/tree/main/default/editable-data-grid).
