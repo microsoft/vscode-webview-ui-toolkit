@@ -25,14 +25,14 @@ Some of the library's features include:
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 [![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
 
-A library of web components (built using [FAST](https://www.fast.design/)) that makes up the core of this project. These components implement the Visual Studio Code design langauge, color theme support, and can used with any framework that supports custom elements or even without a framework. See the [Getting Started Guide](./docs/getting-started.md) to get up and running.
+A library of web components (built using [FAST](https://www.fast.design/)) that makes up the core of this project. These components implement the Visual Studio Code design language, color theme support, and can be used with any framework that supports custom elements or even without a framework. See the [Getting Started Guide](./docs/getting-started.md) to get up and running.
 
 **[`@vscode/webview-ui-toolkit-react`](./packages/toolkit-react/)**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 [![NPM Version](https://img.shields.io/npm/v/@vscode/webview-ui-toolkit?color=blue)](https://www.npmjs.com/package/@vscode/webview-ui-toolkit)
 
-A componanion libary of React components, provided as a convience since React does not natively support web components at this time. These React components are simply the core web components wrapped in React using the [`@microsoft/fast-react-wrapper`](https://www.npmjs.com/package/@microsoft/fast-react-wrapper) package. See the `packages/toolkit-react` directory for more [details and documentation](./packages/toolkit-react/README.md).
+A companion libary of React components, provided as a convenience since React does not natively support web components at this time. These React components are simply the core web components wrapped in React using the [`@microsoft/fast-react-wrapper`](https://www.npmjs.com/package/@microsoft/fast-react-wrapper) package. See the `packages/toolkit-react` directory for more [details and documentation](./packages/toolkit-react/README.md).
 
 ## Documentation
 
