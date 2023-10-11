@@ -29,6 +29,7 @@ export const borderWidth = create<number>('border-width').withDefault(1);
 export const contrastActiveBorder = create<string>('contrast-active-border', '--vscode-contrastActiveBorder').withDefault('#f38518');
 export const contrastBorder = create<string>('contrast-border', '--vscode-contrastBorder').withDefault('#6fc3df');
 export const cornerRadius = create<number>('corner-radius').withDefault(0);
+export const cornerRadiusRound = create<number>('corner-radius-round').withDefault(2);
 export const designUnit = create<number>('design-unit').withDefault(4);
 export const disabledOpacity = create<number>('disabled-opacity').withDefault(0.4);
 export const focusBorder = create<string>('focus-border', '--vscode-focusBorder').withDefault('#007fd4');
