@@ -11,7 +11,7 @@ import {
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
-	cornerRadius,
+	cornerRadiusRound,
 	designUnit,
 	disabledOpacity,
 	dropdownBorder,
@@ -42,7 +42,7 @@ export const textFieldStyles = (
 		flex-direction: row;
 		color: ${inputForeground};
 		background: ${inputBackground};
-		border-radius: calc(${cornerRadius} * 1px);
+		border-radius: calc(${cornerRadiusRound} * 1px);
 		border: calc(${borderWidth} * 1px) solid ${dropdownBorder};
 		height: calc(${inputHeight} * 1px);
 		min-width: ${inputMinWidth};
