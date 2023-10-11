@@ -11,7 +11,7 @@ import {
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
-	cornerRadius,
+	cornerRadiusRound,
 	designUnit,
 	disabledOpacity,
 	dropdownBorder,
@@ -44,7 +44,7 @@ export const textAreaStyles = (
 		position: relative;
 		color: ${inputForeground};
 		background: ${inputBackground};
-		border-radius: calc(${cornerRadius} * 1px);
+		border-radius: calc(${cornerRadiusRound} * 1px);
 		border: calc(${borderWidth} * 1px) solid ${dropdownBorder};
 		font: inherit;
 		font-size: ${typeRampBaseFontSize};
