@@ -45,7 +45,7 @@ For guidelines on usage in an extension, see the [vscode-radio-group](../radio-g
 <vscode-radio disabled>Radio Label</vscode-radio>
 ```
 
-### Disabled Attribute
+### Value Attribute
 
 ```html
 <vscode-radio value="some-value">Radio Label</vscode-radio>
