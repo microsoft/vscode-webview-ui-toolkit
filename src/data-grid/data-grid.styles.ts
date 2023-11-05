@@ -12,9 +12,8 @@ export const dataGridStyles = (
 	definition: FoundationElementDefinition
 ) => css`
 	:host {
-		display: flex;
+		display: grid;
 		position: relative;
-		flex-direction: column;
 		width: 100%;
 	}
 `;
