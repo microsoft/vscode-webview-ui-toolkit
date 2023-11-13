@@ -12,6 +12,7 @@ CONTRIBUTING.md
 *.spec.*
 coverage/
 test-webview
+test-webview-react
 .vscode-test-web/
 
 # Builds
