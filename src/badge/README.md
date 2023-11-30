@@ -18,7 +18,7 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 | ❌ Don't                                                                | ✅ Do                                                                            |
 | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| ![Multiple badges on one element](/docs/assets/images/badge-dont-2.png) | ![One badge used for each section in a view](/docs/assets/images/badge-do-3.png) |
+| ![Multiple badges on one element](/docs/assets/images/badge-dont-3.png) | ![One badge used for each section in a view](/docs/assets/images/badge-do-3.png) |
 | Don't use more than one badge on a single element.                      | Ensure badges are clearly associated with their parent element.                  |
 
 ## Implementation
