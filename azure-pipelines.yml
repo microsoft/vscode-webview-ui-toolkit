@@ -14,7 +14,7 @@ stages:
       jobs:
           - job: compliance
             steps:
-                - task: PoliCheck@1
+                - task: PoliCheck@2
                   displayName: 'Run PoliCheck 🌎'
                   inputs:
                       inputType: 'Basic'
