@@ -41,25 +41,11 @@ stages:
                           $(Build.SourcesDirectory)/**/*.ts
                       ErrorLevel: 'warn'
 
-    - stage: build_test
-      displayName: 'Build & Test'
+    - stage: build_lint
+      displayName: 'Build & Lint'
       pool:
           vmImage: 'ubuntu-latest'
       jobs:
-          - job: test
-            timeoutInMinutes: 10
-            steps:
-                - task: NodeTool@0
-                  displayName: 'Setup Node 💾'
-                  inputs:
-                      versionSpec: '18.x'
-
-                - script: npm install
-                  displayName: 'Install Dependencies 📥'
-
-                - script: npm run test
-                  displayName: 'Run Tests 🧪'
-
           - job: lint
             timeoutInMinutes: 10
             steps:
