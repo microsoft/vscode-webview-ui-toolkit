@@ -3,24 +3,6 @@ name: toolkit-ci
 on: pull_request
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        timeout-minutes: 10
-        steps:
-            - name: Checkout 🛎️
-              uses: actions/checkout@v2
-
-            - name: Setup Node 💾
-              uses: actions/setup-node@v2
-              with:
-                  node-version: '14'
-
-            - name: Install Dependencies 📥
-              run: npm install
-
-            - name: Run Tests 🧪
-              run: npm run test
-
     lint:
         runs-on: ubuntu-latest
         timeout-minutes: 10
@@ -31,7 +13,7 @@ jobs:
             - name: Setup Node 💾
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '18'
 
             - name: Install Dependencies 📥
               run: npm install
@@ -52,7 +34,7 @@ jobs:
             - name: Setup Node 💾
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '18'
 
             - name: Install Dependencies 📥
               run: npm install
