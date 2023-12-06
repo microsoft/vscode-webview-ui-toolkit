@@ -54,7 +54,7 @@
 		"rollup-plugin-terser": "^7.0.2",
 		"rollup-plugin-transform-tagged-template": "0.0.3",
 		"tslib": "^2.1.0",
-		"typescript": "4.3.5"
+		"typescript": "^4.6.2"
 	},
 	"keywords": [
 		"vscode",
