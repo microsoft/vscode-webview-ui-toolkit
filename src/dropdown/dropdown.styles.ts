@@ -10,7 +10,7 @@ import {
 } from '@microsoft/fast-foundation';
 import {
 	borderWidth,
-	cornerRadius,
+	cornerRadiusRound,
 	designUnit,
 	disabledOpacity,
 	dropdownBackground,
@@ -34,6 +34,7 @@ export const dropdownStyles = (
 ) => css`
 	${display('inline-flex')} :host {
 		background: ${dropdownBackground};
+		border-radius: calc(${cornerRadiusRound} * 1px);
 		box-sizing: border-box;
 		color: ${foreground};
 		contain: contents;
@@ -49,7 +50,7 @@ export const dropdownStyles = (
 		align-items: center;
 		box-sizing: border-box;
 		border: calc(${borderWidth} * 1px) solid ${dropdownBorder};
-		border-radius: calc(${cornerRadius} * 1px);
+		border-radius: calc(${cornerRadiusRound} * 1px);
 		cursor: pointer;
 		display: flex;
 		font-family: inherit;
@@ -62,13 +63,13 @@ export const dropdownStyles = (
 	.listbox {
 		background: ${dropdownBackground};
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
-		border-radius: calc(${cornerRadius} * 1px);
+		border-radius: calc(${cornerRadiusRound} * 1px);
 		box-sizing: border-box;
 		display: inline-flex;
 		flex-direction: column;
 		left: 0;
 		max-height: ${dropdownListMaxHeight};
-		padding: 0 0 calc(${designUnit} * 1px) 0;
+		padding: 0;
 		overflow-y: auto;
 		position: absolute;
 		width: 100%;
@@ -86,7 +87,7 @@ export const dropdownStyles = (
 	}
 	:host(:${focusVisible}) ::slotted([aria-selected="true"][role="option"]:not([disabled])) {
 		background: ${listActiveSelectionBackground};
-		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		border: calc(${borderWidth} * 1px) solid transparent;
 		color: ${listActiveSelectionForeground};
 	}
 	:host([disabled]) {
@@ -111,12 +112,10 @@ export const dropdownStyles = (
 	:host([open]) .control {
 		border-color: ${focusBorder};
 	}
-	:host([open][position='above']) .listbox,
-	:host([open][position='below']) .control {
+	:host([open][position='above']) .listbox {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 	}
-	:host([open][position='above']) .control,
 	:host([open][position='below']) .listbox {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
