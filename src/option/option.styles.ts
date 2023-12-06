@@ -51,7 +51,7 @@ export const optionStyles = (
 	}
 	:host([aria-selected='true']) {
 		background: ${listActiveSelectionBackground};
-		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		border: calc(${borderWidth} * 1px) solid transparent;
 		color: ${listActiveSelectionForeground};
 	}
 	:host(:active) {
@@ -60,7 +60,7 @@ export const optionStyles = (
 	}
 	:host(:not([aria-selected='true']):hover) {
 		background: ${listActiveSelectionBackground};
-		border: calc(${borderWidth} * 1px) solid ${focusBorder};
+		border: calc(${borderWidth} * 1px) solid transparent;
 		color: ${listActiveSelectionForeground};
 	}
 	:host(:not([aria-selected='true']):active) {
