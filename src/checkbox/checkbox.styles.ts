@@ -21,7 +21,6 @@ import {
 	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-	typeRampPlus1FontSize,
 } from '../design-tokens.js';
 
 export const checkboxStyles = (
@@ -61,8 +60,8 @@ export const checkboxStyles = (
 	.checked-indicator {
 		width: 100%;
 		height: 100%;
-		min-width: ${typeRampPlus1FontSize};
-		min-height: ${typeRampPlus1FontSize};
+		min-width: calc(${designUnit} * 4px);
+		min-height: calc(${designUnit} * 4px);
 		display: block;
 		fill: ${foreground};
 		opacity: 0;
