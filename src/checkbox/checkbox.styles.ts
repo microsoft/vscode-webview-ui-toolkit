@@ -60,6 +60,8 @@ export const checkboxStyles = (
 	.checked-indicator {
 		width: 100%;
 		height: 100%;
+		min-width: calc(${designUnit} * 4px);
+		min-height: calc(${designUnit} * 4px);
 		display: block;
 		fill: ${foreground};
 		opacity: 0;
