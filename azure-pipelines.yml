@@ -76,6 +76,7 @@ extends:
           outputs:
           - output: pipelineArtifact
             displayName: "Publish Artifacts"
+            targetPath: '$(System.DefaultWorkingDirectory)/dist'
             artifactName: 'drop'
         steps:
         - task: NodeTool@0
