@@ -2,10 +2,8 @@ pr:
   branches:
     include:
     - main
-
 variables:
   Codeql.Enabled: true
-
 resources:
   repositories:
   - repository: 1ESPipelineTemplates
