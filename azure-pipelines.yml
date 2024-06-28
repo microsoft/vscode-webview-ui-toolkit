@@ -12,8 +12,6 @@ resources:
       ref: refs/tags/release
 extends:
   template: v1/1ES.Official.PipelineTemplate.yml@1ESPipelineTemplates
-  settings:
-    skipBuildTagsForGitHubPullRequests: true
   parameters:
     pool:
       name: AzurePipelines-EO
