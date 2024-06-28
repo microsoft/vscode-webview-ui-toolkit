@@ -1,97 +1,93 @@
 pr:
-    branches:
-        include:
-            - main
-
+  branches:
+    include:
+      - main
 variables:
-    Codeql.Enabled: true
-
-stages:
-    - stage: security_compliance
-      displayName: 'Security & Compliance'
-      pool:
-          vmImage: 'windows-latest'
-      jobs:
+  Codeql.Enabled: true
+resources:
+  repositories:
+    - repository: 1ESPipelineTemplates
+      type: git
+      name: 1ESPipelineTemplates/1ESPipelineTemplates
+      ref: refs/tags/release
+extends:
+  template: v1/1ES.Official.PipelineTemplate.yml@1ESPipelineTemplates
+  parameters:
+    pool:
+      name: AzurePipelines-EO
+      image: 1ESPT-Windows2022
+      os: windows
+    customBuildTags:
+      - ES365AIMigrationTooling-BulkMigrated
+    stages:
+      - stage: security_compliance
+        displayName: "Security & Compliance"
+        jobs:
           - job: compliance
+            templateContext:
+              outputs:
+                - output: pipelineArtifact
+                  displayName: "Create log artifact"
+                  targetPath: '..\_sdt\logs\PoliCheck\PoliCheck.xml'
+                  artifactName: "PoliCheck"
             steps:
-                - task: PoliCheck@1
-                  displayName: 'Run PoliCheck 🌎'
-                  inputs:
-                      inputType: 'Basic'
-                      targetType: 'F'
-                      targetArgument: '$(Build.SourcesDirectory)'
-                      result: 'PoliCheck.xml'
-                      optionsXS: 1
-                      optionsPE: 1
-                      optionsUEPATH: '$(Build.SourcesDirectory)/policheck/UserExclusion.xml'
-                - task: PublishBuildArtifacts@1
-                  displayName: 'Create log artifact'
-                  inputs:
-                      pathToPublish: '..\_sdt\logs\PoliCheck\PoliCheck.xml'
-                      artifactName: 'PoliCheck'
-
+              - task: PoliCheck@1
+                displayName: "Run PoliCheck"
+                inputs:
+                  inputType: "Basic"
+                  targetType: "F"
+                  targetArgument: "$(Build.SourcesDirectory)"
+                  result: "PoliCheck.xml"
+                  optionsXS: 1
+                  optionsPE: 1
+                  optionsUEPATH: "$(Build.SourcesDirectory)/policheck/UserExclusion.xml"
           - job: security
             steps:
-                - task: ESLint@1
-                  displayName: 'Guardian: ESLint 🛡'
-                  inputs:
-                      Configuration: 'recommended'
-                      TargetType: 'eslint'
-                      TargetsESLint: |
-                          $(Build.SourcesDirectory)/**/*.ts
-                      ErrorLevel: 'warn'
-
-    - stage: build_lint
-      displayName: 'Build & Lint'
-      pool:
-          vmImage: 'ubuntu-latest'
-      jobs:
+              - task: ESLint@1
+                displayName: "Guardian: ESLint"
+                inputs:
+                  Configuration: "recommended"
+                  TargetType: "eslint"
+                  TargetsESLint: |
+                    $(Build.SourcesDirectory)/**/*.ts
+                  ErrorLevel: "warn"
+      - stage: build_lint
+        displayName: "Build & Lint"
+        jobs:
           - job: lint
             timeoutInMinutes: 10
             steps:
-                - task: NodeTool@0
-                  displayName: 'Setup Node 💾'
-                  inputs:
-                      versionSpec: '18.x'
-
-                - script: npm install
-                  displayName: 'Install Dependencies 📥'
-
-                - script: npm run lint
-                  displayName: 'Run Lint Check 🔍'
-
-                - script: npm run fmt
-                  displayName: 'Run Format Check 🌸'
-
+              - task: NodeTool@0
+                displayName: "Setup Node"
+                inputs:
+                  versionSpec: "18.x"
+              - script: npm install
+                displayName: "Install Dependencies"
+              - script: npm run lint
+                displayName: "Run Lint Check"
+              - script: npm run fmt
+                displayName: "Run Format Check"
           - job: build
             timeoutInMinutes: 10
+            templateContext:
+              outputs:
+                - output: pipelineArtifact
+                  displayName: "Publish Artifacts"
+                  targetPath: "$(System.DefaultWorkingDirectory)/dist"
+                  artifactName: "drop"
             steps:
-                - task: NodeTool@0
-                  displayName: 'Setup Node 💾'
-                  inputs:
-                      versionSpec: '18.x'
-
-                - script: npm install
-                  displayName: 'Install Dependencies 📥'
-
-                - script: npm run build
-                  displayName: 'Build Toolkit 🏗'
-
-                - task: CopyFiles@2
-                  displayName: 'Copy to Staging 📂'
-                  inputs:
-                      SourceFolder: '$(System.DefaultWorkingDirectory)/dist'
-                      Contents: |
-                          **/*
-                      TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
-                - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
-                  displayName: 'Generate Manifest 🧾'
-                  inputs:
-                      BuildDropPath: '$(Build.ArtifactStagingDirectory)'
-                      PackageName: 'Webview UI Toolkit for Visual Studio Code'
-
-                - task: PublishBuildArtifacts@1
-                  displayName: 'Publish Artifacts 📦'
-                  inputs:
-                      ArtifactName: 'drop'
+              - task: NodeTool@0
+                displayName: "Setup Node"
+                inputs:
+                  versionSpec: "18.x"
+              - script: npm install
+                displayName: "Install Dependencies"
+              - script: npm run build
+                displayName: "Build Toolkit"
+              - task: CopyFiles@2
+                displayName: "Copy to Staging"
+                inputs:
+                  SourceFolder: "$(System.DefaultWorkingDirectory)/dist"
+                  Contents: |
+                    **/*
+                  TargetFolder: "$(Build.ArtifactStagingDirectory)"
