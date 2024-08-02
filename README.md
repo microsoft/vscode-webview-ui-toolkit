@@ -4,6 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
 ![Toolkit CI Status](https://github.com/microsoft/vscode-webview-ui-toolkit/actions/workflows/ci.yml/badge.svg)
 
+> [!WARNING]
+> The Webview UI Toolkit for VS Code will be deprecated on January 1, 2025. See the [deprecation announcement](https://github.com/microsoft/vscode-webview-ui-toolkit/issues/561) for more details.
+
 ![Webview Toolkit for Visual Studio Code Artwork](./docs/assets/images/toolkit-artwork.png)
 
 ## Introduction
